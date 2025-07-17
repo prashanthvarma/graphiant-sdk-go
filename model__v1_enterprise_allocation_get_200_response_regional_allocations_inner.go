@@ -1,7 +1,7 @@
 /*
 Graphiant APIs
 
-**To use the APIs:**  1) Login using `/api/v1/auth/login`   2) Copy the value of \"token\" in the response   3) Click the \"Authorize\" button   4) In the \"Value\" text field enter: `Bearer <your token>`   5) Click \"Authorize\"   6) All requests are now authorized.  **Token valid for 2 hours. If expired:**   - Login again, click \"Authorize\", paste new token.
+Graphiant API documentation.
 
 API version: 1.0.0
 */
@@ -21,6 +21,7 @@ var _ MappedNullable = &V1EnterpriseAllocationGet200ResponseRegionalAllocationsI
 type V1EnterpriseAllocationGet200ResponseRegionalAllocationsInner struct {
 	AllocationCore *float32 `json:"allocationCore,omitempty"`
 	AllocationGw *float32 `json:"allocationGw,omitempty"`
+	AllocationInternet *float32 `json:"allocationInternet,omitempty"`
 	CreditCore *float32 `json:"creditCore,omitempty"`
 	CreditGw *float32 `json:"creditGw,omitempty"`
 	RegionId *int32 `json:"regionId,omitempty"`
@@ -106,6 +107,38 @@ func (o *V1EnterpriseAllocationGet200ResponseRegionalAllocationsInner) HasAlloca
 // SetAllocationGw gets a reference to the given float32 and assigns it to the AllocationGw field.
 func (o *V1EnterpriseAllocationGet200ResponseRegionalAllocationsInner) SetAllocationGw(v float32) {
 	o.AllocationGw = &v
+}
+
+// GetAllocationInternet returns the AllocationInternet field value if set, zero value otherwise.
+func (o *V1EnterpriseAllocationGet200ResponseRegionalAllocationsInner) GetAllocationInternet() float32 {
+	if o == nil || IsNil(o.AllocationInternet) {
+		var ret float32
+		return ret
+	}
+	return *o.AllocationInternet
+}
+
+// GetAllocationInternetOk returns a tuple with the AllocationInternet field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *V1EnterpriseAllocationGet200ResponseRegionalAllocationsInner) GetAllocationInternetOk() (*float32, bool) {
+	if o == nil || IsNil(o.AllocationInternet) {
+		return nil, false
+	}
+	return o.AllocationInternet, true
+}
+
+// HasAllocationInternet returns a boolean if a field has been set.
+func (o *V1EnterpriseAllocationGet200ResponseRegionalAllocationsInner) HasAllocationInternet() bool {
+	if o != nil && !IsNil(o.AllocationInternet) {
+		return true
+	}
+
+	return false
+}
+
+// SetAllocationInternet gets a reference to the given float32 and assigns it to the AllocationInternet field.
+func (o *V1EnterpriseAllocationGet200ResponseRegionalAllocationsInner) SetAllocationInternet(v float32) {
+	o.AllocationInternet = &v
 }
 
 // GetCreditCore returns the CreditCore field value if set, zero value otherwise.
@@ -251,6 +284,9 @@ func (o V1EnterpriseAllocationGet200ResponseRegionalAllocationsInner) ToMap() (m
 	}
 	if !IsNil(o.AllocationGw) {
 		toSerialize["allocationGw"] = o.AllocationGw
+	}
+	if !IsNil(o.AllocationInternet) {
+		toSerialize["allocationInternet"] = o.AllocationInternet
 	}
 	if !IsNil(o.CreditCore) {
 		toSerialize["creditCore"] = o.CreditCore

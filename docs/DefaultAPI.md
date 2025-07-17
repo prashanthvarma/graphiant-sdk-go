@@ -101,8 +101,8 @@ Method | HTTP request | Description
 [**V1DevicesDeviceIdCandidateCircuitsGet**](DefaultAPI.md#V1DevicesDeviceIdCandidateCircuitsGet) | **Get** /v1/devices/{deviceId}/candidate-circuits | 
 [**V1DevicesDeviceIdCircuitsVrfAssociationsGet**](DefaultAPI.md#V1DevicesDeviceIdCircuitsVrfAssociationsGet) | **Get** /v1/devices/{deviceId}/circuits/vrf-associations | 
 [**V1DevicesDeviceIdConfigPut**](DefaultAPI.md#V1DevicesDeviceIdConfigPut) | **Put** /v1/devices/{deviceId}/config | 
-[**V1DevicesDeviceIdConfigsStagedDelete**](DefaultAPI.md#V1DevicesDeviceIdConfigsStagedDelete) | **Delete** /v1/devices/{deviceId}/configs/staged | 
 [**V1DevicesDeviceIdConnectivityGet**](DefaultAPI.md#V1DevicesDeviceIdConnectivityGet) | **Get** /v1/devices/{deviceId}/connectivity | 
+[**V1DevicesDeviceIdControllerPeersPut**](DefaultAPI.md#V1DevicesDeviceIdControllerPeersPut) | **Put** /v1/devices/{deviceId}/controller-peers | 
 [**V1DevicesDeviceIdDhcpServerLeasesGet**](DefaultAPI.md#V1DevicesDeviceIdDhcpServerLeasesGet) | **Get** /v1/devices/{deviceId}/dhcp-server/leases | 
 [**V1DevicesDeviceIdDraftDelete**](DefaultAPI.md#V1DevicesDeviceIdDraftDelete) | **Delete** /v1/devices/{deviceId}/draft | 
 [**V1DevicesDeviceIdDraftGet**](DefaultAPI.md#V1DevicesDeviceIdDraftGet) | **Get** /v1/devices/{deviceId}/draft | 
@@ -118,7 +118,6 @@ Method | HTTP request | Description
 [**V1DevicesDeviceIdPolicyCustomapplicationsGet**](DefaultAPI.md#V1DevicesDeviceIdPolicyCustomapplicationsGet) | **Get** /v1/devices/{deviceId}/policy/customapplications | 
 [**V1DevicesDeviceIdPolicyZonepairsGet**](DefaultAPI.md#V1DevicesDeviceIdPolicyZonepairsGet) | **Get** /v1/devices/{deviceId}/policy/zonepairs | 
 [**V1DevicesDeviceIdSlicePeersGet**](DefaultAPI.md#V1DevicesDeviceIdSlicePeersGet) | **Get** /v1/devices/{deviceId}/slice/peers | 
-[**V1DevicesDeviceIdStagedConfigCompareGet**](DefaultAPI.md#V1DevicesDeviceIdStagedConfigCompareGet) | **Get** /v1/devices/{deviceId}/stagedConfig/compare | 
 [**V1DevicesDeviceIdTwampCoreGet**](DefaultAPI.md#V1DevicesDeviceIdTwampCoreGet) | **Get** /v1/devices/{deviceId}/twamp/core | 
 [**V1DevicesDeviceIdVersionsCompareGet**](DefaultAPI.md#V1DevicesDeviceIdVersionsCompareGet) | **Get** /v1/devices/{deviceId}/versions/compare | 
 [**V1DevicesDeviceIdVersionsGet**](DefaultAPI.md#V1DevicesDeviceIdVersionsGet) | **Get** /v1/devices/{deviceId}/versions | 
@@ -288,7 +287,6 @@ Method | HTTP request | Description
 [**V1GroupsIdPatch**](DefaultAPI.md#V1GroupsIdPatch) | **Patch** /v1/groups/{id} | 
 [**V1GroupsPut**](DefaultAPI.md#V1GroupsPut) | **Put** /v1/groups | 
 [**V1GroupsRootGet**](DefaultAPI.md#V1GroupsRootGet) | **Get** /v1/groups/root | 
-[**V1HealthcheckDevicesGet**](DefaultAPI.md#V1HealthcheckDevicesGet) | **Get** /v1/healthcheck/devices | 
 [**V1IdPasswordRecoverPatch**](DefaultAPI.md#V1IdPasswordRecoverPatch) | **Patch** /v1/{id}/password/recover | 
 [**V1LanSegmentsGet**](DefaultAPI.md#V1LanSegmentsGet) | **Get** /v1/lan-segments | 
 [**V1LldpInterfaceIdNeighborsGet**](DefaultAPI.md#V1LldpInterfaceIdNeighborsGet) | **Get** /v1/lldp/{interfaceId}/neighbors | 
@@ -7052,76 +7050,6 @@ Name | Type | Description  | Notes
 [[Back to README]](../README.md)
 
 
-## V1DevicesDeviceIdConfigsStagedDelete
-
-> map[string]interface{} V1DevicesDeviceIdConfigsStagedDelete(ctx, deviceId).Authorization(authorization).Execute()
-
-
-
-### Example
-
-```go
-package main
-
-import (
-	"context"
-	"fmt"
-	"os"
-	openapiclient "github.com/Graphiant-Inc/graphiant-sdk-go"
-)
-
-func main() {
-	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
-	deviceId := int64(3000000000) // int64 | 16 bytes (base64 encoded) identifier for the device.
-
-	configuration := openapiclient.NewConfiguration()
-	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.DefaultAPI.V1DevicesDeviceIdConfigsStagedDelete(context.Background(), deviceId).Authorization(authorization).Execute()
-	if err != nil {
-		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1DevicesDeviceIdConfigsStagedDelete``: %v\n", err)
-		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-	}
-	// response from `V1DevicesDeviceIdConfigsStagedDelete`: map[string]interface{}
-	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1DevicesDeviceIdConfigsStagedDelete`: %v\n", resp)
-}
-```
-
-### Path Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**deviceId** | **int64** | 16 bytes (base64 encoded) identifier for the device. | 
-
-### Other Parameters
-
-Other parameters are passed through a pointer to a apiV1DevicesDeviceIdConfigsStagedDeleteRequest struct via the builder pattern
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **authorization** | **string** | Bearer token. Format: Bearer &lt;your_token_here&gt; | 
-
-
-### Return type
-
-**map[string]interface{}**
-
-### Authorization
-
-[jwtAuth](../README.md#jwtAuth)
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
-
-
 ## V1DevicesDeviceIdConnectivityGet
 
 > V1DevicesDeviceIdConnectivityGet200Response V1DevicesDeviceIdConnectivityGet(ctx, deviceId).Authorization(authorization).Execute()
@@ -7185,6 +7113,78 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## V1DevicesDeviceIdControllerPeersPut
+
+> map[string]interface{} V1DevicesDeviceIdControllerPeersPut(ctx, deviceId).Authorization(authorization).V1DevicesDeviceIdControllerPeersPutRequest(v1DevicesDeviceIdControllerPeersPutRequest).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/Graphiant-Inc/graphiant-sdk-go"
+)
+
+func main() {
+	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
+	deviceId := int64(1234567891011) // int64 | 
+	v1DevicesDeviceIdControllerPeersPutRequest := *openapiclient.NewV1DevicesDeviceIdControllerPeersPutRequest() // V1DevicesDeviceIdControllerPeersPutRequest | 
+
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.DefaultAPI.V1DevicesDeviceIdControllerPeersPut(context.Background(), deviceId).Authorization(authorization).V1DevicesDeviceIdControllerPeersPutRequest(v1DevicesDeviceIdControllerPeersPutRequest).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1DevicesDeviceIdControllerPeersPut``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `V1DevicesDeviceIdControllerPeersPut`: map[string]interface{}
+	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1DevicesDeviceIdControllerPeersPut`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**deviceId** | **int64** |  | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiV1DevicesDeviceIdControllerPeersPutRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **authorization** | **string** | Bearer token. Format: Bearer &lt;your_token_here&gt; | 
+
+ **v1DevicesDeviceIdControllerPeersPutRequest** | [**V1DevicesDeviceIdControllerPeersPutRequest**](V1DevicesDeviceIdControllerPeersPutRequest.md) |  | 
+
+### Return type
+
+**map[string]interface{}**
+
+### Authorization
+
+[jwtAuth](../README.md#jwtAuth)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
 - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
@@ -8247,76 +8247,6 @@ Name | Type | Description  | Notes
 [[Back to README]](../README.md)
 
 
-## V1DevicesDeviceIdStagedConfigCompareGet
-
-> V1DevicesDeviceIdStagedConfigCompareGet200Response V1DevicesDeviceIdStagedConfigCompareGet(ctx, deviceId).Authorization(authorization).Execute()
-
-
-
-### Example
-
-```go
-package main
-
-import (
-	"context"
-	"fmt"
-	"os"
-	openapiclient "github.com/Graphiant-Inc/graphiant-sdk-go"
-)
-
-func main() {
-	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
-	deviceId := int64(3000000000) // int64 | 16 bytes (base64 encoded) identifier for the device.
-
-	configuration := openapiclient.NewConfiguration()
-	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.DefaultAPI.V1DevicesDeviceIdStagedConfigCompareGet(context.Background(), deviceId).Authorization(authorization).Execute()
-	if err != nil {
-		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1DevicesDeviceIdStagedConfigCompareGet``: %v\n", err)
-		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-	}
-	// response from `V1DevicesDeviceIdStagedConfigCompareGet`: V1DevicesDeviceIdStagedConfigCompareGet200Response
-	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1DevicesDeviceIdStagedConfigCompareGet`: %v\n", resp)
-}
-```
-
-### Path Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**deviceId** | **int64** | 16 bytes (base64 encoded) identifier for the device. | 
-
-### Other Parameters
-
-Other parameters are passed through a pointer to a apiV1DevicesDeviceIdStagedConfigCompareGetRequest struct via the builder pattern
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **authorization** | **string** | Bearer token. Format: Bearer &lt;your_token_here&gt; | 
-
-
-### Return type
-
-[**V1DevicesDeviceIdStagedConfigCompareGet200Response**](V1DevicesDeviceIdStagedConfigCompareGet200Response.md)
-
-### Authorization
-
-[jwtAuth](../README.md#jwtAuth)
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
-
-
 ## V1DevicesDeviceIdTwampCoreGet
 
 > V1DevicesDeviceIdTwampCoreGet200Response V1DevicesDeviceIdTwampCoreGet(ctx, deviceId).Authorization(authorization).Execute()
@@ -8389,7 +8319,7 @@ Name | Type | Description  | Notes
 
 ## V1DevicesDeviceIdVersionsCompareGet
 
-> V1DevicesDeviceIdStagedConfigCompareGet200Response V1DevicesDeviceIdVersionsCompareGet(ctx, deviceId).Authorization(authorization).Execute()
+> V1DevicesDeviceIdVersionsCompareGet200Response V1DevicesDeviceIdVersionsCompareGet(ctx, deviceId).Authorization(authorization).Execute()
 
 
 
@@ -8416,7 +8346,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1DevicesDeviceIdVersionsCompareGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1DevicesDeviceIdVersionsCompareGet`: V1DevicesDeviceIdStagedConfigCompareGet200Response
+	// response from `V1DevicesDeviceIdVersionsCompareGet`: V1DevicesDeviceIdVersionsCompareGet200Response
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1DevicesDeviceIdVersionsCompareGet`: %v\n", resp)
 }
 ```
@@ -8441,7 +8371,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1DevicesDeviceIdStagedConfigCompareGet200Response**](V1DevicesDeviceIdStagedConfigCompareGet200Response.md)
+[**V1DevicesDeviceIdVersionsCompareGet200Response**](V1DevicesDeviceIdVersionsCompareGet200Response.md)
 
 ### Authorization
 
@@ -19666,70 +19596,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**V1GroupsGet200Response**](V1GroupsGet200Response.md)
-
-### Authorization
-
-[jwtAuth](../README.md#jwtAuth)
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
-
-
-## V1HealthcheckDevicesGet
-
-> V1HealthcheckDevicesGet200Response V1HealthcheckDevicesGet(ctx).Authorization(authorization).Execute()
-
-
-
-### Example
-
-```go
-package main
-
-import (
-	"context"
-	"fmt"
-	"os"
-	openapiclient "github.com/Graphiant-Inc/graphiant-sdk-go"
-)
-
-func main() {
-	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
-
-	configuration := openapiclient.NewConfiguration()
-	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.DefaultAPI.V1HealthcheckDevicesGet(context.Background()).Authorization(authorization).Execute()
-	if err != nil {
-		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1HealthcheckDevicesGet``: %v\n", err)
-		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-	}
-	// response from `V1HealthcheckDevicesGet`: V1HealthcheckDevicesGet200Response
-	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1HealthcheckDevicesGet`: %v\n", resp)
-}
-```
-
-### Path Parameters
-
-
-
-### Other Parameters
-
-Other parameters are passed through a pointer to a apiV1HealthcheckDevicesGetRequest struct via the builder pattern
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **authorization** | **string** | Bearer token. Format: Bearer &lt;your_token_here&gt; | 
-
-### Return type
-
-[**V1HealthcheckDevicesGet200Response**](V1HealthcheckDevicesGet200Response.md)
 
 ### Authorization
 

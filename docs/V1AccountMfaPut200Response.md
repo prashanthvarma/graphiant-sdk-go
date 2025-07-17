@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **Confirmed** | Pointer to **bool** |  | [optional] 
 **Id** | Pointer to **string** |  | [optional] 
 **QrCode** | Pointer to **string** |  | [optional] 
+**SharedSecret** | Pointer to **string** |  | [optional] 
 
 ## Methods
 
@@ -101,6 +102,31 @@ SetQrCode sets QrCode field to given value.
 `func (o *V1AccountMfaPut200Response) HasQrCode() bool`
 
 HasQrCode returns a boolean if a field has been set.
+
+### GetSharedSecret
+
+`func (o *V1AccountMfaPut200Response) GetSharedSecret() string`
+
+GetSharedSecret returns the SharedSecret field if non-nil, zero value otherwise.
+
+### GetSharedSecretOk
+
+`func (o *V1AccountMfaPut200Response) GetSharedSecretOk() (*string, bool)`
+
+GetSharedSecretOk returns a tuple with the SharedSecret field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSharedSecret
+
+`func (o *V1AccountMfaPut200Response) SetSharedSecret(v string)`
+
+SetSharedSecret sets SharedSecret field to given value.
+
+### HasSharedSecret
+
+`func (o *V1AccountMfaPut200Response) HasSharedSecret() bool`
+
+HasSharedSecret returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

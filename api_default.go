@@ -1,7 +1,7 @@
 /*
 Graphiant APIs
 
-**To use the APIs:**  1) Login using `/api/v1/auth/login`   2) Copy the value of \"token\" in the response   3) Click the \"Authorize\" button   4) In the \"Value\" text field enter: `Bearer <your token>`   5) Click \"Authorize\"   6) All requests are now authorized.  **Token valid for 2 hours. If expired:**   - Login again, click \"Authorize\", paste new token.
+Graphiant API documentation.
 
 API version: 1.0.0
 */
@@ -13502,135 +13502,6 @@ func (a *DefaultAPIService) V1DevicesDeviceIdConfigPutExecute(r ApiV1DevicesDevi
 	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
-type ApiV1DevicesDeviceIdConfigsStagedDeleteRequest struct {
-	ctx context.Context
-	ApiService *DefaultAPIService
-	authorization *string
-	deviceId int64
-}
-
-// Bearer token. Format: Bearer &lt;your_token_here&gt;
-func (r ApiV1DevicesDeviceIdConfigsStagedDeleteRequest) Authorization(authorization string) ApiV1DevicesDeviceIdConfigsStagedDeleteRequest {
-	r.authorization = &authorization
-	return r
-}
-
-func (r ApiV1DevicesDeviceIdConfigsStagedDeleteRequest) Execute() (map[string]interface{}, *http.Response, error) {
-	return r.ApiService.V1DevicesDeviceIdConfigsStagedDeleteExecute(r)
-}
-
-/*
-V1DevicesDeviceIdConfigsStagedDelete Method for V1DevicesDeviceIdConfigsStagedDelete
-
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param deviceId 16 bytes (base64 encoded) identifier for the device.
- @return ApiV1DevicesDeviceIdConfigsStagedDeleteRequest
-*/
-func (a *DefaultAPIService) V1DevicesDeviceIdConfigsStagedDelete(ctx context.Context, deviceId int64) ApiV1DevicesDeviceIdConfigsStagedDeleteRequest {
-	return ApiV1DevicesDeviceIdConfigsStagedDeleteRequest{
-		ApiService: a,
-		ctx: ctx,
-		deviceId: deviceId,
-	}
-}
-
-// Execute executes the request
-//  @return map[string]interface{}
-func (a *DefaultAPIService) V1DevicesDeviceIdConfigsStagedDeleteExecute(r ApiV1DevicesDeviceIdConfigsStagedDeleteRequest) (map[string]interface{}, *http.Response, error) {
-	var (
-		localVarHTTPMethod   = http.MethodDelete
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  map[string]interface{}
-	)
-
-	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1DevicesDeviceIdConfigsStagedDelete")
-	if err != nil {
-		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
-	}
-
-	localVarPath := localBasePath + "/v1/devices/{deviceId}/configs/staged"
-	localVarPath = strings.Replace(localVarPath, "{"+"deviceId"+"}", url.PathEscape(parameterValueToString(r.deviceId, "deviceId")), -1)
-
-	localVarHeaderParams := make(map[string]string)
-	localVarQueryParams := url.Values{}
-	localVarFormParams := url.Values{}
-	if r.authorization == nil {
-		return localVarReturnValue, nil, reportError("authorization is required and must be specified")
-	}
-	if r.deviceId < 0 {
-		return localVarReturnValue, nil, reportError("deviceId must be greater than 0")
-	}
-
-	// to determine the Content-Type header
-	localVarHTTPContentTypes := []string{}
-
-	// set Content-Type header
-	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
-	if localVarHTTPContentType != "" {
-		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
-	}
-
-	// to determine the Accept header
-	localVarHTTPHeaderAccepts := []string{"application/json"}
-
-	// set Accept header
-	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
-	if localVarHTTPHeaderAccept != "" {
-		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
-	}
-	parameterAddToHeaderOrQuery(localVarHeaderParams, "Authorization", r.authorization, "simple", "")
-	if r.ctx != nil {
-		// API Key Authentication
-		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
-			if apiKey, ok := auth["jwtAuth"]; ok {
-				var key string
-				if apiKey.Prefix != "" {
-					key = apiKey.Prefix + " " + apiKey.Key
-				} else {
-					key = apiKey.Key
-				}
-				localVarHeaderParams["authorization"] = key
-			}
-		}
-	}
-	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
-	if err != nil {
-		return localVarReturnValue, nil, err
-	}
-
-	localVarHTTPResponse, err := a.client.callAPI(req)
-	if err != nil || localVarHTTPResponse == nil {
-		return localVarReturnValue, localVarHTTPResponse, err
-	}
-
-	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
-	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
-	if err != nil {
-		return localVarReturnValue, localVarHTTPResponse, err
-	}
-
-	if localVarHTTPResponse.StatusCode >= 300 {
-		newErr := &GenericOpenAPIError{
-			body:  localVarBody,
-			error: localVarHTTPResponse.Status,
-		}
-		return localVarReturnValue, localVarHTTPResponse, newErr
-	}
-
-	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
-	if err != nil {
-		newErr := &GenericOpenAPIError{
-			body:  localVarBody,
-			error: err.Error(),
-		}
-		return localVarReturnValue, localVarHTTPResponse, newErr
-	}
-
-	return localVarReturnValue, localVarHTTPResponse, nil
-}
-
 type ApiV1DevicesDeviceIdConnectivityGetRequest struct {
 	ctx context.Context
 	ApiService *DefaultAPIService
@@ -13706,6 +13577,143 @@ func (a *DefaultAPIService) V1DevicesDeviceIdConnectivityGetExecute(r ApiV1Devic
 		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
 	}
 	parameterAddToHeaderOrQuery(localVarHeaderParams, "Authorization", r.authorization, "simple", "")
+	if r.ctx != nil {
+		// API Key Authentication
+		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
+			if apiKey, ok := auth["jwtAuth"]; ok {
+				var key string
+				if apiKey.Prefix != "" {
+					key = apiKey.Prefix + " " + apiKey.Key
+				} else {
+					key = apiKey.Key
+				}
+				localVarHeaderParams["authorization"] = key
+			}
+		}
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
+type ApiV1DevicesDeviceIdControllerPeersPutRequest struct {
+	ctx context.Context
+	ApiService *DefaultAPIService
+	authorization *string
+	deviceId int64
+	v1DevicesDeviceIdControllerPeersPutRequest *V1DevicesDeviceIdControllerPeersPutRequest
+}
+
+// Bearer token. Format: Bearer &lt;your_token_here&gt;
+func (r ApiV1DevicesDeviceIdControllerPeersPutRequest) Authorization(authorization string) ApiV1DevicesDeviceIdControllerPeersPutRequest {
+	r.authorization = &authorization
+	return r
+}
+
+func (r ApiV1DevicesDeviceIdControllerPeersPutRequest) V1DevicesDeviceIdControllerPeersPutRequest(v1DevicesDeviceIdControllerPeersPutRequest V1DevicesDeviceIdControllerPeersPutRequest) ApiV1DevicesDeviceIdControllerPeersPutRequest {
+	r.v1DevicesDeviceIdControllerPeersPutRequest = &v1DevicesDeviceIdControllerPeersPutRequest
+	return r
+}
+
+func (r ApiV1DevicesDeviceIdControllerPeersPutRequest) Execute() (map[string]interface{}, *http.Response, error) {
+	return r.ApiService.V1DevicesDeviceIdControllerPeersPutExecute(r)
+}
+
+/*
+V1DevicesDeviceIdControllerPeersPut Method for V1DevicesDeviceIdControllerPeersPut
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @param deviceId 
+ @return ApiV1DevicesDeviceIdControllerPeersPutRequest
+*/
+func (a *DefaultAPIService) V1DevicesDeviceIdControllerPeersPut(ctx context.Context, deviceId int64) ApiV1DevicesDeviceIdControllerPeersPutRequest {
+	return ApiV1DevicesDeviceIdControllerPeersPutRequest{
+		ApiService: a,
+		ctx: ctx,
+		deviceId: deviceId,
+	}
+}
+
+// Execute executes the request
+//  @return map[string]interface{}
+func (a *DefaultAPIService) V1DevicesDeviceIdControllerPeersPutExecute(r ApiV1DevicesDeviceIdControllerPeersPutRequest) (map[string]interface{}, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodPut
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  map[string]interface{}
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1DevicesDeviceIdControllerPeersPut")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/v1/devices/{deviceId}/controller-peers"
+	localVarPath = strings.Replace(localVarPath, "{"+"deviceId"+"}", url.PathEscape(parameterValueToString(r.deviceId, "deviceId")), -1)
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+	if r.authorization == nil {
+		return localVarReturnValue, nil, reportError("authorization is required and must be specified")
+	}
+	if r.v1DevicesDeviceIdControllerPeersPutRequest == nil {
+		return localVarReturnValue, nil, reportError("v1DevicesDeviceIdControllerPeersPutRequest is required and must be specified")
+	}
+
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{"application/json"}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"application/json"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	parameterAddToHeaderOrQuery(localVarHeaderParams, "Authorization", r.authorization, "simple", "")
+	// body params
+	localVarPostBody = r.v1DevicesDeviceIdControllerPeersPutRequest
 	if r.ctx != nil {
 		// API Key Authentication
 		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
@@ -15662,135 +15670,6 @@ func (a *DefaultAPIService) V1DevicesDeviceIdSlicePeersGetExecute(r ApiV1Devices
 	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
-type ApiV1DevicesDeviceIdStagedConfigCompareGetRequest struct {
-	ctx context.Context
-	ApiService *DefaultAPIService
-	authorization *string
-	deviceId int64
-}
-
-// Bearer token. Format: Bearer &lt;your_token_here&gt;
-func (r ApiV1DevicesDeviceIdStagedConfigCompareGetRequest) Authorization(authorization string) ApiV1DevicesDeviceIdStagedConfigCompareGetRequest {
-	r.authorization = &authorization
-	return r
-}
-
-func (r ApiV1DevicesDeviceIdStagedConfigCompareGetRequest) Execute() (*V1DevicesDeviceIdStagedConfigCompareGet200Response, *http.Response, error) {
-	return r.ApiService.V1DevicesDeviceIdStagedConfigCompareGetExecute(r)
-}
-
-/*
-V1DevicesDeviceIdStagedConfigCompareGet Method for V1DevicesDeviceIdStagedConfigCompareGet
-
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param deviceId 16 bytes (base64 encoded) identifier for the device.
- @return ApiV1DevicesDeviceIdStagedConfigCompareGetRequest
-*/
-func (a *DefaultAPIService) V1DevicesDeviceIdStagedConfigCompareGet(ctx context.Context, deviceId int64) ApiV1DevicesDeviceIdStagedConfigCompareGetRequest {
-	return ApiV1DevicesDeviceIdStagedConfigCompareGetRequest{
-		ApiService: a,
-		ctx: ctx,
-		deviceId: deviceId,
-	}
-}
-
-// Execute executes the request
-//  @return V1DevicesDeviceIdStagedConfigCompareGet200Response
-func (a *DefaultAPIService) V1DevicesDeviceIdStagedConfigCompareGetExecute(r ApiV1DevicesDeviceIdStagedConfigCompareGetRequest) (*V1DevicesDeviceIdStagedConfigCompareGet200Response, *http.Response, error) {
-	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  *V1DevicesDeviceIdStagedConfigCompareGet200Response
-	)
-
-	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1DevicesDeviceIdStagedConfigCompareGet")
-	if err != nil {
-		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
-	}
-
-	localVarPath := localBasePath + "/v1/devices/{deviceId}/stagedConfig/compare"
-	localVarPath = strings.Replace(localVarPath, "{"+"deviceId"+"}", url.PathEscape(parameterValueToString(r.deviceId, "deviceId")), -1)
-
-	localVarHeaderParams := make(map[string]string)
-	localVarQueryParams := url.Values{}
-	localVarFormParams := url.Values{}
-	if r.authorization == nil {
-		return localVarReturnValue, nil, reportError("authorization is required and must be specified")
-	}
-	if r.deviceId < 0 {
-		return localVarReturnValue, nil, reportError("deviceId must be greater than 0")
-	}
-
-	// to determine the Content-Type header
-	localVarHTTPContentTypes := []string{}
-
-	// set Content-Type header
-	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
-	if localVarHTTPContentType != "" {
-		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
-	}
-
-	// to determine the Accept header
-	localVarHTTPHeaderAccepts := []string{"application/json"}
-
-	// set Accept header
-	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
-	if localVarHTTPHeaderAccept != "" {
-		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
-	}
-	parameterAddToHeaderOrQuery(localVarHeaderParams, "Authorization", r.authorization, "simple", "")
-	if r.ctx != nil {
-		// API Key Authentication
-		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
-			if apiKey, ok := auth["jwtAuth"]; ok {
-				var key string
-				if apiKey.Prefix != "" {
-					key = apiKey.Prefix + " " + apiKey.Key
-				} else {
-					key = apiKey.Key
-				}
-				localVarHeaderParams["authorization"] = key
-			}
-		}
-	}
-	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
-	if err != nil {
-		return localVarReturnValue, nil, err
-	}
-
-	localVarHTTPResponse, err := a.client.callAPI(req)
-	if err != nil || localVarHTTPResponse == nil {
-		return localVarReturnValue, localVarHTTPResponse, err
-	}
-
-	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
-	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
-	if err != nil {
-		return localVarReturnValue, localVarHTTPResponse, err
-	}
-
-	if localVarHTTPResponse.StatusCode >= 300 {
-		newErr := &GenericOpenAPIError{
-			body:  localVarBody,
-			error: localVarHTTPResponse.Status,
-		}
-		return localVarReturnValue, localVarHTTPResponse, newErr
-	}
-
-	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
-	if err != nil {
-		newErr := &GenericOpenAPIError{
-			body:  localVarBody,
-			error: err.Error(),
-		}
-		return localVarReturnValue, localVarHTTPResponse, newErr
-	}
-
-	return localVarReturnValue, localVarHTTPResponse, nil
-}
-
 type ApiV1DevicesDeviceIdTwampCoreGetRequest struct {
 	ctx context.Context
 	ApiService *DefaultAPIService
@@ -15930,7 +15809,7 @@ func (r ApiV1DevicesDeviceIdVersionsCompareGetRequest) Authorization(authorizati
 	return r
 }
 
-func (r ApiV1DevicesDeviceIdVersionsCompareGetRequest) Execute() (*V1DevicesDeviceIdStagedConfigCompareGet200Response, *http.Response, error) {
+func (r ApiV1DevicesDeviceIdVersionsCompareGetRequest) Execute() (*V1DevicesDeviceIdVersionsCompareGet200Response, *http.Response, error) {
 	return r.ApiService.V1DevicesDeviceIdVersionsCompareGetExecute(r)
 }
 
@@ -15950,13 +15829,13 @@ func (a *DefaultAPIService) V1DevicesDeviceIdVersionsCompareGet(ctx context.Cont
 }
 
 // Execute executes the request
-//  @return V1DevicesDeviceIdStagedConfigCompareGet200Response
-func (a *DefaultAPIService) V1DevicesDeviceIdVersionsCompareGetExecute(r ApiV1DevicesDeviceIdVersionsCompareGetRequest) (*V1DevicesDeviceIdStagedConfigCompareGet200Response, *http.Response, error) {
+//  @return V1DevicesDeviceIdVersionsCompareGet200Response
+func (a *DefaultAPIService) V1DevicesDeviceIdVersionsCompareGetExecute(r ApiV1DevicesDeviceIdVersionsCompareGetRequest) (*V1DevicesDeviceIdVersionsCompareGet200Response, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1DevicesDeviceIdStagedConfigCompareGet200Response
+		localVarReturnValue  *V1DevicesDeviceIdVersionsCompareGet200Response
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1DevicesDeviceIdVersionsCompareGet")
@@ -37494,128 +37373,6 @@ func (a *DefaultAPIService) V1GroupsRootGetExecute(r ApiV1GroupsRootGetRequest) 
 	}
 
 	localVarPath := localBasePath + "/v1/groups/root"
-
-	localVarHeaderParams := make(map[string]string)
-	localVarQueryParams := url.Values{}
-	localVarFormParams := url.Values{}
-	if r.authorization == nil {
-		return localVarReturnValue, nil, reportError("authorization is required and must be specified")
-	}
-
-	// to determine the Content-Type header
-	localVarHTTPContentTypes := []string{}
-
-	// set Content-Type header
-	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
-	if localVarHTTPContentType != "" {
-		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
-	}
-
-	// to determine the Accept header
-	localVarHTTPHeaderAccepts := []string{"application/json"}
-
-	// set Accept header
-	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
-	if localVarHTTPHeaderAccept != "" {
-		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
-	}
-	parameterAddToHeaderOrQuery(localVarHeaderParams, "Authorization", r.authorization, "simple", "")
-	if r.ctx != nil {
-		// API Key Authentication
-		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
-			if apiKey, ok := auth["jwtAuth"]; ok {
-				var key string
-				if apiKey.Prefix != "" {
-					key = apiKey.Prefix + " " + apiKey.Key
-				} else {
-					key = apiKey.Key
-				}
-				localVarHeaderParams["authorization"] = key
-			}
-		}
-	}
-	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
-	if err != nil {
-		return localVarReturnValue, nil, err
-	}
-
-	localVarHTTPResponse, err := a.client.callAPI(req)
-	if err != nil || localVarHTTPResponse == nil {
-		return localVarReturnValue, localVarHTTPResponse, err
-	}
-
-	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
-	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
-	if err != nil {
-		return localVarReturnValue, localVarHTTPResponse, err
-	}
-
-	if localVarHTTPResponse.StatusCode >= 300 {
-		newErr := &GenericOpenAPIError{
-			body:  localVarBody,
-			error: localVarHTTPResponse.Status,
-		}
-		return localVarReturnValue, localVarHTTPResponse, newErr
-	}
-
-	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
-	if err != nil {
-		newErr := &GenericOpenAPIError{
-			body:  localVarBody,
-			error: err.Error(),
-		}
-		return localVarReturnValue, localVarHTTPResponse, newErr
-	}
-
-	return localVarReturnValue, localVarHTTPResponse, nil
-}
-
-type ApiV1HealthcheckDevicesGetRequest struct {
-	ctx context.Context
-	ApiService *DefaultAPIService
-	authorization *string
-}
-
-// Bearer token. Format: Bearer &lt;your_token_here&gt;
-func (r ApiV1HealthcheckDevicesGetRequest) Authorization(authorization string) ApiV1HealthcheckDevicesGetRequest {
-	r.authorization = &authorization
-	return r
-}
-
-func (r ApiV1HealthcheckDevicesGetRequest) Execute() (*V1HealthcheckDevicesGet200Response, *http.Response, error) {
-	return r.ApiService.V1HealthcheckDevicesGetExecute(r)
-}
-
-/*
-V1HealthcheckDevicesGet Method for V1HealthcheckDevicesGet
-
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiV1HealthcheckDevicesGetRequest
-*/
-func (a *DefaultAPIService) V1HealthcheckDevicesGet(ctx context.Context) ApiV1HealthcheckDevicesGetRequest {
-	return ApiV1HealthcheckDevicesGetRequest{
-		ApiService: a,
-		ctx: ctx,
-	}
-}
-
-// Execute executes the request
-//  @return V1HealthcheckDevicesGet200Response
-func (a *DefaultAPIService) V1HealthcheckDevicesGetExecute(r ApiV1HealthcheckDevicesGetRequest) (*V1HealthcheckDevicesGet200Response, *http.Response, error) {
-	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  *V1HealthcheckDevicesGet200Response
-	)
-
-	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1HealthcheckDevicesGet")
-	if err != nil {
-		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
-	}
-
-	localVarPath := localBasePath + "/v1/healthcheck/devices"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}

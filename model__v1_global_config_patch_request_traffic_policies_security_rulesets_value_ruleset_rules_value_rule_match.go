@@ -1,7 +1,7 @@
 /*
 Graphiant APIs
 
-**To use the APIs:**  1) Login using `/api/v1/auth/login`   2) Copy the value of \"token\" in the response   3) Click the \"Authorize\" button   4) In the \"Value\" text field enter: `Bearer <your token>`   5) Click \"Authorize\"   6) All requests are now authorized.  **Token valid for 2 hours. If expired:**   - Login again, click \"Authorize\", paste new token.
+Graphiant API documentation.
 
 API version: 1.0.0
 */
@@ -24,6 +24,7 @@ type V1GlobalConfigPatchRequestTrafficPoliciesSecurityRulesetsValueRulesetRulesV
 	DestinationNetwork *V1GlobalConfigPatchRequestTrafficPoliciesSecurityRulesetsValueRulesetRulesValueRuleMatchDestinationNetwork `json:"destinationNetwork,omitempty"`
 	DestinationPort *int32 `json:"destinationPort,omitempty"`
 	DestinationPortRange *V1GlobalConfigPatchRequestTrafficPoliciesSecurityRulesetsValueRulesetRulesValueRuleMatchDestinationPortRange `json:"destinationPortRange,omitempty"`
+	DomainList *V1GlobalConfigPatchRequestTrafficPoliciesSecurityRulesetsValueRulesetRulesValueRuleMatchDomainList `json:"domainList,omitempty"`
 	Dscp *V1GlobalConfigPatchRequestTrafficPoliciesSecurityRulesetsValueRulesetRulesValueRuleMatchDscp `json:"dscp,omitempty"`
 	IcmpType *int32 `json:"icmpType,omitempty"`
 	IpProtocol *string `json:"ipProtocol,omitempty"`
@@ -208,6 +209,38 @@ func (o *V1GlobalConfigPatchRequestTrafficPoliciesSecurityRulesetsValueRulesetRu
 // SetDestinationPortRange gets a reference to the given V1GlobalConfigPatchRequestTrafficPoliciesSecurityRulesetsValueRulesetRulesValueRuleMatchDestinationPortRange and assigns it to the DestinationPortRange field.
 func (o *V1GlobalConfigPatchRequestTrafficPoliciesSecurityRulesetsValueRulesetRulesValueRuleMatch) SetDestinationPortRange(v V1GlobalConfigPatchRequestTrafficPoliciesSecurityRulesetsValueRulesetRulesValueRuleMatchDestinationPortRange) {
 	o.DestinationPortRange = &v
+}
+
+// GetDomainList returns the DomainList field value if set, zero value otherwise.
+func (o *V1GlobalConfigPatchRequestTrafficPoliciesSecurityRulesetsValueRulesetRulesValueRuleMatch) GetDomainList() V1GlobalConfigPatchRequestTrafficPoliciesSecurityRulesetsValueRulesetRulesValueRuleMatchDomainList {
+	if o == nil || IsNil(o.DomainList) {
+		var ret V1GlobalConfigPatchRequestTrafficPoliciesSecurityRulesetsValueRulesetRulesValueRuleMatchDomainList
+		return ret
+	}
+	return *o.DomainList
+}
+
+// GetDomainListOk returns a tuple with the DomainList field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *V1GlobalConfigPatchRequestTrafficPoliciesSecurityRulesetsValueRulesetRulesValueRuleMatch) GetDomainListOk() (*V1GlobalConfigPatchRequestTrafficPoliciesSecurityRulesetsValueRulesetRulesValueRuleMatchDomainList, bool) {
+	if o == nil || IsNil(o.DomainList) {
+		return nil, false
+	}
+	return o.DomainList, true
+}
+
+// HasDomainList returns a boolean if a field has been set.
+func (o *V1GlobalConfigPatchRequestTrafficPoliciesSecurityRulesetsValueRulesetRulesValueRuleMatch) HasDomainList() bool {
+	if o != nil && !IsNil(o.DomainList) {
+		return true
+	}
+
+	return false
+}
+
+// SetDomainList gets a reference to the given V1GlobalConfigPatchRequestTrafficPoliciesSecurityRulesetsValueRulesetRulesValueRuleMatchDomainList and assigns it to the DomainList field.
+func (o *V1GlobalConfigPatchRequestTrafficPoliciesSecurityRulesetsValueRulesetRulesValueRuleMatch) SetDomainList(v V1GlobalConfigPatchRequestTrafficPoliciesSecurityRulesetsValueRulesetRulesValueRuleMatchDomainList) {
+	o.DomainList = &v
 }
 
 // GetDscp returns the Dscp field value if set, zero value otherwise.
@@ -458,6 +491,9 @@ func (o V1GlobalConfigPatchRequestTrafficPoliciesSecurityRulesetsValueRulesetRul
 	}
 	if !IsNil(o.DestinationPortRange) {
 		toSerialize["destinationPortRange"] = o.DestinationPortRange
+	}
+	if !IsNil(o.DomainList) {
+		toSerialize["domainList"] = o.DomainList
 	}
 	if !IsNil(o.Dscp) {
 		toSerialize["dscp"] = o.Dscp

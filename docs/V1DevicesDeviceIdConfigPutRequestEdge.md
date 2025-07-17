@@ -12,6 +12,7 @@ Name | Type | Description | Notes
 **Interfaces** | Pointer to [**map[string]V1DevicesDeviceIdConfigPutRequestEdgeInterfacesValue**](V1DevicesDeviceIdConfigPutRequestEdgeInterfacesValue.md) |  | [optional] 
 **IpfixEnabled** | Pointer to **bool** |  | [optional] 
 **IpfixExporters** | Pointer to [**map[string]V1GlobalConfigPatchRequestIpfixExportersValue**](V1GlobalConfigPatchRequestIpfixExportersValue.md) |  | [optional] 
+**LagInterfaces** | Pointer to [**map[string]V1DevicesDeviceIdConfigPutRequestEdgeLagInterfacesValue**](V1DevicesDeviceIdConfigPutRequestEdgeLagInterfacesValue.md) |  | [optional] 
 **LldpEnabled** | Pointer to **bool** |  | [optional] 
 **LocalRouteTag** | Pointer to [**V1GlobalConfigPatchRequestRoutingPoliciesValuePolicyStatementsValueStatementMatchesValueMatchRouteTag**](V1GlobalConfigPatchRequestRoutingPoliciesValuePolicyStatementsValueStatementMatchesValueMatchRouteTag.md) |  | [optional] 
 **LocalWebServerPassword** | Pointer to **string** |  | [optional] 
@@ -252,6 +253,31 @@ SetIpfixExporters sets IpfixExporters field to given value.
 `func (o *V1DevicesDeviceIdConfigPutRequestEdge) HasIpfixExporters() bool`
 
 HasIpfixExporters returns a boolean if a field has been set.
+
+### GetLagInterfaces
+
+`func (o *V1DevicesDeviceIdConfigPutRequestEdge) GetLagInterfaces() map[string]V1DevicesDeviceIdConfigPutRequestEdgeLagInterfacesValue`
+
+GetLagInterfaces returns the LagInterfaces field if non-nil, zero value otherwise.
+
+### GetLagInterfacesOk
+
+`func (o *V1DevicesDeviceIdConfigPutRequestEdge) GetLagInterfacesOk() (*map[string]V1DevicesDeviceIdConfigPutRequestEdgeLagInterfacesValue, bool)`
+
+GetLagInterfacesOk returns a tuple with the LagInterfaces field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetLagInterfaces
+
+`func (o *V1DevicesDeviceIdConfigPutRequestEdge) SetLagInterfaces(v map[string]V1DevicesDeviceIdConfigPutRequestEdgeLagInterfacesValue)`
+
+SetLagInterfaces sets LagInterfaces field to given value.
+
+### HasLagInterfaces
+
+`func (o *V1DevicesDeviceIdConfigPutRequestEdge) HasLagInterfaces() bool`
+
+HasLagInterfaces returns a boolean if a field has been set.
 
 ### GetLldpEnabled
 

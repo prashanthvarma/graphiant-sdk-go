@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **DestinationPort** | Pointer to **int32** |  | [optional] 
 **DestinationPortRange** | Pointer to [**V1GlobalConfigPatchRequestTrafficPoliciesSecurityRulesetsValueRulesetRulesValueRuleMatchDestinationPortRange**](V1GlobalConfigPatchRequestTrafficPoliciesSecurityRulesetsValueRulesetRulesValueRuleMatchDestinationPortRange.md) |  | [optional] 
 **DomainCategoryIds** | Pointer to **[]int64** |  | [optional] 
+**DomainWildcards** | Pointer to **[]string** |  | [optional] 
 **Dscp** | Pointer to [**V1GlobalConfigPatchRequestTrafficPoliciesSecurityRulesetsValueRulesetRulesValueRuleMatchDscpMatch**](V1GlobalConfigPatchRequestTrafficPoliciesSecurityRulesetsValueRulesetRulesValueRuleMatchDscpMatch.md) |  | [optional] 
 **IcmpType** | Pointer to **int32** |  | [optional] 
 **IpProtocol** | Pointer to **string** |  | [optional] 
@@ -160,6 +161,31 @@ SetDomainCategoryIds sets DomainCategoryIds field to given value.
 `func (o *V1ExtranetsGet200ResponsePoliciesInnerBranchesExcludedDevicesInnerTrafficPolicySecurityRulesetsInnerRulesInnerMatch) HasDomainCategoryIds() bool`
 
 HasDomainCategoryIds returns a boolean if a field has been set.
+
+### GetDomainWildcards
+
+`func (o *V1ExtranetsGet200ResponsePoliciesInnerBranchesExcludedDevicesInnerTrafficPolicySecurityRulesetsInnerRulesInnerMatch) GetDomainWildcards() []string`
+
+GetDomainWildcards returns the DomainWildcards field if non-nil, zero value otherwise.
+
+### GetDomainWildcardsOk
+
+`func (o *V1ExtranetsGet200ResponsePoliciesInnerBranchesExcludedDevicesInnerTrafficPolicySecurityRulesetsInnerRulesInnerMatch) GetDomainWildcardsOk() (*[]string, bool)`
+
+GetDomainWildcardsOk returns a tuple with the DomainWildcards field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDomainWildcards
+
+`func (o *V1ExtranetsGet200ResponsePoliciesInnerBranchesExcludedDevicesInnerTrafficPolicySecurityRulesetsInnerRulesInnerMatch) SetDomainWildcards(v []string)`
+
+SetDomainWildcards sets DomainWildcards field to given value.
+
+### HasDomainWildcards
+
+`func (o *V1ExtranetsGet200ResponsePoliciesInnerBranchesExcludedDevicesInnerTrafficPolicySecurityRulesetsInnerRulesInnerMatch) HasDomainWildcards() bool`
+
+HasDomainWildcards returns a boolean if a field has been set.
 
 ### GetDscp
 

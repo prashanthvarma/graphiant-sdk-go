@@ -79,7 +79,7 @@ ok      github.com/Graphiant-Inc/graphiant-sdk-go/test  2.155s
 Steps to generate Graphiant-SDK-Go locally using Graphiant API docs. 
 
 ```sh
-openapi-generator generate -i graphiant_api_docs_v25.6.2.json -g go --git-user-id Graphiant-Inc --git-repo-id graphiant-sdk-go --package-name graphiant_sdk
+openapi-generator generate -i graphiant_api_docs_v25.7.1.json -g go --git-user-id Graphiant-Inc --git-repo-id graphiant-sdk-go --package-name graphiant_sdk
 ```
 
 Note: Latest version of Graphiant API docs can be downloaded from Graphiant portal under "Support Hub" > "Developer Tools".

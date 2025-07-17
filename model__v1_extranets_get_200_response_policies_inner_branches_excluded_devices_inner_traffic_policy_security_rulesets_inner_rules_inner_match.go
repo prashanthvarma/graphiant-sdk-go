@@ -1,7 +1,7 @@
 /*
 Graphiant APIs
 
-**To use the APIs:**  1) Login using `/api/v1/auth/login`   2) Copy the value of \"token\" in the response   3) Click the \"Authorize\" button   4) In the \"Value\" text field enter: `Bearer <your token>`   5) Click \"Authorize\"   6) All requests are now authorized.  **Token valid for 2 hours. If expired:**   - Login again, click \"Authorize\", paste new token.
+Graphiant API documentation.
 
 API version: 1.0.0
 */
@@ -24,6 +24,7 @@ type V1ExtranetsGet200ResponsePoliciesInnerBranchesExcludedDevicesInnerTrafficPo
 	DestinationPort *int32 `json:"destinationPort,omitempty"`
 	DestinationPortRange *V1GlobalConfigPatchRequestTrafficPoliciesSecurityRulesetsValueRulesetRulesValueRuleMatchDestinationPortRange `json:"destinationPortRange,omitempty"`
 	DomainCategoryIds []int64 `json:"domainCategoryIds,omitempty"`
+	DomainWildcards []string `json:"domainWildcards,omitempty"`
 	Dscp *V1GlobalConfigPatchRequestTrafficPoliciesSecurityRulesetsValueRulesetRulesValueRuleMatchDscpMatch `json:"dscp,omitempty"`
 	IcmpType *int32 `json:"icmpType,omitempty"`
 	IpProtocol *string `json:"ipProtocol,omitempty"`
@@ -208,6 +209,38 @@ func (o *V1ExtranetsGet200ResponsePoliciesInnerBranchesExcludedDevicesInnerTraff
 // SetDomainCategoryIds gets a reference to the given []int64 and assigns it to the DomainCategoryIds field.
 func (o *V1ExtranetsGet200ResponsePoliciesInnerBranchesExcludedDevicesInnerTrafficPolicySecurityRulesetsInnerRulesInnerMatch) SetDomainCategoryIds(v []int64) {
 	o.DomainCategoryIds = v
+}
+
+// GetDomainWildcards returns the DomainWildcards field value if set, zero value otherwise.
+func (o *V1ExtranetsGet200ResponsePoliciesInnerBranchesExcludedDevicesInnerTrafficPolicySecurityRulesetsInnerRulesInnerMatch) GetDomainWildcards() []string {
+	if o == nil || IsNil(o.DomainWildcards) {
+		var ret []string
+		return ret
+	}
+	return o.DomainWildcards
+}
+
+// GetDomainWildcardsOk returns a tuple with the DomainWildcards field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *V1ExtranetsGet200ResponsePoliciesInnerBranchesExcludedDevicesInnerTrafficPolicySecurityRulesetsInnerRulesInnerMatch) GetDomainWildcardsOk() ([]string, bool) {
+	if o == nil || IsNil(o.DomainWildcards) {
+		return nil, false
+	}
+	return o.DomainWildcards, true
+}
+
+// HasDomainWildcards returns a boolean if a field has been set.
+func (o *V1ExtranetsGet200ResponsePoliciesInnerBranchesExcludedDevicesInnerTrafficPolicySecurityRulesetsInnerRulesInnerMatch) HasDomainWildcards() bool {
+	if o != nil && !IsNil(o.DomainWildcards) {
+		return true
+	}
+
+	return false
+}
+
+// SetDomainWildcards gets a reference to the given []string and assigns it to the DomainWildcards field.
+func (o *V1ExtranetsGet200ResponsePoliciesInnerBranchesExcludedDevicesInnerTrafficPolicySecurityRulesetsInnerRulesInnerMatch) SetDomainWildcards(v []string) {
+	o.DomainWildcards = v
 }
 
 // GetDscp returns the Dscp field value if set, zero value otherwise.
@@ -458,6 +491,9 @@ func (o V1ExtranetsGet200ResponsePoliciesInnerBranchesExcludedDevicesInnerTraffi
 	}
 	if !IsNil(o.DomainCategoryIds) {
 		toSerialize["domainCategoryIds"] = o.DomainCategoryIds
+	}
+	if !IsNil(o.DomainWildcards) {
+		toSerialize["domainWildcards"] = o.DomainWildcards
 	}
 	if !IsNil(o.Dscp) {
 		toSerialize["dscp"] = o.Dscp
