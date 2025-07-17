@@ -1214,20 +1214,6 @@ func Test_graphiant_sdk_DefaultAPIService(t *testing.T) {
 
 	})
 
-	t.Run("Test DefaultAPIService V1DevicesDeviceIdConfigsStagedDelete", func(t *testing.T) {
-
-		t.Skip("skip test")  // remove to run test
-
-		var deviceId int64
-
-		resp, httpRes, err := apiClient.DefaultAPI.V1DevicesDeviceIdConfigsStagedDelete(context.Background(), deviceId).Execute()
-
-		require.Nil(t, err)
-		require.NotNil(t, resp)
-		assert.Equal(t, 200, httpRes.StatusCode)
-
-	})
-
 	t.Run("Test DefaultAPIService V1DevicesDeviceIdConnectivityGet", func(t *testing.T) {
 
 		t.Skip("skip test")  // remove to run test
@@ -1446,20 +1432,6 @@ func Test_graphiant_sdk_DefaultAPIService(t *testing.T) {
 		var deviceId int64
 
 		resp, httpRes, err := apiClient.DefaultAPI.V1DevicesDeviceIdSlicePeersGet(context.Background(), deviceId).Execute()
-
-		require.Nil(t, err)
-		require.NotNil(t, resp)
-		assert.Equal(t, 200, httpRes.StatusCode)
-
-	})
-
-	t.Run("Test DefaultAPIService V1DevicesDeviceIdStagedConfigCompareGet", func(t *testing.T) {
-
-		t.Skip("skip test")  // remove to run test
-
-		var deviceId int64
-
-		resp, httpRes, err := apiClient.DefaultAPI.V1DevicesDeviceIdStagedConfigCompareGet(context.Background(), deviceId).Execute()
 
 		require.Nil(t, err)
 		require.NotNil(t, resp)
@@ -3618,18 +3590,6 @@ func Test_graphiant_sdk_DefaultAPIService(t *testing.T) {
 		t.Skip("skip test")  // remove to run test
 
 		resp, httpRes, err := apiClient.DefaultAPI.V1GroupsRootGet(context.Background()).Execute()
-
-		require.Nil(t, err)
-		require.NotNil(t, resp)
-		assert.Equal(t, 200, httpRes.StatusCode)
-
-	})
-
-	t.Run("Test DefaultAPIService V1HealthcheckDevicesGet", func(t *testing.T) {
-
-		t.Skip("skip test")  // remove to run test
-
-		resp, httpRes, err := apiClient.DefaultAPI.V1HealthcheckDevicesGet(context.Background()).Execute()
 
 		require.Nil(t, err)
 		require.NotNil(t, resp)
