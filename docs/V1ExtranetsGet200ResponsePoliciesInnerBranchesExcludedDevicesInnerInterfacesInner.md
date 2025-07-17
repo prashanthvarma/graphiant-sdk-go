@@ -17,12 +17,14 @@ Name | Type | Description | Notes
 **Ipv4** | Pointer to [**V1ExtranetsGet200ResponsePoliciesInnerBranchesExcludedDevicesInnerInterfacesInnerIpv4**](V1ExtranetsGet200ResponsePoliciesInnerBranchesExcludedDevicesInnerInterfacesInnerIpv4.md) |  | [optional] 
 **Ipv6** | Pointer to [**V1ExtranetsGet200ResponsePoliciesInnerBranchesExcludedDevicesInnerInterfacesInnerIpv4**](V1ExtranetsGet200ResponsePoliciesInnerBranchesExcludedDevicesInnerInterfacesInnerIpv4.md) |  | [optional] 
 **Ipv6Addresses** | Pointer to [**[]V1ExtranetsGet200ResponsePoliciesInnerBranchesExcludedDevicesInnerInterfacesInnerIpv4**](V1ExtranetsGet200ResponsePoliciesInnerBranchesExcludedDevicesInnerInterfacesInnerIpv4.md) |  | [optional] 
+**LagInterface** | Pointer to [**V1ExtranetsGet200ResponsePoliciesInnerBranchesExcludedDevicesInnerInterfacesInnerLagInterface**](V1ExtranetsGet200ResponsePoliciesInnerBranchesExcludedDevicesInnerInterfacesInnerLagInterface.md) |  | [optional] 
 **Lan** | Pointer to **string** |  | [optional] 
 **LldpEnabled** | Pointer to **bool** |  | [optional] 
 **MaxTransmissionUnit** | Pointer to **int32** |  | [optional] 
 **Name** | Pointer to **string** |  | [optional] 
 **OperUpdatedAt** | Pointer to [**V1AlarmHistoryGet200ResponseHistoryInnerTime**](V1AlarmHistoryGet200ResponseHistoryInnerTime.md) |  | [optional] 
 **PhyAddress** | Pointer to **string** |  | [optional] 
+**Protocol** | Pointer to **string** |  | [optional] 
 **SecurityZone** | Pointer to **string** |  | [optional] 
 **SfpOpticalStrength** | Pointer to [**[]V1ExtranetsGet200ResponsePoliciesInnerBranchesExcludedDevicesInnerInterfacesInnerSfpOpticalStrengthInner**](V1ExtranetsGet200ResponsePoliciesInnerBranchesExcludedDevicesInnerInterfacesInnerSfpOpticalStrengthInner.md) |  | [optional] 
 **SpeedMbps** | Pointer to **int32** |  | [optional] 
@@ -379,6 +381,31 @@ SetIpv6Addresses sets Ipv6Addresses field to given value.
 
 HasIpv6Addresses returns a boolean if a field has been set.
 
+### GetLagInterface
+
+`func (o *V1ExtranetsGet200ResponsePoliciesInnerBranchesExcludedDevicesInnerInterfacesInner) GetLagInterface() V1ExtranetsGet200ResponsePoliciesInnerBranchesExcludedDevicesInnerInterfacesInnerLagInterface`
+
+GetLagInterface returns the LagInterface field if non-nil, zero value otherwise.
+
+### GetLagInterfaceOk
+
+`func (o *V1ExtranetsGet200ResponsePoliciesInnerBranchesExcludedDevicesInnerInterfacesInner) GetLagInterfaceOk() (*V1ExtranetsGet200ResponsePoliciesInnerBranchesExcludedDevicesInnerInterfacesInnerLagInterface, bool)`
+
+GetLagInterfaceOk returns a tuple with the LagInterface field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetLagInterface
+
+`func (o *V1ExtranetsGet200ResponsePoliciesInnerBranchesExcludedDevicesInnerInterfacesInner) SetLagInterface(v V1ExtranetsGet200ResponsePoliciesInnerBranchesExcludedDevicesInnerInterfacesInnerLagInterface)`
+
+SetLagInterface sets LagInterface field to given value.
+
+### HasLagInterface
+
+`func (o *V1ExtranetsGet200ResponsePoliciesInnerBranchesExcludedDevicesInnerInterfacesInner) HasLagInterface() bool`
+
+HasLagInterface returns a boolean if a field has been set.
+
 ### GetLan
 
 `func (o *V1ExtranetsGet200ResponsePoliciesInnerBranchesExcludedDevicesInnerInterfacesInner) GetLan() string`
@@ -528,6 +555,31 @@ SetPhyAddress sets PhyAddress field to given value.
 `func (o *V1ExtranetsGet200ResponsePoliciesInnerBranchesExcludedDevicesInnerInterfacesInner) HasPhyAddress() bool`
 
 HasPhyAddress returns a boolean if a field has been set.
+
+### GetProtocol
+
+`func (o *V1ExtranetsGet200ResponsePoliciesInnerBranchesExcludedDevicesInnerInterfacesInner) GetProtocol() string`
+
+GetProtocol returns the Protocol field if non-nil, zero value otherwise.
+
+### GetProtocolOk
+
+`func (o *V1ExtranetsGet200ResponsePoliciesInnerBranchesExcludedDevicesInnerInterfacesInner) GetProtocolOk() (*string, bool)`
+
+GetProtocolOk returns a tuple with the Protocol field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetProtocol
+
+`func (o *V1ExtranetsGet200ResponsePoliciesInnerBranchesExcludedDevicesInnerInterfacesInner) SetProtocol(v string)`
+
+SetProtocol sets Protocol field to given value.
+
+### HasProtocol
+
+`func (o *V1ExtranetsGet200ResponsePoliciesInnerBranchesExcludedDevicesInnerInterfacesInner) HasProtocol() bool`
+
+HasProtocol returns a boolean if a field has been set.
 
 ### GetSecurityZone
 

@@ -1,7 +1,7 @@
 /*
 Graphiant APIs
 
-**To use the APIs:**  1) Login using `/api/v1/auth/login`   2) Copy the value of \"token\" in the response   3) Click the \"Authorize\" button   4) In the \"Value\" text field enter: `Bearer <your token>`   5) Click \"Authorize\"   6) All requests are now authorized.  **Token valid for 2 hours. If expired:**   - Login again, click \"Authorize\", paste new token.
+Graphiant API documentation.
 
 API version: 1.0.0
 */
@@ -27,6 +27,7 @@ type V1DevicesDeviceIdConfigPutRequestEdge struct {
 	Interfaces *map[string]V1DevicesDeviceIdConfigPutRequestEdgeInterfacesValue `json:"interfaces,omitempty"`
 	IpfixEnabled *bool `json:"ipfixEnabled,omitempty"`
 	IpfixExporters *map[string]V1GlobalConfigPatchRequestIpfixExportersValue `json:"ipfixExporters,omitempty"`
+	LagInterfaces *map[string]V1DevicesDeviceIdConfigPutRequestEdgeLagInterfacesValue `json:"lagInterfaces,omitempty"`
 	LldpEnabled *bool `json:"lldpEnabled,omitempty"`
 	LocalRouteTag *V1GlobalConfigPatchRequestRoutingPoliciesValuePolicyStatementsValueStatementMatchesValueMatchRouteTag `json:"localRouteTag,omitempty"`
 	LocalWebServerPassword *string `json:"localWebServerPassword,omitempty"`
@@ -321,6 +322,38 @@ func (o *V1DevicesDeviceIdConfigPutRequestEdge) HasIpfixExporters() bool {
 // SetIpfixExporters gets a reference to the given map[string]V1GlobalConfigPatchRequestIpfixExportersValue and assigns it to the IpfixExporters field.
 func (o *V1DevicesDeviceIdConfigPutRequestEdge) SetIpfixExporters(v map[string]V1GlobalConfigPatchRequestIpfixExportersValue) {
 	o.IpfixExporters = &v
+}
+
+// GetLagInterfaces returns the LagInterfaces field value if set, zero value otherwise.
+func (o *V1DevicesDeviceIdConfigPutRequestEdge) GetLagInterfaces() map[string]V1DevicesDeviceIdConfigPutRequestEdgeLagInterfacesValue {
+	if o == nil || IsNil(o.LagInterfaces) {
+		var ret map[string]V1DevicesDeviceIdConfigPutRequestEdgeLagInterfacesValue
+		return ret
+	}
+	return *o.LagInterfaces
+}
+
+// GetLagInterfacesOk returns a tuple with the LagInterfaces field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *V1DevicesDeviceIdConfigPutRequestEdge) GetLagInterfacesOk() (*map[string]V1DevicesDeviceIdConfigPutRequestEdgeLagInterfacesValue, bool) {
+	if o == nil || IsNil(o.LagInterfaces) {
+		return nil, false
+	}
+	return o.LagInterfaces, true
+}
+
+// HasLagInterfaces returns a boolean if a field has been set.
+func (o *V1DevicesDeviceIdConfigPutRequestEdge) HasLagInterfaces() bool {
+	if o != nil && !IsNil(o.LagInterfaces) {
+		return true
+	}
+
+	return false
+}
+
+// SetLagInterfaces gets a reference to the given map[string]V1DevicesDeviceIdConfigPutRequestEdgeLagInterfacesValue and assigns it to the LagInterfaces field.
+func (o *V1DevicesDeviceIdConfigPutRequestEdge) SetLagInterfaces(v map[string]V1DevicesDeviceIdConfigPutRequestEdgeLagInterfacesValue) {
+	o.LagInterfaces = &v
 }
 
 // GetLldpEnabled returns the LldpEnabled field value if set, zero value otherwise.
@@ -1028,6 +1061,9 @@ func (o V1DevicesDeviceIdConfigPutRequestEdge) ToMap() (map[string]interface{}, 
 	}
 	if !IsNil(o.IpfixExporters) {
 		toSerialize["ipfixExporters"] = o.IpfixExporters
+	}
+	if !IsNil(o.LagInterfaces) {
+		toSerialize["lagInterfaces"] = o.LagInterfaces
 	}
 	if !IsNil(o.LldpEnabled) {
 		toSerialize["lldpEnabled"] = o.LldpEnabled

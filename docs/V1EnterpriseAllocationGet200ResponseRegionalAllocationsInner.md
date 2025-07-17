@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **AllocationCore** | Pointer to **float32** |  | [optional] 
 **AllocationGw** | Pointer to **float32** |  | [optional] 
+**AllocationInternet** | Pointer to **float32** |  | [optional] 
 **CreditCore** | Pointer to **float32** |  | [optional] 
 **CreditGw** | Pointer to **float32** |  | [optional] 
 **RegionId** | Pointer to **int32** |  | [optional] 
@@ -79,6 +80,31 @@ SetAllocationGw sets AllocationGw field to given value.
 `func (o *V1EnterpriseAllocationGet200ResponseRegionalAllocationsInner) HasAllocationGw() bool`
 
 HasAllocationGw returns a boolean if a field has been set.
+
+### GetAllocationInternet
+
+`func (o *V1EnterpriseAllocationGet200ResponseRegionalAllocationsInner) GetAllocationInternet() float32`
+
+GetAllocationInternet returns the AllocationInternet field if non-nil, zero value otherwise.
+
+### GetAllocationInternetOk
+
+`func (o *V1EnterpriseAllocationGet200ResponseRegionalAllocationsInner) GetAllocationInternetOk() (*float32, bool)`
+
+GetAllocationInternetOk returns a tuple with the AllocationInternet field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAllocationInternet
+
+`func (o *V1EnterpriseAllocationGet200ResponseRegionalAllocationsInner) SetAllocationInternet(v float32)`
+
+SetAllocationInternet sets AllocationInternet field to given value.
+
+### HasAllocationInternet
+
+`func (o *V1EnterpriseAllocationGet200ResponseRegionalAllocationsInner) HasAllocationInternet() bool`
+
+HasAllocationInternet returns a boolean if a field has been set.
 
 ### GetCreditCore
 

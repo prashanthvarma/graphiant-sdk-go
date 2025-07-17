@@ -1,7 +1,7 @@
 /*
 Graphiant APIs
 
-**To use the APIs:**  1) Login using `/api/v1/auth/login`   2) Copy the value of \"token\" in the response   3) Click the \"Authorize\" button   4) In the \"Value\" text field enter: `Bearer <your token>`   5) Click \"Authorize\"   6) All requests are now authorized.  **Token valid for 2 hours. If expired:**   - Login again, click \"Authorize\", paste new token.
+Graphiant API documentation.
 
 API version: 1.0.0
 */
@@ -22,6 +22,7 @@ type V1AccountMfaPut200Response struct {
 	Confirmed *bool `json:"confirmed,omitempty"`
 	Id *string `json:"id,omitempty"`
 	QrCode *string `json:"qrCode,omitempty"`
+	SharedSecret *string `json:"sharedSecret,omitempty"`
 }
 
 // NewV1AccountMfaPut200Response instantiates a new V1AccountMfaPut200Response object
@@ -137,6 +138,38 @@ func (o *V1AccountMfaPut200Response) SetQrCode(v string) {
 	o.QrCode = &v
 }
 
+// GetSharedSecret returns the SharedSecret field value if set, zero value otherwise.
+func (o *V1AccountMfaPut200Response) GetSharedSecret() string {
+	if o == nil || IsNil(o.SharedSecret) {
+		var ret string
+		return ret
+	}
+	return *o.SharedSecret
+}
+
+// GetSharedSecretOk returns a tuple with the SharedSecret field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *V1AccountMfaPut200Response) GetSharedSecretOk() (*string, bool) {
+	if o == nil || IsNil(o.SharedSecret) {
+		return nil, false
+	}
+	return o.SharedSecret, true
+}
+
+// HasSharedSecret returns a boolean if a field has been set.
+func (o *V1AccountMfaPut200Response) HasSharedSecret() bool {
+	if o != nil && !IsNil(o.SharedSecret) {
+		return true
+	}
+
+	return false
+}
+
+// SetSharedSecret gets a reference to the given string and assigns it to the SharedSecret field.
+func (o *V1AccountMfaPut200Response) SetSharedSecret(v string) {
+	o.SharedSecret = &v
+}
+
 func (o V1AccountMfaPut200Response) MarshalJSON() ([]byte, error) {
 	toSerialize,err := o.ToMap()
 	if err != nil {
@@ -155,6 +188,9 @@ func (o V1AccountMfaPut200Response) ToMap() (map[string]interface{}, error) {
 	}
 	if !IsNil(o.QrCode) {
 		toSerialize["qrCode"] = o.QrCode
+	}
+	if !IsNil(o.SharedSecret) {
+		toSerialize["sharedSecret"] = o.SharedSecret
 	}
 	return toSerialize, nil
 }

@@ -1,7 +1,7 @@
 /*
 Graphiant APIs
 
-**To use the APIs:**  1) Login using `/api/v1/auth/login`   2) Copy the value of \"token\" in the response   3) Click the \"Authorize\" button   4) In the \"Value\" text field enter: `Bearer <your token>`   5) Click \"Authorize\"   6) All requests are now authorized.  **Token valid for 2 hours. If expired:**   - Login again, click \"Authorize\", paste new token.
+Graphiant API documentation.
 
 API version: 1.0.0
 */
@@ -23,6 +23,7 @@ type V1EnterpriseAllocationGet200ResponseConsumptionSummaryRegionalSummariesValu
 	ConsumedCredits *float32 `json:"consumedCredits,omitempty"`
 	CoreConversionFactor *float32 `json:"coreConversionFactor,omitempty"`
 	GwConversionFactor *float32 `json:"gwConversionFactor,omitempty"`
+	InternetConsumption *V1EnterpriseAllocationGet200ResponseConsumptionSummaryRegionalSummariesValueInternetConsumption `json:"internetConsumption,omitempty"`
 	Usage *V1EnterpriseAllocationGet200ResponseConsumptionSummaryRegionalSummariesValueAllocation `json:"usage,omitempty"`
 }
 
@@ -171,6 +172,38 @@ func (o *V1EnterpriseAllocationGet200ResponseConsumptionSummaryRegionalSummaries
 	o.GwConversionFactor = &v
 }
 
+// GetInternetConsumption returns the InternetConsumption field value if set, zero value otherwise.
+func (o *V1EnterpriseAllocationGet200ResponseConsumptionSummaryRegionalSummariesValue) GetInternetConsumption() V1EnterpriseAllocationGet200ResponseConsumptionSummaryRegionalSummariesValueInternetConsumption {
+	if o == nil || IsNil(o.InternetConsumption) {
+		var ret V1EnterpriseAllocationGet200ResponseConsumptionSummaryRegionalSummariesValueInternetConsumption
+		return ret
+	}
+	return *o.InternetConsumption
+}
+
+// GetInternetConsumptionOk returns a tuple with the InternetConsumption field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *V1EnterpriseAllocationGet200ResponseConsumptionSummaryRegionalSummariesValue) GetInternetConsumptionOk() (*V1EnterpriseAllocationGet200ResponseConsumptionSummaryRegionalSummariesValueInternetConsumption, bool) {
+	if o == nil || IsNil(o.InternetConsumption) {
+		return nil, false
+	}
+	return o.InternetConsumption, true
+}
+
+// HasInternetConsumption returns a boolean if a field has been set.
+func (o *V1EnterpriseAllocationGet200ResponseConsumptionSummaryRegionalSummariesValue) HasInternetConsumption() bool {
+	if o != nil && !IsNil(o.InternetConsumption) {
+		return true
+	}
+
+	return false
+}
+
+// SetInternetConsumption gets a reference to the given V1EnterpriseAllocationGet200ResponseConsumptionSummaryRegionalSummariesValueInternetConsumption and assigns it to the InternetConsumption field.
+func (o *V1EnterpriseAllocationGet200ResponseConsumptionSummaryRegionalSummariesValue) SetInternetConsumption(v V1EnterpriseAllocationGet200ResponseConsumptionSummaryRegionalSummariesValueInternetConsumption) {
+	o.InternetConsumption = &v
+}
+
 // GetUsage returns the Usage field value if set, zero value otherwise.
 func (o *V1EnterpriseAllocationGet200ResponseConsumptionSummaryRegionalSummariesValue) GetUsage() V1EnterpriseAllocationGet200ResponseConsumptionSummaryRegionalSummariesValueAllocation {
 	if o == nil || IsNil(o.Usage) {
@@ -224,6 +257,9 @@ func (o V1EnterpriseAllocationGet200ResponseConsumptionSummaryRegionalSummariesV
 	}
 	if !IsNil(o.GwConversionFactor) {
 		toSerialize["gwConversionFactor"] = o.GwConversionFactor
+	}
+	if !IsNil(o.InternetConsumption) {
+		toSerialize["internetConsumption"] = o.InternetConsumption
 	}
 	if !IsNil(o.Usage) {
 		toSerialize["usage"] = o.Usage

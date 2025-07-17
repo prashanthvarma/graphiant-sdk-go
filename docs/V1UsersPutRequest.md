@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Email** | Pointer to **string** |  | [optional] 
 **FirstName** | Pointer to **string** |  | [optional] 
+**GroupId** | Pointer to **string** |  | [optional] 
 **LastName** | Pointer to **string** |  | [optional] 
 **TimeZone** | Pointer to **string** |  | [optional] 
 
@@ -77,6 +78,31 @@ SetFirstName sets FirstName field to given value.
 `func (o *V1UsersPutRequest) HasFirstName() bool`
 
 HasFirstName returns a boolean if a field has been set.
+
+### GetGroupId
+
+`func (o *V1UsersPutRequest) GetGroupId() string`
+
+GetGroupId returns the GroupId field if non-nil, zero value otherwise.
+
+### GetGroupIdOk
+
+`func (o *V1UsersPutRequest) GetGroupIdOk() (*string, bool)`
+
+GetGroupIdOk returns a tuple with the GroupId field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetGroupId
+
+`func (o *V1UsersPutRequest) SetGroupId(v string)`
+
+SetGroupId sets GroupId field to given value.
+
+### HasGroupId
+
+`func (o *V1UsersPutRequest) HasGroupId() bool`
+
+HasGroupId returns a boolean if a field has been set.
 
 ### GetLastName
 

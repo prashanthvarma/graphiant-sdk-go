@@ -1,7 +1,7 @@
 /*
 Graphiant APIs
 
-**To use the APIs:**  1) Login using `/api/v1/auth/login`   2) Copy the value of \"token\" in the response   3) Click the \"Authorize\" button   4) In the \"Value\" text field enter: `Bearer <your token>`   5) Click \"Authorize\"   6) All requests are now authorized.  **Token valid for 2 hours. If expired:**   - Login again, click \"Authorize\", paste new token.
+Graphiant API documentation.
 
 API version: 1.0.0
 */
@@ -21,6 +21,7 @@ var _ MappedNullable = &V1UsersPutRequest{}
 type V1UsersPutRequest struct {
 	Email *string `json:"email,omitempty"`
 	FirstName *string `json:"firstName,omitempty"`
+	GroupId *string `json:"groupId,omitempty"`
 	LastName *string `json:"lastName,omitempty"`
 	TimeZone *string `json:"timeZone,omitempty"`
 }
@@ -106,6 +107,38 @@ func (o *V1UsersPutRequest) SetFirstName(v string) {
 	o.FirstName = &v
 }
 
+// GetGroupId returns the GroupId field value if set, zero value otherwise.
+func (o *V1UsersPutRequest) GetGroupId() string {
+	if o == nil || IsNil(o.GroupId) {
+		var ret string
+		return ret
+	}
+	return *o.GroupId
+}
+
+// GetGroupIdOk returns a tuple with the GroupId field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *V1UsersPutRequest) GetGroupIdOk() (*string, bool) {
+	if o == nil || IsNil(o.GroupId) {
+		return nil, false
+	}
+	return o.GroupId, true
+}
+
+// HasGroupId returns a boolean if a field has been set.
+func (o *V1UsersPutRequest) HasGroupId() bool {
+	if o != nil && !IsNil(o.GroupId) {
+		return true
+	}
+
+	return false
+}
+
+// SetGroupId gets a reference to the given string and assigns it to the GroupId field.
+func (o *V1UsersPutRequest) SetGroupId(v string) {
+	o.GroupId = &v
+}
+
 // GetLastName returns the LastName field value if set, zero value otherwise.
 func (o *V1UsersPutRequest) GetLastName() string {
 	if o == nil || IsNil(o.LastName) {
@@ -185,6 +218,9 @@ func (o V1UsersPutRequest) ToMap() (map[string]interface{}, error) {
 	}
 	if !IsNil(o.FirstName) {
 		toSerialize["firstName"] = o.FirstName
+	}
+	if !IsNil(o.GroupId) {
+		toSerialize["groupId"] = o.GroupId
 	}
 	if !IsNil(o.LastName) {
 		toSerialize["lastName"] = o.LastName

@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **ConsumedCredits** | Pointer to **float32** |  | [optional] 
 **CoreConversionFactor** | Pointer to **float32** |  | [optional] 
 **GwConversionFactor** | Pointer to **float32** |  | [optional] 
+**InternetConsumption** | Pointer to [**V1EnterpriseAllocationGet200ResponseConsumptionSummaryRegionalSummariesValueInternetConsumption**](V1EnterpriseAllocationGet200ResponseConsumptionSummaryRegionalSummariesValueInternetConsumption.md) |  | [optional] 
 **Usage** | Pointer to [**V1EnterpriseAllocationGet200ResponseConsumptionSummaryRegionalSummariesValueAllocation**](V1EnterpriseAllocationGet200ResponseConsumptionSummaryRegionalSummariesValueAllocation.md) |  | [optional] 
 
 ## Methods
@@ -128,6 +129,31 @@ SetGwConversionFactor sets GwConversionFactor field to given value.
 `func (o *V1EnterpriseAllocationGet200ResponseConsumptionSummaryRegionalSummariesValue) HasGwConversionFactor() bool`
 
 HasGwConversionFactor returns a boolean if a field has been set.
+
+### GetInternetConsumption
+
+`func (o *V1EnterpriseAllocationGet200ResponseConsumptionSummaryRegionalSummariesValue) GetInternetConsumption() V1EnterpriseAllocationGet200ResponseConsumptionSummaryRegionalSummariesValueInternetConsumption`
+
+GetInternetConsumption returns the InternetConsumption field if non-nil, zero value otherwise.
+
+### GetInternetConsumptionOk
+
+`func (o *V1EnterpriseAllocationGet200ResponseConsumptionSummaryRegionalSummariesValue) GetInternetConsumptionOk() (*V1EnterpriseAllocationGet200ResponseConsumptionSummaryRegionalSummariesValueInternetConsumption, bool)`
+
+GetInternetConsumptionOk returns a tuple with the InternetConsumption field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetInternetConsumption
+
+`func (o *V1EnterpriseAllocationGet200ResponseConsumptionSummaryRegionalSummariesValue) SetInternetConsumption(v V1EnterpriseAllocationGet200ResponseConsumptionSummaryRegionalSummariesValueInternetConsumption)`
+
+SetInternetConsumption sets InternetConsumption field to given value.
+
+### HasInternetConsumption
+
+`func (o *V1EnterpriseAllocationGet200ResponseConsumptionSummaryRegionalSummariesValue) HasInternetConsumption() bool`
+
+HasInternetConsumption returns a boolean if a field has been set.
 
 ### GetUsage
 

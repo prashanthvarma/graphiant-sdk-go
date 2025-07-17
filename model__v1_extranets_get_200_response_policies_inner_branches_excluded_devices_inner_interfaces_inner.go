@@ -1,7 +1,7 @@
 /*
 Graphiant APIs
 
-**To use the APIs:**  1) Login using `/api/v1/auth/login`   2) Copy the value of \"token\" in the response   3) Click the \"Authorize\" button   4) In the \"Value\" text field enter: `Bearer <your token>`   5) Click \"Authorize\"   6) All requests are now authorized.  **Token valid for 2 hours. If expired:**   - Login again, click \"Authorize\", paste new token.
+Graphiant API documentation.
 
 API version: 1.0.0
 */
@@ -32,12 +32,14 @@ type V1ExtranetsGet200ResponsePoliciesInnerBranchesExcludedDevicesInnerInterface
 	Ipv4 *V1ExtranetsGet200ResponsePoliciesInnerBranchesExcludedDevicesInnerInterfacesInnerIpv4 `json:"ipv4,omitempty"`
 	Ipv6 *V1ExtranetsGet200ResponsePoliciesInnerBranchesExcludedDevicesInnerInterfacesInnerIpv4 `json:"ipv6,omitempty"`
 	Ipv6Addresses []V1ExtranetsGet200ResponsePoliciesInnerBranchesExcludedDevicesInnerInterfacesInnerIpv4 `json:"ipv6Addresses,omitempty"`
+	LagInterface *V1ExtranetsGet200ResponsePoliciesInnerBranchesExcludedDevicesInnerInterfacesInnerLagInterface `json:"lagInterface,omitempty"`
 	Lan *string `json:"lan,omitempty"`
 	LldpEnabled *bool `json:"lldpEnabled,omitempty"`
 	MaxTransmissionUnit *int32 `json:"maxTransmissionUnit,omitempty"`
 	Name *string `json:"name,omitempty"`
 	OperUpdatedAt *V1AlarmHistoryGet200ResponseHistoryInnerTime `json:"operUpdatedAt,omitempty"`
 	PhyAddress *string `json:"phyAddress,omitempty"`
+	Protocol *string `json:"protocol,omitempty"`
 	SecurityZone *string `json:"securityZone,omitempty"`
 	SfpOpticalStrength []V1ExtranetsGet200ResponsePoliciesInnerBranchesExcludedDevicesInnerInterfacesInnerSfpOpticalStrengthInner `json:"sfpOpticalStrength,omitempty"`
 	SpeedMbps *int32 `json:"speedMbps,omitempty"`
@@ -484,6 +486,38 @@ func (o *V1ExtranetsGet200ResponsePoliciesInnerBranchesExcludedDevicesInnerInter
 	o.Ipv6Addresses = v
 }
 
+// GetLagInterface returns the LagInterface field value if set, zero value otherwise.
+func (o *V1ExtranetsGet200ResponsePoliciesInnerBranchesExcludedDevicesInnerInterfacesInner) GetLagInterface() V1ExtranetsGet200ResponsePoliciesInnerBranchesExcludedDevicesInnerInterfacesInnerLagInterface {
+	if o == nil || IsNil(o.LagInterface) {
+		var ret V1ExtranetsGet200ResponsePoliciesInnerBranchesExcludedDevicesInnerInterfacesInnerLagInterface
+		return ret
+	}
+	return *o.LagInterface
+}
+
+// GetLagInterfaceOk returns a tuple with the LagInterface field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *V1ExtranetsGet200ResponsePoliciesInnerBranchesExcludedDevicesInnerInterfacesInner) GetLagInterfaceOk() (*V1ExtranetsGet200ResponsePoliciesInnerBranchesExcludedDevicesInnerInterfacesInnerLagInterface, bool) {
+	if o == nil || IsNil(o.LagInterface) {
+		return nil, false
+	}
+	return o.LagInterface, true
+}
+
+// HasLagInterface returns a boolean if a field has been set.
+func (o *V1ExtranetsGet200ResponsePoliciesInnerBranchesExcludedDevicesInnerInterfacesInner) HasLagInterface() bool {
+	if o != nil && !IsNil(o.LagInterface) {
+		return true
+	}
+
+	return false
+}
+
+// SetLagInterface gets a reference to the given V1ExtranetsGet200ResponsePoliciesInnerBranchesExcludedDevicesInnerInterfacesInnerLagInterface and assigns it to the LagInterface field.
+func (o *V1ExtranetsGet200ResponsePoliciesInnerBranchesExcludedDevicesInnerInterfacesInner) SetLagInterface(v V1ExtranetsGet200ResponsePoliciesInnerBranchesExcludedDevicesInnerInterfacesInnerLagInterface) {
+	o.LagInterface = &v
+}
+
 // GetLan returns the Lan field value if set, zero value otherwise.
 func (o *V1ExtranetsGet200ResponsePoliciesInnerBranchesExcludedDevicesInnerInterfacesInner) GetLan() string {
 	if o == nil || IsNil(o.Lan) {
@@ -674,6 +708,38 @@ func (o *V1ExtranetsGet200ResponsePoliciesInnerBranchesExcludedDevicesInnerInter
 // SetPhyAddress gets a reference to the given string and assigns it to the PhyAddress field.
 func (o *V1ExtranetsGet200ResponsePoliciesInnerBranchesExcludedDevicesInnerInterfacesInner) SetPhyAddress(v string) {
 	o.PhyAddress = &v
+}
+
+// GetProtocol returns the Protocol field value if set, zero value otherwise.
+func (o *V1ExtranetsGet200ResponsePoliciesInnerBranchesExcludedDevicesInnerInterfacesInner) GetProtocol() string {
+	if o == nil || IsNil(o.Protocol) {
+		var ret string
+		return ret
+	}
+	return *o.Protocol
+}
+
+// GetProtocolOk returns a tuple with the Protocol field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *V1ExtranetsGet200ResponsePoliciesInnerBranchesExcludedDevicesInnerInterfacesInner) GetProtocolOk() (*string, bool) {
+	if o == nil || IsNil(o.Protocol) {
+		return nil, false
+	}
+	return o.Protocol, true
+}
+
+// HasProtocol returns a boolean if a field has been set.
+func (o *V1ExtranetsGet200ResponsePoliciesInnerBranchesExcludedDevicesInnerInterfacesInner) HasProtocol() bool {
+	if o != nil && !IsNil(o.Protocol) {
+		return true
+	}
+
+	return false
+}
+
+// SetProtocol gets a reference to the given string and assigns it to the Protocol field.
+func (o *V1ExtranetsGet200ResponsePoliciesInnerBranchesExcludedDevicesInnerInterfacesInner) SetProtocol(v string) {
+	o.Protocol = &v
 }
 
 // GetSecurityZone returns the SecurityZone field value if set, zero value otherwise.
@@ -1077,6 +1143,9 @@ func (o V1ExtranetsGet200ResponsePoliciesInnerBranchesExcludedDevicesInnerInterf
 	if !IsNil(o.Ipv6Addresses) {
 		toSerialize["ipv6Addresses"] = o.Ipv6Addresses
 	}
+	if !IsNil(o.LagInterface) {
+		toSerialize["lagInterface"] = o.LagInterface
+	}
 	if !IsNil(o.Lan) {
 		toSerialize["lan"] = o.Lan
 	}
@@ -1094,6 +1163,9 @@ func (o V1ExtranetsGet200ResponsePoliciesInnerBranchesExcludedDevicesInnerInterf
 	}
 	if !IsNil(o.PhyAddress) {
 		toSerialize["phyAddress"] = o.PhyAddress
+	}
+	if !IsNil(o.Protocol) {
+		toSerialize["protocol"] = o.Protocol
 	}
 	if !IsNil(o.SecurityZone) {
 		toSerialize["securityZone"] = o.SecurityZone

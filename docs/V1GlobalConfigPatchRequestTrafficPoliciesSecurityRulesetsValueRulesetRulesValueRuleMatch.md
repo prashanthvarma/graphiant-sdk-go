@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **DestinationNetwork** | Pointer to [**V1GlobalConfigPatchRequestTrafficPoliciesSecurityRulesetsValueRulesetRulesValueRuleMatchDestinationNetwork**](V1GlobalConfigPatchRequestTrafficPoliciesSecurityRulesetsValueRulesetRulesValueRuleMatchDestinationNetwork.md) |  | [optional] 
 **DestinationPort** | Pointer to **int32** |  | [optional] 
 **DestinationPortRange** | Pointer to [**V1GlobalConfigPatchRequestTrafficPoliciesSecurityRulesetsValueRulesetRulesValueRuleMatchDestinationPortRange**](V1GlobalConfigPatchRequestTrafficPoliciesSecurityRulesetsValueRulesetRulesValueRuleMatchDestinationPortRange.md) |  | [optional] 
+**DomainList** | Pointer to [**V1GlobalConfigPatchRequestTrafficPoliciesSecurityRulesetsValueRulesetRulesValueRuleMatchDomainList**](V1GlobalConfigPatchRequestTrafficPoliciesSecurityRulesetsValueRulesetRulesValueRuleMatchDomainList.md) |  | [optional] 
 **Dscp** | Pointer to [**V1GlobalConfigPatchRequestTrafficPoliciesSecurityRulesetsValueRulesetRulesValueRuleMatchDscp**](V1GlobalConfigPatchRequestTrafficPoliciesSecurityRulesetsValueRulesetRulesValueRuleMatchDscp.md) |  | [optional] 
 **IcmpType** | Pointer to **int32** |  | [optional] 
 **IpProtocol** | Pointer to **string** |  | [optional] 
@@ -160,6 +161,31 @@ SetDestinationPortRange sets DestinationPortRange field to given value.
 `func (o *V1GlobalConfigPatchRequestTrafficPoliciesSecurityRulesetsValueRulesetRulesValueRuleMatch) HasDestinationPortRange() bool`
 
 HasDestinationPortRange returns a boolean if a field has been set.
+
+### GetDomainList
+
+`func (o *V1GlobalConfigPatchRequestTrafficPoliciesSecurityRulesetsValueRulesetRulesValueRuleMatch) GetDomainList() V1GlobalConfigPatchRequestTrafficPoliciesSecurityRulesetsValueRulesetRulesValueRuleMatchDomainList`
+
+GetDomainList returns the DomainList field if non-nil, zero value otherwise.
+
+### GetDomainListOk
+
+`func (o *V1GlobalConfigPatchRequestTrafficPoliciesSecurityRulesetsValueRulesetRulesValueRuleMatch) GetDomainListOk() (*V1GlobalConfigPatchRequestTrafficPoliciesSecurityRulesetsValueRulesetRulesValueRuleMatchDomainList, bool)`
+
+GetDomainListOk returns a tuple with the DomainList field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDomainList
+
+`func (o *V1GlobalConfigPatchRequestTrafficPoliciesSecurityRulesetsValueRulesetRulesValueRuleMatch) SetDomainList(v V1GlobalConfigPatchRequestTrafficPoliciesSecurityRulesetsValueRulesetRulesValueRuleMatchDomainList)`
+
+SetDomainList sets DomainList field to given value.
+
+### HasDomainList
+
+`func (o *V1GlobalConfigPatchRequestTrafficPoliciesSecurityRulesetsValueRulesetRulesValueRuleMatch) HasDomainList() bool`
+
+HasDomainList returns a boolean if a field has been set.
 
 ### GetDscp
 
