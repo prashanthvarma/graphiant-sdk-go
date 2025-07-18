@@ -488,7 +488,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - **Documentation**: [Graphiant Docs](https://docs.graphiant.com/)
 - **API Reference**: [Go Package Documentation](https://pkg.go.dev/github.com/Graphiant-Inc/graphiant-sdk-go)
 - **Issues**: [GitHub Issues](https://github.com/Graphiant-Inc/graphiant-sdk-go/issues)
-- **Community**: [Graphiant Community](https://community.graphiant.com/)
 - **Email**: support@graphiant.com
 
 ## 🔗 Related Projects
