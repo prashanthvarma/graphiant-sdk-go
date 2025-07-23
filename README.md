@@ -13,7 +13,7 @@ Refer [Graphiant Docs](https://docs.graphiant.com) to get started with [Graphian
 ## 📚 Documentation
 
 - **Official Documentation**: [Graphiant SDK Go Guide](https://docs.graphiant.com/docs/graphiant-sdk-go) <-> [Graphiant Automation Docs](https://docs.graphiant.com/docs/automation)
-- **API Reference**: [Graphiant SDK Go API Docs](docs/DefaultApi.md) <-> [Graphiant Portal REST API Guide](https://docs.graphiant.com/docs/graphiant-portal-rest-api)
+- **API Reference**: [Graphiant SDK Go API Docs](docs/DefaultAPI.md) <-> [Graphiant Portal REST API Guide](https://docs.graphiant.com/docs/graphiant-portal-rest-api)
 - **Package**: [Go Package - graphiant-sdk-go](https://pkg.go.dev/github.com/Graphiant-Inc/graphiant-sdk-go)
 
 ## ✨ Features
@@ -479,7 +479,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 🆘 Support
 
 - **Official Documentation**: [Graphiant SDK Go Guide](https://docs.graphiant.com/docs/graphiant-sdk-go) <-> [Graphiant Automation Docs](https://docs.graphiant.com/docs/automation)
-- **API Reference**: [Graphiant SDK Go API Docs](docs/DefaultApi.md) <-> [Graphiant Portal REST API Guide](https://docs.graphiant.com/docs/graphiant-portal-rest-api)
+- **API Reference**: [Graphiant SDK Go API Docs](docs/DefaultAPI.md) <-> [Graphiant Portal REST API Guide](https://docs.graphiant.com/docs/graphiant-portal-rest-api)
 - **Issues**: [GitHub Issues](https://github.com/Graphiant-Inc/graphiant-sdk-go/issues)
 - **Email**: support@graphiant.com
 
