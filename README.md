@@ -6,15 +6,13 @@
 [![Go Report Card](https://goreportcard.com/badge/github.com/Graphiant-Inc/graphiant-sdk-go)](https://goreportcard.com/report/github.com/Graphiant-Inc/graphiant-sdk-go)
 [![Documentation](https://img.shields.io/badge/docs-latest-brightgreen.svg)](https://docs.graphiant.com/docs/graphiant-sdk-go)
 
-A comprehensive Go SDK for [Graphiant Network-as-a-Service (NaaS)](https://www.graphiant.com) offerings, providing seamless integration with Graphiant's network automation platform.
-
-Refer [Graphiant Docs](https://docs.graphiant.com) to get started with [Graphiant Network-as-a-Service (NaaS)](https://www.graphiant.com) offerings.
+A comprehensive Go SDK for [Graphiant Network-as-a-Service (NaaS)](https://www.graphiant.com), providing seamless integration with Graphiant's network automation platform.
 
 ## 📚 Documentation
 
-- **Official Documentation**: [Graphiant SDK Go Guide](https://docs.graphiant.com/docs/graphiant-sdk-go) <-> [Graphiant Automation Docs](https://docs.graphiant.com/docs/automation)
-- **API Reference**: [Graphiant SDK Go API Docs](docs/DefaultAPI.md) <-> [Graphiant Portal REST API Guide](https://docs.graphiant.com/docs/graphiant-portal-rest-api)
-- **Package**: [Go Package - graphiant-sdk-go](https://pkg.go.dev/github.com/Graphiant-Inc/graphiant-sdk-go)
+- **Official Documentation**: [Graphiant SDK Go Guide](https://docs.graphiant.com/docs/graphiant-sdk-go)
+- **API Reference**: [Go Package Documentation](https://pkg.go.dev/github.com/Graphiant-Inc/graphiant-sdk-go)
+- **Examples**: [Generated Examples](docs)
 
 ## ✨ Features
 
@@ -372,12 +370,12 @@ brew install openapi-generator  # macOS
 
 # Generate SDK
 openapi-generator generate \
-  -i graphiant_api_docs_v25.7.1.json \
+  -i graphiant_api_docs_v25.8.1.json \
   -g go \
   --git-user-id Graphiant-Inc \
   --git-repo-id graphiant-sdk-go \
   --package-name graphiant_sdk \
-  --additional-properties=packageVersion=25.7.1
+  --additional-properties=packageVersion=25.8.1
 ```
 
 > **Note**: Latest API documentation can be downloaded from the Graphiant portal under "Support Hub" > "Developer Tools".
@@ -389,8 +387,18 @@ openapi-generator generate \
 export username="your-test-username"
 export password="your-test-password"
 
-# Run edge summary test
-go test -v ./... -run Test_edge_summary
+# Run all tests
+go test ./...
+
+# Run specific test
+cd test
+go test -v -run Test_edge_summary
+
+# Run tests with coverage
+go test -cover ./...
+
+# Run tests with verbose output
+go test -v ./test/
 ```
 
 ### Project Structure
@@ -478,14 +486,15 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 🆘 Support
 
-- **Official Documentation**: [Graphiant SDK Go Guide](https://docs.graphiant.com/docs/graphiant-sdk-go) <-> [Graphiant Automation Docs](https://docs.graphiant.com/docs/automation)
-- **API Reference**: [Graphiant SDK Go API Docs](docs/DefaultAPI.md) <-> [Graphiant Portal REST API Guide](https://docs.graphiant.com/docs/graphiant-portal-rest-api)
+- **Documentation**: [Graphiant Docs](https://docs.graphiant.com/)
+- **API Reference**: [Go Package Documentation](https://pkg.go.dev/github.com/Graphiant-Inc/graphiant-sdk-go)
 - **Issues**: [GitHub Issues](https://github.com/Graphiant-Inc/graphiant-sdk-go/issues)
 - **Email**: support@graphiant.com
 
 ## 🔗 Related Projects
 
 - [Graphiant SDK Python](https://github.com/Graphiant-Inc/graphiant-sdk-python)
+- [Graphiant Portal REST API](https://docs.graphiant.com/docs/graphiant-portal-rest-api)
 - [Graphiant Playbooks](https://github.com/Graphiant-Inc/graphiant-playbooks)
 
 ---

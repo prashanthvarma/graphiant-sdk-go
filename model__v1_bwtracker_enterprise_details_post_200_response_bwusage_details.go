@@ -21,6 +21,7 @@ var _ MappedNullable = &V1BwtrackerEnterpriseDetailsPost200ResponseBwusageDetail
 type V1BwtrackerEnterpriseDetailsPost200ResponseBwusageDetails struct {
 	BwusageRegion []V1BwtrackerEnterpriseDetailsPost200ResponseBwusageDetailsBwusageRegionInner `json:"bwusageRegion,omitempty"`
 	BwusageSite []V1BwtrackerEnterpriseDetailsPost200ResponseBwusageDetailsBwusageSiteInner `json:"bwusageSite,omitempty"`
+	BwusageSiteGateway []V1BwtrackerEnterpriseDetailsPost200ResponseBwusageDetailsBwusageSiteInner `json:"bwusageSiteGateway,omitempty"`
 }
 
 // NewV1BwtrackerEnterpriseDetailsPost200ResponseBwusageDetails instantiates a new V1BwtrackerEnterpriseDetailsPost200ResponseBwusageDetails object
@@ -104,6 +105,38 @@ func (o *V1BwtrackerEnterpriseDetailsPost200ResponseBwusageDetails) SetBwusageSi
 	o.BwusageSite = v
 }
 
+// GetBwusageSiteGateway returns the BwusageSiteGateway field value if set, zero value otherwise.
+func (o *V1BwtrackerEnterpriseDetailsPost200ResponseBwusageDetails) GetBwusageSiteGateway() []V1BwtrackerEnterpriseDetailsPost200ResponseBwusageDetailsBwusageSiteInner {
+	if o == nil || IsNil(o.BwusageSiteGateway) {
+		var ret []V1BwtrackerEnterpriseDetailsPost200ResponseBwusageDetailsBwusageSiteInner
+		return ret
+	}
+	return o.BwusageSiteGateway
+}
+
+// GetBwusageSiteGatewayOk returns a tuple with the BwusageSiteGateway field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *V1BwtrackerEnterpriseDetailsPost200ResponseBwusageDetails) GetBwusageSiteGatewayOk() ([]V1BwtrackerEnterpriseDetailsPost200ResponseBwusageDetailsBwusageSiteInner, bool) {
+	if o == nil || IsNil(o.BwusageSiteGateway) {
+		return nil, false
+	}
+	return o.BwusageSiteGateway, true
+}
+
+// HasBwusageSiteGateway returns a boolean if a field has been set.
+func (o *V1BwtrackerEnterpriseDetailsPost200ResponseBwusageDetails) HasBwusageSiteGateway() bool {
+	if o != nil && !IsNil(o.BwusageSiteGateway) {
+		return true
+	}
+
+	return false
+}
+
+// SetBwusageSiteGateway gets a reference to the given []V1BwtrackerEnterpriseDetailsPost200ResponseBwusageDetailsBwusageSiteInner and assigns it to the BwusageSiteGateway field.
+func (o *V1BwtrackerEnterpriseDetailsPost200ResponseBwusageDetails) SetBwusageSiteGateway(v []V1BwtrackerEnterpriseDetailsPost200ResponseBwusageDetailsBwusageSiteInner) {
+	o.BwusageSiteGateway = v
+}
+
 func (o V1BwtrackerEnterpriseDetailsPost200ResponseBwusageDetails) MarshalJSON() ([]byte, error) {
 	toSerialize,err := o.ToMap()
 	if err != nil {
@@ -119,6 +152,9 @@ func (o V1BwtrackerEnterpriseDetailsPost200ResponseBwusageDetails) ToMap() (map[
 	}
 	if !IsNil(o.BwusageSite) {
 		toSerialize["bwusageSite"] = o.BwusageSite
+	}
+	if !IsNil(o.BwusageSiteGateway) {
+		toSerialize["bwusageSiteGateway"] = o.BwusageSiteGateway
 	}
 	return toSerialize, nil
 }

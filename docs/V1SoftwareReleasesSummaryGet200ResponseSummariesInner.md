@@ -4,6 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**EosTs** | Pointer to [**V1AlarmHistoryGet200ResponseHistoryInnerTime**](V1AlarmHistoryGet200ResponseHistoryInnerTime.md) |  | [optional] 
 **Key** | Pointer to [**V1SoftwareReleasesSummaryGet200ResponseSummariesInnerKey**](V1SoftwareReleasesSummaryGet200ResponseSummariesInnerKey.md) |  | [optional] 
 **Name** | Pointer to **string** |  | [optional] 
 **Release** | Pointer to **string** |  | [optional] 
@@ -27,6 +28,31 @@ will change when the set of required properties is changed
 NewV1SoftwareReleasesSummaryGet200ResponseSummariesInnerWithDefaults instantiates a new V1SoftwareReleasesSummaryGet200ResponseSummariesInner object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
+
+### GetEosTs
+
+`func (o *V1SoftwareReleasesSummaryGet200ResponseSummariesInner) GetEosTs() V1AlarmHistoryGet200ResponseHistoryInnerTime`
+
+GetEosTs returns the EosTs field if non-nil, zero value otherwise.
+
+### GetEosTsOk
+
+`func (o *V1SoftwareReleasesSummaryGet200ResponseSummariesInner) GetEosTsOk() (*V1AlarmHistoryGet200ResponseHistoryInnerTime, bool)`
+
+GetEosTsOk returns a tuple with the EosTs field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetEosTs
+
+`func (o *V1SoftwareReleasesSummaryGet200ResponseSummariesInner) SetEosTs(v V1AlarmHistoryGet200ResponseHistoryInnerTime)`
+
+SetEosTs sets EosTs field to given value.
+
+### HasEosTs
+
+`func (o *V1SoftwareReleasesSummaryGet200ResponseSummariesInner) HasEosTs() bool`
+
+HasEosTs returns a boolean if a field has been set.
 
 ### GetKey
 
