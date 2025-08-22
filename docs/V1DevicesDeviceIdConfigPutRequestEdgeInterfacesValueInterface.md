@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **Alias** | Pointer to **string** |  | [optional] 
 **Circuit** | Pointer to **string** |  | [optional] 
 **Description** | Pointer to **string** |  | [optional] 
+**Duplex** | Pointer to **string** |  | [optional] 
 **Ipsec** | Pointer to [**V1DevicesDeviceIdConfigPutRequestCoreInterfacesValueInterfaceIpsec**](V1DevicesDeviceIdConfigPutRequestCoreInterfacesValueInterfaceIpsec.md) |  | [optional] 
 **Ipv4** | Pointer to [**V1DevicesDeviceIdConfigPutRequestCoreInterfacesValueInterfaceGwGw**](V1DevicesDeviceIdConfigPutRequestCoreInterfacesValueInterfaceGwGw.md) |  | [optional] 
 **Ipv6** | Pointer to [**V1DevicesDeviceIdConfigPutRequestCoreInterfacesValueInterfaceGwGw**](V1DevicesDeviceIdConfigPutRequestCoreInterfacesValueInterfaceGwGw.md) |  | [optional] 
@@ -16,6 +17,7 @@ Name | Type | Description | Notes
 **Loopback** | Pointer to **bool** |  | [optional] 
 **MaxTransmissionUnit** | Pointer to **int32** |  | [optional] 
 **SecurityZone** | Pointer to **string** |  | [optional] 
+**Speed** | Pointer to **int64** |  | [optional] 
 **Subinterfaces** | Pointer to [**map[string]V1DevicesDeviceIdConfigPutRequestEdgeInterfacesValueInterfaceSubinterfacesValue**](V1DevicesDeviceIdConfigPutRequestEdgeInterfacesValueInterfaceSubinterfacesValue.md) |  | [optional] 
 **TcpMss** | Pointer to **int32** |  | [optional] 
 **TcpMssV4** | Pointer to **int32** |  | [optional] 
@@ -141,6 +143,31 @@ SetDescription sets Description field to given value.
 `func (o *V1DevicesDeviceIdConfigPutRequestEdgeInterfacesValueInterface) HasDescription() bool`
 
 HasDescription returns a boolean if a field has been set.
+
+### GetDuplex
+
+`func (o *V1DevicesDeviceIdConfigPutRequestEdgeInterfacesValueInterface) GetDuplex() string`
+
+GetDuplex returns the Duplex field if non-nil, zero value otherwise.
+
+### GetDuplexOk
+
+`func (o *V1DevicesDeviceIdConfigPutRequestEdgeInterfacesValueInterface) GetDuplexOk() (*string, bool)`
+
+GetDuplexOk returns a tuple with the Duplex field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDuplex
+
+`func (o *V1DevicesDeviceIdConfigPutRequestEdgeInterfacesValueInterface) SetDuplex(v string)`
+
+SetDuplex sets Duplex field to given value.
+
+### HasDuplex
+
+`func (o *V1DevicesDeviceIdConfigPutRequestEdgeInterfacesValueInterface) HasDuplex() bool`
+
+HasDuplex returns a boolean if a field has been set.
 
 ### GetIpsec
 
@@ -341,6 +368,31 @@ SetSecurityZone sets SecurityZone field to given value.
 `func (o *V1DevicesDeviceIdConfigPutRequestEdgeInterfacesValueInterface) HasSecurityZone() bool`
 
 HasSecurityZone returns a boolean if a field has been set.
+
+### GetSpeed
+
+`func (o *V1DevicesDeviceIdConfigPutRequestEdgeInterfacesValueInterface) GetSpeed() int64`
+
+GetSpeed returns the Speed field if non-nil, zero value otherwise.
+
+### GetSpeedOk
+
+`func (o *V1DevicesDeviceIdConfigPutRequestEdgeInterfacesValueInterface) GetSpeedOk() (*int64, bool)`
+
+GetSpeedOk returns a tuple with the Speed field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSpeed
+
+`func (o *V1DevicesDeviceIdConfigPutRequestEdgeInterfacesValueInterface) SetSpeed(v int64)`
+
+SetSpeed sets Speed field to given value.
+
+### HasSpeed
+
+`func (o *V1DevicesDeviceIdConfigPutRequestEdgeInterfacesValueInterface) HasSpeed() bool`
+
+HasSpeed returns a boolean if a field has been set.
 
 ### GetSubinterfaces
 

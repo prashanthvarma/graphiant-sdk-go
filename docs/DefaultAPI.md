@@ -28,6 +28,8 @@ Method | HTTP request | Description
 [**V1AuthLoginPreGet**](DefaultAPI.md#V1AuthLoginPreGet) | **Get** /v1/auth/login/pre | Pre-login endpoint
 [**V1AuthMfaDelete**](DefaultAPI.md#V1AuthMfaDelete) | **Delete** /v1/auth/mfa | 
 [**V1AuthMfaPatch**](DefaultAPI.md#V1AuthMfaPatch) | **Patch** /v1/auth/mfa | 
+[**V1AuthMfaTypesGet**](DefaultAPI.md#V1AuthMfaTypesGet) | **Get** /v1/auth/mfa/types | 
+[**V1AuthMfaTypesPut**](DefaultAPI.md#V1AuthMfaTypesPut) | **Put** /v1/auth/mfa/types | 
 [**V1AuthPatch**](DefaultAPI.md#V1AuthPatch) | **Patch** /v1/auth | 
 [**V1AuthPut**](DefaultAPI.md#V1AuthPut) | **Put** /v1/auth | 
 [**V1AuthUserGet**](DefaultAPI.md#V1AuthUserGet) | **Get** /v1/auth/user | Get authenticated user information
@@ -47,10 +49,18 @@ Method | HTTP request | Description
 [**V1BwtrackerRegionEdgeCsvPost**](DefaultAPI.md#V1BwtrackerRegionEdgeCsvPost) | **Post** /v1/bwtracker/region/edge/csv | 
 [**V1BwtrackerRegionEdgeDetailsPost**](DefaultAPI.md#V1BwtrackerRegionEdgeDetailsPost) | **Post** /v1/bwtracker/region/edge/details | 
 [**V1BwtrackerRegionEdgeSummaryPost**](DefaultAPI.md#V1BwtrackerRegionEdgeSummaryPost) | **Post** /v1/bwtracker/region/edge/summary | 
+[**V1BwtrackerRegionGatewayChartPost**](DefaultAPI.md#V1BwtrackerRegionGatewayChartPost) | **Post** /v1/bwtracker/region/gateway/chart | 
+[**V1BwtrackerRegionGatewayCsvPost**](DefaultAPI.md#V1BwtrackerRegionGatewayCsvPost) | **Post** /v1/bwtracker/region/gateway/csv | 
+[**V1BwtrackerRegionGatewayDetailsPost**](DefaultAPI.md#V1BwtrackerRegionGatewayDetailsPost) | **Post** /v1/bwtracker/region/gateway/details | 
+[**V1BwtrackerRegionGatewaySummaryPost**](DefaultAPI.md#V1BwtrackerRegionGatewaySummaryPost) | **Post** /v1/bwtracker/region/gateway/summary | 
 [**V1BwtrackerRegionSiteChartPost**](DefaultAPI.md#V1BwtrackerRegionSiteChartPost) | **Post** /v1/bwtracker/region/site/chart | 
 [**V1BwtrackerRegionSiteDetailsPost**](DefaultAPI.md#V1BwtrackerRegionSiteDetailsPost) | **Post** /v1/bwtracker/region/site/details | 
+[**V1BwtrackerRegionSiteGatewayChartPost**](DefaultAPI.md#V1BwtrackerRegionSiteGatewayChartPost) | **Post** /v1/bwtracker/region/site/gateway/chart | 
+[**V1BwtrackerRegionSiteGatewayDetailsPost**](DefaultAPI.md#V1BwtrackerRegionSiteGatewayDetailsPost) | **Post** /v1/bwtracker/region/site/gateway/details | 
+[**V1BwtrackerRegionSiteGatewaySummaryPost**](DefaultAPI.md#V1BwtrackerRegionSiteGatewaySummaryPost) | **Post** /v1/bwtracker/region/site/gateway/summary | 
 [**V1BwtrackerRegionSiteSummaryPost**](DefaultAPI.md#V1BwtrackerRegionSiteSummaryPost) | **Post** /v1/bwtracker/region/site/summary | 
 [**V1BwtrackerSiteCsvPost**](DefaultAPI.md#V1BwtrackerSiteCsvPost) | **Post** /v1/bwtracker/site/csv | 
+[**V1BwtrackerSiteGatewayCsvPost**](DefaultAPI.md#V1BwtrackerSiteGatewayCsvPost) | **Post** /v1/bwtracker/site/gateway/csv | 
 [**V1DataAssuranceAssurancesApplicationsBucketAppNameGet**](DefaultAPI.md#V1DataAssuranceAssurancesApplicationsBucketAppNameGet) | **Get** /v1/data-assurance/assurances/applications/{bucketAppName} | 
 [**V1DataAssuranceAssurancesGlobalGet**](DefaultAPI.md#V1DataAssuranceAssurancesGlobalGet) | **Get** /v1/data-assurance/assurances/global | 
 [**V1DataAssuranceAssurancesGlobalIdDelete**](DefaultAPI.md#V1DataAssuranceAssurancesGlobalIdDelete) | **Delete** /v1/data-assurance/assurances/global/{id} | 
@@ -262,7 +272,12 @@ Method | HTTP request | Description
 [**V1GlobalRoutingPoliciesDeviceGet**](DefaultAPI.md#V1GlobalRoutingPoliciesDeviceGet) | **Get** /v1/global/routing-policies/device | 
 [**V1GlobalRoutingPoliciesPost**](DefaultAPI.md#V1GlobalRoutingPoliciesPost) | **Post** /v1/global/routing-policies | 
 [**V1GlobalRoutingPoliciesSiteGet**](DefaultAPI.md#V1GlobalRoutingPoliciesSiteGet) | **Get** /v1/global/routing-policies/site | 
+[**V1GlobalSiteListsGet**](DefaultAPI.md#V1GlobalSiteListsGet) | **Get** /v1/global/site-lists | 
+[**V1GlobalSiteListsIdDelete**](DefaultAPI.md#V1GlobalSiteListsIdDelete) | **Delete** /v1/global/site-lists/{id} | 
+[**V1GlobalSiteListsIdGet**](DefaultAPI.md#V1GlobalSiteListsIdGet) | **Get** /v1/global/site-lists/{id} | 
+[**V1GlobalSiteListsIdPut**](DefaultAPI.md#V1GlobalSiteListsIdPut) | **Put** /v1/global/site-lists/{id} | 
 [**V1GlobalSiteListsIdSitesGet**](DefaultAPI.md#V1GlobalSiteListsIdSitesGet) | **Get** /v1/global/site-lists/{id}/sites | 
+[**V1GlobalSiteListsPost**](DefaultAPI.md#V1GlobalSiteListsPost) | **Post** /v1/global/site-lists | 
 [**V1GlobalSiteStatusGet**](DefaultAPI.md#V1GlobalSiteStatusGet) | **Get** /v1/global/site-status | 
 [**V1GlobalSnmpsDeviceGet**](DefaultAPI.md#V1GlobalSnmpsDeviceGet) | **Get** /v1/global/snmps/device | 
 [**V1GlobalSnmpsPost**](DefaultAPI.md#V1GlobalSnmpsPost) | **Post** /v1/global/snmps | 
@@ -281,6 +296,7 @@ Method | HTTP request | Description
 [**V1GroupsIdEnterprisesEnterpriseIdDelete**](DefaultAPI.md#V1GroupsIdEnterprisesEnterpriseIdDelete) | **Delete** /v1/groups/{id}/enterprises/{enterpriseId} | 
 [**V1GroupsIdEnterprisesPost**](DefaultAPI.md#V1GroupsIdEnterprisesPost) | **Post** /v1/groups/{id}/enterprises | 
 [**V1GroupsIdGet**](DefaultAPI.md#V1GroupsIdGet) | **Get** /v1/groups/{id} | 
+[**V1GroupsIdMembersDeletePost**](DefaultAPI.md#V1GroupsIdMembersDeletePost) | **Post** /v1/groups/{id}/members/delete | 
 [**V1GroupsIdMembersGet**](DefaultAPI.md#V1GroupsIdMembersGet) | **Get** /v1/groups/{id}/members | 
 [**V1GroupsIdMembersMemberIdDelete**](DefaultAPI.md#V1GroupsIdMembersMemberIdDelete) | **Delete** /v1/groups/{id}/members/{memberId} | 
 [**V1GroupsIdMembersPost**](DefaultAPI.md#V1GroupsIdMembersPost) | **Post** /v1/groups/{id}/members | 
@@ -300,6 +316,9 @@ Method | HTTP request | Description
 [**V1MonitoringCircuitsVisualizationPost**](DefaultAPI.md#V1MonitoringCircuitsVisualizationPost) | **Post** /v1/monitoring/circuits/visualization | 
 [**V1NatEntriesDeviceIdGet**](DefaultAPI.md#V1NatEntriesDeviceIdGet) | **Get** /v1/nat/entries/{deviceId} | 
 [**V1NatUtilizationDeviceIdGet**](DefaultAPI.md#V1NatUtilizationDeviceIdGet) | **Get** /v1/nat/utilization/{deviceId} | 
+[**V1OnboardingCloudinitDelete**](DefaultAPI.md#V1OnboardingCloudinitDelete) | **Delete** /v1/onboarding/cloudinit | 
+[**V1OnboardingCloudinitGet**](DefaultAPI.md#V1OnboardingCloudinitGet) | **Get** /v1/onboarding/cloudinit | 
+[**V1OnboardingCloudinitPost**](DefaultAPI.md#V1OnboardingCloudinitPost) | **Post** /v1/onboarding/cloudinit | 
 [**V1PolicyApplicationsGet**](DefaultAPI.md#V1PolicyApplicationsGet) | **Get** /v1/policy/applications | 
 [**V1PolicyPrefixSetsIdDelete**](DefaultAPI.md#V1PolicyPrefixSetsIdDelete) | **Delete** /v1/policy/prefix-sets/{id} | 
 [**V1PolicyPrefixSetsIdPut**](DefaultAPI.md#V1PolicyPrefixSetsIdPut) | **Put** /v1/policy/prefix-sets/{id} | 
@@ -364,6 +383,7 @@ Method | HTTP request | Description
 [**V2AllowlistDeletebyentityidEntityIdDelete**](DefaultAPI.md#V2AllowlistDeletebyentityidEntityIdDelete) | **Delete** /v2/allowlist/deletebyentityid/{entityId} | 
 [**V2AllowlistRuleIdGet**](DefaultAPI.md#V2AllowlistRuleIdGet) | **Get** /v2/allowlist/{ruleId} | 
 [**V2AssistantAddToConversationPost**](DefaultAPI.md#V2AssistantAddToConversationPost) | **Post** /v2/assistant/add-to-conversation | 
+[**V2AssistantConversationContextHistoryPost**](DefaultAPI.md#V2AssistantConversationContextHistoryPost) | **Post** /v2/assistant/conversation-context-history/ | 
 [**V2AssistantConversationIdDelete**](DefaultAPI.md#V2AssistantConversationIdDelete) | **Delete** /v2/assistant/{conversationId} | 
 [**V2AssistantDeleteConversationChatConversationIdDelete**](DefaultAPI.md#V2AssistantDeleteConversationChatConversationIdDelete) | **Delete** /v2/assistant/delete-conversation-chat/{conversationId} | 
 [**V2AssistantDeleteConversationConversationIdDelete**](DefaultAPI.md#V2AssistantDeleteConversationConversationIdDelete) | **Delete** /v2/assistant/delete-conversation/{conversationId} | 
@@ -1973,7 +1993,7 @@ Name | Type | Description  | Notes
 
 ## V1AuthMfaPatch
 
-> map[string]interface{} V1AuthMfaPatch(ctx).Authorization(authorization).Body(body).Execute()
+> map[string]interface{} V1AuthMfaPatch(ctx).Authorization(authorization).V1AuthMfaPatchRequest(v1AuthMfaPatchRequest).Execute()
 
 
 
@@ -1991,11 +2011,11 @@ import (
 
 func main() {
 	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
-	body := map[string]interface{}{ ... } // map[string]interface{} | 
+	v1AuthMfaPatchRequest := *openapiclient.NewV1AuthMfaPatchRequest() // V1AuthMfaPatchRequest | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.DefaultAPI.V1AuthMfaPatch(context.Background()).Authorization(authorization).Body(body).Execute()
+	resp, r, err := apiClient.DefaultAPI.V1AuthMfaPatch(context.Background()).Authorization(authorization).V1AuthMfaPatchRequest(v1AuthMfaPatchRequest).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1AuthMfaPatch``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -2017,7 +2037,137 @@ Other parameters are passed through a pointer to a apiV1AuthMfaPatchRequest stru
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **string** | Bearer token. Format: Bearer &lt;your_token_here&gt; | 
- **body** | **map[string]interface{}** |  | 
+ **v1AuthMfaPatchRequest** | [**V1AuthMfaPatchRequest**](V1AuthMfaPatchRequest.md) |  | 
+
+### Return type
+
+**map[string]interface{}**
+
+### Authorization
+
+[jwtAuth](../README.md#jwtAuth)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## V1AuthMfaTypesGet
+
+> V1AuthMfaPatchRequest V1AuthMfaTypesGet(ctx).Authorization(authorization).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/Graphiant-Inc/graphiant-sdk-go"
+)
+
+func main() {
+	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
+
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.DefaultAPI.V1AuthMfaTypesGet(context.Background()).Authorization(authorization).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1AuthMfaTypesGet``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `V1AuthMfaTypesGet`: V1AuthMfaPatchRequest
+	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1AuthMfaTypesGet`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiV1AuthMfaTypesGetRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **authorization** | **string** | Bearer token. Format: Bearer &lt;your_token_here&gt; | 
+
+### Return type
+
+[**V1AuthMfaPatchRequest**](V1AuthMfaPatchRequest.md)
+
+### Authorization
+
+[jwtAuth](../README.md#jwtAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## V1AuthMfaTypesPut
+
+> map[string]interface{} V1AuthMfaTypesPut(ctx).Authorization(authorization).V1AuthMfaPatchRequest(v1AuthMfaPatchRequest).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/Graphiant-Inc/graphiant-sdk-go"
+)
+
+func main() {
+	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
+	v1AuthMfaPatchRequest := *openapiclient.NewV1AuthMfaPatchRequest() // V1AuthMfaPatchRequest | 
+
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.DefaultAPI.V1AuthMfaTypesPut(context.Background()).Authorization(authorization).V1AuthMfaPatchRequest(v1AuthMfaPatchRequest).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1AuthMfaTypesPut``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `V1AuthMfaTypesPut`: map[string]interface{}
+	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1AuthMfaTypesPut`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiV1AuthMfaTypesPutRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **authorization** | **string** | Bearer token. Format: Bearer &lt;your_token_here&gt; | 
+ **v1AuthMfaPatchRequest** | [**V1AuthMfaPatchRequest**](V1AuthMfaPatchRequest.md) |  | 
 
 ### Return type
 
@@ -3284,6 +3434,270 @@ Name | Type | Description  | Notes
 [[Back to README]](../README.md)
 
 
+## V1BwtrackerRegionGatewayChartPost
+
+> V1BwtrackerRegionCloudChartPost200Response V1BwtrackerRegionGatewayChartPost(ctx).Authorization(authorization).V1BwtrackerRegionCloudChartPostRequest(v1BwtrackerRegionCloudChartPostRequest).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/Graphiant-Inc/graphiant-sdk-go"
+)
+
+func main() {
+	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
+	v1BwtrackerRegionCloudChartPostRequest := *openapiclient.NewV1BwtrackerRegionCloudChartPostRequest() // V1BwtrackerRegionCloudChartPostRequest | 
+
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.DefaultAPI.V1BwtrackerRegionGatewayChartPost(context.Background()).Authorization(authorization).V1BwtrackerRegionCloudChartPostRequest(v1BwtrackerRegionCloudChartPostRequest).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1BwtrackerRegionGatewayChartPost``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `V1BwtrackerRegionGatewayChartPost`: V1BwtrackerRegionCloudChartPost200Response
+	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1BwtrackerRegionGatewayChartPost`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiV1BwtrackerRegionGatewayChartPostRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **authorization** | **string** | Bearer token. Format: Bearer &lt;your_token_here&gt; | 
+ **v1BwtrackerRegionCloudChartPostRequest** | [**V1BwtrackerRegionCloudChartPostRequest**](V1BwtrackerRegionCloudChartPostRequest.md) |  | 
+
+### Return type
+
+[**V1BwtrackerRegionCloudChartPost200Response**](V1BwtrackerRegionCloudChartPost200Response.md)
+
+### Authorization
+
+[jwtAuth](../README.md#jwtAuth)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## V1BwtrackerRegionGatewayCsvPost
+
+> V1BwtrackerEnterpriseCsvPost200Response V1BwtrackerRegionGatewayCsvPost(ctx).Authorization(authorization).V1BwtrackerRegionCloudChartPostRequest(v1BwtrackerRegionCloudChartPostRequest).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/Graphiant-Inc/graphiant-sdk-go"
+)
+
+func main() {
+	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
+	v1BwtrackerRegionCloudChartPostRequest := *openapiclient.NewV1BwtrackerRegionCloudChartPostRequest() // V1BwtrackerRegionCloudChartPostRequest | 
+
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.DefaultAPI.V1BwtrackerRegionGatewayCsvPost(context.Background()).Authorization(authorization).V1BwtrackerRegionCloudChartPostRequest(v1BwtrackerRegionCloudChartPostRequest).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1BwtrackerRegionGatewayCsvPost``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `V1BwtrackerRegionGatewayCsvPost`: V1BwtrackerEnterpriseCsvPost200Response
+	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1BwtrackerRegionGatewayCsvPost`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiV1BwtrackerRegionGatewayCsvPostRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **authorization** | **string** | Bearer token. Format: Bearer &lt;your_token_here&gt; | 
+ **v1BwtrackerRegionCloudChartPostRequest** | [**V1BwtrackerRegionCloudChartPostRequest**](V1BwtrackerRegionCloudChartPostRequest.md) |  | 
+
+### Return type
+
+[**V1BwtrackerEnterpriseCsvPost200Response**](V1BwtrackerEnterpriseCsvPost200Response.md)
+
+### Authorization
+
+[jwtAuth](../README.md#jwtAuth)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## V1BwtrackerRegionGatewayDetailsPost
+
+> V1BwtrackerRegionEdgeDetailsPost200Response V1BwtrackerRegionGatewayDetailsPost(ctx).Authorization(authorization).V1BwtrackerRegionCloudChartPostRequest(v1BwtrackerRegionCloudChartPostRequest).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/Graphiant-Inc/graphiant-sdk-go"
+)
+
+func main() {
+	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
+	v1BwtrackerRegionCloudChartPostRequest := *openapiclient.NewV1BwtrackerRegionCloudChartPostRequest() // V1BwtrackerRegionCloudChartPostRequest | 
+
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.DefaultAPI.V1BwtrackerRegionGatewayDetailsPost(context.Background()).Authorization(authorization).V1BwtrackerRegionCloudChartPostRequest(v1BwtrackerRegionCloudChartPostRequest).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1BwtrackerRegionGatewayDetailsPost``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `V1BwtrackerRegionGatewayDetailsPost`: V1BwtrackerRegionEdgeDetailsPost200Response
+	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1BwtrackerRegionGatewayDetailsPost`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiV1BwtrackerRegionGatewayDetailsPostRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **authorization** | **string** | Bearer token. Format: Bearer &lt;your_token_here&gt; | 
+ **v1BwtrackerRegionCloudChartPostRequest** | [**V1BwtrackerRegionCloudChartPostRequest**](V1BwtrackerRegionCloudChartPostRequest.md) |  | 
+
+### Return type
+
+[**V1BwtrackerRegionEdgeDetailsPost200Response**](V1BwtrackerRegionEdgeDetailsPost200Response.md)
+
+### Authorization
+
+[jwtAuth](../README.md#jwtAuth)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## V1BwtrackerRegionGatewaySummaryPost
+
+> V1BwtrackerRegionEdgeSummaryPost200Response V1BwtrackerRegionGatewaySummaryPost(ctx).Authorization(authorization).V1BwtrackerRegionCloudChartPostRequest(v1BwtrackerRegionCloudChartPostRequest).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/Graphiant-Inc/graphiant-sdk-go"
+)
+
+func main() {
+	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
+	v1BwtrackerRegionCloudChartPostRequest := *openapiclient.NewV1BwtrackerRegionCloudChartPostRequest() // V1BwtrackerRegionCloudChartPostRequest | 
+
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.DefaultAPI.V1BwtrackerRegionGatewaySummaryPost(context.Background()).Authorization(authorization).V1BwtrackerRegionCloudChartPostRequest(v1BwtrackerRegionCloudChartPostRequest).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1BwtrackerRegionGatewaySummaryPost``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `V1BwtrackerRegionGatewaySummaryPost`: V1BwtrackerRegionEdgeSummaryPost200Response
+	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1BwtrackerRegionGatewaySummaryPost`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiV1BwtrackerRegionGatewaySummaryPostRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **authorization** | **string** | Bearer token. Format: Bearer &lt;your_token_here&gt; | 
+ **v1BwtrackerRegionCloudChartPostRequest** | [**V1BwtrackerRegionCloudChartPostRequest**](V1BwtrackerRegionCloudChartPostRequest.md) |  | 
+
+### Return type
+
+[**V1BwtrackerRegionEdgeSummaryPost200Response**](V1BwtrackerRegionEdgeSummaryPost200Response.md)
+
+### Authorization
+
+[jwtAuth](../README.md#jwtAuth)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
 ## V1BwtrackerRegionSiteChartPost
 
 > V1BwtrackerRegionCloudChartPost200Response V1BwtrackerRegionSiteChartPost(ctx).Authorization(authorization).V1BwtrackerRegionSiteChartPostRequest(v1BwtrackerRegionSiteChartPostRequest).Execute()
@@ -3416,9 +3830,207 @@ Name | Type | Description  | Notes
 [[Back to README]](../README.md)
 
 
+## V1BwtrackerRegionSiteGatewayChartPost
+
+> V1BwtrackerRegionCloudChartPost200Response V1BwtrackerRegionSiteGatewayChartPost(ctx).Authorization(authorization).V1BwtrackerRegionSiteChartPostRequest(v1BwtrackerRegionSiteChartPostRequest).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/Graphiant-Inc/graphiant-sdk-go"
+)
+
+func main() {
+	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
+	v1BwtrackerRegionSiteChartPostRequest := *openapiclient.NewV1BwtrackerRegionSiteChartPostRequest() // V1BwtrackerRegionSiteChartPostRequest | 
+
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.DefaultAPI.V1BwtrackerRegionSiteGatewayChartPost(context.Background()).Authorization(authorization).V1BwtrackerRegionSiteChartPostRequest(v1BwtrackerRegionSiteChartPostRequest).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1BwtrackerRegionSiteGatewayChartPost``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `V1BwtrackerRegionSiteGatewayChartPost`: V1BwtrackerRegionCloudChartPost200Response
+	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1BwtrackerRegionSiteGatewayChartPost`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiV1BwtrackerRegionSiteGatewayChartPostRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **authorization** | **string** | Bearer token. Format: Bearer &lt;your_token_here&gt; | 
+ **v1BwtrackerRegionSiteChartPostRequest** | [**V1BwtrackerRegionSiteChartPostRequest**](V1BwtrackerRegionSiteChartPostRequest.md) |  | 
+
+### Return type
+
+[**V1BwtrackerRegionCloudChartPost200Response**](V1BwtrackerRegionCloudChartPost200Response.md)
+
+### Authorization
+
+[jwtAuth](../README.md#jwtAuth)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## V1BwtrackerRegionSiteGatewayDetailsPost
+
+> V1BwtrackerRegionSiteDetailsPost200Response V1BwtrackerRegionSiteGatewayDetailsPost(ctx).Authorization(authorization).V1BwtrackerRegionSiteChartPostRequest(v1BwtrackerRegionSiteChartPostRequest).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/Graphiant-Inc/graphiant-sdk-go"
+)
+
+func main() {
+	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
+	v1BwtrackerRegionSiteChartPostRequest := *openapiclient.NewV1BwtrackerRegionSiteChartPostRequest() // V1BwtrackerRegionSiteChartPostRequest | 
+
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.DefaultAPI.V1BwtrackerRegionSiteGatewayDetailsPost(context.Background()).Authorization(authorization).V1BwtrackerRegionSiteChartPostRequest(v1BwtrackerRegionSiteChartPostRequest).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1BwtrackerRegionSiteGatewayDetailsPost``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `V1BwtrackerRegionSiteGatewayDetailsPost`: V1BwtrackerRegionSiteDetailsPost200Response
+	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1BwtrackerRegionSiteGatewayDetailsPost`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiV1BwtrackerRegionSiteGatewayDetailsPostRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **authorization** | **string** | Bearer token. Format: Bearer &lt;your_token_here&gt; | 
+ **v1BwtrackerRegionSiteChartPostRequest** | [**V1BwtrackerRegionSiteChartPostRequest**](V1BwtrackerRegionSiteChartPostRequest.md) |  | 
+
+### Return type
+
+[**V1BwtrackerRegionSiteDetailsPost200Response**](V1BwtrackerRegionSiteDetailsPost200Response.md)
+
+### Authorization
+
+[jwtAuth](../README.md#jwtAuth)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## V1BwtrackerRegionSiteGatewaySummaryPost
+
+> V1BwtrackerRegionSiteGatewaySummaryPost200Response V1BwtrackerRegionSiteGatewaySummaryPost(ctx).Authorization(authorization).V1BwtrackerRegionSiteChartPostRequest(v1BwtrackerRegionSiteChartPostRequest).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/Graphiant-Inc/graphiant-sdk-go"
+)
+
+func main() {
+	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
+	v1BwtrackerRegionSiteChartPostRequest := *openapiclient.NewV1BwtrackerRegionSiteChartPostRequest() // V1BwtrackerRegionSiteChartPostRequest | 
+
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.DefaultAPI.V1BwtrackerRegionSiteGatewaySummaryPost(context.Background()).Authorization(authorization).V1BwtrackerRegionSiteChartPostRequest(v1BwtrackerRegionSiteChartPostRequest).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1BwtrackerRegionSiteGatewaySummaryPost``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `V1BwtrackerRegionSiteGatewaySummaryPost`: V1BwtrackerRegionSiteGatewaySummaryPost200Response
+	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1BwtrackerRegionSiteGatewaySummaryPost`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiV1BwtrackerRegionSiteGatewaySummaryPostRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **authorization** | **string** | Bearer token. Format: Bearer &lt;your_token_here&gt; | 
+ **v1BwtrackerRegionSiteChartPostRequest** | [**V1BwtrackerRegionSiteChartPostRequest**](V1BwtrackerRegionSiteChartPostRequest.md) |  | 
+
+### Return type
+
+[**V1BwtrackerRegionSiteGatewaySummaryPost200Response**](V1BwtrackerRegionSiteGatewaySummaryPost200Response.md)
+
+### Authorization
+
+[jwtAuth](../README.md#jwtAuth)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
 ## V1BwtrackerRegionSiteSummaryPost
 
-> V1BwtrackerRegionSiteSummaryPost200Response V1BwtrackerRegionSiteSummaryPost(ctx).Authorization(authorization).V1BwtrackerRegionSiteChartPostRequest(v1BwtrackerRegionSiteChartPostRequest).Execute()
+> V1BwtrackerRegionSiteGatewaySummaryPost200Response V1BwtrackerRegionSiteSummaryPost(ctx).Authorization(authorization).V1BwtrackerRegionSiteChartPostRequest(v1BwtrackerRegionSiteChartPostRequest).Execute()
 
 
 
@@ -3445,7 +4057,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1BwtrackerRegionSiteSummaryPost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1BwtrackerRegionSiteSummaryPost`: V1BwtrackerRegionSiteSummaryPost200Response
+	// response from `V1BwtrackerRegionSiteSummaryPost`: V1BwtrackerRegionSiteGatewaySummaryPost200Response
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1BwtrackerRegionSiteSummaryPost`: %v\n", resp)
 }
 ```
@@ -3466,7 +4078,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1BwtrackerRegionSiteSummaryPost200Response**](V1BwtrackerRegionSiteSummaryPost200Response.md)
+[**V1BwtrackerRegionSiteGatewaySummaryPost200Response**](V1BwtrackerRegionSiteGatewaySummaryPost200Response.md)
 
 ### Authorization
 
@@ -3523,6 +4135,72 @@ func main() {
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiV1BwtrackerSiteCsvPostRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **authorization** | **string** | Bearer token. Format: Bearer &lt;your_token_here&gt; | 
+ **v1BwtrackerRegionSiteChartPostRequest** | [**V1BwtrackerRegionSiteChartPostRequest**](V1BwtrackerRegionSiteChartPostRequest.md) |  | 
+
+### Return type
+
+[**V1BwtrackerEnterpriseCsvPost200Response**](V1BwtrackerEnterpriseCsvPost200Response.md)
+
+### Authorization
+
+[jwtAuth](../README.md#jwtAuth)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## V1BwtrackerSiteGatewayCsvPost
+
+> V1BwtrackerEnterpriseCsvPost200Response V1BwtrackerSiteGatewayCsvPost(ctx).Authorization(authorization).V1BwtrackerRegionSiteChartPostRequest(v1BwtrackerRegionSiteChartPostRequest).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/Graphiant-Inc/graphiant-sdk-go"
+)
+
+func main() {
+	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
+	v1BwtrackerRegionSiteChartPostRequest := *openapiclient.NewV1BwtrackerRegionSiteChartPostRequest() // V1BwtrackerRegionSiteChartPostRequest | 
+
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.DefaultAPI.V1BwtrackerSiteGatewayCsvPost(context.Background()).Authorization(authorization).V1BwtrackerRegionSiteChartPostRequest(v1BwtrackerRegionSiteChartPostRequest).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1BwtrackerSiteGatewayCsvPost``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `V1BwtrackerSiteGatewayCsvPost`: V1BwtrackerEnterpriseCsvPost200Response
+	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1BwtrackerSiteGatewayCsvPost`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiV1BwtrackerSiteGatewayCsvPostRequest struct via the builder pattern
 
 
 Name | Type | Description  | Notes
@@ -17933,6 +18611,282 @@ Name | Type | Description  | Notes
 [[Back to README]](../README.md)
 
 
+## V1GlobalSiteListsGet
+
+> V1GlobalSiteListsGet200Response V1GlobalSiteListsGet(ctx).Authorization(authorization).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/Graphiant-Inc/graphiant-sdk-go"
+)
+
+func main() {
+	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
+
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.DefaultAPI.V1GlobalSiteListsGet(context.Background()).Authorization(authorization).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1GlobalSiteListsGet``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `V1GlobalSiteListsGet`: V1GlobalSiteListsGet200Response
+	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1GlobalSiteListsGet`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiV1GlobalSiteListsGetRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **authorization** | **string** | Bearer token. Format: Bearer &lt;your_token_here&gt; | 
+
+### Return type
+
+[**V1GlobalSiteListsGet200Response**](V1GlobalSiteListsGet200Response.md)
+
+### Authorization
+
+[jwtAuth](../README.md#jwtAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## V1GlobalSiteListsIdDelete
+
+> V1GlobalLanSegmentsPost200Response V1GlobalSiteListsIdDelete(ctx, id).Authorization(authorization).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/Graphiant-Inc/graphiant-sdk-go"
+)
+
+func main() {
+	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
+	id := int64(1234567891011) // int64 | 
+
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.DefaultAPI.V1GlobalSiteListsIdDelete(context.Background(), id).Authorization(authorization).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1GlobalSiteListsIdDelete``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `V1GlobalSiteListsIdDelete`: V1GlobalLanSegmentsPost200Response
+	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1GlobalSiteListsIdDelete`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**id** | **int64** |  | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiV1GlobalSiteListsIdDeleteRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **authorization** | **string** | Bearer token. Format: Bearer &lt;your_token_here&gt; | 
+
+
+### Return type
+
+[**V1GlobalLanSegmentsPost200Response**](V1GlobalLanSegmentsPost200Response.md)
+
+### Authorization
+
+[jwtAuth](../README.md#jwtAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## V1GlobalSiteListsIdGet
+
+> V1GlobalSiteListsIdGet200Response V1GlobalSiteListsIdGet(ctx, id).Authorization(authorization).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/Graphiant-Inc/graphiant-sdk-go"
+)
+
+func main() {
+	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
+	id := int64(1234567891011) // int64 | 
+
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.DefaultAPI.V1GlobalSiteListsIdGet(context.Background(), id).Authorization(authorization).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1GlobalSiteListsIdGet``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `V1GlobalSiteListsIdGet`: V1GlobalSiteListsIdGet200Response
+	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1GlobalSiteListsIdGet`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**id** | **int64** |  | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiV1GlobalSiteListsIdGetRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **authorization** | **string** | Bearer token. Format: Bearer &lt;your_token_here&gt; | 
+
+
+### Return type
+
+[**V1GlobalSiteListsIdGet200Response**](V1GlobalSiteListsIdGet200Response.md)
+
+### Authorization
+
+[jwtAuth](../README.md#jwtAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## V1GlobalSiteListsIdPut
+
+> V1GlobalLanSegmentsPost200Response V1GlobalSiteListsIdPut(ctx, id).Authorization(authorization).V1GlobalSiteListsIdGet200Response(v1GlobalSiteListsIdGet200Response).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/Graphiant-Inc/graphiant-sdk-go"
+)
+
+func main() {
+	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
+	id := int64(1234567891011) // int64 | 
+	v1GlobalSiteListsIdGet200Response := *openapiclient.NewV1GlobalSiteListsIdGet200Response() // V1GlobalSiteListsIdGet200Response | 
+
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.DefaultAPI.V1GlobalSiteListsIdPut(context.Background(), id).Authorization(authorization).V1GlobalSiteListsIdGet200Response(v1GlobalSiteListsIdGet200Response).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1GlobalSiteListsIdPut``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `V1GlobalSiteListsIdPut`: V1GlobalLanSegmentsPost200Response
+	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1GlobalSiteListsIdPut`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**id** | **int64** |  | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiV1GlobalSiteListsIdPutRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **authorization** | **string** | Bearer token. Format: Bearer &lt;your_token_here&gt; | 
+
+ **v1GlobalSiteListsIdGet200Response** | [**V1GlobalSiteListsIdGet200Response**](V1GlobalSiteListsIdGet200Response.md) |  | 
+
+### Return type
+
+[**V1GlobalLanSegmentsPost200Response**](V1GlobalLanSegmentsPost200Response.md)
+
+### Authorization
+
+[jwtAuth](../README.md#jwtAuth)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
 ## V1GlobalSiteListsIdSitesGet
 
 > V1GlobalSiteListsIdSitesGet200Response V1GlobalSiteListsIdSitesGet(ctx, id).Authorization(authorization).Execute()
@@ -17996,6 +18950,72 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## V1GlobalSiteListsPost
+
+> V1GlobalLanSegmentsPost200Response V1GlobalSiteListsPost(ctx).Authorization(authorization).V1GlobalSiteListsPostRequest(v1GlobalSiteListsPostRequest).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/Graphiant-Inc/graphiant-sdk-go"
+)
+
+func main() {
+	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
+	v1GlobalSiteListsPostRequest := *openapiclient.NewV1GlobalSiteListsPostRequest() // V1GlobalSiteListsPostRequest | 
+
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.DefaultAPI.V1GlobalSiteListsPost(context.Background()).Authorization(authorization).V1GlobalSiteListsPostRequest(v1GlobalSiteListsPostRequest).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1GlobalSiteListsPost``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `V1GlobalSiteListsPost`: V1GlobalLanSegmentsPost200Response
+	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1GlobalSiteListsPost`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiV1GlobalSiteListsPostRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **authorization** | **string** | Bearer token. Format: Bearer &lt;your_token_here&gt; | 
+ **v1GlobalSiteListsPostRequest** | [**V1GlobalSiteListsPostRequest**](V1GlobalSiteListsPostRequest.md) |  | 
+
+### Return type
+
+[**V1GlobalLanSegmentsPost200Response**](V1GlobalLanSegmentsPost200Response.md)
+
+### Authorization
+
+[jwtAuth](../README.md#jwtAuth)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
 - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
@@ -19187,6 +20207,78 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## V1GroupsIdMembersDeletePost
+
+> V1GroupsIdMembersPost204Response V1GroupsIdMembersDeletePost(ctx, id).Authorization(authorization).V1GroupsIdMembersDeletePostRequest(v1GroupsIdMembersDeletePostRequest).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/Graphiant-Inc/graphiant-sdk-go"
+)
+
+func main() {
+	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
+	id := "example string" // string | 
+	v1GroupsIdMembersDeletePostRequest := *openapiclient.NewV1GroupsIdMembersDeletePostRequest() // V1GroupsIdMembersDeletePostRequest | 
+
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.DefaultAPI.V1GroupsIdMembersDeletePost(context.Background(), id).Authorization(authorization).V1GroupsIdMembersDeletePostRequest(v1GroupsIdMembersDeletePostRequest).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1GroupsIdMembersDeletePost``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `V1GroupsIdMembersDeletePost`: V1GroupsIdMembersPost204Response
+	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1GroupsIdMembersDeletePost`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**id** | **string** |  | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiV1GroupsIdMembersDeletePostRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **authorization** | **string** | Bearer token. Format: Bearer &lt;your_token_here&gt; | 
+
+ **v1GroupsIdMembersDeletePostRequest** | [**V1GroupsIdMembersDeletePostRequest**](V1GroupsIdMembersDeletePostRequest.md) |  | 
+
+### Return type
+
+[**V1GroupsIdMembersPost204Response**](V1GroupsIdMembersPost204Response.md)
+
+### Authorization
+
+[jwtAuth](../README.md#jwtAuth)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
 - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
@@ -20486,6 +21578,200 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## V1OnboardingCloudinitDelete
+
+> map[string]interface{} V1OnboardingCloudinitDelete(ctx).Authorization(authorization).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/Graphiant-Inc/graphiant-sdk-go"
+)
+
+func main() {
+	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
+
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.DefaultAPI.V1OnboardingCloudinitDelete(context.Background()).Authorization(authorization).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1OnboardingCloudinitDelete``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `V1OnboardingCloudinitDelete`: map[string]interface{}
+	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1OnboardingCloudinitDelete`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiV1OnboardingCloudinitDeleteRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **authorization** | **string** | Bearer token. Format: Bearer &lt;your_token_here&gt; | 
+
+### Return type
+
+**map[string]interface{}**
+
+### Authorization
+
+[jwtAuth](../README.md#jwtAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## V1OnboardingCloudinitGet
+
+> V1OnboardingCloudinitGet200Response V1OnboardingCloudinitGet(ctx).Authorization(authorization).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/Graphiant-Inc/graphiant-sdk-go"
+)
+
+func main() {
+	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
+
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.DefaultAPI.V1OnboardingCloudinitGet(context.Background()).Authorization(authorization).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1OnboardingCloudinitGet``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `V1OnboardingCloudinitGet`: V1OnboardingCloudinitGet200Response
+	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1OnboardingCloudinitGet`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiV1OnboardingCloudinitGetRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **authorization** | **string** | Bearer token. Format: Bearer &lt;your_token_here&gt; | 
+
+### Return type
+
+[**V1OnboardingCloudinitGet200Response**](V1OnboardingCloudinitGet200Response.md)
+
+### Authorization
+
+[jwtAuth](../README.md#jwtAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## V1OnboardingCloudinitPost
+
+> map[string]interface{} V1OnboardingCloudinitPost(ctx).Authorization(authorization).V1OnboardingCloudinitGet200Response(v1OnboardingCloudinitGet200Response).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/Graphiant-Inc/graphiant-sdk-go"
+)
+
+func main() {
+	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
+	v1OnboardingCloudinitGet200Response := *openapiclient.NewV1OnboardingCloudinitGet200Response() // V1OnboardingCloudinitGet200Response | 
+
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.DefaultAPI.V1OnboardingCloudinitPost(context.Background()).Authorization(authorization).V1OnboardingCloudinitGet200Response(v1OnboardingCloudinitGet200Response).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1OnboardingCloudinitPost``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `V1OnboardingCloudinitPost`: map[string]interface{}
+	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1OnboardingCloudinitPost`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiV1OnboardingCloudinitPostRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **authorization** | **string** | Bearer token. Format: Bearer &lt;your_token_here&gt; | 
+ **v1OnboardingCloudinitGet200Response** | [**V1OnboardingCloudinitGet200Response**](V1OnboardingCloudinitGet200Response.md) |  | 
+
+### Return type
+
+**map[string]interface{}**
+
+### Authorization
+
+[jwtAuth](../README.md#jwtAuth)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
 - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
@@ -24762,6 +26048,72 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**V2AssistantAddToConversationPost200Response**](V2AssistantAddToConversationPost200Response.md)
+
+### Authorization
+
+[jwtAuth](../README.md#jwtAuth)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## V2AssistantConversationContextHistoryPost
+
+> map[string]interface{} V2AssistantConversationContextHistoryPost(ctx).Authorization(authorization).V2AssistantConversationContextHistoryPostRequest(v2AssistantConversationContextHistoryPostRequest).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/Graphiant-Inc/graphiant-sdk-go"
+)
+
+func main() {
+	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
+	v2AssistantConversationContextHistoryPostRequest := *openapiclient.NewV2AssistantConversationContextHistoryPostRequest() // V2AssistantConversationContextHistoryPostRequest | 
+
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.DefaultAPI.V2AssistantConversationContextHistoryPost(context.Background()).Authorization(authorization).V2AssistantConversationContextHistoryPostRequest(v2AssistantConversationContextHistoryPostRequest).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V2AssistantConversationContextHistoryPost``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `V2AssistantConversationContextHistoryPost`: map[string]interface{}
+	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V2AssistantConversationContextHistoryPost`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiV2AssistantConversationContextHistoryPostRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **authorization** | **string** | Bearer token. Format: Bearer &lt;your_token_here&gt; | 
+ **v2AssistantConversationContextHistoryPostRequest** | [**V2AssistantConversationContextHistoryPostRequest**](V2AssistantConversationContextHistoryPostRequest.md) |  | 
+
+### Return type
+
+**map[string]interface{}**
 
 ### Authorization
 

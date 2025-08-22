@@ -20,6 +20,7 @@ var _ MappedNullable = &V1GroupsIdMembersPostRequest{}
 // V1GroupsIdMembersPostRequest struct for V1GroupsIdMembersPostRequest
 type V1GroupsIdMembersPostRequest struct {
 	MemberIds []string `json:"memberIds,omitempty"`
+	ReplaceExisting *bool `json:"replaceExisting,omitempty"`
 }
 
 // NewV1GroupsIdMembersPostRequest instantiates a new V1GroupsIdMembersPostRequest object
@@ -71,6 +72,38 @@ func (o *V1GroupsIdMembersPostRequest) SetMemberIds(v []string) {
 	o.MemberIds = v
 }
 
+// GetReplaceExisting returns the ReplaceExisting field value if set, zero value otherwise.
+func (o *V1GroupsIdMembersPostRequest) GetReplaceExisting() bool {
+	if o == nil || IsNil(o.ReplaceExisting) {
+		var ret bool
+		return ret
+	}
+	return *o.ReplaceExisting
+}
+
+// GetReplaceExistingOk returns a tuple with the ReplaceExisting field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *V1GroupsIdMembersPostRequest) GetReplaceExistingOk() (*bool, bool) {
+	if o == nil || IsNil(o.ReplaceExisting) {
+		return nil, false
+	}
+	return o.ReplaceExisting, true
+}
+
+// HasReplaceExisting returns a boolean if a field has been set.
+func (o *V1GroupsIdMembersPostRequest) HasReplaceExisting() bool {
+	if o != nil && !IsNil(o.ReplaceExisting) {
+		return true
+	}
+
+	return false
+}
+
+// SetReplaceExisting gets a reference to the given bool and assigns it to the ReplaceExisting field.
+func (o *V1GroupsIdMembersPostRequest) SetReplaceExisting(v bool) {
+	o.ReplaceExisting = &v
+}
+
 func (o V1GroupsIdMembersPostRequest) MarshalJSON() ([]byte, error) {
 	toSerialize,err := o.ToMap()
 	if err != nil {
@@ -83,6 +116,9 @@ func (o V1GroupsIdMembersPostRequest) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
 	if !IsNil(o.MemberIds) {
 		toSerialize["memberIds"] = o.MemberIds
+	}
+	if !IsNil(o.ReplaceExisting) {
+		toSerialize["replaceExisting"] = o.ReplaceExisting
 	}
 	return toSerialize, nil
 }

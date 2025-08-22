@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **ConversationHeader** | Pointer to **string** |  | [optional] 
 **ConversationId** | Pointer to **string** |  | [optional] 
 **ConversationRecentTimestamp** | Pointer to **int64** |  | [optional] 
+**EnableContextHistory** | Pointer to **bool** |  | [optional] 
 
 ## Methods
 
@@ -101,6 +102,31 @@ SetConversationRecentTimestamp sets ConversationRecentTimestamp field to given v
 `func (o *V2AssistantGetConversationsPost200ResponseConversationListInner) HasConversationRecentTimestamp() bool`
 
 HasConversationRecentTimestamp returns a boolean if a field has been set.
+
+### GetEnableContextHistory
+
+`func (o *V2AssistantGetConversationsPost200ResponseConversationListInner) GetEnableContextHistory() bool`
+
+GetEnableContextHistory returns the EnableContextHistory field if non-nil, zero value otherwise.
+
+### GetEnableContextHistoryOk
+
+`func (o *V2AssistantGetConversationsPost200ResponseConversationListInner) GetEnableContextHistoryOk() (*bool, bool)`
+
+GetEnableContextHistoryOk returns a tuple with the EnableContextHistory field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetEnableContextHistory
+
+`func (o *V2AssistantGetConversationsPost200ResponseConversationListInner) SetEnableContextHistory(v bool)`
+
+SetEnableContextHistory sets EnableContextHistory field to given value.
+
+### HasEnableContextHistory
+
+`func (o *V2AssistantGetConversationsPost200ResponseConversationListInner) HasEnableContextHistory() bool`
+
+HasEnableContextHistory returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

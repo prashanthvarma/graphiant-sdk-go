@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Details** | Pointer to [**V1SoftwareAutoUpgradeDefaultGet200ResponseDetails**](V1SoftwareAutoUpgradeDefaultGet200ResponseDetails.md) |  | [optional] 
+**Profile** | Pointer to [**V1SoftwareAutoUpgradeDefaultGet200ResponseProfile**](V1SoftwareAutoUpgradeDefaultGet200ResponseProfile.md) |  | [optional] 
 **Release** | Pointer to **string** |  | [optional] 
 
 ## Methods
@@ -26,30 +26,30 @@ NewV1SoftwareAutoUpgradeDefaultGet200ResponseWithDefaults instantiates a new V1S
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetDetails
+### GetProfile
 
-`func (o *V1SoftwareAutoUpgradeDefaultGet200Response) GetDetails() V1SoftwareAutoUpgradeDefaultGet200ResponseDetails`
+`func (o *V1SoftwareAutoUpgradeDefaultGet200Response) GetProfile() V1SoftwareAutoUpgradeDefaultGet200ResponseProfile`
 
-GetDetails returns the Details field if non-nil, zero value otherwise.
+GetProfile returns the Profile field if non-nil, zero value otherwise.
 
-### GetDetailsOk
+### GetProfileOk
 
-`func (o *V1SoftwareAutoUpgradeDefaultGet200Response) GetDetailsOk() (*V1SoftwareAutoUpgradeDefaultGet200ResponseDetails, bool)`
+`func (o *V1SoftwareAutoUpgradeDefaultGet200Response) GetProfileOk() (*V1SoftwareAutoUpgradeDefaultGet200ResponseProfile, bool)`
 
-GetDetailsOk returns a tuple with the Details field if it's non-nil, zero value otherwise
+GetProfileOk returns a tuple with the Profile field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDetails
+### SetProfile
 
-`func (o *V1SoftwareAutoUpgradeDefaultGet200Response) SetDetails(v V1SoftwareAutoUpgradeDefaultGet200ResponseDetails)`
+`func (o *V1SoftwareAutoUpgradeDefaultGet200Response) SetProfile(v V1SoftwareAutoUpgradeDefaultGet200ResponseProfile)`
 
-SetDetails sets Details field to given value.
+SetProfile sets Profile field to given value.
 
-### HasDetails
+### HasProfile
 
-`func (o *V1SoftwareAutoUpgradeDefaultGet200Response) HasDetails() bool`
+`func (o *V1SoftwareAutoUpgradeDefaultGet200Response) HasProfile() bool`
 
-HasDetails returns a boolean if a field has been set.
+HasProfile returns a boolean if a field has been set.
 
 ### GetRelease
 

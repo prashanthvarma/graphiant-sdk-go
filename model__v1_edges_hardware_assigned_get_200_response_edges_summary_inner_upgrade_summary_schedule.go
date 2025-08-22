@@ -25,7 +25,7 @@ type V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummarySchedul
 	FailureReason *string `json:"failureReason,omitempty"`
 	State *string `json:"state,omitempty"`
 	Ts *V1AlarmHistoryGet200ResponseHistoryInnerTime `json:"ts,omitempty"`
-	Version *V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummaryRunningVersion `json:"version,omitempty"`
+	Version *V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummaryLastRunningVersion `json:"version,omitempty"`
 }
 
 // NewV1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummarySchedule instantiates a new V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummarySchedule object
@@ -238,9 +238,9 @@ func (o *V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummarySch
 }
 
 // GetVersion returns the Version field value if set, zero value otherwise.
-func (o *V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummarySchedule) GetVersion() V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummaryRunningVersion {
+func (o *V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummarySchedule) GetVersion() V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummaryLastRunningVersion {
 	if o == nil || IsNil(o.Version) {
-		var ret V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummaryRunningVersion
+		var ret V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummaryLastRunningVersion
 		return ret
 	}
 	return *o.Version
@@ -248,7 +248,7 @@ func (o *V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummarySch
 
 // GetVersionOk returns a tuple with the Version field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummarySchedule) GetVersionOk() (*V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummaryRunningVersion, bool) {
+func (o *V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummarySchedule) GetVersionOk() (*V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummaryLastRunningVersion, bool) {
 	if o == nil || IsNil(o.Version) {
 		return nil, false
 	}
@@ -264,8 +264,8 @@ func (o *V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummarySch
 	return false
 }
 
-// SetVersion gets a reference to the given V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummaryRunningVersion and assigns it to the Version field.
-func (o *V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummarySchedule) SetVersion(v V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummaryRunningVersion) {
+// SetVersion gets a reference to the given V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummaryLastRunningVersion and assigns it to the Version field.
+func (o *V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummarySchedule) SetVersion(v V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummaryLastRunningVersion) {
 	o.Version = &v
 }
 

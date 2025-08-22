@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **Email** | Pointer to **string** |  | [optional] 
 **EnterpriseId** | Pointer to **int64** |  | [optional] 
 **FirstName** | Pointer to **string** |  | [optional] 
+**LastActiveAt** | Pointer to [**V1AlarmHistoryGet200ResponseHistoryInnerTime**](V1AlarmHistoryGet200ResponseHistoryInnerTime.md) |  | [optional] 
 **LastName** | Pointer to **string** |  | [optional] 
 **MfaFactor** | Pointer to **string** |  | [optional] 
 **PhoneNumber** | Pointer to **string** |  | [optional] 
@@ -107,6 +108,31 @@ SetFirstName sets FirstName field to given value.
 `func (o *V1GroupsIdMembersGet200ResponseUsersInner) HasFirstName() bool`
 
 HasFirstName returns a boolean if a field has been set.
+
+### GetLastActiveAt
+
+`func (o *V1GroupsIdMembersGet200ResponseUsersInner) GetLastActiveAt() V1AlarmHistoryGet200ResponseHistoryInnerTime`
+
+GetLastActiveAt returns the LastActiveAt field if non-nil, zero value otherwise.
+
+### GetLastActiveAtOk
+
+`func (o *V1GroupsIdMembersGet200ResponseUsersInner) GetLastActiveAtOk() (*V1AlarmHistoryGet200ResponseHistoryInnerTime, bool)`
+
+GetLastActiveAtOk returns a tuple with the LastActiveAt field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetLastActiveAt
+
+`func (o *V1GroupsIdMembersGet200ResponseUsersInner) SetLastActiveAt(v V1AlarmHistoryGet200ResponseHistoryInnerTime)`
+
+SetLastActiveAt sets LastActiveAt field to given value.
+
+### HasLastActiveAt
+
+`func (o *V1GroupsIdMembersGet200ResponseUsersInner) HasLastActiveAt() bool`
+
+HasLastActiveAt returns a boolean if a field has been set.
 
 ### GetLastName
 
