@@ -13,22 +13,21 @@ import (
 	"os"
 	"testing"
 
-	openapi "github.com/Graphiant-Inc/graphiant-sdk-go"
-	openapiclient "github.com/Graphiant-Inc/graphiant-sdk-go"
+	graphiant_sdk "github.com/Graphiant-Inc/graphiant-sdk-go"
 	"github.com/stretchr/testify/require"
 )
 
 func Test_edge_summary(t *testing.T) {
 
-	configuration := openapiclient.NewConfiguration()
-	apiClient := openapiclient.NewAPIClient(configuration)
+	configuration := graphiant_sdk.NewConfiguration()
+	apiClient := graphiant_sdk.NewAPIClient(configuration)
 	t.Run("Test DefaultAPIService V1AuthLoginPost", func(t *testing.T) {
-		username := os.Getenv("username")
-		password := os.Getenv("password")
+		username := os.Getenv("GRAPHIANT_USERNAME")
+		password := os.Getenv("GRAPHIANT_PASSWORD")
 		require.NotEmpty(t, username, "username should not be empty")
 		require.NotEmpty(t, password, "password should not be empty")
 
-		authReq := openapi.NewV1AuthLoginPostRequest()
+		authReq := graphiant_sdk.NewV1AuthLoginPostRequest()
 		authReq.SetUsername(username)
 		authReq.SetPassword(password)
 

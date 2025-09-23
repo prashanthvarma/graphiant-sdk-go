@@ -27,6 +27,7 @@ Refer [Graphiant Docs](https://docs.graphiant.com) to get started with [Graphian
 - **Error Handling**: Robust error handling with detailed error messages
 - **Extranet Management**: Extranet service configuration and monitoring
 - **Integration Ready**: Third-party integration capabilities
+- **Convenient Wrappers**: High-level wrapper functions for device config update operations
 
 ## 🚀 Quick Start
 
@@ -336,6 +337,32 @@ func handleApiErrors(client *graphiant_sdk.APIClient, bearerToken string) {
 }
 ```
 
+## 🎯 Convenient Wrapper Functions
+
+The SDK includes high-level wrapper functions in `api_custom.go` that simplify common operations:
+
+### Allow Device Configuration only when the device is Ready
+
+```go
+import "github.com/Graphiant-Inc/graphiant-sdk-go"
+
+// Poll device status and execute configuration when ready
+func configureDeviceWhenReady(deviceID int64, config graphiant_sdk.V1DevicesDeviceIdConfigPutRequest) *http.Response {
+    config := graphiant_sdk.NewConfiguration()
+    client := graphiant_sdk.NewAPIClient(config)
+    
+    // Get authentication token
+    apiClient, token := getAuthToken() // Your auth function
+    
+    // Poll device status every 30 seconds for up to 10 attempts
+    // Execute configuration when device becomes ready
+    return graphiant_sdk.PollAndPutDeviceConfig(apiClient, token, deviceID, config)
+}
+```
+
+### Available Wrapper Functions
+| `PollAndPutDeviceConfig(apiClient, token, deviceID, config)` | Poll device status and execute config when ready |
+
 ## 🛠️ Development
 
 ### Prerequisites
@@ -386,8 +413,8 @@ openapi-generator generate \
 
 ```bash
 # Set environment variables for testing
-export username="your-test-username"
-export password="your-test-password"
+export GRAPHIANT_USERNAME="your_username"
+export GRAPHIANT_PASSWORD="your_password"
 
 # Run edge summary test
 go test -v ./... -run Test_edge_summary
@@ -398,6 +425,7 @@ go test -v ./... -run Test_edge_summary
 ```
 graphiant-sdk-go/
 ├── api_default.go              # Main API service
+├── api_custom.go               # Convenient wrapper functions
 ├── client.go                   # HTTP client implementation
 ├── configuration.go            # Configuration management
 ├── model_*.go                  # Generated data models
