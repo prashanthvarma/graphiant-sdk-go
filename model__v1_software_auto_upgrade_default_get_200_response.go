@@ -19,7 +19,7 @@ var _ MappedNullable = &V1SoftwareAutoUpgradeDefaultGet200Response{}
 
 // V1SoftwareAutoUpgradeDefaultGet200Response struct for V1SoftwareAutoUpgradeDefaultGet200Response
 type V1SoftwareAutoUpgradeDefaultGet200Response struct {
-	Profile *V1SoftwareAutoUpgradeDefaultGet200ResponseProfile `json:"profile,omitempty"`
+	Details *V1SoftwareAutoUpgradeDefaultGet200ResponseDetails `json:"details,omitempty"`
 	Release *string `json:"release,omitempty"`
 }
 
@@ -40,36 +40,36 @@ func NewV1SoftwareAutoUpgradeDefaultGet200ResponseWithDefaults() *V1SoftwareAuto
 	return &this
 }
 
-// GetProfile returns the Profile field value if set, zero value otherwise.
-func (o *V1SoftwareAutoUpgradeDefaultGet200Response) GetProfile() V1SoftwareAutoUpgradeDefaultGet200ResponseProfile {
-	if o == nil || IsNil(o.Profile) {
-		var ret V1SoftwareAutoUpgradeDefaultGet200ResponseProfile
+// GetDetails returns the Details field value if set, zero value otherwise.
+func (o *V1SoftwareAutoUpgradeDefaultGet200Response) GetDetails() V1SoftwareAutoUpgradeDefaultGet200ResponseDetails {
+	if o == nil || IsNil(o.Details) {
+		var ret V1SoftwareAutoUpgradeDefaultGet200ResponseDetails
 		return ret
 	}
-	return *o.Profile
+	return *o.Details
 }
 
-// GetProfileOk returns a tuple with the Profile field value if set, nil otherwise
+// GetDetailsOk returns a tuple with the Details field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *V1SoftwareAutoUpgradeDefaultGet200Response) GetProfileOk() (*V1SoftwareAutoUpgradeDefaultGet200ResponseProfile, bool) {
-	if o == nil || IsNil(o.Profile) {
+func (o *V1SoftwareAutoUpgradeDefaultGet200Response) GetDetailsOk() (*V1SoftwareAutoUpgradeDefaultGet200ResponseDetails, bool) {
+	if o == nil || IsNil(o.Details) {
 		return nil, false
 	}
-	return o.Profile, true
+	return o.Details, true
 }
 
-// HasProfile returns a boolean if a field has been set.
-func (o *V1SoftwareAutoUpgradeDefaultGet200Response) HasProfile() bool {
-	if o != nil && !IsNil(o.Profile) {
+// HasDetails returns a boolean if a field has been set.
+func (o *V1SoftwareAutoUpgradeDefaultGet200Response) HasDetails() bool {
+	if o != nil && !IsNil(o.Details) {
 		return true
 	}
 
 	return false
 }
 
-// SetProfile gets a reference to the given V1SoftwareAutoUpgradeDefaultGet200ResponseProfile and assigns it to the Profile field.
-func (o *V1SoftwareAutoUpgradeDefaultGet200Response) SetProfile(v V1SoftwareAutoUpgradeDefaultGet200ResponseProfile) {
-	o.Profile = &v
+// SetDetails gets a reference to the given V1SoftwareAutoUpgradeDefaultGet200ResponseDetails and assigns it to the Details field.
+func (o *V1SoftwareAutoUpgradeDefaultGet200Response) SetDetails(v V1SoftwareAutoUpgradeDefaultGet200ResponseDetails) {
+	o.Details = &v
 }
 
 // GetRelease returns the Release field value if set, zero value otherwise.
@@ -114,8 +114,8 @@ func (o V1SoftwareAutoUpgradeDefaultGet200Response) MarshalJSON() ([]byte, error
 
 func (o V1SoftwareAutoUpgradeDefaultGet200Response) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
-	if !IsNil(o.Profile) {
-		toSerialize["profile"] = o.Profile
+	if !IsNil(o.Details) {
+		toSerialize["details"] = o.Details
 	}
 	if !IsNil(o.Release) {
 		toSerialize["release"] = o.Release

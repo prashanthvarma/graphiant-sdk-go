@@ -23,7 +23,6 @@ type V1DevicesDeviceIdConfigPutRequestEdgeInterfacesValueInterface struct {
 	Alias *string `json:"alias,omitempty"`
 	Circuit *string `json:"circuit,omitempty"`
 	Description *string `json:"description,omitempty"`
-	Duplex *string `json:"duplex,omitempty"`
 	Ipsec *V1DevicesDeviceIdConfigPutRequestCoreInterfacesValueInterfaceIpsec `json:"ipsec,omitempty"`
 	Ipv4 *V1DevicesDeviceIdConfigPutRequestCoreInterfacesValueInterfaceGwGw `json:"ipv4,omitempty"`
 	Ipv6 *V1DevicesDeviceIdConfigPutRequestCoreInterfacesValueInterfaceGwGw `json:"ipv6,omitempty"`
@@ -32,7 +31,6 @@ type V1DevicesDeviceIdConfigPutRequestEdgeInterfacesValueInterface struct {
 	Loopback *bool `json:"loopback,omitempty"`
 	MaxTransmissionUnit *int32 `json:"maxTransmissionUnit,omitempty"`
 	SecurityZone *string `json:"securityZone,omitempty"`
-	Speed *int64 `json:"speed,omitempty"`
 	Subinterfaces *map[string]V1DevicesDeviceIdConfigPutRequestEdgeInterfacesValueInterfaceSubinterfacesValue `json:"subinterfaces,omitempty"`
 	TcpMss *int32 `json:"tcpMss,omitempty"`
 	TcpMssV4 *int32 `json:"tcpMssV4,omitempty"`
@@ -184,38 +182,6 @@ func (o *V1DevicesDeviceIdConfigPutRequestEdgeInterfacesValueInterface) HasDescr
 // SetDescription gets a reference to the given string and assigns it to the Description field.
 func (o *V1DevicesDeviceIdConfigPutRequestEdgeInterfacesValueInterface) SetDescription(v string) {
 	o.Description = &v
-}
-
-// GetDuplex returns the Duplex field value if set, zero value otherwise.
-func (o *V1DevicesDeviceIdConfigPutRequestEdgeInterfacesValueInterface) GetDuplex() string {
-	if o == nil || IsNil(o.Duplex) {
-		var ret string
-		return ret
-	}
-	return *o.Duplex
-}
-
-// GetDuplexOk returns a tuple with the Duplex field value if set, nil otherwise
-// and a boolean to check if the value has been set.
-func (o *V1DevicesDeviceIdConfigPutRequestEdgeInterfacesValueInterface) GetDuplexOk() (*string, bool) {
-	if o == nil || IsNil(o.Duplex) {
-		return nil, false
-	}
-	return o.Duplex, true
-}
-
-// HasDuplex returns a boolean if a field has been set.
-func (o *V1DevicesDeviceIdConfigPutRequestEdgeInterfacesValueInterface) HasDuplex() bool {
-	if o != nil && !IsNil(o.Duplex) {
-		return true
-	}
-
-	return false
-}
-
-// SetDuplex gets a reference to the given string and assigns it to the Duplex field.
-func (o *V1DevicesDeviceIdConfigPutRequestEdgeInterfacesValueInterface) SetDuplex(v string) {
-	o.Duplex = &v
 }
 
 // GetIpsec returns the Ipsec field value if set, zero value otherwise.
@@ -474,38 +440,6 @@ func (o *V1DevicesDeviceIdConfigPutRequestEdgeInterfacesValueInterface) SetSecur
 	o.SecurityZone = &v
 }
 
-// GetSpeed returns the Speed field value if set, zero value otherwise.
-func (o *V1DevicesDeviceIdConfigPutRequestEdgeInterfacesValueInterface) GetSpeed() int64 {
-	if o == nil || IsNil(o.Speed) {
-		var ret int64
-		return ret
-	}
-	return *o.Speed
-}
-
-// GetSpeedOk returns a tuple with the Speed field value if set, nil otherwise
-// and a boolean to check if the value has been set.
-func (o *V1DevicesDeviceIdConfigPutRequestEdgeInterfacesValueInterface) GetSpeedOk() (*int64, bool) {
-	if o == nil || IsNil(o.Speed) {
-		return nil, false
-	}
-	return o.Speed, true
-}
-
-// HasSpeed returns a boolean if a field has been set.
-func (o *V1DevicesDeviceIdConfigPutRequestEdgeInterfacesValueInterface) HasSpeed() bool {
-	if o != nil && !IsNil(o.Speed) {
-		return true
-	}
-
-	return false
-}
-
-// SetSpeed gets a reference to the given int64 and assigns it to the Speed field.
-func (o *V1DevicesDeviceIdConfigPutRequestEdgeInterfacesValueInterface) SetSpeed(v int64) {
-	o.Speed = &v
-}
-
 // GetSubinterfaces returns the Subinterfaces field value if set, zero value otherwise.
 func (o *V1DevicesDeviceIdConfigPutRequestEdgeInterfacesValueInterface) GetSubinterfaces() map[string]V1DevicesDeviceIdConfigPutRequestEdgeInterfacesValueInterfaceSubinterfacesValue {
 	if o == nil || IsNil(o.Subinterfaces) {
@@ -720,9 +654,6 @@ func (o V1DevicesDeviceIdConfigPutRequestEdgeInterfacesValueInterface) ToMap() (
 	if !IsNil(o.Description) {
 		toSerialize["description"] = o.Description
 	}
-	if !IsNil(o.Duplex) {
-		toSerialize["duplex"] = o.Duplex
-	}
 	if !IsNil(o.Ipsec) {
 		toSerialize["ipsec"] = o.Ipsec
 	}
@@ -746,9 +677,6 @@ func (o V1DevicesDeviceIdConfigPutRequestEdgeInterfacesValueInterface) ToMap() (
 	}
 	if !IsNil(o.SecurityZone) {
 		toSerialize["securityZone"] = o.SecurityZone
-	}
-	if !IsNil(o.Speed) {
-		toSerialize["speed"] = o.Speed
 	}
 	if !IsNil(o.Subinterfaces) {
 		toSerialize["subinterfaces"] = o.Subinterfaces

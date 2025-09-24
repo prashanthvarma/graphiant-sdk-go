@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **Role** | Pointer to **string** |  | [optional] 
 **Status** | Pointer to **string** |  | [optional] 
 **SwVersion** | Pointer to **string** |  | [optional] 
-**SwVersionV2** | Pointer to [**V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummaryLastRunningVersion**](V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummaryLastRunningVersion.md) |  | [optional] 
+**SwVersionV2** | Pointer to [**V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummaryRunningVersion**](V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummaryRunningVersion.md) |  | [optional] 
 **SystemPlane** | Pointer to [**V1BackboneHealthDeviceDeviceIdPost200ResponseSystemPlane**](V1BackboneHealthDeviceDeviceIdPost200ResponseSystemPlane.md) |  | [optional] 
 **UpSinceTs** | Pointer to [**V1AlarmHistoryGet200ResponseHistoryInnerTime**](V1AlarmHistoryGet200ResponseHistoryInnerTime.md) |  | [optional] 
 
@@ -211,20 +211,20 @@ HasSwVersion returns a boolean if a field has been set.
 
 ### GetSwVersionV2
 
-`func (o *V1BackboneHealthDeviceDeviceIdPost200Response) GetSwVersionV2() V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummaryLastRunningVersion`
+`func (o *V1BackboneHealthDeviceDeviceIdPost200Response) GetSwVersionV2() V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummaryRunningVersion`
 
 GetSwVersionV2 returns the SwVersionV2 field if non-nil, zero value otherwise.
 
 ### GetSwVersionV2Ok
 
-`func (o *V1BackboneHealthDeviceDeviceIdPost200Response) GetSwVersionV2Ok() (*V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummaryLastRunningVersion, bool)`
+`func (o *V1BackboneHealthDeviceDeviceIdPost200Response) GetSwVersionV2Ok() (*V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummaryRunningVersion, bool)`
 
 GetSwVersionV2Ok returns a tuple with the SwVersionV2 field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetSwVersionV2
 
-`func (o *V1BackboneHealthDeviceDeviceIdPost200Response) SetSwVersionV2(v V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummaryLastRunningVersion)`
+`func (o *V1BackboneHealthDeviceDeviceIdPost200Response) SetSwVersionV2(v V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummaryRunningVersion)`
 
 SetSwVersionV2 sets SwVersionV2 field to given value.
 

@@ -22,7 +22,7 @@ type V1GlobalSiteListsIdSitesGet200ResponseEntriesInner struct {
 	CreatedAt *V1AlarmHistoryGet200ResponseHistoryInnerTime `json:"createdAt,omitempty"`
 	EdgeReferences *int32 `json:"edgeReferences,omitempty"`
 	SiteName *string `json:"siteName,omitempty"`
-	Tag []V1GlobalSiteListsPostRequestEntriesInnerTag `json:"tag,omitempty"`
+	Tag []V1GlobalSiteListsIdSitesGet200ResponseEntriesInnerTagInner `json:"tag,omitempty"`
 }
 
 // NewV1GlobalSiteListsIdSitesGet200ResponseEntriesInner instantiates a new V1GlobalSiteListsIdSitesGet200ResponseEntriesInner object
@@ -139,9 +139,9 @@ func (o *V1GlobalSiteListsIdSitesGet200ResponseEntriesInner) SetSiteName(v strin
 }
 
 // GetTag returns the Tag field value if set, zero value otherwise.
-func (o *V1GlobalSiteListsIdSitesGet200ResponseEntriesInner) GetTag() []V1GlobalSiteListsPostRequestEntriesInnerTag {
+func (o *V1GlobalSiteListsIdSitesGet200ResponseEntriesInner) GetTag() []V1GlobalSiteListsIdSitesGet200ResponseEntriesInnerTagInner {
 	if o == nil || IsNil(o.Tag) {
-		var ret []V1GlobalSiteListsPostRequestEntriesInnerTag
+		var ret []V1GlobalSiteListsIdSitesGet200ResponseEntriesInnerTagInner
 		return ret
 	}
 	return o.Tag
@@ -149,7 +149,7 @@ func (o *V1GlobalSiteListsIdSitesGet200ResponseEntriesInner) GetTag() []V1Global
 
 // GetTagOk returns a tuple with the Tag field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *V1GlobalSiteListsIdSitesGet200ResponseEntriesInner) GetTagOk() ([]V1GlobalSiteListsPostRequestEntriesInnerTag, bool) {
+func (o *V1GlobalSiteListsIdSitesGet200ResponseEntriesInner) GetTagOk() ([]V1GlobalSiteListsIdSitesGet200ResponseEntriesInnerTagInner, bool) {
 	if o == nil || IsNil(o.Tag) {
 		return nil, false
 	}
@@ -165,8 +165,8 @@ func (o *V1GlobalSiteListsIdSitesGet200ResponseEntriesInner) HasTag() bool {
 	return false
 }
 
-// SetTag gets a reference to the given []V1GlobalSiteListsPostRequestEntriesInnerTag and assigns it to the Tag field.
-func (o *V1GlobalSiteListsIdSitesGet200ResponseEntriesInner) SetTag(v []V1GlobalSiteListsPostRequestEntriesInnerTag) {
+// SetTag gets a reference to the given []V1GlobalSiteListsIdSitesGet200ResponseEntriesInnerTagInner and assigns it to the Tag field.
+func (o *V1GlobalSiteListsIdSitesGet200ResponseEntriesInner) SetTag(v []V1GlobalSiteListsIdSitesGet200ResponseEntriesInnerTagInner) {
 	o.Tag = v
 }
 

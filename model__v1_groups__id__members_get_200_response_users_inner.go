@@ -22,7 +22,6 @@ type V1GroupsIdMembersGet200ResponseUsersInner struct {
 	Email *string `json:"email,omitempty"`
 	EnterpriseId *int64 `json:"enterpriseId,omitempty"`
 	FirstName *string `json:"firstName,omitempty"`
-	LastActiveAt *V1AlarmHistoryGet200ResponseHistoryInnerTime `json:"lastActiveAt,omitempty"`
 	LastName *string `json:"lastName,omitempty"`
 	MfaFactor *string `json:"mfaFactor,omitempty"`
 	PhoneNumber *string `json:"phoneNumber,omitempty"`
@@ -142,38 +141,6 @@ func (o *V1GroupsIdMembersGet200ResponseUsersInner) HasFirstName() bool {
 // SetFirstName gets a reference to the given string and assigns it to the FirstName field.
 func (o *V1GroupsIdMembersGet200ResponseUsersInner) SetFirstName(v string) {
 	o.FirstName = &v
-}
-
-// GetLastActiveAt returns the LastActiveAt field value if set, zero value otherwise.
-func (o *V1GroupsIdMembersGet200ResponseUsersInner) GetLastActiveAt() V1AlarmHistoryGet200ResponseHistoryInnerTime {
-	if o == nil || IsNil(o.LastActiveAt) {
-		var ret V1AlarmHistoryGet200ResponseHistoryInnerTime
-		return ret
-	}
-	return *o.LastActiveAt
-}
-
-// GetLastActiveAtOk returns a tuple with the LastActiveAt field value if set, nil otherwise
-// and a boolean to check if the value has been set.
-func (o *V1GroupsIdMembersGet200ResponseUsersInner) GetLastActiveAtOk() (*V1AlarmHistoryGet200ResponseHistoryInnerTime, bool) {
-	if o == nil || IsNil(o.LastActiveAt) {
-		return nil, false
-	}
-	return o.LastActiveAt, true
-}
-
-// HasLastActiveAt returns a boolean if a field has been set.
-func (o *V1GroupsIdMembersGet200ResponseUsersInner) HasLastActiveAt() bool {
-	if o != nil && !IsNil(o.LastActiveAt) {
-		return true
-	}
-
-	return false
-}
-
-// SetLastActiveAt gets a reference to the given V1AlarmHistoryGet200ResponseHistoryInnerTime and assigns it to the LastActiveAt field.
-func (o *V1GroupsIdMembersGet200ResponseUsersInner) SetLastActiveAt(v V1AlarmHistoryGet200ResponseHistoryInnerTime) {
-	o.LastActiveAt = &v
 }
 
 // GetLastName returns the LastName field value if set, zero value otherwise.
@@ -386,9 +353,6 @@ func (o V1GroupsIdMembersGet200ResponseUsersInner) ToMap() (map[string]interface
 	}
 	if !IsNil(o.FirstName) {
 		toSerialize["firstName"] = o.FirstName
-	}
-	if !IsNil(o.LastActiveAt) {
-		toSerialize["lastActiveAt"] = o.LastActiveAt
 	}
 	if !IsNil(o.LastName) {
 		toSerialize["lastName"] = o.LastName

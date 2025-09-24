@@ -19,7 +19,6 @@ var _ MappedNullable = &V1SoftwareReleasesSummaryGet200ResponseSummariesInner{}
 
 // V1SoftwareReleasesSummaryGet200ResponseSummariesInner struct for V1SoftwareReleasesSummaryGet200ResponseSummariesInner
 type V1SoftwareReleasesSummaryGet200ResponseSummariesInner struct {
-	EosTs *V1AlarmHistoryGet200ResponseHistoryInnerTime `json:"eosTs,omitempty"`
 	Key *V1SoftwareReleasesSummaryGet200ResponseSummariesInnerKey `json:"key,omitempty"`
 	Name *string `json:"name,omitempty"`
 	Release *string `json:"release,omitempty"`
@@ -41,38 +40,6 @@ func NewV1SoftwareReleasesSummaryGet200ResponseSummariesInner() *V1SoftwareRelea
 func NewV1SoftwareReleasesSummaryGet200ResponseSummariesInnerWithDefaults() *V1SoftwareReleasesSummaryGet200ResponseSummariesInner {
 	this := V1SoftwareReleasesSummaryGet200ResponseSummariesInner{}
 	return &this
-}
-
-// GetEosTs returns the EosTs field value if set, zero value otherwise.
-func (o *V1SoftwareReleasesSummaryGet200ResponseSummariesInner) GetEosTs() V1AlarmHistoryGet200ResponseHistoryInnerTime {
-	if o == nil || IsNil(o.EosTs) {
-		var ret V1AlarmHistoryGet200ResponseHistoryInnerTime
-		return ret
-	}
-	return *o.EosTs
-}
-
-// GetEosTsOk returns a tuple with the EosTs field value if set, nil otherwise
-// and a boolean to check if the value has been set.
-func (o *V1SoftwareReleasesSummaryGet200ResponseSummariesInner) GetEosTsOk() (*V1AlarmHistoryGet200ResponseHistoryInnerTime, bool) {
-	if o == nil || IsNil(o.EosTs) {
-		return nil, false
-	}
-	return o.EosTs, true
-}
-
-// HasEosTs returns a boolean if a field has been set.
-func (o *V1SoftwareReleasesSummaryGet200ResponseSummariesInner) HasEosTs() bool {
-	if o != nil && !IsNil(o.EosTs) {
-		return true
-	}
-
-	return false
-}
-
-// SetEosTs gets a reference to the given V1AlarmHistoryGet200ResponseHistoryInnerTime and assigns it to the EosTs field.
-func (o *V1SoftwareReleasesSummaryGet200ResponseSummariesInner) SetEosTs(v V1AlarmHistoryGet200ResponseHistoryInnerTime) {
-	o.EosTs = &v
 }
 
 // GetKey returns the Key field value if set, zero value otherwise.
@@ -213,9 +180,6 @@ func (o V1SoftwareReleasesSummaryGet200ResponseSummariesInner) MarshalJSON() ([]
 
 func (o V1SoftwareReleasesSummaryGet200ResponseSummariesInner) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
-	if !IsNil(o.EosTs) {
-		toSerialize["eosTs"] = o.EosTs
-	}
 	if !IsNil(o.Key) {
 		toSerialize["key"] = o.Key
 	}
