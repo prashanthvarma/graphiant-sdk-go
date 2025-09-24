@@ -385,6 +385,7 @@ go mod tidy
 go build ./...
 
 # Run tests
+go get github.com/stretchr/testify/assert
 go test ./...
 ```
 
@@ -399,12 +400,12 @@ brew install openapi-generator  # macOS
 
 # Generate SDK
 openapi-generator generate \
-  -i graphiant_api_docs_v25.8.1.json \
+  -i graphiant_api_docs_v25.9.1.json \
   -g go \
   --git-user-id Graphiant-Inc \
   --git-repo-id graphiant-sdk-go \
   --package-name graphiant_sdk \
-  --additional-properties=packageVersion=25.8.1
+  --additional-properties=packageVersion=25.9.1
 ```
 
 > **Note**: Latest API documentation can be downloaded from the Graphiant portal under "Support Hub" > "Developer Tools".
@@ -417,6 +418,7 @@ export GRAPHIANT_USERNAME="your_username"
 export GRAPHIANT_PASSWORD="your_password"
 
 # Run edge summary test
+go get github.com/stretchr/testify/assert
 go test -v ./... -run Test_edge_summary
 ```
 

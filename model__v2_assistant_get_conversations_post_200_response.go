@@ -20,7 +20,6 @@ var _ MappedNullable = &V2AssistantGetConversationsPost200Response{}
 // V2AssistantGetConversationsPost200Response struct for V2AssistantGetConversationsPost200Response
 type V2AssistantGetConversationsPost200Response struct {
 	ConversationList []V2AssistantGetConversationsPost200ResponseConversationListInner `json:"conversationList,omitempty"`
-	EnableContextHistory *bool `json:"enableContextHistory,omitempty"`
 }
 
 // NewV2AssistantGetConversationsPost200Response instantiates a new V2AssistantGetConversationsPost200Response object
@@ -72,38 +71,6 @@ func (o *V2AssistantGetConversationsPost200Response) SetConversationList(v []V2A
 	o.ConversationList = v
 }
 
-// GetEnableContextHistory returns the EnableContextHistory field value if set, zero value otherwise.
-func (o *V2AssistantGetConversationsPost200Response) GetEnableContextHistory() bool {
-	if o == nil || IsNil(o.EnableContextHistory) {
-		var ret bool
-		return ret
-	}
-	return *o.EnableContextHistory
-}
-
-// GetEnableContextHistoryOk returns a tuple with the EnableContextHistory field value if set, nil otherwise
-// and a boolean to check if the value has been set.
-func (o *V2AssistantGetConversationsPost200Response) GetEnableContextHistoryOk() (*bool, bool) {
-	if o == nil || IsNil(o.EnableContextHistory) {
-		return nil, false
-	}
-	return o.EnableContextHistory, true
-}
-
-// HasEnableContextHistory returns a boolean if a field has been set.
-func (o *V2AssistantGetConversationsPost200Response) HasEnableContextHistory() bool {
-	if o != nil && !IsNil(o.EnableContextHistory) {
-		return true
-	}
-
-	return false
-}
-
-// SetEnableContextHistory gets a reference to the given bool and assigns it to the EnableContextHistory field.
-func (o *V2AssistantGetConversationsPost200Response) SetEnableContextHistory(v bool) {
-	o.EnableContextHistory = &v
-}
-
 func (o V2AssistantGetConversationsPost200Response) MarshalJSON() ([]byte, error) {
 	toSerialize,err := o.ToMap()
 	if err != nil {
@@ -116,9 +83,6 @@ func (o V2AssistantGetConversationsPost200Response) ToMap() (map[string]interfac
 	toSerialize := map[string]interface{}{}
 	if !IsNil(o.ConversationList) {
 		toSerialize["conversationList"] = o.ConversationList
-	}
-	if !IsNil(o.EnableContextHistory) {
-		toSerialize["enableContextHistory"] = o.EnableContextHistory
 	}
 	return toSerialize, nil
 }

@@ -5,7 +5,6 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **ConversationList** | Pointer to [**[]V2AssistantGetConversationsPost200ResponseConversationListInner**](V2AssistantGetConversationsPost200ResponseConversationListInner.md) |  | [optional] 
-**EnableContextHistory** | Pointer to **bool** |  | [optional] 
 
 ## Methods
 
@@ -50,31 +49,6 @@ SetConversationList sets ConversationList field to given value.
 `func (o *V2AssistantGetConversationsPost200Response) HasConversationList() bool`
 
 HasConversationList returns a boolean if a field has been set.
-
-### GetEnableContextHistory
-
-`func (o *V2AssistantGetConversationsPost200Response) GetEnableContextHistory() bool`
-
-GetEnableContextHistory returns the EnableContextHistory field if non-nil, zero value otherwise.
-
-### GetEnableContextHistoryOk
-
-`func (o *V2AssistantGetConversationsPost200Response) GetEnableContextHistoryOk() (*bool, bool)`
-
-GetEnableContextHistoryOk returns a tuple with the EnableContextHistory field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetEnableContextHistory
-
-`func (o *V2AssistantGetConversationsPost200Response) SetEnableContextHistory(v bool)`
-
-SetEnableContextHistory sets EnableContextHistory field to given value.
-
-### HasEnableContextHistory
-
-`func (o *V2AssistantGetConversationsPost200Response) HasEnableContextHistory() bool`
-
-HasEnableContextHistory returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

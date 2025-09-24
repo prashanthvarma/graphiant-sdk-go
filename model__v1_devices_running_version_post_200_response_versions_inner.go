@@ -20,7 +20,7 @@ var _ MappedNullable = &V1DevicesRunningVersionPost200ResponseVersionsInner{}
 // V1DevicesRunningVersionPost200ResponseVersionsInner struct for V1DevicesRunningVersionPost200ResponseVersionsInner
 type V1DevicesRunningVersionPost200ResponseVersionsInner struct {
 	DeviceId *int64 `json:"deviceId,omitempty"`
-	Version *V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummaryLastRunningVersion `json:"version,omitempty"`
+	Version *V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummaryRunningVersion `json:"version,omitempty"`
 }
 
 // NewV1DevicesRunningVersionPost200ResponseVersionsInner instantiates a new V1DevicesRunningVersionPost200ResponseVersionsInner object
@@ -73,9 +73,9 @@ func (o *V1DevicesRunningVersionPost200ResponseVersionsInner) SetDeviceId(v int6
 }
 
 // GetVersion returns the Version field value if set, zero value otherwise.
-func (o *V1DevicesRunningVersionPost200ResponseVersionsInner) GetVersion() V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummaryLastRunningVersion {
+func (o *V1DevicesRunningVersionPost200ResponseVersionsInner) GetVersion() V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummaryRunningVersion {
 	if o == nil || IsNil(o.Version) {
-		var ret V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummaryLastRunningVersion
+		var ret V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummaryRunningVersion
 		return ret
 	}
 	return *o.Version
@@ -83,7 +83,7 @@ func (o *V1DevicesRunningVersionPost200ResponseVersionsInner) GetVersion() V1Edg
 
 // GetVersionOk returns a tuple with the Version field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *V1DevicesRunningVersionPost200ResponseVersionsInner) GetVersionOk() (*V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummaryLastRunningVersion, bool) {
+func (o *V1DevicesRunningVersionPost200ResponseVersionsInner) GetVersionOk() (*V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummaryRunningVersion, bool) {
 	if o == nil || IsNil(o.Version) {
 		return nil, false
 	}
@@ -99,8 +99,8 @@ func (o *V1DevicesRunningVersionPost200ResponseVersionsInner) HasVersion() bool 
 	return false
 }
 
-// SetVersion gets a reference to the given V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummaryLastRunningVersion and assigns it to the Version field.
-func (o *V1DevicesRunningVersionPost200ResponseVersionsInner) SetVersion(v V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummaryLastRunningVersion) {
+// SetVersion gets a reference to the given V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummaryRunningVersion and assigns it to the Version field.
+func (o *V1DevicesRunningVersionPost200ResponseVersionsInner) SetVersion(v V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummaryRunningVersion) {
 	o.Version = &v
 }
 

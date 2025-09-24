@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **CreatedAt** | Pointer to [**V1AlarmHistoryGet200ResponseHistoryInnerTime**](V1AlarmHistoryGet200ResponseHistoryInnerTime.md) |  | [optional] 
 **EdgeReferences** | Pointer to **int32** |  | [optional] 
 **SiteName** | Pointer to **string** |  | [optional] 
-**Tag** | Pointer to [**[]V1GlobalSiteListsPostRequestEntriesInnerTag**](V1GlobalSiteListsPostRequestEntriesInnerTag.md) |  | [optional] 
+**Tag** | Pointer to [**[]V1GlobalSiteListsIdSitesGet200ResponseEntriesInnerTagInner**](V1GlobalSiteListsIdSitesGet200ResponseEntriesInnerTagInner.md) |  | [optional] 
 
 ## Methods
 
@@ -105,20 +105,20 @@ HasSiteName returns a boolean if a field has been set.
 
 ### GetTag
 
-`func (o *V1GlobalSiteListsIdSitesGet200ResponseEntriesInner) GetTag() []V1GlobalSiteListsPostRequestEntriesInnerTag`
+`func (o *V1GlobalSiteListsIdSitesGet200ResponseEntriesInner) GetTag() []V1GlobalSiteListsIdSitesGet200ResponseEntriesInnerTagInner`
 
 GetTag returns the Tag field if non-nil, zero value otherwise.
 
 ### GetTagOk
 
-`func (o *V1GlobalSiteListsIdSitesGet200ResponseEntriesInner) GetTagOk() (*[]V1GlobalSiteListsPostRequestEntriesInnerTag, bool)`
+`func (o *V1GlobalSiteListsIdSitesGet200ResponseEntriesInner) GetTagOk() (*[]V1GlobalSiteListsIdSitesGet200ResponseEntriesInnerTagInner, bool)`
 
 GetTagOk returns a tuple with the Tag field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetTag
 
-`func (o *V1GlobalSiteListsIdSitesGet200ResponseEntriesInner) SetTag(v []V1GlobalSiteListsPostRequestEntriesInnerTag)`
+`func (o *V1GlobalSiteListsIdSitesGet200ResponseEntriesInner) SetTag(v []V1GlobalSiteListsIdSitesGet200ResponseEntriesInnerTagInner)`
 
 SetTag sets Tag field to given value.
 

@@ -5,12 +5,9 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **DeviceId** | Pointer to **int64** |  | [optional] 
-**EndOfLife** | Pointer to **bool** |  | [optional] 
 **LastDiscoveredTs** | Pointer to [**V1AlarmHistoryGet200ResponseHistoryInnerTime**](V1AlarmHistoryGet200ResponseHistoryInnerTime.md) |  | [optional] 
-**LastRunningVersion** | Pointer to [**V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummaryLastRunningVersion**](V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummaryLastRunningVersion.md) |  | [optional] 
 **LastUpgradeTs** | Pointer to [**V1AlarmHistoryGet200ResponseHistoryInnerTime**](V1AlarmHistoryGet200ResponseHistoryInnerTime.md) |  | [optional] 
-**ReadyForActivationVersion** | Pointer to [**V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummaryLastRunningVersion**](V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummaryLastRunningVersion.md) |  | [optional] 
-**RunningVersion** | Pointer to [**V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummaryLastRunningVersion**](V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummaryLastRunningVersion.md) |  | [optional] 
+**RunningVersion** | Pointer to [**V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummaryRunningVersion**](V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummaryRunningVersion.md) |  | [optional] 
 **Schedule** | Pointer to [**V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummarySchedule**](V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummarySchedule.md) |  | [optional] 
 **Status** | Pointer to **string** |  | [optional] 
 
@@ -58,31 +55,6 @@ SetDeviceId sets DeviceId field to given value.
 
 HasDeviceId returns a boolean if a field has been set.
 
-### GetEndOfLife
-
-`func (o *V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummary) GetEndOfLife() bool`
-
-GetEndOfLife returns the EndOfLife field if non-nil, zero value otherwise.
-
-### GetEndOfLifeOk
-
-`func (o *V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummary) GetEndOfLifeOk() (*bool, bool)`
-
-GetEndOfLifeOk returns a tuple with the EndOfLife field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetEndOfLife
-
-`func (o *V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummary) SetEndOfLife(v bool)`
-
-SetEndOfLife sets EndOfLife field to given value.
-
-### HasEndOfLife
-
-`func (o *V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummary) HasEndOfLife() bool`
-
-HasEndOfLife returns a boolean if a field has been set.
-
 ### GetLastDiscoveredTs
 
 `func (o *V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummary) GetLastDiscoveredTs() V1AlarmHistoryGet200ResponseHistoryInnerTime`
@@ -107,31 +79,6 @@ SetLastDiscoveredTs sets LastDiscoveredTs field to given value.
 `func (o *V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummary) HasLastDiscoveredTs() bool`
 
 HasLastDiscoveredTs returns a boolean if a field has been set.
-
-### GetLastRunningVersion
-
-`func (o *V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummary) GetLastRunningVersion() V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummaryLastRunningVersion`
-
-GetLastRunningVersion returns the LastRunningVersion field if non-nil, zero value otherwise.
-
-### GetLastRunningVersionOk
-
-`func (o *V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummary) GetLastRunningVersionOk() (*V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummaryLastRunningVersion, bool)`
-
-GetLastRunningVersionOk returns a tuple with the LastRunningVersion field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetLastRunningVersion
-
-`func (o *V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummary) SetLastRunningVersion(v V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummaryLastRunningVersion)`
-
-SetLastRunningVersion sets LastRunningVersion field to given value.
-
-### HasLastRunningVersion
-
-`func (o *V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummary) HasLastRunningVersion() bool`
-
-HasLastRunningVersion returns a boolean if a field has been set.
 
 ### GetLastUpgradeTs
 
@@ -158,47 +105,22 @@ SetLastUpgradeTs sets LastUpgradeTs field to given value.
 
 HasLastUpgradeTs returns a boolean if a field has been set.
 
-### GetReadyForActivationVersion
-
-`func (o *V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummary) GetReadyForActivationVersion() V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummaryLastRunningVersion`
-
-GetReadyForActivationVersion returns the ReadyForActivationVersion field if non-nil, zero value otherwise.
-
-### GetReadyForActivationVersionOk
-
-`func (o *V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummary) GetReadyForActivationVersionOk() (*V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummaryLastRunningVersion, bool)`
-
-GetReadyForActivationVersionOk returns a tuple with the ReadyForActivationVersion field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetReadyForActivationVersion
-
-`func (o *V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummary) SetReadyForActivationVersion(v V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummaryLastRunningVersion)`
-
-SetReadyForActivationVersion sets ReadyForActivationVersion field to given value.
-
-### HasReadyForActivationVersion
-
-`func (o *V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummary) HasReadyForActivationVersion() bool`
-
-HasReadyForActivationVersion returns a boolean if a field has been set.
-
 ### GetRunningVersion
 
-`func (o *V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummary) GetRunningVersion() V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummaryLastRunningVersion`
+`func (o *V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummary) GetRunningVersion() V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummaryRunningVersion`
 
 GetRunningVersion returns the RunningVersion field if non-nil, zero value otherwise.
 
 ### GetRunningVersionOk
 
-`func (o *V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummary) GetRunningVersionOk() (*V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummaryLastRunningVersion, bool)`
+`func (o *V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummary) GetRunningVersionOk() (*V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummaryRunningVersion, bool)`
 
 GetRunningVersionOk returns a tuple with the RunningVersion field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetRunningVersion
 
-`func (o *V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummary) SetRunningVersion(v V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummaryLastRunningVersion)`
+`func (o *V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummary) SetRunningVersion(v V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummaryRunningVersion)`
 
 SetRunningVersion sets RunningVersion field to given value.
 

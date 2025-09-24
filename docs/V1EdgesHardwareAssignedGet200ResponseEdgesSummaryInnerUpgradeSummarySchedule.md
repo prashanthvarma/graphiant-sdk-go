@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **FailureReason** | Pointer to **string** |  | [optional] 
 **State** | Pointer to **string** |  | [optional] 
 **Ts** | Pointer to [**V1AlarmHistoryGet200ResponseHistoryInnerTime**](V1AlarmHistoryGet200ResponseHistoryInnerTime.md) |  | [optional] 
-**Version** | Pointer to [**V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummaryLastRunningVersion**](V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummaryLastRunningVersion.md) |  | [optional] 
+**Version** | Pointer to [**V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummaryRunningVersion**](V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummaryRunningVersion.md) |  | [optional] 
 
 ## Methods
 
@@ -183,20 +183,20 @@ HasTs returns a boolean if a field has been set.
 
 ### GetVersion
 
-`func (o *V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummarySchedule) GetVersion() V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummaryLastRunningVersion`
+`func (o *V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummarySchedule) GetVersion() V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummaryRunningVersion`
 
 GetVersion returns the Version field if non-nil, zero value otherwise.
 
 ### GetVersionOk
 
-`func (o *V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummarySchedule) GetVersionOk() (*V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummaryLastRunningVersion, bool)`
+`func (o *V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummarySchedule) GetVersionOk() (*V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummaryRunningVersion, bool)`
 
 GetVersionOk returns a tuple with the Version field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetVersion
 
-`func (o *V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummarySchedule) SetVersion(v V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummaryLastRunningVersion)`
+`func (o *V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummarySchedule) SetVersion(v V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummaryRunningVersion)`
 
 SetVersion sets Version field to given value.
 

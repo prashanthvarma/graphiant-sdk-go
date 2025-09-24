@@ -21,9 +21,8 @@ var _ MappedNullable = &V1DevicesUpgradeSchedulePutRequest{}
 type V1DevicesUpgradeSchedulePutRequest struct {
 	Action *string `json:"action,omitempty"`
 	DeviceIds []int64 `json:"deviceIds,omitempty"`
-	DeviceVersions []V1DevicesRunningVersionPost200ResponseVersionsInner `json:"deviceVersions,omitempty"`
 	Ts *V1AlarmHistoryGet200ResponseHistoryInnerTime `json:"ts,omitempty"`
-	Version *V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummaryLastRunningVersion `json:"version,omitempty"`
+	Version *V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummaryRunningVersion `json:"version,omitempty"`
 }
 
 // NewV1DevicesUpgradeSchedulePutRequest instantiates a new V1DevicesUpgradeSchedulePutRequest object
@@ -107,38 +106,6 @@ func (o *V1DevicesUpgradeSchedulePutRequest) SetDeviceIds(v []int64) {
 	o.DeviceIds = v
 }
 
-// GetDeviceVersions returns the DeviceVersions field value if set, zero value otherwise.
-func (o *V1DevicesUpgradeSchedulePutRequest) GetDeviceVersions() []V1DevicesRunningVersionPost200ResponseVersionsInner {
-	if o == nil || IsNil(o.DeviceVersions) {
-		var ret []V1DevicesRunningVersionPost200ResponseVersionsInner
-		return ret
-	}
-	return o.DeviceVersions
-}
-
-// GetDeviceVersionsOk returns a tuple with the DeviceVersions field value if set, nil otherwise
-// and a boolean to check if the value has been set.
-func (o *V1DevicesUpgradeSchedulePutRequest) GetDeviceVersionsOk() ([]V1DevicesRunningVersionPost200ResponseVersionsInner, bool) {
-	if o == nil || IsNil(o.DeviceVersions) {
-		return nil, false
-	}
-	return o.DeviceVersions, true
-}
-
-// HasDeviceVersions returns a boolean if a field has been set.
-func (o *V1DevicesUpgradeSchedulePutRequest) HasDeviceVersions() bool {
-	if o != nil && !IsNil(o.DeviceVersions) {
-		return true
-	}
-
-	return false
-}
-
-// SetDeviceVersions gets a reference to the given []V1DevicesRunningVersionPost200ResponseVersionsInner and assigns it to the DeviceVersions field.
-func (o *V1DevicesUpgradeSchedulePutRequest) SetDeviceVersions(v []V1DevicesRunningVersionPost200ResponseVersionsInner) {
-	o.DeviceVersions = v
-}
-
 // GetTs returns the Ts field value if set, zero value otherwise.
 func (o *V1DevicesUpgradeSchedulePutRequest) GetTs() V1AlarmHistoryGet200ResponseHistoryInnerTime {
 	if o == nil || IsNil(o.Ts) {
@@ -172,9 +139,9 @@ func (o *V1DevicesUpgradeSchedulePutRequest) SetTs(v V1AlarmHistoryGet200Respons
 }
 
 // GetVersion returns the Version field value if set, zero value otherwise.
-func (o *V1DevicesUpgradeSchedulePutRequest) GetVersion() V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummaryLastRunningVersion {
+func (o *V1DevicesUpgradeSchedulePutRequest) GetVersion() V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummaryRunningVersion {
 	if o == nil || IsNil(o.Version) {
-		var ret V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummaryLastRunningVersion
+		var ret V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummaryRunningVersion
 		return ret
 	}
 	return *o.Version
@@ -182,7 +149,7 @@ func (o *V1DevicesUpgradeSchedulePutRequest) GetVersion() V1EdgesHardwareAssigne
 
 // GetVersionOk returns a tuple with the Version field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *V1DevicesUpgradeSchedulePutRequest) GetVersionOk() (*V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummaryLastRunningVersion, bool) {
+func (o *V1DevicesUpgradeSchedulePutRequest) GetVersionOk() (*V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummaryRunningVersion, bool) {
 	if o == nil || IsNil(o.Version) {
 		return nil, false
 	}
@@ -198,8 +165,8 @@ func (o *V1DevicesUpgradeSchedulePutRequest) HasVersion() bool {
 	return false
 }
 
-// SetVersion gets a reference to the given V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummaryLastRunningVersion and assigns it to the Version field.
-func (o *V1DevicesUpgradeSchedulePutRequest) SetVersion(v V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummaryLastRunningVersion) {
+// SetVersion gets a reference to the given V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummaryRunningVersion and assigns it to the Version field.
+func (o *V1DevicesUpgradeSchedulePutRequest) SetVersion(v V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummaryRunningVersion) {
 	o.Version = &v
 }
 
@@ -218,9 +185,6 @@ func (o V1DevicesUpgradeSchedulePutRequest) ToMap() (map[string]interface{}, err
 	}
 	if !IsNil(o.DeviceIds) {
 		toSerialize["deviceIds"] = o.DeviceIds
-	}
-	if !IsNil(o.DeviceVersions) {
-		toSerialize["deviceVersions"] = o.DeviceVersions
 	}
 	if !IsNil(o.Ts) {
 		toSerialize["ts"] = o.Ts
