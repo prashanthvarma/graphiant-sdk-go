@@ -6,6 +6,8 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **AllocatedMonthlyCredits** | Pointer to **float32** |  | [optional] 
 **ConsumedMonthlyCredits** | Pointer to **float32** |  | [optional] 
+**PriorAllocatedMonthlyCredits** | Pointer to **float32** |  | [optional] 
+**PriorConsumedMonthlyCredits** | Pointer to **float32** |  | [optional] 
 **RecommendedMonthlyCredits** | Pointer to **float32** |  | [optional] 
 
 ## Methods
@@ -76,6 +78,56 @@ SetConsumedMonthlyCredits sets ConsumedMonthlyCredits field to given value.
 `func (o *V1EnterpriseAllocationGet200ResponseConsumptionSummaryGlobalSummary) HasConsumedMonthlyCredits() bool`
 
 HasConsumedMonthlyCredits returns a boolean if a field has been set.
+
+### GetPriorAllocatedMonthlyCredits
+
+`func (o *V1EnterpriseAllocationGet200ResponseConsumptionSummaryGlobalSummary) GetPriorAllocatedMonthlyCredits() float32`
+
+GetPriorAllocatedMonthlyCredits returns the PriorAllocatedMonthlyCredits field if non-nil, zero value otherwise.
+
+### GetPriorAllocatedMonthlyCreditsOk
+
+`func (o *V1EnterpriseAllocationGet200ResponseConsumptionSummaryGlobalSummary) GetPriorAllocatedMonthlyCreditsOk() (*float32, bool)`
+
+GetPriorAllocatedMonthlyCreditsOk returns a tuple with the PriorAllocatedMonthlyCredits field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPriorAllocatedMonthlyCredits
+
+`func (o *V1EnterpriseAllocationGet200ResponseConsumptionSummaryGlobalSummary) SetPriorAllocatedMonthlyCredits(v float32)`
+
+SetPriorAllocatedMonthlyCredits sets PriorAllocatedMonthlyCredits field to given value.
+
+### HasPriorAllocatedMonthlyCredits
+
+`func (o *V1EnterpriseAllocationGet200ResponseConsumptionSummaryGlobalSummary) HasPriorAllocatedMonthlyCredits() bool`
+
+HasPriorAllocatedMonthlyCredits returns a boolean if a field has been set.
+
+### GetPriorConsumedMonthlyCredits
+
+`func (o *V1EnterpriseAllocationGet200ResponseConsumptionSummaryGlobalSummary) GetPriorConsumedMonthlyCredits() float32`
+
+GetPriorConsumedMonthlyCredits returns the PriorConsumedMonthlyCredits field if non-nil, zero value otherwise.
+
+### GetPriorConsumedMonthlyCreditsOk
+
+`func (o *V1EnterpriseAllocationGet200ResponseConsumptionSummaryGlobalSummary) GetPriorConsumedMonthlyCreditsOk() (*float32, bool)`
+
+GetPriorConsumedMonthlyCreditsOk returns a tuple with the PriorConsumedMonthlyCredits field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPriorConsumedMonthlyCredits
+
+`func (o *V1EnterpriseAllocationGet200ResponseConsumptionSummaryGlobalSummary) SetPriorConsumedMonthlyCredits(v float32)`
+
+SetPriorConsumedMonthlyCredits sets PriorConsumedMonthlyCredits field to given value.
+
+### HasPriorConsumedMonthlyCredits
+
+`func (o *V1EnterpriseAllocationGet200ResponseConsumptionSummaryGlobalSummary) HasPriorConsumedMonthlyCredits() bool`
+
+HasPriorConsumedMonthlyCredits returns a boolean if a field has been set.
 
 ### GetRecommendedMonthlyCredits
 

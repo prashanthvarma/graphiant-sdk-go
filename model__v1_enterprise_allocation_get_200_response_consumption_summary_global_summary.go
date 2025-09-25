@@ -21,6 +21,8 @@ var _ MappedNullable = &V1EnterpriseAllocationGet200ResponseConsumptionSummaryGl
 type V1EnterpriseAllocationGet200ResponseConsumptionSummaryGlobalSummary struct {
 	AllocatedMonthlyCredits *float32 `json:"allocatedMonthlyCredits,omitempty"`
 	ConsumedMonthlyCredits *float32 `json:"consumedMonthlyCredits,omitempty"`
+	PriorAllocatedMonthlyCredits *float32 `json:"priorAllocatedMonthlyCredits,omitempty"`
+	PriorConsumedMonthlyCredits *float32 `json:"priorConsumedMonthlyCredits,omitempty"`
 	RecommendedMonthlyCredits *float32 `json:"recommendedMonthlyCredits,omitempty"`
 }
 
@@ -105,6 +107,70 @@ func (o *V1EnterpriseAllocationGet200ResponseConsumptionSummaryGlobalSummary) Se
 	o.ConsumedMonthlyCredits = &v
 }
 
+// GetPriorAllocatedMonthlyCredits returns the PriorAllocatedMonthlyCredits field value if set, zero value otherwise.
+func (o *V1EnterpriseAllocationGet200ResponseConsumptionSummaryGlobalSummary) GetPriorAllocatedMonthlyCredits() float32 {
+	if o == nil || IsNil(o.PriorAllocatedMonthlyCredits) {
+		var ret float32
+		return ret
+	}
+	return *o.PriorAllocatedMonthlyCredits
+}
+
+// GetPriorAllocatedMonthlyCreditsOk returns a tuple with the PriorAllocatedMonthlyCredits field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *V1EnterpriseAllocationGet200ResponseConsumptionSummaryGlobalSummary) GetPriorAllocatedMonthlyCreditsOk() (*float32, bool) {
+	if o == nil || IsNil(o.PriorAllocatedMonthlyCredits) {
+		return nil, false
+	}
+	return o.PriorAllocatedMonthlyCredits, true
+}
+
+// HasPriorAllocatedMonthlyCredits returns a boolean if a field has been set.
+func (o *V1EnterpriseAllocationGet200ResponseConsumptionSummaryGlobalSummary) HasPriorAllocatedMonthlyCredits() bool {
+	if o != nil && !IsNil(o.PriorAllocatedMonthlyCredits) {
+		return true
+	}
+
+	return false
+}
+
+// SetPriorAllocatedMonthlyCredits gets a reference to the given float32 and assigns it to the PriorAllocatedMonthlyCredits field.
+func (o *V1EnterpriseAllocationGet200ResponseConsumptionSummaryGlobalSummary) SetPriorAllocatedMonthlyCredits(v float32) {
+	o.PriorAllocatedMonthlyCredits = &v
+}
+
+// GetPriorConsumedMonthlyCredits returns the PriorConsumedMonthlyCredits field value if set, zero value otherwise.
+func (o *V1EnterpriseAllocationGet200ResponseConsumptionSummaryGlobalSummary) GetPriorConsumedMonthlyCredits() float32 {
+	if o == nil || IsNil(o.PriorConsumedMonthlyCredits) {
+		var ret float32
+		return ret
+	}
+	return *o.PriorConsumedMonthlyCredits
+}
+
+// GetPriorConsumedMonthlyCreditsOk returns a tuple with the PriorConsumedMonthlyCredits field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *V1EnterpriseAllocationGet200ResponseConsumptionSummaryGlobalSummary) GetPriorConsumedMonthlyCreditsOk() (*float32, bool) {
+	if o == nil || IsNil(o.PriorConsumedMonthlyCredits) {
+		return nil, false
+	}
+	return o.PriorConsumedMonthlyCredits, true
+}
+
+// HasPriorConsumedMonthlyCredits returns a boolean if a field has been set.
+func (o *V1EnterpriseAllocationGet200ResponseConsumptionSummaryGlobalSummary) HasPriorConsumedMonthlyCredits() bool {
+	if o != nil && !IsNil(o.PriorConsumedMonthlyCredits) {
+		return true
+	}
+
+	return false
+}
+
+// SetPriorConsumedMonthlyCredits gets a reference to the given float32 and assigns it to the PriorConsumedMonthlyCredits field.
+func (o *V1EnterpriseAllocationGet200ResponseConsumptionSummaryGlobalSummary) SetPriorConsumedMonthlyCredits(v float32) {
+	o.PriorConsumedMonthlyCredits = &v
+}
+
 // GetRecommendedMonthlyCredits returns the RecommendedMonthlyCredits field value if set, zero value otherwise.
 func (o *V1EnterpriseAllocationGet200ResponseConsumptionSummaryGlobalSummary) GetRecommendedMonthlyCredits() float32 {
 	if o == nil || IsNil(o.RecommendedMonthlyCredits) {
@@ -152,6 +218,12 @@ func (o V1EnterpriseAllocationGet200ResponseConsumptionSummaryGlobalSummary) ToM
 	}
 	if !IsNil(o.ConsumedMonthlyCredits) {
 		toSerialize["consumedMonthlyCredits"] = o.ConsumedMonthlyCredits
+	}
+	if !IsNil(o.PriorAllocatedMonthlyCredits) {
+		toSerialize["priorAllocatedMonthlyCredits"] = o.PriorAllocatedMonthlyCredits
+	}
+	if !IsNil(o.PriorConsumedMonthlyCredits) {
+		toSerialize["priorConsumedMonthlyCredits"] = o.PriorConsumedMonthlyCredits
 	}
 	if !IsNil(o.RecommendedMonthlyCredits) {
 		toSerialize["recommendedMonthlyCredits"] = o.RecommendedMonthlyCredits

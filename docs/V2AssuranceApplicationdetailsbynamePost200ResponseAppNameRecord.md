@@ -14,6 +14,7 @@ Name | Type | Description | Notes
 **AppType** | Pointer to **string** |  | [optional] 
 **Category** | Pointer to **string** |  | [optional] 
 **DaClassified** | Pointer to **bool** |  | [optional] 
+**ExchangeService** | Pointer to [**[]V2AssuranceApplicationdetailsbynamePost200ResponseAppIdRecordExchangeServiceInner**](V2AssuranceApplicationdetailsbynamePost200ResponseAppIdRecordExchangeServiceInner.md) |  | [optional] 
 **FlexAlgo** | Pointer to [**[]V2AssuranceApplicationdetailsbynamePost200ResponseAppIdRecordFlexAlgoInner**](V2AssuranceApplicationdetailsbynamePost200ResponseAppIdRecordFlexAlgoInner.md) |  | [optional] 
 **FlowsAnalyzed** | Pointer to **int64** |  | [optional] 
 **Recommendation** | Pointer to **string** |  | [optional] 
@@ -288,6 +289,31 @@ SetDaClassified sets DaClassified field to given value.
 `func (o *V2AssuranceApplicationdetailsbynamePost200ResponseAppNameRecord) HasDaClassified() bool`
 
 HasDaClassified returns a boolean if a field has been set.
+
+### GetExchangeService
+
+`func (o *V2AssuranceApplicationdetailsbynamePost200ResponseAppNameRecord) GetExchangeService() []V2AssuranceApplicationdetailsbynamePost200ResponseAppIdRecordExchangeServiceInner`
+
+GetExchangeService returns the ExchangeService field if non-nil, zero value otherwise.
+
+### GetExchangeServiceOk
+
+`func (o *V2AssuranceApplicationdetailsbynamePost200ResponseAppNameRecord) GetExchangeServiceOk() (*[]V2AssuranceApplicationdetailsbynamePost200ResponseAppIdRecordExchangeServiceInner, bool)`
+
+GetExchangeServiceOk returns a tuple with the ExchangeService field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetExchangeService
+
+`func (o *V2AssuranceApplicationdetailsbynamePost200ResponseAppNameRecord) SetExchangeService(v []V2AssuranceApplicationdetailsbynamePost200ResponseAppIdRecordExchangeServiceInner)`
+
+SetExchangeService sets ExchangeService field to given value.
+
+### HasExchangeService
+
+`func (o *V2AssuranceApplicationdetailsbynamePost200ResponseAppNameRecord) HasExchangeService() bool`
+
+HasExchangeService returns a boolean if a field has been set.
 
 ### GetFlexAlgo
 

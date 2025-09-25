@@ -27,6 +27,7 @@ type V2AssistantAddToConversationPost200Response struct {
 	ResponseText *string `json:"responseText,omitempty"`
 	ResponseTimestamp *int64 `json:"responseTimestamp,omitempty"`
 	ResponseType *string `json:"responseType,omitempty"`
+	VisualizationSummary *string `json:"visualizationSummary,omitempty"`
 }
 
 // NewV2AssistantAddToConversationPost200Response instantiates a new V2AssistantAddToConversationPost200Response object
@@ -302,6 +303,38 @@ func (o *V2AssistantAddToConversationPost200Response) SetResponseType(v string) 
 	o.ResponseType = &v
 }
 
+// GetVisualizationSummary returns the VisualizationSummary field value if set, zero value otherwise.
+func (o *V2AssistantAddToConversationPost200Response) GetVisualizationSummary() string {
+	if o == nil || IsNil(o.VisualizationSummary) {
+		var ret string
+		return ret
+	}
+	return *o.VisualizationSummary
+}
+
+// GetVisualizationSummaryOk returns a tuple with the VisualizationSummary field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *V2AssistantAddToConversationPost200Response) GetVisualizationSummaryOk() (*string, bool) {
+	if o == nil || IsNil(o.VisualizationSummary) {
+		return nil, false
+	}
+	return o.VisualizationSummary, true
+}
+
+// HasVisualizationSummary returns a boolean if a field has been set.
+func (o *V2AssistantAddToConversationPost200Response) HasVisualizationSummary() bool {
+	if o != nil && !IsNil(o.VisualizationSummary) {
+		return true
+	}
+
+	return false
+}
+
+// SetVisualizationSummary gets a reference to the given string and assigns it to the VisualizationSummary field.
+func (o *V2AssistantAddToConversationPost200Response) SetVisualizationSummary(v string) {
+	o.VisualizationSummary = &v
+}
+
 func (o V2AssistantAddToConversationPost200Response) MarshalJSON() ([]byte, error) {
 	toSerialize,err := o.ToMap()
 	if err != nil {
@@ -335,6 +368,9 @@ func (o V2AssistantAddToConversationPost200Response) ToMap() (map[string]interfa
 	}
 	if !IsNil(o.ResponseType) {
 		toSerialize["responseType"] = o.ResponseType
+	}
+	if !IsNil(o.VisualizationSummary) {
+		toSerialize["visualizationSummary"] = o.VisualizationSummary
 	}
 	return toSerialize, nil
 }

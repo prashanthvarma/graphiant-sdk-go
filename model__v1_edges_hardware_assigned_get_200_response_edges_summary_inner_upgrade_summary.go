@@ -20,9 +20,12 @@ var _ MappedNullable = &V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUp
 // V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummary struct for V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummary
 type V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummary struct {
 	DeviceId *int64 `json:"deviceId,omitempty"`
+	EndOfLife *bool `json:"endOfLife,omitempty"`
 	LastDiscoveredTs *V1AlarmHistoryGet200ResponseHistoryInnerTime `json:"lastDiscoveredTs,omitempty"`
+	LastRunningVersion *V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummaryLastRunningVersion `json:"lastRunningVersion,omitempty"`
 	LastUpgradeTs *V1AlarmHistoryGet200ResponseHistoryInnerTime `json:"lastUpgradeTs,omitempty"`
-	RunningVersion *V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummaryRunningVersion `json:"runningVersion,omitempty"`
+	ReadyForActivationVersion *V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummaryLastRunningVersion `json:"readyForActivationVersion,omitempty"`
+	RunningVersion *V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummaryLastRunningVersion `json:"runningVersion,omitempty"`
 	Schedule *V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummarySchedule `json:"schedule,omitempty"`
 	Status *string `json:"status,omitempty"`
 }
@@ -76,6 +79,38 @@ func (o *V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummary) S
 	o.DeviceId = &v
 }
 
+// GetEndOfLife returns the EndOfLife field value if set, zero value otherwise.
+func (o *V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummary) GetEndOfLife() bool {
+	if o == nil || IsNil(o.EndOfLife) {
+		var ret bool
+		return ret
+	}
+	return *o.EndOfLife
+}
+
+// GetEndOfLifeOk returns a tuple with the EndOfLife field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummary) GetEndOfLifeOk() (*bool, bool) {
+	if o == nil || IsNil(o.EndOfLife) {
+		return nil, false
+	}
+	return o.EndOfLife, true
+}
+
+// HasEndOfLife returns a boolean if a field has been set.
+func (o *V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummary) HasEndOfLife() bool {
+	if o != nil && !IsNil(o.EndOfLife) {
+		return true
+	}
+
+	return false
+}
+
+// SetEndOfLife gets a reference to the given bool and assigns it to the EndOfLife field.
+func (o *V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummary) SetEndOfLife(v bool) {
+	o.EndOfLife = &v
+}
+
 // GetLastDiscoveredTs returns the LastDiscoveredTs field value if set, zero value otherwise.
 func (o *V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummary) GetLastDiscoveredTs() V1AlarmHistoryGet200ResponseHistoryInnerTime {
 	if o == nil || IsNil(o.LastDiscoveredTs) {
@@ -106,6 +141,38 @@ func (o *V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummary) H
 // SetLastDiscoveredTs gets a reference to the given V1AlarmHistoryGet200ResponseHistoryInnerTime and assigns it to the LastDiscoveredTs field.
 func (o *V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummary) SetLastDiscoveredTs(v V1AlarmHistoryGet200ResponseHistoryInnerTime) {
 	o.LastDiscoveredTs = &v
+}
+
+// GetLastRunningVersion returns the LastRunningVersion field value if set, zero value otherwise.
+func (o *V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummary) GetLastRunningVersion() V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummaryLastRunningVersion {
+	if o == nil || IsNil(o.LastRunningVersion) {
+		var ret V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummaryLastRunningVersion
+		return ret
+	}
+	return *o.LastRunningVersion
+}
+
+// GetLastRunningVersionOk returns a tuple with the LastRunningVersion field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummary) GetLastRunningVersionOk() (*V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummaryLastRunningVersion, bool) {
+	if o == nil || IsNil(o.LastRunningVersion) {
+		return nil, false
+	}
+	return o.LastRunningVersion, true
+}
+
+// HasLastRunningVersion returns a boolean if a field has been set.
+func (o *V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummary) HasLastRunningVersion() bool {
+	if o != nil && !IsNil(o.LastRunningVersion) {
+		return true
+	}
+
+	return false
+}
+
+// SetLastRunningVersion gets a reference to the given V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummaryLastRunningVersion and assigns it to the LastRunningVersion field.
+func (o *V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummary) SetLastRunningVersion(v V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummaryLastRunningVersion) {
+	o.LastRunningVersion = &v
 }
 
 // GetLastUpgradeTs returns the LastUpgradeTs field value if set, zero value otherwise.
@@ -140,10 +207,42 @@ func (o *V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummary) S
 	o.LastUpgradeTs = &v
 }
 
+// GetReadyForActivationVersion returns the ReadyForActivationVersion field value if set, zero value otherwise.
+func (o *V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummary) GetReadyForActivationVersion() V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummaryLastRunningVersion {
+	if o == nil || IsNil(o.ReadyForActivationVersion) {
+		var ret V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummaryLastRunningVersion
+		return ret
+	}
+	return *o.ReadyForActivationVersion
+}
+
+// GetReadyForActivationVersionOk returns a tuple with the ReadyForActivationVersion field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummary) GetReadyForActivationVersionOk() (*V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummaryLastRunningVersion, bool) {
+	if o == nil || IsNil(o.ReadyForActivationVersion) {
+		return nil, false
+	}
+	return o.ReadyForActivationVersion, true
+}
+
+// HasReadyForActivationVersion returns a boolean if a field has been set.
+func (o *V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummary) HasReadyForActivationVersion() bool {
+	if o != nil && !IsNil(o.ReadyForActivationVersion) {
+		return true
+	}
+
+	return false
+}
+
+// SetReadyForActivationVersion gets a reference to the given V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummaryLastRunningVersion and assigns it to the ReadyForActivationVersion field.
+func (o *V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummary) SetReadyForActivationVersion(v V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummaryLastRunningVersion) {
+	o.ReadyForActivationVersion = &v
+}
+
 // GetRunningVersion returns the RunningVersion field value if set, zero value otherwise.
-func (o *V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummary) GetRunningVersion() V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummaryRunningVersion {
+func (o *V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummary) GetRunningVersion() V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummaryLastRunningVersion {
 	if o == nil || IsNil(o.RunningVersion) {
-		var ret V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummaryRunningVersion
+		var ret V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummaryLastRunningVersion
 		return ret
 	}
 	return *o.RunningVersion
@@ -151,7 +250,7 @@ func (o *V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummary) G
 
 // GetRunningVersionOk returns a tuple with the RunningVersion field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummary) GetRunningVersionOk() (*V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummaryRunningVersion, bool) {
+func (o *V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummary) GetRunningVersionOk() (*V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummaryLastRunningVersion, bool) {
 	if o == nil || IsNil(o.RunningVersion) {
 		return nil, false
 	}
@@ -167,8 +266,8 @@ func (o *V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummary) H
 	return false
 }
 
-// SetRunningVersion gets a reference to the given V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummaryRunningVersion and assigns it to the RunningVersion field.
-func (o *V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummary) SetRunningVersion(v V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummaryRunningVersion) {
+// SetRunningVersion gets a reference to the given V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummaryLastRunningVersion and assigns it to the RunningVersion field.
+func (o *V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummary) SetRunningVersion(v V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummaryLastRunningVersion) {
 	o.RunningVersion = &v
 }
 
@@ -249,11 +348,20 @@ func (o V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummary) To
 	if !IsNil(o.DeviceId) {
 		toSerialize["deviceId"] = o.DeviceId
 	}
+	if !IsNil(o.EndOfLife) {
+		toSerialize["endOfLife"] = o.EndOfLife
+	}
 	if !IsNil(o.LastDiscoveredTs) {
 		toSerialize["lastDiscoveredTs"] = o.LastDiscoveredTs
 	}
+	if !IsNil(o.LastRunningVersion) {
+		toSerialize["lastRunningVersion"] = o.LastRunningVersion
+	}
 	if !IsNil(o.LastUpgradeTs) {
 		toSerialize["lastUpgradeTs"] = o.LastUpgradeTs
+	}
+	if !IsNil(o.ReadyForActivationVersion) {
+		toSerialize["readyForActivationVersion"] = o.ReadyForActivationVersion
 	}
 	if !IsNil(o.RunningVersion) {
 		toSerialize["runningVersion"] = o.RunningVersion

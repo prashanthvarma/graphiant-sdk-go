@@ -20,6 +20,7 @@ var _ MappedNullable = &V2AssuranceBucketAppsPostRequest{}
 // V2AssuranceBucketAppsPostRequest struct for V2AssuranceBucketAppsPostRequest
 type V2AssuranceBucketAppsPostRequest struct {
 	BucketId *string `json:"bucketId,omitempty"`
+	ExchangeServiceId *int64 `json:"exchangeServiceId,omitempty"`
 	FlexAlgoId *int64 `json:"flexAlgoId,omitempty"`
 	TimeWindow *V2NotificationlistPostRequestTimeWindow `json:"timeWindow,omitempty"`
 	UnclassifiedOnly *bool `json:"unclassifiedOnly,omitempty"`
@@ -72,6 +73,38 @@ func (o *V2AssuranceBucketAppsPostRequest) HasBucketId() bool {
 // SetBucketId gets a reference to the given string and assigns it to the BucketId field.
 func (o *V2AssuranceBucketAppsPostRequest) SetBucketId(v string) {
 	o.BucketId = &v
+}
+
+// GetExchangeServiceId returns the ExchangeServiceId field value if set, zero value otherwise.
+func (o *V2AssuranceBucketAppsPostRequest) GetExchangeServiceId() int64 {
+	if o == nil || IsNil(o.ExchangeServiceId) {
+		var ret int64
+		return ret
+	}
+	return *o.ExchangeServiceId
+}
+
+// GetExchangeServiceIdOk returns a tuple with the ExchangeServiceId field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *V2AssuranceBucketAppsPostRequest) GetExchangeServiceIdOk() (*int64, bool) {
+	if o == nil || IsNil(o.ExchangeServiceId) {
+		return nil, false
+	}
+	return o.ExchangeServiceId, true
+}
+
+// HasExchangeServiceId returns a boolean if a field has been set.
+func (o *V2AssuranceBucketAppsPostRequest) HasExchangeServiceId() bool {
+	if o != nil && !IsNil(o.ExchangeServiceId) {
+		return true
+	}
+
+	return false
+}
+
+// SetExchangeServiceId gets a reference to the given int64 and assigns it to the ExchangeServiceId field.
+func (o *V2AssuranceBucketAppsPostRequest) SetExchangeServiceId(v int64) {
+	o.ExchangeServiceId = &v
 }
 
 // GetFlexAlgoId returns the FlexAlgoId field value if set, zero value otherwise.
@@ -182,6 +215,9 @@ func (o V2AssuranceBucketAppsPostRequest) ToMap() (map[string]interface{}, error
 	toSerialize := map[string]interface{}{}
 	if !IsNil(o.BucketId) {
 		toSerialize["bucketId"] = o.BucketId
+	}
+	if !IsNil(o.ExchangeServiceId) {
+		toSerialize["exchangeServiceId"] = o.ExchangeServiceId
 	}
 	if !IsNil(o.FlexAlgoId) {
 		toSerialize["flexAlgoId"] = o.FlexAlgoId

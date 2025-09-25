@@ -5,6 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **MemberIds** | Pointer to **[]string** |  | [optional] 
+**ReplaceExisting** | Pointer to **bool** |  | [optional] 
 
 ## Methods
 
@@ -49,6 +50,31 @@ SetMemberIds sets MemberIds field to given value.
 `func (o *V1GroupsIdMembersPostRequest) HasMemberIds() bool`
 
 HasMemberIds returns a boolean if a field has been set.
+
+### GetReplaceExisting
+
+`func (o *V1GroupsIdMembersPostRequest) GetReplaceExisting() bool`
+
+GetReplaceExisting returns the ReplaceExisting field if non-nil, zero value otherwise.
+
+### GetReplaceExistingOk
+
+`func (o *V1GroupsIdMembersPostRequest) GetReplaceExistingOk() (*bool, bool)`
+
+GetReplaceExistingOk returns a tuple with the ReplaceExisting field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetReplaceExisting
+
+`func (o *V1GroupsIdMembersPostRequest) SetReplaceExisting(v bool)`
+
+SetReplaceExisting sets ReplaceExisting field to given value.
+
+### HasReplaceExisting
+
+`func (o *V1GroupsIdMembersPostRequest) HasReplaceExisting() bool`
+
+HasReplaceExisting returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

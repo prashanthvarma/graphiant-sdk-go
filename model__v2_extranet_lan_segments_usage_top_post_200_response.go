@@ -19,7 +19,7 @@ var _ MappedNullable = &V2ExtranetLanSegmentsUsageTopPost200Response{}
 
 // V2ExtranetLanSegmentsUsageTopPost200Response struct for V2ExtranetLanSegmentsUsageTopPost200Response
 type V2ExtranetLanSegmentsUsageTopPost200Response struct {
-	TopVrfs []V2ExtranetConsumersUsageTopPost200ResponseTopConsumersInner `json:"topVrfs,omitempty"`
+	TopVrfs []V1ExtranetB2bMonitoringPeeringServiceConsumersUsageTopPost200ResponseTopConsumersInner `json:"topVrfs,omitempty"`
 }
 
 // NewV2ExtranetLanSegmentsUsageTopPost200Response instantiates a new V2ExtranetLanSegmentsUsageTopPost200Response object
@@ -40,9 +40,9 @@ func NewV2ExtranetLanSegmentsUsageTopPost200ResponseWithDefaults() *V2ExtranetLa
 }
 
 // GetTopVrfs returns the TopVrfs field value if set, zero value otherwise.
-func (o *V2ExtranetLanSegmentsUsageTopPost200Response) GetTopVrfs() []V2ExtranetConsumersUsageTopPost200ResponseTopConsumersInner {
+func (o *V2ExtranetLanSegmentsUsageTopPost200Response) GetTopVrfs() []V1ExtranetB2bMonitoringPeeringServiceConsumersUsageTopPost200ResponseTopConsumersInner {
 	if o == nil || IsNil(o.TopVrfs) {
-		var ret []V2ExtranetConsumersUsageTopPost200ResponseTopConsumersInner
+		var ret []V1ExtranetB2bMonitoringPeeringServiceConsumersUsageTopPost200ResponseTopConsumersInner
 		return ret
 	}
 	return o.TopVrfs
@@ -50,7 +50,7 @@ func (o *V2ExtranetLanSegmentsUsageTopPost200Response) GetTopVrfs() []V2Extranet
 
 // GetTopVrfsOk returns a tuple with the TopVrfs field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *V2ExtranetLanSegmentsUsageTopPost200Response) GetTopVrfsOk() ([]V2ExtranetConsumersUsageTopPost200ResponseTopConsumersInner, bool) {
+func (o *V2ExtranetLanSegmentsUsageTopPost200Response) GetTopVrfsOk() ([]V1ExtranetB2bMonitoringPeeringServiceConsumersUsageTopPost200ResponseTopConsumersInner, bool) {
 	if o == nil || IsNil(o.TopVrfs) {
 		return nil, false
 	}
@@ -66,8 +66,8 @@ func (o *V2ExtranetLanSegmentsUsageTopPost200Response) HasTopVrfs() bool {
 	return false
 }
 
-// SetTopVrfs gets a reference to the given []V2ExtranetConsumersUsageTopPost200ResponseTopConsumersInner and assigns it to the TopVrfs field.
-func (o *V2ExtranetLanSegmentsUsageTopPost200Response) SetTopVrfs(v []V2ExtranetConsumersUsageTopPost200ResponseTopConsumersInner) {
+// SetTopVrfs gets a reference to the given []V1ExtranetB2bMonitoringPeeringServiceConsumersUsageTopPost200ResponseTopConsumersInner and assigns it to the TopVrfs field.
+func (o *V2ExtranetLanSegmentsUsageTopPost200Response) SetTopVrfs(v []V1ExtranetB2bMonitoringPeeringServiceConsumersUsageTopPost200ResponseTopConsumersInner) {
 	o.TopVrfs = v
 }
 

@@ -6,8 +6,9 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Action** | Pointer to **string** |  | [optional] 
 **DeviceIds** | Pointer to **[]int64** |  | [optional] 
+**DeviceVersions** | Pointer to [**[]V1DevicesRunningVersionPost200ResponseVersionsInner**](V1DevicesRunningVersionPost200ResponseVersionsInner.md) |  | [optional] 
 **Ts** | Pointer to [**V1AlarmHistoryGet200ResponseHistoryInnerTime**](V1AlarmHistoryGet200ResponseHistoryInnerTime.md) |  | [optional] 
-**Version** | Pointer to [**V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummaryRunningVersion**](V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummaryRunningVersion.md) |  | [optional] 
+**Version** | Pointer to [**V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummaryLastRunningVersion**](V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummaryLastRunningVersion.md) |  | [optional] 
 
 ## Methods
 
@@ -78,6 +79,31 @@ SetDeviceIds sets DeviceIds field to given value.
 
 HasDeviceIds returns a boolean if a field has been set.
 
+### GetDeviceVersions
+
+`func (o *V1DevicesUpgradeSchedulePutRequest) GetDeviceVersions() []V1DevicesRunningVersionPost200ResponseVersionsInner`
+
+GetDeviceVersions returns the DeviceVersions field if non-nil, zero value otherwise.
+
+### GetDeviceVersionsOk
+
+`func (o *V1DevicesUpgradeSchedulePutRequest) GetDeviceVersionsOk() (*[]V1DevicesRunningVersionPost200ResponseVersionsInner, bool)`
+
+GetDeviceVersionsOk returns a tuple with the DeviceVersions field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDeviceVersions
+
+`func (o *V1DevicesUpgradeSchedulePutRequest) SetDeviceVersions(v []V1DevicesRunningVersionPost200ResponseVersionsInner)`
+
+SetDeviceVersions sets DeviceVersions field to given value.
+
+### HasDeviceVersions
+
+`func (o *V1DevicesUpgradeSchedulePutRequest) HasDeviceVersions() bool`
+
+HasDeviceVersions returns a boolean if a field has been set.
+
 ### GetTs
 
 `func (o *V1DevicesUpgradeSchedulePutRequest) GetTs() V1AlarmHistoryGet200ResponseHistoryInnerTime`
@@ -105,20 +131,20 @@ HasTs returns a boolean if a field has been set.
 
 ### GetVersion
 
-`func (o *V1DevicesUpgradeSchedulePutRequest) GetVersion() V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummaryRunningVersion`
+`func (o *V1DevicesUpgradeSchedulePutRequest) GetVersion() V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummaryLastRunningVersion`
 
 GetVersion returns the Version field if non-nil, zero value otherwise.
 
 ### GetVersionOk
 
-`func (o *V1DevicesUpgradeSchedulePutRequest) GetVersionOk() (*V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummaryRunningVersion, bool)`
+`func (o *V1DevicesUpgradeSchedulePutRequest) GetVersionOk() (*V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummaryLastRunningVersion, bool)`
 
 GetVersionOk returns a tuple with the Version field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetVersion
 
-`func (o *V1DevicesUpgradeSchedulePutRequest) SetVersion(v V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummaryRunningVersion)`
+`func (o *V1DevicesUpgradeSchedulePutRequest) SetVersion(v V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummaryLastRunningVersion)`
 
 SetVersion sets Version field to given value.
 
