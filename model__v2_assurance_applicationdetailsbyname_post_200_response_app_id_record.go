@@ -30,6 +30,8 @@ type V2AssuranceApplicationdetailsbynamePost200ResponseAppIdRecord struct {
 	Category *string `json:"category,omitempty"`
 	ClassficationField *string `json:"classficationField,omitempty"`
 	ClassificationField *string `json:"classificationField,omitempty"`
+	Clients []string `json:"clients,omitempty"`
+	ExchangeService []V2AssuranceApplicationdetailsbynamePost200ResponseAppIdRecordExchangeServiceInner `json:"exchangeService,omitempty"`
 	FirstSeen *int64 `json:"firstSeen,omitempty"`
 	FlexAlgo []V2AssuranceApplicationdetailsbynamePost200ResponseAppIdRecordFlexAlgoInner `json:"flexAlgo,omitempty"`
 	FlowsAnalyzed *int64 `json:"flowsAnalyzed,omitempty"`
@@ -412,6 +414,70 @@ func (o *V2AssuranceApplicationdetailsbynamePost200ResponseAppIdRecord) HasClass
 // SetClassificationField gets a reference to the given string and assigns it to the ClassificationField field.
 func (o *V2AssuranceApplicationdetailsbynamePost200ResponseAppIdRecord) SetClassificationField(v string) {
 	o.ClassificationField = &v
+}
+
+// GetClients returns the Clients field value if set, zero value otherwise.
+func (o *V2AssuranceApplicationdetailsbynamePost200ResponseAppIdRecord) GetClients() []string {
+	if o == nil || IsNil(o.Clients) {
+		var ret []string
+		return ret
+	}
+	return o.Clients
+}
+
+// GetClientsOk returns a tuple with the Clients field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *V2AssuranceApplicationdetailsbynamePost200ResponseAppIdRecord) GetClientsOk() ([]string, bool) {
+	if o == nil || IsNil(o.Clients) {
+		return nil, false
+	}
+	return o.Clients, true
+}
+
+// HasClients returns a boolean if a field has been set.
+func (o *V2AssuranceApplicationdetailsbynamePost200ResponseAppIdRecord) HasClients() bool {
+	if o != nil && !IsNil(o.Clients) {
+		return true
+	}
+
+	return false
+}
+
+// SetClients gets a reference to the given []string and assigns it to the Clients field.
+func (o *V2AssuranceApplicationdetailsbynamePost200ResponseAppIdRecord) SetClients(v []string) {
+	o.Clients = v
+}
+
+// GetExchangeService returns the ExchangeService field value if set, zero value otherwise.
+func (o *V2AssuranceApplicationdetailsbynamePost200ResponseAppIdRecord) GetExchangeService() []V2AssuranceApplicationdetailsbynamePost200ResponseAppIdRecordExchangeServiceInner {
+	if o == nil || IsNil(o.ExchangeService) {
+		var ret []V2AssuranceApplicationdetailsbynamePost200ResponseAppIdRecordExchangeServiceInner
+		return ret
+	}
+	return o.ExchangeService
+}
+
+// GetExchangeServiceOk returns a tuple with the ExchangeService field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *V2AssuranceApplicationdetailsbynamePost200ResponseAppIdRecord) GetExchangeServiceOk() ([]V2AssuranceApplicationdetailsbynamePost200ResponseAppIdRecordExchangeServiceInner, bool) {
+	if o == nil || IsNil(o.ExchangeService) {
+		return nil, false
+	}
+	return o.ExchangeService, true
+}
+
+// HasExchangeService returns a boolean if a field has been set.
+func (o *V2AssuranceApplicationdetailsbynamePost200ResponseAppIdRecord) HasExchangeService() bool {
+	if o != nil && !IsNil(o.ExchangeService) {
+		return true
+	}
+
+	return false
+}
+
+// SetExchangeService gets a reference to the given []V2AssuranceApplicationdetailsbynamePost200ResponseAppIdRecordExchangeServiceInner and assigns it to the ExchangeService field.
+func (o *V2AssuranceApplicationdetailsbynamePost200ResponseAppIdRecord) SetExchangeService(v []V2AssuranceApplicationdetailsbynamePost200ResponseAppIdRecordExchangeServiceInner) {
+	o.ExchangeService = v
 }
 
 // GetFirstSeen returns the FirstSeen field value if set, zero value otherwise.
@@ -872,6 +938,12 @@ func (o V2AssuranceApplicationdetailsbynamePost200ResponseAppIdRecord) ToMap() (
 	}
 	if !IsNil(o.ClassificationField) {
 		toSerialize["classificationField"] = o.ClassificationField
+	}
+	if !IsNil(o.Clients) {
+		toSerialize["clients"] = o.Clients
+	}
+	if !IsNil(o.ExchangeService) {
+		toSerialize["exchangeService"] = o.ExchangeService
 	}
 	if !IsNil(o.FirstSeen) {
 		toSerialize["firstSeen"] = o.FirstSeen

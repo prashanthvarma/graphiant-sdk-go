@@ -12,6 +12,7 @@ Name | Type | Description | Notes
 **ResponseText** | Pointer to **string** |  | [optional] 
 **ResponseTimestamp** | Pointer to **int64** |  | [optional] 
 **ResponseType** | Pointer to **string** |  | [optional] 
+**VisualizationSummary** | Pointer to **string** |  | [optional] 
 
 ## Methods
 
@@ -231,6 +232,31 @@ SetResponseType sets ResponseType field to given value.
 `func (o *V2AssistantAddToConversationPost200Response) HasResponseType() bool`
 
 HasResponseType returns a boolean if a field has been set.
+
+### GetVisualizationSummary
+
+`func (o *V2AssistantAddToConversationPost200Response) GetVisualizationSummary() string`
+
+GetVisualizationSummary returns the VisualizationSummary field if non-nil, zero value otherwise.
+
+### GetVisualizationSummaryOk
+
+`func (o *V2AssistantAddToConversationPost200Response) GetVisualizationSummaryOk() (*string, bool)`
+
+GetVisualizationSummaryOk returns a tuple with the VisualizationSummary field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetVisualizationSummary
+
+`func (o *V2AssistantAddToConversationPost200Response) SetVisualizationSummary(v string)`
+
+SetVisualizationSummary sets VisualizationSummary field to given value.
+
+### HasVisualizationSummary
+
+`func (o *V2AssistantAddToConversationPost200Response) HasVisualizationSummary() bool`
+
+HasVisualizationSummary returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

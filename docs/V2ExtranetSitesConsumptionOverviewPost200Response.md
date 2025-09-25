@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**LanSegments** | Pointer to [**[]V2ExtranetSitesConsumptionOverviewPost200ResponseLanSegmentsInner**](V2ExtranetSitesConsumptionOverviewPost200ResponseLanSegmentsInner.md) |  | [optional] 
-**Regions** | Pointer to [**[]V2ExtranetSitesConsumptionOverviewPost200ResponseLanSegmentsInner**](V2ExtranetSitesConsumptionOverviewPost200ResponseLanSegmentsInner.md) |  | [optional] 
-**Sites** | Pointer to [**[]V2ExtranetSitesConsumptionOverviewPost200ResponseLanSegmentsInner**](V2ExtranetSitesConsumptionOverviewPost200ResponseLanSegmentsInner.md) |  | [optional] 
+**LanSegments** | Pointer to [**[]V1ExtranetB2bMonitoringPeeringServiceConsumptionOverviewPost200ResponseFirstLevelInner**](V1ExtranetB2bMonitoringPeeringServiceConsumptionOverviewPost200ResponseFirstLevelInner.md) |  | [optional] 
+**Regions** | Pointer to [**[]V1ExtranetB2bMonitoringPeeringServiceConsumptionOverviewPost200ResponseFirstLevelInner**](V1ExtranetB2bMonitoringPeeringServiceConsumptionOverviewPost200ResponseFirstLevelInner.md) |  | [optional] 
+**Sites** | Pointer to [**[]V1ExtranetB2bMonitoringPeeringServiceConsumptionOverviewPost200ResponseFirstLevelInner**](V1ExtranetB2bMonitoringPeeringServiceConsumptionOverviewPost200ResponseFirstLevelInner.md) |  | [optional] 
 **TotalUsage** | Pointer to **float64** |  | [optional] 
 
 ## Methods
@@ -30,20 +30,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetLanSegments
 
-`func (o *V2ExtranetSitesConsumptionOverviewPost200Response) GetLanSegments() []V2ExtranetSitesConsumptionOverviewPost200ResponseLanSegmentsInner`
+`func (o *V2ExtranetSitesConsumptionOverviewPost200Response) GetLanSegments() []V1ExtranetB2bMonitoringPeeringServiceConsumptionOverviewPost200ResponseFirstLevelInner`
 
 GetLanSegments returns the LanSegments field if non-nil, zero value otherwise.
 
 ### GetLanSegmentsOk
 
-`func (o *V2ExtranetSitesConsumptionOverviewPost200Response) GetLanSegmentsOk() (*[]V2ExtranetSitesConsumptionOverviewPost200ResponseLanSegmentsInner, bool)`
+`func (o *V2ExtranetSitesConsumptionOverviewPost200Response) GetLanSegmentsOk() (*[]V1ExtranetB2bMonitoringPeeringServiceConsumptionOverviewPost200ResponseFirstLevelInner, bool)`
 
 GetLanSegmentsOk returns a tuple with the LanSegments field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetLanSegments
 
-`func (o *V2ExtranetSitesConsumptionOverviewPost200Response) SetLanSegments(v []V2ExtranetSitesConsumptionOverviewPost200ResponseLanSegmentsInner)`
+`func (o *V2ExtranetSitesConsumptionOverviewPost200Response) SetLanSegments(v []V1ExtranetB2bMonitoringPeeringServiceConsumptionOverviewPost200ResponseFirstLevelInner)`
 
 SetLanSegments sets LanSegments field to given value.
 
@@ -55,20 +55,20 @@ HasLanSegments returns a boolean if a field has been set.
 
 ### GetRegions
 
-`func (o *V2ExtranetSitesConsumptionOverviewPost200Response) GetRegions() []V2ExtranetSitesConsumptionOverviewPost200ResponseLanSegmentsInner`
+`func (o *V2ExtranetSitesConsumptionOverviewPost200Response) GetRegions() []V1ExtranetB2bMonitoringPeeringServiceConsumptionOverviewPost200ResponseFirstLevelInner`
 
 GetRegions returns the Regions field if non-nil, zero value otherwise.
 
 ### GetRegionsOk
 
-`func (o *V2ExtranetSitesConsumptionOverviewPost200Response) GetRegionsOk() (*[]V2ExtranetSitesConsumptionOverviewPost200ResponseLanSegmentsInner, bool)`
+`func (o *V2ExtranetSitesConsumptionOverviewPost200Response) GetRegionsOk() (*[]V1ExtranetB2bMonitoringPeeringServiceConsumptionOverviewPost200ResponseFirstLevelInner, bool)`
 
 GetRegionsOk returns a tuple with the Regions field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetRegions
 
-`func (o *V2ExtranetSitesConsumptionOverviewPost200Response) SetRegions(v []V2ExtranetSitesConsumptionOverviewPost200ResponseLanSegmentsInner)`
+`func (o *V2ExtranetSitesConsumptionOverviewPost200Response) SetRegions(v []V1ExtranetB2bMonitoringPeeringServiceConsumptionOverviewPost200ResponseFirstLevelInner)`
 
 SetRegions sets Regions field to given value.
 
@@ -80,20 +80,20 @@ HasRegions returns a boolean if a field has been set.
 
 ### GetSites
 
-`func (o *V2ExtranetSitesConsumptionOverviewPost200Response) GetSites() []V2ExtranetSitesConsumptionOverviewPost200ResponseLanSegmentsInner`
+`func (o *V2ExtranetSitesConsumptionOverviewPost200Response) GetSites() []V1ExtranetB2bMonitoringPeeringServiceConsumptionOverviewPost200ResponseFirstLevelInner`
 
 GetSites returns the Sites field if non-nil, zero value otherwise.
 
 ### GetSitesOk
 
-`func (o *V2ExtranetSitesConsumptionOverviewPost200Response) GetSitesOk() (*[]V2ExtranetSitesConsumptionOverviewPost200ResponseLanSegmentsInner, bool)`
+`func (o *V2ExtranetSitesConsumptionOverviewPost200Response) GetSitesOk() (*[]V1ExtranetB2bMonitoringPeeringServiceConsumptionOverviewPost200ResponseFirstLevelInner, bool)`
 
 GetSitesOk returns a tuple with the Sites field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetSites
 
-`func (o *V2ExtranetSitesConsumptionOverviewPost200Response) SetSites(v []V2ExtranetSitesConsumptionOverviewPost200ResponseLanSegmentsInner)`
+`func (o *V2ExtranetSitesConsumptionOverviewPost200Response) SetSites(v []V1ExtranetB2bMonitoringPeeringServiceConsumptionOverviewPost200ResponseFirstLevelInner)`
 
 SetSites sets Sites field to given value.
 

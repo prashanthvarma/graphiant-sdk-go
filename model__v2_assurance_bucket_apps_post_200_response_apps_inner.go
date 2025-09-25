@@ -22,6 +22,7 @@ type V2AssuranceBucketAppsPost200ResponseAppsInner struct {
 	AppName *string `json:"appName,omitempty"`
 	BuiltinAppId *int64 `json:"builtinAppId,omitempty"`
 	CustomAppId *int64 `json:"customAppId,omitempty"`
+	ExchangeService *V2AssuranceApplicationdetailsbynamePost200ResponseAppIdRecordExchangeServiceInner `json:"exchangeService,omitempty"`
 	FlexAlgo *V2AssuranceApplicationdetailsbynamePost200ResponseAppIdRecordFlexAlgoInner `json:"flexAlgo,omitempty"`
 	IsDomain *bool `json:"isDomain,omitempty"`
 }
@@ -139,6 +140,38 @@ func (o *V2AssuranceBucketAppsPost200ResponseAppsInner) SetCustomAppId(v int64) 
 	o.CustomAppId = &v
 }
 
+// GetExchangeService returns the ExchangeService field value if set, zero value otherwise.
+func (o *V2AssuranceBucketAppsPost200ResponseAppsInner) GetExchangeService() V2AssuranceApplicationdetailsbynamePost200ResponseAppIdRecordExchangeServiceInner {
+	if o == nil || IsNil(o.ExchangeService) {
+		var ret V2AssuranceApplicationdetailsbynamePost200ResponseAppIdRecordExchangeServiceInner
+		return ret
+	}
+	return *o.ExchangeService
+}
+
+// GetExchangeServiceOk returns a tuple with the ExchangeService field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *V2AssuranceBucketAppsPost200ResponseAppsInner) GetExchangeServiceOk() (*V2AssuranceApplicationdetailsbynamePost200ResponseAppIdRecordExchangeServiceInner, bool) {
+	if o == nil || IsNil(o.ExchangeService) {
+		return nil, false
+	}
+	return o.ExchangeService, true
+}
+
+// HasExchangeService returns a boolean if a field has been set.
+func (o *V2AssuranceBucketAppsPost200ResponseAppsInner) HasExchangeService() bool {
+	if o != nil && !IsNil(o.ExchangeService) {
+		return true
+	}
+
+	return false
+}
+
+// SetExchangeService gets a reference to the given V2AssuranceApplicationdetailsbynamePost200ResponseAppIdRecordExchangeServiceInner and assigns it to the ExchangeService field.
+func (o *V2AssuranceBucketAppsPost200ResponseAppsInner) SetExchangeService(v V2AssuranceApplicationdetailsbynamePost200ResponseAppIdRecordExchangeServiceInner) {
+	o.ExchangeService = &v
+}
+
 // GetFlexAlgo returns the FlexAlgo field value if set, zero value otherwise.
 func (o *V2AssuranceBucketAppsPost200ResponseAppsInner) GetFlexAlgo() V2AssuranceApplicationdetailsbynamePost200ResponseAppIdRecordFlexAlgoInner {
 	if o == nil || IsNil(o.FlexAlgo) {
@@ -221,6 +254,9 @@ func (o V2AssuranceBucketAppsPost200ResponseAppsInner) ToMap() (map[string]inter
 	}
 	if !IsNil(o.CustomAppId) {
 		toSerialize["customAppId"] = o.CustomAppId
+	}
+	if !IsNil(o.ExchangeService) {
+		toSerialize["exchangeService"] = o.ExchangeService
 	}
 	if !IsNil(o.FlexAlgo) {
 		toSerialize["flexAlgo"] = o.FlexAlgo

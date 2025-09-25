@@ -15,6 +15,8 @@ Name | Type | Description | Notes
 **Category** | Pointer to **string** |  | [optional] 
 **ClassficationField** | Pointer to **string** |  | [optional] 
 **ClassificationField** | Pointer to **string** |  | [optional] 
+**Clients** | Pointer to **[]string** |  | [optional] 
+**ExchangeService** | Pointer to [**[]V2AssuranceApplicationdetailsbynamePost200ResponseAppIdRecordExchangeServiceInner**](V2AssuranceApplicationdetailsbynamePost200ResponseAppIdRecordExchangeServiceInner.md) |  | [optional] 
 **FirstSeen** | Pointer to **int64** |  | [optional] 
 **FlexAlgo** | Pointer to [**[]V2AssuranceApplicationdetailsbynamePost200ResponseAppIdRecordFlexAlgoInner**](V2AssuranceApplicationdetailsbynamePost200ResponseAppIdRecordFlexAlgoInner.md) |  | [optional] 
 **FlowsAnalyzed** | Pointer to **int64** |  | [optional] 
@@ -322,6 +324,56 @@ SetClassificationField sets ClassificationField field to given value.
 `func (o *V2AssuranceApplicationdetailsbynamePost200ResponseAppIdRecord) HasClassificationField() bool`
 
 HasClassificationField returns a boolean if a field has been set.
+
+### GetClients
+
+`func (o *V2AssuranceApplicationdetailsbynamePost200ResponseAppIdRecord) GetClients() []string`
+
+GetClients returns the Clients field if non-nil, zero value otherwise.
+
+### GetClientsOk
+
+`func (o *V2AssuranceApplicationdetailsbynamePost200ResponseAppIdRecord) GetClientsOk() (*[]string, bool)`
+
+GetClientsOk returns a tuple with the Clients field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetClients
+
+`func (o *V2AssuranceApplicationdetailsbynamePost200ResponseAppIdRecord) SetClients(v []string)`
+
+SetClients sets Clients field to given value.
+
+### HasClients
+
+`func (o *V2AssuranceApplicationdetailsbynamePost200ResponseAppIdRecord) HasClients() bool`
+
+HasClients returns a boolean if a field has been set.
+
+### GetExchangeService
+
+`func (o *V2AssuranceApplicationdetailsbynamePost200ResponseAppIdRecord) GetExchangeService() []V2AssuranceApplicationdetailsbynamePost200ResponseAppIdRecordExchangeServiceInner`
+
+GetExchangeService returns the ExchangeService field if non-nil, zero value otherwise.
+
+### GetExchangeServiceOk
+
+`func (o *V2AssuranceApplicationdetailsbynamePost200ResponseAppIdRecord) GetExchangeServiceOk() (*[]V2AssuranceApplicationdetailsbynamePost200ResponseAppIdRecordExchangeServiceInner, bool)`
+
+GetExchangeServiceOk returns a tuple with the ExchangeService field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetExchangeService
+
+`func (o *V2AssuranceApplicationdetailsbynamePost200ResponseAppIdRecord) SetExchangeService(v []V2AssuranceApplicationdetailsbynamePost200ResponseAppIdRecordExchangeServiceInner)`
+
+SetExchangeService sets ExchangeService field to given value.
+
+### HasExchangeService
+
+`func (o *V2AssuranceApplicationdetailsbynamePost200ResponseAppIdRecord) HasExchangeService() bool`
+
+HasExchangeService returns a boolean if a field has been set.
 
 ### GetFirstSeen
 

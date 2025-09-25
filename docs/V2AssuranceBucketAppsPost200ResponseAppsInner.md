@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **AppName** | Pointer to **string** |  | [optional] 
 **BuiltinAppId** | Pointer to **int64** |  | [optional] 
 **CustomAppId** | Pointer to **int64** |  | [optional] 
+**ExchangeService** | Pointer to [**V2AssuranceApplicationdetailsbynamePost200ResponseAppIdRecordExchangeServiceInner**](V2AssuranceApplicationdetailsbynamePost200ResponseAppIdRecordExchangeServiceInner.md) |  | [optional] 
 **FlexAlgo** | Pointer to [**V2AssuranceApplicationdetailsbynamePost200ResponseAppIdRecordFlexAlgoInner**](V2AssuranceApplicationdetailsbynamePost200ResponseAppIdRecordFlexAlgoInner.md) |  | [optional] 
 **IsDomain** | Pointer to **bool** |  | [optional] 
 
@@ -103,6 +104,31 @@ SetCustomAppId sets CustomAppId field to given value.
 `func (o *V2AssuranceBucketAppsPost200ResponseAppsInner) HasCustomAppId() bool`
 
 HasCustomAppId returns a boolean if a field has been set.
+
+### GetExchangeService
+
+`func (o *V2AssuranceBucketAppsPost200ResponseAppsInner) GetExchangeService() V2AssuranceApplicationdetailsbynamePost200ResponseAppIdRecordExchangeServiceInner`
+
+GetExchangeService returns the ExchangeService field if non-nil, zero value otherwise.
+
+### GetExchangeServiceOk
+
+`func (o *V2AssuranceBucketAppsPost200ResponseAppsInner) GetExchangeServiceOk() (*V2AssuranceApplicationdetailsbynamePost200ResponseAppIdRecordExchangeServiceInner, bool)`
+
+GetExchangeServiceOk returns a tuple with the ExchangeService field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetExchangeService
+
+`func (o *V2AssuranceBucketAppsPost200ResponseAppsInner) SetExchangeService(v V2AssuranceApplicationdetailsbynamePost200ResponseAppIdRecordExchangeServiceInner)`
+
+SetExchangeService sets ExchangeService field to given value.
+
+### HasExchangeService
+
+`func (o *V2AssuranceBucketAppsPost200ResponseAppsInner) HasExchangeService() bool`
+
+HasExchangeService returns a boolean if a field has been set.
 
 ### GetFlexAlgo
 

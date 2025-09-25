@@ -19,9 +19,9 @@ var _ MappedNullable = &V2ExtranetSitesConsumptionOverviewPost200Response{}
 
 // V2ExtranetSitesConsumptionOverviewPost200Response struct for V2ExtranetSitesConsumptionOverviewPost200Response
 type V2ExtranetSitesConsumptionOverviewPost200Response struct {
-	LanSegments []V2ExtranetSitesConsumptionOverviewPost200ResponseLanSegmentsInner `json:"lanSegments,omitempty"`
-	Regions []V2ExtranetSitesConsumptionOverviewPost200ResponseLanSegmentsInner `json:"regions,omitempty"`
-	Sites []V2ExtranetSitesConsumptionOverviewPost200ResponseLanSegmentsInner `json:"sites,omitempty"`
+	LanSegments []V1ExtranetB2bMonitoringPeeringServiceConsumptionOverviewPost200ResponseFirstLevelInner `json:"lanSegments,omitempty"`
+	Regions []V1ExtranetB2bMonitoringPeeringServiceConsumptionOverviewPost200ResponseFirstLevelInner `json:"regions,omitempty"`
+	Sites []V1ExtranetB2bMonitoringPeeringServiceConsumptionOverviewPost200ResponseFirstLevelInner `json:"sites,omitempty"`
 	TotalUsage *float64 `json:"totalUsage,omitempty"`
 }
 
@@ -43,9 +43,9 @@ func NewV2ExtranetSitesConsumptionOverviewPost200ResponseWithDefaults() *V2Extra
 }
 
 // GetLanSegments returns the LanSegments field value if set, zero value otherwise.
-func (o *V2ExtranetSitesConsumptionOverviewPost200Response) GetLanSegments() []V2ExtranetSitesConsumptionOverviewPost200ResponseLanSegmentsInner {
+func (o *V2ExtranetSitesConsumptionOverviewPost200Response) GetLanSegments() []V1ExtranetB2bMonitoringPeeringServiceConsumptionOverviewPost200ResponseFirstLevelInner {
 	if o == nil || IsNil(o.LanSegments) {
-		var ret []V2ExtranetSitesConsumptionOverviewPost200ResponseLanSegmentsInner
+		var ret []V1ExtranetB2bMonitoringPeeringServiceConsumptionOverviewPost200ResponseFirstLevelInner
 		return ret
 	}
 	return o.LanSegments
@@ -53,7 +53,7 @@ func (o *V2ExtranetSitesConsumptionOverviewPost200Response) GetLanSegments() []V
 
 // GetLanSegmentsOk returns a tuple with the LanSegments field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *V2ExtranetSitesConsumptionOverviewPost200Response) GetLanSegmentsOk() ([]V2ExtranetSitesConsumptionOverviewPost200ResponseLanSegmentsInner, bool) {
+func (o *V2ExtranetSitesConsumptionOverviewPost200Response) GetLanSegmentsOk() ([]V1ExtranetB2bMonitoringPeeringServiceConsumptionOverviewPost200ResponseFirstLevelInner, bool) {
 	if o == nil || IsNil(o.LanSegments) {
 		return nil, false
 	}
@@ -69,15 +69,15 @@ func (o *V2ExtranetSitesConsumptionOverviewPost200Response) HasLanSegments() boo
 	return false
 }
 
-// SetLanSegments gets a reference to the given []V2ExtranetSitesConsumptionOverviewPost200ResponseLanSegmentsInner and assigns it to the LanSegments field.
-func (o *V2ExtranetSitesConsumptionOverviewPost200Response) SetLanSegments(v []V2ExtranetSitesConsumptionOverviewPost200ResponseLanSegmentsInner) {
+// SetLanSegments gets a reference to the given []V1ExtranetB2bMonitoringPeeringServiceConsumptionOverviewPost200ResponseFirstLevelInner and assigns it to the LanSegments field.
+func (o *V2ExtranetSitesConsumptionOverviewPost200Response) SetLanSegments(v []V1ExtranetB2bMonitoringPeeringServiceConsumptionOverviewPost200ResponseFirstLevelInner) {
 	o.LanSegments = v
 }
 
 // GetRegions returns the Regions field value if set, zero value otherwise.
-func (o *V2ExtranetSitesConsumptionOverviewPost200Response) GetRegions() []V2ExtranetSitesConsumptionOverviewPost200ResponseLanSegmentsInner {
+func (o *V2ExtranetSitesConsumptionOverviewPost200Response) GetRegions() []V1ExtranetB2bMonitoringPeeringServiceConsumptionOverviewPost200ResponseFirstLevelInner {
 	if o == nil || IsNil(o.Regions) {
-		var ret []V2ExtranetSitesConsumptionOverviewPost200ResponseLanSegmentsInner
+		var ret []V1ExtranetB2bMonitoringPeeringServiceConsumptionOverviewPost200ResponseFirstLevelInner
 		return ret
 	}
 	return o.Regions
@@ -85,7 +85,7 @@ func (o *V2ExtranetSitesConsumptionOverviewPost200Response) GetRegions() []V2Ext
 
 // GetRegionsOk returns a tuple with the Regions field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *V2ExtranetSitesConsumptionOverviewPost200Response) GetRegionsOk() ([]V2ExtranetSitesConsumptionOverviewPost200ResponseLanSegmentsInner, bool) {
+func (o *V2ExtranetSitesConsumptionOverviewPost200Response) GetRegionsOk() ([]V1ExtranetB2bMonitoringPeeringServiceConsumptionOverviewPost200ResponseFirstLevelInner, bool) {
 	if o == nil || IsNil(o.Regions) {
 		return nil, false
 	}
@@ -101,15 +101,15 @@ func (o *V2ExtranetSitesConsumptionOverviewPost200Response) HasRegions() bool {
 	return false
 }
 
-// SetRegions gets a reference to the given []V2ExtranetSitesConsumptionOverviewPost200ResponseLanSegmentsInner and assigns it to the Regions field.
-func (o *V2ExtranetSitesConsumptionOverviewPost200Response) SetRegions(v []V2ExtranetSitesConsumptionOverviewPost200ResponseLanSegmentsInner) {
+// SetRegions gets a reference to the given []V1ExtranetB2bMonitoringPeeringServiceConsumptionOverviewPost200ResponseFirstLevelInner and assigns it to the Regions field.
+func (o *V2ExtranetSitesConsumptionOverviewPost200Response) SetRegions(v []V1ExtranetB2bMonitoringPeeringServiceConsumptionOverviewPost200ResponseFirstLevelInner) {
 	o.Regions = v
 }
 
 // GetSites returns the Sites field value if set, zero value otherwise.
-func (o *V2ExtranetSitesConsumptionOverviewPost200Response) GetSites() []V2ExtranetSitesConsumptionOverviewPost200ResponseLanSegmentsInner {
+func (o *V2ExtranetSitesConsumptionOverviewPost200Response) GetSites() []V1ExtranetB2bMonitoringPeeringServiceConsumptionOverviewPost200ResponseFirstLevelInner {
 	if o == nil || IsNil(o.Sites) {
-		var ret []V2ExtranetSitesConsumptionOverviewPost200ResponseLanSegmentsInner
+		var ret []V1ExtranetB2bMonitoringPeeringServiceConsumptionOverviewPost200ResponseFirstLevelInner
 		return ret
 	}
 	return o.Sites
@@ -117,7 +117,7 @@ func (o *V2ExtranetSitesConsumptionOverviewPost200Response) GetSites() []V2Extra
 
 // GetSitesOk returns a tuple with the Sites field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *V2ExtranetSitesConsumptionOverviewPost200Response) GetSitesOk() ([]V2ExtranetSitesConsumptionOverviewPost200ResponseLanSegmentsInner, bool) {
+func (o *V2ExtranetSitesConsumptionOverviewPost200Response) GetSitesOk() ([]V1ExtranetB2bMonitoringPeeringServiceConsumptionOverviewPost200ResponseFirstLevelInner, bool) {
 	if o == nil || IsNil(o.Sites) {
 		return nil, false
 	}
@@ -133,8 +133,8 @@ func (o *V2ExtranetSitesConsumptionOverviewPost200Response) HasSites() bool {
 	return false
 }
 
-// SetSites gets a reference to the given []V2ExtranetSitesConsumptionOverviewPost200ResponseLanSegmentsInner and assigns it to the Sites field.
-func (o *V2ExtranetSitesConsumptionOverviewPost200Response) SetSites(v []V2ExtranetSitesConsumptionOverviewPost200ResponseLanSegmentsInner) {
+// SetSites gets a reference to the given []V1ExtranetB2bMonitoringPeeringServiceConsumptionOverviewPost200ResponseFirstLevelInner and assigns it to the Sites field.
+func (o *V2ExtranetSitesConsumptionOverviewPost200Response) SetSites(v []V1ExtranetB2bMonitoringPeeringServiceConsumptionOverviewPost200ResponseFirstLevelInner) {
 	o.Sites = v
 }
 

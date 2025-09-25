@@ -26,7 +26,7 @@ type V1BackboneHealthDeviceDeviceIdPost200Response struct {
 	Role *string `json:"role,omitempty"`
 	Status *string `json:"status,omitempty"`
 	SwVersion *string `json:"swVersion,omitempty"`
-	SwVersionV2 *V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummaryRunningVersion `json:"swVersionV2,omitempty"`
+	SwVersionV2 *V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummaryLastRunningVersion `json:"swVersionV2,omitempty"`
 	SystemPlane *V1BackboneHealthDeviceDeviceIdPost200ResponseSystemPlane `json:"systemPlane,omitempty"`
 	UpSinceTs *V1AlarmHistoryGet200ResponseHistoryInnerTime `json:"upSinceTs,omitempty"`
 }
@@ -273,9 +273,9 @@ func (o *V1BackboneHealthDeviceDeviceIdPost200Response) SetSwVersion(v string) {
 }
 
 // GetSwVersionV2 returns the SwVersionV2 field value if set, zero value otherwise.
-func (o *V1BackboneHealthDeviceDeviceIdPost200Response) GetSwVersionV2() V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummaryRunningVersion {
+func (o *V1BackboneHealthDeviceDeviceIdPost200Response) GetSwVersionV2() V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummaryLastRunningVersion {
 	if o == nil || IsNil(o.SwVersionV2) {
-		var ret V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummaryRunningVersion
+		var ret V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummaryLastRunningVersion
 		return ret
 	}
 	return *o.SwVersionV2
@@ -283,7 +283,7 @@ func (o *V1BackboneHealthDeviceDeviceIdPost200Response) GetSwVersionV2() V1Edges
 
 // GetSwVersionV2Ok returns a tuple with the SwVersionV2 field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *V1BackboneHealthDeviceDeviceIdPost200Response) GetSwVersionV2Ok() (*V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummaryRunningVersion, bool) {
+func (o *V1BackboneHealthDeviceDeviceIdPost200Response) GetSwVersionV2Ok() (*V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummaryLastRunningVersion, bool) {
 	if o == nil || IsNil(o.SwVersionV2) {
 		return nil, false
 	}
@@ -299,8 +299,8 @@ func (o *V1BackboneHealthDeviceDeviceIdPost200Response) HasSwVersionV2() bool {
 	return false
 }
 
-// SetSwVersionV2 gets a reference to the given V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummaryRunningVersion and assigns it to the SwVersionV2 field.
-func (o *V1BackboneHealthDeviceDeviceIdPost200Response) SetSwVersionV2(v V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummaryRunningVersion) {
+// SetSwVersionV2 gets a reference to the given V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummaryLastRunningVersion and assigns it to the SwVersionV2 field.
+func (o *V1BackboneHealthDeviceDeviceIdPost200Response) SetSwVersionV2(v V1EdgesHardwareAssignedGet200ResponseEdgesSummaryInnerUpgradeSummaryLastRunningVersion) {
 	o.SwVersionV2 = &v
 }
 

@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**TopVrfs** | Pointer to [**[]V2ExtranetConsumersUsageTopPost200ResponseTopConsumersInner**](V2ExtranetConsumersUsageTopPost200ResponseTopConsumersInner.md) |  | [optional] 
+**TopVrfs** | Pointer to [**[]V1ExtranetB2bMonitoringPeeringServiceConsumersUsageTopPost200ResponseTopConsumersInner**](V1ExtranetB2bMonitoringPeeringServiceConsumersUsageTopPost200ResponseTopConsumersInner.md) |  | [optional] 
 
 ## Methods
 
@@ -27,20 +27,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetTopVrfs
 
-`func (o *V2ExtranetLanSegmentsUsageTopPost200Response) GetTopVrfs() []V2ExtranetConsumersUsageTopPost200ResponseTopConsumersInner`
+`func (o *V2ExtranetLanSegmentsUsageTopPost200Response) GetTopVrfs() []V1ExtranetB2bMonitoringPeeringServiceConsumersUsageTopPost200ResponseTopConsumersInner`
 
 GetTopVrfs returns the TopVrfs field if non-nil, zero value otherwise.
 
 ### GetTopVrfsOk
 
-`func (o *V2ExtranetLanSegmentsUsageTopPost200Response) GetTopVrfsOk() (*[]V2ExtranetConsumersUsageTopPost200ResponseTopConsumersInner, bool)`
+`func (o *V2ExtranetLanSegmentsUsageTopPost200Response) GetTopVrfsOk() (*[]V1ExtranetB2bMonitoringPeeringServiceConsumersUsageTopPost200ResponseTopConsumersInner, bool)`
 
 GetTopVrfsOk returns a tuple with the TopVrfs field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetTopVrfs
 
-`func (o *V2ExtranetLanSegmentsUsageTopPost200Response) SetTopVrfs(v []V2ExtranetConsumersUsageTopPost200ResponseTopConsumersInner)`
+`func (o *V2ExtranetLanSegmentsUsageTopPost200Response) SetTopVrfs(v []V1ExtranetB2bMonitoringPeeringServiceConsumersUsageTopPost200ResponseTopConsumersInner)`
 
 SetTopVrfs sets TopVrfs field to given value.
 

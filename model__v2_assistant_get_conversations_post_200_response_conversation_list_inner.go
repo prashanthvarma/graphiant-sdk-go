@@ -22,6 +22,7 @@ type V2AssistantGetConversationsPost200ResponseConversationListInner struct {
 	ConversationHeader *string `json:"conversationHeader,omitempty"`
 	ConversationId *string `json:"conversationId,omitempty"`
 	ConversationRecentTimestamp *int64 `json:"conversationRecentTimestamp,omitempty"`
+	EnableContextHistory *bool `json:"enableContextHistory,omitempty"`
 }
 
 // NewV2AssistantGetConversationsPost200ResponseConversationListInner instantiates a new V2AssistantGetConversationsPost200ResponseConversationListInner object
@@ -137,6 +138,38 @@ func (o *V2AssistantGetConversationsPost200ResponseConversationListInner) SetCon
 	o.ConversationRecentTimestamp = &v
 }
 
+// GetEnableContextHistory returns the EnableContextHistory field value if set, zero value otherwise.
+func (o *V2AssistantGetConversationsPost200ResponseConversationListInner) GetEnableContextHistory() bool {
+	if o == nil || IsNil(o.EnableContextHistory) {
+		var ret bool
+		return ret
+	}
+	return *o.EnableContextHistory
+}
+
+// GetEnableContextHistoryOk returns a tuple with the EnableContextHistory field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *V2AssistantGetConversationsPost200ResponseConversationListInner) GetEnableContextHistoryOk() (*bool, bool) {
+	if o == nil || IsNil(o.EnableContextHistory) {
+		return nil, false
+	}
+	return o.EnableContextHistory, true
+}
+
+// HasEnableContextHistory returns a boolean if a field has been set.
+func (o *V2AssistantGetConversationsPost200ResponseConversationListInner) HasEnableContextHistory() bool {
+	if o != nil && !IsNil(o.EnableContextHistory) {
+		return true
+	}
+
+	return false
+}
+
+// SetEnableContextHistory gets a reference to the given bool and assigns it to the EnableContextHistory field.
+func (o *V2AssistantGetConversationsPost200ResponseConversationListInner) SetEnableContextHistory(v bool) {
+	o.EnableContextHistory = &v
+}
+
 func (o V2AssistantGetConversationsPost200ResponseConversationListInner) MarshalJSON() ([]byte, error) {
 	toSerialize,err := o.ToMap()
 	if err != nil {
@@ -155,6 +188,9 @@ func (o V2AssistantGetConversationsPost200ResponseConversationListInner) ToMap()
 	}
 	if !IsNil(o.ConversationRecentTimestamp) {
 		toSerialize["conversationRecentTimestamp"] = o.ConversationRecentTimestamp
+	}
+	if !IsNil(o.EnableContextHistory) {
+		toSerialize["enableContextHistory"] = o.EnableContextHistory
 	}
 	return toSerialize, nil
 }
