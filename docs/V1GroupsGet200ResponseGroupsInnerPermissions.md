@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **AssetManager** | Pointer to **string** |  | [optional] 
 **B2b** | Pointer to **string** |  | [optional] 
+**B2bSecurityProfileExternal** | Pointer to **string** |  | [optional] 
 **BillingAndInvoicing** | Pointer to **string** |  | [optional] 
 **Compliance** | Pointer to **string** |  | [optional] 
 **DeveloperTools** | Pointer to **string** |  | [optional] 
@@ -91,6 +92,31 @@ SetB2b sets B2b field to given value.
 `func (o *V1GroupsGet200ResponseGroupsInnerPermissions) HasB2b() bool`
 
 HasB2b returns a boolean if a field has been set.
+
+### GetB2bSecurityProfileExternal
+
+`func (o *V1GroupsGet200ResponseGroupsInnerPermissions) GetB2bSecurityProfileExternal() string`
+
+GetB2bSecurityProfileExternal returns the B2bSecurityProfileExternal field if non-nil, zero value otherwise.
+
+### GetB2bSecurityProfileExternalOk
+
+`func (o *V1GroupsGet200ResponseGroupsInnerPermissions) GetB2bSecurityProfileExternalOk() (*string, bool)`
+
+GetB2bSecurityProfileExternalOk returns a tuple with the B2bSecurityProfileExternal field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetB2bSecurityProfileExternal
+
+`func (o *V1GroupsGet200ResponseGroupsInnerPermissions) SetB2bSecurityProfileExternal(v string)`
+
+SetB2bSecurityProfileExternal sets B2bSecurityProfileExternal field to given value.
+
+### HasB2bSecurityProfileExternal
+
+`func (o *V1GroupsGet200ResponseGroupsInnerPermissions) HasB2bSecurityProfileExternal() bool`
+
+HasB2bSecurityProfileExternal returns a boolean if a field has been set.
 
 ### GetBillingAndInvoicing
 

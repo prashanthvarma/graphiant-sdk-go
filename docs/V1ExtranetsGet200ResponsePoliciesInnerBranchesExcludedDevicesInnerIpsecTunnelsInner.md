@@ -19,7 +19,7 @@ Name | Type | Description | Notes
 **RemoteAddressV4** | Pointer to **string** |  | [optional] 
 **RemoteAddressV6** | Pointer to **string** |  | [optional] 
 **RemoteIkePeerIdentity** | Pointer to **string** |  | [optional] 
-**Static** | Pointer to [**V1ExtranetsGet200ResponsePoliciesInnerBranchesExcludedDevicesInnerIpsecTunnelsInnerStatic**](V1ExtranetsGet200ResponsePoliciesInnerBranchesExcludedDevicesInnerIpsecTunnelsInnerStatic.md) |  | [optional] 
+**Static** | Pointer to [**V1ExtranetsB2bPeeringConsumerIdPostRequestSiteToSiteVpnIpsecGatewayDetailsRoutingStatic**](V1ExtranetsB2bPeeringConsumerIdPostRequestSiteToSiteVpnIpsecGatewayDetailsRoutingStatic.md) |  | [optional] 
 **TcpMss** | Pointer to **int32** |  | [optional] 
 **VpnProfile** | Pointer to **string** |  | [optional] 
 
@@ -419,20 +419,20 @@ HasRemoteIkePeerIdentity returns a boolean if a field has been set.
 
 ### GetStatic
 
-`func (o *V1ExtranetsGet200ResponsePoliciesInnerBranchesExcludedDevicesInnerIpsecTunnelsInner) GetStatic() V1ExtranetsGet200ResponsePoliciesInnerBranchesExcludedDevicesInnerIpsecTunnelsInnerStatic`
+`func (o *V1ExtranetsGet200ResponsePoliciesInnerBranchesExcludedDevicesInnerIpsecTunnelsInner) GetStatic() V1ExtranetsB2bPeeringConsumerIdPostRequestSiteToSiteVpnIpsecGatewayDetailsRoutingStatic`
 
 GetStatic returns the Static field if non-nil, zero value otherwise.
 
 ### GetStaticOk
 
-`func (o *V1ExtranetsGet200ResponsePoliciesInnerBranchesExcludedDevicesInnerIpsecTunnelsInner) GetStaticOk() (*V1ExtranetsGet200ResponsePoliciesInnerBranchesExcludedDevicesInnerIpsecTunnelsInnerStatic, bool)`
+`func (o *V1ExtranetsGet200ResponsePoliciesInnerBranchesExcludedDevicesInnerIpsecTunnelsInner) GetStaticOk() (*V1ExtranetsB2bPeeringConsumerIdPostRequestSiteToSiteVpnIpsecGatewayDetailsRoutingStatic, bool)`
 
 GetStaticOk returns a tuple with the Static field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetStatic
 
-`func (o *V1ExtranetsGet200ResponsePoliciesInnerBranchesExcludedDevicesInnerIpsecTunnelsInner) SetStatic(v V1ExtranetsGet200ResponsePoliciesInnerBranchesExcludedDevicesInnerIpsecTunnelsInnerStatic)`
+`func (o *V1ExtranetsGet200ResponsePoliciesInnerBranchesExcludedDevicesInnerIpsecTunnelsInner) SetStatic(v V1ExtranetsB2bPeeringConsumerIdPostRequestSiteToSiteVpnIpsecGatewayDetailsRoutingStatic)`
 
 SetStatic sets Static field to given value.
 

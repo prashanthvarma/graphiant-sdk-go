@@ -12,6 +12,7 @@ Name | Type | Description | Notes
 **ImpersonationEnabled** | Pointer to **bool** |  | [optional] 
 **Logo** | Pointer to **string** |  | [optional] 
 **PortalBanner** | Pointer to **string** |  | [optional] 
+**ProxyTenantId** | Pointer to **int64** |  | [optional] 
 **SmallLogo** | Pointer to **string** |  | [optional] 
 **TokenExpiry** | Pointer to [**V1EnterprisesPatchRequestTokenExpiry**](V1EnterprisesPatchRequestTokenExpiry.md) |  | [optional] 
 
@@ -233,6 +234,31 @@ SetPortalBanner sets PortalBanner field to given value.
 `func (o *V1EnterprisesPatchRequest) HasPortalBanner() bool`
 
 HasPortalBanner returns a boolean if a field has been set.
+
+### GetProxyTenantId
+
+`func (o *V1EnterprisesPatchRequest) GetProxyTenantId() int64`
+
+GetProxyTenantId returns the ProxyTenantId field if non-nil, zero value otherwise.
+
+### GetProxyTenantIdOk
+
+`func (o *V1EnterprisesPatchRequest) GetProxyTenantIdOk() (*int64, bool)`
+
+GetProxyTenantIdOk returns a tuple with the ProxyTenantId field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetProxyTenantId
+
+`func (o *V1EnterprisesPatchRequest) SetProxyTenantId(v int64)`
+
+SetProxyTenantId sets ProxyTenantId field to given value.
+
+### HasProxyTenantId
+
+`func (o *V1EnterprisesPatchRequest) HasProxyTenantId() bool`
+
+HasProxyTenantId returns a boolean if a field has been set.
 
 ### GetSmallLogo
 

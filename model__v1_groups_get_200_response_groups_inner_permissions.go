@@ -21,6 +21,7 @@ var _ MappedNullable = &V1GroupsGet200ResponseGroupsInnerPermissions{}
 type V1GroupsGet200ResponseGroupsInnerPermissions struct {
 	AssetManager *string `json:"assetManager,omitempty"`
 	B2b *string `json:"b2b,omitempty"`
+	B2bSecurityProfileExternal *string `json:"b2bSecurityProfileExternal,omitempty"`
 	BillingAndInvoicing *string `json:"billingAndInvoicing,omitempty"`
 	Compliance *string `json:"compliance,omitempty"`
 	DeveloperTools *string `json:"developerTools,omitempty"`
@@ -118,6 +119,38 @@ func (o *V1GroupsGet200ResponseGroupsInnerPermissions) HasB2b() bool {
 // SetB2b gets a reference to the given string and assigns it to the B2b field.
 func (o *V1GroupsGet200ResponseGroupsInnerPermissions) SetB2b(v string) {
 	o.B2b = &v
+}
+
+// GetB2bSecurityProfileExternal returns the B2bSecurityProfileExternal field value if set, zero value otherwise.
+func (o *V1GroupsGet200ResponseGroupsInnerPermissions) GetB2bSecurityProfileExternal() string {
+	if o == nil || IsNil(o.B2bSecurityProfileExternal) {
+		var ret string
+		return ret
+	}
+	return *o.B2bSecurityProfileExternal
+}
+
+// GetB2bSecurityProfileExternalOk returns a tuple with the B2bSecurityProfileExternal field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *V1GroupsGet200ResponseGroupsInnerPermissions) GetB2bSecurityProfileExternalOk() (*string, bool) {
+	if o == nil || IsNil(o.B2bSecurityProfileExternal) {
+		return nil, false
+	}
+	return o.B2bSecurityProfileExternal, true
+}
+
+// HasB2bSecurityProfileExternal returns a boolean if a field has been set.
+func (o *V1GroupsGet200ResponseGroupsInnerPermissions) HasB2bSecurityProfileExternal() bool {
+	if o != nil && !IsNil(o.B2bSecurityProfileExternal) {
+		return true
+	}
+
+	return false
+}
+
+// SetB2bSecurityProfileExternal gets a reference to the given string and assigns it to the B2bSecurityProfileExternal field.
+func (o *V1GroupsGet200ResponseGroupsInnerPermissions) SetB2bSecurityProfileExternal(v string) {
+	o.B2bSecurityProfileExternal = &v
 }
 
 // GetBillingAndInvoicing returns the BillingAndInvoicing field value if set, zero value otherwise.
@@ -647,6 +680,9 @@ func (o V1GroupsGet200ResponseGroupsInnerPermissions) ToMap() (map[string]interf
 	}
 	if !IsNil(o.B2b) {
 		toSerialize["b2b"] = o.B2b
+	}
+	if !IsNil(o.B2bSecurityProfileExternal) {
+		toSerialize["b2bSecurityProfileExternal"] = o.B2bSecurityProfileExternal
 	}
 	if !IsNil(o.BillingAndInvoicing) {
 		toSerialize["billingAndInvoicing"] = o.BillingAndInvoicing

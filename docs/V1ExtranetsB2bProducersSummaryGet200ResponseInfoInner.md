@@ -6,11 +6,16 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **CreatedAt** | Pointer to [**V1AlarmHistoryGet200ResponseHistoryInnerTime**](V1AlarmHistoryGet200ResponseHistoryInnerTime.md) |  | [optional] 
 **Id** | Pointer to **int64** |  | [optional] 
+**IsPublisher** | Pointer to **bool** |  | [optional] 
+**LanSegment** | Pointer to **int64** |  | [optional] 
+**MatchedCustomers** | Pointer to **int32** |  | [optional] 
 **Name** | Pointer to **string** |  | [optional] 
 **ServerIpAddress** | Pointer to **[]string** |  | [optional] 
 **Status** | Pointer to **string** |  | [optional] 
 **TotalCustomers** | Pointer to **int32** |  | [optional] 
 **TotalSites** | Pointer to **int32** |  | [optional] 
+**Type** | Pointer to **string** |  | [optional] 
+**UpdatedAt** | Pointer to [**V1AlarmHistoryGet200ResponseHistoryInnerTime**](V1AlarmHistoryGet200ResponseHistoryInnerTime.md) |  | [optional] 
 
 ## Methods
 
@@ -80,6 +85,81 @@ SetId sets Id field to given value.
 `func (o *V1ExtranetsB2bProducersSummaryGet200ResponseInfoInner) HasId() bool`
 
 HasId returns a boolean if a field has been set.
+
+### GetIsPublisher
+
+`func (o *V1ExtranetsB2bProducersSummaryGet200ResponseInfoInner) GetIsPublisher() bool`
+
+GetIsPublisher returns the IsPublisher field if non-nil, zero value otherwise.
+
+### GetIsPublisherOk
+
+`func (o *V1ExtranetsB2bProducersSummaryGet200ResponseInfoInner) GetIsPublisherOk() (*bool, bool)`
+
+GetIsPublisherOk returns a tuple with the IsPublisher field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetIsPublisher
+
+`func (o *V1ExtranetsB2bProducersSummaryGet200ResponseInfoInner) SetIsPublisher(v bool)`
+
+SetIsPublisher sets IsPublisher field to given value.
+
+### HasIsPublisher
+
+`func (o *V1ExtranetsB2bProducersSummaryGet200ResponseInfoInner) HasIsPublisher() bool`
+
+HasIsPublisher returns a boolean if a field has been set.
+
+### GetLanSegment
+
+`func (o *V1ExtranetsB2bProducersSummaryGet200ResponseInfoInner) GetLanSegment() int64`
+
+GetLanSegment returns the LanSegment field if non-nil, zero value otherwise.
+
+### GetLanSegmentOk
+
+`func (o *V1ExtranetsB2bProducersSummaryGet200ResponseInfoInner) GetLanSegmentOk() (*int64, bool)`
+
+GetLanSegmentOk returns a tuple with the LanSegment field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetLanSegment
+
+`func (o *V1ExtranetsB2bProducersSummaryGet200ResponseInfoInner) SetLanSegment(v int64)`
+
+SetLanSegment sets LanSegment field to given value.
+
+### HasLanSegment
+
+`func (o *V1ExtranetsB2bProducersSummaryGet200ResponseInfoInner) HasLanSegment() bool`
+
+HasLanSegment returns a boolean if a field has been set.
+
+### GetMatchedCustomers
+
+`func (o *V1ExtranetsB2bProducersSummaryGet200ResponseInfoInner) GetMatchedCustomers() int32`
+
+GetMatchedCustomers returns the MatchedCustomers field if non-nil, zero value otherwise.
+
+### GetMatchedCustomersOk
+
+`func (o *V1ExtranetsB2bProducersSummaryGet200ResponseInfoInner) GetMatchedCustomersOk() (*int32, bool)`
+
+GetMatchedCustomersOk returns a tuple with the MatchedCustomers field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMatchedCustomers
+
+`func (o *V1ExtranetsB2bProducersSummaryGet200ResponseInfoInner) SetMatchedCustomers(v int32)`
+
+SetMatchedCustomers sets MatchedCustomers field to given value.
+
+### HasMatchedCustomers
+
+`func (o *V1ExtranetsB2bProducersSummaryGet200ResponseInfoInner) HasMatchedCustomers() bool`
+
+HasMatchedCustomers returns a boolean if a field has been set.
 
 ### GetName
 
@@ -205,6 +285,56 @@ SetTotalSites sets TotalSites field to given value.
 `func (o *V1ExtranetsB2bProducersSummaryGet200ResponseInfoInner) HasTotalSites() bool`
 
 HasTotalSites returns a boolean if a field has been set.
+
+### GetType
+
+`func (o *V1ExtranetsB2bProducersSummaryGet200ResponseInfoInner) GetType() string`
+
+GetType returns the Type field if non-nil, zero value otherwise.
+
+### GetTypeOk
+
+`func (o *V1ExtranetsB2bProducersSummaryGet200ResponseInfoInner) GetTypeOk() (*string, bool)`
+
+GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetType
+
+`func (o *V1ExtranetsB2bProducersSummaryGet200ResponseInfoInner) SetType(v string)`
+
+SetType sets Type field to given value.
+
+### HasType
+
+`func (o *V1ExtranetsB2bProducersSummaryGet200ResponseInfoInner) HasType() bool`
+
+HasType returns a boolean if a field has been set.
+
+### GetUpdatedAt
+
+`func (o *V1ExtranetsB2bProducersSummaryGet200ResponseInfoInner) GetUpdatedAt() V1AlarmHistoryGet200ResponseHistoryInnerTime`
+
+GetUpdatedAt returns the UpdatedAt field if non-nil, zero value otherwise.
+
+### GetUpdatedAtOk
+
+`func (o *V1ExtranetsB2bProducersSummaryGet200ResponseInfoInner) GetUpdatedAtOk() (*V1AlarmHistoryGet200ResponseHistoryInnerTime, bool)`
+
+GetUpdatedAtOk returns a tuple with the UpdatedAt field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUpdatedAt
+
+`func (o *V1ExtranetsB2bProducersSummaryGet200ResponseInfoInner) SetUpdatedAt(v V1AlarmHistoryGet200ResponseHistoryInnerTime)`
+
+SetUpdatedAt sets UpdatedAt field to given value.
+
+### HasUpdatedAt
+
+`func (o *V1ExtranetsB2bProducersSummaryGet200ResponseInfoInner) HasUpdatedAt() bool`
+
+HasUpdatedAt returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
