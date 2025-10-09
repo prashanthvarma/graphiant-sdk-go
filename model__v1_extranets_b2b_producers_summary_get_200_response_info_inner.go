@@ -21,11 +21,16 @@ var _ MappedNullable = &V1ExtranetsB2bProducersSummaryGet200ResponseInfoInner{}
 type V1ExtranetsB2bProducersSummaryGet200ResponseInfoInner struct {
 	CreatedAt *V1AlarmHistoryGet200ResponseHistoryInnerTime `json:"createdAt,omitempty"`
 	Id *int64 `json:"id,omitempty"`
+	IsPublisher *bool `json:"isPublisher,omitempty"`
+	LanSegment *int64 `json:"lanSegment,omitempty"`
+	MatchedCustomers *int32 `json:"matchedCustomers,omitempty"`
 	Name *string `json:"name,omitempty"`
 	ServerIpAddress []string `json:"serverIpAddress,omitempty"`
 	Status *string `json:"status,omitempty"`
 	TotalCustomers *int32 `json:"totalCustomers,omitempty"`
 	TotalSites *int32 `json:"totalSites,omitempty"`
+	Type *string `json:"type,omitempty"`
+	UpdatedAt *V1AlarmHistoryGet200ResponseHistoryInnerTime `json:"updatedAt,omitempty"`
 }
 
 // NewV1ExtranetsB2bProducersSummaryGet200ResponseInfoInner instantiates a new V1ExtranetsB2bProducersSummaryGet200ResponseInfoInner object
@@ -107,6 +112,102 @@ func (o *V1ExtranetsB2bProducersSummaryGet200ResponseInfoInner) HasId() bool {
 // SetId gets a reference to the given int64 and assigns it to the Id field.
 func (o *V1ExtranetsB2bProducersSummaryGet200ResponseInfoInner) SetId(v int64) {
 	o.Id = &v
+}
+
+// GetIsPublisher returns the IsPublisher field value if set, zero value otherwise.
+func (o *V1ExtranetsB2bProducersSummaryGet200ResponseInfoInner) GetIsPublisher() bool {
+	if o == nil || IsNil(o.IsPublisher) {
+		var ret bool
+		return ret
+	}
+	return *o.IsPublisher
+}
+
+// GetIsPublisherOk returns a tuple with the IsPublisher field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *V1ExtranetsB2bProducersSummaryGet200ResponseInfoInner) GetIsPublisherOk() (*bool, bool) {
+	if o == nil || IsNil(o.IsPublisher) {
+		return nil, false
+	}
+	return o.IsPublisher, true
+}
+
+// HasIsPublisher returns a boolean if a field has been set.
+func (o *V1ExtranetsB2bProducersSummaryGet200ResponseInfoInner) HasIsPublisher() bool {
+	if o != nil && !IsNil(o.IsPublisher) {
+		return true
+	}
+
+	return false
+}
+
+// SetIsPublisher gets a reference to the given bool and assigns it to the IsPublisher field.
+func (o *V1ExtranetsB2bProducersSummaryGet200ResponseInfoInner) SetIsPublisher(v bool) {
+	o.IsPublisher = &v
+}
+
+// GetLanSegment returns the LanSegment field value if set, zero value otherwise.
+func (o *V1ExtranetsB2bProducersSummaryGet200ResponseInfoInner) GetLanSegment() int64 {
+	if o == nil || IsNil(o.LanSegment) {
+		var ret int64
+		return ret
+	}
+	return *o.LanSegment
+}
+
+// GetLanSegmentOk returns a tuple with the LanSegment field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *V1ExtranetsB2bProducersSummaryGet200ResponseInfoInner) GetLanSegmentOk() (*int64, bool) {
+	if o == nil || IsNil(o.LanSegment) {
+		return nil, false
+	}
+	return o.LanSegment, true
+}
+
+// HasLanSegment returns a boolean if a field has been set.
+func (o *V1ExtranetsB2bProducersSummaryGet200ResponseInfoInner) HasLanSegment() bool {
+	if o != nil && !IsNil(o.LanSegment) {
+		return true
+	}
+
+	return false
+}
+
+// SetLanSegment gets a reference to the given int64 and assigns it to the LanSegment field.
+func (o *V1ExtranetsB2bProducersSummaryGet200ResponseInfoInner) SetLanSegment(v int64) {
+	o.LanSegment = &v
+}
+
+// GetMatchedCustomers returns the MatchedCustomers field value if set, zero value otherwise.
+func (o *V1ExtranetsB2bProducersSummaryGet200ResponseInfoInner) GetMatchedCustomers() int32 {
+	if o == nil || IsNil(o.MatchedCustomers) {
+		var ret int32
+		return ret
+	}
+	return *o.MatchedCustomers
+}
+
+// GetMatchedCustomersOk returns a tuple with the MatchedCustomers field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *V1ExtranetsB2bProducersSummaryGet200ResponseInfoInner) GetMatchedCustomersOk() (*int32, bool) {
+	if o == nil || IsNil(o.MatchedCustomers) {
+		return nil, false
+	}
+	return o.MatchedCustomers, true
+}
+
+// HasMatchedCustomers returns a boolean if a field has been set.
+func (o *V1ExtranetsB2bProducersSummaryGet200ResponseInfoInner) HasMatchedCustomers() bool {
+	if o != nil && !IsNil(o.MatchedCustomers) {
+		return true
+	}
+
+	return false
+}
+
+// SetMatchedCustomers gets a reference to the given int32 and assigns it to the MatchedCustomers field.
+func (o *V1ExtranetsB2bProducersSummaryGet200ResponseInfoInner) SetMatchedCustomers(v int32) {
+	o.MatchedCustomers = &v
 }
 
 // GetName returns the Name field value if set, zero value otherwise.
@@ -269,6 +370,70 @@ func (o *V1ExtranetsB2bProducersSummaryGet200ResponseInfoInner) SetTotalSites(v 
 	o.TotalSites = &v
 }
 
+// GetType returns the Type field value if set, zero value otherwise.
+func (o *V1ExtranetsB2bProducersSummaryGet200ResponseInfoInner) GetType() string {
+	if o == nil || IsNil(o.Type) {
+		var ret string
+		return ret
+	}
+	return *o.Type
+}
+
+// GetTypeOk returns a tuple with the Type field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *V1ExtranetsB2bProducersSummaryGet200ResponseInfoInner) GetTypeOk() (*string, bool) {
+	if o == nil || IsNil(o.Type) {
+		return nil, false
+	}
+	return o.Type, true
+}
+
+// HasType returns a boolean if a field has been set.
+func (o *V1ExtranetsB2bProducersSummaryGet200ResponseInfoInner) HasType() bool {
+	if o != nil && !IsNil(o.Type) {
+		return true
+	}
+
+	return false
+}
+
+// SetType gets a reference to the given string and assigns it to the Type field.
+func (o *V1ExtranetsB2bProducersSummaryGet200ResponseInfoInner) SetType(v string) {
+	o.Type = &v
+}
+
+// GetUpdatedAt returns the UpdatedAt field value if set, zero value otherwise.
+func (o *V1ExtranetsB2bProducersSummaryGet200ResponseInfoInner) GetUpdatedAt() V1AlarmHistoryGet200ResponseHistoryInnerTime {
+	if o == nil || IsNil(o.UpdatedAt) {
+		var ret V1AlarmHistoryGet200ResponseHistoryInnerTime
+		return ret
+	}
+	return *o.UpdatedAt
+}
+
+// GetUpdatedAtOk returns a tuple with the UpdatedAt field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *V1ExtranetsB2bProducersSummaryGet200ResponseInfoInner) GetUpdatedAtOk() (*V1AlarmHistoryGet200ResponseHistoryInnerTime, bool) {
+	if o == nil || IsNil(o.UpdatedAt) {
+		return nil, false
+	}
+	return o.UpdatedAt, true
+}
+
+// HasUpdatedAt returns a boolean if a field has been set.
+func (o *V1ExtranetsB2bProducersSummaryGet200ResponseInfoInner) HasUpdatedAt() bool {
+	if o != nil && !IsNil(o.UpdatedAt) {
+		return true
+	}
+
+	return false
+}
+
+// SetUpdatedAt gets a reference to the given V1AlarmHistoryGet200ResponseHistoryInnerTime and assigns it to the UpdatedAt field.
+func (o *V1ExtranetsB2bProducersSummaryGet200ResponseInfoInner) SetUpdatedAt(v V1AlarmHistoryGet200ResponseHistoryInnerTime) {
+	o.UpdatedAt = &v
+}
+
 func (o V1ExtranetsB2bProducersSummaryGet200ResponseInfoInner) MarshalJSON() ([]byte, error) {
 	toSerialize,err := o.ToMap()
 	if err != nil {
@@ -285,6 +450,15 @@ func (o V1ExtranetsB2bProducersSummaryGet200ResponseInfoInner) ToMap() (map[stri
 	if !IsNil(o.Id) {
 		toSerialize["id"] = o.Id
 	}
+	if !IsNil(o.IsPublisher) {
+		toSerialize["isPublisher"] = o.IsPublisher
+	}
+	if !IsNil(o.LanSegment) {
+		toSerialize["lanSegment"] = o.LanSegment
+	}
+	if !IsNil(o.MatchedCustomers) {
+		toSerialize["matchedCustomers"] = o.MatchedCustomers
+	}
 	if !IsNil(o.Name) {
 		toSerialize["name"] = o.Name
 	}
@@ -299,6 +473,12 @@ func (o V1ExtranetsB2bProducersSummaryGet200ResponseInfoInner) ToMap() (map[stri
 	}
 	if !IsNil(o.TotalSites) {
 		toSerialize["totalSites"] = o.TotalSites
+	}
+	if !IsNil(o.Type) {
+		toSerialize["type"] = o.Type
+	}
+	if !IsNil(o.UpdatedAt) {
+		toSerialize["updatedAt"] = o.UpdatedAt
 	}
 	return toSerialize, nil
 }

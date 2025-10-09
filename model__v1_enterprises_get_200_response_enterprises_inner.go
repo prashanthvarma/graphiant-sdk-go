@@ -34,6 +34,7 @@ type V1EnterprisesGet200ResponseEnterprisesInner struct {
 	ParentCompanyName *string `json:"parentCompanyName,omitempty"`
 	ParentEnterpriseId *int64 `json:"parentEnterpriseId,omitempty"`
 	PortalBanner *string `json:"portalBanner,omitempty"`
+	ProxyTenantId *int64 `json:"proxyTenantId,omitempty"`
 	SmallLogo *string `json:"smallLogo,omitempty"`
 	TokenExpiry *string `json:"tokenExpiry,omitempty"`
 }
@@ -535,6 +536,38 @@ func (o *V1EnterprisesGet200ResponseEnterprisesInner) SetPortalBanner(v string) 
 	o.PortalBanner = &v
 }
 
+// GetProxyTenantId returns the ProxyTenantId field value if set, zero value otherwise.
+func (o *V1EnterprisesGet200ResponseEnterprisesInner) GetProxyTenantId() int64 {
+	if o == nil || IsNil(o.ProxyTenantId) {
+		var ret int64
+		return ret
+	}
+	return *o.ProxyTenantId
+}
+
+// GetProxyTenantIdOk returns a tuple with the ProxyTenantId field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *V1EnterprisesGet200ResponseEnterprisesInner) GetProxyTenantIdOk() (*int64, bool) {
+	if o == nil || IsNil(o.ProxyTenantId) {
+		return nil, false
+	}
+	return o.ProxyTenantId, true
+}
+
+// HasProxyTenantId returns a boolean if a field has been set.
+func (o *V1EnterprisesGet200ResponseEnterprisesInner) HasProxyTenantId() bool {
+	if o != nil && !IsNil(o.ProxyTenantId) {
+		return true
+	}
+
+	return false
+}
+
+// SetProxyTenantId gets a reference to the given int64 and assigns it to the ProxyTenantId field.
+func (o *V1EnterprisesGet200ResponseEnterprisesInner) SetProxyTenantId(v int64) {
+	o.ProxyTenantId = &v
+}
+
 // GetSmallLogo returns the SmallLogo field value if set, zero value otherwise.
 func (o *V1EnterprisesGet200ResponseEnterprisesInner) GetSmallLogo() string {
 	if o == nil || IsNil(o.SmallLogo) {
@@ -653,6 +686,9 @@ func (o V1EnterprisesGet200ResponseEnterprisesInner) ToMap() (map[string]interfa
 	}
 	if !IsNil(o.PortalBanner) {
 		toSerialize["portalBanner"] = o.PortalBanner
+	}
+	if !IsNil(o.ProxyTenantId) {
+		toSerialize["proxyTenantId"] = o.ProxyTenantId
 	}
 	if !IsNil(o.SmallLogo) {
 		toSerialize["smallLogo"] = o.SmallLogo

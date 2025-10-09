@@ -19,7 +19,7 @@ var _ MappedNullable = &V1DevicesDeviceIdConfigPutRequestCoreCoreVrfBgpNeighbors
 
 // V1DevicesDeviceIdConfigPutRequestCoreCoreVrfBgpNeighborsValueNeighbor struct for V1DevicesDeviceIdConfigPutRequestCoreCoreVrfBgpNeighborsValueNeighbor
 type V1DevicesDeviceIdConfigPutRequestCoreCoreVrfBgpNeighborsValueNeighbor struct {
-	AddressFamilies *map[string]V1GatewaysPutRequestDetailsIpsecGatewayRoutingBgpAddressFamiliesValue `json:"addressFamilies,omitempty"`
+	AddressFamilies *map[string]V1ExtranetsB2bPeeringConsumerIdPostRequestSiteToSiteVpnIpsecGatewayDetailsRoutingBgpAddressFamiliesValue `json:"addressFamilies,omitempty"`
 	AllowAsIn *V1DevicesDeviceIdConfigPutRequestCoreCoreVrfBgpNeighborsValueNeighborAllowAsIn `json:"allowAsIn,omitempty"`
 	AsOverride *bool `json:"asOverride,omitempty"`
 	Bfd *V1DevicesDeviceIdConfigPutRequestCoreCoreVrfBgpNeighborsValueNeighborBfd `json:"bfd,omitempty"`
@@ -33,7 +33,7 @@ type V1DevicesDeviceIdConfigPutRequestCoreCoreVrfBgpNeighborsValueNeighbor struc
 	LocalAddress *string `json:"localAddress,omitempty"`
 	LocalInterface *V1GlobalConfigPatchRequestRoutingPoliciesValuePolicyStatementsValueStatementMatchesValueMatchSourceInterface `json:"localInterface,omitempty"`
 	MaxPrefixValue *V1DevicesDeviceIdConfigPutRequestCoreCoreVrfBgpNeighborsValueNeighborMaxPrefixValue `json:"maxPrefixValue,omitempty"`
-	Md5Password *V1GatewaysPutRequestDetailsIpsecGatewayRoutingBgpMd5Password `json:"md5Password,omitempty"`
+	Md5Password *V1ExtranetsB2bPeeringConsumerIdPostRequestSiteToSiteVpnIpsecGatewayDetailsRoutingBgpMd5Password `json:"md5Password,omitempty"`
 	PeerAsn *int32 `json:"peerAsn,omitempty"`
 	RemoteAddress *string `json:"remoteAddress,omitempty"`
 	RemovePrivateAs *bool `json:"removePrivateAs,omitempty"`
@@ -58,9 +58,9 @@ func NewV1DevicesDeviceIdConfigPutRequestCoreCoreVrfBgpNeighborsValueNeighborWit
 }
 
 // GetAddressFamilies returns the AddressFamilies field value if set, zero value otherwise.
-func (o *V1DevicesDeviceIdConfigPutRequestCoreCoreVrfBgpNeighborsValueNeighbor) GetAddressFamilies() map[string]V1GatewaysPutRequestDetailsIpsecGatewayRoutingBgpAddressFamiliesValue {
+func (o *V1DevicesDeviceIdConfigPutRequestCoreCoreVrfBgpNeighborsValueNeighbor) GetAddressFamilies() map[string]V1ExtranetsB2bPeeringConsumerIdPostRequestSiteToSiteVpnIpsecGatewayDetailsRoutingBgpAddressFamiliesValue {
 	if o == nil || IsNil(o.AddressFamilies) {
-		var ret map[string]V1GatewaysPutRequestDetailsIpsecGatewayRoutingBgpAddressFamiliesValue
+		var ret map[string]V1ExtranetsB2bPeeringConsumerIdPostRequestSiteToSiteVpnIpsecGatewayDetailsRoutingBgpAddressFamiliesValue
 		return ret
 	}
 	return *o.AddressFamilies
@@ -68,7 +68,7 @@ func (o *V1DevicesDeviceIdConfigPutRequestCoreCoreVrfBgpNeighborsValueNeighbor) 
 
 // GetAddressFamiliesOk returns a tuple with the AddressFamilies field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *V1DevicesDeviceIdConfigPutRequestCoreCoreVrfBgpNeighborsValueNeighbor) GetAddressFamiliesOk() (*map[string]V1GatewaysPutRequestDetailsIpsecGatewayRoutingBgpAddressFamiliesValue, bool) {
+func (o *V1DevicesDeviceIdConfigPutRequestCoreCoreVrfBgpNeighborsValueNeighbor) GetAddressFamiliesOk() (*map[string]V1ExtranetsB2bPeeringConsumerIdPostRequestSiteToSiteVpnIpsecGatewayDetailsRoutingBgpAddressFamiliesValue, bool) {
 	if o == nil || IsNil(o.AddressFamilies) {
 		return nil, false
 	}
@@ -84,8 +84,8 @@ func (o *V1DevicesDeviceIdConfigPutRequestCoreCoreVrfBgpNeighborsValueNeighbor) 
 	return false
 }
 
-// SetAddressFamilies gets a reference to the given map[string]V1GatewaysPutRequestDetailsIpsecGatewayRoutingBgpAddressFamiliesValue and assigns it to the AddressFamilies field.
-func (o *V1DevicesDeviceIdConfigPutRequestCoreCoreVrfBgpNeighborsValueNeighbor) SetAddressFamilies(v map[string]V1GatewaysPutRequestDetailsIpsecGatewayRoutingBgpAddressFamiliesValue) {
+// SetAddressFamilies gets a reference to the given map[string]V1ExtranetsB2bPeeringConsumerIdPostRequestSiteToSiteVpnIpsecGatewayDetailsRoutingBgpAddressFamiliesValue and assigns it to the AddressFamilies field.
+func (o *V1DevicesDeviceIdConfigPutRequestCoreCoreVrfBgpNeighborsValueNeighbor) SetAddressFamilies(v map[string]V1ExtranetsB2bPeeringConsumerIdPostRequestSiteToSiteVpnIpsecGatewayDetailsRoutingBgpAddressFamiliesValue) {
 	o.AddressFamilies = &v
 }
 
@@ -506,9 +506,9 @@ func (o *V1DevicesDeviceIdConfigPutRequestCoreCoreVrfBgpNeighborsValueNeighbor) 
 }
 
 // GetMd5Password returns the Md5Password field value if set, zero value otherwise.
-func (o *V1DevicesDeviceIdConfigPutRequestCoreCoreVrfBgpNeighborsValueNeighbor) GetMd5Password() V1GatewaysPutRequestDetailsIpsecGatewayRoutingBgpMd5Password {
+func (o *V1DevicesDeviceIdConfigPutRequestCoreCoreVrfBgpNeighborsValueNeighbor) GetMd5Password() V1ExtranetsB2bPeeringConsumerIdPostRequestSiteToSiteVpnIpsecGatewayDetailsRoutingBgpMd5Password {
 	if o == nil || IsNil(o.Md5Password) {
-		var ret V1GatewaysPutRequestDetailsIpsecGatewayRoutingBgpMd5Password
+		var ret V1ExtranetsB2bPeeringConsumerIdPostRequestSiteToSiteVpnIpsecGatewayDetailsRoutingBgpMd5Password
 		return ret
 	}
 	return *o.Md5Password
@@ -516,7 +516,7 @@ func (o *V1DevicesDeviceIdConfigPutRequestCoreCoreVrfBgpNeighborsValueNeighbor) 
 
 // GetMd5PasswordOk returns a tuple with the Md5Password field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *V1DevicesDeviceIdConfigPutRequestCoreCoreVrfBgpNeighborsValueNeighbor) GetMd5PasswordOk() (*V1GatewaysPutRequestDetailsIpsecGatewayRoutingBgpMd5Password, bool) {
+func (o *V1DevicesDeviceIdConfigPutRequestCoreCoreVrfBgpNeighborsValueNeighbor) GetMd5PasswordOk() (*V1ExtranetsB2bPeeringConsumerIdPostRequestSiteToSiteVpnIpsecGatewayDetailsRoutingBgpMd5Password, bool) {
 	if o == nil || IsNil(o.Md5Password) {
 		return nil, false
 	}
@@ -532,8 +532,8 @@ func (o *V1DevicesDeviceIdConfigPutRequestCoreCoreVrfBgpNeighborsValueNeighbor) 
 	return false
 }
 
-// SetMd5Password gets a reference to the given V1GatewaysPutRequestDetailsIpsecGatewayRoutingBgpMd5Password and assigns it to the Md5Password field.
-func (o *V1DevicesDeviceIdConfigPutRequestCoreCoreVrfBgpNeighborsValueNeighbor) SetMd5Password(v V1GatewaysPutRequestDetailsIpsecGatewayRoutingBgpMd5Password) {
+// SetMd5Password gets a reference to the given V1ExtranetsB2bPeeringConsumerIdPostRequestSiteToSiteVpnIpsecGatewayDetailsRoutingBgpMd5Password and assigns it to the Md5Password field.
+func (o *V1DevicesDeviceIdConfigPutRequestCoreCoreVrfBgpNeighborsValueNeighbor) SetMd5Password(v V1ExtranetsB2bPeeringConsumerIdPostRequestSiteToSiteVpnIpsecGatewayDetailsRoutingBgpMd5Password) {
 	o.Md5Password = &v
 }
 

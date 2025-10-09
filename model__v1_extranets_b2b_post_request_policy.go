@@ -19,13 +19,17 @@ var _ MappedNullable = &V1ExtranetsB2bPostRequestPolicy{}
 
 // V1ExtranetsB2bPostRequestPolicy struct for V1ExtranetsB2bPostRequestPolicy
 type V1ExtranetsB2bPostRequestPolicy struct {
+	Description *string `json:"description,omitempty"`
 	NatPools []string `json:"natPools,omitempty"`
+	PrefixTags []V1ExtranetsB2bPeeringMatchServiceToCustomerPutRequestServiceServicePrefixesInner `json:"prefixTags,omitempty"`
 	Profiles []V1ExtranetsB2bPostRequestPolicyProfilesInner `json:"profiles,omitempty"`
 	ServiceLanSegment *int64 `json:"serviceLanSegment,omitempty"`
 	ServicePrefixes []string `json:"servicePrefixes,omitempty"`
 	Sites []V1ExtranetsB2bConsumerPostRequestSiteInformationInner `json:"sites,omitempty"`
 	Sla *V1ExtranetsB2bPostRequestPolicySla `json:"sla,omitempty"`
+	Status *string `json:"status,omitempty"`
 	Type *string `json:"type,omitempty"`
+	UnmatchedCustomers *int32 `json:"unmatchedCustomers,omitempty"`
 }
 
 // NewV1ExtranetsB2bPostRequestPolicy instantiates a new V1ExtranetsB2bPostRequestPolicy object
@@ -43,6 +47,38 @@ func NewV1ExtranetsB2bPostRequestPolicy() *V1ExtranetsB2bPostRequestPolicy {
 func NewV1ExtranetsB2bPostRequestPolicyWithDefaults() *V1ExtranetsB2bPostRequestPolicy {
 	this := V1ExtranetsB2bPostRequestPolicy{}
 	return &this
+}
+
+// GetDescription returns the Description field value if set, zero value otherwise.
+func (o *V1ExtranetsB2bPostRequestPolicy) GetDescription() string {
+	if o == nil || IsNil(o.Description) {
+		var ret string
+		return ret
+	}
+	return *o.Description
+}
+
+// GetDescriptionOk returns a tuple with the Description field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *V1ExtranetsB2bPostRequestPolicy) GetDescriptionOk() (*string, bool) {
+	if o == nil || IsNil(o.Description) {
+		return nil, false
+	}
+	return o.Description, true
+}
+
+// HasDescription returns a boolean if a field has been set.
+func (o *V1ExtranetsB2bPostRequestPolicy) HasDescription() bool {
+	if o != nil && !IsNil(o.Description) {
+		return true
+	}
+
+	return false
+}
+
+// SetDescription gets a reference to the given string and assigns it to the Description field.
+func (o *V1ExtranetsB2bPostRequestPolicy) SetDescription(v string) {
+	o.Description = &v
 }
 
 // GetNatPools returns the NatPools field value if set, zero value otherwise.
@@ -75,6 +111,38 @@ func (o *V1ExtranetsB2bPostRequestPolicy) HasNatPools() bool {
 // SetNatPools gets a reference to the given []string and assigns it to the NatPools field.
 func (o *V1ExtranetsB2bPostRequestPolicy) SetNatPools(v []string) {
 	o.NatPools = v
+}
+
+// GetPrefixTags returns the PrefixTags field value if set, zero value otherwise.
+func (o *V1ExtranetsB2bPostRequestPolicy) GetPrefixTags() []V1ExtranetsB2bPeeringMatchServiceToCustomerPutRequestServiceServicePrefixesInner {
+	if o == nil || IsNil(o.PrefixTags) {
+		var ret []V1ExtranetsB2bPeeringMatchServiceToCustomerPutRequestServiceServicePrefixesInner
+		return ret
+	}
+	return o.PrefixTags
+}
+
+// GetPrefixTagsOk returns a tuple with the PrefixTags field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *V1ExtranetsB2bPostRequestPolicy) GetPrefixTagsOk() ([]V1ExtranetsB2bPeeringMatchServiceToCustomerPutRequestServiceServicePrefixesInner, bool) {
+	if o == nil || IsNil(o.PrefixTags) {
+		return nil, false
+	}
+	return o.PrefixTags, true
+}
+
+// HasPrefixTags returns a boolean if a field has been set.
+func (o *V1ExtranetsB2bPostRequestPolicy) HasPrefixTags() bool {
+	if o != nil && !IsNil(o.PrefixTags) {
+		return true
+	}
+
+	return false
+}
+
+// SetPrefixTags gets a reference to the given []V1ExtranetsB2bPeeringMatchServiceToCustomerPutRequestServiceServicePrefixesInner and assigns it to the PrefixTags field.
+func (o *V1ExtranetsB2bPostRequestPolicy) SetPrefixTags(v []V1ExtranetsB2bPeeringMatchServiceToCustomerPutRequestServiceServicePrefixesInner) {
+	o.PrefixTags = v
 }
 
 // GetProfiles returns the Profiles field value if set, zero value otherwise.
@@ -237,6 +305,38 @@ func (o *V1ExtranetsB2bPostRequestPolicy) SetSla(v V1ExtranetsB2bPostRequestPoli
 	o.Sla = &v
 }
 
+// GetStatus returns the Status field value if set, zero value otherwise.
+func (o *V1ExtranetsB2bPostRequestPolicy) GetStatus() string {
+	if o == nil || IsNil(o.Status) {
+		var ret string
+		return ret
+	}
+	return *o.Status
+}
+
+// GetStatusOk returns a tuple with the Status field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *V1ExtranetsB2bPostRequestPolicy) GetStatusOk() (*string, bool) {
+	if o == nil || IsNil(o.Status) {
+		return nil, false
+	}
+	return o.Status, true
+}
+
+// HasStatus returns a boolean if a field has been set.
+func (o *V1ExtranetsB2bPostRequestPolicy) HasStatus() bool {
+	if o != nil && !IsNil(o.Status) {
+		return true
+	}
+
+	return false
+}
+
+// SetStatus gets a reference to the given string and assigns it to the Status field.
+func (o *V1ExtranetsB2bPostRequestPolicy) SetStatus(v string) {
+	o.Status = &v
+}
+
 // GetType returns the Type field value if set, zero value otherwise.
 func (o *V1ExtranetsB2bPostRequestPolicy) GetType() string {
 	if o == nil || IsNil(o.Type) {
@@ -269,6 +369,38 @@ func (o *V1ExtranetsB2bPostRequestPolicy) SetType(v string) {
 	o.Type = &v
 }
 
+// GetUnmatchedCustomers returns the UnmatchedCustomers field value if set, zero value otherwise.
+func (o *V1ExtranetsB2bPostRequestPolicy) GetUnmatchedCustomers() int32 {
+	if o == nil || IsNil(o.UnmatchedCustomers) {
+		var ret int32
+		return ret
+	}
+	return *o.UnmatchedCustomers
+}
+
+// GetUnmatchedCustomersOk returns a tuple with the UnmatchedCustomers field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *V1ExtranetsB2bPostRequestPolicy) GetUnmatchedCustomersOk() (*int32, bool) {
+	if o == nil || IsNil(o.UnmatchedCustomers) {
+		return nil, false
+	}
+	return o.UnmatchedCustomers, true
+}
+
+// HasUnmatchedCustomers returns a boolean if a field has been set.
+func (o *V1ExtranetsB2bPostRequestPolicy) HasUnmatchedCustomers() bool {
+	if o != nil && !IsNil(o.UnmatchedCustomers) {
+		return true
+	}
+
+	return false
+}
+
+// SetUnmatchedCustomers gets a reference to the given int32 and assigns it to the UnmatchedCustomers field.
+func (o *V1ExtranetsB2bPostRequestPolicy) SetUnmatchedCustomers(v int32) {
+	o.UnmatchedCustomers = &v
+}
+
 func (o V1ExtranetsB2bPostRequestPolicy) MarshalJSON() ([]byte, error) {
 	toSerialize,err := o.ToMap()
 	if err != nil {
@@ -279,8 +411,14 @@ func (o V1ExtranetsB2bPostRequestPolicy) MarshalJSON() ([]byte, error) {
 
 func (o V1ExtranetsB2bPostRequestPolicy) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
+	if !IsNil(o.Description) {
+		toSerialize["description"] = o.Description
+	}
 	if !IsNil(o.NatPools) {
 		toSerialize["natPools"] = o.NatPools
+	}
+	if !IsNil(o.PrefixTags) {
+		toSerialize["prefixTags"] = o.PrefixTags
 	}
 	if !IsNil(o.Profiles) {
 		toSerialize["profiles"] = o.Profiles
@@ -297,8 +435,14 @@ func (o V1ExtranetsB2bPostRequestPolicy) ToMap() (map[string]interface{}, error)
 	if !IsNil(o.Sla) {
 		toSerialize["sla"] = o.Sla
 	}
+	if !IsNil(o.Status) {
+		toSerialize["status"] = o.Status
+	}
 	if !IsNil(o.Type) {
 		toSerialize["type"] = o.Type
+	}
+	if !IsNil(o.UnmatchedCustomers) {
+		toSerialize["unmatchedCustomers"] = o.UnmatchedCustomers
 	}
 	return toSerialize, nil
 }

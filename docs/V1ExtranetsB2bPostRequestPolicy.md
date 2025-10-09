@@ -4,13 +4,17 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**Description** | Pointer to **string** |  | [optional] 
 **NatPools** | Pointer to **[]string** |  | [optional] 
+**PrefixTags** | Pointer to [**[]V1ExtranetsB2bPeeringMatchServiceToCustomerPutRequestServiceServicePrefixesInner**](V1ExtranetsB2bPeeringMatchServiceToCustomerPutRequestServiceServicePrefixesInner.md) |  | [optional] 
 **Profiles** | Pointer to [**[]V1ExtranetsB2bPostRequestPolicyProfilesInner**](V1ExtranetsB2bPostRequestPolicyProfilesInner.md) |  | [optional] 
 **ServiceLanSegment** | Pointer to **int64** |  | [optional] 
 **ServicePrefixes** | Pointer to **[]string** |  | [optional] 
 **Sites** | Pointer to [**[]V1ExtranetsB2bConsumerPostRequestSiteInformationInner**](V1ExtranetsB2bConsumerPostRequestSiteInformationInner.md) |  | [optional] 
 **Sla** | Pointer to [**V1ExtranetsB2bPostRequestPolicySla**](V1ExtranetsB2bPostRequestPolicySla.md) |  | [optional] 
+**Status** | Pointer to **string** |  | [optional] 
 **Type** | Pointer to **string** |  | [optional] 
+**UnmatchedCustomers** | Pointer to **int32** |  | [optional] 
 
 ## Methods
 
@@ -30,6 +34,31 @@ will change when the set of required properties is changed
 NewV1ExtranetsB2bPostRequestPolicyWithDefaults instantiates a new V1ExtranetsB2bPostRequestPolicy object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
+
+### GetDescription
+
+`func (o *V1ExtranetsB2bPostRequestPolicy) GetDescription() string`
+
+GetDescription returns the Description field if non-nil, zero value otherwise.
+
+### GetDescriptionOk
+
+`func (o *V1ExtranetsB2bPostRequestPolicy) GetDescriptionOk() (*string, bool)`
+
+GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDescription
+
+`func (o *V1ExtranetsB2bPostRequestPolicy) SetDescription(v string)`
+
+SetDescription sets Description field to given value.
+
+### HasDescription
+
+`func (o *V1ExtranetsB2bPostRequestPolicy) HasDescription() bool`
+
+HasDescription returns a boolean if a field has been set.
 
 ### GetNatPools
 
@@ -55,6 +84,31 @@ SetNatPools sets NatPools field to given value.
 `func (o *V1ExtranetsB2bPostRequestPolicy) HasNatPools() bool`
 
 HasNatPools returns a boolean if a field has been set.
+
+### GetPrefixTags
+
+`func (o *V1ExtranetsB2bPostRequestPolicy) GetPrefixTags() []V1ExtranetsB2bPeeringMatchServiceToCustomerPutRequestServiceServicePrefixesInner`
+
+GetPrefixTags returns the PrefixTags field if non-nil, zero value otherwise.
+
+### GetPrefixTagsOk
+
+`func (o *V1ExtranetsB2bPostRequestPolicy) GetPrefixTagsOk() (*[]V1ExtranetsB2bPeeringMatchServiceToCustomerPutRequestServiceServicePrefixesInner, bool)`
+
+GetPrefixTagsOk returns a tuple with the PrefixTags field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPrefixTags
+
+`func (o *V1ExtranetsB2bPostRequestPolicy) SetPrefixTags(v []V1ExtranetsB2bPeeringMatchServiceToCustomerPutRequestServiceServicePrefixesInner)`
+
+SetPrefixTags sets PrefixTags field to given value.
+
+### HasPrefixTags
+
+`func (o *V1ExtranetsB2bPostRequestPolicy) HasPrefixTags() bool`
+
+HasPrefixTags returns a boolean if a field has been set.
 
 ### GetProfiles
 
@@ -181,6 +235,31 @@ SetSla sets Sla field to given value.
 
 HasSla returns a boolean if a field has been set.
 
+### GetStatus
+
+`func (o *V1ExtranetsB2bPostRequestPolicy) GetStatus() string`
+
+GetStatus returns the Status field if non-nil, zero value otherwise.
+
+### GetStatusOk
+
+`func (o *V1ExtranetsB2bPostRequestPolicy) GetStatusOk() (*string, bool)`
+
+GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetStatus
+
+`func (o *V1ExtranetsB2bPostRequestPolicy) SetStatus(v string)`
+
+SetStatus sets Status field to given value.
+
+### HasStatus
+
+`func (o *V1ExtranetsB2bPostRequestPolicy) HasStatus() bool`
+
+HasStatus returns a boolean if a field has been set.
+
 ### GetType
 
 `func (o *V1ExtranetsB2bPostRequestPolicy) GetType() string`
@@ -205,6 +284,31 @@ SetType sets Type field to given value.
 `func (o *V1ExtranetsB2bPostRequestPolicy) HasType() bool`
 
 HasType returns a boolean if a field has been set.
+
+### GetUnmatchedCustomers
+
+`func (o *V1ExtranetsB2bPostRequestPolicy) GetUnmatchedCustomers() int32`
+
+GetUnmatchedCustomers returns the UnmatchedCustomers field if non-nil, zero value otherwise.
+
+### GetUnmatchedCustomersOk
+
+`func (o *V1ExtranetsB2bPostRequestPolicy) GetUnmatchedCustomersOk() (*int32, bool)`
+
+GetUnmatchedCustomersOk returns a tuple with the UnmatchedCustomers field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUnmatchedCustomers
+
+`func (o *V1ExtranetsB2bPostRequestPolicy) SetUnmatchedCustomers(v int32)`
+
+SetUnmatchedCustomers sets UnmatchedCustomers field to given value.
+
+### HasUnmatchedCustomers
+
+`func (o *V1ExtranetsB2bPostRequestPolicy) HasUnmatchedCustomers() bool`
+
+HasUnmatchedCustomers returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -400,12 +400,12 @@ brew install openapi-generator  # macOS
 
 # Generate SDK
 openapi-generator generate \
-  -i graphiant_api_docs_v25.9.2.json \
+  -i graphiant_api_docs_v25.10.1.json \
   -g go \
   --git-user-id Graphiant-Inc \
   --git-repo-id graphiant-sdk-go \
   --package-name graphiant_sdk \
-  --additional-properties=packageVersion=25.9.2
+  --additional-properties=packageVersion=25.10.1
 ```
 
 > **Note**: Latest API documentation can be downloaded from the Graphiant portal under "Support Hub" > "Developer Tools".
