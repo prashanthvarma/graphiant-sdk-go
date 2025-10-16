@@ -18,7 +18,7 @@ Name | Type | Description | Notes
 **RemoteAddressV4** | Pointer to **string** |  | [optional] 
 **RemoteAddressV6** | Pointer to **string** |  | [optional] 
 **RemoteIkePeerIdentity** | Pointer to **string** |  | [optional] 
-**Routing** | Pointer to [**V1ExtranetsB2bPeeringConsumerIdPostRequestSiteToSiteVpnIpsecGatewayDetailsRouting**](V1ExtranetsB2bPeeringConsumerIdPostRequestSiteToSiteVpnIpsecGatewayDetailsRouting.md) |  | [optional] 
+**Routing** | Pointer to [**V1ExtranetsB2bPeeringConsumerMatchIdPostRequestSiteToSiteVpnIpsecGatewayDetailsRouting**](V1ExtranetsB2bPeeringConsumerMatchIdPostRequestSiteToSiteVpnIpsecGatewayDetailsRouting.md) |  | [optional] 
 **TcpMss** | Pointer to **int32** |  | [optional] 
 **VpnProfile** | Pointer to **string** |  | [optional] 
 
@@ -393,20 +393,20 @@ HasRemoteIkePeerIdentity returns a boolean if a field has been set.
 
 ### GetRouting
 
-`func (o *V1DevicesDeviceIdConfigPutRequestEdgeSiteToSiteVpnValueSiteToSiteVpn) GetRouting() V1ExtranetsB2bPeeringConsumerIdPostRequestSiteToSiteVpnIpsecGatewayDetailsRouting`
+`func (o *V1DevicesDeviceIdConfigPutRequestEdgeSiteToSiteVpnValueSiteToSiteVpn) GetRouting() V1ExtranetsB2bPeeringConsumerMatchIdPostRequestSiteToSiteVpnIpsecGatewayDetailsRouting`
 
 GetRouting returns the Routing field if non-nil, zero value otherwise.
 
 ### GetRoutingOk
 
-`func (o *V1DevicesDeviceIdConfigPutRequestEdgeSiteToSiteVpnValueSiteToSiteVpn) GetRoutingOk() (*V1ExtranetsB2bPeeringConsumerIdPostRequestSiteToSiteVpnIpsecGatewayDetailsRouting, bool)`
+`func (o *V1DevicesDeviceIdConfigPutRequestEdgeSiteToSiteVpnValueSiteToSiteVpn) GetRoutingOk() (*V1ExtranetsB2bPeeringConsumerMatchIdPostRequestSiteToSiteVpnIpsecGatewayDetailsRouting, bool)`
 
 GetRoutingOk returns a tuple with the Routing field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetRouting
 
-`func (o *V1DevicesDeviceIdConfigPutRequestEdgeSiteToSiteVpnValueSiteToSiteVpn) SetRouting(v V1ExtranetsB2bPeeringConsumerIdPostRequestSiteToSiteVpnIpsecGatewayDetailsRouting)`
+`func (o *V1DevicesDeviceIdConfigPutRequestEdgeSiteToSiteVpnValueSiteToSiteVpn) SetRouting(v V1ExtranetsB2bPeeringConsumerMatchIdPostRequestSiteToSiteVpnIpsecGatewayDetailsRouting)`
 
 SetRouting sets Routing field to given value.
 

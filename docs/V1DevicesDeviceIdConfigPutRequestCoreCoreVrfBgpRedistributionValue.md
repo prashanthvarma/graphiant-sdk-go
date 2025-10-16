@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Protocol** | Pointer to [**V1GlobalConfigPatchRequestSnmpsValueConfigNotifyFilterProfilesValueNotifyFilterProfileIncludeExcludeListValue**](V1GlobalConfigPatchRequestSnmpsValueConfigNotifyFilterProfilesValueNotifyFilterProfileIncludeExcludeListValue.md) |  | [optional] 
+**Protocol** | Pointer to [**V2AssistantConversationInterfaceStateGet200Response**](V2AssistantConversationInterfaceStateGet200Response.md) |  | [optional] 
 
 ## Methods
 
@@ -27,20 +27,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetProtocol
 
-`func (o *V1DevicesDeviceIdConfigPutRequestCoreCoreVrfBgpRedistributionValue) GetProtocol() V1GlobalConfigPatchRequestSnmpsValueConfigNotifyFilterProfilesValueNotifyFilterProfileIncludeExcludeListValue`
+`func (o *V1DevicesDeviceIdConfigPutRequestCoreCoreVrfBgpRedistributionValue) GetProtocol() V2AssistantConversationInterfaceStateGet200Response`
 
 GetProtocol returns the Protocol field if non-nil, zero value otherwise.
 
 ### GetProtocolOk
 
-`func (o *V1DevicesDeviceIdConfigPutRequestCoreCoreVrfBgpRedistributionValue) GetProtocolOk() (*V1GlobalConfigPatchRequestSnmpsValueConfigNotifyFilterProfilesValueNotifyFilterProfileIncludeExcludeListValue, bool)`
+`func (o *V1DevicesDeviceIdConfigPutRequestCoreCoreVrfBgpRedistributionValue) GetProtocolOk() (*V2AssistantConversationInterfaceStateGet200Response, bool)`
 
 GetProtocolOk returns a tuple with the Protocol field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetProtocol
 
-`func (o *V1DevicesDeviceIdConfigPutRequestCoreCoreVrfBgpRedistributionValue) SetProtocol(v V1GlobalConfigPatchRequestSnmpsValueConfigNotifyFilterProfilesValueNotifyFilterProfileIncludeExcludeListValue)`
+`func (o *V1DevicesDeviceIdConfigPutRequestCoreCoreVrfBgpRedistributionValue) SetProtocol(v V2AssistantConversationInterfaceStateGet200Response)`
 
 SetProtocol sets Protocol field to given value.
 

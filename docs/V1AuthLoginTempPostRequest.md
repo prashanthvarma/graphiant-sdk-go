@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Email** | Pointer to **string** |  | [optional] 
 **TempPassword** | Pointer to **string** |  | [optional] 
+**MatchId** | Pointer to **float32** |  | [optional] 
 
 ## Methods
 
@@ -75,6 +76,31 @@ SetTempPassword sets TempPassword field to given value.
 `func (o *V1AuthLoginTempPostRequest) HasTempPassword() bool`
 
 HasTempPassword returns a boolean if a field has been set.
+
+### GetMatchId
+
+`func (o *V1AuthLoginTempPostRequest) GetMatchId() float32`
+
+GetMatchId returns the MatchId field if non-nil, zero value otherwise.
+
+### GetMatchIdOk
+
+`func (o *V1AuthLoginTempPostRequest) GetMatchIdOk() (*float32, bool)`
+
+GetMatchIdOk returns a tuple with the MatchId field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMatchId
+
+`func (o *V1AuthLoginTempPostRequest) SetMatchId(v float32)`
+
+SetMatchId sets MatchId field to given value.
+
+### HasMatchId
+
+`func (o *V1AuthLoginTempPostRequest) HasMatchId() bool`
+
+HasMatchId returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

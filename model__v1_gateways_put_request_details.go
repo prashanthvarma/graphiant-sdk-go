@@ -23,7 +23,7 @@ type V1GatewaysPutRequestDetails struct {
 	Azure *V1GatewaysPutRequestDetailsAzure `json:"azure,omitempty"`
 	Description *string `json:"description,omitempty"`
 	Gcp *V1GatewaysPutRequestDetailsGcp `json:"gcp,omitempty"`
-	IpsecGateway *V1ExtranetsB2bPeeringConsumerIdPostRequestSiteToSiteVpnIpsecGatewayDetails `json:"ipsecGateway,omitempty"`
+	IpsecGateway *V1ExtranetsB2bPeeringConsumerMatchIdPostRequestSiteToSiteVpnIpsecGatewayDetails `json:"ipsecGateway,omitempty"`
 	Oci *V1GatewaysPutRequestDetailsOci `json:"oci,omitempty"`
 	RegionId *int32 `json:"regionId,omitempty"`
 	Speed *string `json:"speed,omitempty"`
@@ -176,9 +176,9 @@ func (o *V1GatewaysPutRequestDetails) SetGcp(v V1GatewaysPutRequestDetailsGcp) {
 }
 
 // GetIpsecGateway returns the IpsecGateway field value if set, zero value otherwise.
-func (o *V1GatewaysPutRequestDetails) GetIpsecGateway() V1ExtranetsB2bPeeringConsumerIdPostRequestSiteToSiteVpnIpsecGatewayDetails {
+func (o *V1GatewaysPutRequestDetails) GetIpsecGateway() V1ExtranetsB2bPeeringConsumerMatchIdPostRequestSiteToSiteVpnIpsecGatewayDetails {
 	if o == nil || IsNil(o.IpsecGateway) {
-		var ret V1ExtranetsB2bPeeringConsumerIdPostRequestSiteToSiteVpnIpsecGatewayDetails
+		var ret V1ExtranetsB2bPeeringConsumerMatchIdPostRequestSiteToSiteVpnIpsecGatewayDetails
 		return ret
 	}
 	return *o.IpsecGateway
@@ -186,7 +186,7 @@ func (o *V1GatewaysPutRequestDetails) GetIpsecGateway() V1ExtranetsB2bPeeringCon
 
 // GetIpsecGatewayOk returns a tuple with the IpsecGateway field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *V1GatewaysPutRequestDetails) GetIpsecGatewayOk() (*V1ExtranetsB2bPeeringConsumerIdPostRequestSiteToSiteVpnIpsecGatewayDetails, bool) {
+func (o *V1GatewaysPutRequestDetails) GetIpsecGatewayOk() (*V1ExtranetsB2bPeeringConsumerMatchIdPostRequestSiteToSiteVpnIpsecGatewayDetails, bool) {
 	if o == nil || IsNil(o.IpsecGateway) {
 		return nil, false
 	}
@@ -202,8 +202,8 @@ func (o *V1GatewaysPutRequestDetails) HasIpsecGateway() bool {
 	return false
 }
 
-// SetIpsecGateway gets a reference to the given V1ExtranetsB2bPeeringConsumerIdPostRequestSiteToSiteVpnIpsecGatewayDetails and assigns it to the IpsecGateway field.
-func (o *V1GatewaysPutRequestDetails) SetIpsecGateway(v V1ExtranetsB2bPeeringConsumerIdPostRequestSiteToSiteVpnIpsecGatewayDetails) {
+// SetIpsecGateway gets a reference to the given V1ExtranetsB2bPeeringConsumerMatchIdPostRequestSiteToSiteVpnIpsecGatewayDetails and assigns it to the IpsecGateway field.
+func (o *V1GatewaysPutRequestDetails) SetIpsecGateway(v V1ExtranetsB2bPeeringConsumerMatchIdPostRequestSiteToSiteVpnIpsecGatewayDetails) {
 	o.IpsecGateway = &v
 }
 

@@ -4,6 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**AdminEmail** | Pointer to **string** |  | [optional] 
 **CustomerId** | Pointer to **int64** |  | [optional] 
 **CustomerName** | Pointer to **string** |  | [optional] 
 **IsGraphiant** | Pointer to **bool** |  | [optional] 
@@ -28,6 +29,31 @@ will change when the set of required properties is changed
 NewV1InvitationEmailPostRequestWithDefaults instantiates a new V1InvitationEmailPostRequest object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
+
+### GetAdminEmail
+
+`func (o *V1InvitationEmailPostRequest) GetAdminEmail() string`
+
+GetAdminEmail returns the AdminEmail field if non-nil, zero value otherwise.
+
+### GetAdminEmailOk
+
+`func (o *V1InvitationEmailPostRequest) GetAdminEmailOk() (*string, bool)`
+
+GetAdminEmailOk returns a tuple with the AdminEmail field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAdminEmail
+
+`func (o *V1InvitationEmailPostRequest) SetAdminEmail(v string)`
+
+SetAdminEmail sets AdminEmail field to given value.
+
+### HasAdminEmail
+
+`func (o *V1InvitationEmailPostRequest) HasAdminEmail() bool`
+
+HasAdminEmail returns a boolean if a field has been set.
 
 ### GetCustomerId
 

@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**IncludeExcludeList** | Pointer to [**map[string]V1GlobalConfigPatchRequestSnmpsValueConfigNotifyFilterProfilesValueNotifyFilterProfileIncludeExcludeListValue**](V1GlobalConfigPatchRequestSnmpsValueConfigNotifyFilterProfilesValueNotifyFilterProfileIncludeExcludeListValue.md) |  | [optional] 
+**IncludeExcludeList** | Pointer to [**map[string]V2AssistantConversationInterfaceStateGet200Response**](V2AssistantConversationInterfaceStateGet200Response.md) |  | [optional] 
 **Name** | Pointer to **string** |  | [optional] 
 
 ## Methods
@@ -28,20 +28,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetIncludeExcludeList
 
-`func (o *V1GlobalConfigPatchRequestSnmpsValueConfigNotifyFilterProfilesValueNotifyFilterProfile) GetIncludeExcludeList() map[string]V1GlobalConfigPatchRequestSnmpsValueConfigNotifyFilterProfilesValueNotifyFilterProfileIncludeExcludeListValue`
+`func (o *V1GlobalConfigPatchRequestSnmpsValueConfigNotifyFilterProfilesValueNotifyFilterProfile) GetIncludeExcludeList() map[string]V2AssistantConversationInterfaceStateGet200Response`
 
 GetIncludeExcludeList returns the IncludeExcludeList field if non-nil, zero value otherwise.
 
 ### GetIncludeExcludeListOk
 
-`func (o *V1GlobalConfigPatchRequestSnmpsValueConfigNotifyFilterProfilesValueNotifyFilterProfile) GetIncludeExcludeListOk() (*map[string]V1GlobalConfigPatchRequestSnmpsValueConfigNotifyFilterProfilesValueNotifyFilterProfileIncludeExcludeListValue, bool)`
+`func (o *V1GlobalConfigPatchRequestSnmpsValueConfigNotifyFilterProfilesValueNotifyFilterProfile) GetIncludeExcludeListOk() (*map[string]V2AssistantConversationInterfaceStateGet200Response, bool)`
 
 GetIncludeExcludeListOk returns a tuple with the IncludeExcludeList field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetIncludeExcludeList
 
-`func (o *V1GlobalConfigPatchRequestSnmpsValueConfigNotifyFilterProfilesValueNotifyFilterProfile) SetIncludeExcludeList(v map[string]V1GlobalConfigPatchRequestSnmpsValueConfigNotifyFilterProfilesValueNotifyFilterProfileIncludeExcludeListValue)`
+`func (o *V1GlobalConfigPatchRequestSnmpsValueConfigNotifyFilterProfilesValueNotifyFilterProfile) SetIncludeExcludeList(v map[string]V2AssistantConversationInterfaceStateGet200Response)`
 
 SetIncludeExcludeList sets IncludeExcludeList field to given value.
 

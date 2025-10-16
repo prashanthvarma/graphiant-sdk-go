@@ -19,6 +19,7 @@ var _ MappedNullable = &V1InvitationEmailPostRequest{}
 
 // V1InvitationEmailPostRequest struct for V1InvitationEmailPostRequest
 type V1InvitationEmailPostRequest struct {
+	AdminEmail *string `json:"adminEmail,omitempty"`
 	CustomerId *int64 `json:"customerId,omitempty"`
 	CustomerName *string `json:"customerName,omitempty"`
 	IsGraphiant *bool `json:"isGraphiant,omitempty"`
@@ -41,6 +42,38 @@ func NewV1InvitationEmailPostRequest() *V1InvitationEmailPostRequest {
 func NewV1InvitationEmailPostRequestWithDefaults() *V1InvitationEmailPostRequest {
 	this := V1InvitationEmailPostRequest{}
 	return &this
+}
+
+// GetAdminEmail returns the AdminEmail field value if set, zero value otherwise.
+func (o *V1InvitationEmailPostRequest) GetAdminEmail() string {
+	if o == nil || IsNil(o.AdminEmail) {
+		var ret string
+		return ret
+	}
+	return *o.AdminEmail
+}
+
+// GetAdminEmailOk returns a tuple with the AdminEmail field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *V1InvitationEmailPostRequest) GetAdminEmailOk() (*string, bool) {
+	if o == nil || IsNil(o.AdminEmail) {
+		return nil, false
+	}
+	return o.AdminEmail, true
+}
+
+// HasAdminEmail returns a boolean if a field has been set.
+func (o *V1InvitationEmailPostRequest) HasAdminEmail() bool {
+	if o != nil && !IsNil(o.AdminEmail) {
+		return true
+	}
+
+	return false
+}
+
+// SetAdminEmail gets a reference to the given string and assigns it to the AdminEmail field.
+func (o *V1InvitationEmailPostRequest) SetAdminEmail(v string) {
+	o.AdminEmail = &v
 }
 
 // GetCustomerId returns the CustomerId field value if set, zero value otherwise.
@@ -213,6 +246,9 @@ func (o V1InvitationEmailPostRequest) MarshalJSON() ([]byte, error) {
 
 func (o V1InvitationEmailPostRequest) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
+	if !IsNil(o.AdminEmail) {
+		toSerialize["adminEmail"] = o.AdminEmail
+	}
 	if !IsNil(o.CustomerId) {
 		toSerialize["customerId"] = o.CustomerId
 	}

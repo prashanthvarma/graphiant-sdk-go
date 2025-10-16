@@ -19,7 +19,8 @@ var _ MappedNullable = &V1ExtranetsB2bPeeringMatchServiceToCustomerPost200Respon
 
 // V1ExtranetsB2bPeeringMatchServiceToCustomerPost200Response struct for V1ExtranetsB2bPeeringMatchServiceToCustomerPost200Response
 type V1ExtranetsB2bPeeringMatchServiceToCustomerPost200Response struct {
-	Service []V1ExtranetsB2bPeeringMatchServiceToCustomerPutRequestService `json:"service,omitempty"`
+	MatchId *int64 `json:"matchId,omitempty"`
+	Service []V1ExtranetsB2bPeeringMatchServiceToCustomerPostRequestService `json:"service,omitempty"`
 }
 
 // NewV1ExtranetsB2bPeeringMatchServiceToCustomerPost200Response instantiates a new V1ExtranetsB2bPeeringMatchServiceToCustomerPost200Response object
@@ -39,10 +40,42 @@ func NewV1ExtranetsB2bPeeringMatchServiceToCustomerPost200ResponseWithDefaults()
 	return &this
 }
 
+// GetMatchId returns the MatchId field value if set, zero value otherwise.
+func (o *V1ExtranetsB2bPeeringMatchServiceToCustomerPost200Response) GetMatchId() int64 {
+	if o == nil || IsNil(o.MatchId) {
+		var ret int64
+		return ret
+	}
+	return *o.MatchId
+}
+
+// GetMatchIdOk returns a tuple with the MatchId field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *V1ExtranetsB2bPeeringMatchServiceToCustomerPost200Response) GetMatchIdOk() (*int64, bool) {
+	if o == nil || IsNil(o.MatchId) {
+		return nil, false
+	}
+	return o.MatchId, true
+}
+
+// HasMatchId returns a boolean if a field has been set.
+func (o *V1ExtranetsB2bPeeringMatchServiceToCustomerPost200Response) HasMatchId() bool {
+	if o != nil && !IsNil(o.MatchId) {
+		return true
+	}
+
+	return false
+}
+
+// SetMatchId gets a reference to the given int64 and assigns it to the MatchId field.
+func (o *V1ExtranetsB2bPeeringMatchServiceToCustomerPost200Response) SetMatchId(v int64) {
+	o.MatchId = &v
+}
+
 // GetService returns the Service field value if set, zero value otherwise.
-func (o *V1ExtranetsB2bPeeringMatchServiceToCustomerPost200Response) GetService() []V1ExtranetsB2bPeeringMatchServiceToCustomerPutRequestService {
+func (o *V1ExtranetsB2bPeeringMatchServiceToCustomerPost200Response) GetService() []V1ExtranetsB2bPeeringMatchServiceToCustomerPostRequestService {
 	if o == nil || IsNil(o.Service) {
-		var ret []V1ExtranetsB2bPeeringMatchServiceToCustomerPutRequestService
+		var ret []V1ExtranetsB2bPeeringMatchServiceToCustomerPostRequestService
 		return ret
 	}
 	return o.Service
@@ -50,7 +83,7 @@ func (o *V1ExtranetsB2bPeeringMatchServiceToCustomerPost200Response) GetService(
 
 // GetServiceOk returns a tuple with the Service field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *V1ExtranetsB2bPeeringMatchServiceToCustomerPost200Response) GetServiceOk() ([]V1ExtranetsB2bPeeringMatchServiceToCustomerPutRequestService, bool) {
+func (o *V1ExtranetsB2bPeeringMatchServiceToCustomerPost200Response) GetServiceOk() ([]V1ExtranetsB2bPeeringMatchServiceToCustomerPostRequestService, bool) {
 	if o == nil || IsNil(o.Service) {
 		return nil, false
 	}
@@ -66,8 +99,8 @@ func (o *V1ExtranetsB2bPeeringMatchServiceToCustomerPost200Response) HasService(
 	return false
 }
 
-// SetService gets a reference to the given []V1ExtranetsB2bPeeringMatchServiceToCustomerPutRequestService and assigns it to the Service field.
-func (o *V1ExtranetsB2bPeeringMatchServiceToCustomerPost200Response) SetService(v []V1ExtranetsB2bPeeringMatchServiceToCustomerPutRequestService) {
+// SetService gets a reference to the given []V1ExtranetsB2bPeeringMatchServiceToCustomerPostRequestService and assigns it to the Service field.
+func (o *V1ExtranetsB2bPeeringMatchServiceToCustomerPost200Response) SetService(v []V1ExtranetsB2bPeeringMatchServiceToCustomerPostRequestService) {
 	o.Service = v
 }
 
@@ -81,6 +114,9 @@ func (o V1ExtranetsB2bPeeringMatchServiceToCustomerPost200Response) MarshalJSON(
 
 func (o V1ExtranetsB2bPeeringMatchServiceToCustomerPost200Response) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
+	if !IsNil(o.MatchId) {
+		toSerialize["matchId"] = o.MatchId
+	}
 	if !IsNil(o.Service) {
 		toSerialize["service"] = o.Service
 	}

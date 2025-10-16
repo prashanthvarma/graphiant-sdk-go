@@ -5,8 +5,10 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Description** | Pointer to **string** |  | [optional] 
+**GlobalObjectDeviceSummaries** | Pointer to [**map[string]V1ExtranetsB2bPostRequestPolicyGlobalObjectDeviceSummariesValue**](V1ExtranetsB2bPostRequestPolicyGlobalObjectDeviceSummariesValue.md) |  | [optional] 
+**GlobalObjectSummaries** | Pointer to [**map[string]V1ExtranetsB2bPostRequestPolicyGlobalObjectDeviceSummariesValue**](V1ExtranetsB2bPostRequestPolicyGlobalObjectDeviceSummariesValue.md) |  | [optional] 
 **NatPools** | Pointer to **[]string** |  | [optional] 
-**PrefixTags** | Pointer to [**[]V1ExtranetsB2bPeeringMatchServiceToCustomerPutRequestServiceServicePrefixesInner**](V1ExtranetsB2bPeeringMatchServiceToCustomerPutRequestServiceServicePrefixesInner.md) |  | [optional] 
+**PrefixTags** | Pointer to [**[]V1ExtranetsB2bPeeringMatchServiceToCustomerPostRequestServiceServicePrefixesInner**](V1ExtranetsB2bPeeringMatchServiceToCustomerPostRequestServiceServicePrefixesInner.md) |  | [optional] 
 **Profiles** | Pointer to [**[]V1ExtranetsB2bPostRequestPolicyProfilesInner**](V1ExtranetsB2bPostRequestPolicyProfilesInner.md) |  | [optional] 
 **ServiceLanSegment** | Pointer to **int64** |  | [optional] 
 **ServicePrefixes** | Pointer to **[]string** |  | [optional] 
@@ -60,6 +62,56 @@ SetDescription sets Description field to given value.
 
 HasDescription returns a boolean if a field has been set.
 
+### GetGlobalObjectDeviceSummaries
+
+`func (o *V1ExtranetsB2bPostRequestPolicy) GetGlobalObjectDeviceSummaries() map[string]V1ExtranetsB2bPostRequestPolicyGlobalObjectDeviceSummariesValue`
+
+GetGlobalObjectDeviceSummaries returns the GlobalObjectDeviceSummaries field if non-nil, zero value otherwise.
+
+### GetGlobalObjectDeviceSummariesOk
+
+`func (o *V1ExtranetsB2bPostRequestPolicy) GetGlobalObjectDeviceSummariesOk() (*map[string]V1ExtranetsB2bPostRequestPolicyGlobalObjectDeviceSummariesValue, bool)`
+
+GetGlobalObjectDeviceSummariesOk returns a tuple with the GlobalObjectDeviceSummaries field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetGlobalObjectDeviceSummaries
+
+`func (o *V1ExtranetsB2bPostRequestPolicy) SetGlobalObjectDeviceSummaries(v map[string]V1ExtranetsB2bPostRequestPolicyGlobalObjectDeviceSummariesValue)`
+
+SetGlobalObjectDeviceSummaries sets GlobalObjectDeviceSummaries field to given value.
+
+### HasGlobalObjectDeviceSummaries
+
+`func (o *V1ExtranetsB2bPostRequestPolicy) HasGlobalObjectDeviceSummaries() bool`
+
+HasGlobalObjectDeviceSummaries returns a boolean if a field has been set.
+
+### GetGlobalObjectSummaries
+
+`func (o *V1ExtranetsB2bPostRequestPolicy) GetGlobalObjectSummaries() map[string]V1ExtranetsB2bPostRequestPolicyGlobalObjectDeviceSummariesValue`
+
+GetGlobalObjectSummaries returns the GlobalObjectSummaries field if non-nil, zero value otherwise.
+
+### GetGlobalObjectSummariesOk
+
+`func (o *V1ExtranetsB2bPostRequestPolicy) GetGlobalObjectSummariesOk() (*map[string]V1ExtranetsB2bPostRequestPolicyGlobalObjectDeviceSummariesValue, bool)`
+
+GetGlobalObjectSummariesOk returns a tuple with the GlobalObjectSummaries field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetGlobalObjectSummaries
+
+`func (o *V1ExtranetsB2bPostRequestPolicy) SetGlobalObjectSummaries(v map[string]V1ExtranetsB2bPostRequestPolicyGlobalObjectDeviceSummariesValue)`
+
+SetGlobalObjectSummaries sets GlobalObjectSummaries field to given value.
+
+### HasGlobalObjectSummaries
+
+`func (o *V1ExtranetsB2bPostRequestPolicy) HasGlobalObjectSummaries() bool`
+
+HasGlobalObjectSummaries returns a boolean if a field has been set.
+
 ### GetNatPools
 
 `func (o *V1ExtranetsB2bPostRequestPolicy) GetNatPools() []string`
@@ -87,20 +139,20 @@ HasNatPools returns a boolean if a field has been set.
 
 ### GetPrefixTags
 
-`func (o *V1ExtranetsB2bPostRequestPolicy) GetPrefixTags() []V1ExtranetsB2bPeeringMatchServiceToCustomerPutRequestServiceServicePrefixesInner`
+`func (o *V1ExtranetsB2bPostRequestPolicy) GetPrefixTags() []V1ExtranetsB2bPeeringMatchServiceToCustomerPostRequestServiceServicePrefixesInner`
 
 GetPrefixTags returns the PrefixTags field if non-nil, zero value otherwise.
 
 ### GetPrefixTagsOk
 
-`func (o *V1ExtranetsB2bPostRequestPolicy) GetPrefixTagsOk() (*[]V1ExtranetsB2bPeeringMatchServiceToCustomerPutRequestServiceServicePrefixesInner, bool)`
+`func (o *V1ExtranetsB2bPostRequestPolicy) GetPrefixTagsOk() (*[]V1ExtranetsB2bPeeringMatchServiceToCustomerPostRequestServiceServicePrefixesInner, bool)`
 
 GetPrefixTagsOk returns a tuple with the PrefixTags field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetPrefixTags
 
-`func (o *V1ExtranetsB2bPostRequestPolicy) SetPrefixTags(v []V1ExtranetsB2bPeeringMatchServiceToCustomerPutRequestServiceServicePrefixesInner)`
+`func (o *V1ExtranetsB2bPostRequestPolicy) SetPrefixTags(v []V1ExtranetsB2bPeeringMatchServiceToCustomerPostRequestServiceServicePrefixesInner)`
 
 SetPrefixTags sets PrefixTags field to given value.
 

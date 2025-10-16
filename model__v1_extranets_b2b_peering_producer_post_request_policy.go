@@ -20,7 +20,8 @@ var _ MappedNullable = &V1ExtranetsB2bPeeringProducerPostRequestPolicy{}
 // V1ExtranetsB2bPeeringProducerPostRequestPolicy struct for V1ExtranetsB2bPeeringProducerPostRequestPolicy
 type V1ExtranetsB2bPeeringProducerPostRequestPolicy struct {
 	Description *string `json:"description,omitempty"`
-	PrefixTags []V1ExtranetsB2bPeeringMatchServiceToCustomerPutRequestServiceServicePrefixesInner `json:"prefixTags,omitempty"`
+	GlobalObjectOps *map[string]V1ExtranetsB2bPeeringConsumerMatchIdPostRequestGlobalObjectOpsValue `json:"globalObjectOps,omitempty"`
+	PrefixTags []V1ExtranetsB2bPeeringMatchServiceToCustomerPostRequestServiceServicePrefixesInner `json:"prefixTags,omitempty"`
 	ServiceLanSegment *int64 `json:"serviceLanSegment,omitempty"`
 	Site []V1ExtranetsB2bConsumerPostRequestSiteInformationInner `json:"site,omitempty"`
 	Type *string `json:"type,omitempty"`
@@ -75,10 +76,42 @@ func (o *V1ExtranetsB2bPeeringProducerPostRequestPolicy) SetDescription(v string
 	o.Description = &v
 }
 
+// GetGlobalObjectOps returns the GlobalObjectOps field value if set, zero value otherwise.
+func (o *V1ExtranetsB2bPeeringProducerPostRequestPolicy) GetGlobalObjectOps() map[string]V1ExtranetsB2bPeeringConsumerMatchIdPostRequestGlobalObjectOpsValue {
+	if o == nil || IsNil(o.GlobalObjectOps) {
+		var ret map[string]V1ExtranetsB2bPeeringConsumerMatchIdPostRequestGlobalObjectOpsValue
+		return ret
+	}
+	return *o.GlobalObjectOps
+}
+
+// GetGlobalObjectOpsOk returns a tuple with the GlobalObjectOps field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *V1ExtranetsB2bPeeringProducerPostRequestPolicy) GetGlobalObjectOpsOk() (*map[string]V1ExtranetsB2bPeeringConsumerMatchIdPostRequestGlobalObjectOpsValue, bool) {
+	if o == nil || IsNil(o.GlobalObjectOps) {
+		return nil, false
+	}
+	return o.GlobalObjectOps, true
+}
+
+// HasGlobalObjectOps returns a boolean if a field has been set.
+func (o *V1ExtranetsB2bPeeringProducerPostRequestPolicy) HasGlobalObjectOps() bool {
+	if o != nil && !IsNil(o.GlobalObjectOps) {
+		return true
+	}
+
+	return false
+}
+
+// SetGlobalObjectOps gets a reference to the given map[string]V1ExtranetsB2bPeeringConsumerMatchIdPostRequestGlobalObjectOpsValue and assigns it to the GlobalObjectOps field.
+func (o *V1ExtranetsB2bPeeringProducerPostRequestPolicy) SetGlobalObjectOps(v map[string]V1ExtranetsB2bPeeringConsumerMatchIdPostRequestGlobalObjectOpsValue) {
+	o.GlobalObjectOps = &v
+}
+
 // GetPrefixTags returns the PrefixTags field value if set, zero value otherwise.
-func (o *V1ExtranetsB2bPeeringProducerPostRequestPolicy) GetPrefixTags() []V1ExtranetsB2bPeeringMatchServiceToCustomerPutRequestServiceServicePrefixesInner {
+func (o *V1ExtranetsB2bPeeringProducerPostRequestPolicy) GetPrefixTags() []V1ExtranetsB2bPeeringMatchServiceToCustomerPostRequestServiceServicePrefixesInner {
 	if o == nil || IsNil(o.PrefixTags) {
-		var ret []V1ExtranetsB2bPeeringMatchServiceToCustomerPutRequestServiceServicePrefixesInner
+		var ret []V1ExtranetsB2bPeeringMatchServiceToCustomerPostRequestServiceServicePrefixesInner
 		return ret
 	}
 	return o.PrefixTags
@@ -86,7 +119,7 @@ func (o *V1ExtranetsB2bPeeringProducerPostRequestPolicy) GetPrefixTags() []V1Ext
 
 // GetPrefixTagsOk returns a tuple with the PrefixTags field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *V1ExtranetsB2bPeeringProducerPostRequestPolicy) GetPrefixTagsOk() ([]V1ExtranetsB2bPeeringMatchServiceToCustomerPutRequestServiceServicePrefixesInner, bool) {
+func (o *V1ExtranetsB2bPeeringProducerPostRequestPolicy) GetPrefixTagsOk() ([]V1ExtranetsB2bPeeringMatchServiceToCustomerPostRequestServiceServicePrefixesInner, bool) {
 	if o == nil || IsNil(o.PrefixTags) {
 		return nil, false
 	}
@@ -102,8 +135,8 @@ func (o *V1ExtranetsB2bPeeringProducerPostRequestPolicy) HasPrefixTags() bool {
 	return false
 }
 
-// SetPrefixTags gets a reference to the given []V1ExtranetsB2bPeeringMatchServiceToCustomerPutRequestServiceServicePrefixesInner and assigns it to the PrefixTags field.
-func (o *V1ExtranetsB2bPeeringProducerPostRequestPolicy) SetPrefixTags(v []V1ExtranetsB2bPeeringMatchServiceToCustomerPutRequestServiceServicePrefixesInner) {
+// SetPrefixTags gets a reference to the given []V1ExtranetsB2bPeeringMatchServiceToCustomerPostRequestServiceServicePrefixesInner and assigns it to the PrefixTags field.
+func (o *V1ExtranetsB2bPeeringProducerPostRequestPolicy) SetPrefixTags(v []V1ExtranetsB2bPeeringMatchServiceToCustomerPostRequestServiceServicePrefixesInner) {
 	o.PrefixTags = v
 }
 
@@ -215,6 +248,9 @@ func (o V1ExtranetsB2bPeeringProducerPostRequestPolicy) ToMap() (map[string]inte
 	toSerialize := map[string]interface{}{}
 	if !IsNil(o.Description) {
 		toSerialize["description"] = o.Description
+	}
+	if !IsNil(o.GlobalObjectOps) {
+		toSerialize["globalObjectOps"] = o.GlobalObjectOps
 	}
 	if !IsNil(o.PrefixTags) {
 		toSerialize["prefixTags"] = o.PrefixTags
