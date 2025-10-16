@@ -5,7 +5,8 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Description** | Pointer to **string** |  | [optional] 
-**PrefixTags** | Pointer to [**[]V1ExtranetsB2bPeeringMatchServiceToCustomerPutRequestServiceServicePrefixesInner**](V1ExtranetsB2bPeeringMatchServiceToCustomerPutRequestServiceServicePrefixesInner.md) |  | [optional] 
+**GlobalObjectOps** | Pointer to [**map[string]V1ExtranetsB2bPeeringConsumerMatchIdPostRequestGlobalObjectOpsValue**](V1ExtranetsB2bPeeringConsumerMatchIdPostRequestGlobalObjectOpsValue.md) |  | [optional] 
+**PrefixTags** | Pointer to [**[]V1ExtranetsB2bPeeringMatchServiceToCustomerPostRequestServiceServicePrefixesInner**](V1ExtranetsB2bPeeringMatchServiceToCustomerPostRequestServiceServicePrefixesInner.md) |  | [optional] 
 **ServiceLanSegment** | Pointer to **int64** |  | [optional] 
 **Site** | Pointer to [**[]V1ExtranetsB2bConsumerPostRequestSiteInformationInner**](V1ExtranetsB2bConsumerPostRequestSiteInformationInner.md) |  | [optional] 
 **Type** | Pointer to **string** |  | [optional] 
@@ -54,22 +55,47 @@ SetDescription sets Description field to given value.
 
 HasDescription returns a boolean if a field has been set.
 
+### GetGlobalObjectOps
+
+`func (o *V1ExtranetsB2bPeeringProducerPostRequestPolicy) GetGlobalObjectOps() map[string]V1ExtranetsB2bPeeringConsumerMatchIdPostRequestGlobalObjectOpsValue`
+
+GetGlobalObjectOps returns the GlobalObjectOps field if non-nil, zero value otherwise.
+
+### GetGlobalObjectOpsOk
+
+`func (o *V1ExtranetsB2bPeeringProducerPostRequestPolicy) GetGlobalObjectOpsOk() (*map[string]V1ExtranetsB2bPeeringConsumerMatchIdPostRequestGlobalObjectOpsValue, bool)`
+
+GetGlobalObjectOpsOk returns a tuple with the GlobalObjectOps field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetGlobalObjectOps
+
+`func (o *V1ExtranetsB2bPeeringProducerPostRequestPolicy) SetGlobalObjectOps(v map[string]V1ExtranetsB2bPeeringConsumerMatchIdPostRequestGlobalObjectOpsValue)`
+
+SetGlobalObjectOps sets GlobalObjectOps field to given value.
+
+### HasGlobalObjectOps
+
+`func (o *V1ExtranetsB2bPeeringProducerPostRequestPolicy) HasGlobalObjectOps() bool`
+
+HasGlobalObjectOps returns a boolean if a field has been set.
+
 ### GetPrefixTags
 
-`func (o *V1ExtranetsB2bPeeringProducerPostRequestPolicy) GetPrefixTags() []V1ExtranetsB2bPeeringMatchServiceToCustomerPutRequestServiceServicePrefixesInner`
+`func (o *V1ExtranetsB2bPeeringProducerPostRequestPolicy) GetPrefixTags() []V1ExtranetsB2bPeeringMatchServiceToCustomerPostRequestServiceServicePrefixesInner`
 
 GetPrefixTags returns the PrefixTags field if non-nil, zero value otherwise.
 
 ### GetPrefixTagsOk
 
-`func (o *V1ExtranetsB2bPeeringProducerPostRequestPolicy) GetPrefixTagsOk() (*[]V1ExtranetsB2bPeeringMatchServiceToCustomerPutRequestServiceServicePrefixesInner, bool)`
+`func (o *V1ExtranetsB2bPeeringProducerPostRequestPolicy) GetPrefixTagsOk() (*[]V1ExtranetsB2bPeeringMatchServiceToCustomerPostRequestServiceServicePrefixesInner, bool)`
 
 GetPrefixTagsOk returns a tuple with the PrefixTags field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetPrefixTags
 
-`func (o *V1ExtranetsB2bPeeringProducerPostRequestPolicy) SetPrefixTags(v []V1ExtranetsB2bPeeringMatchServiceToCustomerPutRequestServiceServicePrefixesInner)`
+`func (o *V1ExtranetsB2bPeeringProducerPostRequestPolicy) SetPrefixTags(v []V1ExtranetsB2bPeeringMatchServiceToCustomerPostRequestServiceServicePrefixesInner)`
 
 SetPrefixTags sets PrefixTags field to given value.
 

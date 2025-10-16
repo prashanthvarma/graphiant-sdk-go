@@ -20,8 +20,10 @@ var _ MappedNullable = &V1ExtranetsB2bPostRequestPolicy{}
 // V1ExtranetsB2bPostRequestPolicy struct for V1ExtranetsB2bPostRequestPolicy
 type V1ExtranetsB2bPostRequestPolicy struct {
 	Description *string `json:"description,omitempty"`
+	GlobalObjectDeviceSummaries *map[string]V1ExtranetsB2bPostRequestPolicyGlobalObjectDeviceSummariesValue `json:"globalObjectDeviceSummaries,omitempty"`
+	GlobalObjectSummaries *map[string]V1ExtranetsB2bPostRequestPolicyGlobalObjectDeviceSummariesValue `json:"globalObjectSummaries,omitempty"`
 	NatPools []string `json:"natPools,omitempty"`
-	PrefixTags []V1ExtranetsB2bPeeringMatchServiceToCustomerPutRequestServiceServicePrefixesInner `json:"prefixTags,omitempty"`
+	PrefixTags []V1ExtranetsB2bPeeringMatchServiceToCustomerPostRequestServiceServicePrefixesInner `json:"prefixTags,omitempty"`
 	Profiles []V1ExtranetsB2bPostRequestPolicyProfilesInner `json:"profiles,omitempty"`
 	ServiceLanSegment *int64 `json:"serviceLanSegment,omitempty"`
 	ServicePrefixes []string `json:"servicePrefixes,omitempty"`
@@ -81,6 +83,70 @@ func (o *V1ExtranetsB2bPostRequestPolicy) SetDescription(v string) {
 	o.Description = &v
 }
 
+// GetGlobalObjectDeviceSummaries returns the GlobalObjectDeviceSummaries field value if set, zero value otherwise.
+func (o *V1ExtranetsB2bPostRequestPolicy) GetGlobalObjectDeviceSummaries() map[string]V1ExtranetsB2bPostRequestPolicyGlobalObjectDeviceSummariesValue {
+	if o == nil || IsNil(o.GlobalObjectDeviceSummaries) {
+		var ret map[string]V1ExtranetsB2bPostRequestPolicyGlobalObjectDeviceSummariesValue
+		return ret
+	}
+	return *o.GlobalObjectDeviceSummaries
+}
+
+// GetGlobalObjectDeviceSummariesOk returns a tuple with the GlobalObjectDeviceSummaries field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *V1ExtranetsB2bPostRequestPolicy) GetGlobalObjectDeviceSummariesOk() (*map[string]V1ExtranetsB2bPostRequestPolicyGlobalObjectDeviceSummariesValue, bool) {
+	if o == nil || IsNil(o.GlobalObjectDeviceSummaries) {
+		return nil, false
+	}
+	return o.GlobalObjectDeviceSummaries, true
+}
+
+// HasGlobalObjectDeviceSummaries returns a boolean if a field has been set.
+func (o *V1ExtranetsB2bPostRequestPolicy) HasGlobalObjectDeviceSummaries() bool {
+	if o != nil && !IsNil(o.GlobalObjectDeviceSummaries) {
+		return true
+	}
+
+	return false
+}
+
+// SetGlobalObjectDeviceSummaries gets a reference to the given map[string]V1ExtranetsB2bPostRequestPolicyGlobalObjectDeviceSummariesValue and assigns it to the GlobalObjectDeviceSummaries field.
+func (o *V1ExtranetsB2bPostRequestPolicy) SetGlobalObjectDeviceSummaries(v map[string]V1ExtranetsB2bPostRequestPolicyGlobalObjectDeviceSummariesValue) {
+	o.GlobalObjectDeviceSummaries = &v
+}
+
+// GetGlobalObjectSummaries returns the GlobalObjectSummaries field value if set, zero value otherwise.
+func (o *V1ExtranetsB2bPostRequestPolicy) GetGlobalObjectSummaries() map[string]V1ExtranetsB2bPostRequestPolicyGlobalObjectDeviceSummariesValue {
+	if o == nil || IsNil(o.GlobalObjectSummaries) {
+		var ret map[string]V1ExtranetsB2bPostRequestPolicyGlobalObjectDeviceSummariesValue
+		return ret
+	}
+	return *o.GlobalObjectSummaries
+}
+
+// GetGlobalObjectSummariesOk returns a tuple with the GlobalObjectSummaries field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *V1ExtranetsB2bPostRequestPolicy) GetGlobalObjectSummariesOk() (*map[string]V1ExtranetsB2bPostRequestPolicyGlobalObjectDeviceSummariesValue, bool) {
+	if o == nil || IsNil(o.GlobalObjectSummaries) {
+		return nil, false
+	}
+	return o.GlobalObjectSummaries, true
+}
+
+// HasGlobalObjectSummaries returns a boolean if a field has been set.
+func (o *V1ExtranetsB2bPostRequestPolicy) HasGlobalObjectSummaries() bool {
+	if o != nil && !IsNil(o.GlobalObjectSummaries) {
+		return true
+	}
+
+	return false
+}
+
+// SetGlobalObjectSummaries gets a reference to the given map[string]V1ExtranetsB2bPostRequestPolicyGlobalObjectDeviceSummariesValue and assigns it to the GlobalObjectSummaries field.
+func (o *V1ExtranetsB2bPostRequestPolicy) SetGlobalObjectSummaries(v map[string]V1ExtranetsB2bPostRequestPolicyGlobalObjectDeviceSummariesValue) {
+	o.GlobalObjectSummaries = &v
+}
+
 // GetNatPools returns the NatPools field value if set, zero value otherwise.
 func (o *V1ExtranetsB2bPostRequestPolicy) GetNatPools() []string {
 	if o == nil || IsNil(o.NatPools) {
@@ -114,9 +180,9 @@ func (o *V1ExtranetsB2bPostRequestPolicy) SetNatPools(v []string) {
 }
 
 // GetPrefixTags returns the PrefixTags field value if set, zero value otherwise.
-func (o *V1ExtranetsB2bPostRequestPolicy) GetPrefixTags() []V1ExtranetsB2bPeeringMatchServiceToCustomerPutRequestServiceServicePrefixesInner {
+func (o *V1ExtranetsB2bPostRequestPolicy) GetPrefixTags() []V1ExtranetsB2bPeeringMatchServiceToCustomerPostRequestServiceServicePrefixesInner {
 	if o == nil || IsNil(o.PrefixTags) {
-		var ret []V1ExtranetsB2bPeeringMatchServiceToCustomerPutRequestServiceServicePrefixesInner
+		var ret []V1ExtranetsB2bPeeringMatchServiceToCustomerPostRequestServiceServicePrefixesInner
 		return ret
 	}
 	return o.PrefixTags
@@ -124,7 +190,7 @@ func (o *V1ExtranetsB2bPostRequestPolicy) GetPrefixTags() []V1ExtranetsB2bPeerin
 
 // GetPrefixTagsOk returns a tuple with the PrefixTags field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *V1ExtranetsB2bPostRequestPolicy) GetPrefixTagsOk() ([]V1ExtranetsB2bPeeringMatchServiceToCustomerPutRequestServiceServicePrefixesInner, bool) {
+func (o *V1ExtranetsB2bPostRequestPolicy) GetPrefixTagsOk() ([]V1ExtranetsB2bPeeringMatchServiceToCustomerPostRequestServiceServicePrefixesInner, bool) {
 	if o == nil || IsNil(o.PrefixTags) {
 		return nil, false
 	}
@@ -140,8 +206,8 @@ func (o *V1ExtranetsB2bPostRequestPolicy) HasPrefixTags() bool {
 	return false
 }
 
-// SetPrefixTags gets a reference to the given []V1ExtranetsB2bPeeringMatchServiceToCustomerPutRequestServiceServicePrefixesInner and assigns it to the PrefixTags field.
-func (o *V1ExtranetsB2bPostRequestPolicy) SetPrefixTags(v []V1ExtranetsB2bPeeringMatchServiceToCustomerPutRequestServiceServicePrefixesInner) {
+// SetPrefixTags gets a reference to the given []V1ExtranetsB2bPeeringMatchServiceToCustomerPostRequestServiceServicePrefixesInner and assigns it to the PrefixTags field.
+func (o *V1ExtranetsB2bPostRequestPolicy) SetPrefixTags(v []V1ExtranetsB2bPeeringMatchServiceToCustomerPostRequestServiceServicePrefixesInner) {
 	o.PrefixTags = v
 }
 
@@ -413,6 +479,12 @@ func (o V1ExtranetsB2bPostRequestPolicy) ToMap() (map[string]interface{}, error)
 	toSerialize := map[string]interface{}{}
 	if !IsNil(o.Description) {
 		toSerialize["description"] = o.Description
+	}
+	if !IsNil(o.GlobalObjectDeviceSummaries) {
+		toSerialize["globalObjectDeviceSummaries"] = o.GlobalObjectDeviceSummaries
+	}
+	if !IsNil(o.GlobalObjectSummaries) {
+		toSerialize["globalObjectSummaries"] = o.GlobalObjectSummaries
 	}
 	if !IsNil(o.NatPools) {
 		toSerialize["natPools"] = o.NatPools

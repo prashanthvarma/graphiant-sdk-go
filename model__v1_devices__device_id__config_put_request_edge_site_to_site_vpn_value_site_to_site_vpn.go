@@ -33,7 +33,7 @@ type V1DevicesDeviceIdConfigPutRequestEdgeSiteToSiteVpnValueSiteToSiteVpn struct
 	RemoteAddressV4 *string `json:"remoteAddressV4,omitempty"`
 	RemoteAddressV6 *string `json:"remoteAddressV6,omitempty"`
 	RemoteIkePeerIdentity *string `json:"remoteIkePeerIdentity,omitempty"`
-	Routing *V1ExtranetsB2bPeeringConsumerIdPostRequestSiteToSiteVpnIpsecGatewayDetailsRouting `json:"routing,omitempty"`
+	Routing *V1ExtranetsB2bPeeringConsumerMatchIdPostRequestSiteToSiteVpnIpsecGatewayDetailsRouting `json:"routing,omitempty"`
 	TcpMss *int32 `json:"tcpMss,omitempty"`
 	VpnProfile *string `json:"vpnProfile,omitempty"`
 }
@@ -504,9 +504,9 @@ func (o *V1DevicesDeviceIdConfigPutRequestEdgeSiteToSiteVpnValueSiteToSiteVpn) S
 }
 
 // GetRouting returns the Routing field value if set, zero value otherwise.
-func (o *V1DevicesDeviceIdConfigPutRequestEdgeSiteToSiteVpnValueSiteToSiteVpn) GetRouting() V1ExtranetsB2bPeeringConsumerIdPostRequestSiteToSiteVpnIpsecGatewayDetailsRouting {
+func (o *V1DevicesDeviceIdConfigPutRequestEdgeSiteToSiteVpnValueSiteToSiteVpn) GetRouting() V1ExtranetsB2bPeeringConsumerMatchIdPostRequestSiteToSiteVpnIpsecGatewayDetailsRouting {
 	if o == nil || IsNil(o.Routing) {
-		var ret V1ExtranetsB2bPeeringConsumerIdPostRequestSiteToSiteVpnIpsecGatewayDetailsRouting
+		var ret V1ExtranetsB2bPeeringConsumerMatchIdPostRequestSiteToSiteVpnIpsecGatewayDetailsRouting
 		return ret
 	}
 	return *o.Routing
@@ -514,7 +514,7 @@ func (o *V1DevicesDeviceIdConfigPutRequestEdgeSiteToSiteVpnValueSiteToSiteVpn) G
 
 // GetRoutingOk returns a tuple with the Routing field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *V1DevicesDeviceIdConfigPutRequestEdgeSiteToSiteVpnValueSiteToSiteVpn) GetRoutingOk() (*V1ExtranetsB2bPeeringConsumerIdPostRequestSiteToSiteVpnIpsecGatewayDetailsRouting, bool) {
+func (o *V1DevicesDeviceIdConfigPutRequestEdgeSiteToSiteVpnValueSiteToSiteVpn) GetRoutingOk() (*V1ExtranetsB2bPeeringConsumerMatchIdPostRequestSiteToSiteVpnIpsecGatewayDetailsRouting, bool) {
 	if o == nil || IsNil(o.Routing) {
 		return nil, false
 	}
@@ -530,8 +530,8 @@ func (o *V1DevicesDeviceIdConfigPutRequestEdgeSiteToSiteVpnValueSiteToSiteVpn) H
 	return false
 }
 
-// SetRouting gets a reference to the given V1ExtranetsB2bPeeringConsumerIdPostRequestSiteToSiteVpnIpsecGatewayDetailsRouting and assigns it to the Routing field.
-func (o *V1DevicesDeviceIdConfigPutRequestEdgeSiteToSiteVpnValueSiteToSiteVpn) SetRouting(v V1ExtranetsB2bPeeringConsumerIdPostRequestSiteToSiteVpnIpsecGatewayDetailsRouting) {
+// SetRouting gets a reference to the given V1ExtranetsB2bPeeringConsumerMatchIdPostRequestSiteToSiteVpnIpsecGatewayDetailsRouting and assigns it to the Routing field.
+func (o *V1DevicesDeviceIdConfigPutRequestEdgeSiteToSiteVpnValueSiteToSiteVpn) SetRouting(v V1ExtranetsB2bPeeringConsumerMatchIdPostRequestSiteToSiteVpnIpsecGatewayDetailsRouting) {
 	o.Routing = &v
 }
 

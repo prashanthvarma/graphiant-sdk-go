@@ -21,6 +21,7 @@ var _ MappedNullable = &V1TempPasswordPutRequest{}
 type V1TempPasswordPutRequest struct {
 	CustomerName *string `json:"customerName,omitempty"`
 	Emails []string `json:"emails,omitempty"`
+	MatchId *int64 `json:"matchId,omitempty"`
 	ServiceName *string `json:"serviceName,omitempty"`
 }
 
@@ -105,6 +106,38 @@ func (o *V1TempPasswordPutRequest) SetEmails(v []string) {
 	o.Emails = v
 }
 
+// GetMatchId returns the MatchId field value if set, zero value otherwise.
+func (o *V1TempPasswordPutRequest) GetMatchId() int64 {
+	if o == nil || IsNil(o.MatchId) {
+		var ret int64
+		return ret
+	}
+	return *o.MatchId
+}
+
+// GetMatchIdOk returns a tuple with the MatchId field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *V1TempPasswordPutRequest) GetMatchIdOk() (*int64, bool) {
+	if o == nil || IsNil(o.MatchId) {
+		return nil, false
+	}
+	return o.MatchId, true
+}
+
+// HasMatchId returns a boolean if a field has been set.
+func (o *V1TempPasswordPutRequest) HasMatchId() bool {
+	if o != nil && !IsNil(o.MatchId) {
+		return true
+	}
+
+	return false
+}
+
+// SetMatchId gets a reference to the given int64 and assigns it to the MatchId field.
+func (o *V1TempPasswordPutRequest) SetMatchId(v int64) {
+	o.MatchId = &v
+}
+
 // GetServiceName returns the ServiceName field value if set, zero value otherwise.
 func (o *V1TempPasswordPutRequest) GetServiceName() string {
 	if o == nil || IsNil(o.ServiceName) {
@@ -152,6 +185,9 @@ func (o V1TempPasswordPutRequest) ToMap() (map[string]interface{}, error) {
 	}
 	if !IsNil(o.Emails) {
 		toSerialize["emails"] = o.Emails
+	}
+	if !IsNil(o.MatchId) {
+		toSerialize["matchId"] = o.MatchId
 	}
 	if !IsNil(o.ServiceName) {
 		toSerialize["serviceName"] = o.ServiceName

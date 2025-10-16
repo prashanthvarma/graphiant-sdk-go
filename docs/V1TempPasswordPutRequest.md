@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **CustomerName** | Pointer to **string** |  | [optional] 
 **Emails** | Pointer to **[]string** |  | [optional] 
+**MatchId** | Pointer to **int64** |  | [optional] 
 **ServiceName** | Pointer to **string** |  | [optional] 
 
 ## Methods
@@ -76,6 +77,31 @@ SetEmails sets Emails field to given value.
 `func (o *V1TempPasswordPutRequest) HasEmails() bool`
 
 HasEmails returns a boolean if a field has been set.
+
+### GetMatchId
+
+`func (o *V1TempPasswordPutRequest) GetMatchId() int64`
+
+GetMatchId returns the MatchId field if non-nil, zero value otherwise.
+
+### GetMatchIdOk
+
+`func (o *V1TempPasswordPutRequest) GetMatchIdOk() (*int64, bool)`
+
+GetMatchIdOk returns a tuple with the MatchId field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMatchId
+
+`func (o *V1TempPasswordPutRequest) SetMatchId(v int64)`
+
+SetMatchId sets MatchId field to given value.
+
+### HasMatchId
+
+`func (o *V1TempPasswordPutRequest) HasMatchId() bool`
+
+HasMatchId returns a boolean if a field has been set.
 
 ### GetServiceName
 

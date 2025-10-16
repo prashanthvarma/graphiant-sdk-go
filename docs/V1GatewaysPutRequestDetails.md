@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **Azure** | Pointer to [**V1GatewaysPutRequestDetailsAzure**](V1GatewaysPutRequestDetailsAzure.md) |  | [optional] 
 **Description** | Pointer to **string** |  | [optional] 
 **Gcp** | Pointer to [**V1GatewaysPutRequestDetailsGcp**](V1GatewaysPutRequestDetailsGcp.md) |  | [optional] 
-**IpsecGateway** | Pointer to [**V1ExtranetsB2bPeeringConsumerIdPostRequestSiteToSiteVpnIpsecGatewayDetails**](V1ExtranetsB2bPeeringConsumerIdPostRequestSiteToSiteVpnIpsecGatewayDetails.md) |  | [optional] 
+**IpsecGateway** | Pointer to [**V1ExtranetsB2bPeeringConsumerMatchIdPostRequestSiteToSiteVpnIpsecGatewayDetails**](V1ExtranetsB2bPeeringConsumerMatchIdPostRequestSiteToSiteVpnIpsecGatewayDetails.md) |  | [optional] 
 **Oci** | Pointer to [**V1GatewaysPutRequestDetailsOci**](V1GatewaysPutRequestDetailsOci.md) |  | [optional] 
 **RegionId** | Pointer to **int32** |  | [optional] 
 **Speed** | Pointer to **string** |  | [optional] 
@@ -135,20 +135,20 @@ HasGcp returns a boolean if a field has been set.
 
 ### GetIpsecGateway
 
-`func (o *V1GatewaysPutRequestDetails) GetIpsecGateway() V1ExtranetsB2bPeeringConsumerIdPostRequestSiteToSiteVpnIpsecGatewayDetails`
+`func (o *V1GatewaysPutRequestDetails) GetIpsecGateway() V1ExtranetsB2bPeeringConsumerMatchIdPostRequestSiteToSiteVpnIpsecGatewayDetails`
 
 GetIpsecGateway returns the IpsecGateway field if non-nil, zero value otherwise.
 
 ### GetIpsecGatewayOk
 
-`func (o *V1GatewaysPutRequestDetails) GetIpsecGatewayOk() (*V1ExtranetsB2bPeeringConsumerIdPostRequestSiteToSiteVpnIpsecGatewayDetails, bool)`
+`func (o *V1GatewaysPutRequestDetails) GetIpsecGatewayOk() (*V1ExtranetsB2bPeeringConsumerMatchIdPostRequestSiteToSiteVpnIpsecGatewayDetails, bool)`
 
 GetIpsecGatewayOk returns a tuple with the IpsecGateway field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetIpsecGateway
 
-`func (o *V1GatewaysPutRequestDetails) SetIpsecGateway(v V1ExtranetsB2bPeeringConsumerIdPostRequestSiteToSiteVpnIpsecGatewayDetails)`
+`func (o *V1GatewaysPutRequestDetails) SetIpsecGateway(v V1ExtranetsB2bPeeringConsumerMatchIdPostRequestSiteToSiteVpnIpsecGatewayDetails)`
 
 SetIpsecGateway sets IpsecGateway field to given value.
 

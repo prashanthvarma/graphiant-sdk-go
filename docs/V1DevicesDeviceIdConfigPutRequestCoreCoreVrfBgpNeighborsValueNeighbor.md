@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**AddressFamilies** | Pointer to [**map[string]V1ExtranetsB2bPeeringConsumerIdPostRequestSiteToSiteVpnIpsecGatewayDetailsRoutingBgpAddressFamiliesValue**](V1ExtranetsB2bPeeringConsumerIdPostRequestSiteToSiteVpnIpsecGatewayDetailsRoutingBgpAddressFamiliesValue.md) |  | [optional] 
+**AddressFamilies** | Pointer to [**map[string]V1ExtranetsB2bPeeringConsumerMatchIdPostRequestSiteToSiteVpnIpsecGatewayDetailsRoutingBgpAddressFamiliesValue**](V1ExtranetsB2bPeeringConsumerMatchIdPostRequestSiteToSiteVpnIpsecGatewayDetailsRoutingBgpAddressFamiliesValue.md) |  | [optional] 
 **AllowAsIn** | Pointer to [**V1DevicesDeviceIdConfigPutRequestCoreCoreVrfBgpNeighborsValueNeighborAllowAsIn**](V1DevicesDeviceIdConfigPutRequestCoreCoreVrfBgpNeighborsValueNeighborAllowAsIn.md) |  | [optional] 
 **AsOverride** | Pointer to **bool** |  | [optional] 
 **Bfd** | Pointer to [**V1DevicesDeviceIdConfigPutRequestCoreCoreVrfBgpNeighborsValueNeighborBfd**](V1DevicesDeviceIdConfigPutRequestCoreCoreVrfBgpNeighborsValueNeighborBfd.md) |  | [optional] 
@@ -18,7 +18,7 @@ Name | Type | Description | Notes
 **LocalAddress** | Pointer to **string** |  | [optional] 
 **LocalInterface** | Pointer to [**V1GlobalConfigPatchRequestRoutingPoliciesValuePolicyStatementsValueStatementMatchesValueMatchSourceInterface**](V1GlobalConfigPatchRequestRoutingPoliciesValuePolicyStatementsValueStatementMatchesValueMatchSourceInterface.md) |  | [optional] 
 **MaxPrefixValue** | Pointer to [**V1DevicesDeviceIdConfigPutRequestCoreCoreVrfBgpNeighborsValueNeighborMaxPrefixValue**](V1DevicesDeviceIdConfigPutRequestCoreCoreVrfBgpNeighborsValueNeighborMaxPrefixValue.md) |  | [optional] 
-**Md5Password** | Pointer to [**V1ExtranetsB2bPeeringConsumerIdPostRequestSiteToSiteVpnIpsecGatewayDetailsRoutingBgpMd5Password**](V1ExtranetsB2bPeeringConsumerIdPostRequestSiteToSiteVpnIpsecGatewayDetailsRoutingBgpMd5Password.md) |  | [optional] 
+**Md5Password** | Pointer to [**V1ExtranetsB2bPeeringConsumerMatchIdPostRequestSiteToSiteVpnIpsecGatewayDetailsRoutingBgpMd5Password**](V1ExtranetsB2bPeeringConsumerMatchIdPostRequestSiteToSiteVpnIpsecGatewayDetailsRoutingBgpMd5Password.md) |  | [optional] 
 **PeerAsn** | Pointer to **int32** |  | [optional] 
 **RemoteAddress** | Pointer to **string** |  | [optional] 
 **RemovePrivateAs** | Pointer to **bool** |  | [optional] 
@@ -45,20 +45,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetAddressFamilies
 
-`func (o *V1DevicesDeviceIdConfigPutRequestCoreCoreVrfBgpNeighborsValueNeighbor) GetAddressFamilies() map[string]V1ExtranetsB2bPeeringConsumerIdPostRequestSiteToSiteVpnIpsecGatewayDetailsRoutingBgpAddressFamiliesValue`
+`func (o *V1DevicesDeviceIdConfigPutRequestCoreCoreVrfBgpNeighborsValueNeighbor) GetAddressFamilies() map[string]V1ExtranetsB2bPeeringConsumerMatchIdPostRequestSiteToSiteVpnIpsecGatewayDetailsRoutingBgpAddressFamiliesValue`
 
 GetAddressFamilies returns the AddressFamilies field if non-nil, zero value otherwise.
 
 ### GetAddressFamiliesOk
 
-`func (o *V1DevicesDeviceIdConfigPutRequestCoreCoreVrfBgpNeighborsValueNeighbor) GetAddressFamiliesOk() (*map[string]V1ExtranetsB2bPeeringConsumerIdPostRequestSiteToSiteVpnIpsecGatewayDetailsRoutingBgpAddressFamiliesValue, bool)`
+`func (o *V1DevicesDeviceIdConfigPutRequestCoreCoreVrfBgpNeighborsValueNeighbor) GetAddressFamiliesOk() (*map[string]V1ExtranetsB2bPeeringConsumerMatchIdPostRequestSiteToSiteVpnIpsecGatewayDetailsRoutingBgpAddressFamiliesValue, bool)`
 
 GetAddressFamiliesOk returns a tuple with the AddressFamilies field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetAddressFamilies
 
-`func (o *V1DevicesDeviceIdConfigPutRequestCoreCoreVrfBgpNeighborsValueNeighbor) SetAddressFamilies(v map[string]V1ExtranetsB2bPeeringConsumerIdPostRequestSiteToSiteVpnIpsecGatewayDetailsRoutingBgpAddressFamiliesValue)`
+`func (o *V1DevicesDeviceIdConfigPutRequestCoreCoreVrfBgpNeighborsValueNeighbor) SetAddressFamilies(v map[string]V1ExtranetsB2bPeeringConsumerMatchIdPostRequestSiteToSiteVpnIpsecGatewayDetailsRoutingBgpAddressFamiliesValue)`
 
 SetAddressFamilies sets AddressFamilies field to given value.
 
@@ -395,20 +395,20 @@ HasMaxPrefixValue returns a boolean if a field has been set.
 
 ### GetMd5Password
 
-`func (o *V1DevicesDeviceIdConfigPutRequestCoreCoreVrfBgpNeighborsValueNeighbor) GetMd5Password() V1ExtranetsB2bPeeringConsumerIdPostRequestSiteToSiteVpnIpsecGatewayDetailsRoutingBgpMd5Password`
+`func (o *V1DevicesDeviceIdConfigPutRequestCoreCoreVrfBgpNeighborsValueNeighbor) GetMd5Password() V1ExtranetsB2bPeeringConsumerMatchIdPostRequestSiteToSiteVpnIpsecGatewayDetailsRoutingBgpMd5Password`
 
 GetMd5Password returns the Md5Password field if non-nil, zero value otherwise.
 
 ### GetMd5PasswordOk
 
-`func (o *V1DevicesDeviceIdConfigPutRequestCoreCoreVrfBgpNeighborsValueNeighbor) GetMd5PasswordOk() (*V1ExtranetsB2bPeeringConsumerIdPostRequestSiteToSiteVpnIpsecGatewayDetailsRoutingBgpMd5Password, bool)`
+`func (o *V1DevicesDeviceIdConfigPutRequestCoreCoreVrfBgpNeighborsValueNeighbor) GetMd5PasswordOk() (*V1ExtranetsB2bPeeringConsumerMatchIdPostRequestSiteToSiteVpnIpsecGatewayDetailsRoutingBgpMd5Password, bool)`
 
 GetMd5PasswordOk returns a tuple with the Md5Password field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetMd5Password
 
-`func (o *V1DevicesDeviceIdConfigPutRequestCoreCoreVrfBgpNeighborsValueNeighbor) SetMd5Password(v V1ExtranetsB2bPeeringConsumerIdPostRequestSiteToSiteVpnIpsecGatewayDetailsRoutingBgpMd5Password)`
+`func (o *V1DevicesDeviceIdConfigPutRequestCoreCoreVrfBgpNeighborsValueNeighbor) SetMd5Password(v V1ExtranetsB2bPeeringConsumerMatchIdPostRequestSiteToSiteVpnIpsecGatewayDetailsRoutingBgpMd5Password)`
 
 SetMd5Password sets Md5Password field to given value.
 

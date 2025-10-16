@@ -19,7 +19,7 @@ var _ MappedNullable = &V1GlobalConfigPatchRequestSnmpsValueConfigNotifyFilterPr
 
 // V1GlobalConfigPatchRequestSnmpsValueConfigNotifyFilterProfilesValueNotifyFilterProfile struct for V1GlobalConfigPatchRequestSnmpsValueConfigNotifyFilterProfilesValueNotifyFilterProfile
 type V1GlobalConfigPatchRequestSnmpsValueConfigNotifyFilterProfilesValueNotifyFilterProfile struct {
-	IncludeExcludeList *map[string]V1GlobalConfigPatchRequestSnmpsValueConfigNotifyFilterProfilesValueNotifyFilterProfileIncludeExcludeListValue `json:"includeExcludeList,omitempty"`
+	IncludeExcludeList *map[string]V2AssistantConversationInterfaceStateGet200Response `json:"includeExcludeList,omitempty"`
 	Name *string `json:"name,omitempty"`
 }
 
@@ -41,9 +41,9 @@ func NewV1GlobalConfigPatchRequestSnmpsValueConfigNotifyFilterProfilesValueNotif
 }
 
 // GetIncludeExcludeList returns the IncludeExcludeList field value if set, zero value otherwise.
-func (o *V1GlobalConfigPatchRequestSnmpsValueConfigNotifyFilterProfilesValueNotifyFilterProfile) GetIncludeExcludeList() map[string]V1GlobalConfigPatchRequestSnmpsValueConfigNotifyFilterProfilesValueNotifyFilterProfileIncludeExcludeListValue {
+func (o *V1GlobalConfigPatchRequestSnmpsValueConfigNotifyFilterProfilesValueNotifyFilterProfile) GetIncludeExcludeList() map[string]V2AssistantConversationInterfaceStateGet200Response {
 	if o == nil || IsNil(o.IncludeExcludeList) {
-		var ret map[string]V1GlobalConfigPatchRequestSnmpsValueConfigNotifyFilterProfilesValueNotifyFilterProfileIncludeExcludeListValue
+		var ret map[string]V2AssistantConversationInterfaceStateGet200Response
 		return ret
 	}
 	return *o.IncludeExcludeList
@@ -51,7 +51,7 @@ func (o *V1GlobalConfigPatchRequestSnmpsValueConfigNotifyFilterProfilesValueNoti
 
 // GetIncludeExcludeListOk returns a tuple with the IncludeExcludeList field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *V1GlobalConfigPatchRequestSnmpsValueConfigNotifyFilterProfilesValueNotifyFilterProfile) GetIncludeExcludeListOk() (*map[string]V1GlobalConfigPatchRequestSnmpsValueConfigNotifyFilterProfilesValueNotifyFilterProfileIncludeExcludeListValue, bool) {
+func (o *V1GlobalConfigPatchRequestSnmpsValueConfigNotifyFilterProfilesValueNotifyFilterProfile) GetIncludeExcludeListOk() (*map[string]V2AssistantConversationInterfaceStateGet200Response, bool) {
 	if o == nil || IsNil(o.IncludeExcludeList) {
 		return nil, false
 	}
@@ -67,8 +67,8 @@ func (o *V1GlobalConfigPatchRequestSnmpsValueConfigNotifyFilterProfilesValueNoti
 	return false
 }
 
-// SetIncludeExcludeList gets a reference to the given map[string]V1GlobalConfigPatchRequestSnmpsValueConfigNotifyFilterProfilesValueNotifyFilterProfileIncludeExcludeListValue and assigns it to the IncludeExcludeList field.
-func (o *V1GlobalConfigPatchRequestSnmpsValueConfigNotifyFilterProfilesValueNotifyFilterProfile) SetIncludeExcludeList(v map[string]V1GlobalConfigPatchRequestSnmpsValueConfigNotifyFilterProfilesValueNotifyFilterProfileIncludeExcludeListValue) {
+// SetIncludeExcludeList gets a reference to the given map[string]V2AssistantConversationInterfaceStateGet200Response and assigns it to the IncludeExcludeList field.
+func (o *V1GlobalConfigPatchRequestSnmpsValueConfigNotifyFilterProfilesValueNotifyFilterProfile) SetIncludeExcludeList(v map[string]V2AssistantConversationInterfaceStateGet200Response) {
 	o.IncludeExcludeList = &v
 }
 

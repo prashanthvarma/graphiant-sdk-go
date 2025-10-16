@@ -34,7 +34,7 @@ type V1ExtranetsGet200ResponsePoliciesInnerBranchesExcludedDevicesInnerIpsecTunn
 	RemoteAddressV4 *string `json:"remoteAddressV4,omitempty"`
 	RemoteAddressV6 *string `json:"remoteAddressV6,omitempty"`
 	RemoteIkePeerIdentity *string `json:"remoteIkePeerIdentity,omitempty"`
-	Static *V1ExtranetsB2bPeeringConsumerIdPostRequestSiteToSiteVpnIpsecGatewayDetailsRoutingStatic `json:"static,omitempty"`
+	Static *V1ExtranetsB2bPeeringConsumerMatchIdPostRequestSiteToSiteVpnIpsecGatewayDetailsRoutingStatic `json:"static,omitempty"`
 	TcpMss *int32 `json:"tcpMss,omitempty"`
 	VpnProfile *string `json:"vpnProfile,omitempty"`
 }
@@ -537,9 +537,9 @@ func (o *V1ExtranetsGet200ResponsePoliciesInnerBranchesExcludedDevicesInnerIpsec
 }
 
 // GetStatic returns the Static field value if set, zero value otherwise.
-func (o *V1ExtranetsGet200ResponsePoliciesInnerBranchesExcludedDevicesInnerIpsecTunnelsInner) GetStatic() V1ExtranetsB2bPeeringConsumerIdPostRequestSiteToSiteVpnIpsecGatewayDetailsRoutingStatic {
+func (o *V1ExtranetsGet200ResponsePoliciesInnerBranchesExcludedDevicesInnerIpsecTunnelsInner) GetStatic() V1ExtranetsB2bPeeringConsumerMatchIdPostRequestSiteToSiteVpnIpsecGatewayDetailsRoutingStatic {
 	if o == nil || IsNil(o.Static) {
-		var ret V1ExtranetsB2bPeeringConsumerIdPostRequestSiteToSiteVpnIpsecGatewayDetailsRoutingStatic
+		var ret V1ExtranetsB2bPeeringConsumerMatchIdPostRequestSiteToSiteVpnIpsecGatewayDetailsRoutingStatic
 		return ret
 	}
 	return *o.Static
@@ -547,7 +547,7 @@ func (o *V1ExtranetsGet200ResponsePoliciesInnerBranchesExcludedDevicesInnerIpsec
 
 // GetStaticOk returns a tuple with the Static field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *V1ExtranetsGet200ResponsePoliciesInnerBranchesExcludedDevicesInnerIpsecTunnelsInner) GetStaticOk() (*V1ExtranetsB2bPeeringConsumerIdPostRequestSiteToSiteVpnIpsecGatewayDetailsRoutingStatic, bool) {
+func (o *V1ExtranetsGet200ResponsePoliciesInnerBranchesExcludedDevicesInnerIpsecTunnelsInner) GetStaticOk() (*V1ExtranetsB2bPeeringConsumerMatchIdPostRequestSiteToSiteVpnIpsecGatewayDetailsRoutingStatic, bool) {
 	if o == nil || IsNil(o.Static) {
 		return nil, false
 	}
@@ -563,8 +563,8 @@ func (o *V1ExtranetsGet200ResponsePoliciesInnerBranchesExcludedDevicesInnerIpsec
 	return false
 }
 
-// SetStatic gets a reference to the given V1ExtranetsB2bPeeringConsumerIdPostRequestSiteToSiteVpnIpsecGatewayDetailsRoutingStatic and assigns it to the Static field.
-func (o *V1ExtranetsGet200ResponsePoliciesInnerBranchesExcludedDevicesInnerIpsecTunnelsInner) SetStatic(v V1ExtranetsB2bPeeringConsumerIdPostRequestSiteToSiteVpnIpsecGatewayDetailsRoutingStatic) {
+// SetStatic gets a reference to the given V1ExtranetsB2bPeeringConsumerMatchIdPostRequestSiteToSiteVpnIpsecGatewayDetailsRoutingStatic and assigns it to the Static field.
+func (o *V1ExtranetsGet200ResponsePoliciesInnerBranchesExcludedDevicesInnerIpsecTunnelsInner) SetStatic(v V1ExtranetsB2bPeeringConsumerMatchIdPostRequestSiteToSiteVpnIpsecGatewayDetailsRoutingStatic) {
 	o.Static = &v
 }
 

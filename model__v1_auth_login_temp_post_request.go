@@ -21,6 +21,7 @@ var _ MappedNullable = &V1AuthLoginTempPostRequest{}
 type V1AuthLoginTempPostRequest struct {
 	Email *string `json:"email,omitempty"`
 	TempPassword *string `json:"tempPassword,omitempty"`
+	MatchId *float32 `json:"matchId,omitempty"`
 }
 
 // NewV1AuthLoginTempPostRequest instantiates a new V1AuthLoginTempPostRequest object
@@ -104,6 +105,38 @@ func (o *V1AuthLoginTempPostRequest) SetTempPassword(v string) {
 	o.TempPassword = &v
 }
 
+// GetMatchId returns the MatchId field value if set, zero value otherwise.
+func (o *V1AuthLoginTempPostRequest) GetMatchId() float32 {
+	if o == nil || IsNil(o.MatchId) {
+		var ret float32
+		return ret
+	}
+	return *o.MatchId
+}
+
+// GetMatchIdOk returns a tuple with the MatchId field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *V1AuthLoginTempPostRequest) GetMatchIdOk() (*float32, bool) {
+	if o == nil || IsNil(o.MatchId) {
+		return nil, false
+	}
+	return o.MatchId, true
+}
+
+// HasMatchId returns a boolean if a field has been set.
+func (o *V1AuthLoginTempPostRequest) HasMatchId() bool {
+	if o != nil && !IsNil(o.MatchId) {
+		return true
+	}
+
+	return false
+}
+
+// SetMatchId gets a reference to the given float32 and assigns it to the MatchId field.
+func (o *V1AuthLoginTempPostRequest) SetMatchId(v float32) {
+	o.MatchId = &v
+}
+
 func (o V1AuthLoginTempPostRequest) MarshalJSON() ([]byte, error) {
 	toSerialize,err := o.ToMap()
 	if err != nil {
@@ -119,6 +152,9 @@ func (o V1AuthLoginTempPostRequest) ToMap() (map[string]interface{}, error) {
 	}
 	if !IsNil(o.TempPassword) {
 		toSerialize["tempPassword"] = o.TempPassword
+	}
+	if !IsNil(o.MatchId) {
+		toSerialize["matchId"] = o.MatchId
 	}
 	return toSerialize, nil
 }

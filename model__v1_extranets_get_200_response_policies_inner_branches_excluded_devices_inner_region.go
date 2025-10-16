@@ -21,6 +21,7 @@ var _ MappedNullable = &V1ExtranetsGet200ResponsePoliciesInnerBranchesExcludedDe
 type V1ExtranetsGet200ResponsePoliciesInnerBranchesExcludedDevicesInnerRegion struct {
 	Id *int32 `json:"id,omitempty"`
 	Name *string `json:"name,omitempty"`
+	Unavailable *bool `json:"unavailable,omitempty"`
 }
 
 // NewV1ExtranetsGet200ResponsePoliciesInnerBranchesExcludedDevicesInnerRegion instantiates a new V1ExtranetsGet200ResponsePoliciesInnerBranchesExcludedDevicesInnerRegion object
@@ -104,6 +105,38 @@ func (o *V1ExtranetsGet200ResponsePoliciesInnerBranchesExcludedDevicesInnerRegio
 	o.Name = &v
 }
 
+// GetUnavailable returns the Unavailable field value if set, zero value otherwise.
+func (o *V1ExtranetsGet200ResponsePoliciesInnerBranchesExcludedDevicesInnerRegion) GetUnavailable() bool {
+	if o == nil || IsNil(o.Unavailable) {
+		var ret bool
+		return ret
+	}
+	return *o.Unavailable
+}
+
+// GetUnavailableOk returns a tuple with the Unavailable field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *V1ExtranetsGet200ResponsePoliciesInnerBranchesExcludedDevicesInnerRegion) GetUnavailableOk() (*bool, bool) {
+	if o == nil || IsNil(o.Unavailable) {
+		return nil, false
+	}
+	return o.Unavailable, true
+}
+
+// HasUnavailable returns a boolean if a field has been set.
+func (o *V1ExtranetsGet200ResponsePoliciesInnerBranchesExcludedDevicesInnerRegion) HasUnavailable() bool {
+	if o != nil && !IsNil(o.Unavailable) {
+		return true
+	}
+
+	return false
+}
+
+// SetUnavailable gets a reference to the given bool and assigns it to the Unavailable field.
+func (o *V1ExtranetsGet200ResponsePoliciesInnerBranchesExcludedDevicesInnerRegion) SetUnavailable(v bool) {
+	o.Unavailable = &v
+}
+
 func (o V1ExtranetsGet200ResponsePoliciesInnerBranchesExcludedDevicesInnerRegion) MarshalJSON() ([]byte, error) {
 	toSerialize,err := o.ToMap()
 	if err != nil {
@@ -119,6 +152,9 @@ func (o V1ExtranetsGet200ResponsePoliciesInnerBranchesExcludedDevicesInnerRegion
 	}
 	if !IsNil(o.Name) {
 		toSerialize["name"] = o.Name
+	}
+	if !IsNil(o.Unavailable) {
+		toSerialize["unavailable"] = o.Unavailable
 	}
 	return toSerialize, nil
 }

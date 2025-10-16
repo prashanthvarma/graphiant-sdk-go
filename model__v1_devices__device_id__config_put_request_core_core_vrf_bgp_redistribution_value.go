@@ -19,7 +19,7 @@ var _ MappedNullable = &V1DevicesDeviceIdConfigPutRequestCoreCoreVrfBgpRedistrib
 
 // V1DevicesDeviceIdConfigPutRequestCoreCoreVrfBgpRedistributionValue struct for V1DevicesDeviceIdConfigPutRequestCoreCoreVrfBgpRedistributionValue
 type V1DevicesDeviceIdConfigPutRequestCoreCoreVrfBgpRedistributionValue struct {
-	Protocol *V1GlobalConfigPatchRequestSnmpsValueConfigNotifyFilterProfilesValueNotifyFilterProfileIncludeExcludeListValue `json:"protocol,omitempty"`
+	Protocol *V2AssistantConversationInterfaceStateGet200Response `json:"protocol,omitempty"`
 }
 
 // NewV1DevicesDeviceIdConfigPutRequestCoreCoreVrfBgpRedistributionValue instantiates a new V1DevicesDeviceIdConfigPutRequestCoreCoreVrfBgpRedistributionValue object
@@ -40,9 +40,9 @@ func NewV1DevicesDeviceIdConfigPutRequestCoreCoreVrfBgpRedistributionValueWithDe
 }
 
 // GetProtocol returns the Protocol field value if set, zero value otherwise.
-func (o *V1DevicesDeviceIdConfigPutRequestCoreCoreVrfBgpRedistributionValue) GetProtocol() V1GlobalConfigPatchRequestSnmpsValueConfigNotifyFilterProfilesValueNotifyFilterProfileIncludeExcludeListValue {
+func (o *V1DevicesDeviceIdConfigPutRequestCoreCoreVrfBgpRedistributionValue) GetProtocol() V2AssistantConversationInterfaceStateGet200Response {
 	if o == nil || IsNil(o.Protocol) {
-		var ret V1GlobalConfigPatchRequestSnmpsValueConfigNotifyFilterProfilesValueNotifyFilterProfileIncludeExcludeListValue
+		var ret V2AssistantConversationInterfaceStateGet200Response
 		return ret
 	}
 	return *o.Protocol
@@ -50,7 +50,7 @@ func (o *V1DevicesDeviceIdConfigPutRequestCoreCoreVrfBgpRedistributionValue) Get
 
 // GetProtocolOk returns a tuple with the Protocol field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *V1DevicesDeviceIdConfigPutRequestCoreCoreVrfBgpRedistributionValue) GetProtocolOk() (*V1GlobalConfigPatchRequestSnmpsValueConfigNotifyFilterProfilesValueNotifyFilterProfileIncludeExcludeListValue, bool) {
+func (o *V1DevicesDeviceIdConfigPutRequestCoreCoreVrfBgpRedistributionValue) GetProtocolOk() (*V2AssistantConversationInterfaceStateGet200Response, bool) {
 	if o == nil || IsNil(o.Protocol) {
 		return nil, false
 	}
@@ -66,8 +66,8 @@ func (o *V1DevicesDeviceIdConfigPutRequestCoreCoreVrfBgpRedistributionValue) Has
 	return false
 }
 
-// SetProtocol gets a reference to the given V1GlobalConfigPatchRequestSnmpsValueConfigNotifyFilterProfilesValueNotifyFilterProfileIncludeExcludeListValue and assigns it to the Protocol field.
-func (o *V1DevicesDeviceIdConfigPutRequestCoreCoreVrfBgpRedistributionValue) SetProtocol(v V1GlobalConfigPatchRequestSnmpsValueConfigNotifyFilterProfilesValueNotifyFilterProfileIncludeExcludeListValue) {
+// SetProtocol gets a reference to the given V2AssistantConversationInterfaceStateGet200Response and assigns it to the Protocol field.
+func (o *V1DevicesDeviceIdConfigPutRequestCoreCoreVrfBgpRedistributionValue) SetProtocol(v V2AssistantConversationInterfaceStateGet200Response) {
 	o.Protocol = &v
 }
 
