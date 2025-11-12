@@ -4,17 +4,17 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**DeviceId** | Pointer to **int64** |  | [optional] 
-**Duration** | Pointer to **int32** |  | [optional] 
-**Filter** | Pointer to [**V1DiagnosticPacketcaptureStartPostRequestFilter**](V1DiagnosticPacketcaptureStartPostRequestFilter.md) |  | [optional] 
-**MaxPacketCounter** | Pointer to **int32** |  | [optional] 
-**Target** | Pointer to [**V1DiagnosticPacketcaptureStartPostRequestTarget**](V1DiagnosticPacketcaptureStartPostRequestTarget.md) |  | [optional] 
+**DeviceId** | **int64** | Unique identifier for a specific device (required) | 
+**Duration** | **int32** | Packet capture duration. Accepted values are 30, 60, 180 (required) | 
+**Filter** | Pointer to [**DiagnosticToolsPCapFilter**](DiagnosticToolsPCapFilter.md) |  | [optional] 
+**MaxPacketCounter** | Pointer to **int32** | Packet capture limit. | [optional] 
+**Target** | [**DiagnosticToolsTargetType**](DiagnosticToolsTargetType.md) |  | 
 
 ## Methods
 
 ### NewV1DiagnosticPacketcaptureStartPostRequest
 
-`func NewV1DiagnosticPacketcaptureStartPostRequest() *V1DiagnosticPacketcaptureStartPostRequest`
+`func NewV1DiagnosticPacketcaptureStartPostRequest(deviceId int64, duration int32, target DiagnosticToolsTargetType, ) *V1DiagnosticPacketcaptureStartPostRequest`
 
 NewV1DiagnosticPacketcaptureStartPostRequest instantiates a new V1DiagnosticPacketcaptureStartPostRequest object
 This constructor will assign default values to properties that have it defined,
@@ -48,11 +48,6 @@ and a boolean to check if the value has been set.
 
 SetDeviceId sets DeviceId field to given value.
 
-### HasDeviceId
-
-`func (o *V1DiagnosticPacketcaptureStartPostRequest) HasDeviceId() bool`
-
-HasDeviceId returns a boolean if a field has been set.
 
 ### GetDuration
 
@@ -73,28 +68,23 @@ and a boolean to check if the value has been set.
 
 SetDuration sets Duration field to given value.
 
-### HasDuration
-
-`func (o *V1DiagnosticPacketcaptureStartPostRequest) HasDuration() bool`
-
-HasDuration returns a boolean if a field has been set.
 
 ### GetFilter
 
-`func (o *V1DiagnosticPacketcaptureStartPostRequest) GetFilter() V1DiagnosticPacketcaptureStartPostRequestFilter`
+`func (o *V1DiagnosticPacketcaptureStartPostRequest) GetFilter() DiagnosticToolsPCapFilter`
 
 GetFilter returns the Filter field if non-nil, zero value otherwise.
 
 ### GetFilterOk
 
-`func (o *V1DiagnosticPacketcaptureStartPostRequest) GetFilterOk() (*V1DiagnosticPacketcaptureStartPostRequestFilter, bool)`
+`func (o *V1DiagnosticPacketcaptureStartPostRequest) GetFilterOk() (*DiagnosticToolsPCapFilter, bool)`
 
 GetFilterOk returns a tuple with the Filter field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetFilter
 
-`func (o *V1DiagnosticPacketcaptureStartPostRequest) SetFilter(v V1DiagnosticPacketcaptureStartPostRequestFilter)`
+`func (o *V1DiagnosticPacketcaptureStartPostRequest) SetFilter(v DiagnosticToolsPCapFilter)`
 
 SetFilter sets Filter field to given value.
 
@@ -131,28 +121,23 @@ HasMaxPacketCounter returns a boolean if a field has been set.
 
 ### GetTarget
 
-`func (o *V1DiagnosticPacketcaptureStartPostRequest) GetTarget() V1DiagnosticPacketcaptureStartPostRequestTarget`
+`func (o *V1DiagnosticPacketcaptureStartPostRequest) GetTarget() DiagnosticToolsTargetType`
 
 GetTarget returns the Target field if non-nil, zero value otherwise.
 
 ### GetTargetOk
 
-`func (o *V1DiagnosticPacketcaptureStartPostRequest) GetTargetOk() (*V1DiagnosticPacketcaptureStartPostRequestTarget, bool)`
+`func (o *V1DiagnosticPacketcaptureStartPostRequest) GetTargetOk() (*DiagnosticToolsTargetType, bool)`
 
 GetTargetOk returns a tuple with the Target field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetTarget
 
-`func (o *V1DiagnosticPacketcaptureStartPostRequest) SetTarget(v V1DiagnosticPacketcaptureStartPostRequestTarget)`
+`func (o *V1DiagnosticPacketcaptureStartPostRequest) SetTarget(v DiagnosticToolsTargetType)`
 
 SetTarget sets Target field to given value.
 
-### HasTarget
-
-`func (o *V1DiagnosticPacketcaptureStartPostRequest) HasTarget() bool`
-
-HasTarget returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

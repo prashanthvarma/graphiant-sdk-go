@@ -4,14 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Enable** | Pointer to **bool** |  | [optional] 
-**RuleIdList** | Pointer to **[]string** |  | [optional] 
+**Enable** | **bool** | Enable or disable. True means enable (required) | 
+**RuleIdList** | **[]string** |  | 
 
 ## Methods
 
 ### NewV2RuleEnabledisablePostRequest
 
-`func NewV2RuleEnabledisablePostRequest() *V2RuleEnabledisablePostRequest`
+`func NewV2RuleEnabledisablePostRequest(enable bool, ruleIdList []string, ) *V2RuleEnabledisablePostRequest`
 
 NewV2RuleEnabledisablePostRequest instantiates a new V2RuleEnabledisablePostRequest object
 This constructor will assign default values to properties that have it defined,
@@ -45,11 +45,6 @@ and a boolean to check if the value has been set.
 
 SetEnable sets Enable field to given value.
 
-### HasEnable
-
-`func (o *V2RuleEnabledisablePostRequest) HasEnable() bool`
-
-HasEnable returns a boolean if a field has been set.
 
 ### GetRuleIdList
 
@@ -70,11 +65,6 @@ and a boolean to check if the value has been set.
 
 SetRuleIdList sets RuleIdList field to given value.
 
-### HasRuleIdList
-
-`func (o *V2RuleEnabledisablePostRequest) HasRuleIdList() bool`
-
-HasRuleIdList returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

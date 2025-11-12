@@ -4,14 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**MemberIds** | Pointer to **[]string** |  | [optional] 
+**MemberIds** | **[]string** |  | 
 **ReplaceExisting** | Pointer to **bool** |  | [optional] 
 
 ## Methods
 
 ### NewV1GroupsIdMembersPostRequest
 
-`func NewV1GroupsIdMembersPostRequest() *V1GroupsIdMembersPostRequest`
+`func NewV1GroupsIdMembersPostRequest(memberIds []string, ) *V1GroupsIdMembersPostRequest`
 
 NewV1GroupsIdMembersPostRequest instantiates a new V1GroupsIdMembersPostRequest object
 This constructor will assign default values to properties that have it defined,
@@ -45,11 +45,6 @@ and a boolean to check if the value has been set.
 
 SetMemberIds sets MemberIds field to given value.
 
-### HasMemberIds
-
-`func (o *V1GroupsIdMembersPostRequest) HasMemberIds() bool`
-
-HasMemberIds returns a boolean if a field has been set.
 
 ### GetReplaceExisting
 

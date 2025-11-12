@@ -49,6 +49,8 @@ func (r ApiV1AccountEmailPatchRequest) Execute() (map[string]interface{}, *http.
 /*
 V1AccountEmailPatch Method for V1AccountEmailPatch
 
+Update user's email address with verification.
+
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV1AccountEmailPatchRequest
 */
@@ -182,6 +184,8 @@ func (r ApiV1AccountInfoPatchRequest) Execute() (map[string]interface{}, *http.R
 /*
 V1AccountInfoPatch Method for V1AccountInfoPatch
 
+Update current user's profile information.
+
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV1AccountInfoPatchRequest
 */
@@ -308,12 +312,14 @@ func (r ApiV1AccountMfaConfirmationPostRequest) V1AccountMfaConfirmationPostRequ
 	return r
 }
 
-func (r ApiV1AccountMfaConfirmationPostRequest) Execute() (*V1AccountMfaConfirmationPost200Response, *http.Response, error) {
+func (r ApiV1AccountMfaConfirmationPostRequest) Execute() (*V1AccountMfaConfirmationPostResponse, *http.Response, error) {
 	return r.ApiService.V1AccountMfaConfirmationPostExecute(r)
 }
 
 /*
 V1AccountMfaConfirmationPost Method for V1AccountMfaConfirmationPost
+
+Confirm MFA type change with verification code.
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV1AccountMfaConfirmationPostRequest
@@ -326,13 +332,13 @@ func (a *DefaultAPIService) V1AccountMfaConfirmationPost(ctx context.Context) Ap
 }
 
 // Execute executes the request
-//  @return V1AccountMfaConfirmationPost200Response
-func (a *DefaultAPIService) V1AccountMfaConfirmationPostExecute(r ApiV1AccountMfaConfirmationPostRequest) (*V1AccountMfaConfirmationPost200Response, *http.Response, error) {
+//  @return V1AccountMfaConfirmationPostResponse
+func (a *DefaultAPIService) V1AccountMfaConfirmationPostExecute(r ApiV1AccountMfaConfirmationPostRequest) (*V1AccountMfaConfirmationPostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1AccountMfaConfirmationPost200Response
+		localVarReturnValue  *V1AccountMfaConfirmationPostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1AccountMfaConfirmationPost")
@@ -441,6 +447,8 @@ func (r ApiV1AccountMfaDeleteRequest) Execute() (map[string]interface{}, *http.R
 
 /*
 V1AccountMfaDelete Method for V1AccountMfaDelete
+
+Remove user's MFA enrollment.
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV1AccountMfaDeleteRequest
@@ -557,12 +565,14 @@ func (r ApiV1AccountMfaGetRequest) Authorization(authorization string) ApiV1Acco
 	return r
 }
 
-func (r ApiV1AccountMfaGetRequest) Execute() (*V1AccountMfaGet200Response, *http.Response, error) {
+func (r ApiV1AccountMfaGetRequest) Execute() (*V1AccountMfaGetResponse, *http.Response, error) {
 	return r.ApiService.V1AccountMfaGetExecute(r)
 }
 
 /*
 V1AccountMfaGet Method for V1AccountMfaGet
+
+Get user's current MFA type and enrollment status.
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV1AccountMfaGetRequest
@@ -575,13 +585,13 @@ func (a *DefaultAPIService) V1AccountMfaGet(ctx context.Context) ApiV1AccountMfa
 }
 
 // Execute executes the request
-//  @return V1AccountMfaGet200Response
-func (a *DefaultAPIService) V1AccountMfaGetExecute(r ApiV1AccountMfaGetRequest) (*V1AccountMfaGet200Response, *http.Response, error) {
+//  @return V1AccountMfaGetResponse
+func (a *DefaultAPIService) V1AccountMfaGetExecute(r ApiV1AccountMfaGetRequest) (*V1AccountMfaGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1AccountMfaGet200Response
+		localVarReturnValue  *V1AccountMfaGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1AccountMfaGet")
@@ -685,12 +695,14 @@ func (r ApiV1AccountMfaPutRequest) V1AccountMfaPutRequest(v1AccountMfaPutRequest
 	return r
 }
 
-func (r ApiV1AccountMfaPutRequest) Execute() (*V1AccountMfaPut200Response, *http.Response, error) {
+func (r ApiV1AccountMfaPutRequest) Execute() (*V1AccountMfaPutResponse, *http.Response, error) {
 	return r.ApiService.V1AccountMfaPutExecute(r)
 }
 
 /*
 V1AccountMfaPut Method for V1AccountMfaPut
+
+Update user's MFA type (SMS, GoogleAuth) with verification.
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV1AccountMfaPutRequest
@@ -703,13 +715,13 @@ func (a *DefaultAPIService) V1AccountMfaPut(ctx context.Context) ApiV1AccountMfa
 }
 
 // Execute executes the request
-//  @return V1AccountMfaPut200Response
-func (a *DefaultAPIService) V1AccountMfaPutExecute(r ApiV1AccountMfaPutRequest) (*V1AccountMfaPut200Response, *http.Response, error) {
+//  @return V1AccountMfaPutResponse
+func (a *DefaultAPIService) V1AccountMfaPutExecute(r ApiV1AccountMfaPutRequest) (*V1AccountMfaPutResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPut
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1AccountMfaPut200Response
+		localVarReturnValue  *V1AccountMfaPutResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1AccountMfaPut")
@@ -824,6 +836,8 @@ func (r ApiV1AccountPasswordPatchRequest) Execute() (map[string]interface{}, *ht
 
 /*
 V1AccountPasswordPatch Method for V1AccountPasswordPatch
+
+Change user password with current password verification (Graphiant cloud only).
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV1AccountPasswordPatchRequest
@@ -951,7 +965,7 @@ func (r ApiV1ActivityLogsPostRequest) V1ActivityLogsPostRequest(v1ActivityLogsPo
 	return r
 }
 
-func (r ApiV1ActivityLogsPostRequest) Execute() (*V1ActivityLogsPost200Response, *http.Response, error) {
+func (r ApiV1ActivityLogsPostRequest) Execute() (*V1ActivityLogsPostResponse, *http.Response, error) {
 	return r.ApiService.V1ActivityLogsPostExecute(r)
 }
 
@@ -969,13 +983,13 @@ func (a *DefaultAPIService) V1ActivityLogsPost(ctx context.Context) ApiV1Activit
 }
 
 // Execute executes the request
-//  @return V1ActivityLogsPost200Response
-func (a *DefaultAPIService) V1ActivityLogsPostExecute(r ApiV1ActivityLogsPostRequest) (*V1ActivityLogsPost200Response, *http.Response, error) {
+//  @return V1ActivityLogsPostResponse
+func (a *DefaultAPIService) V1ActivityLogsPostExecute(r ApiV1ActivityLogsPostRequest) (*V1ActivityLogsPostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1ActivityLogsPost200Response
+		localVarReturnValue  *V1ActivityLogsPostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1ActivityLogsPost")
@@ -1078,7 +1092,7 @@ func (r ApiV1AlarmHistoryGetRequest) Authorization(authorization string) ApiV1Al
 	return r
 }
 
-func (r ApiV1AlarmHistoryGetRequest) Execute() (*V1AlarmHistoryGet200Response, *http.Response, error) {
+func (r ApiV1AlarmHistoryGetRequest) Execute() (*V1AlarmHistoryGetResponse, *http.Response, error) {
 	return r.ApiService.V1AlarmHistoryGetExecute(r)
 }
 
@@ -1096,13 +1110,13 @@ func (a *DefaultAPIService) V1AlarmHistoryGet(ctx context.Context) ApiV1AlarmHis
 }
 
 // Execute executes the request
-//  @return V1AlarmHistoryGet200Response
-func (a *DefaultAPIService) V1AlarmHistoryGetExecute(r ApiV1AlarmHistoryGetRequest) (*V1AlarmHistoryGet200Response, *http.Response, error) {
+//  @return V1AlarmHistoryGetResponse
+func (a *DefaultAPIService) V1AlarmHistoryGetExecute(r ApiV1AlarmHistoryGetRequest) (*V1AlarmHistoryGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1AlarmHistoryGet200Response
+		localVarReturnValue  *V1AlarmHistoryGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1AlarmHistoryGet")
@@ -1337,7 +1351,7 @@ func (r ApiV1AlarmsEventsGetRequest) Authorization(authorization string) ApiV1Al
 	return r
 }
 
-func (r ApiV1AlarmsEventsGetRequest) Execute() (*V1AlarmsEventsGet200Response, *http.Response, error) {
+func (r ApiV1AlarmsEventsGetRequest) Execute() (*V1AlarmsEventsGetResponse, *http.Response, error) {
 	return r.ApiService.V1AlarmsEventsGetExecute(r)
 }
 
@@ -1355,13 +1369,13 @@ func (a *DefaultAPIService) V1AlarmsEventsGet(ctx context.Context) ApiV1AlarmsEv
 }
 
 // Execute executes the request
-//  @return V1AlarmsEventsGet200Response
-func (a *DefaultAPIService) V1AlarmsEventsGetExecute(r ApiV1AlarmsEventsGetRequest) (*V1AlarmsEventsGet200Response, *http.Response, error) {
+//  @return V1AlarmsEventsGetResponse
+func (a *DefaultAPIService) V1AlarmsEventsGetExecute(r ApiV1AlarmsEventsGetRequest) (*V1AlarmsEventsGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1AlarmsEventsGet200Response
+		localVarReturnValue  *V1AlarmsEventsGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1AlarmsEventsGet")
@@ -1459,7 +1473,7 @@ func (r ApiV1AlarmsListGetRequest) Authorization(authorization string) ApiV1Alar
 	return r
 }
 
-func (r ApiV1AlarmsListGetRequest) Execute() (*V1AlarmsListGet200Response, *http.Response, error) {
+func (r ApiV1AlarmsListGetRequest) Execute() (*V1AlarmsListGetResponse, *http.Response, error) {
 	return r.ApiService.V1AlarmsListGetExecute(r)
 }
 
@@ -1477,13 +1491,13 @@ func (a *DefaultAPIService) V1AlarmsListGet(ctx context.Context) ApiV1AlarmsList
 }
 
 // Execute executes the request
-//  @return V1AlarmsListGet200Response
-func (a *DefaultAPIService) V1AlarmsListGetExecute(r ApiV1AlarmsListGetRequest) (*V1AlarmsListGet200Response, *http.Response, error) {
+//  @return V1AlarmsListGetResponse
+func (a *DefaultAPIService) V1AlarmsListGetExecute(r ApiV1AlarmsListGetRequest) (*V1AlarmsListGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1AlarmsListGet200Response
+		localVarReturnValue  *V1AlarmsListGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1AlarmsListGet")
@@ -1587,12 +1601,14 @@ func (r ApiV1AppsAppSummaryPostRequest) V1AppsAppSummaryPostRequest(v1AppsAppSum
 	return r
 }
 
-func (r ApiV1AppsAppSummaryPostRequest) Execute() (*V1AppsAppSummaryPost200Response, *http.Response, error) {
+func (r ApiV1AppsAppSummaryPostRequest) Execute() (*V1AppsAppSummaryPostResponse, *http.Response, error) {
 	return r.ApiService.V1AppsAppSummaryPostExecute(r)
 }
 
 /*
 V1AppsAppSummaryPost Method for V1AppsAppSummaryPost
+
+Get app state summary counts
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV1AppsAppSummaryPostRequest
@@ -1605,13 +1621,13 @@ func (a *DefaultAPIService) V1AppsAppSummaryPost(ctx context.Context) ApiV1AppsA
 }
 
 // Execute executes the request
-//  @return V1AppsAppSummaryPost200Response
-func (a *DefaultAPIService) V1AppsAppSummaryPostExecute(r ApiV1AppsAppSummaryPostRequest) (*V1AppsAppSummaryPost200Response, *http.Response, error) {
+//  @return V1AppsAppSummaryPostResponse
+func (a *DefaultAPIService) V1AppsAppSummaryPostExecute(r ApiV1AppsAppSummaryPostRequest) (*V1AppsAppSummaryPostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1AppsAppSummaryPost200Response
+		localVarReturnValue  *V1AppsAppSummaryPostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1AppsAppSummaryPost")
@@ -1720,7 +1736,7 @@ func (r ApiV1AppsBandwidthPostRequest) V1AppsBandwidthPostRequest(v1AppsBandwidt
 	return r
 }
 
-func (r ApiV1AppsBandwidthPostRequest) Execute() (*V1AppsBandwidthPost200Response, *http.Response, error) {
+func (r ApiV1AppsBandwidthPostRequest) Execute() (*V1AppsBandwidthPostResponse, *http.Response, error) {
 	return r.ApiService.V1AppsBandwidthPostExecute(r)
 }
 
@@ -1738,13 +1754,13 @@ func (a *DefaultAPIService) V1AppsBandwidthPost(ctx context.Context) ApiV1AppsBa
 }
 
 // Execute executes the request
-//  @return V1AppsBandwidthPost200Response
-func (a *DefaultAPIService) V1AppsBandwidthPostExecute(r ApiV1AppsBandwidthPostRequest) (*V1AppsBandwidthPost200Response, *http.Response, error) {
+//  @return V1AppsBandwidthPostResponse
+func (a *DefaultAPIService) V1AppsBandwidthPostExecute(r ApiV1AppsBandwidthPostRequest) (*V1AppsBandwidthPostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1AppsBandwidthPost200Response
+		localVarReturnValue  *V1AppsBandwidthPostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1AppsBandwidthPost")
@@ -1854,12 +1870,14 @@ func (r ApiV1AppsDeviceDeviceIdTopPostRequest) V1AppsDeviceDeviceIdTopPostReques
 	return r
 }
 
-func (r ApiV1AppsDeviceDeviceIdTopPostRequest) Execute() (*V1AppsDeviceDeviceIdTopPost200Response, *http.Response, error) {
+func (r ApiV1AppsDeviceDeviceIdTopPostRequest) Execute() (*V1AppsDeviceDeviceIdTopPostResponse, *http.Response, error) {
 	return r.ApiService.V1AppsDeviceDeviceIdTopPostExecute(r)
 }
 
 /*
 V1AppsDeviceDeviceIdTopPost Method for V1AppsDeviceDeviceIdTopPost
+
+Get top apps for a device
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @param deviceId 
@@ -1874,13 +1892,13 @@ func (a *DefaultAPIService) V1AppsDeviceDeviceIdTopPost(ctx context.Context, dev
 }
 
 // Execute executes the request
-//  @return V1AppsDeviceDeviceIdTopPost200Response
-func (a *DefaultAPIService) V1AppsDeviceDeviceIdTopPostExecute(r ApiV1AppsDeviceDeviceIdTopPostRequest) (*V1AppsDeviceDeviceIdTopPost200Response, *http.Response, error) {
+//  @return V1AppsDeviceDeviceIdTopPostResponse
+func (a *DefaultAPIService) V1AppsDeviceDeviceIdTopPostExecute(r ApiV1AppsDeviceDeviceIdTopPostRequest) (*V1AppsDeviceDeviceIdTopPostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1AppsDeviceDeviceIdTopPost200Response
+		localVarReturnValue  *V1AppsDeviceDeviceIdTopPostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1AppsDeviceDeviceIdTopPost")
@@ -1977,7 +1995,7 @@ type ApiV1AppsSiteSiteIdTopPostRequest struct {
 	ApiService *DefaultAPIService
 	authorization *string
 	siteId int64
-	v1AppsDeviceDeviceIdTopPostRequest *V1AppsDeviceDeviceIdTopPostRequest
+	v1AppsSiteSiteIdTopPostRequest *V1AppsSiteSiteIdTopPostRequest
 }
 
 // Bearer token. Format: Bearer &lt;your_token_here&gt;
@@ -1986,17 +2004,19 @@ func (r ApiV1AppsSiteSiteIdTopPostRequest) Authorization(authorization string) A
 	return r
 }
 
-func (r ApiV1AppsSiteSiteIdTopPostRequest) V1AppsDeviceDeviceIdTopPostRequest(v1AppsDeviceDeviceIdTopPostRequest V1AppsDeviceDeviceIdTopPostRequest) ApiV1AppsSiteSiteIdTopPostRequest {
-	r.v1AppsDeviceDeviceIdTopPostRequest = &v1AppsDeviceDeviceIdTopPostRequest
+func (r ApiV1AppsSiteSiteIdTopPostRequest) V1AppsSiteSiteIdTopPostRequest(v1AppsSiteSiteIdTopPostRequest V1AppsSiteSiteIdTopPostRequest) ApiV1AppsSiteSiteIdTopPostRequest {
+	r.v1AppsSiteSiteIdTopPostRequest = &v1AppsSiteSiteIdTopPostRequest
 	return r
 }
 
-func (r ApiV1AppsSiteSiteIdTopPostRequest) Execute() (*V1AppsDeviceDeviceIdTopPost200Response, *http.Response, error) {
+func (r ApiV1AppsSiteSiteIdTopPostRequest) Execute() (*V1AppsSiteSiteIdTopPostResponse, *http.Response, error) {
 	return r.ApiService.V1AppsSiteSiteIdTopPostExecute(r)
 }
 
 /*
 V1AppsSiteSiteIdTopPost Method for V1AppsSiteSiteIdTopPost
+
+Get top apps for a site
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @param siteId 
@@ -2011,13 +2031,13 @@ func (a *DefaultAPIService) V1AppsSiteSiteIdTopPost(ctx context.Context, siteId 
 }
 
 // Execute executes the request
-//  @return V1AppsDeviceDeviceIdTopPost200Response
-func (a *DefaultAPIService) V1AppsSiteSiteIdTopPostExecute(r ApiV1AppsSiteSiteIdTopPostRequest) (*V1AppsDeviceDeviceIdTopPost200Response, *http.Response, error) {
+//  @return V1AppsSiteSiteIdTopPostResponse
+func (a *DefaultAPIService) V1AppsSiteSiteIdTopPostExecute(r ApiV1AppsSiteSiteIdTopPostRequest) (*V1AppsSiteSiteIdTopPostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1AppsDeviceDeviceIdTopPost200Response
+		localVarReturnValue  *V1AppsSiteSiteIdTopPostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1AppsSiteSiteIdTopPost")
@@ -2034,8 +2054,8 @@ func (a *DefaultAPIService) V1AppsSiteSiteIdTopPostExecute(r ApiV1AppsSiteSiteId
 	if r.authorization == nil {
 		return localVarReturnValue, nil, reportError("authorization is required and must be specified")
 	}
-	if r.v1AppsDeviceDeviceIdTopPostRequest == nil {
-		return localVarReturnValue, nil, reportError("v1AppsDeviceDeviceIdTopPostRequest is required and must be specified")
+	if r.v1AppsSiteSiteIdTopPostRequest == nil {
+		return localVarReturnValue, nil, reportError("v1AppsSiteSiteIdTopPostRequest is required and must be specified")
 	}
 
 	// to determine the Content-Type header
@@ -2057,7 +2077,7 @@ func (a *DefaultAPIService) V1AppsSiteSiteIdTopPostExecute(r ApiV1AppsSiteSiteId
 	}
 	parameterAddToHeaderOrQuery(localVarHeaderParams, "Authorization", r.authorization, "simple", "")
 	// body params
-	localVarPostBody = r.v1AppsDeviceDeviceIdTopPostRequest
+	localVarPostBody = r.v1AppsSiteSiteIdTopPostRequest
 	if r.ctx != nil {
 		// API Key Authentication
 		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
@@ -2127,12 +2147,14 @@ func (r ApiV1AppsVisualizationPostRequest) V1AppsVisualizationPostRequest(v1Apps
 	return r
 }
 
-func (r ApiV1AppsVisualizationPostRequest) Execute() (*V1AppsVisualizationPost200Response, *http.Response, error) {
+func (r ApiV1AppsVisualizationPostRequest) Execute() (*V1AppsVisualizationPostResponse, *http.Response, error) {
 	return r.ApiService.V1AppsVisualizationPostExecute(r)
 }
 
 /*
 V1AppsVisualizationPost Method for V1AppsVisualizationPost
+
+Get the app and circuit visualization info for the device
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV1AppsVisualizationPostRequest
@@ -2145,13 +2167,13 @@ func (a *DefaultAPIService) V1AppsVisualizationPost(ctx context.Context) ApiV1Ap
 }
 
 // Execute executes the request
-//  @return V1AppsVisualizationPost200Response
-func (a *DefaultAPIService) V1AppsVisualizationPostExecute(r ApiV1AppsVisualizationPostRequest) (*V1AppsVisualizationPost200Response, *http.Response, error) {
+//  @return V1AppsVisualizationPostResponse
+func (a *DefaultAPIService) V1AppsVisualizationPostExecute(r ApiV1AppsVisualizationPostRequest) (*V1AppsVisualizationPostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1AppsVisualizationPost200Response
+		localVarReturnValue  *V1AppsVisualizationPostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1AppsVisualizationPost")
@@ -2260,7 +2282,7 @@ func (r ApiV1AuditLogsPostRequest) V1AuditLogsPostRequest(v1AuditLogsPostRequest
 	return r
 }
 
-func (r ApiV1AuditLogsPostRequest) Execute() (*V1AuditLogsPost200Response, *http.Response, error) {
+func (r ApiV1AuditLogsPostRequest) Execute() (*V1AuditLogsPostResponse, *http.Response, error) {
 	return r.ApiService.V1AuditLogsPostExecute(r)
 }
 
@@ -2278,13 +2300,13 @@ func (a *DefaultAPIService) V1AuditLogsPost(ctx context.Context) ApiV1AuditLogsP
 }
 
 // Execute executes the request
-//  @return V1AuditLogsPost200Response
-func (a *DefaultAPIService) V1AuditLogsPostExecute(r ApiV1AuditLogsPostRequest) (*V1AuditLogsPost200Response, *http.Response, error) {
+//  @return V1AuditLogsPostResponse
+func (a *DefaultAPIService) V1AuditLogsPostExecute(r ApiV1AuditLogsPostRequest) (*V1AuditLogsPostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1AuditLogsPost200Response
+		localVarReturnValue  *V1AuditLogsPostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1AuditLogsPost")
@@ -2387,12 +2409,14 @@ func (r ApiV1AuthDeleteRequest) Authorization(authorization string) ApiV1AuthDel
 	return r
 }
 
-func (r ApiV1AuthDeleteRequest) Execute() (*V1AuthPut204Response, *http.Response, error) {
+func (r ApiV1AuthDeleteRequest) Execute() (*V1AuthDeleteResponse, *http.Response, error) {
 	return r.ApiService.V1AuthDeleteExecute(r)
 }
 
 /*
 V1AuthDelete Method for V1AuthDelete
+
+Remove Identity Provider configuration and revert to default authentication.
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV1AuthDeleteRequest
@@ -2405,13 +2429,13 @@ func (a *DefaultAPIService) V1AuthDelete(ctx context.Context) ApiV1AuthDeleteReq
 }
 
 // Execute executes the request
-//  @return V1AuthPut204Response
-func (a *DefaultAPIService) V1AuthDeleteExecute(r ApiV1AuthDeleteRequest) (*V1AuthPut204Response, *http.Response, error) {
+//  @return V1AuthDeleteResponse
+func (a *DefaultAPIService) V1AuthDeleteExecute(r ApiV1AuthDeleteRequest) (*V1AuthDeleteResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodDelete
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1AuthPut204Response
+		localVarReturnValue  *V1AuthDeleteResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1AuthDelete")
@@ -2497,6 +2521,149 @@ func (a *DefaultAPIService) V1AuthDeleteExecute(r ApiV1AuthDeleteRequest) (*V1Au
 	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
+type ApiV1AuthGcsPostRequest struct {
+	ctx context.Context
+	ApiService *DefaultAPIService
+	v1AuthGcsPostRequest *V1AuthGcsPostRequest
+}
+
+func (r ApiV1AuthGcsPostRequest) V1AuthGcsPostRequest(v1AuthGcsPostRequest V1AuthGcsPostRequest) ApiV1AuthGcsPostRequest {
+	r.v1AuthGcsPostRequest = &v1AuthGcsPostRequest
+	return r
+}
+
+func (r ApiV1AuthGcsPostRequest) Execute() (*V1AuthLoginPostResponse, *http.Response, error) {
+	return r.ApiService.V1AuthGcsPostExecute(r)
+}
+
+/*
+V1AuthGcsPost Method for V1AuthGcsPost
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiV1AuthGcsPostRequest
+*/
+func (a *DefaultAPIService) V1AuthGcsPost(ctx context.Context) ApiV1AuthGcsPostRequest {
+	return ApiV1AuthGcsPostRequest{
+		ApiService: a,
+		ctx: ctx,
+	}
+}
+
+// Execute executes the request
+//  @return V1AuthLoginPostResponse
+func (a *DefaultAPIService) V1AuthGcsPostExecute(r ApiV1AuthGcsPostRequest) (*V1AuthLoginPostResponse, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodPost
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  *V1AuthLoginPostResponse
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1AuthGcsPost")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/v1/auth/gcs"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+	if r.v1AuthGcsPostRequest == nil {
+		return localVarReturnValue, nil, reportError("v1AuthGcsPostRequest is required and must be specified")
+	}
+
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{"application/json"}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"application/json"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	// body params
+	localVarPostBody = r.v1AuthGcsPostRequest
+	if r.ctx != nil {
+		// API Key Authentication
+		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
+			if apiKey, ok := auth["jwtAuth"]; ok {
+				var key string
+				if apiKey.Prefix != "" {
+					key = apiKey.Prefix + " " + apiKey.Key
+				} else {
+					key = apiKey.Key
+				}
+				localVarHeaderParams["authorization"] = key
+			}
+		}
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		if localVarHTTPResponse.StatusCode == 400 {
+			var v V1AuthErrorPostResponse
+			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+			if err != nil {
+				newErr.error = err.Error()
+				return localVarReturnValue, localVarHTTPResponse, newErr
+			}
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
+			return localVarReturnValue, localVarHTTPResponse, newErr
+		}
+		if localVarHTTPResponse.StatusCode == 500 {
+			var v V1AuthMfaPost500Response
+			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+			if err != nil {
+				newErr.error = err.Error()
+				return localVarReturnValue, localVarHTTPResponse, newErr
+			}
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
 type ApiV1AuthGetRequest struct {
 	ctx context.Context
 	ApiService *DefaultAPIService
@@ -2509,12 +2676,14 @@ func (r ApiV1AuthGetRequest) Authorization(authorization string) ApiV1AuthGetReq
 	return r
 }
 
-func (r ApiV1AuthGetRequest) Execute() (*V1AuthGet200Response, *http.Response, error) {
+func (r ApiV1AuthGetRequest) Execute() (*V1AuthGetResponse, *http.Response, error) {
 	return r.ApiService.V1AuthGetExecute(r)
 }
 
 /*
 V1AuthGet Method for V1AuthGet
+
+Get current Identity Provider configuration for enterprise.
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV1AuthGetRequest
@@ -2527,13 +2696,13 @@ func (a *DefaultAPIService) V1AuthGet(ctx context.Context) ApiV1AuthGetRequest {
 }
 
 // Execute executes the request
-//  @return V1AuthGet200Response
-func (a *DefaultAPIService) V1AuthGetExecute(r ApiV1AuthGetRequest) (*V1AuthGet200Response, *http.Response, error) {
+//  @return V1AuthGetResponse
+func (a *DefaultAPIService) V1AuthGetExecute(r ApiV1AuthGetRequest) (*V1AuthGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1AuthGet200Response
+		localVarReturnValue  *V1AuthGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1AuthGet")
@@ -2619,6 +2788,146 @@ func (a *DefaultAPIService) V1AuthGetExecute(r ApiV1AuthGetRequest) (*V1AuthGet2
 	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
+type ApiV1AuthLoginCallbackPostRequest struct {
+	ctx context.Context
+	ApiService *DefaultAPIService
+	sAMLResponse *string
+	relayState *string
+}
+
+func (r ApiV1AuthLoginCallbackPostRequest) SAMLResponse(sAMLResponse string) ApiV1AuthLoginCallbackPostRequest {
+	r.sAMLResponse = &sAMLResponse
+	return r
+}
+
+func (r ApiV1AuthLoginCallbackPostRequest) RelayState(relayState string) ApiV1AuthLoginCallbackPostRequest {
+	r.relayState = &relayState
+	return r
+}
+
+func (r ApiV1AuthLoginCallbackPostRequest) Execute() (*http.Response, error) {
+	return r.ApiService.V1AuthLoginCallbackPostExecute(r)
+}
+
+/*
+V1AuthLoginCallbackPost Method for V1AuthLoginCallbackPost
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiV1AuthLoginCallbackPostRequest
+*/
+func (a *DefaultAPIService) V1AuthLoginCallbackPost(ctx context.Context) ApiV1AuthLoginCallbackPostRequest {
+	return ApiV1AuthLoginCallbackPostRequest{
+		ApiService: a,
+		ctx: ctx,
+	}
+}
+
+// Execute executes the request
+func (a *DefaultAPIService) V1AuthLoginCallbackPostExecute(r ApiV1AuthLoginCallbackPostRequest) (*http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodPost
+		localVarPostBody     interface{}
+		formFiles            []formFile
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1AuthLoginCallbackPost")
+	if err != nil {
+		return nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/v1/auth/login/callback"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+	if r.sAMLResponse == nil {
+		return nil, reportError("sAMLResponse is required and must be specified")
+	}
+
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{"application/x-www-form-urlencoded"}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"application/json"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	parameterAddToHeaderOrQuery(localVarFormParams, "SAMLResponse", r.sAMLResponse, "", "")
+	if r.relayState != nil {
+		parameterAddToHeaderOrQuery(localVarFormParams, "RelayState", r.relayState, "", "")
+	}
+	if r.ctx != nil {
+		// API Key Authentication
+		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
+			if apiKey, ok := auth["jwtAuth"]; ok {
+				var key string
+				if apiKey.Prefix != "" {
+					key = apiKey.Prefix + " " + apiKey.Key
+				} else {
+					key = apiKey.Key
+				}
+				localVarHeaderParams["authorization"] = key
+			}
+		}
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarHTTPResponse, err
+	}
+
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		if localVarHTTPResponse.StatusCode == 401 {
+			var v V1AuthErrorPostResponse
+			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+			if err != nil {
+				newErr.error = err.Error()
+				return localVarHTTPResponse, newErr
+			}
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
+			return localVarHTTPResponse, newErr
+		}
+		if localVarHTTPResponse.StatusCode == 500 {
+			var v V1AuthLoginCallbackPost500Response
+			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+			if err != nil {
+				newErr.error = err.Error()
+				return localVarHTTPResponse, newErr
+			}
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
+		}
+		return localVarHTTPResponse, newErr
+	}
+
+	return localVarHTTPResponse, nil
+}
+
 type ApiV1AuthLoginPostRequest struct {
 	ctx context.Context
 	ApiService *DefaultAPIService
@@ -2630,12 +2939,12 @@ func (r ApiV1AuthLoginPostRequest) V1AuthLoginPostRequest(v1AuthLoginPostRequest
 	return r
 }
 
-func (r ApiV1AuthLoginPostRequest) Execute() (*V1AuthLoginPost200Response, *http.Response, error) {
+func (r ApiV1AuthLoginPostRequest) Execute() (*V1AuthLoginPostResponse, *http.Response, error) {
 	return r.ApiService.V1AuthLoginPostExecute(r)
 }
 
 /*
-V1AuthLoginPost Authenticate user and return token
+V1AuthLoginPost Method for V1AuthLoginPost
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV1AuthLoginPostRequest
@@ -2648,13 +2957,13 @@ func (a *DefaultAPIService) V1AuthLoginPost(ctx context.Context) ApiV1AuthLoginP
 }
 
 // Execute executes the request
-//  @return V1AuthLoginPost200Response
-func (a *DefaultAPIService) V1AuthLoginPostExecute(r ApiV1AuthLoginPostRequest) (*V1AuthLoginPost200Response, *http.Response, error) {
+//  @return V1AuthLoginPostResponse
+func (a *DefaultAPIService) V1AuthLoginPostExecute(r ApiV1AuthLoginPostRequest) (*V1AuthLoginPostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1AuthLoginPost200Response
+		localVarReturnValue  *V1AuthLoginPostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1AuthLoginPost")
@@ -2744,14 +3053,28 @@ func (a *DefaultAPIService) V1AuthLoginPostExecute(r ApiV1AuthLoginPostRequest) 
 type ApiV1AuthLoginPreGetRequest struct {
 	ctx context.Context
 	ApiService *DefaultAPIService
+	email *string
+	relayState *string
 }
 
-func (r ApiV1AuthLoginPreGetRequest) Execute() (*V1AuthLoginPreGet200Response, *http.Response, error) {
+// User email address
+func (r ApiV1AuthLoginPreGetRequest) Email(email string) ApiV1AuthLoginPreGetRequest {
+	r.email = &email
+	return r
+}
+
+// State to relay after authentication
+func (r ApiV1AuthLoginPreGetRequest) RelayState(relayState string) ApiV1AuthLoginPreGetRequest {
+	r.relayState = &relayState
+	return r
+}
+
+func (r ApiV1AuthLoginPreGetRequest) Execute() (*V1AuthLoginPreGetResponse, *http.Response, error) {
 	return r.ApiService.V1AuthLoginPreGetExecute(r)
 }
 
 /*
-V1AuthLoginPreGet Pre-login endpoint
+V1AuthLoginPreGet Method for V1AuthLoginPreGet
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV1AuthLoginPreGetRequest
@@ -2764,13 +3087,13 @@ func (a *DefaultAPIService) V1AuthLoginPreGet(ctx context.Context) ApiV1AuthLogi
 }
 
 // Execute executes the request
-//  @return V1AuthLoginPreGet200Response
-func (a *DefaultAPIService) V1AuthLoginPreGetExecute(r ApiV1AuthLoginPreGetRequest) (*V1AuthLoginPreGet200Response, *http.Response, error) {
+//  @return V1AuthLoginPreGetResponse
+func (a *DefaultAPIService) V1AuthLoginPreGetExecute(r ApiV1AuthLoginPreGetRequest) (*V1AuthLoginPreGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1AuthLoginPreGet200Response
+		localVarReturnValue  *V1AuthLoginPreGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1AuthLoginPreGet")
@@ -2783,7 +3106,14 @@ func (a *DefaultAPIService) V1AuthLoginPreGetExecute(r ApiV1AuthLoginPreGetReque
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
+	if r.email == nil {
+		return localVarReturnValue, nil, reportError("email is required and must be specified")
+	}
 
+	parameterAddToHeaderOrQuery(localVarQueryParams, "email", r.email, "form", "")
+	if r.relayState != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "relayState", r.relayState, "form", "")
+	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
 
@@ -2852,6 +3182,148 @@ func (a *DefaultAPIService) V1AuthLoginPreGetExecute(r ApiV1AuthLoginPreGetReque
 	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
+type ApiV1AuthLoginSamlGetRequest struct {
+	ctx context.Context
+	ApiService *DefaultAPIService
+	email *string
+	relayState *string
+}
+
+// User email address
+func (r ApiV1AuthLoginSamlGetRequest) Email(email string) ApiV1AuthLoginSamlGetRequest {
+	r.email = &email
+	return r
+}
+
+// State to relay after authentication
+func (r ApiV1AuthLoginSamlGetRequest) RelayState(relayState string) ApiV1AuthLoginSamlGetRequest {
+	r.relayState = &relayState
+	return r
+}
+
+func (r ApiV1AuthLoginSamlGetRequest) Execute() (*http.Response, error) {
+	return r.ApiService.V1AuthLoginSamlGetExecute(r)
+}
+
+/*
+V1AuthLoginSamlGet Method for V1AuthLoginSamlGet
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiV1AuthLoginSamlGetRequest
+*/
+func (a *DefaultAPIService) V1AuthLoginSamlGet(ctx context.Context) ApiV1AuthLoginSamlGetRequest {
+	return ApiV1AuthLoginSamlGetRequest{
+		ApiService: a,
+		ctx: ctx,
+	}
+}
+
+// Execute executes the request
+func (a *DefaultAPIService) V1AuthLoginSamlGetExecute(r ApiV1AuthLoginSamlGetRequest) (*http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1AuthLoginSamlGet")
+	if err != nil {
+		return nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/v1/auth/login/saml"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+	if r.email == nil {
+		return nil, reportError("email is required and must be specified")
+	}
+
+	parameterAddToHeaderOrQuery(localVarQueryParams, "email", r.email, "form", "")
+	if r.relayState != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "relayState", r.relayState, "form", "")
+	}
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"application/json"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	if r.ctx != nil {
+		// API Key Authentication
+		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
+			if apiKey, ok := auth["jwtAuth"]; ok {
+				var key string
+				if apiKey.Prefix != "" {
+					key = apiKey.Prefix + " " + apiKey.Key
+				} else {
+					key = apiKey.Key
+				}
+				localVarHeaderParams["authorization"] = key
+			}
+		}
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarHTTPResponse, err
+	}
+
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		if localVarHTTPResponse.StatusCode == 401 {
+			var v V1AuthLoginSamlGet401Response
+			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+			if err != nil {
+				newErr.error = err.Error()
+				return localVarHTTPResponse, newErr
+			}
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
+			return localVarHTTPResponse, newErr
+		}
+		if localVarHTTPResponse.StatusCode == 500 {
+			var v V1AuthLoginSamlGet500Response
+			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+			if err != nil {
+				newErr.error = err.Error()
+				return localVarHTTPResponse, newErr
+			}
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
+		}
+		return localVarHTTPResponse, newErr
+	}
+
+	return localVarHTTPResponse, nil
+}
+
 type ApiV1AuthLoginTempPostRequest struct {
 	ctx context.Context
 	ApiService *DefaultAPIService
@@ -2863,12 +3335,12 @@ func (r ApiV1AuthLoginTempPostRequest) V1AuthLoginTempPostRequest(v1AuthLoginTem
 	return r
 }
 
-func (r ApiV1AuthLoginTempPostRequest) Execute() (*V1AuthLoginTempPost200Response, *http.Response, error) {
+func (r ApiV1AuthLoginTempPostRequest) Execute() (*V1AuthLoginPostResponse, *http.Response, error) {
 	return r.ApiService.V1AuthLoginTempPostExecute(r)
 }
 
 /*
-V1AuthLoginTempPost Authenticate user with temporary password
+V1AuthLoginTempPost Method for V1AuthLoginTempPost
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV1AuthLoginTempPostRequest
@@ -2881,13 +3353,13 @@ func (a *DefaultAPIService) V1AuthLoginTempPost(ctx context.Context) ApiV1AuthLo
 }
 
 // Execute executes the request
-//  @return V1AuthLoginTempPost200Response
-func (a *DefaultAPIService) V1AuthLoginTempPostExecute(r ApiV1AuthLoginTempPostRequest) (*V1AuthLoginTempPost200Response, *http.Response, error) {
+//  @return V1AuthLoginPostResponse
+func (a *DefaultAPIService) V1AuthLoginTempPostExecute(r ApiV1AuthLoginTempPostRequest) (*V1AuthLoginPostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1AuthLoginTempPost200Response
+		localVarReturnValue  *V1AuthLoginPostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1AuthLoginTempPost")
@@ -2992,6 +3464,8 @@ func (r ApiV1AuthMfaDeleteRequest) Execute() (map[string]interface{}, *http.Resp
 
 /*
 V1AuthMfaDelete Method for V1AuthMfaDelete
+
+Remove Multi-Factor Authentication enrollment for the tenant.
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV1AuthMfaDeleteRequest
@@ -3121,6 +3595,8 @@ func (r ApiV1AuthMfaPatchRequest) Execute() (map[string]interface{}, *http.Respo
 /*
 V1AuthMfaPatch Method for V1AuthMfaPatch
 
+Enroll tenant in Multi-Factor Authentication (SMS, GoogleAuth).
+
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV1AuthMfaPatchRequest
 */
@@ -3229,6 +3705,149 @@ func (a *DefaultAPIService) V1AuthMfaPatchExecute(r ApiV1AuthMfaPatchRequest) (m
 	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
+type ApiV1AuthMfaPostRequest struct {
+	ctx context.Context
+	ApiService *DefaultAPIService
+	v1AuthMfaPostRequest *V1AuthMfaPostRequest
+}
+
+func (r ApiV1AuthMfaPostRequest) V1AuthMfaPostRequest(v1AuthMfaPostRequest V1AuthMfaPostRequest) ApiV1AuthMfaPostRequest {
+	r.v1AuthMfaPostRequest = &v1AuthMfaPostRequest
+	return r
+}
+
+func (r ApiV1AuthMfaPostRequest) Execute() (*V1AuthLoginPostResponse, *http.Response, error) {
+	return r.ApiService.V1AuthMfaPostExecute(r)
+}
+
+/*
+V1AuthMfaPost Method for V1AuthMfaPost
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiV1AuthMfaPostRequest
+*/
+func (a *DefaultAPIService) V1AuthMfaPost(ctx context.Context) ApiV1AuthMfaPostRequest {
+	return ApiV1AuthMfaPostRequest{
+		ApiService: a,
+		ctx: ctx,
+	}
+}
+
+// Execute executes the request
+//  @return V1AuthLoginPostResponse
+func (a *DefaultAPIService) V1AuthMfaPostExecute(r ApiV1AuthMfaPostRequest) (*V1AuthLoginPostResponse, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodPost
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  *V1AuthLoginPostResponse
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1AuthMfaPost")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/v1/auth/mfa"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+	if r.v1AuthMfaPostRequest == nil {
+		return localVarReturnValue, nil, reportError("v1AuthMfaPostRequest is required and must be specified")
+	}
+
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{"application/json"}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"application/json"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	// body params
+	localVarPostBody = r.v1AuthMfaPostRequest
+	if r.ctx != nil {
+		// API Key Authentication
+		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
+			if apiKey, ok := auth["jwtAuth"]; ok {
+				var key string
+				if apiKey.Prefix != "" {
+					key = apiKey.Prefix + " " + apiKey.Key
+				} else {
+					key = apiKey.Key
+				}
+				localVarHeaderParams["authorization"] = key
+			}
+		}
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		if localVarHTTPResponse.StatusCode == 400 {
+			var v V1AuthErrorPostResponse
+			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+			if err != nil {
+				newErr.error = err.Error()
+				return localVarReturnValue, localVarHTTPResponse, newErr
+			}
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
+			return localVarReturnValue, localVarHTTPResponse, newErr
+		}
+		if localVarHTTPResponse.StatusCode == 500 {
+			var v V1AuthMfaPost500Response
+			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+			if err != nil {
+				newErr.error = err.Error()
+				return localVarReturnValue, localVarHTTPResponse, newErr
+			}
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
 type ApiV1AuthMfaTypesGetRequest struct {
 	ctx context.Context
 	ApiService *DefaultAPIService
@@ -3241,12 +3860,14 @@ func (r ApiV1AuthMfaTypesGetRequest) Authorization(authorization string) ApiV1Au
 	return r
 }
 
-func (r ApiV1AuthMfaTypesGetRequest) Execute() (*V1AuthMfaPatchRequest, *http.Response, error) {
+func (r ApiV1AuthMfaTypesGetRequest) Execute() (*V1AuthMfaTypesGetResponse, *http.Response, error) {
 	return r.ApiService.V1AuthMfaTypesGetExecute(r)
 }
 
 /*
 V1AuthMfaTypesGet Method for V1AuthMfaTypesGet
+
+Get MFA types allowed by enterprise policy.
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV1AuthMfaTypesGetRequest
@@ -3259,13 +3880,13 @@ func (a *DefaultAPIService) V1AuthMfaTypesGet(ctx context.Context) ApiV1AuthMfaT
 }
 
 // Execute executes the request
-//  @return V1AuthMfaPatchRequest
-func (a *DefaultAPIService) V1AuthMfaTypesGetExecute(r ApiV1AuthMfaTypesGetRequest) (*V1AuthMfaPatchRequest, *http.Response, error) {
+//  @return V1AuthMfaTypesGetResponse
+func (a *DefaultAPIService) V1AuthMfaTypesGetExecute(r ApiV1AuthMfaTypesGetRequest) (*V1AuthMfaTypesGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1AuthMfaPatchRequest
+		localVarReturnValue  *V1AuthMfaTypesGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1AuthMfaTypesGet")
@@ -3355,7 +3976,7 @@ type ApiV1AuthMfaTypesPutRequest struct {
 	ctx context.Context
 	ApiService *DefaultAPIService
 	authorization *string
-	v1AuthMfaPatchRequest *V1AuthMfaPatchRequest
+	v1AuthMfaTypesPutRequest *V1AuthMfaTypesPutRequest
 }
 
 // Bearer token. Format: Bearer &lt;your_token_here&gt;
@@ -3364,8 +3985,8 @@ func (r ApiV1AuthMfaTypesPutRequest) Authorization(authorization string) ApiV1Au
 	return r
 }
 
-func (r ApiV1AuthMfaTypesPutRequest) V1AuthMfaPatchRequest(v1AuthMfaPatchRequest V1AuthMfaPatchRequest) ApiV1AuthMfaTypesPutRequest {
-	r.v1AuthMfaPatchRequest = &v1AuthMfaPatchRequest
+func (r ApiV1AuthMfaTypesPutRequest) V1AuthMfaTypesPutRequest(v1AuthMfaTypesPutRequest V1AuthMfaTypesPutRequest) ApiV1AuthMfaTypesPutRequest {
+	r.v1AuthMfaTypesPutRequest = &v1AuthMfaTypesPutRequest
 	return r
 }
 
@@ -3375,6 +3996,8 @@ func (r ApiV1AuthMfaTypesPutRequest) Execute() (map[string]interface{}, *http.Re
 
 /*
 V1AuthMfaTypesPut Method for V1AuthMfaTypesPut
+
+Update enterprise MFA policy to allow/disallow specific MFA types.
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV1AuthMfaTypesPutRequest
@@ -3409,8 +4032,8 @@ func (a *DefaultAPIService) V1AuthMfaTypesPutExecute(r ApiV1AuthMfaTypesPutReque
 	if r.authorization == nil {
 		return localVarReturnValue, nil, reportError("authorization is required and must be specified")
 	}
-	if r.v1AuthMfaPatchRequest == nil {
-		return localVarReturnValue, nil, reportError("v1AuthMfaPatchRequest is required and must be specified")
+	if r.v1AuthMfaTypesPutRequest == nil {
+		return localVarReturnValue, nil, reportError("v1AuthMfaTypesPutRequest is required and must be specified")
 	}
 
 	// to determine the Content-Type header
@@ -3432,7 +4055,7 @@ func (a *DefaultAPIService) V1AuthMfaTypesPutExecute(r ApiV1AuthMfaTypesPutReque
 	}
 	parameterAddToHeaderOrQuery(localVarHeaderParams, "Authorization", r.authorization, "simple", "")
 	// body params
-	localVarPostBody = r.v1AuthMfaPatchRequest
+	localVarPostBody = r.v1AuthMfaTypesPutRequest
 	if r.ctx != nil {
 		// API Key Authentication
 		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
@@ -3488,7 +4111,7 @@ type ApiV1AuthPatchRequest struct {
 	ctx context.Context
 	ApiService *DefaultAPIService
 	authorization *string
-	v1AuthGet200Response *V1AuthGet200Response
+	v1AuthPatchRequest *V1AuthPatchRequest
 }
 
 // Bearer token. Format: Bearer &lt;your_token_here&gt;
@@ -3497,17 +4120,19 @@ func (r ApiV1AuthPatchRequest) Authorization(authorization string) ApiV1AuthPatc
 	return r
 }
 
-func (r ApiV1AuthPatchRequest) V1AuthGet200Response(v1AuthGet200Response V1AuthGet200Response) ApiV1AuthPatchRequest {
-	r.v1AuthGet200Response = &v1AuthGet200Response
+func (r ApiV1AuthPatchRequest) V1AuthPatchRequest(v1AuthPatchRequest V1AuthPatchRequest) ApiV1AuthPatchRequest {
+	r.v1AuthPatchRequest = &v1AuthPatchRequest
 	return r
 }
 
-func (r ApiV1AuthPatchRequest) Execute() (*V1AuthPut204Response, *http.Response, error) {
+func (r ApiV1AuthPatchRequest) Execute() (*V1AuthPatchResponse, *http.Response, error) {
 	return r.ApiService.V1AuthPatchExecute(r)
 }
 
 /*
 V1AuthPatch Method for V1AuthPatch
+
+Update Identity Provider configuration (certificates, endpoints, etc.).
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV1AuthPatchRequest
@@ -3520,13 +4145,13 @@ func (a *DefaultAPIService) V1AuthPatch(ctx context.Context) ApiV1AuthPatchReque
 }
 
 // Execute executes the request
-//  @return V1AuthPut204Response
-func (a *DefaultAPIService) V1AuthPatchExecute(r ApiV1AuthPatchRequest) (*V1AuthPut204Response, *http.Response, error) {
+//  @return V1AuthPatchResponse
+func (a *DefaultAPIService) V1AuthPatchExecute(r ApiV1AuthPatchRequest) (*V1AuthPatchResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPatch
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1AuthPut204Response
+		localVarReturnValue  *V1AuthPatchResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1AuthPatch")
@@ -3542,8 +4167,8 @@ func (a *DefaultAPIService) V1AuthPatchExecute(r ApiV1AuthPatchRequest) (*V1Auth
 	if r.authorization == nil {
 		return localVarReturnValue, nil, reportError("authorization is required and must be specified")
 	}
-	if r.v1AuthGet200Response == nil {
-		return localVarReturnValue, nil, reportError("v1AuthGet200Response is required and must be specified")
+	if r.v1AuthPatchRequest == nil {
+		return localVarReturnValue, nil, reportError("v1AuthPatchRequest is required and must be specified")
 	}
 
 	// to determine the Content-Type header
@@ -3565,7 +4190,7 @@ func (a *DefaultAPIService) V1AuthPatchExecute(r ApiV1AuthPatchRequest) (*V1Auth
 	}
 	parameterAddToHeaderOrQuery(localVarHeaderParams, "Authorization", r.authorization, "simple", "")
 	// body params
-	localVarPostBody = r.v1AuthGet200Response
+	localVarPostBody = r.v1AuthPatchRequest
 	if r.ctx != nil {
 		// API Key Authentication
 		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
@@ -3621,7 +4246,7 @@ type ApiV1AuthPutRequest struct {
 	ctx context.Context
 	ApiService *DefaultAPIService
 	authorization *string
-	v1AuthGet200Response *V1AuthGet200Response
+	v1AuthPutRequest *V1AuthPutRequest
 }
 
 // Bearer token. Format: Bearer &lt;your_token_here&gt;
@@ -3630,17 +4255,19 @@ func (r ApiV1AuthPutRequest) Authorization(authorization string) ApiV1AuthPutReq
 	return r
 }
 
-func (r ApiV1AuthPutRequest) V1AuthGet200Response(v1AuthGet200Response V1AuthGet200Response) ApiV1AuthPutRequest {
-	r.v1AuthGet200Response = &v1AuthGet200Response
+func (r ApiV1AuthPutRequest) V1AuthPutRequest(v1AuthPutRequest V1AuthPutRequest) ApiV1AuthPutRequest {
+	r.v1AuthPutRequest = &v1AuthPutRequest
 	return r
 }
 
-func (r ApiV1AuthPutRequest) Execute() (*V1AuthPut204Response, *http.Response, error) {
+func (r ApiV1AuthPutRequest) Execute() (*V1AuthPutResponse, *http.Response, error) {
 	return r.ApiService.V1AuthPutExecute(r)
 }
 
 /*
 V1AuthPut Method for V1AuthPut
+
+Configure Identity Provider (SAML) for enterprise. Creates IDP configuration affecting all users in the enterprise.
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV1AuthPutRequest
@@ -3653,13 +4280,13 @@ func (a *DefaultAPIService) V1AuthPut(ctx context.Context) ApiV1AuthPutRequest {
 }
 
 // Execute executes the request
-//  @return V1AuthPut204Response
-func (a *DefaultAPIService) V1AuthPutExecute(r ApiV1AuthPutRequest) (*V1AuthPut204Response, *http.Response, error) {
+//  @return V1AuthPutResponse
+func (a *DefaultAPIService) V1AuthPutExecute(r ApiV1AuthPutRequest) (*V1AuthPutResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPut
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1AuthPut204Response
+		localVarReturnValue  *V1AuthPutResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1AuthPut")
@@ -3675,8 +4302,8 @@ func (a *DefaultAPIService) V1AuthPutExecute(r ApiV1AuthPutRequest) (*V1AuthPut2
 	if r.authorization == nil {
 		return localVarReturnValue, nil, reportError("authorization is required and must be specified")
 	}
-	if r.v1AuthGet200Response == nil {
-		return localVarReturnValue, nil, reportError("v1AuthGet200Response is required and must be specified")
+	if r.v1AuthPutRequest == nil {
+		return localVarReturnValue, nil, reportError("v1AuthPutRequest is required and must be specified")
 	}
 
 	// to determine the Content-Type header
@@ -3698,7 +4325,7 @@ func (a *DefaultAPIService) V1AuthPutExecute(r ApiV1AuthPutRequest) (*V1AuthPut2
 	}
 	parameterAddToHeaderOrQuery(localVarHeaderParams, "Authorization", r.authorization, "simple", "")
 	// body params
-	localVarPostBody = r.v1AuthGet200Response
+	localVarPostBody = r.v1AuthPutRequest
 	if r.ctx != nil {
 		// API Key Authentication
 		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
@@ -3750,6 +4377,489 @@ func (a *DefaultAPIService) V1AuthPutExecute(r ApiV1AuthPutRequest) (*V1AuthPut2
 	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
+type ApiV1AuthRefreshGetRequest struct {
+	ctx context.Context
+	ApiService *DefaultAPIService
+	authorization *string
+	currentPath *string
+}
+
+// Bearer token. Format: Bearer &lt;your_token_here&gt;
+func (r ApiV1AuthRefreshGetRequest) Authorization(authorization string) ApiV1AuthRefreshGetRequest {
+	r.authorization = &authorization
+	return r
+}
+
+// Current path to redirect to after refresh
+func (r ApiV1AuthRefreshGetRequest) CurrentPath(currentPath string) ApiV1AuthRefreshGetRequest {
+	r.currentPath = &currentPath
+	return r
+}
+
+func (r ApiV1AuthRefreshGetRequest) Execute() (*V1AuthRefreshGet200Response, *http.Response, error) {
+	return r.ApiService.V1AuthRefreshGetExecute(r)
+}
+
+/*
+V1AuthRefreshGet Method for V1AuthRefreshGet
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiV1AuthRefreshGetRequest
+*/
+func (a *DefaultAPIService) V1AuthRefreshGet(ctx context.Context) ApiV1AuthRefreshGetRequest {
+	return ApiV1AuthRefreshGetRequest{
+		ApiService: a,
+		ctx: ctx,
+	}
+}
+
+// Execute executes the request
+//  @return V1AuthRefreshGet200Response
+func (a *DefaultAPIService) V1AuthRefreshGetExecute(r ApiV1AuthRefreshGetRequest) (*V1AuthRefreshGet200Response, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  *V1AuthRefreshGet200Response
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1AuthRefreshGet")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/v1/auth/refresh"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+	if r.authorization == nil {
+		return localVarReturnValue, nil, reportError("authorization is required and must be specified")
+	}
+
+	if r.currentPath != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "currentPath", r.currentPath, "form", "")
+	}
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"application/json"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	parameterAddToHeaderOrQuery(localVarHeaderParams, "Authorization", r.authorization, "simple", "")
+	if r.ctx != nil {
+		// API Key Authentication
+		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
+			if apiKey, ok := auth["jwtAuth"]; ok {
+				var key string
+				if apiKey.Prefix != "" {
+					key = apiKey.Prefix + " " + apiKey.Key
+				} else {
+					key = apiKey.Key
+				}
+				localVarHeaderParams["authorization"] = key
+			}
+		}
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		if localVarHTTPResponse.StatusCode == 403 {
+			var v V1AuthRefreshGet403Response
+			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+			if err != nil {
+				newErr.error = err.Error()
+				return localVarReturnValue, localVarHTTPResponse, newErr
+			}
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
+			return localVarReturnValue, localVarHTTPResponse, newErr
+		}
+		if localVarHTTPResponse.StatusCode == 422 {
+			var v V1AuthRefreshGet422Response
+			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+			if err != nil {
+				newErr.error = err.Error()
+				return localVarReturnValue, localVarHTTPResponse, newErr
+			}
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
+			return localVarReturnValue, localVarHTTPResponse, newErr
+		}
+		if localVarHTTPResponse.StatusCode == 500 {
+			var v V1AuthMfaPost500Response
+			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+			if err != nil {
+				newErr.error = err.Error()
+				return localVarReturnValue, localVarHTTPResponse, newErr
+			}
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
+type ApiV1AuthSessionGetRequest struct {
+	ctx context.Context
+	ApiService *DefaultAPIService
+	authorization *string
+	enterpriseId *int64
+}
+
+// Bearer token. Format: Bearer &lt;your_token_here&gt;
+func (r ApiV1AuthSessionGetRequest) Authorization(authorization string) ApiV1AuthSessionGetRequest {
+	r.authorization = &authorization
+	return r
+}
+
+// Enterprise ID to get permissions for
+func (r ApiV1AuthSessionGetRequest) EnterpriseId(enterpriseId int64) ApiV1AuthSessionGetRequest {
+	r.enterpriseId = &enterpriseId
+	return r
+}
+
+func (r ApiV1AuthSessionGetRequest) Execute() (map[string]interface{}, *http.Response, error) {
+	return r.ApiService.V1AuthSessionGetExecute(r)
+}
+
+/*
+V1AuthSessionGet Method for V1AuthSessionGet
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiV1AuthSessionGetRequest
+*/
+func (a *DefaultAPIService) V1AuthSessionGet(ctx context.Context) ApiV1AuthSessionGetRequest {
+	return ApiV1AuthSessionGetRequest{
+		ApiService: a,
+		ctx: ctx,
+	}
+}
+
+// Execute executes the request
+//  @return map[string]interface{}
+func (a *DefaultAPIService) V1AuthSessionGetExecute(r ApiV1AuthSessionGetRequest) (map[string]interface{}, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  map[string]interface{}
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1AuthSessionGet")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/v1/auth/session"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+	if r.authorization == nil {
+		return localVarReturnValue, nil, reportError("authorization is required and must be specified")
+	}
+	if r.enterpriseId == nil {
+		return localVarReturnValue, nil, reportError("enterpriseId is required and must be specified")
+	}
+
+	parameterAddToHeaderOrQuery(localVarQueryParams, "enterpriseId", r.enterpriseId, "form", "")
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"application/json"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	parameterAddToHeaderOrQuery(localVarHeaderParams, "Authorization", r.authorization, "simple", "")
+	if r.ctx != nil {
+		// API Key Authentication
+		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
+			if apiKey, ok := auth["jwtAuth"]; ok {
+				var key string
+				if apiKey.Prefix != "" {
+					key = apiKey.Prefix + " " + apiKey.Key
+				} else {
+					key = apiKey.Key
+				}
+				localVarHeaderParams["authorization"] = key
+			}
+		}
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		if localVarHTTPResponse.StatusCode == 403 {
+			var v V1AuthSessionGet403Response
+			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+			if err != nil {
+				newErr.error = err.Error()
+				return localVarReturnValue, localVarHTTPResponse, newErr
+			}
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
+			return localVarReturnValue, localVarHTTPResponse, newErr
+		}
+		if localVarHTTPResponse.StatusCode == 422 {
+			var v V1AuthSessionGet422Response
+			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+			if err != nil {
+				newErr.error = err.Error()
+				return localVarReturnValue, localVarHTTPResponse, newErr
+			}
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
+			return localVarReturnValue, localVarHTTPResponse, newErr
+		}
+		if localVarHTTPResponse.StatusCode == 500 {
+			var v V1AuthMfaPost500Response
+			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+			if err != nil {
+				newErr.error = err.Error()
+				return localVarReturnValue, localVarHTTPResponse, newErr
+			}
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
+type ApiV1AuthSessionRootGetRequest struct {
+	ctx context.Context
+	ApiService *DefaultAPIService
+	authorization *string
+}
+
+// Bearer token. Format: Bearer &lt;your_token_here&gt;
+func (r ApiV1AuthSessionRootGetRequest) Authorization(authorization string) ApiV1AuthSessionRootGetRequest {
+	r.authorization = &authorization
+	return r
+}
+
+func (r ApiV1AuthSessionRootGetRequest) Execute() (map[string]interface{}, *http.Response, error) {
+	return r.ApiService.V1AuthSessionRootGetExecute(r)
+}
+
+/*
+V1AuthSessionRootGet Method for V1AuthSessionRootGet
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiV1AuthSessionRootGetRequest
+*/
+func (a *DefaultAPIService) V1AuthSessionRootGet(ctx context.Context) ApiV1AuthSessionRootGetRequest {
+	return ApiV1AuthSessionRootGetRequest{
+		ApiService: a,
+		ctx: ctx,
+	}
+}
+
+// Execute executes the request
+//  @return map[string]interface{}
+func (a *DefaultAPIService) V1AuthSessionRootGetExecute(r ApiV1AuthSessionRootGetRequest) (map[string]interface{}, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  map[string]interface{}
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1AuthSessionRootGet")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/v1/auth/session/root"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+	if r.authorization == nil {
+		return localVarReturnValue, nil, reportError("authorization is required and must be specified")
+	}
+
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"application/json"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	parameterAddToHeaderOrQuery(localVarHeaderParams, "Authorization", r.authorization, "simple", "")
+	if r.ctx != nil {
+		// API Key Authentication
+		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
+			if apiKey, ok := auth["jwtAuth"]; ok {
+				var key string
+				if apiKey.Prefix != "" {
+					key = apiKey.Prefix + " " + apiKey.Key
+				} else {
+					key = apiKey.Key
+				}
+				localVarHeaderParams["authorization"] = key
+			}
+		}
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		if localVarHTTPResponse.StatusCode == 403 {
+			var v V1AuthSessionGet403Response
+			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+			if err != nil {
+				newErr.error = err.Error()
+				return localVarReturnValue, localVarHTTPResponse, newErr
+			}
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
+			return localVarReturnValue, localVarHTTPResponse, newErr
+		}
+		if localVarHTTPResponse.StatusCode == 422 {
+			var v V1AuthSessionGet422Response
+			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+			if err != nil {
+				newErr.error = err.Error()
+				return localVarReturnValue, localVarHTTPResponse, newErr
+			}
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
+			return localVarReturnValue, localVarHTTPResponse, newErr
+		}
+		if localVarHTTPResponse.StatusCode == 500 {
+			var v V1AuthMfaPost500Response
+			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+			if err != nil {
+				newErr.error = err.Error()
+				return localVarReturnValue, localVarHTTPResponse, newErr
+			}
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
 type ApiV1AuthUserGetRequest struct {
 	ctx context.Context
 	ApiService *DefaultAPIService
@@ -3762,12 +4872,12 @@ func (r ApiV1AuthUserGetRequest) Authorization(authorization string) ApiV1AuthUs
 	return r
 }
 
-func (r ApiV1AuthUserGetRequest) Execute() (*V1AuthUserGet200Response, *http.Response, error) {
+func (r ApiV1AuthUserGetRequest) Execute() (*V1AuthUserGetResponse, *http.Response, error) {
 	return r.ApiService.V1AuthUserGetExecute(r)
 }
 
 /*
-V1AuthUserGet Get authenticated user information
+V1AuthUserGet Method for V1AuthUserGet
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV1AuthUserGetRequest
@@ -3780,13 +4890,13 @@ func (a *DefaultAPIService) V1AuthUserGet(ctx context.Context) ApiV1AuthUserGetR
 }
 
 // Execute executes the request
-//  @return V1AuthUserGet200Response
-func (a *DefaultAPIService) V1AuthUserGetExecute(r ApiV1AuthUserGetRequest) (*V1AuthUserGet200Response, *http.Response, error) {
+//  @return V1AuthUserGetResponse
+func (a *DefaultAPIService) V1AuthUserGetExecute(r ApiV1AuthUserGetRequest) (*V1AuthUserGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1AuthUserGet200Response
+		localVarReturnValue  *V1AuthUserGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1AuthUserGet")
@@ -3890,7 +5000,7 @@ func (r ApiV1B2bExtranetMonitoringFilterPostRequest) V1B2bExtranetMonitoringFilt
 	return r
 }
 
-func (r ApiV1B2bExtranetMonitoringFilterPostRequest) Execute() (*V1B2bExtranetMonitoringFilterPost200Response, *http.Response, error) {
+func (r ApiV1B2bExtranetMonitoringFilterPostRequest) Execute() (*V1B2bExtranetMonitoringFilterPostResponse, *http.Response, error) {
 	return r.ApiService.V1B2bExtranetMonitoringFilterPostExecute(r)
 }
 
@@ -3908,13 +5018,13 @@ func (a *DefaultAPIService) V1B2bExtranetMonitoringFilterPost(ctx context.Contex
 }
 
 // Execute executes the request
-//  @return V1B2bExtranetMonitoringFilterPost200Response
-func (a *DefaultAPIService) V1B2bExtranetMonitoringFilterPostExecute(r ApiV1B2bExtranetMonitoringFilterPostRequest) (*V1B2bExtranetMonitoringFilterPost200Response, *http.Response, error) {
+//  @return V1B2bExtranetMonitoringFilterPostResponse
+func (a *DefaultAPIService) V1B2bExtranetMonitoringFilterPostExecute(r ApiV1B2bExtranetMonitoringFilterPostRequest) (*V1B2bExtranetMonitoringFilterPostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1B2bExtranetMonitoringFilterPost200Response
+		localVarReturnValue  *V1B2bExtranetMonitoringFilterPostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1B2bExtranetMonitoringFilterPost")
@@ -4010,7 +5120,7 @@ type ApiV1BackboneHealthDeviceDeviceIdPostRequest struct {
 	ApiService *DefaultAPIService
 	authorization *string
 	deviceId int64
-	v2NotificationlistPostRequest *V2NotificationlistPostRequest
+	v1BackboneHealthDeviceDeviceIdPostRequest *V1BackboneHealthDeviceDeviceIdPostRequest
 }
 
 // Bearer token. Format: Bearer &lt;your_token_here&gt;
@@ -4019,12 +5129,12 @@ func (r ApiV1BackboneHealthDeviceDeviceIdPostRequest) Authorization(authorizatio
 	return r
 }
 
-func (r ApiV1BackboneHealthDeviceDeviceIdPostRequest) V2NotificationlistPostRequest(v2NotificationlistPostRequest V2NotificationlistPostRequest) ApiV1BackboneHealthDeviceDeviceIdPostRequest {
-	r.v2NotificationlistPostRequest = &v2NotificationlistPostRequest
+func (r ApiV1BackboneHealthDeviceDeviceIdPostRequest) V1BackboneHealthDeviceDeviceIdPostRequest(v1BackboneHealthDeviceDeviceIdPostRequest V1BackboneHealthDeviceDeviceIdPostRequest) ApiV1BackboneHealthDeviceDeviceIdPostRequest {
+	r.v1BackboneHealthDeviceDeviceIdPostRequest = &v1BackboneHealthDeviceDeviceIdPostRequest
 	return r
 }
 
-func (r ApiV1BackboneHealthDeviceDeviceIdPostRequest) Execute() (*V1BackboneHealthDeviceDeviceIdPost200Response, *http.Response, error) {
+func (r ApiV1BackboneHealthDeviceDeviceIdPostRequest) Execute() (*V1BackboneHealthDeviceDeviceIdPostResponse, *http.Response, error) {
 	return r.ApiService.V1BackboneHealthDeviceDeviceIdPostExecute(r)
 }
 
@@ -4044,13 +5154,13 @@ func (a *DefaultAPIService) V1BackboneHealthDeviceDeviceIdPost(ctx context.Conte
 }
 
 // Execute executes the request
-//  @return V1BackboneHealthDeviceDeviceIdPost200Response
-func (a *DefaultAPIService) V1BackboneHealthDeviceDeviceIdPostExecute(r ApiV1BackboneHealthDeviceDeviceIdPostRequest) (*V1BackboneHealthDeviceDeviceIdPost200Response, *http.Response, error) {
+//  @return V1BackboneHealthDeviceDeviceIdPostResponse
+func (a *DefaultAPIService) V1BackboneHealthDeviceDeviceIdPostExecute(r ApiV1BackboneHealthDeviceDeviceIdPostRequest) (*V1BackboneHealthDeviceDeviceIdPostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1BackboneHealthDeviceDeviceIdPost200Response
+		localVarReturnValue  *V1BackboneHealthDeviceDeviceIdPostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1BackboneHealthDeviceDeviceIdPost")
@@ -4067,8 +5177,8 @@ func (a *DefaultAPIService) V1BackboneHealthDeviceDeviceIdPostExecute(r ApiV1Bac
 	if r.authorization == nil {
 		return localVarReturnValue, nil, reportError("authorization is required and must be specified")
 	}
-	if r.v2NotificationlistPostRequest == nil {
-		return localVarReturnValue, nil, reportError("v2NotificationlistPostRequest is required and must be specified")
+	if r.v1BackboneHealthDeviceDeviceIdPostRequest == nil {
+		return localVarReturnValue, nil, reportError("v1BackboneHealthDeviceDeviceIdPostRequest is required and must be specified")
 	}
 
 	// to determine the Content-Type header
@@ -4090,7 +5200,7 @@ func (a *DefaultAPIService) V1BackboneHealthDeviceDeviceIdPostExecute(r ApiV1Bac
 	}
 	parameterAddToHeaderOrQuery(localVarHeaderParams, "Authorization", r.authorization, "simple", "")
 	// body params
-	localVarPostBody = r.v2NotificationlistPostRequest
+	localVarPostBody = r.v1BackboneHealthDeviceDeviceIdPostRequest
 	if r.ctx != nil {
 		// API Key Authentication
 		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
@@ -4154,7 +5264,7 @@ func (r ApiV1BackboneHealthEtWanMatrixGetRequest) Authorization(authorization st
 	return r
 }
 
-func (r ApiV1BackboneHealthEtWanMatrixGetRequest) Execute() (*V1BackboneHealthEtWanMatrixGet200Response, *http.Response, error) {
+func (r ApiV1BackboneHealthEtWanMatrixGetRequest) Execute() (*V1BackboneHealthEtWanMatrixGetResponse, *http.Response, error) {
 	return r.ApiService.V1BackboneHealthEtWanMatrixGetExecute(r)
 }
 
@@ -4172,13 +5282,13 @@ func (a *DefaultAPIService) V1BackboneHealthEtWanMatrixGet(ctx context.Context) 
 }
 
 // Execute executes the request
-//  @return V1BackboneHealthEtWanMatrixGet200Response
-func (a *DefaultAPIService) V1BackboneHealthEtWanMatrixGetExecute(r ApiV1BackboneHealthEtWanMatrixGetRequest) (*V1BackboneHealthEtWanMatrixGet200Response, *http.Response, error) {
+//  @return V1BackboneHealthEtWanMatrixGetResponse
+func (a *DefaultAPIService) V1BackboneHealthEtWanMatrixGetExecute(r ApiV1BackboneHealthEtWanMatrixGetRequest) (*V1BackboneHealthEtWanMatrixGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1BackboneHealthEtWanMatrixGet200Response
+		localVarReturnValue  *V1BackboneHealthEtWanMatrixGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1BackboneHealthEtWanMatrixGet")
@@ -4276,7 +5386,7 @@ func (r ApiV1BackboneHealthEtetSlaMatrixGetRequest) Authorization(authorization 
 	return r
 }
 
-func (r ApiV1BackboneHealthEtetSlaMatrixGetRequest) Execute() (*V1BackboneHealthEtetSlaMatrixGet200Response, *http.Response, error) {
+func (r ApiV1BackboneHealthEtetSlaMatrixGetRequest) Execute() (*V1BackboneHealthEtetSlaMatrixGetResponse, *http.Response, error) {
 	return r.ApiService.V1BackboneHealthEtetSlaMatrixGetExecute(r)
 }
 
@@ -4294,13 +5404,13 @@ func (a *DefaultAPIService) V1BackboneHealthEtetSlaMatrixGet(ctx context.Context
 }
 
 // Execute executes the request
-//  @return V1BackboneHealthEtetSlaMatrixGet200Response
-func (a *DefaultAPIService) V1BackboneHealthEtetSlaMatrixGetExecute(r ApiV1BackboneHealthEtetSlaMatrixGetRequest) (*V1BackboneHealthEtetSlaMatrixGet200Response, *http.Response, error) {
+//  @return V1BackboneHealthEtetSlaMatrixGetResponse
+func (a *DefaultAPIService) V1BackboneHealthEtetSlaMatrixGetExecute(r ApiV1BackboneHealthEtetSlaMatrixGetRequest) (*V1BackboneHealthEtetSlaMatrixGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1BackboneHealthEtetSlaMatrixGet200Response
+		localVarReturnValue  *V1BackboneHealthEtetSlaMatrixGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1BackboneHealthEtetSlaMatrixGet")
@@ -4398,7 +5508,7 @@ func (r ApiV1BackboneHealthFilterGetRequest) Authorization(authorization string)
 	return r
 }
 
-func (r ApiV1BackboneHealthFilterGetRequest) Execute() (*V1BackboneHealthFilterGet200Response, *http.Response, error) {
+func (r ApiV1BackboneHealthFilterGetRequest) Execute() (*V1BackboneHealthFilterGetResponse, *http.Response, error) {
 	return r.ApiService.V1BackboneHealthFilterGetExecute(r)
 }
 
@@ -4416,13 +5526,13 @@ func (a *DefaultAPIService) V1BackboneHealthFilterGet(ctx context.Context) ApiV1
 }
 
 // Execute executes the request
-//  @return V1BackboneHealthFilterGet200Response
-func (a *DefaultAPIService) V1BackboneHealthFilterGetExecute(r ApiV1BackboneHealthFilterGetRequest) (*V1BackboneHealthFilterGet200Response, *http.Response, error) {
+//  @return V1BackboneHealthFilterGetResponse
+func (a *DefaultAPIService) V1BackboneHealthFilterGetExecute(r ApiV1BackboneHealthFilterGetRequest) (*V1BackboneHealthFilterGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1BackboneHealthFilterGet200Response
+		localVarReturnValue  *V1BackboneHealthFilterGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1BackboneHealthFilterGet")
@@ -4526,7 +5636,7 @@ func (r ApiV1BackboneHealthOverviewPostRequest) V1BackboneHealthOverviewPostRequ
 	return r
 }
 
-func (r ApiV1BackboneHealthOverviewPostRequest) Execute() (*V1BackboneHealthOverviewPost200Response, *http.Response, error) {
+func (r ApiV1BackboneHealthOverviewPostRequest) Execute() (*V1BackboneHealthOverviewPostResponse, *http.Response, error) {
 	return r.ApiService.V1BackboneHealthOverviewPostExecute(r)
 }
 
@@ -4544,13 +5654,13 @@ func (a *DefaultAPIService) V1BackboneHealthOverviewPost(ctx context.Context) Ap
 }
 
 // Execute executes the request
-//  @return V1BackboneHealthOverviewPost200Response
-func (a *DefaultAPIService) V1BackboneHealthOverviewPostExecute(r ApiV1BackboneHealthOverviewPostRequest) (*V1BackboneHealthOverviewPost200Response, *http.Response, error) {
+//  @return V1BackboneHealthOverviewPostResponse
+func (a *DefaultAPIService) V1BackboneHealthOverviewPostExecute(r ApiV1BackboneHealthOverviewPostRequest) (*V1BackboneHealthOverviewPostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1BackboneHealthOverviewPost200Response
+		localVarReturnValue  *V1BackboneHealthOverviewPostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1BackboneHealthOverviewPost")
@@ -4659,7 +5769,7 @@ func (r ApiV1BackboneHealthTopDevicesByAlertsPostRequest) V1BackboneHealthTopDev
 	return r
 }
 
-func (r ApiV1BackboneHealthTopDevicesByAlertsPostRequest) Execute() (*V1BackboneHealthTopDevicesByAlertsPost200Response, *http.Response, error) {
+func (r ApiV1BackboneHealthTopDevicesByAlertsPostRequest) Execute() (*V1BackboneHealthTopDevicesByAlertsPostResponse, *http.Response, error) {
 	return r.ApiService.V1BackboneHealthTopDevicesByAlertsPostExecute(r)
 }
 
@@ -4677,13 +5787,13 @@ func (a *DefaultAPIService) V1BackboneHealthTopDevicesByAlertsPost(ctx context.C
 }
 
 // Execute executes the request
-//  @return V1BackboneHealthTopDevicesByAlertsPost200Response
-func (a *DefaultAPIService) V1BackboneHealthTopDevicesByAlertsPostExecute(r ApiV1BackboneHealthTopDevicesByAlertsPostRequest) (*V1BackboneHealthTopDevicesByAlertsPost200Response, *http.Response, error) {
+//  @return V1BackboneHealthTopDevicesByAlertsPostResponse
+func (a *DefaultAPIService) V1BackboneHealthTopDevicesByAlertsPostExecute(r ApiV1BackboneHealthTopDevicesByAlertsPostRequest) (*V1BackboneHealthTopDevicesByAlertsPostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1BackboneHealthTopDevicesByAlertsPost200Response
+		localVarReturnValue  *V1BackboneHealthTopDevicesByAlertsPostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1BackboneHealthTopDevicesByAlertsPost")
@@ -4778,7 +5888,7 @@ type ApiV1BwtrackerEnterpriseCsvPostRequest struct {
 	ctx context.Context
 	ApiService *DefaultAPIService
 	authorization *string
-	v2NotificationlistPostRequest *V2NotificationlistPostRequest
+	v1BwtrackerEnterpriseCsvPostRequest *V1BwtrackerEnterpriseCsvPostRequest
 }
 
 // Bearer token. Format: Bearer &lt;your_token_here&gt;
@@ -4787,12 +5897,12 @@ func (r ApiV1BwtrackerEnterpriseCsvPostRequest) Authorization(authorization stri
 	return r
 }
 
-func (r ApiV1BwtrackerEnterpriseCsvPostRequest) V2NotificationlistPostRequest(v2NotificationlistPostRequest V2NotificationlistPostRequest) ApiV1BwtrackerEnterpriseCsvPostRequest {
-	r.v2NotificationlistPostRequest = &v2NotificationlistPostRequest
+func (r ApiV1BwtrackerEnterpriseCsvPostRequest) V1BwtrackerEnterpriseCsvPostRequest(v1BwtrackerEnterpriseCsvPostRequest V1BwtrackerEnterpriseCsvPostRequest) ApiV1BwtrackerEnterpriseCsvPostRequest {
+	r.v1BwtrackerEnterpriseCsvPostRequest = &v1BwtrackerEnterpriseCsvPostRequest
 	return r
 }
 
-func (r ApiV1BwtrackerEnterpriseCsvPostRequest) Execute() (*V1BwtrackerEnterpriseCsvPost200Response, *http.Response, error) {
+func (r ApiV1BwtrackerEnterpriseCsvPostRequest) Execute() (*V1BwtrackerEnterpriseCsvPostResponse, *http.Response, error) {
 	return r.ApiService.V1BwtrackerEnterpriseCsvPostExecute(r)
 }
 
@@ -4810,13 +5920,13 @@ func (a *DefaultAPIService) V1BwtrackerEnterpriseCsvPost(ctx context.Context) Ap
 }
 
 // Execute executes the request
-//  @return V1BwtrackerEnterpriseCsvPost200Response
-func (a *DefaultAPIService) V1BwtrackerEnterpriseCsvPostExecute(r ApiV1BwtrackerEnterpriseCsvPostRequest) (*V1BwtrackerEnterpriseCsvPost200Response, *http.Response, error) {
+//  @return V1BwtrackerEnterpriseCsvPostResponse
+func (a *DefaultAPIService) V1BwtrackerEnterpriseCsvPostExecute(r ApiV1BwtrackerEnterpriseCsvPostRequest) (*V1BwtrackerEnterpriseCsvPostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1BwtrackerEnterpriseCsvPost200Response
+		localVarReturnValue  *V1BwtrackerEnterpriseCsvPostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1BwtrackerEnterpriseCsvPost")
@@ -4832,8 +5942,8 @@ func (a *DefaultAPIService) V1BwtrackerEnterpriseCsvPostExecute(r ApiV1Bwtracker
 	if r.authorization == nil {
 		return localVarReturnValue, nil, reportError("authorization is required and must be specified")
 	}
-	if r.v2NotificationlistPostRequest == nil {
-		return localVarReturnValue, nil, reportError("v2NotificationlistPostRequest is required and must be specified")
+	if r.v1BwtrackerEnterpriseCsvPostRequest == nil {
+		return localVarReturnValue, nil, reportError("v1BwtrackerEnterpriseCsvPostRequest is required and must be specified")
 	}
 
 	// to determine the Content-Type header
@@ -4855,7 +5965,7 @@ func (a *DefaultAPIService) V1BwtrackerEnterpriseCsvPostExecute(r ApiV1Bwtracker
 	}
 	parameterAddToHeaderOrQuery(localVarHeaderParams, "Authorization", r.authorization, "simple", "")
 	// body params
-	localVarPostBody = r.v2NotificationlistPostRequest
+	localVarPostBody = r.v1BwtrackerEnterpriseCsvPostRequest
 	if r.ctx != nil {
 		// API Key Authentication
 		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
@@ -4911,7 +6021,7 @@ type ApiV1BwtrackerEnterpriseDetailsPostRequest struct {
 	ctx context.Context
 	ApiService *DefaultAPIService
 	authorization *string
-	v2NotificationlistPostRequest *V2NotificationlistPostRequest
+	v1BwtrackerEnterpriseDetailsPostRequest *V1BwtrackerEnterpriseDetailsPostRequest
 }
 
 // Bearer token. Format: Bearer &lt;your_token_here&gt;
@@ -4920,12 +6030,12 @@ func (r ApiV1BwtrackerEnterpriseDetailsPostRequest) Authorization(authorization 
 	return r
 }
 
-func (r ApiV1BwtrackerEnterpriseDetailsPostRequest) V2NotificationlistPostRequest(v2NotificationlistPostRequest V2NotificationlistPostRequest) ApiV1BwtrackerEnterpriseDetailsPostRequest {
-	r.v2NotificationlistPostRequest = &v2NotificationlistPostRequest
+func (r ApiV1BwtrackerEnterpriseDetailsPostRequest) V1BwtrackerEnterpriseDetailsPostRequest(v1BwtrackerEnterpriseDetailsPostRequest V1BwtrackerEnterpriseDetailsPostRequest) ApiV1BwtrackerEnterpriseDetailsPostRequest {
+	r.v1BwtrackerEnterpriseDetailsPostRequest = &v1BwtrackerEnterpriseDetailsPostRequest
 	return r
 }
 
-func (r ApiV1BwtrackerEnterpriseDetailsPostRequest) Execute() (*V1BwtrackerEnterpriseDetailsPost200Response, *http.Response, error) {
+func (r ApiV1BwtrackerEnterpriseDetailsPostRequest) Execute() (*V1BwtrackerEnterpriseDetailsPostResponse, *http.Response, error) {
 	return r.ApiService.V1BwtrackerEnterpriseDetailsPostExecute(r)
 }
 
@@ -4943,13 +6053,13 @@ func (a *DefaultAPIService) V1BwtrackerEnterpriseDetailsPost(ctx context.Context
 }
 
 // Execute executes the request
-//  @return V1BwtrackerEnterpriseDetailsPost200Response
-func (a *DefaultAPIService) V1BwtrackerEnterpriseDetailsPostExecute(r ApiV1BwtrackerEnterpriseDetailsPostRequest) (*V1BwtrackerEnterpriseDetailsPost200Response, *http.Response, error) {
+//  @return V1BwtrackerEnterpriseDetailsPostResponse
+func (a *DefaultAPIService) V1BwtrackerEnterpriseDetailsPostExecute(r ApiV1BwtrackerEnterpriseDetailsPostRequest) (*V1BwtrackerEnterpriseDetailsPostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1BwtrackerEnterpriseDetailsPost200Response
+		localVarReturnValue  *V1BwtrackerEnterpriseDetailsPostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1BwtrackerEnterpriseDetailsPost")
@@ -4965,8 +6075,8 @@ func (a *DefaultAPIService) V1BwtrackerEnterpriseDetailsPostExecute(r ApiV1Bwtra
 	if r.authorization == nil {
 		return localVarReturnValue, nil, reportError("authorization is required and must be specified")
 	}
-	if r.v2NotificationlistPostRequest == nil {
-		return localVarReturnValue, nil, reportError("v2NotificationlistPostRequest is required and must be specified")
+	if r.v1BwtrackerEnterpriseDetailsPostRequest == nil {
+		return localVarReturnValue, nil, reportError("v1BwtrackerEnterpriseDetailsPostRequest is required and must be specified")
 	}
 
 	// to determine the Content-Type header
@@ -4988,7 +6098,7 @@ func (a *DefaultAPIService) V1BwtrackerEnterpriseDetailsPostExecute(r ApiV1Bwtra
 	}
 	parameterAddToHeaderOrQuery(localVarHeaderParams, "Authorization", r.authorization, "simple", "")
 	// body params
-	localVarPostBody = r.v2NotificationlistPostRequest
+	localVarPostBody = r.v1BwtrackerEnterpriseDetailsPostRequest
 	if r.ctx != nil {
 		// API Key Authentication
 		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
@@ -5044,7 +6154,7 @@ type ApiV1BwtrackerEnterpriseSummaryPostRequest struct {
 	ctx context.Context
 	ApiService *DefaultAPIService
 	authorization *string
-	v2NotificationlistPostRequest *V2NotificationlistPostRequest
+	v1BwtrackerEnterpriseSummaryPostRequest *V1BwtrackerEnterpriseSummaryPostRequest
 }
 
 // Bearer token. Format: Bearer &lt;your_token_here&gt;
@@ -5053,12 +6163,12 @@ func (r ApiV1BwtrackerEnterpriseSummaryPostRequest) Authorization(authorization 
 	return r
 }
 
-func (r ApiV1BwtrackerEnterpriseSummaryPostRequest) V2NotificationlistPostRequest(v2NotificationlistPostRequest V2NotificationlistPostRequest) ApiV1BwtrackerEnterpriseSummaryPostRequest {
-	r.v2NotificationlistPostRequest = &v2NotificationlistPostRequest
+func (r ApiV1BwtrackerEnterpriseSummaryPostRequest) V1BwtrackerEnterpriseSummaryPostRequest(v1BwtrackerEnterpriseSummaryPostRequest V1BwtrackerEnterpriseSummaryPostRequest) ApiV1BwtrackerEnterpriseSummaryPostRequest {
+	r.v1BwtrackerEnterpriseSummaryPostRequest = &v1BwtrackerEnterpriseSummaryPostRequest
 	return r
 }
 
-func (r ApiV1BwtrackerEnterpriseSummaryPostRequest) Execute() (*V1BwtrackerEnterpriseSummaryPost200Response, *http.Response, error) {
+func (r ApiV1BwtrackerEnterpriseSummaryPostRequest) Execute() (*V1BwtrackerEnterpriseSummaryPostResponse, *http.Response, error) {
 	return r.ApiService.V1BwtrackerEnterpriseSummaryPostExecute(r)
 }
 
@@ -5076,13 +6186,13 @@ func (a *DefaultAPIService) V1BwtrackerEnterpriseSummaryPost(ctx context.Context
 }
 
 // Execute executes the request
-//  @return V1BwtrackerEnterpriseSummaryPost200Response
-func (a *DefaultAPIService) V1BwtrackerEnterpriseSummaryPostExecute(r ApiV1BwtrackerEnterpriseSummaryPostRequest) (*V1BwtrackerEnterpriseSummaryPost200Response, *http.Response, error) {
+//  @return V1BwtrackerEnterpriseSummaryPostResponse
+func (a *DefaultAPIService) V1BwtrackerEnterpriseSummaryPostExecute(r ApiV1BwtrackerEnterpriseSummaryPostRequest) (*V1BwtrackerEnterpriseSummaryPostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1BwtrackerEnterpriseSummaryPost200Response
+		localVarReturnValue  *V1BwtrackerEnterpriseSummaryPostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1BwtrackerEnterpriseSummaryPost")
@@ -5098,8 +6208,8 @@ func (a *DefaultAPIService) V1BwtrackerEnterpriseSummaryPostExecute(r ApiV1Bwtra
 	if r.authorization == nil {
 		return localVarReturnValue, nil, reportError("authorization is required and must be specified")
 	}
-	if r.v2NotificationlistPostRequest == nil {
-		return localVarReturnValue, nil, reportError("v2NotificationlistPostRequest is required and must be specified")
+	if r.v1BwtrackerEnterpriseSummaryPostRequest == nil {
+		return localVarReturnValue, nil, reportError("v1BwtrackerEnterpriseSummaryPostRequest is required and must be specified")
 	}
 
 	// to determine the Content-Type header
@@ -5121,7 +6231,7 @@ func (a *DefaultAPIService) V1BwtrackerEnterpriseSummaryPostExecute(r ApiV1Bwtra
 	}
 	parameterAddToHeaderOrQuery(localVarHeaderParams, "Authorization", r.authorization, "simple", "")
 	// body params
-	localVarPostBody = r.v2NotificationlistPostRequest
+	localVarPostBody = r.v1BwtrackerEnterpriseSummaryPostRequest
 	if r.ctx != nil {
 		// API Key Authentication
 		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
@@ -5191,7 +6301,7 @@ func (r ApiV1BwtrackerRegionCloudChartPostRequest) V1BwtrackerRegionCloudChartPo
 	return r
 }
 
-func (r ApiV1BwtrackerRegionCloudChartPostRequest) Execute() (*V1BwtrackerRegionCloudChartPost200Response, *http.Response, error) {
+func (r ApiV1BwtrackerRegionCloudChartPostRequest) Execute() (*V1BwtrackerRegionCloudChartPostResponse, *http.Response, error) {
 	return r.ApiService.V1BwtrackerRegionCloudChartPostExecute(r)
 }
 
@@ -5209,13 +6319,13 @@ func (a *DefaultAPIService) V1BwtrackerRegionCloudChartPost(ctx context.Context)
 }
 
 // Execute executes the request
-//  @return V1BwtrackerRegionCloudChartPost200Response
-func (a *DefaultAPIService) V1BwtrackerRegionCloudChartPostExecute(r ApiV1BwtrackerRegionCloudChartPostRequest) (*V1BwtrackerRegionCloudChartPost200Response, *http.Response, error) {
+//  @return V1BwtrackerRegionCloudChartPostResponse
+func (a *DefaultAPIService) V1BwtrackerRegionCloudChartPostExecute(r ApiV1BwtrackerRegionCloudChartPostRequest) (*V1BwtrackerRegionCloudChartPostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1BwtrackerRegionCloudChartPost200Response
+		localVarReturnValue  *V1BwtrackerRegionCloudChartPostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1BwtrackerRegionCloudChartPost")
@@ -5310,7 +6420,7 @@ type ApiV1BwtrackerRegionCloudCsvPostRequest struct {
 	ctx context.Context
 	ApiService *DefaultAPIService
 	authorization *string
-	v1BwtrackerRegionCloudChartPostRequest *V1BwtrackerRegionCloudChartPostRequest
+	v1BwtrackerRegionCloudCsvPostRequest *V1BwtrackerRegionCloudCsvPostRequest
 }
 
 // Bearer token. Format: Bearer &lt;your_token_here&gt;
@@ -5319,12 +6429,12 @@ func (r ApiV1BwtrackerRegionCloudCsvPostRequest) Authorization(authorization str
 	return r
 }
 
-func (r ApiV1BwtrackerRegionCloudCsvPostRequest) V1BwtrackerRegionCloudChartPostRequest(v1BwtrackerRegionCloudChartPostRequest V1BwtrackerRegionCloudChartPostRequest) ApiV1BwtrackerRegionCloudCsvPostRequest {
-	r.v1BwtrackerRegionCloudChartPostRequest = &v1BwtrackerRegionCloudChartPostRequest
+func (r ApiV1BwtrackerRegionCloudCsvPostRequest) V1BwtrackerRegionCloudCsvPostRequest(v1BwtrackerRegionCloudCsvPostRequest V1BwtrackerRegionCloudCsvPostRequest) ApiV1BwtrackerRegionCloudCsvPostRequest {
+	r.v1BwtrackerRegionCloudCsvPostRequest = &v1BwtrackerRegionCloudCsvPostRequest
 	return r
 }
 
-func (r ApiV1BwtrackerRegionCloudCsvPostRequest) Execute() (*V1BwtrackerEnterpriseCsvPost200Response, *http.Response, error) {
+func (r ApiV1BwtrackerRegionCloudCsvPostRequest) Execute() (*V1BwtrackerRegionCloudCsvPostResponse, *http.Response, error) {
 	return r.ApiService.V1BwtrackerRegionCloudCsvPostExecute(r)
 }
 
@@ -5342,13 +6452,13 @@ func (a *DefaultAPIService) V1BwtrackerRegionCloudCsvPost(ctx context.Context) A
 }
 
 // Execute executes the request
-//  @return V1BwtrackerEnterpriseCsvPost200Response
-func (a *DefaultAPIService) V1BwtrackerRegionCloudCsvPostExecute(r ApiV1BwtrackerRegionCloudCsvPostRequest) (*V1BwtrackerEnterpriseCsvPost200Response, *http.Response, error) {
+//  @return V1BwtrackerRegionCloudCsvPostResponse
+func (a *DefaultAPIService) V1BwtrackerRegionCloudCsvPostExecute(r ApiV1BwtrackerRegionCloudCsvPostRequest) (*V1BwtrackerRegionCloudCsvPostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1BwtrackerEnterpriseCsvPost200Response
+		localVarReturnValue  *V1BwtrackerRegionCloudCsvPostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1BwtrackerRegionCloudCsvPost")
@@ -5364,8 +6474,8 @@ func (a *DefaultAPIService) V1BwtrackerRegionCloudCsvPostExecute(r ApiV1Bwtracke
 	if r.authorization == nil {
 		return localVarReturnValue, nil, reportError("authorization is required and must be specified")
 	}
-	if r.v1BwtrackerRegionCloudChartPostRequest == nil {
-		return localVarReturnValue, nil, reportError("v1BwtrackerRegionCloudChartPostRequest is required and must be specified")
+	if r.v1BwtrackerRegionCloudCsvPostRequest == nil {
+		return localVarReturnValue, nil, reportError("v1BwtrackerRegionCloudCsvPostRequest is required and must be specified")
 	}
 
 	// to determine the Content-Type header
@@ -5387,7 +6497,7 @@ func (a *DefaultAPIService) V1BwtrackerRegionCloudCsvPostExecute(r ApiV1Bwtracke
 	}
 	parameterAddToHeaderOrQuery(localVarHeaderParams, "Authorization", r.authorization, "simple", "")
 	// body params
-	localVarPostBody = r.v1BwtrackerRegionCloudChartPostRequest
+	localVarPostBody = r.v1BwtrackerRegionCloudCsvPostRequest
 	if r.ctx != nil {
 		// API Key Authentication
 		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
@@ -5443,7 +6553,7 @@ type ApiV1BwtrackerRegionCloudSummaryPostRequest struct {
 	ctx context.Context
 	ApiService *DefaultAPIService
 	authorization *string
-	v1BwtrackerRegionCloudChartPostRequest *V1BwtrackerRegionCloudChartPostRequest
+	v1BwtrackerRegionCloudSummaryPostRequest *V1BwtrackerRegionCloudSummaryPostRequest
 }
 
 // Bearer token. Format: Bearer &lt;your_token_here&gt;
@@ -5452,12 +6562,12 @@ func (r ApiV1BwtrackerRegionCloudSummaryPostRequest) Authorization(authorization
 	return r
 }
 
-func (r ApiV1BwtrackerRegionCloudSummaryPostRequest) V1BwtrackerRegionCloudChartPostRequest(v1BwtrackerRegionCloudChartPostRequest V1BwtrackerRegionCloudChartPostRequest) ApiV1BwtrackerRegionCloudSummaryPostRequest {
-	r.v1BwtrackerRegionCloudChartPostRequest = &v1BwtrackerRegionCloudChartPostRequest
+func (r ApiV1BwtrackerRegionCloudSummaryPostRequest) V1BwtrackerRegionCloudSummaryPostRequest(v1BwtrackerRegionCloudSummaryPostRequest V1BwtrackerRegionCloudSummaryPostRequest) ApiV1BwtrackerRegionCloudSummaryPostRequest {
+	r.v1BwtrackerRegionCloudSummaryPostRequest = &v1BwtrackerRegionCloudSummaryPostRequest
 	return r
 }
 
-func (r ApiV1BwtrackerRegionCloudSummaryPostRequest) Execute() (*V1BwtrackerRegionCloudSummaryPost200Response, *http.Response, error) {
+func (r ApiV1BwtrackerRegionCloudSummaryPostRequest) Execute() (*V1BwtrackerRegionCloudSummaryPostResponse, *http.Response, error) {
 	return r.ApiService.V1BwtrackerRegionCloudSummaryPostExecute(r)
 }
 
@@ -5475,13 +6585,13 @@ func (a *DefaultAPIService) V1BwtrackerRegionCloudSummaryPost(ctx context.Contex
 }
 
 // Execute executes the request
-//  @return V1BwtrackerRegionCloudSummaryPost200Response
-func (a *DefaultAPIService) V1BwtrackerRegionCloudSummaryPostExecute(r ApiV1BwtrackerRegionCloudSummaryPostRequest) (*V1BwtrackerRegionCloudSummaryPost200Response, *http.Response, error) {
+//  @return V1BwtrackerRegionCloudSummaryPostResponse
+func (a *DefaultAPIService) V1BwtrackerRegionCloudSummaryPostExecute(r ApiV1BwtrackerRegionCloudSummaryPostRequest) (*V1BwtrackerRegionCloudSummaryPostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1BwtrackerRegionCloudSummaryPost200Response
+		localVarReturnValue  *V1BwtrackerRegionCloudSummaryPostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1BwtrackerRegionCloudSummaryPost")
@@ -5497,8 +6607,8 @@ func (a *DefaultAPIService) V1BwtrackerRegionCloudSummaryPostExecute(r ApiV1Bwtr
 	if r.authorization == nil {
 		return localVarReturnValue, nil, reportError("authorization is required and must be specified")
 	}
-	if r.v1BwtrackerRegionCloudChartPostRequest == nil {
-		return localVarReturnValue, nil, reportError("v1BwtrackerRegionCloudChartPostRequest is required and must be specified")
+	if r.v1BwtrackerRegionCloudSummaryPostRequest == nil {
+		return localVarReturnValue, nil, reportError("v1BwtrackerRegionCloudSummaryPostRequest is required and must be specified")
 	}
 
 	// to determine the Content-Type header
@@ -5520,7 +6630,7 @@ func (a *DefaultAPIService) V1BwtrackerRegionCloudSummaryPostExecute(r ApiV1Bwtr
 	}
 	parameterAddToHeaderOrQuery(localVarHeaderParams, "Authorization", r.authorization, "simple", "")
 	// body params
-	localVarPostBody = r.v1BwtrackerRegionCloudChartPostRequest
+	localVarPostBody = r.v1BwtrackerRegionCloudSummaryPostRequest
 	if r.ctx != nil {
 		// API Key Authentication
 		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
@@ -5576,7 +6686,7 @@ type ApiV1BwtrackerRegionEdgeChartPostRequest struct {
 	ctx context.Context
 	ApiService *DefaultAPIService
 	authorization *string
-	v1BwtrackerRegionCloudChartPostRequest *V1BwtrackerRegionCloudChartPostRequest
+	v1BwtrackerRegionEdgeChartPostRequest *V1BwtrackerRegionEdgeChartPostRequest
 }
 
 // Bearer token. Format: Bearer &lt;your_token_here&gt;
@@ -5585,12 +6695,12 @@ func (r ApiV1BwtrackerRegionEdgeChartPostRequest) Authorization(authorization st
 	return r
 }
 
-func (r ApiV1BwtrackerRegionEdgeChartPostRequest) V1BwtrackerRegionCloudChartPostRequest(v1BwtrackerRegionCloudChartPostRequest V1BwtrackerRegionCloudChartPostRequest) ApiV1BwtrackerRegionEdgeChartPostRequest {
-	r.v1BwtrackerRegionCloudChartPostRequest = &v1BwtrackerRegionCloudChartPostRequest
+func (r ApiV1BwtrackerRegionEdgeChartPostRequest) V1BwtrackerRegionEdgeChartPostRequest(v1BwtrackerRegionEdgeChartPostRequest V1BwtrackerRegionEdgeChartPostRequest) ApiV1BwtrackerRegionEdgeChartPostRequest {
+	r.v1BwtrackerRegionEdgeChartPostRequest = &v1BwtrackerRegionEdgeChartPostRequest
 	return r
 }
 
-func (r ApiV1BwtrackerRegionEdgeChartPostRequest) Execute() (*V1BwtrackerRegionCloudChartPost200Response, *http.Response, error) {
+func (r ApiV1BwtrackerRegionEdgeChartPostRequest) Execute() (*V1BwtrackerRegionEdgeChartPostResponse, *http.Response, error) {
 	return r.ApiService.V1BwtrackerRegionEdgeChartPostExecute(r)
 }
 
@@ -5608,13 +6718,13 @@ func (a *DefaultAPIService) V1BwtrackerRegionEdgeChartPost(ctx context.Context) 
 }
 
 // Execute executes the request
-//  @return V1BwtrackerRegionCloudChartPost200Response
-func (a *DefaultAPIService) V1BwtrackerRegionEdgeChartPostExecute(r ApiV1BwtrackerRegionEdgeChartPostRequest) (*V1BwtrackerRegionCloudChartPost200Response, *http.Response, error) {
+//  @return V1BwtrackerRegionEdgeChartPostResponse
+func (a *DefaultAPIService) V1BwtrackerRegionEdgeChartPostExecute(r ApiV1BwtrackerRegionEdgeChartPostRequest) (*V1BwtrackerRegionEdgeChartPostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1BwtrackerRegionCloudChartPost200Response
+		localVarReturnValue  *V1BwtrackerRegionEdgeChartPostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1BwtrackerRegionEdgeChartPost")
@@ -5630,8 +6740,8 @@ func (a *DefaultAPIService) V1BwtrackerRegionEdgeChartPostExecute(r ApiV1Bwtrack
 	if r.authorization == nil {
 		return localVarReturnValue, nil, reportError("authorization is required and must be specified")
 	}
-	if r.v1BwtrackerRegionCloudChartPostRequest == nil {
-		return localVarReturnValue, nil, reportError("v1BwtrackerRegionCloudChartPostRequest is required and must be specified")
+	if r.v1BwtrackerRegionEdgeChartPostRequest == nil {
+		return localVarReturnValue, nil, reportError("v1BwtrackerRegionEdgeChartPostRequest is required and must be specified")
 	}
 
 	// to determine the Content-Type header
@@ -5653,7 +6763,7 @@ func (a *DefaultAPIService) V1BwtrackerRegionEdgeChartPostExecute(r ApiV1Bwtrack
 	}
 	parameterAddToHeaderOrQuery(localVarHeaderParams, "Authorization", r.authorization, "simple", "")
 	// body params
-	localVarPostBody = r.v1BwtrackerRegionCloudChartPostRequest
+	localVarPostBody = r.v1BwtrackerRegionEdgeChartPostRequest
 	if r.ctx != nil {
 		// API Key Authentication
 		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
@@ -5709,7 +6819,7 @@ type ApiV1BwtrackerRegionEdgeCsvPostRequest struct {
 	ctx context.Context
 	ApiService *DefaultAPIService
 	authorization *string
-	v1BwtrackerRegionCloudChartPostRequest *V1BwtrackerRegionCloudChartPostRequest
+	v1BwtrackerRegionEdgeCsvPostRequest *V1BwtrackerRegionEdgeCsvPostRequest
 }
 
 // Bearer token. Format: Bearer &lt;your_token_here&gt;
@@ -5718,12 +6828,12 @@ func (r ApiV1BwtrackerRegionEdgeCsvPostRequest) Authorization(authorization stri
 	return r
 }
 
-func (r ApiV1BwtrackerRegionEdgeCsvPostRequest) V1BwtrackerRegionCloudChartPostRequest(v1BwtrackerRegionCloudChartPostRequest V1BwtrackerRegionCloudChartPostRequest) ApiV1BwtrackerRegionEdgeCsvPostRequest {
-	r.v1BwtrackerRegionCloudChartPostRequest = &v1BwtrackerRegionCloudChartPostRequest
+func (r ApiV1BwtrackerRegionEdgeCsvPostRequest) V1BwtrackerRegionEdgeCsvPostRequest(v1BwtrackerRegionEdgeCsvPostRequest V1BwtrackerRegionEdgeCsvPostRequest) ApiV1BwtrackerRegionEdgeCsvPostRequest {
+	r.v1BwtrackerRegionEdgeCsvPostRequest = &v1BwtrackerRegionEdgeCsvPostRequest
 	return r
 }
 
-func (r ApiV1BwtrackerRegionEdgeCsvPostRequest) Execute() (*V1BwtrackerEnterpriseCsvPost200Response, *http.Response, error) {
+func (r ApiV1BwtrackerRegionEdgeCsvPostRequest) Execute() (*V1BwtrackerRegionEdgeCsvPostResponse, *http.Response, error) {
 	return r.ApiService.V1BwtrackerRegionEdgeCsvPostExecute(r)
 }
 
@@ -5741,13 +6851,13 @@ func (a *DefaultAPIService) V1BwtrackerRegionEdgeCsvPost(ctx context.Context) Ap
 }
 
 // Execute executes the request
-//  @return V1BwtrackerEnterpriseCsvPost200Response
-func (a *DefaultAPIService) V1BwtrackerRegionEdgeCsvPostExecute(r ApiV1BwtrackerRegionEdgeCsvPostRequest) (*V1BwtrackerEnterpriseCsvPost200Response, *http.Response, error) {
+//  @return V1BwtrackerRegionEdgeCsvPostResponse
+func (a *DefaultAPIService) V1BwtrackerRegionEdgeCsvPostExecute(r ApiV1BwtrackerRegionEdgeCsvPostRequest) (*V1BwtrackerRegionEdgeCsvPostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1BwtrackerEnterpriseCsvPost200Response
+		localVarReturnValue  *V1BwtrackerRegionEdgeCsvPostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1BwtrackerRegionEdgeCsvPost")
@@ -5763,8 +6873,8 @@ func (a *DefaultAPIService) V1BwtrackerRegionEdgeCsvPostExecute(r ApiV1Bwtracker
 	if r.authorization == nil {
 		return localVarReturnValue, nil, reportError("authorization is required and must be specified")
 	}
-	if r.v1BwtrackerRegionCloudChartPostRequest == nil {
-		return localVarReturnValue, nil, reportError("v1BwtrackerRegionCloudChartPostRequest is required and must be specified")
+	if r.v1BwtrackerRegionEdgeCsvPostRequest == nil {
+		return localVarReturnValue, nil, reportError("v1BwtrackerRegionEdgeCsvPostRequest is required and must be specified")
 	}
 
 	// to determine the Content-Type header
@@ -5786,7 +6896,7 @@ func (a *DefaultAPIService) V1BwtrackerRegionEdgeCsvPostExecute(r ApiV1Bwtracker
 	}
 	parameterAddToHeaderOrQuery(localVarHeaderParams, "Authorization", r.authorization, "simple", "")
 	// body params
-	localVarPostBody = r.v1BwtrackerRegionCloudChartPostRequest
+	localVarPostBody = r.v1BwtrackerRegionEdgeCsvPostRequest
 	if r.ctx != nil {
 		// API Key Authentication
 		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
@@ -5842,7 +6952,7 @@ type ApiV1BwtrackerRegionEdgeDetailsPostRequest struct {
 	ctx context.Context
 	ApiService *DefaultAPIService
 	authorization *string
-	v1BwtrackerRegionCloudChartPostRequest *V1BwtrackerRegionCloudChartPostRequest
+	v1BwtrackerRegionEdgeDetailsPostRequest *V1BwtrackerRegionEdgeDetailsPostRequest
 }
 
 // Bearer token. Format: Bearer &lt;your_token_here&gt;
@@ -5851,12 +6961,12 @@ func (r ApiV1BwtrackerRegionEdgeDetailsPostRequest) Authorization(authorization 
 	return r
 }
 
-func (r ApiV1BwtrackerRegionEdgeDetailsPostRequest) V1BwtrackerRegionCloudChartPostRequest(v1BwtrackerRegionCloudChartPostRequest V1BwtrackerRegionCloudChartPostRequest) ApiV1BwtrackerRegionEdgeDetailsPostRequest {
-	r.v1BwtrackerRegionCloudChartPostRequest = &v1BwtrackerRegionCloudChartPostRequest
+func (r ApiV1BwtrackerRegionEdgeDetailsPostRequest) V1BwtrackerRegionEdgeDetailsPostRequest(v1BwtrackerRegionEdgeDetailsPostRequest V1BwtrackerRegionEdgeDetailsPostRequest) ApiV1BwtrackerRegionEdgeDetailsPostRequest {
+	r.v1BwtrackerRegionEdgeDetailsPostRequest = &v1BwtrackerRegionEdgeDetailsPostRequest
 	return r
 }
 
-func (r ApiV1BwtrackerRegionEdgeDetailsPostRequest) Execute() (*V1BwtrackerRegionEdgeDetailsPost200Response, *http.Response, error) {
+func (r ApiV1BwtrackerRegionEdgeDetailsPostRequest) Execute() (*V1BwtrackerRegionEdgeDetailsPostResponse, *http.Response, error) {
 	return r.ApiService.V1BwtrackerRegionEdgeDetailsPostExecute(r)
 }
 
@@ -5874,13 +6984,13 @@ func (a *DefaultAPIService) V1BwtrackerRegionEdgeDetailsPost(ctx context.Context
 }
 
 // Execute executes the request
-//  @return V1BwtrackerRegionEdgeDetailsPost200Response
-func (a *DefaultAPIService) V1BwtrackerRegionEdgeDetailsPostExecute(r ApiV1BwtrackerRegionEdgeDetailsPostRequest) (*V1BwtrackerRegionEdgeDetailsPost200Response, *http.Response, error) {
+//  @return V1BwtrackerRegionEdgeDetailsPostResponse
+func (a *DefaultAPIService) V1BwtrackerRegionEdgeDetailsPostExecute(r ApiV1BwtrackerRegionEdgeDetailsPostRequest) (*V1BwtrackerRegionEdgeDetailsPostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1BwtrackerRegionEdgeDetailsPost200Response
+		localVarReturnValue  *V1BwtrackerRegionEdgeDetailsPostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1BwtrackerRegionEdgeDetailsPost")
@@ -5896,8 +7006,8 @@ func (a *DefaultAPIService) V1BwtrackerRegionEdgeDetailsPostExecute(r ApiV1Bwtra
 	if r.authorization == nil {
 		return localVarReturnValue, nil, reportError("authorization is required and must be specified")
 	}
-	if r.v1BwtrackerRegionCloudChartPostRequest == nil {
-		return localVarReturnValue, nil, reportError("v1BwtrackerRegionCloudChartPostRequest is required and must be specified")
+	if r.v1BwtrackerRegionEdgeDetailsPostRequest == nil {
+		return localVarReturnValue, nil, reportError("v1BwtrackerRegionEdgeDetailsPostRequest is required and must be specified")
 	}
 
 	// to determine the Content-Type header
@@ -5919,7 +7029,7 @@ func (a *DefaultAPIService) V1BwtrackerRegionEdgeDetailsPostExecute(r ApiV1Bwtra
 	}
 	parameterAddToHeaderOrQuery(localVarHeaderParams, "Authorization", r.authorization, "simple", "")
 	// body params
-	localVarPostBody = r.v1BwtrackerRegionCloudChartPostRequest
+	localVarPostBody = r.v1BwtrackerRegionEdgeDetailsPostRequest
 	if r.ctx != nil {
 		// API Key Authentication
 		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
@@ -5975,7 +7085,7 @@ type ApiV1BwtrackerRegionEdgeSummaryPostRequest struct {
 	ctx context.Context
 	ApiService *DefaultAPIService
 	authorization *string
-	v1BwtrackerRegionCloudChartPostRequest *V1BwtrackerRegionCloudChartPostRequest
+	v1BwtrackerRegionEdgeSummaryPostRequest *V1BwtrackerRegionEdgeSummaryPostRequest
 }
 
 // Bearer token. Format: Bearer &lt;your_token_here&gt;
@@ -5984,12 +7094,12 @@ func (r ApiV1BwtrackerRegionEdgeSummaryPostRequest) Authorization(authorization 
 	return r
 }
 
-func (r ApiV1BwtrackerRegionEdgeSummaryPostRequest) V1BwtrackerRegionCloudChartPostRequest(v1BwtrackerRegionCloudChartPostRequest V1BwtrackerRegionCloudChartPostRequest) ApiV1BwtrackerRegionEdgeSummaryPostRequest {
-	r.v1BwtrackerRegionCloudChartPostRequest = &v1BwtrackerRegionCloudChartPostRequest
+func (r ApiV1BwtrackerRegionEdgeSummaryPostRequest) V1BwtrackerRegionEdgeSummaryPostRequest(v1BwtrackerRegionEdgeSummaryPostRequest V1BwtrackerRegionEdgeSummaryPostRequest) ApiV1BwtrackerRegionEdgeSummaryPostRequest {
+	r.v1BwtrackerRegionEdgeSummaryPostRequest = &v1BwtrackerRegionEdgeSummaryPostRequest
 	return r
 }
 
-func (r ApiV1BwtrackerRegionEdgeSummaryPostRequest) Execute() (*V1BwtrackerRegionEdgeSummaryPost200Response, *http.Response, error) {
+func (r ApiV1BwtrackerRegionEdgeSummaryPostRequest) Execute() (*V1BwtrackerRegionEdgeSummaryPostResponse, *http.Response, error) {
 	return r.ApiService.V1BwtrackerRegionEdgeSummaryPostExecute(r)
 }
 
@@ -6007,13 +7117,13 @@ func (a *DefaultAPIService) V1BwtrackerRegionEdgeSummaryPost(ctx context.Context
 }
 
 // Execute executes the request
-//  @return V1BwtrackerRegionEdgeSummaryPost200Response
-func (a *DefaultAPIService) V1BwtrackerRegionEdgeSummaryPostExecute(r ApiV1BwtrackerRegionEdgeSummaryPostRequest) (*V1BwtrackerRegionEdgeSummaryPost200Response, *http.Response, error) {
+//  @return V1BwtrackerRegionEdgeSummaryPostResponse
+func (a *DefaultAPIService) V1BwtrackerRegionEdgeSummaryPostExecute(r ApiV1BwtrackerRegionEdgeSummaryPostRequest) (*V1BwtrackerRegionEdgeSummaryPostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1BwtrackerRegionEdgeSummaryPost200Response
+		localVarReturnValue  *V1BwtrackerRegionEdgeSummaryPostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1BwtrackerRegionEdgeSummaryPost")
@@ -6029,8 +7139,8 @@ func (a *DefaultAPIService) V1BwtrackerRegionEdgeSummaryPostExecute(r ApiV1Bwtra
 	if r.authorization == nil {
 		return localVarReturnValue, nil, reportError("authorization is required and must be specified")
 	}
-	if r.v1BwtrackerRegionCloudChartPostRequest == nil {
-		return localVarReturnValue, nil, reportError("v1BwtrackerRegionCloudChartPostRequest is required and must be specified")
+	if r.v1BwtrackerRegionEdgeSummaryPostRequest == nil {
+		return localVarReturnValue, nil, reportError("v1BwtrackerRegionEdgeSummaryPostRequest is required and must be specified")
 	}
 
 	// to determine the Content-Type header
@@ -6052,7 +7162,7 @@ func (a *DefaultAPIService) V1BwtrackerRegionEdgeSummaryPostExecute(r ApiV1Bwtra
 	}
 	parameterAddToHeaderOrQuery(localVarHeaderParams, "Authorization", r.authorization, "simple", "")
 	// body params
-	localVarPostBody = r.v1BwtrackerRegionCloudChartPostRequest
+	localVarPostBody = r.v1BwtrackerRegionEdgeSummaryPostRequest
 	if r.ctx != nil {
 		// API Key Authentication
 		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
@@ -6108,7 +7218,7 @@ type ApiV1BwtrackerRegionGatewayChartPostRequest struct {
 	ctx context.Context
 	ApiService *DefaultAPIService
 	authorization *string
-	v1BwtrackerRegionCloudChartPostRequest *V1BwtrackerRegionCloudChartPostRequest
+	v1BwtrackerRegionGatewayChartPostRequest *V1BwtrackerRegionGatewayChartPostRequest
 }
 
 // Bearer token. Format: Bearer &lt;your_token_here&gt;
@@ -6117,12 +7227,12 @@ func (r ApiV1BwtrackerRegionGatewayChartPostRequest) Authorization(authorization
 	return r
 }
 
-func (r ApiV1BwtrackerRegionGatewayChartPostRequest) V1BwtrackerRegionCloudChartPostRequest(v1BwtrackerRegionCloudChartPostRequest V1BwtrackerRegionCloudChartPostRequest) ApiV1BwtrackerRegionGatewayChartPostRequest {
-	r.v1BwtrackerRegionCloudChartPostRequest = &v1BwtrackerRegionCloudChartPostRequest
+func (r ApiV1BwtrackerRegionGatewayChartPostRequest) V1BwtrackerRegionGatewayChartPostRequest(v1BwtrackerRegionGatewayChartPostRequest V1BwtrackerRegionGatewayChartPostRequest) ApiV1BwtrackerRegionGatewayChartPostRequest {
+	r.v1BwtrackerRegionGatewayChartPostRequest = &v1BwtrackerRegionGatewayChartPostRequest
 	return r
 }
 
-func (r ApiV1BwtrackerRegionGatewayChartPostRequest) Execute() (*V1BwtrackerRegionCloudChartPost200Response, *http.Response, error) {
+func (r ApiV1BwtrackerRegionGatewayChartPostRequest) Execute() (*V1BwtrackerRegionGatewayChartPostResponse, *http.Response, error) {
 	return r.ApiService.V1BwtrackerRegionGatewayChartPostExecute(r)
 }
 
@@ -6140,13 +7250,13 @@ func (a *DefaultAPIService) V1BwtrackerRegionGatewayChartPost(ctx context.Contex
 }
 
 // Execute executes the request
-//  @return V1BwtrackerRegionCloudChartPost200Response
-func (a *DefaultAPIService) V1BwtrackerRegionGatewayChartPostExecute(r ApiV1BwtrackerRegionGatewayChartPostRequest) (*V1BwtrackerRegionCloudChartPost200Response, *http.Response, error) {
+//  @return V1BwtrackerRegionGatewayChartPostResponse
+func (a *DefaultAPIService) V1BwtrackerRegionGatewayChartPostExecute(r ApiV1BwtrackerRegionGatewayChartPostRequest) (*V1BwtrackerRegionGatewayChartPostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1BwtrackerRegionCloudChartPost200Response
+		localVarReturnValue  *V1BwtrackerRegionGatewayChartPostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1BwtrackerRegionGatewayChartPost")
@@ -6162,8 +7272,8 @@ func (a *DefaultAPIService) V1BwtrackerRegionGatewayChartPostExecute(r ApiV1Bwtr
 	if r.authorization == nil {
 		return localVarReturnValue, nil, reportError("authorization is required and must be specified")
 	}
-	if r.v1BwtrackerRegionCloudChartPostRequest == nil {
-		return localVarReturnValue, nil, reportError("v1BwtrackerRegionCloudChartPostRequest is required and must be specified")
+	if r.v1BwtrackerRegionGatewayChartPostRequest == nil {
+		return localVarReturnValue, nil, reportError("v1BwtrackerRegionGatewayChartPostRequest is required and must be specified")
 	}
 
 	// to determine the Content-Type header
@@ -6185,7 +7295,7 @@ func (a *DefaultAPIService) V1BwtrackerRegionGatewayChartPostExecute(r ApiV1Bwtr
 	}
 	parameterAddToHeaderOrQuery(localVarHeaderParams, "Authorization", r.authorization, "simple", "")
 	// body params
-	localVarPostBody = r.v1BwtrackerRegionCloudChartPostRequest
+	localVarPostBody = r.v1BwtrackerRegionGatewayChartPostRequest
 	if r.ctx != nil {
 		// API Key Authentication
 		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
@@ -6241,7 +7351,7 @@ type ApiV1BwtrackerRegionGatewayCsvPostRequest struct {
 	ctx context.Context
 	ApiService *DefaultAPIService
 	authorization *string
-	v1BwtrackerRegionCloudChartPostRequest *V1BwtrackerRegionCloudChartPostRequest
+	v1BwtrackerRegionGatewayCsvPostRequest *V1BwtrackerRegionGatewayCsvPostRequest
 }
 
 // Bearer token. Format: Bearer &lt;your_token_here&gt;
@@ -6250,12 +7360,12 @@ func (r ApiV1BwtrackerRegionGatewayCsvPostRequest) Authorization(authorization s
 	return r
 }
 
-func (r ApiV1BwtrackerRegionGatewayCsvPostRequest) V1BwtrackerRegionCloudChartPostRequest(v1BwtrackerRegionCloudChartPostRequest V1BwtrackerRegionCloudChartPostRequest) ApiV1BwtrackerRegionGatewayCsvPostRequest {
-	r.v1BwtrackerRegionCloudChartPostRequest = &v1BwtrackerRegionCloudChartPostRequest
+func (r ApiV1BwtrackerRegionGatewayCsvPostRequest) V1BwtrackerRegionGatewayCsvPostRequest(v1BwtrackerRegionGatewayCsvPostRequest V1BwtrackerRegionGatewayCsvPostRequest) ApiV1BwtrackerRegionGatewayCsvPostRequest {
+	r.v1BwtrackerRegionGatewayCsvPostRequest = &v1BwtrackerRegionGatewayCsvPostRequest
 	return r
 }
 
-func (r ApiV1BwtrackerRegionGatewayCsvPostRequest) Execute() (*V1BwtrackerEnterpriseCsvPost200Response, *http.Response, error) {
+func (r ApiV1BwtrackerRegionGatewayCsvPostRequest) Execute() (*V1BwtrackerRegionGatewayCsvPostResponse, *http.Response, error) {
 	return r.ApiService.V1BwtrackerRegionGatewayCsvPostExecute(r)
 }
 
@@ -6273,13 +7383,13 @@ func (a *DefaultAPIService) V1BwtrackerRegionGatewayCsvPost(ctx context.Context)
 }
 
 // Execute executes the request
-//  @return V1BwtrackerEnterpriseCsvPost200Response
-func (a *DefaultAPIService) V1BwtrackerRegionGatewayCsvPostExecute(r ApiV1BwtrackerRegionGatewayCsvPostRequest) (*V1BwtrackerEnterpriseCsvPost200Response, *http.Response, error) {
+//  @return V1BwtrackerRegionGatewayCsvPostResponse
+func (a *DefaultAPIService) V1BwtrackerRegionGatewayCsvPostExecute(r ApiV1BwtrackerRegionGatewayCsvPostRequest) (*V1BwtrackerRegionGatewayCsvPostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1BwtrackerEnterpriseCsvPost200Response
+		localVarReturnValue  *V1BwtrackerRegionGatewayCsvPostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1BwtrackerRegionGatewayCsvPost")
@@ -6295,8 +7405,8 @@ func (a *DefaultAPIService) V1BwtrackerRegionGatewayCsvPostExecute(r ApiV1Bwtrac
 	if r.authorization == nil {
 		return localVarReturnValue, nil, reportError("authorization is required and must be specified")
 	}
-	if r.v1BwtrackerRegionCloudChartPostRequest == nil {
-		return localVarReturnValue, nil, reportError("v1BwtrackerRegionCloudChartPostRequest is required and must be specified")
+	if r.v1BwtrackerRegionGatewayCsvPostRequest == nil {
+		return localVarReturnValue, nil, reportError("v1BwtrackerRegionGatewayCsvPostRequest is required and must be specified")
 	}
 
 	// to determine the Content-Type header
@@ -6318,7 +7428,7 @@ func (a *DefaultAPIService) V1BwtrackerRegionGatewayCsvPostExecute(r ApiV1Bwtrac
 	}
 	parameterAddToHeaderOrQuery(localVarHeaderParams, "Authorization", r.authorization, "simple", "")
 	// body params
-	localVarPostBody = r.v1BwtrackerRegionCloudChartPostRequest
+	localVarPostBody = r.v1BwtrackerRegionGatewayCsvPostRequest
 	if r.ctx != nil {
 		// API Key Authentication
 		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
@@ -6374,7 +7484,7 @@ type ApiV1BwtrackerRegionGatewayDetailsPostRequest struct {
 	ctx context.Context
 	ApiService *DefaultAPIService
 	authorization *string
-	v1BwtrackerRegionCloudChartPostRequest *V1BwtrackerRegionCloudChartPostRequest
+	v1BwtrackerRegionGatewayDetailsPostRequest *V1BwtrackerRegionGatewayDetailsPostRequest
 }
 
 // Bearer token. Format: Bearer &lt;your_token_here&gt;
@@ -6383,12 +7493,12 @@ func (r ApiV1BwtrackerRegionGatewayDetailsPostRequest) Authorization(authorizati
 	return r
 }
 
-func (r ApiV1BwtrackerRegionGatewayDetailsPostRequest) V1BwtrackerRegionCloudChartPostRequest(v1BwtrackerRegionCloudChartPostRequest V1BwtrackerRegionCloudChartPostRequest) ApiV1BwtrackerRegionGatewayDetailsPostRequest {
-	r.v1BwtrackerRegionCloudChartPostRequest = &v1BwtrackerRegionCloudChartPostRequest
+func (r ApiV1BwtrackerRegionGatewayDetailsPostRequest) V1BwtrackerRegionGatewayDetailsPostRequest(v1BwtrackerRegionGatewayDetailsPostRequest V1BwtrackerRegionGatewayDetailsPostRequest) ApiV1BwtrackerRegionGatewayDetailsPostRequest {
+	r.v1BwtrackerRegionGatewayDetailsPostRequest = &v1BwtrackerRegionGatewayDetailsPostRequest
 	return r
 }
 
-func (r ApiV1BwtrackerRegionGatewayDetailsPostRequest) Execute() (*V1BwtrackerRegionEdgeDetailsPost200Response, *http.Response, error) {
+func (r ApiV1BwtrackerRegionGatewayDetailsPostRequest) Execute() (*V1BwtrackerRegionGatewayDetailsPostResponse, *http.Response, error) {
 	return r.ApiService.V1BwtrackerRegionGatewayDetailsPostExecute(r)
 }
 
@@ -6406,13 +7516,13 @@ func (a *DefaultAPIService) V1BwtrackerRegionGatewayDetailsPost(ctx context.Cont
 }
 
 // Execute executes the request
-//  @return V1BwtrackerRegionEdgeDetailsPost200Response
-func (a *DefaultAPIService) V1BwtrackerRegionGatewayDetailsPostExecute(r ApiV1BwtrackerRegionGatewayDetailsPostRequest) (*V1BwtrackerRegionEdgeDetailsPost200Response, *http.Response, error) {
+//  @return V1BwtrackerRegionGatewayDetailsPostResponse
+func (a *DefaultAPIService) V1BwtrackerRegionGatewayDetailsPostExecute(r ApiV1BwtrackerRegionGatewayDetailsPostRequest) (*V1BwtrackerRegionGatewayDetailsPostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1BwtrackerRegionEdgeDetailsPost200Response
+		localVarReturnValue  *V1BwtrackerRegionGatewayDetailsPostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1BwtrackerRegionGatewayDetailsPost")
@@ -6428,8 +7538,8 @@ func (a *DefaultAPIService) V1BwtrackerRegionGatewayDetailsPostExecute(r ApiV1Bw
 	if r.authorization == nil {
 		return localVarReturnValue, nil, reportError("authorization is required and must be specified")
 	}
-	if r.v1BwtrackerRegionCloudChartPostRequest == nil {
-		return localVarReturnValue, nil, reportError("v1BwtrackerRegionCloudChartPostRequest is required and must be specified")
+	if r.v1BwtrackerRegionGatewayDetailsPostRequest == nil {
+		return localVarReturnValue, nil, reportError("v1BwtrackerRegionGatewayDetailsPostRequest is required and must be specified")
 	}
 
 	// to determine the Content-Type header
@@ -6451,7 +7561,7 @@ func (a *DefaultAPIService) V1BwtrackerRegionGatewayDetailsPostExecute(r ApiV1Bw
 	}
 	parameterAddToHeaderOrQuery(localVarHeaderParams, "Authorization", r.authorization, "simple", "")
 	// body params
-	localVarPostBody = r.v1BwtrackerRegionCloudChartPostRequest
+	localVarPostBody = r.v1BwtrackerRegionGatewayDetailsPostRequest
 	if r.ctx != nil {
 		// API Key Authentication
 		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
@@ -6507,7 +7617,7 @@ type ApiV1BwtrackerRegionGatewaySummaryPostRequest struct {
 	ctx context.Context
 	ApiService *DefaultAPIService
 	authorization *string
-	v1BwtrackerRegionCloudChartPostRequest *V1BwtrackerRegionCloudChartPostRequest
+	v1BwtrackerRegionGatewaySummaryPostRequest *V1BwtrackerRegionGatewaySummaryPostRequest
 }
 
 // Bearer token. Format: Bearer &lt;your_token_here&gt;
@@ -6516,12 +7626,12 @@ func (r ApiV1BwtrackerRegionGatewaySummaryPostRequest) Authorization(authorizati
 	return r
 }
 
-func (r ApiV1BwtrackerRegionGatewaySummaryPostRequest) V1BwtrackerRegionCloudChartPostRequest(v1BwtrackerRegionCloudChartPostRequest V1BwtrackerRegionCloudChartPostRequest) ApiV1BwtrackerRegionGatewaySummaryPostRequest {
-	r.v1BwtrackerRegionCloudChartPostRequest = &v1BwtrackerRegionCloudChartPostRequest
+func (r ApiV1BwtrackerRegionGatewaySummaryPostRequest) V1BwtrackerRegionGatewaySummaryPostRequest(v1BwtrackerRegionGatewaySummaryPostRequest V1BwtrackerRegionGatewaySummaryPostRequest) ApiV1BwtrackerRegionGatewaySummaryPostRequest {
+	r.v1BwtrackerRegionGatewaySummaryPostRequest = &v1BwtrackerRegionGatewaySummaryPostRequest
 	return r
 }
 
-func (r ApiV1BwtrackerRegionGatewaySummaryPostRequest) Execute() (*V1BwtrackerRegionEdgeSummaryPost200Response, *http.Response, error) {
+func (r ApiV1BwtrackerRegionGatewaySummaryPostRequest) Execute() (*V1BwtrackerRegionGatewaySummaryPostResponse, *http.Response, error) {
 	return r.ApiService.V1BwtrackerRegionGatewaySummaryPostExecute(r)
 }
 
@@ -6539,13 +7649,13 @@ func (a *DefaultAPIService) V1BwtrackerRegionGatewaySummaryPost(ctx context.Cont
 }
 
 // Execute executes the request
-//  @return V1BwtrackerRegionEdgeSummaryPost200Response
-func (a *DefaultAPIService) V1BwtrackerRegionGatewaySummaryPostExecute(r ApiV1BwtrackerRegionGatewaySummaryPostRequest) (*V1BwtrackerRegionEdgeSummaryPost200Response, *http.Response, error) {
+//  @return V1BwtrackerRegionGatewaySummaryPostResponse
+func (a *DefaultAPIService) V1BwtrackerRegionGatewaySummaryPostExecute(r ApiV1BwtrackerRegionGatewaySummaryPostRequest) (*V1BwtrackerRegionGatewaySummaryPostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1BwtrackerRegionEdgeSummaryPost200Response
+		localVarReturnValue  *V1BwtrackerRegionGatewaySummaryPostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1BwtrackerRegionGatewaySummaryPost")
@@ -6561,8 +7671,8 @@ func (a *DefaultAPIService) V1BwtrackerRegionGatewaySummaryPostExecute(r ApiV1Bw
 	if r.authorization == nil {
 		return localVarReturnValue, nil, reportError("authorization is required and must be specified")
 	}
-	if r.v1BwtrackerRegionCloudChartPostRequest == nil {
-		return localVarReturnValue, nil, reportError("v1BwtrackerRegionCloudChartPostRequest is required and must be specified")
+	if r.v1BwtrackerRegionGatewaySummaryPostRequest == nil {
+		return localVarReturnValue, nil, reportError("v1BwtrackerRegionGatewaySummaryPostRequest is required and must be specified")
 	}
 
 	// to determine the Content-Type header
@@ -6584,7 +7694,7 @@ func (a *DefaultAPIService) V1BwtrackerRegionGatewaySummaryPostExecute(r ApiV1Bw
 	}
 	parameterAddToHeaderOrQuery(localVarHeaderParams, "Authorization", r.authorization, "simple", "")
 	// body params
-	localVarPostBody = r.v1BwtrackerRegionCloudChartPostRequest
+	localVarPostBody = r.v1BwtrackerRegionGatewaySummaryPostRequest
 	if r.ctx != nil {
 		// API Key Authentication
 		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
@@ -6654,7 +7764,7 @@ func (r ApiV1BwtrackerRegionSiteChartPostRequest) V1BwtrackerRegionSiteChartPost
 	return r
 }
 
-func (r ApiV1BwtrackerRegionSiteChartPostRequest) Execute() (*V1BwtrackerRegionCloudChartPost200Response, *http.Response, error) {
+func (r ApiV1BwtrackerRegionSiteChartPostRequest) Execute() (*V1BwtrackerRegionSiteChartPostResponse, *http.Response, error) {
 	return r.ApiService.V1BwtrackerRegionSiteChartPostExecute(r)
 }
 
@@ -6672,13 +7782,13 @@ func (a *DefaultAPIService) V1BwtrackerRegionSiteChartPost(ctx context.Context) 
 }
 
 // Execute executes the request
-//  @return V1BwtrackerRegionCloudChartPost200Response
-func (a *DefaultAPIService) V1BwtrackerRegionSiteChartPostExecute(r ApiV1BwtrackerRegionSiteChartPostRequest) (*V1BwtrackerRegionCloudChartPost200Response, *http.Response, error) {
+//  @return V1BwtrackerRegionSiteChartPostResponse
+func (a *DefaultAPIService) V1BwtrackerRegionSiteChartPostExecute(r ApiV1BwtrackerRegionSiteChartPostRequest) (*V1BwtrackerRegionSiteChartPostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1BwtrackerRegionCloudChartPost200Response
+		localVarReturnValue  *V1BwtrackerRegionSiteChartPostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1BwtrackerRegionSiteChartPost")
@@ -6773,7 +7883,7 @@ type ApiV1BwtrackerRegionSiteDetailsPostRequest struct {
 	ctx context.Context
 	ApiService *DefaultAPIService
 	authorization *string
-	v1BwtrackerRegionSiteChartPostRequest *V1BwtrackerRegionSiteChartPostRequest
+	v1BwtrackerRegionSiteDetailsPostRequest *V1BwtrackerRegionSiteDetailsPostRequest
 }
 
 // Bearer token. Format: Bearer &lt;your_token_here&gt;
@@ -6782,12 +7892,12 @@ func (r ApiV1BwtrackerRegionSiteDetailsPostRequest) Authorization(authorization 
 	return r
 }
 
-func (r ApiV1BwtrackerRegionSiteDetailsPostRequest) V1BwtrackerRegionSiteChartPostRequest(v1BwtrackerRegionSiteChartPostRequest V1BwtrackerRegionSiteChartPostRequest) ApiV1BwtrackerRegionSiteDetailsPostRequest {
-	r.v1BwtrackerRegionSiteChartPostRequest = &v1BwtrackerRegionSiteChartPostRequest
+func (r ApiV1BwtrackerRegionSiteDetailsPostRequest) V1BwtrackerRegionSiteDetailsPostRequest(v1BwtrackerRegionSiteDetailsPostRequest V1BwtrackerRegionSiteDetailsPostRequest) ApiV1BwtrackerRegionSiteDetailsPostRequest {
+	r.v1BwtrackerRegionSiteDetailsPostRequest = &v1BwtrackerRegionSiteDetailsPostRequest
 	return r
 }
 
-func (r ApiV1BwtrackerRegionSiteDetailsPostRequest) Execute() (*V1BwtrackerRegionSiteDetailsPost200Response, *http.Response, error) {
+func (r ApiV1BwtrackerRegionSiteDetailsPostRequest) Execute() (*V1BwtrackerRegionSiteDetailsPostResponse, *http.Response, error) {
 	return r.ApiService.V1BwtrackerRegionSiteDetailsPostExecute(r)
 }
 
@@ -6805,13 +7915,13 @@ func (a *DefaultAPIService) V1BwtrackerRegionSiteDetailsPost(ctx context.Context
 }
 
 // Execute executes the request
-//  @return V1BwtrackerRegionSiteDetailsPost200Response
-func (a *DefaultAPIService) V1BwtrackerRegionSiteDetailsPostExecute(r ApiV1BwtrackerRegionSiteDetailsPostRequest) (*V1BwtrackerRegionSiteDetailsPost200Response, *http.Response, error) {
+//  @return V1BwtrackerRegionSiteDetailsPostResponse
+func (a *DefaultAPIService) V1BwtrackerRegionSiteDetailsPostExecute(r ApiV1BwtrackerRegionSiteDetailsPostRequest) (*V1BwtrackerRegionSiteDetailsPostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1BwtrackerRegionSiteDetailsPost200Response
+		localVarReturnValue  *V1BwtrackerRegionSiteDetailsPostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1BwtrackerRegionSiteDetailsPost")
@@ -6827,8 +7937,8 @@ func (a *DefaultAPIService) V1BwtrackerRegionSiteDetailsPostExecute(r ApiV1Bwtra
 	if r.authorization == nil {
 		return localVarReturnValue, nil, reportError("authorization is required and must be specified")
 	}
-	if r.v1BwtrackerRegionSiteChartPostRequest == nil {
-		return localVarReturnValue, nil, reportError("v1BwtrackerRegionSiteChartPostRequest is required and must be specified")
+	if r.v1BwtrackerRegionSiteDetailsPostRequest == nil {
+		return localVarReturnValue, nil, reportError("v1BwtrackerRegionSiteDetailsPostRequest is required and must be specified")
 	}
 
 	// to determine the Content-Type header
@@ -6850,7 +7960,7 @@ func (a *DefaultAPIService) V1BwtrackerRegionSiteDetailsPostExecute(r ApiV1Bwtra
 	}
 	parameterAddToHeaderOrQuery(localVarHeaderParams, "Authorization", r.authorization, "simple", "")
 	// body params
-	localVarPostBody = r.v1BwtrackerRegionSiteChartPostRequest
+	localVarPostBody = r.v1BwtrackerRegionSiteDetailsPostRequest
 	if r.ctx != nil {
 		// API Key Authentication
 		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
@@ -6906,7 +8016,7 @@ type ApiV1BwtrackerRegionSiteGatewayChartPostRequest struct {
 	ctx context.Context
 	ApiService *DefaultAPIService
 	authorization *string
-	v1BwtrackerRegionSiteChartPostRequest *V1BwtrackerRegionSiteChartPostRequest
+	v1BwtrackerRegionSiteGatewayChartPostRequest *V1BwtrackerRegionSiteGatewayChartPostRequest
 }
 
 // Bearer token. Format: Bearer &lt;your_token_here&gt;
@@ -6915,12 +8025,12 @@ func (r ApiV1BwtrackerRegionSiteGatewayChartPostRequest) Authorization(authoriza
 	return r
 }
 
-func (r ApiV1BwtrackerRegionSiteGatewayChartPostRequest) V1BwtrackerRegionSiteChartPostRequest(v1BwtrackerRegionSiteChartPostRequest V1BwtrackerRegionSiteChartPostRequest) ApiV1BwtrackerRegionSiteGatewayChartPostRequest {
-	r.v1BwtrackerRegionSiteChartPostRequest = &v1BwtrackerRegionSiteChartPostRequest
+func (r ApiV1BwtrackerRegionSiteGatewayChartPostRequest) V1BwtrackerRegionSiteGatewayChartPostRequest(v1BwtrackerRegionSiteGatewayChartPostRequest V1BwtrackerRegionSiteGatewayChartPostRequest) ApiV1BwtrackerRegionSiteGatewayChartPostRequest {
+	r.v1BwtrackerRegionSiteGatewayChartPostRequest = &v1BwtrackerRegionSiteGatewayChartPostRequest
 	return r
 }
 
-func (r ApiV1BwtrackerRegionSiteGatewayChartPostRequest) Execute() (*V1BwtrackerRegionCloudChartPost200Response, *http.Response, error) {
+func (r ApiV1BwtrackerRegionSiteGatewayChartPostRequest) Execute() (*V1BwtrackerRegionSiteGatewayChartPostResponse, *http.Response, error) {
 	return r.ApiService.V1BwtrackerRegionSiteGatewayChartPostExecute(r)
 }
 
@@ -6938,13 +8048,13 @@ func (a *DefaultAPIService) V1BwtrackerRegionSiteGatewayChartPost(ctx context.Co
 }
 
 // Execute executes the request
-//  @return V1BwtrackerRegionCloudChartPost200Response
-func (a *DefaultAPIService) V1BwtrackerRegionSiteGatewayChartPostExecute(r ApiV1BwtrackerRegionSiteGatewayChartPostRequest) (*V1BwtrackerRegionCloudChartPost200Response, *http.Response, error) {
+//  @return V1BwtrackerRegionSiteGatewayChartPostResponse
+func (a *DefaultAPIService) V1BwtrackerRegionSiteGatewayChartPostExecute(r ApiV1BwtrackerRegionSiteGatewayChartPostRequest) (*V1BwtrackerRegionSiteGatewayChartPostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1BwtrackerRegionCloudChartPost200Response
+		localVarReturnValue  *V1BwtrackerRegionSiteGatewayChartPostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1BwtrackerRegionSiteGatewayChartPost")
@@ -6960,8 +8070,8 @@ func (a *DefaultAPIService) V1BwtrackerRegionSiteGatewayChartPostExecute(r ApiV1
 	if r.authorization == nil {
 		return localVarReturnValue, nil, reportError("authorization is required and must be specified")
 	}
-	if r.v1BwtrackerRegionSiteChartPostRequest == nil {
-		return localVarReturnValue, nil, reportError("v1BwtrackerRegionSiteChartPostRequest is required and must be specified")
+	if r.v1BwtrackerRegionSiteGatewayChartPostRequest == nil {
+		return localVarReturnValue, nil, reportError("v1BwtrackerRegionSiteGatewayChartPostRequest is required and must be specified")
 	}
 
 	// to determine the Content-Type header
@@ -6983,7 +8093,7 @@ func (a *DefaultAPIService) V1BwtrackerRegionSiteGatewayChartPostExecute(r ApiV1
 	}
 	parameterAddToHeaderOrQuery(localVarHeaderParams, "Authorization", r.authorization, "simple", "")
 	// body params
-	localVarPostBody = r.v1BwtrackerRegionSiteChartPostRequest
+	localVarPostBody = r.v1BwtrackerRegionSiteGatewayChartPostRequest
 	if r.ctx != nil {
 		// API Key Authentication
 		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
@@ -7039,7 +8149,7 @@ type ApiV1BwtrackerRegionSiteGatewayDetailsPostRequest struct {
 	ctx context.Context
 	ApiService *DefaultAPIService
 	authorization *string
-	v1BwtrackerRegionSiteChartPostRequest *V1BwtrackerRegionSiteChartPostRequest
+	v1BwtrackerRegionSiteGatewayDetailsPostRequest *V1BwtrackerRegionSiteGatewayDetailsPostRequest
 }
 
 // Bearer token. Format: Bearer &lt;your_token_here&gt;
@@ -7048,12 +8158,12 @@ func (r ApiV1BwtrackerRegionSiteGatewayDetailsPostRequest) Authorization(authori
 	return r
 }
 
-func (r ApiV1BwtrackerRegionSiteGatewayDetailsPostRequest) V1BwtrackerRegionSiteChartPostRequest(v1BwtrackerRegionSiteChartPostRequest V1BwtrackerRegionSiteChartPostRequest) ApiV1BwtrackerRegionSiteGatewayDetailsPostRequest {
-	r.v1BwtrackerRegionSiteChartPostRequest = &v1BwtrackerRegionSiteChartPostRequest
+func (r ApiV1BwtrackerRegionSiteGatewayDetailsPostRequest) V1BwtrackerRegionSiteGatewayDetailsPostRequest(v1BwtrackerRegionSiteGatewayDetailsPostRequest V1BwtrackerRegionSiteGatewayDetailsPostRequest) ApiV1BwtrackerRegionSiteGatewayDetailsPostRequest {
+	r.v1BwtrackerRegionSiteGatewayDetailsPostRequest = &v1BwtrackerRegionSiteGatewayDetailsPostRequest
 	return r
 }
 
-func (r ApiV1BwtrackerRegionSiteGatewayDetailsPostRequest) Execute() (*V1BwtrackerRegionSiteDetailsPost200Response, *http.Response, error) {
+func (r ApiV1BwtrackerRegionSiteGatewayDetailsPostRequest) Execute() (*V1BwtrackerRegionSiteGatewayDetailsPostResponse, *http.Response, error) {
 	return r.ApiService.V1BwtrackerRegionSiteGatewayDetailsPostExecute(r)
 }
 
@@ -7071,13 +8181,13 @@ func (a *DefaultAPIService) V1BwtrackerRegionSiteGatewayDetailsPost(ctx context.
 }
 
 // Execute executes the request
-//  @return V1BwtrackerRegionSiteDetailsPost200Response
-func (a *DefaultAPIService) V1BwtrackerRegionSiteGatewayDetailsPostExecute(r ApiV1BwtrackerRegionSiteGatewayDetailsPostRequest) (*V1BwtrackerRegionSiteDetailsPost200Response, *http.Response, error) {
+//  @return V1BwtrackerRegionSiteGatewayDetailsPostResponse
+func (a *DefaultAPIService) V1BwtrackerRegionSiteGatewayDetailsPostExecute(r ApiV1BwtrackerRegionSiteGatewayDetailsPostRequest) (*V1BwtrackerRegionSiteGatewayDetailsPostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1BwtrackerRegionSiteDetailsPost200Response
+		localVarReturnValue  *V1BwtrackerRegionSiteGatewayDetailsPostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1BwtrackerRegionSiteGatewayDetailsPost")
@@ -7093,8 +8203,8 @@ func (a *DefaultAPIService) V1BwtrackerRegionSiteGatewayDetailsPostExecute(r Api
 	if r.authorization == nil {
 		return localVarReturnValue, nil, reportError("authorization is required and must be specified")
 	}
-	if r.v1BwtrackerRegionSiteChartPostRequest == nil {
-		return localVarReturnValue, nil, reportError("v1BwtrackerRegionSiteChartPostRequest is required and must be specified")
+	if r.v1BwtrackerRegionSiteGatewayDetailsPostRequest == nil {
+		return localVarReturnValue, nil, reportError("v1BwtrackerRegionSiteGatewayDetailsPostRequest is required and must be specified")
 	}
 
 	// to determine the Content-Type header
@@ -7116,7 +8226,7 @@ func (a *DefaultAPIService) V1BwtrackerRegionSiteGatewayDetailsPostExecute(r Api
 	}
 	parameterAddToHeaderOrQuery(localVarHeaderParams, "Authorization", r.authorization, "simple", "")
 	// body params
-	localVarPostBody = r.v1BwtrackerRegionSiteChartPostRequest
+	localVarPostBody = r.v1BwtrackerRegionSiteGatewayDetailsPostRequest
 	if r.ctx != nil {
 		// API Key Authentication
 		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
@@ -7172,7 +8282,7 @@ type ApiV1BwtrackerRegionSiteGatewaySummaryPostRequest struct {
 	ctx context.Context
 	ApiService *DefaultAPIService
 	authorization *string
-	v1BwtrackerRegionSiteChartPostRequest *V1BwtrackerRegionSiteChartPostRequest
+	v1BwtrackerRegionSiteGatewaySummaryPostRequest *V1BwtrackerRegionSiteGatewaySummaryPostRequest
 }
 
 // Bearer token. Format: Bearer &lt;your_token_here&gt;
@@ -7181,12 +8291,12 @@ func (r ApiV1BwtrackerRegionSiteGatewaySummaryPostRequest) Authorization(authori
 	return r
 }
 
-func (r ApiV1BwtrackerRegionSiteGatewaySummaryPostRequest) V1BwtrackerRegionSiteChartPostRequest(v1BwtrackerRegionSiteChartPostRequest V1BwtrackerRegionSiteChartPostRequest) ApiV1BwtrackerRegionSiteGatewaySummaryPostRequest {
-	r.v1BwtrackerRegionSiteChartPostRequest = &v1BwtrackerRegionSiteChartPostRequest
+func (r ApiV1BwtrackerRegionSiteGatewaySummaryPostRequest) V1BwtrackerRegionSiteGatewaySummaryPostRequest(v1BwtrackerRegionSiteGatewaySummaryPostRequest V1BwtrackerRegionSiteGatewaySummaryPostRequest) ApiV1BwtrackerRegionSiteGatewaySummaryPostRequest {
+	r.v1BwtrackerRegionSiteGatewaySummaryPostRequest = &v1BwtrackerRegionSiteGatewaySummaryPostRequest
 	return r
 }
 
-func (r ApiV1BwtrackerRegionSiteGatewaySummaryPostRequest) Execute() (*V1BwtrackerRegionSiteGatewaySummaryPost200Response, *http.Response, error) {
+func (r ApiV1BwtrackerRegionSiteGatewaySummaryPostRequest) Execute() (*V1BwtrackerRegionSiteGatewaySummaryPostResponse, *http.Response, error) {
 	return r.ApiService.V1BwtrackerRegionSiteGatewaySummaryPostExecute(r)
 }
 
@@ -7204,13 +8314,13 @@ func (a *DefaultAPIService) V1BwtrackerRegionSiteGatewaySummaryPost(ctx context.
 }
 
 // Execute executes the request
-//  @return V1BwtrackerRegionSiteGatewaySummaryPost200Response
-func (a *DefaultAPIService) V1BwtrackerRegionSiteGatewaySummaryPostExecute(r ApiV1BwtrackerRegionSiteGatewaySummaryPostRequest) (*V1BwtrackerRegionSiteGatewaySummaryPost200Response, *http.Response, error) {
+//  @return V1BwtrackerRegionSiteGatewaySummaryPostResponse
+func (a *DefaultAPIService) V1BwtrackerRegionSiteGatewaySummaryPostExecute(r ApiV1BwtrackerRegionSiteGatewaySummaryPostRequest) (*V1BwtrackerRegionSiteGatewaySummaryPostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1BwtrackerRegionSiteGatewaySummaryPost200Response
+		localVarReturnValue  *V1BwtrackerRegionSiteGatewaySummaryPostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1BwtrackerRegionSiteGatewaySummaryPost")
@@ -7226,8 +8336,8 @@ func (a *DefaultAPIService) V1BwtrackerRegionSiteGatewaySummaryPostExecute(r Api
 	if r.authorization == nil {
 		return localVarReturnValue, nil, reportError("authorization is required and must be specified")
 	}
-	if r.v1BwtrackerRegionSiteChartPostRequest == nil {
-		return localVarReturnValue, nil, reportError("v1BwtrackerRegionSiteChartPostRequest is required and must be specified")
+	if r.v1BwtrackerRegionSiteGatewaySummaryPostRequest == nil {
+		return localVarReturnValue, nil, reportError("v1BwtrackerRegionSiteGatewaySummaryPostRequest is required and must be specified")
 	}
 
 	// to determine the Content-Type header
@@ -7249,7 +8359,7 @@ func (a *DefaultAPIService) V1BwtrackerRegionSiteGatewaySummaryPostExecute(r Api
 	}
 	parameterAddToHeaderOrQuery(localVarHeaderParams, "Authorization", r.authorization, "simple", "")
 	// body params
-	localVarPostBody = r.v1BwtrackerRegionSiteChartPostRequest
+	localVarPostBody = r.v1BwtrackerRegionSiteGatewaySummaryPostRequest
 	if r.ctx != nil {
 		// API Key Authentication
 		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
@@ -7305,7 +8415,7 @@ type ApiV1BwtrackerRegionSiteSummaryPostRequest struct {
 	ctx context.Context
 	ApiService *DefaultAPIService
 	authorization *string
-	v1BwtrackerRegionSiteChartPostRequest *V1BwtrackerRegionSiteChartPostRequest
+	v1BwtrackerRegionSiteSummaryPostRequest *V1BwtrackerRegionSiteSummaryPostRequest
 }
 
 // Bearer token. Format: Bearer &lt;your_token_here&gt;
@@ -7314,12 +8424,12 @@ func (r ApiV1BwtrackerRegionSiteSummaryPostRequest) Authorization(authorization 
 	return r
 }
 
-func (r ApiV1BwtrackerRegionSiteSummaryPostRequest) V1BwtrackerRegionSiteChartPostRequest(v1BwtrackerRegionSiteChartPostRequest V1BwtrackerRegionSiteChartPostRequest) ApiV1BwtrackerRegionSiteSummaryPostRequest {
-	r.v1BwtrackerRegionSiteChartPostRequest = &v1BwtrackerRegionSiteChartPostRequest
+func (r ApiV1BwtrackerRegionSiteSummaryPostRequest) V1BwtrackerRegionSiteSummaryPostRequest(v1BwtrackerRegionSiteSummaryPostRequest V1BwtrackerRegionSiteSummaryPostRequest) ApiV1BwtrackerRegionSiteSummaryPostRequest {
+	r.v1BwtrackerRegionSiteSummaryPostRequest = &v1BwtrackerRegionSiteSummaryPostRequest
 	return r
 }
 
-func (r ApiV1BwtrackerRegionSiteSummaryPostRequest) Execute() (*V1BwtrackerRegionSiteGatewaySummaryPost200Response, *http.Response, error) {
+func (r ApiV1BwtrackerRegionSiteSummaryPostRequest) Execute() (*V1BwtrackerRegionSiteSummaryPostResponse, *http.Response, error) {
 	return r.ApiService.V1BwtrackerRegionSiteSummaryPostExecute(r)
 }
 
@@ -7337,13 +8447,13 @@ func (a *DefaultAPIService) V1BwtrackerRegionSiteSummaryPost(ctx context.Context
 }
 
 // Execute executes the request
-//  @return V1BwtrackerRegionSiteGatewaySummaryPost200Response
-func (a *DefaultAPIService) V1BwtrackerRegionSiteSummaryPostExecute(r ApiV1BwtrackerRegionSiteSummaryPostRequest) (*V1BwtrackerRegionSiteGatewaySummaryPost200Response, *http.Response, error) {
+//  @return V1BwtrackerRegionSiteSummaryPostResponse
+func (a *DefaultAPIService) V1BwtrackerRegionSiteSummaryPostExecute(r ApiV1BwtrackerRegionSiteSummaryPostRequest) (*V1BwtrackerRegionSiteSummaryPostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1BwtrackerRegionSiteGatewaySummaryPost200Response
+		localVarReturnValue  *V1BwtrackerRegionSiteSummaryPostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1BwtrackerRegionSiteSummaryPost")
@@ -7359,8 +8469,8 @@ func (a *DefaultAPIService) V1BwtrackerRegionSiteSummaryPostExecute(r ApiV1Bwtra
 	if r.authorization == nil {
 		return localVarReturnValue, nil, reportError("authorization is required and must be specified")
 	}
-	if r.v1BwtrackerRegionSiteChartPostRequest == nil {
-		return localVarReturnValue, nil, reportError("v1BwtrackerRegionSiteChartPostRequest is required and must be specified")
+	if r.v1BwtrackerRegionSiteSummaryPostRequest == nil {
+		return localVarReturnValue, nil, reportError("v1BwtrackerRegionSiteSummaryPostRequest is required and must be specified")
 	}
 
 	// to determine the Content-Type header
@@ -7382,7 +8492,7 @@ func (a *DefaultAPIService) V1BwtrackerRegionSiteSummaryPostExecute(r ApiV1Bwtra
 	}
 	parameterAddToHeaderOrQuery(localVarHeaderParams, "Authorization", r.authorization, "simple", "")
 	// body params
-	localVarPostBody = r.v1BwtrackerRegionSiteChartPostRequest
+	localVarPostBody = r.v1BwtrackerRegionSiteSummaryPostRequest
 	if r.ctx != nil {
 		// API Key Authentication
 		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
@@ -7438,7 +8548,7 @@ type ApiV1BwtrackerSiteCsvPostRequest struct {
 	ctx context.Context
 	ApiService *DefaultAPIService
 	authorization *string
-	v1BwtrackerRegionSiteChartPostRequest *V1BwtrackerRegionSiteChartPostRequest
+	v1BwtrackerSiteCsvPostRequest *V1BwtrackerSiteCsvPostRequest
 }
 
 // Bearer token. Format: Bearer &lt;your_token_here&gt;
@@ -7447,12 +8557,12 @@ func (r ApiV1BwtrackerSiteCsvPostRequest) Authorization(authorization string) Ap
 	return r
 }
 
-func (r ApiV1BwtrackerSiteCsvPostRequest) V1BwtrackerRegionSiteChartPostRequest(v1BwtrackerRegionSiteChartPostRequest V1BwtrackerRegionSiteChartPostRequest) ApiV1BwtrackerSiteCsvPostRequest {
-	r.v1BwtrackerRegionSiteChartPostRequest = &v1BwtrackerRegionSiteChartPostRequest
+func (r ApiV1BwtrackerSiteCsvPostRequest) V1BwtrackerSiteCsvPostRequest(v1BwtrackerSiteCsvPostRequest V1BwtrackerSiteCsvPostRequest) ApiV1BwtrackerSiteCsvPostRequest {
+	r.v1BwtrackerSiteCsvPostRequest = &v1BwtrackerSiteCsvPostRequest
 	return r
 }
 
-func (r ApiV1BwtrackerSiteCsvPostRequest) Execute() (*V1BwtrackerEnterpriseCsvPost200Response, *http.Response, error) {
+func (r ApiV1BwtrackerSiteCsvPostRequest) Execute() (*V1BwtrackerSiteCsvPostResponse, *http.Response, error) {
 	return r.ApiService.V1BwtrackerSiteCsvPostExecute(r)
 }
 
@@ -7470,13 +8580,13 @@ func (a *DefaultAPIService) V1BwtrackerSiteCsvPost(ctx context.Context) ApiV1Bwt
 }
 
 // Execute executes the request
-//  @return V1BwtrackerEnterpriseCsvPost200Response
-func (a *DefaultAPIService) V1BwtrackerSiteCsvPostExecute(r ApiV1BwtrackerSiteCsvPostRequest) (*V1BwtrackerEnterpriseCsvPost200Response, *http.Response, error) {
+//  @return V1BwtrackerSiteCsvPostResponse
+func (a *DefaultAPIService) V1BwtrackerSiteCsvPostExecute(r ApiV1BwtrackerSiteCsvPostRequest) (*V1BwtrackerSiteCsvPostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1BwtrackerEnterpriseCsvPost200Response
+		localVarReturnValue  *V1BwtrackerSiteCsvPostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1BwtrackerSiteCsvPost")
@@ -7492,8 +8602,8 @@ func (a *DefaultAPIService) V1BwtrackerSiteCsvPostExecute(r ApiV1BwtrackerSiteCs
 	if r.authorization == nil {
 		return localVarReturnValue, nil, reportError("authorization is required and must be specified")
 	}
-	if r.v1BwtrackerRegionSiteChartPostRequest == nil {
-		return localVarReturnValue, nil, reportError("v1BwtrackerRegionSiteChartPostRequest is required and must be specified")
+	if r.v1BwtrackerSiteCsvPostRequest == nil {
+		return localVarReturnValue, nil, reportError("v1BwtrackerSiteCsvPostRequest is required and must be specified")
 	}
 
 	// to determine the Content-Type header
@@ -7515,7 +8625,7 @@ func (a *DefaultAPIService) V1BwtrackerSiteCsvPostExecute(r ApiV1BwtrackerSiteCs
 	}
 	parameterAddToHeaderOrQuery(localVarHeaderParams, "Authorization", r.authorization, "simple", "")
 	// body params
-	localVarPostBody = r.v1BwtrackerRegionSiteChartPostRequest
+	localVarPostBody = r.v1BwtrackerSiteCsvPostRequest
 	if r.ctx != nil {
 		// API Key Authentication
 		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
@@ -7571,7 +8681,7 @@ type ApiV1BwtrackerSiteGatewayCsvPostRequest struct {
 	ctx context.Context
 	ApiService *DefaultAPIService
 	authorization *string
-	v1BwtrackerRegionSiteChartPostRequest *V1BwtrackerRegionSiteChartPostRequest
+	v1BwtrackerSiteGatewayCsvPostRequest *V1BwtrackerSiteGatewayCsvPostRequest
 }
 
 // Bearer token. Format: Bearer &lt;your_token_here&gt;
@@ -7580,12 +8690,12 @@ func (r ApiV1BwtrackerSiteGatewayCsvPostRequest) Authorization(authorization str
 	return r
 }
 
-func (r ApiV1BwtrackerSiteGatewayCsvPostRequest) V1BwtrackerRegionSiteChartPostRequest(v1BwtrackerRegionSiteChartPostRequest V1BwtrackerRegionSiteChartPostRequest) ApiV1BwtrackerSiteGatewayCsvPostRequest {
-	r.v1BwtrackerRegionSiteChartPostRequest = &v1BwtrackerRegionSiteChartPostRequest
+func (r ApiV1BwtrackerSiteGatewayCsvPostRequest) V1BwtrackerSiteGatewayCsvPostRequest(v1BwtrackerSiteGatewayCsvPostRequest V1BwtrackerSiteGatewayCsvPostRequest) ApiV1BwtrackerSiteGatewayCsvPostRequest {
+	r.v1BwtrackerSiteGatewayCsvPostRequest = &v1BwtrackerSiteGatewayCsvPostRequest
 	return r
 }
 
-func (r ApiV1BwtrackerSiteGatewayCsvPostRequest) Execute() (*V1BwtrackerEnterpriseCsvPost200Response, *http.Response, error) {
+func (r ApiV1BwtrackerSiteGatewayCsvPostRequest) Execute() (*V1BwtrackerSiteGatewayCsvPostResponse, *http.Response, error) {
 	return r.ApiService.V1BwtrackerSiteGatewayCsvPostExecute(r)
 }
 
@@ -7603,13 +8713,13 @@ func (a *DefaultAPIService) V1BwtrackerSiteGatewayCsvPost(ctx context.Context) A
 }
 
 // Execute executes the request
-//  @return V1BwtrackerEnterpriseCsvPost200Response
-func (a *DefaultAPIService) V1BwtrackerSiteGatewayCsvPostExecute(r ApiV1BwtrackerSiteGatewayCsvPostRequest) (*V1BwtrackerEnterpriseCsvPost200Response, *http.Response, error) {
+//  @return V1BwtrackerSiteGatewayCsvPostResponse
+func (a *DefaultAPIService) V1BwtrackerSiteGatewayCsvPostExecute(r ApiV1BwtrackerSiteGatewayCsvPostRequest) (*V1BwtrackerSiteGatewayCsvPostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1BwtrackerEnterpriseCsvPost200Response
+		localVarReturnValue  *V1BwtrackerSiteGatewayCsvPostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1BwtrackerSiteGatewayCsvPost")
@@ -7625,8 +8735,8 @@ func (a *DefaultAPIService) V1BwtrackerSiteGatewayCsvPostExecute(r ApiV1Bwtracke
 	if r.authorization == nil {
 		return localVarReturnValue, nil, reportError("authorization is required and must be specified")
 	}
-	if r.v1BwtrackerRegionSiteChartPostRequest == nil {
-		return localVarReturnValue, nil, reportError("v1BwtrackerRegionSiteChartPostRequest is required and must be specified")
+	if r.v1BwtrackerSiteGatewayCsvPostRequest == nil {
+		return localVarReturnValue, nil, reportError("v1BwtrackerSiteGatewayCsvPostRequest is required and must be specified")
 	}
 
 	// to determine the Content-Type header
@@ -7648,7 +8758,7 @@ func (a *DefaultAPIService) V1BwtrackerSiteGatewayCsvPostExecute(r ApiV1Bwtracke
 	}
 	parameterAddToHeaderOrQuery(localVarHeaderParams, "Authorization", r.authorization, "simple", "")
 	// body params
-	localVarPostBody = r.v1BwtrackerRegionSiteChartPostRequest
+	localVarPostBody = r.v1BwtrackerSiteGatewayCsvPostRequest
 	if r.ctx != nil {
 		// API Key Authentication
 		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
@@ -7713,12 +8823,14 @@ func (r ApiV1DataAssuranceAssurancesApplicationsBucketAppNameGetRequest) Authori
 	return r
 }
 
-func (r ApiV1DataAssuranceAssurancesApplicationsBucketAppNameGetRequest) Execute() (*V1DataAssuranceAssurancesApplicationsBucketAppNameGet200Response, *http.Response, error) {
+func (r ApiV1DataAssuranceAssurancesApplicationsBucketAppNameGetRequest) Execute() (*V1DataAssuranceAssurancesApplicationsBucketAppNameGetResponse, *http.Response, error) {
 	return r.ApiService.V1DataAssuranceAssurancesApplicationsBucketAppNameGetExecute(r)
 }
 
 /*
 V1DataAssuranceAssurancesApplicationsBucketAppNameGet Method for V1DataAssuranceAssurancesApplicationsBucketAppNameGet
+
+Gets the assurance details for all edges under the current enterprise
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @param bucketAppName 
@@ -7733,13 +8845,13 @@ func (a *DefaultAPIService) V1DataAssuranceAssurancesApplicationsBucketAppNameGe
 }
 
 // Execute executes the request
-//  @return V1DataAssuranceAssurancesApplicationsBucketAppNameGet200Response
-func (a *DefaultAPIService) V1DataAssuranceAssurancesApplicationsBucketAppNameGetExecute(r ApiV1DataAssuranceAssurancesApplicationsBucketAppNameGetRequest) (*V1DataAssuranceAssurancesApplicationsBucketAppNameGet200Response, *http.Response, error) {
+//  @return V1DataAssuranceAssurancesApplicationsBucketAppNameGetResponse
+func (a *DefaultAPIService) V1DataAssuranceAssurancesApplicationsBucketAppNameGetExecute(r ApiV1DataAssuranceAssurancesApplicationsBucketAppNameGetRequest) (*V1DataAssuranceAssurancesApplicationsBucketAppNameGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1DataAssuranceAssurancesApplicationsBucketAppNameGet200Response
+		localVarReturnValue  *V1DataAssuranceAssurancesApplicationsBucketAppNameGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1DataAssuranceAssurancesApplicationsBucketAppNameGet")
@@ -7838,12 +8950,14 @@ func (r ApiV1DataAssuranceAssurancesGlobalGetRequest) Authorization(authorizatio
 	return r
 }
 
-func (r ApiV1DataAssuranceAssurancesGlobalGetRequest) Execute() (*V1DataAssuranceAssurancesGlobalGet200Response, *http.Response, error) {
+func (r ApiV1DataAssuranceAssurancesGlobalGetRequest) Execute() (*V1DataAssuranceAssurancesGlobalGetResponse, *http.Response, error) {
 	return r.ApiService.V1DataAssuranceAssurancesGlobalGetExecute(r)
 }
 
 /*
 V1DataAssuranceAssurancesGlobalGet Method for V1DataAssuranceAssurancesGlobalGet
+
+Get all assurances under the current enterprise
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV1DataAssuranceAssurancesGlobalGetRequest
@@ -7856,13 +8970,13 @@ func (a *DefaultAPIService) V1DataAssuranceAssurancesGlobalGet(ctx context.Conte
 }
 
 // Execute executes the request
-//  @return V1DataAssuranceAssurancesGlobalGet200Response
-func (a *DefaultAPIService) V1DataAssuranceAssurancesGlobalGetExecute(r ApiV1DataAssuranceAssurancesGlobalGetRequest) (*V1DataAssuranceAssurancesGlobalGet200Response, *http.Response, error) {
+//  @return V1DataAssuranceAssurancesGlobalGetResponse
+func (a *DefaultAPIService) V1DataAssuranceAssurancesGlobalGetExecute(r ApiV1DataAssuranceAssurancesGlobalGetRequest) (*V1DataAssuranceAssurancesGlobalGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1DataAssuranceAssurancesGlobalGet200Response
+		localVarReturnValue  *V1DataAssuranceAssurancesGlobalGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1DataAssuranceAssurancesGlobalGet")
@@ -7967,6 +9081,8 @@ func (r ApiV1DataAssuranceAssurancesGlobalIdDeleteRequest) Execute() (map[string
 
 /*
 V1DataAssuranceAssurancesGlobalIdDelete Method for V1DataAssuranceAssurancesGlobalIdDelete
+
+Delete an assurance under the current enterprise
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @param id 
@@ -8087,12 +9203,14 @@ func (r ApiV1DataAssuranceAssurancesGlobalIdGetRequest) Authorization(authorizat
 	return r
 }
 
-func (r ApiV1DataAssuranceAssurancesGlobalIdGetRequest) Execute() (*V1DataAssuranceAssurancesGlobalPostRequest, *http.Response, error) {
+func (r ApiV1DataAssuranceAssurancesGlobalIdGetRequest) Execute() (*V1DataAssuranceAssurancesGlobalIdGetResponse, *http.Response, error) {
 	return r.ApiService.V1DataAssuranceAssurancesGlobalIdGetExecute(r)
 }
 
 /*
 V1DataAssuranceAssurancesGlobalIdGet Method for V1DataAssuranceAssurancesGlobalIdGet
+
+Get the config for an assurance under the current enterprise
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @param id 
@@ -8107,13 +9225,13 @@ func (a *DefaultAPIService) V1DataAssuranceAssurancesGlobalIdGet(ctx context.Con
 }
 
 // Execute executes the request
-//  @return V1DataAssuranceAssurancesGlobalPostRequest
-func (a *DefaultAPIService) V1DataAssuranceAssurancesGlobalIdGetExecute(r ApiV1DataAssuranceAssurancesGlobalIdGetRequest) (*V1DataAssuranceAssurancesGlobalPostRequest, *http.Response, error) {
+//  @return V1DataAssuranceAssurancesGlobalIdGetResponse
+func (a *DefaultAPIService) V1DataAssuranceAssurancesGlobalIdGetExecute(r ApiV1DataAssuranceAssurancesGlobalIdGetRequest) (*V1DataAssuranceAssurancesGlobalIdGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1DataAssuranceAssurancesGlobalPostRequest
+		localVarReturnValue  *V1DataAssuranceAssurancesGlobalIdGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1DataAssuranceAssurancesGlobalIdGet")
@@ -8219,12 +9337,14 @@ func (r ApiV1DataAssuranceAssurancesGlobalIdPutRequest) V1DataAssuranceAssurance
 	return r
 }
 
-func (r ApiV1DataAssuranceAssurancesGlobalIdPutRequest) Execute() (*V1DataAssuranceAssurancesGlobalIdPut200Response, *http.Response, error) {
+func (r ApiV1DataAssuranceAssurancesGlobalIdPutRequest) Execute() (*V1DataAssuranceAssurancesGlobalIdPutResponse, *http.Response, error) {
 	return r.ApiService.V1DataAssuranceAssurancesGlobalIdPutExecute(r)
 }
 
 /*
 V1DataAssuranceAssurancesGlobalIdPut Method for V1DataAssuranceAssurancesGlobalIdPut
+
+Overwrite a pre-existing assurance under the current enterprise
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @param id 
@@ -8239,13 +9359,13 @@ func (a *DefaultAPIService) V1DataAssuranceAssurancesGlobalIdPut(ctx context.Con
 }
 
 // Execute executes the request
-//  @return V1DataAssuranceAssurancesGlobalIdPut200Response
-func (a *DefaultAPIService) V1DataAssuranceAssurancesGlobalIdPutExecute(r ApiV1DataAssuranceAssurancesGlobalIdPutRequest) (*V1DataAssuranceAssurancesGlobalIdPut200Response, *http.Response, error) {
+//  @return V1DataAssuranceAssurancesGlobalIdPutResponse
+func (a *DefaultAPIService) V1DataAssuranceAssurancesGlobalIdPutExecute(r ApiV1DataAssuranceAssurancesGlobalIdPutRequest) (*V1DataAssuranceAssurancesGlobalIdPutResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPut
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1DataAssuranceAssurancesGlobalIdPut200Response
+		localVarReturnValue  *V1DataAssuranceAssurancesGlobalIdPutResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1DataAssuranceAssurancesGlobalIdPut")
@@ -8355,12 +9475,14 @@ func (r ApiV1DataAssuranceAssurancesGlobalPostRequest) V1DataAssuranceAssurances
 	return r
 }
 
-func (r ApiV1DataAssuranceAssurancesGlobalPostRequest) Execute() (*V1DataAssuranceAssurancesGlobalPost200Response, *http.Response, error) {
+func (r ApiV1DataAssuranceAssurancesGlobalPostRequest) Execute() (*V1DataAssuranceAssurancesGlobalPostResponse, *http.Response, error) {
 	return r.ApiService.V1DataAssuranceAssurancesGlobalPostExecute(r)
 }
 
 /*
 V1DataAssuranceAssurancesGlobalPost Method for V1DataAssuranceAssurancesGlobalPost
+
+Configure a new assurance under the current enterprise
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV1DataAssuranceAssurancesGlobalPostRequest
@@ -8373,13 +9495,13 @@ func (a *DefaultAPIService) V1DataAssuranceAssurancesGlobalPost(ctx context.Cont
 }
 
 // Execute executes the request
-//  @return V1DataAssuranceAssurancesGlobalPost200Response
-func (a *DefaultAPIService) V1DataAssuranceAssurancesGlobalPostExecute(r ApiV1DataAssuranceAssurancesGlobalPostRequest) (*V1DataAssuranceAssurancesGlobalPost200Response, *http.Response, error) {
+//  @return V1DataAssuranceAssurancesGlobalPostResponse
+func (a *DefaultAPIService) V1DataAssuranceAssurancesGlobalPostExecute(r ApiV1DataAssuranceAssurancesGlobalPostRequest) (*V1DataAssuranceAssurancesGlobalPostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1DataAssuranceAssurancesGlobalPost200Response
+		localVarReturnValue  *V1DataAssuranceAssurancesGlobalPostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1DataAssuranceAssurancesGlobalPost")
@@ -8482,12 +9604,14 @@ func (r ApiV1DataAssuranceFlexAlgosGetRequest) Authorization(authorization strin
 	return r
 }
 
-func (r ApiV1DataAssuranceFlexAlgosGetRequest) Execute() (*V1DataAssuranceFlexAlgosGet200Response, *http.Response, error) {
+func (r ApiV1DataAssuranceFlexAlgosGetRequest) Execute() (*V1DataAssuranceFlexAlgosGetResponse, *http.Response, error) {
 	return r.ApiService.V1DataAssuranceFlexAlgosGetExecute(r)
 }
 
 /*
 V1DataAssuranceFlexAlgosGet Method for V1DataAssuranceFlexAlgosGet
+
+Get all configurable flex algos under the current enterprise
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV1DataAssuranceFlexAlgosGetRequest
@@ -8500,13 +9624,13 @@ func (a *DefaultAPIService) V1DataAssuranceFlexAlgosGet(ctx context.Context) Api
 }
 
 // Execute executes the request
-//  @return V1DataAssuranceFlexAlgosGet200Response
-func (a *DefaultAPIService) V1DataAssuranceFlexAlgosGetExecute(r ApiV1DataAssuranceFlexAlgosGetRequest) (*V1DataAssuranceFlexAlgosGet200Response, *http.Response, error) {
+//  @return V1DataAssuranceFlexAlgosGetResponse
+func (a *DefaultAPIService) V1DataAssuranceFlexAlgosGetExecute(r ApiV1DataAssuranceFlexAlgosGetRequest) (*V1DataAssuranceFlexAlgosGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1DataAssuranceFlexAlgosGet200Response
+		localVarReturnValue  *V1DataAssuranceFlexAlgosGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1DataAssuranceFlexAlgosGet")
@@ -8598,10 +9722,9 @@ type ApiV1DeviceRoutingBgpNbrStatsGetRequest struct {
 	authorization *string
 	afiName *string
 	deviceId *int64
-	instanceName *string
 	nbrAddress *string
-	last *int32
 	vrfName *string
+	instanceName *string
 }
 
 // Bearer token. Format: Bearer &lt;your_token_here&gt;
@@ -8622,21 +9745,9 @@ func (r ApiV1DeviceRoutingBgpNbrStatsGetRequest) DeviceId(deviceId int64) ApiV1D
 	return r
 }
 
-// Valid configured BGP Instance name
-func (r ApiV1DeviceRoutingBgpNbrStatsGetRequest) InstanceName(instanceName string) ApiV1DeviceRoutingBgpNbrStatsGetRequest {
-	r.instanceName = &instanceName
-	return r
-}
-
 // Valid configured BGP Nbr address
 func (r ApiV1DeviceRoutingBgpNbrStatsGetRequest) NbrAddress(nbrAddress string) ApiV1DeviceRoutingBgpNbrStatsGetRequest {
 	r.nbrAddress = &nbrAddress
-	return r
-}
-
-// 
-func (r ApiV1DeviceRoutingBgpNbrStatsGetRequest) Last(last int32) ApiV1DeviceRoutingBgpNbrStatsGetRequest {
-	r.last = &last
 	return r
 }
 
@@ -8646,12 +9757,20 @@ func (r ApiV1DeviceRoutingBgpNbrStatsGetRequest) VrfName(vrfName string) ApiV1De
 	return r
 }
 
-func (r ApiV1DeviceRoutingBgpNbrStatsGetRequest) Execute() (*V1DeviceRoutingBgpNbrStatsGet200Response, *http.Response, error) {
+// Valid configured BGP Instance name
+func (r ApiV1DeviceRoutingBgpNbrStatsGetRequest) InstanceName(instanceName string) ApiV1DeviceRoutingBgpNbrStatsGetRequest {
+	r.instanceName = &instanceName
+	return r
+}
+
+func (r ApiV1DeviceRoutingBgpNbrStatsGetRequest) Execute() (*V1DeviceRoutingBgpNbrStatsGetResponse, *http.Response, error) {
 	return r.ApiService.V1DeviceRoutingBgpNbrStatsGetExecute(r)
 }
 
 /*
 V1DeviceRoutingBgpNbrStatsGet Method for V1DeviceRoutingBgpNbrStatsGet
+
+Get BGP Nbr Stats Table
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV1DeviceRoutingBgpNbrStatsGetRequest
@@ -8664,13 +9783,13 @@ func (a *DefaultAPIService) V1DeviceRoutingBgpNbrStatsGet(ctx context.Context) A
 }
 
 // Execute executes the request
-//  @return V1DeviceRoutingBgpNbrStatsGet200Response
-func (a *DefaultAPIService) V1DeviceRoutingBgpNbrStatsGetExecute(r ApiV1DeviceRoutingBgpNbrStatsGetRequest) (*V1DeviceRoutingBgpNbrStatsGet200Response, *http.Response, error) {
+//  @return V1DeviceRoutingBgpNbrStatsGetResponse
+func (a *DefaultAPIService) V1DeviceRoutingBgpNbrStatsGetExecute(r ApiV1DeviceRoutingBgpNbrStatsGetRequest) (*V1DeviceRoutingBgpNbrStatsGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1DeviceRoutingBgpNbrStatsGet200Response
+		localVarReturnValue  *V1DeviceRoutingBgpNbrStatsGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1DeviceRoutingBgpNbrStatsGet")
@@ -8686,25 +9805,26 @@ func (a *DefaultAPIService) V1DeviceRoutingBgpNbrStatsGetExecute(r ApiV1DeviceRo
 	if r.authorization == nil {
 		return localVarReturnValue, nil, reportError("authorization is required and must be specified")
 	}
+	if r.afiName == nil {
+		return localVarReturnValue, nil, reportError("afiName is required and must be specified")
+	}
+	if r.deviceId == nil {
+		return localVarReturnValue, nil, reportError("deviceId is required and must be specified")
+	}
+	if r.nbrAddress == nil {
+		return localVarReturnValue, nil, reportError("nbrAddress is required and must be specified")
+	}
+	if r.vrfName == nil {
+		return localVarReturnValue, nil, reportError("vrfName is required and must be specified")
+	}
 
-	if r.afiName != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "afiName", r.afiName, "form", "")
-	}
-	if r.deviceId != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "deviceId", r.deviceId, "form", "")
-	}
+	parameterAddToHeaderOrQuery(localVarQueryParams, "afiName", r.afiName, "form", "")
+	parameterAddToHeaderOrQuery(localVarQueryParams, "deviceId", r.deviceId, "form", "")
 	if r.instanceName != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "instanceName", r.instanceName, "form", "")
 	}
-	if r.nbrAddress != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "nbrAddress", r.nbrAddress, "form", "")
-	}
-	if r.last != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "last", r.last, "form", "")
-	}
-	if r.vrfName != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "vrfName", r.vrfName, "form", "")
-	}
+	parameterAddToHeaderOrQuery(localVarQueryParams, "nbrAddress", r.nbrAddress, "form", "")
+	parameterAddToHeaderOrQuery(localVarQueryParams, "vrfName", r.vrfName, "form", "")
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
 
@@ -8779,7 +9899,6 @@ type ApiV1DeviceRoutingBgpNbridGetRequest struct {
 	ApiService *DefaultAPIService
 	authorization *string
 	deviceId *int64
-	last *int32
 	vrfName *string
 }
 
@@ -8795,24 +9914,20 @@ func (r ApiV1DeviceRoutingBgpNbridGetRequest) DeviceId(deviceId int64) ApiV1Devi
 	return r
 }
 
-// 
-func (r ApiV1DeviceRoutingBgpNbridGetRequest) Last(last int32) ApiV1DeviceRoutingBgpNbridGetRequest {
-	r.last = &last
-	return r
-}
-
 // Valid configured VRF name
 func (r ApiV1DeviceRoutingBgpNbridGetRequest) VrfName(vrfName string) ApiV1DeviceRoutingBgpNbridGetRequest {
 	r.vrfName = &vrfName
 	return r
 }
 
-func (r ApiV1DeviceRoutingBgpNbridGetRequest) Execute() (*V1DeviceRoutingBgpNbridGet200Response, *http.Response, error) {
+func (r ApiV1DeviceRoutingBgpNbridGetRequest) Execute() (*V1DeviceRoutingBgpNbridGetResponse, *http.Response, error) {
 	return r.ApiService.V1DeviceRoutingBgpNbridGetExecute(r)
 }
 
 /*
 V1DeviceRoutingBgpNbridGet Method for V1DeviceRoutingBgpNbridGet
+
+Get BGP Neighbor ID Table
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV1DeviceRoutingBgpNbridGetRequest
@@ -8825,13 +9940,13 @@ func (a *DefaultAPIService) V1DeviceRoutingBgpNbridGet(ctx context.Context) ApiV
 }
 
 // Execute executes the request
-//  @return V1DeviceRoutingBgpNbridGet200Response
-func (a *DefaultAPIService) V1DeviceRoutingBgpNbridGetExecute(r ApiV1DeviceRoutingBgpNbridGetRequest) (*V1DeviceRoutingBgpNbridGet200Response, *http.Response, error) {
+//  @return V1DeviceRoutingBgpNbridGetResponse
+func (a *DefaultAPIService) V1DeviceRoutingBgpNbridGetExecute(r ApiV1DeviceRoutingBgpNbridGetRequest) (*V1DeviceRoutingBgpNbridGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1DeviceRoutingBgpNbridGet200Response
+		localVarReturnValue  *V1DeviceRoutingBgpNbridGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1DeviceRoutingBgpNbridGet")
@@ -8847,16 +9962,15 @@ func (a *DefaultAPIService) V1DeviceRoutingBgpNbridGetExecute(r ApiV1DeviceRouti
 	if r.authorization == nil {
 		return localVarReturnValue, nil, reportError("authorization is required and must be specified")
 	}
+	if r.deviceId == nil {
+		return localVarReturnValue, nil, reportError("deviceId is required and must be specified")
+	}
+	if r.vrfName == nil {
+		return localVarReturnValue, nil, reportError("vrfName is required and must be specified")
+	}
 
-	if r.deviceId != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "deviceId", r.deviceId, "form", "")
-	}
-	if r.last != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "last", r.last, "form", "")
-	}
-	if r.vrfName != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "vrfName", r.vrfName, "form", "")
-	}
+	parameterAddToHeaderOrQuery(localVarQueryParams, "deviceId", r.deviceId, "form", "")
+	parameterAddToHeaderOrQuery(localVarQueryParams, "vrfName", r.vrfName, "form", "")
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
 
@@ -8938,12 +10052,14 @@ func (r ApiV1DeviceRoutingBgpNbrsCountersGetRequest) Authorization(authorization
 	return r
 }
 
-func (r ApiV1DeviceRoutingBgpNbrsCountersGetRequest) Execute() (*V1DeviceRoutingBgpNbrsCountersGet200Response, *http.Response, error) {
+func (r ApiV1DeviceRoutingBgpNbrsCountersGetRequest) Execute() (*V1DeviceRoutingBgpNbrsCountersGetResponse, *http.Response, error) {
 	return r.ApiService.V1DeviceRoutingBgpNbrsCountersGetExecute(r)
 }
 
 /*
 V1DeviceRoutingBgpNbrsCountersGet Method for V1DeviceRoutingBgpNbrsCountersGet
+
+Get BGP Neighbor Counters
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV1DeviceRoutingBgpNbrsCountersGetRequest
@@ -8956,13 +10072,13 @@ func (a *DefaultAPIService) V1DeviceRoutingBgpNbrsCountersGet(ctx context.Contex
 }
 
 // Execute executes the request
-//  @return V1DeviceRoutingBgpNbrsCountersGet200Response
-func (a *DefaultAPIService) V1DeviceRoutingBgpNbrsCountersGetExecute(r ApiV1DeviceRoutingBgpNbrsCountersGetRequest) (*V1DeviceRoutingBgpNbrsCountersGet200Response, *http.Response, error) {
+//  @return V1DeviceRoutingBgpNbrsCountersGetResponse
+func (a *DefaultAPIService) V1DeviceRoutingBgpNbrsCountersGetExecute(r ApiV1DeviceRoutingBgpNbrsCountersGetRequest) (*V1DeviceRoutingBgpNbrsCountersGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1DeviceRoutingBgpNbrsCountersGet200Response
+		localVarReturnValue  *V1DeviceRoutingBgpNbrsCountersGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1DeviceRoutingBgpNbrsCountersGet")
@@ -9054,8 +10170,8 @@ type ApiV1DeviceRoutingBgpNbrsDetailsGetRequest struct {
 	authorization *string
 	address *string
 	deviceId *int64
-	interface_ *string
 	vrfName *string
+	interface_ *string
 }
 
 // Bearer token. Format: Bearer &lt;your_token_here&gt;
@@ -9076,24 +10192,26 @@ func (r ApiV1DeviceRoutingBgpNbrsDetailsGetRequest) DeviceId(deviceId int64) Api
 	return r
 }
 
-// Interface name. Used in case of link local address
-func (r ApiV1DeviceRoutingBgpNbrsDetailsGetRequest) Interface_(interface_ string) ApiV1DeviceRoutingBgpNbrsDetailsGetRequest {
-	r.interface_ = &interface_
-	return r
-}
-
 // Valid configured VRF name
 func (r ApiV1DeviceRoutingBgpNbrsDetailsGetRequest) VrfName(vrfName string) ApiV1DeviceRoutingBgpNbrsDetailsGetRequest {
 	r.vrfName = &vrfName
 	return r
 }
 
-func (r ApiV1DeviceRoutingBgpNbrsDetailsGetRequest) Execute() (*V1DeviceRoutingBgpNbrsDetailsGet200Response, *http.Response, error) {
+// Interface name. Used in case of link local address
+func (r ApiV1DeviceRoutingBgpNbrsDetailsGetRequest) Interface_(interface_ string) ApiV1DeviceRoutingBgpNbrsDetailsGetRequest {
+	r.interface_ = &interface_
+	return r
+}
+
+func (r ApiV1DeviceRoutingBgpNbrsDetailsGetRequest) Execute() (*V1DeviceRoutingBgpNbrsDetailsGetResponse, *http.Response, error) {
 	return r.ApiService.V1DeviceRoutingBgpNbrsDetailsGetExecute(r)
 }
 
 /*
 V1DeviceRoutingBgpNbrsDetailsGet Method for V1DeviceRoutingBgpNbrsDetailsGet
+
+Get BGP Neighbor Details Table
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV1DeviceRoutingBgpNbrsDetailsGetRequest
@@ -9106,13 +10224,13 @@ func (a *DefaultAPIService) V1DeviceRoutingBgpNbrsDetailsGet(ctx context.Context
 }
 
 // Execute executes the request
-//  @return V1DeviceRoutingBgpNbrsDetailsGet200Response
-func (a *DefaultAPIService) V1DeviceRoutingBgpNbrsDetailsGetExecute(r ApiV1DeviceRoutingBgpNbrsDetailsGetRequest) (*V1DeviceRoutingBgpNbrsDetailsGet200Response, *http.Response, error) {
+//  @return V1DeviceRoutingBgpNbrsDetailsGetResponse
+func (a *DefaultAPIService) V1DeviceRoutingBgpNbrsDetailsGetExecute(r ApiV1DeviceRoutingBgpNbrsDetailsGetRequest) (*V1DeviceRoutingBgpNbrsDetailsGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1DeviceRoutingBgpNbrsDetailsGet200Response
+		localVarReturnValue  *V1DeviceRoutingBgpNbrsDetailsGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1DeviceRoutingBgpNbrsDetailsGet")
@@ -9128,19 +10246,22 @@ func (a *DefaultAPIService) V1DeviceRoutingBgpNbrsDetailsGetExecute(r ApiV1Devic
 	if r.authorization == nil {
 		return localVarReturnValue, nil, reportError("authorization is required and must be specified")
 	}
+	if r.address == nil {
+		return localVarReturnValue, nil, reportError("address is required and must be specified")
+	}
+	if r.deviceId == nil {
+		return localVarReturnValue, nil, reportError("deviceId is required and must be specified")
+	}
+	if r.vrfName == nil {
+		return localVarReturnValue, nil, reportError("vrfName is required and must be specified")
+	}
 
-	if r.address != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "address", r.address, "form", "")
-	}
-	if r.deviceId != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "deviceId", r.deviceId, "form", "")
-	}
+	parameterAddToHeaderOrQuery(localVarQueryParams, "address", r.address, "form", "")
+	parameterAddToHeaderOrQuery(localVarQueryParams, "deviceId", r.deviceId, "form", "")
 	if r.interface_ != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "interface", r.interface_, "form", "")
 	}
-	if r.vrfName != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "vrfName", r.vrfName, "form", "")
-	}
+	parameterAddToHeaderOrQuery(localVarQueryParams, "vrfName", r.vrfName, "form", "")
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
 
@@ -9216,8 +10337,8 @@ type ApiV1DeviceRoutingBgpNbrsPerAfiPrefixGetRequest struct {
 	authorization *string
 	address *string
 	deviceId *int64
-	interface_ *string
 	vrfName *string
+	interface_ *string
 }
 
 // Bearer token. Format: Bearer &lt;your_token_here&gt;
@@ -9238,24 +10359,26 @@ func (r ApiV1DeviceRoutingBgpNbrsPerAfiPrefixGetRequest) DeviceId(deviceId int64
 	return r
 }
 
-// Interface name. Used in case of link local address
-func (r ApiV1DeviceRoutingBgpNbrsPerAfiPrefixGetRequest) Interface_(interface_ string) ApiV1DeviceRoutingBgpNbrsPerAfiPrefixGetRequest {
-	r.interface_ = &interface_
-	return r
-}
-
 // Valid configured VRF name
 func (r ApiV1DeviceRoutingBgpNbrsPerAfiPrefixGetRequest) VrfName(vrfName string) ApiV1DeviceRoutingBgpNbrsPerAfiPrefixGetRequest {
 	r.vrfName = &vrfName
 	return r
 }
 
-func (r ApiV1DeviceRoutingBgpNbrsPerAfiPrefixGetRequest) Execute() (*V1DeviceRoutingBgpNbrsPerAfiPrefixGet200Response, *http.Response, error) {
+// Interface name. Used in case of link local address
+func (r ApiV1DeviceRoutingBgpNbrsPerAfiPrefixGetRequest) Interface_(interface_ string) ApiV1DeviceRoutingBgpNbrsPerAfiPrefixGetRequest {
+	r.interface_ = &interface_
+	return r
+}
+
+func (r ApiV1DeviceRoutingBgpNbrsPerAfiPrefixGetRequest) Execute() (*V1DeviceRoutingBgpNbrsPerAfiPrefixGetResponse, *http.Response, error) {
 	return r.ApiService.V1DeviceRoutingBgpNbrsPerAfiPrefixGetExecute(r)
 }
 
 /*
 V1DeviceRoutingBgpNbrsPerAfiPrefixGet Method for V1DeviceRoutingBgpNbrsPerAfiPrefixGet
+
+Get BGP Neighbor Per Afi Prefix Counter
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV1DeviceRoutingBgpNbrsPerAfiPrefixGetRequest
@@ -9268,13 +10391,13 @@ func (a *DefaultAPIService) V1DeviceRoutingBgpNbrsPerAfiPrefixGet(ctx context.Co
 }
 
 // Execute executes the request
-//  @return V1DeviceRoutingBgpNbrsPerAfiPrefixGet200Response
-func (a *DefaultAPIService) V1DeviceRoutingBgpNbrsPerAfiPrefixGetExecute(r ApiV1DeviceRoutingBgpNbrsPerAfiPrefixGetRequest) (*V1DeviceRoutingBgpNbrsPerAfiPrefixGet200Response, *http.Response, error) {
+//  @return V1DeviceRoutingBgpNbrsPerAfiPrefixGetResponse
+func (a *DefaultAPIService) V1DeviceRoutingBgpNbrsPerAfiPrefixGetExecute(r ApiV1DeviceRoutingBgpNbrsPerAfiPrefixGetRequest) (*V1DeviceRoutingBgpNbrsPerAfiPrefixGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1DeviceRoutingBgpNbrsPerAfiPrefixGet200Response
+		localVarReturnValue  *V1DeviceRoutingBgpNbrsPerAfiPrefixGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1DeviceRoutingBgpNbrsPerAfiPrefixGet")
@@ -9290,19 +10413,22 @@ func (a *DefaultAPIService) V1DeviceRoutingBgpNbrsPerAfiPrefixGetExecute(r ApiV1
 	if r.authorization == nil {
 		return localVarReturnValue, nil, reportError("authorization is required and must be specified")
 	}
+	if r.address == nil {
+		return localVarReturnValue, nil, reportError("address is required and must be specified")
+	}
+	if r.deviceId == nil {
+		return localVarReturnValue, nil, reportError("deviceId is required and must be specified")
+	}
+	if r.vrfName == nil {
+		return localVarReturnValue, nil, reportError("vrfName is required and must be specified")
+	}
 
-	if r.address != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "address", r.address, "form", "")
-	}
-	if r.deviceId != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "deviceId", r.deviceId, "form", "")
-	}
+	parameterAddToHeaderOrQuery(localVarQueryParams, "address", r.address, "form", "")
+	parameterAddToHeaderOrQuery(localVarQueryParams, "deviceId", r.deviceId, "form", "")
 	if r.interface_ != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "interface", r.interface_, "form", "")
 	}
-	if r.vrfName != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "vrfName", r.vrfName, "form", "")
-	}
+	parameterAddToHeaderOrQuery(localVarQueryParams, "vrfName", r.vrfName, "form", "")
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
 
@@ -9377,7 +10503,6 @@ type ApiV1DeviceRoutingOdpNbridGetRequest struct {
 	ApiService *DefaultAPIService
 	authorization *string
 	deviceId *int64
-	last *int32
 	vrfName *string
 }
 
@@ -9393,24 +10518,20 @@ func (r ApiV1DeviceRoutingOdpNbridGetRequest) DeviceId(deviceId int64) ApiV1Devi
 	return r
 }
 
-// 
-func (r ApiV1DeviceRoutingOdpNbridGetRequest) Last(last int32) ApiV1DeviceRoutingOdpNbridGetRequest {
-	r.last = &last
-	return r
-}
-
 // Valid configured VRF name
 func (r ApiV1DeviceRoutingOdpNbridGetRequest) VrfName(vrfName string) ApiV1DeviceRoutingOdpNbridGetRequest {
 	r.vrfName = &vrfName
 	return r
 }
 
-func (r ApiV1DeviceRoutingOdpNbridGetRequest) Execute() (*V1DeviceRoutingBgpNbridGet200Response, *http.Response, error) {
+func (r ApiV1DeviceRoutingOdpNbridGetRequest) Execute() (*V1DeviceRoutingOdpNbridGetResponse, *http.Response, error) {
 	return r.ApiService.V1DeviceRoutingOdpNbridGetExecute(r)
 }
 
 /*
 V1DeviceRoutingOdpNbridGet Method for V1DeviceRoutingOdpNbridGet
+
+Get BGP Neighbor addresses from ODP server
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV1DeviceRoutingOdpNbridGetRequest
@@ -9423,13 +10544,13 @@ func (a *DefaultAPIService) V1DeviceRoutingOdpNbridGet(ctx context.Context) ApiV
 }
 
 // Execute executes the request
-//  @return V1DeviceRoutingBgpNbridGet200Response
-func (a *DefaultAPIService) V1DeviceRoutingOdpNbridGetExecute(r ApiV1DeviceRoutingOdpNbridGetRequest) (*V1DeviceRoutingBgpNbridGet200Response, *http.Response, error) {
+//  @return V1DeviceRoutingOdpNbridGetResponse
+func (a *DefaultAPIService) V1DeviceRoutingOdpNbridGetExecute(r ApiV1DeviceRoutingOdpNbridGetRequest) (*V1DeviceRoutingOdpNbridGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1DeviceRoutingBgpNbridGet200Response
+		localVarReturnValue  *V1DeviceRoutingOdpNbridGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1DeviceRoutingOdpNbridGet")
@@ -9445,16 +10566,15 @@ func (a *DefaultAPIService) V1DeviceRoutingOdpNbridGetExecute(r ApiV1DeviceRouti
 	if r.authorization == nil {
 		return localVarReturnValue, nil, reportError("authorization is required and must be specified")
 	}
+	if r.deviceId == nil {
+		return localVarReturnValue, nil, reportError("deviceId is required and must be specified")
+	}
+	if r.vrfName == nil {
+		return localVarReturnValue, nil, reportError("vrfName is required and must be specified")
+	}
 
-	if r.deviceId != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "deviceId", r.deviceId, "form", "")
-	}
-	if r.last != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "last", r.last, "form", "")
-	}
-	if r.vrfName != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "vrfName", r.vrfName, "form", "")
-	}
+	parameterAddToHeaderOrQuery(localVarQueryParams, "deviceId", r.deviceId, "form", "")
+	parameterAddToHeaderOrQuery(localVarQueryParams, "vrfName", r.vrfName, "form", "")
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
 
@@ -9530,9 +10650,8 @@ type ApiV1DeviceRoutingOspfv2AreaInterfaceGetRequest struct {
 	authorization *string
 	areaId *string
 	deviceId *int64
-	instanceName *string
-	last *int32
 	vrfName *string
+	instanceName *string
 }
 
 // Bearer token. Format: Bearer &lt;your_token_here&gt;
@@ -9553,30 +10672,26 @@ func (r ApiV1DeviceRoutingOspfv2AreaInterfaceGetRequest) DeviceId(deviceId int64
 	return r
 }
 
-// Valid configured OSPF Instance name
-func (r ApiV1DeviceRoutingOspfv2AreaInterfaceGetRequest) InstanceName(instanceName string) ApiV1DeviceRoutingOspfv2AreaInterfaceGetRequest {
-	r.instanceName = &instanceName
-	return r
-}
-
-// 
-func (r ApiV1DeviceRoutingOspfv2AreaInterfaceGetRequest) Last(last int32) ApiV1DeviceRoutingOspfv2AreaInterfaceGetRequest {
-	r.last = &last
-	return r
-}
-
 // Valid configured VRF name
 func (r ApiV1DeviceRoutingOspfv2AreaInterfaceGetRequest) VrfName(vrfName string) ApiV1DeviceRoutingOspfv2AreaInterfaceGetRequest {
 	r.vrfName = &vrfName
 	return r
 }
 
-func (r ApiV1DeviceRoutingOspfv2AreaInterfaceGetRequest) Execute() (*V1DeviceRoutingOspfv2AreaInterfaceGet200Response, *http.Response, error) {
+// Valid configured OSPF Instance name
+func (r ApiV1DeviceRoutingOspfv2AreaInterfaceGetRequest) InstanceName(instanceName string) ApiV1DeviceRoutingOspfv2AreaInterfaceGetRequest {
+	r.instanceName = &instanceName
+	return r
+}
+
+func (r ApiV1DeviceRoutingOspfv2AreaInterfaceGetRequest) Execute() (*V1DeviceRoutingOspfv2AreaInterfaceGetResponse, *http.Response, error) {
 	return r.ApiService.V1DeviceRoutingOspfv2AreaInterfaceGetExecute(r)
 }
 
 /*
 V1DeviceRoutingOspfv2AreaInterfaceGet Method for V1DeviceRoutingOspfv2AreaInterfaceGet
+
+Get OSPFv2 Area's Interface specific Information
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV1DeviceRoutingOspfv2AreaInterfaceGetRequest
@@ -9589,13 +10704,13 @@ func (a *DefaultAPIService) V1DeviceRoutingOspfv2AreaInterfaceGet(ctx context.Co
 }
 
 // Execute executes the request
-//  @return V1DeviceRoutingOspfv2AreaInterfaceGet200Response
-func (a *DefaultAPIService) V1DeviceRoutingOspfv2AreaInterfaceGetExecute(r ApiV1DeviceRoutingOspfv2AreaInterfaceGetRequest) (*V1DeviceRoutingOspfv2AreaInterfaceGet200Response, *http.Response, error) {
+//  @return V1DeviceRoutingOspfv2AreaInterfaceGetResponse
+func (a *DefaultAPIService) V1DeviceRoutingOspfv2AreaInterfaceGetExecute(r ApiV1DeviceRoutingOspfv2AreaInterfaceGetRequest) (*V1DeviceRoutingOspfv2AreaInterfaceGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1DeviceRoutingOspfv2AreaInterfaceGet200Response
+		localVarReturnValue  *V1DeviceRoutingOspfv2AreaInterfaceGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1DeviceRoutingOspfv2AreaInterfaceGet")
@@ -9611,22 +10726,22 @@ func (a *DefaultAPIService) V1DeviceRoutingOspfv2AreaInterfaceGetExecute(r ApiV1
 	if r.authorization == nil {
 		return localVarReturnValue, nil, reportError("authorization is required and must be specified")
 	}
+	if r.areaId == nil {
+		return localVarReturnValue, nil, reportError("areaId is required and must be specified")
+	}
+	if r.deviceId == nil {
+		return localVarReturnValue, nil, reportError("deviceId is required and must be specified")
+	}
+	if r.vrfName == nil {
+		return localVarReturnValue, nil, reportError("vrfName is required and must be specified")
+	}
 
-	if r.areaId != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "areaId", r.areaId, "form", "")
-	}
-	if r.deviceId != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "deviceId", r.deviceId, "form", "")
-	}
+	parameterAddToHeaderOrQuery(localVarQueryParams, "areaId", r.areaId, "form", "")
+	parameterAddToHeaderOrQuery(localVarQueryParams, "deviceId", r.deviceId, "form", "")
 	if r.instanceName != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "instanceName", r.instanceName, "form", "")
 	}
-	if r.last != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "last", r.last, "form", "")
-	}
-	if r.vrfName != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "vrfName", r.vrfName, "form", "")
-	}
+	parameterAddToHeaderOrQuery(localVarQueryParams, "vrfName", r.vrfName, "form", "")
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
 
@@ -9702,10 +10817,9 @@ type ApiV1DeviceRoutingOspfv2AreaInterfaceNbridGetRequest struct {
 	authorization *string
 	areaId *string
 	deviceId *int64
-	instanceName *string
 	interfaceId *string
-	last *int32
 	vrfName *string
+	instanceName *string
 }
 
 // Bearer token. Format: Bearer &lt;your_token_here&gt;
@@ -9726,21 +10840,9 @@ func (r ApiV1DeviceRoutingOspfv2AreaInterfaceNbridGetRequest) DeviceId(deviceId 
 	return r
 }
 
-// Valid configured OSPF Instance name
-func (r ApiV1DeviceRoutingOspfv2AreaInterfaceNbridGetRequest) InstanceName(instanceName string) ApiV1DeviceRoutingOspfv2AreaInterfaceNbridGetRequest {
-	r.instanceName = &instanceName
-	return r
-}
-
 // Valid configured Interface name
 func (r ApiV1DeviceRoutingOspfv2AreaInterfaceNbridGetRequest) InterfaceId(interfaceId string) ApiV1DeviceRoutingOspfv2AreaInterfaceNbridGetRequest {
 	r.interfaceId = &interfaceId
-	return r
-}
-
-// 
-func (r ApiV1DeviceRoutingOspfv2AreaInterfaceNbridGetRequest) Last(last int32) ApiV1DeviceRoutingOspfv2AreaInterfaceNbridGetRequest {
-	r.last = &last
 	return r
 }
 
@@ -9750,12 +10852,20 @@ func (r ApiV1DeviceRoutingOspfv2AreaInterfaceNbridGetRequest) VrfName(vrfName st
 	return r
 }
 
-func (r ApiV1DeviceRoutingOspfv2AreaInterfaceNbridGetRequest) Execute() (*V1DeviceRoutingOspfv2AreaInterfaceNbridGet200Response, *http.Response, error) {
+// Valid configured OSPF Instance name
+func (r ApiV1DeviceRoutingOspfv2AreaInterfaceNbridGetRequest) InstanceName(instanceName string) ApiV1DeviceRoutingOspfv2AreaInterfaceNbridGetRequest {
+	r.instanceName = &instanceName
+	return r
+}
+
+func (r ApiV1DeviceRoutingOspfv2AreaInterfaceNbridGetRequest) Execute() (*V1DeviceRoutingOspfv2AreaInterfaceNbridGetResponse, *http.Response, error) {
 	return r.ApiService.V1DeviceRoutingOspfv2AreaInterfaceNbridGetExecute(r)
 }
 
 /*
 V1DeviceRoutingOspfv2AreaInterfaceNbridGet Method for V1DeviceRoutingOspfv2AreaInterfaceNbridGet
+
+Get OSPFv2 Area's interface's Nbr ID table
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV1DeviceRoutingOspfv2AreaInterfaceNbridGetRequest
@@ -9768,13 +10878,13 @@ func (a *DefaultAPIService) V1DeviceRoutingOspfv2AreaInterfaceNbridGet(ctx conte
 }
 
 // Execute executes the request
-//  @return V1DeviceRoutingOspfv2AreaInterfaceNbridGet200Response
-func (a *DefaultAPIService) V1DeviceRoutingOspfv2AreaInterfaceNbridGetExecute(r ApiV1DeviceRoutingOspfv2AreaInterfaceNbridGetRequest) (*V1DeviceRoutingOspfv2AreaInterfaceNbridGet200Response, *http.Response, error) {
+//  @return V1DeviceRoutingOspfv2AreaInterfaceNbridGetResponse
+func (a *DefaultAPIService) V1DeviceRoutingOspfv2AreaInterfaceNbridGetExecute(r ApiV1DeviceRoutingOspfv2AreaInterfaceNbridGetRequest) (*V1DeviceRoutingOspfv2AreaInterfaceNbridGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1DeviceRoutingOspfv2AreaInterfaceNbridGet200Response
+		localVarReturnValue  *V1DeviceRoutingOspfv2AreaInterfaceNbridGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1DeviceRoutingOspfv2AreaInterfaceNbridGet")
@@ -9790,25 +10900,26 @@ func (a *DefaultAPIService) V1DeviceRoutingOspfv2AreaInterfaceNbridGetExecute(r 
 	if r.authorization == nil {
 		return localVarReturnValue, nil, reportError("authorization is required and must be specified")
 	}
+	if r.areaId == nil {
+		return localVarReturnValue, nil, reportError("areaId is required and must be specified")
+	}
+	if r.deviceId == nil {
+		return localVarReturnValue, nil, reportError("deviceId is required and must be specified")
+	}
+	if r.interfaceId == nil {
+		return localVarReturnValue, nil, reportError("interfaceId is required and must be specified")
+	}
+	if r.vrfName == nil {
+		return localVarReturnValue, nil, reportError("vrfName is required and must be specified")
+	}
 
-	if r.areaId != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "areaId", r.areaId, "form", "")
-	}
-	if r.deviceId != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "deviceId", r.deviceId, "form", "")
-	}
+	parameterAddToHeaderOrQuery(localVarQueryParams, "areaId", r.areaId, "form", "")
+	parameterAddToHeaderOrQuery(localVarQueryParams, "deviceId", r.deviceId, "form", "")
 	if r.instanceName != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "instanceName", r.instanceName, "form", "")
 	}
-	if r.interfaceId != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "interfaceId", r.interfaceId, "form", "")
-	}
-	if r.last != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "last", r.last, "form", "")
-	}
-	if r.vrfName != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "vrfName", r.vrfName, "form", "")
-	}
+	parameterAddToHeaderOrQuery(localVarQueryParams, "interfaceId", r.interfaceId, "form", "")
+	parameterAddToHeaderOrQuery(localVarQueryParams, "vrfName", r.vrfName, "form", "")
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
 
@@ -9884,9 +10995,8 @@ type ApiV1DeviceRoutingOspfv2AreaInterfaceidGetRequest struct {
 	authorization *string
 	areaId *string
 	deviceId *int64
-	instanceName *string
-	last *int32
 	vrfName *string
+	instanceName *string
 }
 
 // Bearer token. Format: Bearer &lt;your_token_here&gt;
@@ -9907,30 +11017,26 @@ func (r ApiV1DeviceRoutingOspfv2AreaInterfaceidGetRequest) DeviceId(deviceId int
 	return r
 }
 
-// Valid configured OSPF Instance name
-func (r ApiV1DeviceRoutingOspfv2AreaInterfaceidGetRequest) InstanceName(instanceName string) ApiV1DeviceRoutingOspfv2AreaInterfaceidGetRequest {
-	r.instanceName = &instanceName
-	return r
-}
-
-// 
-func (r ApiV1DeviceRoutingOspfv2AreaInterfaceidGetRequest) Last(last int32) ApiV1DeviceRoutingOspfv2AreaInterfaceidGetRequest {
-	r.last = &last
-	return r
-}
-
 // Valid configured VRF name
 func (r ApiV1DeviceRoutingOspfv2AreaInterfaceidGetRequest) VrfName(vrfName string) ApiV1DeviceRoutingOspfv2AreaInterfaceidGetRequest {
 	r.vrfName = &vrfName
 	return r
 }
 
-func (r ApiV1DeviceRoutingOspfv2AreaInterfaceidGetRequest) Execute() (*V1DeviceRoutingOspfv2AreaInterfaceidGet200Response, *http.Response, error) {
+// Valid configured OSPF Instance name
+func (r ApiV1DeviceRoutingOspfv2AreaInterfaceidGetRequest) InstanceName(instanceName string) ApiV1DeviceRoutingOspfv2AreaInterfaceidGetRequest {
+	r.instanceName = &instanceName
+	return r
+}
+
+func (r ApiV1DeviceRoutingOspfv2AreaInterfaceidGetRequest) Execute() (*V1DeviceRoutingOspfv2AreaInterfaceidGetResponse, *http.Response, error) {
 	return r.ApiService.V1DeviceRoutingOspfv2AreaInterfaceidGetExecute(r)
 }
 
 /*
 V1DeviceRoutingOspfv2AreaInterfaceidGet Method for V1DeviceRoutingOspfv2AreaInterfaceidGet
+
+Get OSPFv2 Area's Interface ID Table
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV1DeviceRoutingOspfv2AreaInterfaceidGetRequest
@@ -9943,13 +11049,13 @@ func (a *DefaultAPIService) V1DeviceRoutingOspfv2AreaInterfaceidGet(ctx context.
 }
 
 // Execute executes the request
-//  @return V1DeviceRoutingOspfv2AreaInterfaceidGet200Response
-func (a *DefaultAPIService) V1DeviceRoutingOspfv2AreaInterfaceidGetExecute(r ApiV1DeviceRoutingOspfv2AreaInterfaceidGetRequest) (*V1DeviceRoutingOspfv2AreaInterfaceidGet200Response, *http.Response, error) {
+//  @return V1DeviceRoutingOspfv2AreaInterfaceidGetResponse
+func (a *DefaultAPIService) V1DeviceRoutingOspfv2AreaInterfaceidGetExecute(r ApiV1DeviceRoutingOspfv2AreaInterfaceidGetRequest) (*V1DeviceRoutingOspfv2AreaInterfaceidGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1DeviceRoutingOspfv2AreaInterfaceidGet200Response
+		localVarReturnValue  *V1DeviceRoutingOspfv2AreaInterfaceidGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1DeviceRoutingOspfv2AreaInterfaceidGet")
@@ -9965,22 +11071,22 @@ func (a *DefaultAPIService) V1DeviceRoutingOspfv2AreaInterfaceidGetExecute(r Api
 	if r.authorization == nil {
 		return localVarReturnValue, nil, reportError("authorization is required and must be specified")
 	}
+	if r.areaId == nil {
+		return localVarReturnValue, nil, reportError("areaId is required and must be specified")
+	}
+	if r.deviceId == nil {
+		return localVarReturnValue, nil, reportError("deviceId is required and must be specified")
+	}
+	if r.vrfName == nil {
+		return localVarReturnValue, nil, reportError("vrfName is required and must be specified")
+	}
 
-	if r.areaId != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "areaId", r.areaId, "form", "")
-	}
-	if r.deviceId != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "deviceId", r.deviceId, "form", "")
-	}
+	parameterAddToHeaderOrQuery(localVarQueryParams, "areaId", r.areaId, "form", "")
+	parameterAddToHeaderOrQuery(localVarQueryParams, "deviceId", r.deviceId, "form", "")
 	if r.instanceName != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "instanceName", r.instanceName, "form", "")
 	}
-	if r.last != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "last", r.last, "form", "")
-	}
-	if r.vrfName != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "vrfName", r.vrfName, "form", "")
-	}
+	parameterAddToHeaderOrQuery(localVarQueryParams, "vrfName", r.vrfName, "form", "")
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
 
@@ -10057,7 +11163,6 @@ type ApiV1DeviceRoutingOspfv2AreaLsdbGetRequest struct {
 	areaId *string
 	deviceId *int64
 	instanceName *string
-	last *int32
 	vrfName *string
 }
 
@@ -10085,24 +11190,20 @@ func (r ApiV1DeviceRoutingOspfv2AreaLsdbGetRequest) InstanceName(instanceName st
 	return r
 }
 
-// 
-func (r ApiV1DeviceRoutingOspfv2AreaLsdbGetRequest) Last(last int32) ApiV1DeviceRoutingOspfv2AreaLsdbGetRequest {
-	r.last = &last
-	return r
-}
-
 // Valid configured VRF name
 func (r ApiV1DeviceRoutingOspfv2AreaLsdbGetRequest) VrfName(vrfName string) ApiV1DeviceRoutingOspfv2AreaLsdbGetRequest {
 	r.vrfName = &vrfName
 	return r
 }
 
-func (r ApiV1DeviceRoutingOspfv2AreaLsdbGetRequest) Execute() (*V1DeviceRoutingOspfv2AreaLsdbGet200Response, *http.Response, error) {
+func (r ApiV1DeviceRoutingOspfv2AreaLsdbGetRequest) Execute() (*V1DeviceRoutingOspfv2AreaLsdbGetResponse, *http.Response, error) {
 	return r.ApiService.V1DeviceRoutingOspfv2AreaLsdbGetExecute(r)
 }
 
 /*
 V1DeviceRoutingOspfv2AreaLsdbGet Method for V1DeviceRoutingOspfv2AreaLsdbGet
+
+Get OSPFv2 Area specific LSDB Table
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV1DeviceRoutingOspfv2AreaLsdbGetRequest
@@ -10115,13 +11216,13 @@ func (a *DefaultAPIService) V1DeviceRoutingOspfv2AreaLsdbGet(ctx context.Context
 }
 
 // Execute executes the request
-//  @return V1DeviceRoutingOspfv2AreaLsdbGet200Response
-func (a *DefaultAPIService) V1DeviceRoutingOspfv2AreaLsdbGetExecute(r ApiV1DeviceRoutingOspfv2AreaLsdbGetRequest) (*V1DeviceRoutingOspfv2AreaLsdbGet200Response, *http.Response, error) {
+//  @return V1DeviceRoutingOspfv2AreaLsdbGetResponse
+func (a *DefaultAPIService) V1DeviceRoutingOspfv2AreaLsdbGetExecute(r ApiV1DeviceRoutingOspfv2AreaLsdbGetRequest) (*V1DeviceRoutingOspfv2AreaLsdbGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1DeviceRoutingOspfv2AreaLsdbGet200Response
+		localVarReturnValue  *V1DeviceRoutingOspfv2AreaLsdbGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1DeviceRoutingOspfv2AreaLsdbGet")
@@ -10137,22 +11238,23 @@ func (a *DefaultAPIService) V1DeviceRoutingOspfv2AreaLsdbGetExecute(r ApiV1Devic
 	if r.authorization == nil {
 		return localVarReturnValue, nil, reportError("authorization is required and must be specified")
 	}
+	if r.areaId == nil {
+		return localVarReturnValue, nil, reportError("areaId is required and must be specified")
+	}
+	if r.deviceId == nil {
+		return localVarReturnValue, nil, reportError("deviceId is required and must be specified")
+	}
+	if r.instanceName == nil {
+		return localVarReturnValue, nil, reportError("instanceName is required and must be specified")
+	}
+	if r.vrfName == nil {
+		return localVarReturnValue, nil, reportError("vrfName is required and must be specified")
+	}
 
-	if r.areaId != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "areaId", r.areaId, "form", "")
-	}
-	if r.deviceId != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "deviceId", r.deviceId, "form", "")
-	}
-	if r.instanceName != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "instanceName", r.instanceName, "form", "")
-	}
-	if r.last != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "last", r.last, "form", "")
-	}
-	if r.vrfName != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "vrfName", r.vrfName, "form", "")
-	}
+	parameterAddToHeaderOrQuery(localVarQueryParams, "areaId", r.areaId, "form", "")
+	parameterAddToHeaderOrQuery(localVarQueryParams, "deviceId", r.deviceId, "form", "")
+	parameterAddToHeaderOrQuery(localVarQueryParams, "instanceName", r.instanceName, "form", "")
+	parameterAddToHeaderOrQuery(localVarQueryParams, "vrfName", r.vrfName, "form", "")
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
 
@@ -10228,9 +11330,8 @@ type ApiV1DeviceRoutingOspfv2AreaNbrGetRequest struct {
 	authorization *string
 	areaId *string
 	deviceId *int64
-	instanceName *string
-	last *int32
 	vrfName *string
+	instanceName *string
 }
 
 // Bearer token. Format: Bearer &lt;your_token_here&gt;
@@ -10251,30 +11352,26 @@ func (r ApiV1DeviceRoutingOspfv2AreaNbrGetRequest) DeviceId(deviceId int64) ApiV
 	return r
 }
 
-// Valid configured OSPF Instance name
-func (r ApiV1DeviceRoutingOspfv2AreaNbrGetRequest) InstanceName(instanceName string) ApiV1DeviceRoutingOspfv2AreaNbrGetRequest {
-	r.instanceName = &instanceName
-	return r
-}
-
-// 
-func (r ApiV1DeviceRoutingOspfv2AreaNbrGetRequest) Last(last int32) ApiV1DeviceRoutingOspfv2AreaNbrGetRequest {
-	r.last = &last
-	return r
-}
-
 // Valid configured VRF name
 func (r ApiV1DeviceRoutingOspfv2AreaNbrGetRequest) VrfName(vrfName string) ApiV1DeviceRoutingOspfv2AreaNbrGetRequest {
 	r.vrfName = &vrfName
 	return r
 }
 
-func (r ApiV1DeviceRoutingOspfv2AreaNbrGetRequest) Execute() (*V1DeviceRoutingOspfv2AreaNbrGet200Response, *http.Response, error) {
+// Valid configured OSPF Instance name
+func (r ApiV1DeviceRoutingOspfv2AreaNbrGetRequest) InstanceName(instanceName string) ApiV1DeviceRoutingOspfv2AreaNbrGetRequest {
+	r.instanceName = &instanceName
+	return r
+}
+
+func (r ApiV1DeviceRoutingOspfv2AreaNbrGetRequest) Execute() (*V1DeviceRoutingOspfv2AreaNbrGetResponse, *http.Response, error) {
 	return r.ApiService.V1DeviceRoutingOspfv2AreaNbrGetExecute(r)
 }
 
 /*
 V1DeviceRoutingOspfv2AreaNbrGet Method for V1DeviceRoutingOspfv2AreaNbrGet
+
+Get OSPFv2 Area's Neighbors Information
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV1DeviceRoutingOspfv2AreaNbrGetRequest
@@ -10287,13 +11384,13 @@ func (a *DefaultAPIService) V1DeviceRoutingOspfv2AreaNbrGet(ctx context.Context)
 }
 
 // Execute executes the request
-//  @return V1DeviceRoutingOspfv2AreaNbrGet200Response
-func (a *DefaultAPIService) V1DeviceRoutingOspfv2AreaNbrGetExecute(r ApiV1DeviceRoutingOspfv2AreaNbrGetRequest) (*V1DeviceRoutingOspfv2AreaNbrGet200Response, *http.Response, error) {
+//  @return V1DeviceRoutingOspfv2AreaNbrGetResponse
+func (a *DefaultAPIService) V1DeviceRoutingOspfv2AreaNbrGetExecute(r ApiV1DeviceRoutingOspfv2AreaNbrGetRequest) (*V1DeviceRoutingOspfv2AreaNbrGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1DeviceRoutingOspfv2AreaNbrGet200Response
+		localVarReturnValue  *V1DeviceRoutingOspfv2AreaNbrGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1DeviceRoutingOspfv2AreaNbrGet")
@@ -10309,22 +11406,22 @@ func (a *DefaultAPIService) V1DeviceRoutingOspfv2AreaNbrGetExecute(r ApiV1Device
 	if r.authorization == nil {
 		return localVarReturnValue, nil, reportError("authorization is required and must be specified")
 	}
+	if r.areaId == nil {
+		return localVarReturnValue, nil, reportError("areaId is required and must be specified")
+	}
+	if r.deviceId == nil {
+		return localVarReturnValue, nil, reportError("deviceId is required and must be specified")
+	}
+	if r.vrfName == nil {
+		return localVarReturnValue, nil, reportError("vrfName is required and must be specified")
+	}
 
-	if r.areaId != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "areaId", r.areaId, "form", "")
-	}
-	if r.deviceId != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "deviceId", r.deviceId, "form", "")
-	}
+	parameterAddToHeaderOrQuery(localVarQueryParams, "areaId", r.areaId, "form", "")
+	parameterAddToHeaderOrQuery(localVarQueryParams, "deviceId", r.deviceId, "form", "")
 	if r.instanceName != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "instanceName", r.instanceName, "form", "")
 	}
-	if r.last != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "last", r.last, "form", "")
-	}
-	if r.vrfName != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "vrfName", r.vrfName, "form", "")
-	}
+	parameterAddToHeaderOrQuery(localVarQueryParams, "vrfName", r.vrfName, "form", "")
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
 
@@ -10399,9 +11496,8 @@ type ApiV1DeviceRoutingOspfv2AreaidGetRequest struct {
 	ApiService *DefaultAPIService
 	authorization *string
 	deviceId *int64
-	instanceName *string
-	last *int32
 	vrfName *string
+	instanceName *string
 }
 
 // Bearer token. Format: Bearer &lt;your_token_here&gt;
@@ -10416,30 +11512,26 @@ func (r ApiV1DeviceRoutingOspfv2AreaidGetRequest) DeviceId(deviceId int64) ApiV1
 	return r
 }
 
-// Valid configured OSPF Instance name
-func (r ApiV1DeviceRoutingOspfv2AreaidGetRequest) InstanceName(instanceName string) ApiV1DeviceRoutingOspfv2AreaidGetRequest {
-	r.instanceName = &instanceName
-	return r
-}
-
-// 
-func (r ApiV1DeviceRoutingOspfv2AreaidGetRequest) Last(last int32) ApiV1DeviceRoutingOspfv2AreaidGetRequest {
-	r.last = &last
-	return r
-}
-
 // Valid configured VRF name
 func (r ApiV1DeviceRoutingOspfv2AreaidGetRequest) VrfName(vrfName string) ApiV1DeviceRoutingOspfv2AreaidGetRequest {
 	r.vrfName = &vrfName
 	return r
 }
 
-func (r ApiV1DeviceRoutingOspfv2AreaidGetRequest) Execute() (*V1DeviceRoutingOspfv2AreaidGet200Response, *http.Response, error) {
+// Valid configured OSPF Instance name
+func (r ApiV1DeviceRoutingOspfv2AreaidGetRequest) InstanceName(instanceName string) ApiV1DeviceRoutingOspfv2AreaidGetRequest {
+	r.instanceName = &instanceName
+	return r
+}
+
+func (r ApiV1DeviceRoutingOspfv2AreaidGetRequest) Execute() (*V1DeviceRoutingOspfv2AreaidGetResponse, *http.Response, error) {
 	return r.ApiService.V1DeviceRoutingOspfv2AreaidGetExecute(r)
 }
 
 /*
 V1DeviceRoutingOspfv2AreaidGet Method for V1DeviceRoutingOspfv2AreaidGet
+
+Get OSPFv2 Area ID Table
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV1DeviceRoutingOspfv2AreaidGetRequest
@@ -10452,13 +11544,13 @@ func (a *DefaultAPIService) V1DeviceRoutingOspfv2AreaidGet(ctx context.Context) 
 }
 
 // Execute executes the request
-//  @return V1DeviceRoutingOspfv2AreaidGet200Response
-func (a *DefaultAPIService) V1DeviceRoutingOspfv2AreaidGetExecute(r ApiV1DeviceRoutingOspfv2AreaidGetRequest) (*V1DeviceRoutingOspfv2AreaidGet200Response, *http.Response, error) {
+//  @return V1DeviceRoutingOspfv2AreaidGetResponse
+func (a *DefaultAPIService) V1DeviceRoutingOspfv2AreaidGetExecute(r ApiV1DeviceRoutingOspfv2AreaidGetRequest) (*V1DeviceRoutingOspfv2AreaidGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1DeviceRoutingOspfv2AreaidGet200Response
+		localVarReturnValue  *V1DeviceRoutingOspfv2AreaidGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1DeviceRoutingOspfv2AreaidGet")
@@ -10474,19 +11566,18 @@ func (a *DefaultAPIService) V1DeviceRoutingOspfv2AreaidGetExecute(r ApiV1DeviceR
 	if r.authorization == nil {
 		return localVarReturnValue, nil, reportError("authorization is required and must be specified")
 	}
-
-	if r.deviceId != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "deviceId", r.deviceId, "form", "")
+	if r.deviceId == nil {
+		return localVarReturnValue, nil, reportError("deviceId is required and must be specified")
 	}
+	if r.vrfName == nil {
+		return localVarReturnValue, nil, reportError("vrfName is required and must be specified")
+	}
+
+	parameterAddToHeaderOrQuery(localVarQueryParams, "deviceId", r.deviceId, "form", "")
 	if r.instanceName != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "instanceName", r.instanceName, "form", "")
 	}
-	if r.last != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "last", r.last, "form", "")
-	}
-	if r.vrfName != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "vrfName", r.vrfName, "form", "")
-	}
+	parameterAddToHeaderOrQuery(localVarQueryParams, "vrfName", r.vrfName, "form", "")
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
 
@@ -10561,9 +11652,8 @@ type ApiV1DeviceRoutingOspfv2LsdbGetRequest struct {
 	ApiService *DefaultAPIService
 	authorization *string
 	deviceId *int64
-	instanceName *string
-	last *int32
 	vrfName *string
+	instanceName *string
 }
 
 // Bearer token. Format: Bearer &lt;your_token_here&gt;
@@ -10578,30 +11668,26 @@ func (r ApiV1DeviceRoutingOspfv2LsdbGetRequest) DeviceId(deviceId int64) ApiV1De
 	return r
 }
 
-// Valid configured OSPF Instance name
-func (r ApiV1DeviceRoutingOspfv2LsdbGetRequest) InstanceName(instanceName string) ApiV1DeviceRoutingOspfv2LsdbGetRequest {
-	r.instanceName = &instanceName
-	return r
-}
-
-// 
-func (r ApiV1DeviceRoutingOspfv2LsdbGetRequest) Last(last int32) ApiV1DeviceRoutingOspfv2LsdbGetRequest {
-	r.last = &last
-	return r
-}
-
 // Valid configured VRF name
 func (r ApiV1DeviceRoutingOspfv2LsdbGetRequest) VrfName(vrfName string) ApiV1DeviceRoutingOspfv2LsdbGetRequest {
 	r.vrfName = &vrfName
 	return r
 }
 
-func (r ApiV1DeviceRoutingOspfv2LsdbGetRequest) Execute() (*V1DeviceRoutingOspfv2AreaLsdbGet200Response, *http.Response, error) {
+// Valid configured OSPF Instance name
+func (r ApiV1DeviceRoutingOspfv2LsdbGetRequest) InstanceName(instanceName string) ApiV1DeviceRoutingOspfv2LsdbGetRequest {
+	r.instanceName = &instanceName
+	return r
+}
+
+func (r ApiV1DeviceRoutingOspfv2LsdbGetRequest) Execute() (*V1DeviceRoutingOspfv2LsdbGetResponse, *http.Response, error) {
 	return r.ApiService.V1DeviceRoutingOspfv2LsdbGetExecute(r)
 }
 
 /*
 V1DeviceRoutingOspfv2LsdbGet Method for V1DeviceRoutingOspfv2LsdbGet
+
+Get OSPFv2 global LSDB Table
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV1DeviceRoutingOspfv2LsdbGetRequest
@@ -10614,13 +11700,13 @@ func (a *DefaultAPIService) V1DeviceRoutingOspfv2LsdbGet(ctx context.Context) Ap
 }
 
 // Execute executes the request
-//  @return V1DeviceRoutingOspfv2AreaLsdbGet200Response
-func (a *DefaultAPIService) V1DeviceRoutingOspfv2LsdbGetExecute(r ApiV1DeviceRoutingOspfv2LsdbGetRequest) (*V1DeviceRoutingOspfv2AreaLsdbGet200Response, *http.Response, error) {
+//  @return V1DeviceRoutingOspfv2LsdbGetResponse
+func (a *DefaultAPIService) V1DeviceRoutingOspfv2LsdbGetExecute(r ApiV1DeviceRoutingOspfv2LsdbGetRequest) (*V1DeviceRoutingOspfv2LsdbGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1DeviceRoutingOspfv2AreaLsdbGet200Response
+		localVarReturnValue  *V1DeviceRoutingOspfv2LsdbGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1DeviceRoutingOspfv2LsdbGet")
@@ -10636,19 +11722,18 @@ func (a *DefaultAPIService) V1DeviceRoutingOspfv2LsdbGetExecute(r ApiV1DeviceRou
 	if r.authorization == nil {
 		return localVarReturnValue, nil, reportError("authorization is required and must be specified")
 	}
-
-	if r.deviceId != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "deviceId", r.deviceId, "form", "")
+	if r.deviceId == nil {
+		return localVarReturnValue, nil, reportError("deviceId is required and must be specified")
 	}
+	if r.vrfName == nil {
+		return localVarReturnValue, nil, reportError("vrfName is required and must be specified")
+	}
+
+	parameterAddToHeaderOrQuery(localVarQueryParams, "deviceId", r.deviceId, "form", "")
 	if r.instanceName != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "instanceName", r.instanceName, "form", "")
 	}
-	if r.last != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "last", r.last, "form", "")
-	}
-	if r.vrfName != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "vrfName", r.vrfName, "form", "")
-	}
+	parameterAddToHeaderOrQuery(localVarQueryParams, "vrfName", r.vrfName, "form", "")
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
 
@@ -10723,10 +11808,10 @@ type ApiV1DeviceRoutingOspfv2RibGetRequest struct {
 	ApiService *DefaultAPIService
 	authorization *string
 	deviceId *int64
+	vrfName *string
 	instanceName *string
 	before *string
 	last *int32
-	vrfName *string
 }
 
 // Bearer token. Format: Bearer &lt;your_token_here&gt;
@@ -10738,6 +11823,12 @@ func (r ApiV1DeviceRoutingOspfv2RibGetRequest) Authorization(authorization strin
 // Valid configured device ID &gt; 0
 func (r ApiV1DeviceRoutingOspfv2RibGetRequest) DeviceId(deviceId int64) ApiV1DeviceRoutingOspfv2RibGetRequest {
 	r.deviceId = &deviceId
+	return r
+}
+
+// Valid configured VRF name
+func (r ApiV1DeviceRoutingOspfv2RibGetRequest) VrfName(vrfName string) ApiV1DeviceRoutingOspfv2RibGetRequest {
+	r.vrfName = &vrfName
 	return r
 }
 
@@ -10759,18 +11850,14 @@ func (r ApiV1DeviceRoutingOspfv2RibGetRequest) Last(last int32) ApiV1DeviceRouti
 	return r
 }
 
-// Valid configured VRF name
-func (r ApiV1DeviceRoutingOspfv2RibGetRequest) VrfName(vrfName string) ApiV1DeviceRoutingOspfv2RibGetRequest {
-	r.vrfName = &vrfName
-	return r
-}
-
-func (r ApiV1DeviceRoutingOspfv2RibGetRequest) Execute() (*V1DeviceRoutingOspfv2RibGet200Response, *http.Response, error) {
+func (r ApiV1DeviceRoutingOspfv2RibGetRequest) Execute() (*V1DeviceRoutingOspfv2RibGetResponse, *http.Response, error) {
 	return r.ApiService.V1DeviceRoutingOspfv2RibGetExecute(r)
 }
 
 /*
 V1DeviceRoutingOspfv2RibGet Method for V1DeviceRoutingOspfv2RibGet
+
+Get OSPFv2 Local RIB Table
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV1DeviceRoutingOspfv2RibGetRequest
@@ -10783,13 +11870,13 @@ func (a *DefaultAPIService) V1DeviceRoutingOspfv2RibGet(ctx context.Context) Api
 }
 
 // Execute executes the request
-//  @return V1DeviceRoutingOspfv2RibGet200Response
-func (a *DefaultAPIService) V1DeviceRoutingOspfv2RibGetExecute(r ApiV1DeviceRoutingOspfv2RibGetRequest) (*V1DeviceRoutingOspfv2RibGet200Response, *http.Response, error) {
+//  @return V1DeviceRoutingOspfv2RibGetResponse
+func (a *DefaultAPIService) V1DeviceRoutingOspfv2RibGetExecute(r ApiV1DeviceRoutingOspfv2RibGetRequest) (*V1DeviceRoutingOspfv2RibGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1DeviceRoutingOspfv2RibGet200Response
+		localVarReturnValue  *V1DeviceRoutingOspfv2RibGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1DeviceRoutingOspfv2RibGet")
@@ -10805,10 +11892,14 @@ func (a *DefaultAPIService) V1DeviceRoutingOspfv2RibGetExecute(r ApiV1DeviceRout
 	if r.authorization == nil {
 		return localVarReturnValue, nil, reportError("authorization is required and must be specified")
 	}
-
-	if r.deviceId != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "deviceId", r.deviceId, "form", "")
+	if r.deviceId == nil {
+		return localVarReturnValue, nil, reportError("deviceId is required and must be specified")
 	}
+	if r.vrfName == nil {
+		return localVarReturnValue, nil, reportError("vrfName is required and must be specified")
+	}
+
+	parameterAddToHeaderOrQuery(localVarQueryParams, "deviceId", r.deviceId, "form", "")
 	if r.instanceName != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "instanceName", r.instanceName, "form", "")
 	}
@@ -10818,9 +11909,7 @@ func (a *DefaultAPIService) V1DeviceRoutingOspfv2RibGetExecute(r ApiV1DeviceRout
 	if r.last != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "last", r.last, "form", "")
 	}
-	if r.vrfName != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "vrfName", r.vrfName, "form", "")
-	}
+	parameterAddToHeaderOrQuery(localVarQueryParams, "vrfName", r.vrfName, "form", "")
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
 
@@ -10916,12 +12005,14 @@ func (r ApiV1DeviceRoutingOspfv2StatisticsGetRequest) VrfNames(vrfNames []string
 	return r
 }
 
-func (r ApiV1DeviceRoutingOspfv2StatisticsGetRequest) Execute() (*V1DeviceRoutingOspfv2StatisticsGet200Response, *http.Response, error) {
+func (r ApiV1DeviceRoutingOspfv2StatisticsGetRequest) Execute() (*V1DeviceRoutingOspfv2StatisticsGetResponse, *http.Response, error) {
 	return r.ApiService.V1DeviceRoutingOspfv2StatisticsGetExecute(r)
 }
 
 /*
 V1DeviceRoutingOspfv2StatisticsGet Method for V1DeviceRoutingOspfv2StatisticsGet
+
+Get OSPFv2 Statistics
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV1DeviceRoutingOspfv2StatisticsGetRequest
@@ -10934,13 +12025,13 @@ func (a *DefaultAPIService) V1DeviceRoutingOspfv2StatisticsGet(ctx context.Conte
 }
 
 // Execute executes the request
-//  @return V1DeviceRoutingOspfv2StatisticsGet200Response
-func (a *DefaultAPIService) V1DeviceRoutingOspfv2StatisticsGetExecute(r ApiV1DeviceRoutingOspfv2StatisticsGetRequest) (*V1DeviceRoutingOspfv2StatisticsGet200Response, *http.Response, error) {
+//  @return V1DeviceRoutingOspfv2StatisticsGetResponse
+func (a *DefaultAPIService) V1DeviceRoutingOspfv2StatisticsGetExecute(r ApiV1DeviceRoutingOspfv2StatisticsGetRequest) (*V1DeviceRoutingOspfv2StatisticsGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1DeviceRoutingOspfv2StatisticsGet200Response
+		localVarReturnValue  *V1DeviceRoutingOspfv2StatisticsGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1DeviceRoutingOspfv2StatisticsGet")
@@ -10956,11 +12047,15 @@ func (a *DefaultAPIService) V1DeviceRoutingOspfv2StatisticsGetExecute(r ApiV1Dev
 	if r.authorization == nil {
 		return localVarReturnValue, nil, reportError("authorization is required and must be specified")
 	}
-
-	if r.deviceId != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "deviceId", r.deviceId, "form", "")
+	if r.deviceId == nil {
+		return localVarReturnValue, nil, reportError("deviceId is required and must be specified")
 	}
-	if r.vrfNames != nil {
+	if r.vrfNames == nil {
+		return localVarReturnValue, nil, reportError("vrfNames is required and must be specified")
+	}
+
+	parameterAddToHeaderOrQuery(localVarQueryParams, "deviceId", r.deviceId, "form", "")
+	{
 		t := *r.vrfNames
 		if reflect.TypeOf(t).Kind() == reflect.Slice {
 			s := reflect.ValueOf(t)
@@ -11046,9 +12141,8 @@ type ApiV1DeviceRoutingOspfv3AreaInterfaceGetRequest struct {
 	authorization *string
 	areaId *string
 	deviceId *int64
-	instanceName *string
-	last *int32
 	vrfName *string
+	instanceName *string
 }
 
 // Bearer token. Format: Bearer &lt;your_token_here&gt;
@@ -11069,30 +12163,26 @@ func (r ApiV1DeviceRoutingOspfv3AreaInterfaceGetRequest) DeviceId(deviceId int64
 	return r
 }
 
-// Valid configured OSPF Instance name
-func (r ApiV1DeviceRoutingOspfv3AreaInterfaceGetRequest) InstanceName(instanceName string) ApiV1DeviceRoutingOspfv3AreaInterfaceGetRequest {
-	r.instanceName = &instanceName
-	return r
-}
-
-// 
-func (r ApiV1DeviceRoutingOspfv3AreaInterfaceGetRequest) Last(last int32) ApiV1DeviceRoutingOspfv3AreaInterfaceGetRequest {
-	r.last = &last
-	return r
-}
-
 // Valid configured VRF name
 func (r ApiV1DeviceRoutingOspfv3AreaInterfaceGetRequest) VrfName(vrfName string) ApiV1DeviceRoutingOspfv3AreaInterfaceGetRequest {
 	r.vrfName = &vrfName
 	return r
 }
 
-func (r ApiV1DeviceRoutingOspfv3AreaInterfaceGetRequest) Execute() (*V1DeviceRoutingOspfv2AreaInterfaceGet200Response, *http.Response, error) {
+// Valid configured OSPF Instance name
+func (r ApiV1DeviceRoutingOspfv3AreaInterfaceGetRequest) InstanceName(instanceName string) ApiV1DeviceRoutingOspfv3AreaInterfaceGetRequest {
+	r.instanceName = &instanceName
+	return r
+}
+
+func (r ApiV1DeviceRoutingOspfv3AreaInterfaceGetRequest) Execute() (*V1DeviceRoutingOspfv3AreaInterfaceGetResponse, *http.Response, error) {
 	return r.ApiService.V1DeviceRoutingOspfv3AreaInterfaceGetExecute(r)
 }
 
 /*
 V1DeviceRoutingOspfv3AreaInterfaceGet Method for V1DeviceRoutingOspfv3AreaInterfaceGet
+
+Get OSPFv3 Area's Interface specific Information
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV1DeviceRoutingOspfv3AreaInterfaceGetRequest
@@ -11105,13 +12195,13 @@ func (a *DefaultAPIService) V1DeviceRoutingOspfv3AreaInterfaceGet(ctx context.Co
 }
 
 // Execute executes the request
-//  @return V1DeviceRoutingOspfv2AreaInterfaceGet200Response
-func (a *DefaultAPIService) V1DeviceRoutingOspfv3AreaInterfaceGetExecute(r ApiV1DeviceRoutingOspfv3AreaInterfaceGetRequest) (*V1DeviceRoutingOspfv2AreaInterfaceGet200Response, *http.Response, error) {
+//  @return V1DeviceRoutingOspfv3AreaInterfaceGetResponse
+func (a *DefaultAPIService) V1DeviceRoutingOspfv3AreaInterfaceGetExecute(r ApiV1DeviceRoutingOspfv3AreaInterfaceGetRequest) (*V1DeviceRoutingOspfv3AreaInterfaceGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1DeviceRoutingOspfv2AreaInterfaceGet200Response
+		localVarReturnValue  *V1DeviceRoutingOspfv3AreaInterfaceGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1DeviceRoutingOspfv3AreaInterfaceGet")
@@ -11127,22 +12217,22 @@ func (a *DefaultAPIService) V1DeviceRoutingOspfv3AreaInterfaceGetExecute(r ApiV1
 	if r.authorization == nil {
 		return localVarReturnValue, nil, reportError("authorization is required and must be specified")
 	}
+	if r.areaId == nil {
+		return localVarReturnValue, nil, reportError("areaId is required and must be specified")
+	}
+	if r.deviceId == nil {
+		return localVarReturnValue, nil, reportError("deviceId is required and must be specified")
+	}
+	if r.vrfName == nil {
+		return localVarReturnValue, nil, reportError("vrfName is required and must be specified")
+	}
 
-	if r.areaId != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "areaId", r.areaId, "form", "")
-	}
-	if r.deviceId != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "deviceId", r.deviceId, "form", "")
-	}
+	parameterAddToHeaderOrQuery(localVarQueryParams, "areaId", r.areaId, "form", "")
+	parameterAddToHeaderOrQuery(localVarQueryParams, "deviceId", r.deviceId, "form", "")
 	if r.instanceName != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "instanceName", r.instanceName, "form", "")
 	}
-	if r.last != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "last", r.last, "form", "")
-	}
-	if r.vrfName != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "vrfName", r.vrfName, "form", "")
-	}
+	parameterAddToHeaderOrQuery(localVarQueryParams, "vrfName", r.vrfName, "form", "")
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
 
@@ -11218,10 +12308,9 @@ type ApiV1DeviceRoutingOspfv3AreaInterfaceNbridGetRequest struct {
 	authorization *string
 	areaId *string
 	deviceId *int64
-	instanceName *string
 	interfaceId *string
-	last *int32
 	vrfName *string
+	instanceName *string
 }
 
 // Bearer token. Format: Bearer &lt;your_token_here&gt;
@@ -11242,21 +12331,9 @@ func (r ApiV1DeviceRoutingOspfv3AreaInterfaceNbridGetRequest) DeviceId(deviceId 
 	return r
 }
 
-// Valid configured OSPF Instance name
-func (r ApiV1DeviceRoutingOspfv3AreaInterfaceNbridGetRequest) InstanceName(instanceName string) ApiV1DeviceRoutingOspfv3AreaInterfaceNbridGetRequest {
-	r.instanceName = &instanceName
-	return r
-}
-
 // Valid configured Interface name
 func (r ApiV1DeviceRoutingOspfv3AreaInterfaceNbridGetRequest) InterfaceId(interfaceId string) ApiV1DeviceRoutingOspfv3AreaInterfaceNbridGetRequest {
 	r.interfaceId = &interfaceId
-	return r
-}
-
-// 
-func (r ApiV1DeviceRoutingOspfv3AreaInterfaceNbridGetRequest) Last(last int32) ApiV1DeviceRoutingOspfv3AreaInterfaceNbridGetRequest {
-	r.last = &last
 	return r
 }
 
@@ -11266,12 +12343,20 @@ func (r ApiV1DeviceRoutingOspfv3AreaInterfaceNbridGetRequest) VrfName(vrfName st
 	return r
 }
 
-func (r ApiV1DeviceRoutingOspfv3AreaInterfaceNbridGetRequest) Execute() (*V1DeviceRoutingOspfv2AreaInterfaceNbridGet200Response, *http.Response, error) {
+// Valid configured OSPF Instance name
+func (r ApiV1DeviceRoutingOspfv3AreaInterfaceNbridGetRequest) InstanceName(instanceName string) ApiV1DeviceRoutingOspfv3AreaInterfaceNbridGetRequest {
+	r.instanceName = &instanceName
+	return r
+}
+
+func (r ApiV1DeviceRoutingOspfv3AreaInterfaceNbridGetRequest) Execute() (*V1DeviceRoutingOspfv3AreaInterfaceNbridGetResponse, *http.Response, error) {
 	return r.ApiService.V1DeviceRoutingOspfv3AreaInterfaceNbridGetExecute(r)
 }
 
 /*
 V1DeviceRoutingOspfv3AreaInterfaceNbridGet Method for V1DeviceRoutingOspfv3AreaInterfaceNbridGet
+
+Get OSPFv3 Area's interface's List of Nbr IDs
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV1DeviceRoutingOspfv3AreaInterfaceNbridGetRequest
@@ -11284,13 +12369,13 @@ func (a *DefaultAPIService) V1DeviceRoutingOspfv3AreaInterfaceNbridGet(ctx conte
 }
 
 // Execute executes the request
-//  @return V1DeviceRoutingOspfv2AreaInterfaceNbridGet200Response
-func (a *DefaultAPIService) V1DeviceRoutingOspfv3AreaInterfaceNbridGetExecute(r ApiV1DeviceRoutingOspfv3AreaInterfaceNbridGetRequest) (*V1DeviceRoutingOspfv2AreaInterfaceNbridGet200Response, *http.Response, error) {
+//  @return V1DeviceRoutingOspfv3AreaInterfaceNbridGetResponse
+func (a *DefaultAPIService) V1DeviceRoutingOspfv3AreaInterfaceNbridGetExecute(r ApiV1DeviceRoutingOspfv3AreaInterfaceNbridGetRequest) (*V1DeviceRoutingOspfv3AreaInterfaceNbridGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1DeviceRoutingOspfv2AreaInterfaceNbridGet200Response
+		localVarReturnValue  *V1DeviceRoutingOspfv3AreaInterfaceNbridGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1DeviceRoutingOspfv3AreaInterfaceNbridGet")
@@ -11306,25 +12391,26 @@ func (a *DefaultAPIService) V1DeviceRoutingOspfv3AreaInterfaceNbridGetExecute(r 
 	if r.authorization == nil {
 		return localVarReturnValue, nil, reportError("authorization is required and must be specified")
 	}
+	if r.areaId == nil {
+		return localVarReturnValue, nil, reportError("areaId is required and must be specified")
+	}
+	if r.deviceId == nil {
+		return localVarReturnValue, nil, reportError("deviceId is required and must be specified")
+	}
+	if r.interfaceId == nil {
+		return localVarReturnValue, nil, reportError("interfaceId is required and must be specified")
+	}
+	if r.vrfName == nil {
+		return localVarReturnValue, nil, reportError("vrfName is required and must be specified")
+	}
 
-	if r.areaId != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "areaId", r.areaId, "form", "")
-	}
-	if r.deviceId != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "deviceId", r.deviceId, "form", "")
-	}
+	parameterAddToHeaderOrQuery(localVarQueryParams, "areaId", r.areaId, "form", "")
+	parameterAddToHeaderOrQuery(localVarQueryParams, "deviceId", r.deviceId, "form", "")
 	if r.instanceName != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "instanceName", r.instanceName, "form", "")
 	}
-	if r.interfaceId != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "interfaceId", r.interfaceId, "form", "")
-	}
-	if r.last != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "last", r.last, "form", "")
-	}
-	if r.vrfName != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "vrfName", r.vrfName, "form", "")
-	}
+	parameterAddToHeaderOrQuery(localVarQueryParams, "interfaceId", r.interfaceId, "form", "")
+	parameterAddToHeaderOrQuery(localVarQueryParams, "vrfName", r.vrfName, "form", "")
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
 
@@ -11400,9 +12486,8 @@ type ApiV1DeviceRoutingOspfv3AreaInterfaceidGetRequest struct {
 	authorization *string
 	areaId *string
 	deviceId *int64
-	instanceName *string
-	last *int32
 	vrfName *string
+	instanceName *string
 }
 
 // Bearer token. Format: Bearer &lt;your_token_here&gt;
@@ -11423,30 +12508,26 @@ func (r ApiV1DeviceRoutingOspfv3AreaInterfaceidGetRequest) DeviceId(deviceId int
 	return r
 }
 
-// Valid configured OSPF Instance name
-func (r ApiV1DeviceRoutingOspfv3AreaInterfaceidGetRequest) InstanceName(instanceName string) ApiV1DeviceRoutingOspfv3AreaInterfaceidGetRequest {
-	r.instanceName = &instanceName
-	return r
-}
-
-// 
-func (r ApiV1DeviceRoutingOspfv3AreaInterfaceidGetRequest) Last(last int32) ApiV1DeviceRoutingOspfv3AreaInterfaceidGetRequest {
-	r.last = &last
-	return r
-}
-
 // Valid configured VRF name
 func (r ApiV1DeviceRoutingOspfv3AreaInterfaceidGetRequest) VrfName(vrfName string) ApiV1DeviceRoutingOspfv3AreaInterfaceidGetRequest {
 	r.vrfName = &vrfName
 	return r
 }
 
-func (r ApiV1DeviceRoutingOspfv3AreaInterfaceidGetRequest) Execute() (*V1DeviceRoutingOspfv2AreaInterfaceidGet200Response, *http.Response, error) {
+// Valid configured OSPF Instance name
+func (r ApiV1DeviceRoutingOspfv3AreaInterfaceidGetRequest) InstanceName(instanceName string) ApiV1DeviceRoutingOspfv3AreaInterfaceidGetRequest {
+	r.instanceName = &instanceName
+	return r
+}
+
+func (r ApiV1DeviceRoutingOspfv3AreaInterfaceidGetRequest) Execute() (*V1DeviceRoutingOspfv3AreaInterfaceidGetResponse, *http.Response, error) {
 	return r.ApiService.V1DeviceRoutingOspfv3AreaInterfaceidGetExecute(r)
 }
 
 /*
 V1DeviceRoutingOspfv3AreaInterfaceidGet Method for V1DeviceRoutingOspfv3AreaInterfaceidGet
+
+Get OSPFv3 Area's Interface ID Table
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV1DeviceRoutingOspfv3AreaInterfaceidGetRequest
@@ -11459,13 +12540,13 @@ func (a *DefaultAPIService) V1DeviceRoutingOspfv3AreaInterfaceidGet(ctx context.
 }
 
 // Execute executes the request
-//  @return V1DeviceRoutingOspfv2AreaInterfaceidGet200Response
-func (a *DefaultAPIService) V1DeviceRoutingOspfv3AreaInterfaceidGetExecute(r ApiV1DeviceRoutingOspfv3AreaInterfaceidGetRequest) (*V1DeviceRoutingOspfv2AreaInterfaceidGet200Response, *http.Response, error) {
+//  @return V1DeviceRoutingOspfv3AreaInterfaceidGetResponse
+func (a *DefaultAPIService) V1DeviceRoutingOspfv3AreaInterfaceidGetExecute(r ApiV1DeviceRoutingOspfv3AreaInterfaceidGetRequest) (*V1DeviceRoutingOspfv3AreaInterfaceidGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1DeviceRoutingOspfv2AreaInterfaceidGet200Response
+		localVarReturnValue  *V1DeviceRoutingOspfv3AreaInterfaceidGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1DeviceRoutingOspfv3AreaInterfaceidGet")
@@ -11481,22 +12562,22 @@ func (a *DefaultAPIService) V1DeviceRoutingOspfv3AreaInterfaceidGetExecute(r Api
 	if r.authorization == nil {
 		return localVarReturnValue, nil, reportError("authorization is required and must be specified")
 	}
+	if r.areaId == nil {
+		return localVarReturnValue, nil, reportError("areaId is required and must be specified")
+	}
+	if r.deviceId == nil {
+		return localVarReturnValue, nil, reportError("deviceId is required and must be specified")
+	}
+	if r.vrfName == nil {
+		return localVarReturnValue, nil, reportError("vrfName is required and must be specified")
+	}
 
-	if r.areaId != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "areaId", r.areaId, "form", "")
-	}
-	if r.deviceId != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "deviceId", r.deviceId, "form", "")
-	}
+	parameterAddToHeaderOrQuery(localVarQueryParams, "areaId", r.areaId, "form", "")
+	parameterAddToHeaderOrQuery(localVarQueryParams, "deviceId", r.deviceId, "form", "")
 	if r.instanceName != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "instanceName", r.instanceName, "form", "")
 	}
-	if r.last != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "last", r.last, "form", "")
-	}
-	if r.vrfName != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "vrfName", r.vrfName, "form", "")
-	}
+	parameterAddToHeaderOrQuery(localVarQueryParams, "vrfName", r.vrfName, "form", "")
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
 
@@ -11573,7 +12654,6 @@ type ApiV1DeviceRoutingOspfv3AreaLsdbGetRequest struct {
 	areaId *string
 	deviceId *int64
 	instanceName *string
-	last *int32
 	vrfName *string
 }
 
@@ -11601,24 +12681,20 @@ func (r ApiV1DeviceRoutingOspfv3AreaLsdbGetRequest) InstanceName(instanceName st
 	return r
 }
 
-// 
-func (r ApiV1DeviceRoutingOspfv3AreaLsdbGetRequest) Last(last int32) ApiV1DeviceRoutingOspfv3AreaLsdbGetRequest {
-	r.last = &last
-	return r
-}
-
 // Valid configured VRF name
 func (r ApiV1DeviceRoutingOspfv3AreaLsdbGetRequest) VrfName(vrfName string) ApiV1DeviceRoutingOspfv3AreaLsdbGetRequest {
 	r.vrfName = &vrfName
 	return r
 }
 
-func (r ApiV1DeviceRoutingOspfv3AreaLsdbGetRequest) Execute() (*V1DeviceRoutingOspfv2AreaLsdbGet200Response, *http.Response, error) {
+func (r ApiV1DeviceRoutingOspfv3AreaLsdbGetRequest) Execute() (*V1DeviceRoutingOspfv3AreaLsdbGetResponse, *http.Response, error) {
 	return r.ApiService.V1DeviceRoutingOspfv3AreaLsdbGetExecute(r)
 }
 
 /*
 V1DeviceRoutingOspfv3AreaLsdbGet Method for V1DeviceRoutingOspfv3AreaLsdbGet
+
+Get OSPFv3 Area LSDB Table
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV1DeviceRoutingOspfv3AreaLsdbGetRequest
@@ -11631,13 +12707,13 @@ func (a *DefaultAPIService) V1DeviceRoutingOspfv3AreaLsdbGet(ctx context.Context
 }
 
 // Execute executes the request
-//  @return V1DeviceRoutingOspfv2AreaLsdbGet200Response
-func (a *DefaultAPIService) V1DeviceRoutingOspfv3AreaLsdbGetExecute(r ApiV1DeviceRoutingOspfv3AreaLsdbGetRequest) (*V1DeviceRoutingOspfv2AreaLsdbGet200Response, *http.Response, error) {
+//  @return V1DeviceRoutingOspfv3AreaLsdbGetResponse
+func (a *DefaultAPIService) V1DeviceRoutingOspfv3AreaLsdbGetExecute(r ApiV1DeviceRoutingOspfv3AreaLsdbGetRequest) (*V1DeviceRoutingOspfv3AreaLsdbGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1DeviceRoutingOspfv2AreaLsdbGet200Response
+		localVarReturnValue  *V1DeviceRoutingOspfv3AreaLsdbGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1DeviceRoutingOspfv3AreaLsdbGet")
@@ -11653,22 +12729,23 @@ func (a *DefaultAPIService) V1DeviceRoutingOspfv3AreaLsdbGetExecute(r ApiV1Devic
 	if r.authorization == nil {
 		return localVarReturnValue, nil, reportError("authorization is required and must be specified")
 	}
+	if r.areaId == nil {
+		return localVarReturnValue, nil, reportError("areaId is required and must be specified")
+	}
+	if r.deviceId == nil {
+		return localVarReturnValue, nil, reportError("deviceId is required and must be specified")
+	}
+	if r.instanceName == nil {
+		return localVarReturnValue, nil, reportError("instanceName is required and must be specified")
+	}
+	if r.vrfName == nil {
+		return localVarReturnValue, nil, reportError("vrfName is required and must be specified")
+	}
 
-	if r.areaId != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "areaId", r.areaId, "form", "")
-	}
-	if r.deviceId != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "deviceId", r.deviceId, "form", "")
-	}
-	if r.instanceName != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "instanceName", r.instanceName, "form", "")
-	}
-	if r.last != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "last", r.last, "form", "")
-	}
-	if r.vrfName != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "vrfName", r.vrfName, "form", "")
-	}
+	parameterAddToHeaderOrQuery(localVarQueryParams, "areaId", r.areaId, "form", "")
+	parameterAddToHeaderOrQuery(localVarQueryParams, "deviceId", r.deviceId, "form", "")
+	parameterAddToHeaderOrQuery(localVarQueryParams, "instanceName", r.instanceName, "form", "")
+	parameterAddToHeaderOrQuery(localVarQueryParams, "vrfName", r.vrfName, "form", "")
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
 
@@ -11744,9 +12821,8 @@ type ApiV1DeviceRoutingOspfv3AreaNbrGetRequest struct {
 	authorization *string
 	areaId *string
 	deviceId *int64
-	instanceName *string
-	last *int32
 	vrfName *string
+	instanceName *string
 }
 
 // Bearer token. Format: Bearer &lt;your_token_here&gt;
@@ -11767,30 +12843,26 @@ func (r ApiV1DeviceRoutingOspfv3AreaNbrGetRequest) DeviceId(deviceId int64) ApiV
 	return r
 }
 
-// Valid configured OSPF Instance name
-func (r ApiV1DeviceRoutingOspfv3AreaNbrGetRequest) InstanceName(instanceName string) ApiV1DeviceRoutingOspfv3AreaNbrGetRequest {
-	r.instanceName = &instanceName
-	return r
-}
-
-// 
-func (r ApiV1DeviceRoutingOspfv3AreaNbrGetRequest) Last(last int32) ApiV1DeviceRoutingOspfv3AreaNbrGetRequest {
-	r.last = &last
-	return r
-}
-
 // Valid configured VRF name
 func (r ApiV1DeviceRoutingOspfv3AreaNbrGetRequest) VrfName(vrfName string) ApiV1DeviceRoutingOspfv3AreaNbrGetRequest {
 	r.vrfName = &vrfName
 	return r
 }
 
-func (r ApiV1DeviceRoutingOspfv3AreaNbrGetRequest) Execute() (*V1DeviceRoutingOspfv2AreaNbrGet200Response, *http.Response, error) {
+// Valid configured OSPF Instance name
+func (r ApiV1DeviceRoutingOspfv3AreaNbrGetRequest) InstanceName(instanceName string) ApiV1DeviceRoutingOspfv3AreaNbrGetRequest {
+	r.instanceName = &instanceName
+	return r
+}
+
+func (r ApiV1DeviceRoutingOspfv3AreaNbrGetRequest) Execute() (*V1DeviceRoutingOspfv3AreaNbrGetResponse, *http.Response, error) {
 	return r.ApiService.V1DeviceRoutingOspfv3AreaNbrGetExecute(r)
 }
 
 /*
 V1DeviceRoutingOspfv3AreaNbrGet Method for V1DeviceRoutingOspfv3AreaNbrGet
+
+Get OSPFv3 Area's Neighbors Information
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV1DeviceRoutingOspfv3AreaNbrGetRequest
@@ -11803,13 +12875,13 @@ func (a *DefaultAPIService) V1DeviceRoutingOspfv3AreaNbrGet(ctx context.Context)
 }
 
 // Execute executes the request
-//  @return V1DeviceRoutingOspfv2AreaNbrGet200Response
-func (a *DefaultAPIService) V1DeviceRoutingOspfv3AreaNbrGetExecute(r ApiV1DeviceRoutingOspfv3AreaNbrGetRequest) (*V1DeviceRoutingOspfv2AreaNbrGet200Response, *http.Response, error) {
+//  @return V1DeviceRoutingOspfv3AreaNbrGetResponse
+func (a *DefaultAPIService) V1DeviceRoutingOspfv3AreaNbrGetExecute(r ApiV1DeviceRoutingOspfv3AreaNbrGetRequest) (*V1DeviceRoutingOspfv3AreaNbrGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1DeviceRoutingOspfv2AreaNbrGet200Response
+		localVarReturnValue  *V1DeviceRoutingOspfv3AreaNbrGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1DeviceRoutingOspfv3AreaNbrGet")
@@ -11825,22 +12897,22 @@ func (a *DefaultAPIService) V1DeviceRoutingOspfv3AreaNbrGetExecute(r ApiV1Device
 	if r.authorization == nil {
 		return localVarReturnValue, nil, reportError("authorization is required and must be specified")
 	}
+	if r.areaId == nil {
+		return localVarReturnValue, nil, reportError("areaId is required and must be specified")
+	}
+	if r.deviceId == nil {
+		return localVarReturnValue, nil, reportError("deviceId is required and must be specified")
+	}
+	if r.vrfName == nil {
+		return localVarReturnValue, nil, reportError("vrfName is required and must be specified")
+	}
 
-	if r.areaId != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "areaId", r.areaId, "form", "")
-	}
-	if r.deviceId != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "deviceId", r.deviceId, "form", "")
-	}
+	parameterAddToHeaderOrQuery(localVarQueryParams, "areaId", r.areaId, "form", "")
+	parameterAddToHeaderOrQuery(localVarQueryParams, "deviceId", r.deviceId, "form", "")
 	if r.instanceName != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "instanceName", r.instanceName, "form", "")
 	}
-	if r.last != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "last", r.last, "form", "")
-	}
-	if r.vrfName != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "vrfName", r.vrfName, "form", "")
-	}
+	parameterAddToHeaderOrQuery(localVarQueryParams, "vrfName", r.vrfName, "form", "")
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
 
@@ -11915,9 +12987,8 @@ type ApiV1DeviceRoutingOspfv3AreaidGetRequest struct {
 	ApiService *DefaultAPIService
 	authorization *string
 	deviceId *int64
-	instanceName *string
-	last *int32
 	vrfName *string
+	instanceName *string
 }
 
 // Bearer token. Format: Bearer &lt;your_token_here&gt;
@@ -11932,30 +13003,26 @@ func (r ApiV1DeviceRoutingOspfv3AreaidGetRequest) DeviceId(deviceId int64) ApiV1
 	return r
 }
 
-// Valid configured OSPF Instance name
-func (r ApiV1DeviceRoutingOspfv3AreaidGetRequest) InstanceName(instanceName string) ApiV1DeviceRoutingOspfv3AreaidGetRequest {
-	r.instanceName = &instanceName
-	return r
-}
-
-// 
-func (r ApiV1DeviceRoutingOspfv3AreaidGetRequest) Last(last int32) ApiV1DeviceRoutingOspfv3AreaidGetRequest {
-	r.last = &last
-	return r
-}
-
 // Valid configured VRF name
 func (r ApiV1DeviceRoutingOspfv3AreaidGetRequest) VrfName(vrfName string) ApiV1DeviceRoutingOspfv3AreaidGetRequest {
 	r.vrfName = &vrfName
 	return r
 }
 
-func (r ApiV1DeviceRoutingOspfv3AreaidGetRequest) Execute() (*V1DeviceRoutingOspfv2AreaidGet200Response, *http.Response, error) {
+// Valid configured OSPF Instance name
+func (r ApiV1DeviceRoutingOspfv3AreaidGetRequest) InstanceName(instanceName string) ApiV1DeviceRoutingOspfv3AreaidGetRequest {
+	r.instanceName = &instanceName
+	return r
+}
+
+func (r ApiV1DeviceRoutingOspfv3AreaidGetRequest) Execute() (*V1DeviceRoutingOspfv3AreaidGetResponse, *http.Response, error) {
 	return r.ApiService.V1DeviceRoutingOspfv3AreaidGetExecute(r)
 }
 
 /*
 V1DeviceRoutingOspfv3AreaidGet Method for V1DeviceRoutingOspfv3AreaidGet
+
+Get OSPFv3 Area ID Table
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV1DeviceRoutingOspfv3AreaidGetRequest
@@ -11968,13 +13035,13 @@ func (a *DefaultAPIService) V1DeviceRoutingOspfv3AreaidGet(ctx context.Context) 
 }
 
 // Execute executes the request
-//  @return V1DeviceRoutingOspfv2AreaidGet200Response
-func (a *DefaultAPIService) V1DeviceRoutingOspfv3AreaidGetExecute(r ApiV1DeviceRoutingOspfv3AreaidGetRequest) (*V1DeviceRoutingOspfv2AreaidGet200Response, *http.Response, error) {
+//  @return V1DeviceRoutingOspfv3AreaidGetResponse
+func (a *DefaultAPIService) V1DeviceRoutingOspfv3AreaidGetExecute(r ApiV1DeviceRoutingOspfv3AreaidGetRequest) (*V1DeviceRoutingOspfv3AreaidGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1DeviceRoutingOspfv2AreaidGet200Response
+		localVarReturnValue  *V1DeviceRoutingOspfv3AreaidGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1DeviceRoutingOspfv3AreaidGet")
@@ -11990,19 +13057,18 @@ func (a *DefaultAPIService) V1DeviceRoutingOspfv3AreaidGetExecute(r ApiV1DeviceR
 	if r.authorization == nil {
 		return localVarReturnValue, nil, reportError("authorization is required and must be specified")
 	}
-
-	if r.deviceId != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "deviceId", r.deviceId, "form", "")
+	if r.deviceId == nil {
+		return localVarReturnValue, nil, reportError("deviceId is required and must be specified")
 	}
+	if r.vrfName == nil {
+		return localVarReturnValue, nil, reportError("vrfName is required and must be specified")
+	}
+
+	parameterAddToHeaderOrQuery(localVarQueryParams, "deviceId", r.deviceId, "form", "")
 	if r.instanceName != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "instanceName", r.instanceName, "form", "")
 	}
-	if r.last != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "last", r.last, "form", "")
-	}
-	if r.vrfName != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "vrfName", r.vrfName, "form", "")
-	}
+	parameterAddToHeaderOrQuery(localVarQueryParams, "vrfName", r.vrfName, "form", "")
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
 
@@ -12077,9 +13143,8 @@ type ApiV1DeviceRoutingOspfv3LsdbGetRequest struct {
 	ApiService *DefaultAPIService
 	authorization *string
 	deviceId *int64
-	instanceName *string
-	last *int32
 	vrfName *string
+	instanceName *string
 }
 
 // Bearer token. Format: Bearer &lt;your_token_here&gt;
@@ -12094,30 +13159,26 @@ func (r ApiV1DeviceRoutingOspfv3LsdbGetRequest) DeviceId(deviceId int64) ApiV1De
 	return r
 }
 
-// Valid configured OSPF Instance name
-func (r ApiV1DeviceRoutingOspfv3LsdbGetRequest) InstanceName(instanceName string) ApiV1DeviceRoutingOspfv3LsdbGetRequest {
-	r.instanceName = &instanceName
-	return r
-}
-
-// 
-func (r ApiV1DeviceRoutingOspfv3LsdbGetRequest) Last(last int32) ApiV1DeviceRoutingOspfv3LsdbGetRequest {
-	r.last = &last
-	return r
-}
-
 // Valid configured VRF name
 func (r ApiV1DeviceRoutingOspfv3LsdbGetRequest) VrfName(vrfName string) ApiV1DeviceRoutingOspfv3LsdbGetRequest {
 	r.vrfName = &vrfName
 	return r
 }
 
-func (r ApiV1DeviceRoutingOspfv3LsdbGetRequest) Execute() (*V1DeviceRoutingOspfv2AreaLsdbGet200Response, *http.Response, error) {
+// Valid configured OSPF Instance name
+func (r ApiV1DeviceRoutingOspfv3LsdbGetRequest) InstanceName(instanceName string) ApiV1DeviceRoutingOspfv3LsdbGetRequest {
+	r.instanceName = &instanceName
+	return r
+}
+
+func (r ApiV1DeviceRoutingOspfv3LsdbGetRequest) Execute() (*V1DeviceRoutingOspfv3LsdbGetResponse, *http.Response, error) {
 	return r.ApiService.V1DeviceRoutingOspfv3LsdbGetExecute(r)
 }
 
 /*
 V1DeviceRoutingOspfv3LsdbGet Method for V1DeviceRoutingOspfv3LsdbGet
+
+Get OSPFv3 global LSDB Table
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV1DeviceRoutingOspfv3LsdbGetRequest
@@ -12130,13 +13191,13 @@ func (a *DefaultAPIService) V1DeviceRoutingOspfv3LsdbGet(ctx context.Context) Ap
 }
 
 // Execute executes the request
-//  @return V1DeviceRoutingOspfv2AreaLsdbGet200Response
-func (a *DefaultAPIService) V1DeviceRoutingOspfv3LsdbGetExecute(r ApiV1DeviceRoutingOspfv3LsdbGetRequest) (*V1DeviceRoutingOspfv2AreaLsdbGet200Response, *http.Response, error) {
+//  @return V1DeviceRoutingOspfv3LsdbGetResponse
+func (a *DefaultAPIService) V1DeviceRoutingOspfv3LsdbGetExecute(r ApiV1DeviceRoutingOspfv3LsdbGetRequest) (*V1DeviceRoutingOspfv3LsdbGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1DeviceRoutingOspfv2AreaLsdbGet200Response
+		localVarReturnValue  *V1DeviceRoutingOspfv3LsdbGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1DeviceRoutingOspfv3LsdbGet")
@@ -12152,19 +13213,18 @@ func (a *DefaultAPIService) V1DeviceRoutingOspfv3LsdbGetExecute(r ApiV1DeviceRou
 	if r.authorization == nil {
 		return localVarReturnValue, nil, reportError("authorization is required and must be specified")
 	}
-
-	if r.deviceId != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "deviceId", r.deviceId, "form", "")
+	if r.deviceId == nil {
+		return localVarReturnValue, nil, reportError("deviceId is required and must be specified")
 	}
+	if r.vrfName == nil {
+		return localVarReturnValue, nil, reportError("vrfName is required and must be specified")
+	}
+
+	parameterAddToHeaderOrQuery(localVarQueryParams, "deviceId", r.deviceId, "form", "")
 	if r.instanceName != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "instanceName", r.instanceName, "form", "")
 	}
-	if r.last != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "last", r.last, "form", "")
-	}
-	if r.vrfName != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "vrfName", r.vrfName, "form", "")
-	}
+	parameterAddToHeaderOrQuery(localVarQueryParams, "vrfName", r.vrfName, "form", "")
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
 
@@ -12239,10 +13299,8 @@ type ApiV1DeviceRoutingOspfv3RibGetRequest struct {
 	ApiService *DefaultAPIService
 	authorization *string
 	deviceId *int64
-	instanceName *string
-	before *string
-	last *int32
 	vrfName *string
+	instanceName *string
 }
 
 // Bearer token. Format: Bearer &lt;your_token_here&gt;
@@ -12257,36 +13315,26 @@ func (r ApiV1DeviceRoutingOspfv3RibGetRequest) DeviceId(deviceId int64) ApiV1Dev
 	return r
 }
 
-// Valid configured OSPF Instance name
-func (r ApiV1DeviceRoutingOspfv3RibGetRequest) InstanceName(instanceName string) ApiV1DeviceRoutingOspfv3RibGetRequest {
-	r.instanceName = &instanceName
-	return r
-}
-
-// 
-func (r ApiV1DeviceRoutingOspfv3RibGetRequest) Before(before string) ApiV1DeviceRoutingOspfv3RibGetRequest {
-	r.before = &before
-	return r
-}
-
-// 
-func (r ApiV1DeviceRoutingOspfv3RibGetRequest) Last(last int32) ApiV1DeviceRoutingOspfv3RibGetRequest {
-	r.last = &last
-	return r
-}
-
 // Valid configured VRF name
 func (r ApiV1DeviceRoutingOspfv3RibGetRequest) VrfName(vrfName string) ApiV1DeviceRoutingOspfv3RibGetRequest {
 	r.vrfName = &vrfName
 	return r
 }
 
-func (r ApiV1DeviceRoutingOspfv3RibGetRequest) Execute() (*V1DeviceRoutingOspfv2RibGet200Response, *http.Response, error) {
+// Valid configured OSPF Instance name
+func (r ApiV1DeviceRoutingOspfv3RibGetRequest) InstanceName(instanceName string) ApiV1DeviceRoutingOspfv3RibGetRequest {
+	r.instanceName = &instanceName
+	return r
+}
+
+func (r ApiV1DeviceRoutingOspfv3RibGetRequest) Execute() (*V1DeviceRoutingOspfv3RibGetResponse, *http.Response, error) {
 	return r.ApiService.V1DeviceRoutingOspfv3RibGetExecute(r)
 }
 
 /*
 V1DeviceRoutingOspfv3RibGet Method for V1DeviceRoutingOspfv3RibGet
+
+Get OSPFv3 Local RIB Table
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV1DeviceRoutingOspfv3RibGetRequest
@@ -12299,13 +13347,13 @@ func (a *DefaultAPIService) V1DeviceRoutingOspfv3RibGet(ctx context.Context) Api
 }
 
 // Execute executes the request
-//  @return V1DeviceRoutingOspfv2RibGet200Response
-func (a *DefaultAPIService) V1DeviceRoutingOspfv3RibGetExecute(r ApiV1DeviceRoutingOspfv3RibGetRequest) (*V1DeviceRoutingOspfv2RibGet200Response, *http.Response, error) {
+//  @return V1DeviceRoutingOspfv3RibGetResponse
+func (a *DefaultAPIService) V1DeviceRoutingOspfv3RibGetExecute(r ApiV1DeviceRoutingOspfv3RibGetRequest) (*V1DeviceRoutingOspfv3RibGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1DeviceRoutingOspfv2RibGet200Response
+		localVarReturnValue  *V1DeviceRoutingOspfv3RibGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1DeviceRoutingOspfv3RibGet")
@@ -12321,22 +13369,18 @@ func (a *DefaultAPIService) V1DeviceRoutingOspfv3RibGetExecute(r ApiV1DeviceRout
 	if r.authorization == nil {
 		return localVarReturnValue, nil, reportError("authorization is required and must be specified")
 	}
-
-	if r.deviceId != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "deviceId", r.deviceId, "form", "")
+	if r.deviceId == nil {
+		return localVarReturnValue, nil, reportError("deviceId is required and must be specified")
 	}
+	if r.vrfName == nil {
+		return localVarReturnValue, nil, reportError("vrfName is required and must be specified")
+	}
+
+	parameterAddToHeaderOrQuery(localVarQueryParams, "deviceId", r.deviceId, "form", "")
 	if r.instanceName != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "instanceName", r.instanceName, "form", "")
 	}
-	if r.before != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "before", r.before, "form", "")
-	}
-	if r.last != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "last", r.last, "form", "")
-	}
-	if r.vrfName != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "vrfName", r.vrfName, "form", "")
-	}
+	parameterAddToHeaderOrQuery(localVarQueryParams, "vrfName", r.vrfName, "form", "")
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
 
@@ -12432,12 +13476,14 @@ func (r ApiV1DeviceRoutingOspfv3StatisticsGetRequest) VrfNames(vrfNames []string
 	return r
 }
 
-func (r ApiV1DeviceRoutingOspfv3StatisticsGetRequest) Execute() (*V1DeviceRoutingOspfv2StatisticsGet200Response, *http.Response, error) {
+func (r ApiV1DeviceRoutingOspfv3StatisticsGetRequest) Execute() (*V1DeviceRoutingOspfv3StatisticsGetResponse, *http.Response, error) {
 	return r.ApiService.V1DeviceRoutingOspfv3StatisticsGetExecute(r)
 }
 
 /*
 V1DeviceRoutingOspfv3StatisticsGet Method for V1DeviceRoutingOspfv3StatisticsGet
+
+Get OSPFv3 Statistics
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV1DeviceRoutingOspfv3StatisticsGetRequest
@@ -12450,13 +13496,13 @@ func (a *DefaultAPIService) V1DeviceRoutingOspfv3StatisticsGet(ctx context.Conte
 }
 
 // Execute executes the request
-//  @return V1DeviceRoutingOspfv2StatisticsGet200Response
-func (a *DefaultAPIService) V1DeviceRoutingOspfv3StatisticsGetExecute(r ApiV1DeviceRoutingOspfv3StatisticsGetRequest) (*V1DeviceRoutingOspfv2StatisticsGet200Response, *http.Response, error) {
+//  @return V1DeviceRoutingOspfv3StatisticsGetResponse
+func (a *DefaultAPIService) V1DeviceRoutingOspfv3StatisticsGetExecute(r ApiV1DeviceRoutingOspfv3StatisticsGetRequest) (*V1DeviceRoutingOspfv3StatisticsGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1DeviceRoutingOspfv2StatisticsGet200Response
+		localVarReturnValue  *V1DeviceRoutingOspfv3StatisticsGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1DeviceRoutingOspfv3StatisticsGet")
@@ -12472,11 +13518,15 @@ func (a *DefaultAPIService) V1DeviceRoutingOspfv3StatisticsGetExecute(r ApiV1Dev
 	if r.authorization == nil {
 		return localVarReturnValue, nil, reportError("authorization is required and must be specified")
 	}
-
-	if r.deviceId != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "deviceId", r.deviceId, "form", "")
+	if r.deviceId == nil {
+		return localVarReturnValue, nil, reportError("deviceId is required and must be specified")
 	}
-	if r.vrfNames != nil {
+	if r.vrfNames == nil {
+		return localVarReturnValue, nil, reportError("vrfNames is required and must be specified")
+	}
+
+	parameterAddToHeaderOrQuery(localVarQueryParams, "deviceId", r.deviceId, "form", "")
+	{
 		t := *r.vrfNames
 		if reflect.TypeOf(t).Kind() == reflect.Slice {
 			s := reflect.ValueOf(t)
@@ -12560,19 +13610,14 @@ type ApiV1DeviceRoutingRibRouteCountPostRequest struct {
 	ctx context.Context
 	ApiService *DefaultAPIService
 	authorization *string
-	body *map[string]interface{}
 	deviceId *int64
 	vrfName *[]string
+	body *map[string]interface{}
 }
 
 // Bearer token. Format: Bearer &lt;your_token_here&gt;
 func (r ApiV1DeviceRoutingRibRouteCountPostRequest) Authorization(authorization string) ApiV1DeviceRoutingRibRouteCountPostRequest {
 	r.authorization = &authorization
-	return r
-}
-
-func (r ApiV1DeviceRoutingRibRouteCountPostRequest) Body(body map[string]interface{}) ApiV1DeviceRoutingRibRouteCountPostRequest {
-	r.body = &body
 	return r
 }
 
@@ -12588,12 +13633,19 @@ func (r ApiV1DeviceRoutingRibRouteCountPostRequest) VrfName(vrfName []string) Ap
 	return r
 }
 
-func (r ApiV1DeviceRoutingRibRouteCountPostRequest) Execute() (*V1DeviceRoutingVrfBgpRouteCountPost200Response, *http.Response, error) {
+func (r ApiV1DeviceRoutingRibRouteCountPostRequest) Body(body map[string]interface{}) ApiV1DeviceRoutingRibRouteCountPostRequest {
+	r.body = &body
+	return r
+}
+
+func (r ApiV1DeviceRoutingRibRouteCountPostRequest) Execute() (*V1DeviceRoutingRibRouteCountPostResponse, *http.Response, error) {
 	return r.ApiService.V1DeviceRoutingRibRouteCountPostExecute(r)
 }
 
 /*
 V1DeviceRoutingRibRouteCountPost Method for V1DeviceRoutingRibRouteCountPost
+
+Get BGP VRF installed route count
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV1DeviceRoutingRibRouteCountPostRequest
@@ -12606,13 +13658,13 @@ func (a *DefaultAPIService) V1DeviceRoutingRibRouteCountPost(ctx context.Context
 }
 
 // Execute executes the request
-//  @return V1DeviceRoutingVrfBgpRouteCountPost200Response
-func (a *DefaultAPIService) V1DeviceRoutingRibRouteCountPostExecute(r ApiV1DeviceRoutingRibRouteCountPostRequest) (*V1DeviceRoutingVrfBgpRouteCountPost200Response, *http.Response, error) {
+//  @return V1DeviceRoutingRibRouteCountPostResponse
+func (a *DefaultAPIService) V1DeviceRoutingRibRouteCountPostExecute(r ApiV1DeviceRoutingRibRouteCountPostRequest) (*V1DeviceRoutingRibRouteCountPostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1DeviceRoutingVrfBgpRouteCountPost200Response
+		localVarReturnValue  *V1DeviceRoutingRibRouteCountPostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1DeviceRoutingRibRouteCountPost")
@@ -12628,14 +13680,18 @@ func (a *DefaultAPIService) V1DeviceRoutingRibRouteCountPostExecute(r ApiV1Devic
 	if r.authorization == nil {
 		return localVarReturnValue, nil, reportError("authorization is required and must be specified")
 	}
+	if r.deviceId == nil {
+		return localVarReturnValue, nil, reportError("deviceId is required and must be specified")
+	}
+	if r.vrfName == nil {
+		return localVarReturnValue, nil, reportError("vrfName is required and must be specified")
+	}
 	if r.body == nil {
 		return localVarReturnValue, nil, reportError("body is required and must be specified")
 	}
 
-	if r.deviceId != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "deviceId", r.deviceId, "form", "")
-	}
-	if r.vrfName != nil {
+	parameterAddToHeaderOrQuery(localVarQueryParams, "deviceId", r.deviceId, "form", "")
+	{
 		t := *r.vrfName
 		if reflect.TypeOf(t).Kind() == reflect.Slice {
 			s := reflect.ValueOf(t)
@@ -12743,12 +13799,14 @@ func (r ApiV1DeviceRoutingVrfBgpEibgpRouteCountGetRequest) VrfName(vrfName strin
 	return r
 }
 
-func (r ApiV1DeviceRoutingVrfBgpEibgpRouteCountGetRequest) Execute() (*V1DeviceRoutingVrfBgpEibgpRouteCountGet200Response, *http.Response, error) {
+func (r ApiV1DeviceRoutingVrfBgpEibgpRouteCountGetRequest) Execute() (*V1DeviceRoutingVrfBgpEibgpRouteCountGetResponse, *http.Response, error) {
 	return r.ApiService.V1DeviceRoutingVrfBgpEibgpRouteCountGetExecute(r)
 }
 
 /*
 V1DeviceRoutingVrfBgpEibgpRouteCountGet Method for V1DeviceRoutingVrfBgpEibgpRouteCountGet
+
+Get eBGP/iBGP VRF route count
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV1DeviceRoutingVrfBgpEibgpRouteCountGetRequest
@@ -12761,13 +13819,13 @@ func (a *DefaultAPIService) V1DeviceRoutingVrfBgpEibgpRouteCountGet(ctx context.
 }
 
 // Execute executes the request
-//  @return V1DeviceRoutingVrfBgpEibgpRouteCountGet200Response
-func (a *DefaultAPIService) V1DeviceRoutingVrfBgpEibgpRouteCountGetExecute(r ApiV1DeviceRoutingVrfBgpEibgpRouteCountGetRequest) (*V1DeviceRoutingVrfBgpEibgpRouteCountGet200Response, *http.Response, error) {
+//  @return V1DeviceRoutingVrfBgpEibgpRouteCountGetResponse
+func (a *DefaultAPIService) V1DeviceRoutingVrfBgpEibgpRouteCountGetExecute(r ApiV1DeviceRoutingVrfBgpEibgpRouteCountGetRequest) (*V1DeviceRoutingVrfBgpEibgpRouteCountGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1DeviceRoutingVrfBgpEibgpRouteCountGet200Response
+		localVarReturnValue  *V1DeviceRoutingVrfBgpEibgpRouteCountGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1DeviceRoutingVrfBgpEibgpRouteCountGet")
@@ -12783,13 +13841,15 @@ func (a *DefaultAPIService) V1DeviceRoutingVrfBgpEibgpRouteCountGetExecute(r Api
 	if r.authorization == nil {
 		return localVarReturnValue, nil, reportError("authorization is required and must be specified")
 	}
+	if r.deviceId == nil {
+		return localVarReturnValue, nil, reportError("deviceId is required and must be specified")
+	}
+	if r.vrfName == nil {
+		return localVarReturnValue, nil, reportError("vrfName is required and must be specified")
+	}
 
-	if r.deviceId != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "deviceId", r.deviceId, "form", "")
-	}
-	if r.vrfName != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "vrfName", r.vrfName, "form", "")
-	}
+	parameterAddToHeaderOrQuery(localVarQueryParams, "deviceId", r.deviceId, "form", "")
+	parameterAddToHeaderOrQuery(localVarQueryParams, "vrfName", r.vrfName, "form", "")
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
 
@@ -12885,12 +13945,14 @@ func (r ApiV1DeviceRoutingVrfBgpGraphiantEirouteCountGetRequest) VrfName(vrfName
 	return r
 }
 
-func (r ApiV1DeviceRoutingVrfBgpGraphiantEirouteCountGetRequest) Execute() (*V1DeviceRoutingVrfBgpGraphiantEirouteCountGet200Response, *http.Response, error) {
+func (r ApiV1DeviceRoutingVrfBgpGraphiantEirouteCountGetRequest) Execute() (*V1DeviceRoutingVrfBgpGraphiantEirouteCountGetResponse, *http.Response, error) {
 	return r.ApiService.V1DeviceRoutingVrfBgpGraphiantEirouteCountGetExecute(r)
 }
 
 /*
 V1DeviceRoutingVrfBgpGraphiantEirouteCountGet Method for V1DeviceRoutingVrfBgpGraphiantEirouteCountGet
+
+Get eBGP and iBGP VRF route count
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV1DeviceRoutingVrfBgpGraphiantEirouteCountGetRequest
@@ -12903,13 +13965,13 @@ func (a *DefaultAPIService) V1DeviceRoutingVrfBgpGraphiantEirouteCountGet(ctx co
 }
 
 // Execute executes the request
-//  @return V1DeviceRoutingVrfBgpGraphiantEirouteCountGet200Response
-func (a *DefaultAPIService) V1DeviceRoutingVrfBgpGraphiantEirouteCountGetExecute(r ApiV1DeviceRoutingVrfBgpGraphiantEirouteCountGetRequest) (*V1DeviceRoutingVrfBgpGraphiantEirouteCountGet200Response, *http.Response, error) {
+//  @return V1DeviceRoutingVrfBgpGraphiantEirouteCountGetResponse
+func (a *DefaultAPIService) V1DeviceRoutingVrfBgpGraphiantEirouteCountGetExecute(r ApiV1DeviceRoutingVrfBgpGraphiantEirouteCountGetRequest) (*V1DeviceRoutingVrfBgpGraphiantEirouteCountGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1DeviceRoutingVrfBgpGraphiantEirouteCountGet200Response
+		localVarReturnValue  *V1DeviceRoutingVrfBgpGraphiantEirouteCountGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1DeviceRoutingVrfBgpGraphiantEirouteCountGet")
@@ -12925,13 +13987,15 @@ func (a *DefaultAPIService) V1DeviceRoutingVrfBgpGraphiantEirouteCountGetExecute
 	if r.authorization == nil {
 		return localVarReturnValue, nil, reportError("authorization is required and must be specified")
 	}
+	if r.deviceId == nil {
+		return localVarReturnValue, nil, reportError("deviceId is required and must be specified")
+	}
+	if r.vrfName == nil {
+		return localVarReturnValue, nil, reportError("vrfName is required and must be specified")
+	}
 
-	if r.deviceId != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "deviceId", r.deviceId, "form", "")
-	}
-	if r.vrfName != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "vrfName", r.vrfName, "form", "")
-	}
+	parameterAddToHeaderOrQuery(localVarQueryParams, "deviceId", r.deviceId, "form", "")
+	parameterAddToHeaderOrQuery(localVarQueryParams, "vrfName", r.vrfName, "form", "")
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
 
@@ -13019,12 +14083,14 @@ func (r ApiV1DeviceRoutingVrfBgpRouteCountPostRequest) V1DeviceRoutingVrfBgpRout
 	return r
 }
 
-func (r ApiV1DeviceRoutingVrfBgpRouteCountPostRequest) Execute() (*V1DeviceRoutingVrfBgpRouteCountPost200Response, *http.Response, error) {
+func (r ApiV1DeviceRoutingVrfBgpRouteCountPostRequest) Execute() (*V1DeviceRoutingVrfBgpRouteCountPostResponse, *http.Response, error) {
 	return r.ApiService.V1DeviceRoutingVrfBgpRouteCountPostExecute(r)
 }
 
 /*
 V1DeviceRoutingVrfBgpRouteCountPost Method for V1DeviceRoutingVrfBgpRouteCountPost
+
+Get BGP VRF route count
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV1DeviceRoutingVrfBgpRouteCountPostRequest
@@ -13037,13 +14103,13 @@ func (a *DefaultAPIService) V1DeviceRoutingVrfBgpRouteCountPost(ctx context.Cont
 }
 
 // Execute executes the request
-//  @return V1DeviceRoutingVrfBgpRouteCountPost200Response
-func (a *DefaultAPIService) V1DeviceRoutingVrfBgpRouteCountPostExecute(r ApiV1DeviceRoutingVrfBgpRouteCountPostRequest) (*V1DeviceRoutingVrfBgpRouteCountPost200Response, *http.Response, error) {
+//  @return V1DeviceRoutingVrfBgpRouteCountPostResponse
+func (a *DefaultAPIService) V1DeviceRoutingVrfBgpRouteCountPostExecute(r ApiV1DeviceRoutingVrfBgpRouteCountPostRequest) (*V1DeviceRoutingVrfBgpRouteCountPostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1DeviceRoutingVrfBgpRouteCountPost200Response
+		localVarReturnValue  *V1DeviceRoutingVrfBgpRouteCountPostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1DeviceRoutingVrfBgpRouteCountPost")
@@ -13147,12 +14213,14 @@ func (r ApiV1DeviceSnapshotDeviceIdGetRequest) Authorization(authorization strin
 	return r
 }
 
-func (r ApiV1DeviceSnapshotDeviceIdGetRequest) Execute() (*V1DeviceSnapshotDeviceIdGet200Response, *http.Response, error) {
+func (r ApiV1DeviceSnapshotDeviceIdGetRequest) Execute() (*V1DeviceSnapshotDeviceIdGetResponse, *http.Response, error) {
 	return r.ApiService.V1DeviceSnapshotDeviceIdGetExecute(r)
 }
 
 /*
 V1DeviceSnapshotDeviceIdGet Method for V1DeviceSnapshotDeviceIdGet
+
+Get all of a device's snapshots
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @param deviceId 
@@ -13167,13 +14235,13 @@ func (a *DefaultAPIService) V1DeviceSnapshotDeviceIdGet(ctx context.Context, dev
 }
 
 // Execute executes the request
-//  @return V1DeviceSnapshotDeviceIdGet200Response
-func (a *DefaultAPIService) V1DeviceSnapshotDeviceIdGetExecute(r ApiV1DeviceSnapshotDeviceIdGetRequest) (*V1DeviceSnapshotDeviceIdGet200Response, *http.Response, error) {
+//  @return V1DeviceSnapshotDeviceIdGetResponse
+func (a *DefaultAPIService) V1DeviceSnapshotDeviceIdGetExecute(r ApiV1DeviceSnapshotDeviceIdGetRequest) (*V1DeviceSnapshotDeviceIdGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1DeviceSnapshotDeviceIdGet200Response
+		localVarReturnValue  *V1DeviceSnapshotDeviceIdGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1DeviceSnapshotDeviceIdGet")
@@ -13272,12 +14340,14 @@ func (r ApiV1DeviceSnapshotGetRequest) Authorization(authorization string) ApiV1
 	return r
 }
 
-func (r ApiV1DeviceSnapshotGetRequest) Execute() (*V1DeviceSnapshotGet200Response, *http.Response, error) {
+func (r ApiV1DeviceSnapshotGetRequest) Execute() (*V1DeviceSnapshotGetResponse, *http.Response, error) {
 	return r.ApiService.V1DeviceSnapshotGetExecute(r)
 }
 
 /*
 V1DeviceSnapshotGet Method for V1DeviceSnapshotGet
+
+Get the specified device snapshots using the snapshot id
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV1DeviceSnapshotGetRequest
@@ -13290,13 +14360,13 @@ func (a *DefaultAPIService) V1DeviceSnapshotGet(ctx context.Context) ApiV1Device
 }
 
 // Execute executes the request
-//  @return V1DeviceSnapshotGet200Response
-func (a *DefaultAPIService) V1DeviceSnapshotGetExecute(r ApiV1DeviceSnapshotGetRequest) (*V1DeviceSnapshotGet200Response, *http.Response, error) {
+//  @return V1DeviceSnapshotGetResponse
+func (a *DefaultAPIService) V1DeviceSnapshotGetExecute(r ApiV1DeviceSnapshotGetRequest) (*V1DeviceSnapshotGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1DeviceSnapshotGet200Response
+		localVarReturnValue  *V1DeviceSnapshotGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1DeviceSnapshotGet")
@@ -13406,6 +14476,8 @@ func (r ApiV1DeviceSnapshotPostRequest) Execute() (map[string]interface{}, *http
 
 /*
 V1DeviceSnapshotPost Method for V1DeviceSnapshotPost
+
+Create a device snapshot
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV1DeviceSnapshotPostRequest
@@ -13540,6 +14612,8 @@ func (r ApiV1DeviceSnapshotPutRequest) Execute() (map[string]interface{}, *http.
 /*
 V1DeviceSnapshotPut Method for V1DeviceSnapshotPut
 
+Update an existing device snapshot
+
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV1DeviceSnapshotPutRequest
 */
@@ -13668,6 +14742,8 @@ func (r ApiV1DeviceSnapshotSnapshotIdDeleteRequest) Execute() (map[string]interf
 /*
 V1DeviceSnapshotSnapshotIdDelete Method for V1DeviceSnapshotSnapshotIdDelete
 
+Delete specified device snapshot
+
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @param snapshotId 
  @return ApiV1DeviceSnapshotSnapshotIdDeleteRequest
@@ -13792,7 +14868,7 @@ func (r ApiV1DeviceStatusHistoryPostRequest) V1DeviceStatusHistoryPostRequest(v1
 	return r
 }
 
-func (r ApiV1DeviceStatusHistoryPostRequest) Execute() (*V1DeviceStatusHistoryPost200Response, *http.Response, error) {
+func (r ApiV1DeviceStatusHistoryPostRequest) Execute() (*V1DeviceStatusHistoryPostResponse, *http.Response, error) {
 	return r.ApiService.V1DeviceStatusHistoryPostExecute(r)
 }
 
@@ -13810,13 +14886,13 @@ func (a *DefaultAPIService) V1DeviceStatusHistoryPost(ctx context.Context) ApiV1
 }
 
 // Execute executes the request
-//  @return V1DeviceStatusHistoryPost200Response
-func (a *DefaultAPIService) V1DeviceStatusHistoryPostExecute(r ApiV1DeviceStatusHistoryPostRequest) (*V1DeviceStatusHistoryPost200Response, *http.Response, error) {
+//  @return V1DeviceStatusHistoryPostResponse
+func (a *DefaultAPIService) V1DeviceStatusHistoryPostExecute(r ApiV1DeviceStatusHistoryPostRequest) (*V1DeviceStatusHistoryPostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1DeviceStatusHistoryPost200Response
+		localVarReturnValue  *V1DeviceStatusHistoryPostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1DeviceStatusHistoryPost")
@@ -13911,7 +14987,7 @@ type ApiV1DeviceStatusPostRequest struct {
 	ctx context.Context
 	ApiService *DefaultAPIService
 	authorization *string
-	v1DeviceStatusHistoryPostRequest *V1DeviceStatusHistoryPostRequest
+	v1DeviceStatusPostRequest *V1DeviceStatusPostRequest
 }
 
 // Bearer token. Format: Bearer &lt;your_token_here&gt;
@@ -13920,12 +14996,12 @@ func (r ApiV1DeviceStatusPostRequest) Authorization(authorization string) ApiV1D
 	return r
 }
 
-func (r ApiV1DeviceStatusPostRequest) V1DeviceStatusHistoryPostRequest(v1DeviceStatusHistoryPostRequest V1DeviceStatusHistoryPostRequest) ApiV1DeviceStatusPostRequest {
-	r.v1DeviceStatusHistoryPostRequest = &v1DeviceStatusHistoryPostRequest
+func (r ApiV1DeviceStatusPostRequest) V1DeviceStatusPostRequest(v1DeviceStatusPostRequest V1DeviceStatusPostRequest) ApiV1DeviceStatusPostRequest {
+	r.v1DeviceStatusPostRequest = &v1DeviceStatusPostRequest
 	return r
 }
 
-func (r ApiV1DeviceStatusPostRequest) Execute() (*V1DeviceStatusPost200Response, *http.Response, error) {
+func (r ApiV1DeviceStatusPostRequest) Execute() (*V1DeviceStatusPostResponse, *http.Response, error) {
 	return r.ApiService.V1DeviceStatusPostExecute(r)
 }
 
@@ -13943,13 +15019,13 @@ func (a *DefaultAPIService) V1DeviceStatusPost(ctx context.Context) ApiV1DeviceS
 }
 
 // Execute executes the request
-//  @return V1DeviceStatusPost200Response
-func (a *DefaultAPIService) V1DeviceStatusPostExecute(r ApiV1DeviceStatusPostRequest) (*V1DeviceStatusPost200Response, *http.Response, error) {
+//  @return V1DeviceStatusPostResponse
+func (a *DefaultAPIService) V1DeviceStatusPostExecute(r ApiV1DeviceStatusPostRequest) (*V1DeviceStatusPostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1DeviceStatusPost200Response
+		localVarReturnValue  *V1DeviceStatusPostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1DeviceStatusPost")
@@ -13965,8 +15041,8 @@ func (a *DefaultAPIService) V1DeviceStatusPostExecute(r ApiV1DeviceStatusPostReq
 	if r.authorization == nil {
 		return localVarReturnValue, nil, reportError("authorization is required and must be specified")
 	}
-	if r.v1DeviceStatusHistoryPostRequest == nil {
-		return localVarReturnValue, nil, reportError("v1DeviceStatusHistoryPostRequest is required and must be specified")
+	if r.v1DeviceStatusPostRequest == nil {
+		return localVarReturnValue, nil, reportError("v1DeviceStatusPostRequest is required and must be specified")
 	}
 
 	// to determine the Content-Type header
@@ -13988,7 +15064,7 @@ func (a *DefaultAPIService) V1DeviceStatusPostExecute(r ApiV1DeviceStatusPostReq
 	}
 	parameterAddToHeaderOrQuery(localVarHeaderParams, "Authorization", r.authorization, "simple", "")
 	// body params
-	localVarPostBody = r.v1DeviceStatusHistoryPostRequest
+	localVarPostBody = r.v1DeviceStatusPostRequest
 	if r.ctx != nil {
 		// API Key Authentication
 		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
@@ -14058,7 +15134,7 @@ func (r ApiV1DevicesBringupPostRequest) V1DevicesBringupPostRequest(v1DevicesBri
 	return r
 }
 
-func (r ApiV1DevicesBringupPostRequest) Execute() (*V1DevicesBringupPost200Response, *http.Response, error) {
+func (r ApiV1DevicesBringupPostRequest) Execute() (*V1DevicesBringupPostResponse, *http.Response, error) {
 	return r.ApiService.V1DevicesBringupPostExecute(r)
 }
 
@@ -14076,13 +15152,13 @@ func (a *DefaultAPIService) V1DevicesBringupPost(ctx context.Context) ApiV1Devic
 }
 
 // Execute executes the request
-//  @return V1DevicesBringupPost200Response
-func (a *DefaultAPIService) V1DevicesBringupPostExecute(r ApiV1DevicesBringupPostRequest) (*V1DevicesBringupPost200Response, *http.Response, error) {
+//  @return V1DevicesBringupPostResponse
+func (a *DefaultAPIService) V1DevicesBringupPostExecute(r ApiV1DevicesBringupPostRequest) (*V1DevicesBringupPostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1DevicesBringupPost200Response
+		localVarReturnValue  *V1DevicesBringupPostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1DevicesBringupPost")
@@ -14324,12 +15400,14 @@ func (r ApiV1DevicesBringupTokenPostRequest) V1DevicesBringupTokenPostRequest(v1
 	return r
 }
 
-func (r ApiV1DevicesBringupTokenPostRequest) Execute() (*V1DevicesBringupTokenPost200Response, *http.Response, error) {
+func (r ApiV1DevicesBringupTokenPostRequest) Execute() (*V1DevicesBringupTokenPostResponse, *http.Response, error) {
 	return r.ApiService.V1DevicesBringupTokenPostExecute(r)
 }
 
 /*
 V1DevicesBringupTokenPost Method for V1DevicesBringupTokenPost
+
+VM edge onboarding token
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV1DevicesBringupTokenPostRequest
@@ -14342,13 +15420,13 @@ func (a *DefaultAPIService) V1DevicesBringupTokenPost(ctx context.Context) ApiV1
 }
 
 // Execute executes the request
-//  @return V1DevicesBringupTokenPost200Response
-func (a *DefaultAPIService) V1DevicesBringupTokenPostExecute(r ApiV1DevicesBringupTokenPostRequest) (*V1DevicesBringupTokenPost200Response, *http.Response, error) {
+//  @return V1DevicesBringupTokenPostResponse
+func (a *DefaultAPIService) V1DevicesBringupTokenPostExecute(r ApiV1DevicesBringupTokenPostRequest) (*V1DevicesBringupTokenPostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1DevicesBringupTokenPost200Response
+		localVarReturnValue  *V1DevicesBringupTokenPostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1DevicesBringupTokenPost")
@@ -14585,12 +15663,14 @@ func (r ApiV1DevicesDeviceIdArpGetRequest) Authorization(authorization string) A
 	return r
 }
 
-func (r ApiV1DevicesDeviceIdArpGetRequest) Execute() (*V1DevicesDeviceIdArpGet200Response, *http.Response, error) {
+func (r ApiV1DevicesDeviceIdArpGetRequest) Execute() (*V1DevicesDeviceIdArpGetResponse, *http.Response, error) {
 	return r.ApiService.V1DevicesDeviceIdArpGetExecute(r)
 }
 
 /*
 V1DevicesDeviceIdArpGet Method for V1DevicesDeviceIdArpGet
+
+Get ARP monitoring table for a device
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @param deviceId 
@@ -14605,13 +15685,13 @@ func (a *DefaultAPIService) V1DevicesDeviceIdArpGet(ctx context.Context, deviceI
 }
 
 // Execute executes the request
-//  @return V1DevicesDeviceIdArpGet200Response
-func (a *DefaultAPIService) V1DevicesDeviceIdArpGetExecute(r ApiV1DevicesDeviceIdArpGetRequest) (*V1DevicesDeviceIdArpGet200Response, *http.Response, error) {
+//  @return V1DevicesDeviceIdArpGetResponse
+func (a *DefaultAPIService) V1DevicesDeviceIdArpGetExecute(r ApiV1DevicesDeviceIdArpGetRequest) (*V1DevicesDeviceIdArpGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1DevicesDeviceIdArpGet200Response
+		localVarReturnValue  *V1DevicesDeviceIdArpGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1DevicesDeviceIdArpGet")
@@ -14711,12 +15791,14 @@ func (r ApiV1DevicesDeviceIdCandidateCircuitsGetRequest) Authorization(authoriza
 	return r
 }
 
-func (r ApiV1DevicesDeviceIdCandidateCircuitsGetRequest) Execute() (*V1DevicesDeviceIdCandidateCircuitsGet200Response, *http.Response, error) {
+func (r ApiV1DevicesDeviceIdCandidateCircuitsGetRequest) Execute() (*V1DevicesDeviceIdCandidateCircuitsGetResponse, *http.Response, error) {
 	return r.ApiService.V1DevicesDeviceIdCandidateCircuitsGetExecute(r)
 }
 
 /*
 V1DevicesDeviceIdCandidateCircuitsGet Method for V1DevicesDeviceIdCandidateCircuitsGet
+
+Get the candidate circuits for a device
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @param deviceId 
@@ -14731,13 +15813,13 @@ func (a *DefaultAPIService) V1DevicesDeviceIdCandidateCircuitsGet(ctx context.Co
 }
 
 // Execute executes the request
-//  @return V1DevicesDeviceIdCandidateCircuitsGet200Response
-func (a *DefaultAPIService) V1DevicesDeviceIdCandidateCircuitsGetExecute(r ApiV1DevicesDeviceIdCandidateCircuitsGetRequest) (*V1DevicesDeviceIdCandidateCircuitsGet200Response, *http.Response, error) {
+//  @return V1DevicesDeviceIdCandidateCircuitsGetResponse
+func (a *DefaultAPIService) V1DevicesDeviceIdCandidateCircuitsGetExecute(r ApiV1DevicesDeviceIdCandidateCircuitsGetRequest) (*V1DevicesDeviceIdCandidateCircuitsGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1DevicesDeviceIdCandidateCircuitsGet200Response
+		localVarReturnValue  *V1DevicesDeviceIdCandidateCircuitsGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1DevicesDeviceIdCandidateCircuitsGet")
@@ -14837,12 +15919,14 @@ func (r ApiV1DevicesDeviceIdCircuitsVrfAssociationsGetRequest) Authorization(aut
 	return r
 }
 
-func (r ApiV1DevicesDeviceIdCircuitsVrfAssociationsGetRequest) Execute() (*V1DevicesDeviceIdCircuitsVrfAssociationsGet200Response, *http.Response, error) {
+func (r ApiV1DevicesDeviceIdCircuitsVrfAssociationsGetRequest) Execute() (*V1DevicesDeviceIdCircuitsVrfAssociationsGetResponse, *http.Response, error) {
 	return r.ApiService.V1DevicesDeviceIdCircuitsVrfAssociationsGetExecute(r)
 }
 
 /*
 V1DevicesDeviceIdCircuitsVrfAssociationsGet Method for V1DevicesDeviceIdCircuitsVrfAssociationsGet
+
+Get the VRF, interface, &, if relevant, loopback interfaces for a list of circuits
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @param deviceId 
@@ -14857,13 +15941,13 @@ func (a *DefaultAPIService) V1DevicesDeviceIdCircuitsVrfAssociationsGet(ctx cont
 }
 
 // Execute executes the request
-//  @return V1DevicesDeviceIdCircuitsVrfAssociationsGet200Response
-func (a *DefaultAPIService) V1DevicesDeviceIdCircuitsVrfAssociationsGetExecute(r ApiV1DevicesDeviceIdCircuitsVrfAssociationsGetRequest) (*V1DevicesDeviceIdCircuitsVrfAssociationsGet200Response, *http.Response, error) {
+//  @return V1DevicesDeviceIdCircuitsVrfAssociationsGetResponse
+func (a *DefaultAPIService) V1DevicesDeviceIdCircuitsVrfAssociationsGetExecute(r ApiV1DevicesDeviceIdCircuitsVrfAssociationsGetRequest) (*V1DevicesDeviceIdCircuitsVrfAssociationsGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1DevicesDeviceIdCircuitsVrfAssociationsGet200Response
+		localVarReturnValue  *V1DevicesDeviceIdCircuitsVrfAssociationsGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1DevicesDeviceIdCircuitsVrfAssociationsGet")
@@ -14969,12 +16053,14 @@ func (r ApiV1DevicesDeviceIdConfigPutRequest) V1DevicesDeviceIdConfigPutRequest(
 	return r
 }
 
-func (r ApiV1DevicesDeviceIdConfigPutRequest) Execute() (*V1DevicesDeviceIdConfigPut202Response, *http.Response, error) {
+func (r ApiV1DevicesDeviceIdConfigPutRequest) Execute() (*V1DevicesDeviceIdConfigPutResponse, *http.Response, error) {
 	return r.ApiService.V1DevicesDeviceIdConfigPutExecute(r)
 }
 
 /*
 V1DevicesDeviceIdConfigPut Method for V1DevicesDeviceIdConfigPut
+
+Update a device
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @param deviceId 
@@ -14989,13 +16075,13 @@ func (a *DefaultAPIService) V1DevicesDeviceIdConfigPut(ctx context.Context, devi
 }
 
 // Execute executes the request
-//  @return V1DevicesDeviceIdConfigPut202Response
-func (a *DefaultAPIService) V1DevicesDeviceIdConfigPutExecute(r ApiV1DevicesDeviceIdConfigPutRequest) (*V1DevicesDeviceIdConfigPut202Response, *http.Response, error) {
+//  @return V1DevicesDeviceIdConfigPutResponse
+func (a *DefaultAPIService) V1DevicesDeviceIdConfigPutExecute(r ApiV1DevicesDeviceIdConfigPutRequest) (*V1DevicesDeviceIdConfigPutResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPut
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1DevicesDeviceIdConfigPut202Response
+		localVarReturnValue  *V1DevicesDeviceIdConfigPutResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1DevicesDeviceIdConfigPut")
@@ -15100,12 +16186,14 @@ func (r ApiV1DevicesDeviceIdConnectivityGetRequest) Authorization(authorization 
 	return r
 }
 
-func (r ApiV1DevicesDeviceIdConnectivityGetRequest) Execute() (*V1DevicesDeviceIdConnectivityGet200Response, *http.Response, error) {
+func (r ApiV1DevicesDeviceIdConnectivityGetRequest) Execute() (*V1DevicesDeviceIdConnectivityGetResponse, *http.Response, error) {
 	return r.ApiService.V1DevicesDeviceIdConnectivityGetExecute(r)
 }
 
 /*
 V1DevicesDeviceIdConnectivityGet Method for V1DevicesDeviceIdConnectivityGet
+
+Get the connectivity graph for a device
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @param deviceId 
@@ -15120,13 +16208,13 @@ func (a *DefaultAPIService) V1DevicesDeviceIdConnectivityGet(ctx context.Context
 }
 
 // Execute executes the request
-//  @return V1DevicesDeviceIdConnectivityGet200Response
-func (a *DefaultAPIService) V1DevicesDeviceIdConnectivityGetExecute(r ApiV1DevicesDeviceIdConnectivityGetRequest) (*V1DevicesDeviceIdConnectivityGet200Response, *http.Response, error) {
+//  @return V1DevicesDeviceIdConnectivityGetResponse
+func (a *DefaultAPIService) V1DevicesDeviceIdConnectivityGetExecute(r ApiV1DevicesDeviceIdConnectivityGetRequest) (*V1DevicesDeviceIdConnectivityGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1DevicesDeviceIdConnectivityGet200Response
+		localVarReturnValue  *V1DevicesDeviceIdConnectivityGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1DevicesDeviceIdConnectivityGet")
@@ -15238,6 +16326,8 @@ func (r ApiV1DevicesDeviceIdControllerPeersPutRequest) Execute() (map[string]int
 
 /*
 V1DevicesDeviceIdControllerPeersPut Method for V1DevicesDeviceIdControllerPeersPut
+
+Update peer list for controller
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @param deviceId 
@@ -15363,12 +16453,14 @@ func (r ApiV1DevicesDeviceIdDhcpServerLeasesGetRequest) Authorization(authorizat
 	return r
 }
 
-func (r ApiV1DevicesDeviceIdDhcpServerLeasesGetRequest) Execute() (*V1DevicesDeviceIdDhcpServerLeasesGet200Response, *http.Response, error) {
+func (r ApiV1DevicesDeviceIdDhcpServerLeasesGetRequest) Execute() (*V1DevicesDeviceIdDhcpServerLeasesGetResponse, *http.Response, error) {
 	return r.ApiService.V1DevicesDeviceIdDhcpServerLeasesGetExecute(r)
 }
 
 /*
 V1DevicesDeviceIdDhcpServerLeasesGet Method for V1DevicesDeviceIdDhcpServerLeasesGet
+
+Get current DHCP leases for a device
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @param deviceId 
@@ -15383,13 +16475,13 @@ func (a *DefaultAPIService) V1DevicesDeviceIdDhcpServerLeasesGet(ctx context.Con
 }
 
 // Execute executes the request
-//  @return V1DevicesDeviceIdDhcpServerLeasesGet200Response
-func (a *DefaultAPIService) V1DevicesDeviceIdDhcpServerLeasesGetExecute(r ApiV1DevicesDeviceIdDhcpServerLeasesGetRequest) (*V1DevicesDeviceIdDhcpServerLeasesGet200Response, *http.Response, error) {
+//  @return V1DevicesDeviceIdDhcpServerLeasesGetResponse
+func (a *DefaultAPIService) V1DevicesDeviceIdDhcpServerLeasesGetExecute(r ApiV1DevicesDeviceIdDhcpServerLeasesGetRequest) (*V1DevicesDeviceIdDhcpServerLeasesGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1DevicesDeviceIdDhcpServerLeasesGet200Response
+		localVarReturnValue  *V1DevicesDeviceIdDhcpServerLeasesGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1DevicesDeviceIdDhcpServerLeasesGet")
@@ -15495,6 +16587,8 @@ func (r ApiV1DevicesDeviceIdDraftDeleteRequest) Execute() (map[string]interface{
 
 /*
 V1DevicesDeviceIdDraftDelete Method for V1DevicesDeviceIdDraftDelete
+
+Delete draft configuration
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @param deviceId 
@@ -15615,12 +16709,14 @@ func (r ApiV1DevicesDeviceIdDraftGetRequest) Authorization(authorization string)
 	return r
 }
 
-func (r ApiV1DevicesDeviceIdDraftGetRequest) Execute() (*V1DevicesDeviceIdDraftGet200Response, *http.Response, error) {
+func (r ApiV1DevicesDeviceIdDraftGetRequest) Execute() (*V1DevicesDeviceIdDraftGetResponse, *http.Response, error) {
 	return r.ApiService.V1DevicesDeviceIdDraftGetExecute(r)
 }
 
 /*
 V1DevicesDeviceIdDraftGet Method for V1DevicesDeviceIdDraftGet
+
+Get draft configuration
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @param deviceId 
@@ -15635,13 +16731,13 @@ func (a *DefaultAPIService) V1DevicesDeviceIdDraftGet(ctx context.Context, devic
 }
 
 // Execute executes the request
-//  @return V1DevicesDeviceIdDraftGet200Response
-func (a *DefaultAPIService) V1DevicesDeviceIdDraftGetExecute(r ApiV1DevicesDeviceIdDraftGetRequest) (*V1DevicesDeviceIdDraftGet200Response, *http.Response, error) {
+//  @return V1DevicesDeviceIdDraftGetResponse
+func (a *DefaultAPIService) V1DevicesDeviceIdDraftGetExecute(r ApiV1DevicesDeviceIdDraftGetRequest) (*V1DevicesDeviceIdDraftGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1DevicesDeviceIdDraftGet200Response
+		localVarReturnValue  *V1DevicesDeviceIdDraftGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1DevicesDeviceIdDraftGet")
@@ -15747,12 +16843,14 @@ func (r ApiV1DevicesDeviceIdDraftPostRequest) V1DevicesDeviceIdDraftPostRequest(
 	return r
 }
 
-func (r ApiV1DevicesDeviceIdDraftPostRequest) Execute() (*V1DevicesDeviceIdDraftPost201Response, *http.Response, error) {
+func (r ApiV1DevicesDeviceIdDraftPostRequest) Execute() (*V1DevicesDeviceIdDraftPostResponse, *http.Response, error) {
 	return r.ApiService.V1DevicesDeviceIdDraftPostExecute(r)
 }
 
 /*
 V1DevicesDeviceIdDraftPost Method for V1DevicesDeviceIdDraftPost
+
+Save draft configuration
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @param deviceId 
@@ -15767,13 +16865,13 @@ func (a *DefaultAPIService) V1DevicesDeviceIdDraftPost(ctx context.Context, devi
 }
 
 // Execute executes the request
-//  @return V1DevicesDeviceIdDraftPost201Response
-func (a *DefaultAPIService) V1DevicesDeviceIdDraftPostExecute(r ApiV1DevicesDeviceIdDraftPostRequest) (*V1DevicesDeviceIdDraftPost201Response, *http.Response, error) {
+//  @return V1DevicesDeviceIdDraftPostResponse
+func (a *DefaultAPIService) V1DevicesDeviceIdDraftPostExecute(r ApiV1DevicesDeviceIdDraftPostRequest) (*V1DevicesDeviceIdDraftPostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1DevicesDeviceIdDraftPost201Response
+		localVarReturnValue  *V1DevicesDeviceIdDraftPostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1DevicesDeviceIdDraftPost")
@@ -15878,12 +16976,14 @@ func (r ApiV1DevicesDeviceIdEdgesGetRequest) Authorization(authorization string)
 	return r
 }
 
-func (r ApiV1DevicesDeviceIdEdgesGetRequest) Execute() (*V1DevicesDeviceIdEdgesGet200Response, *http.Response, error) {
+func (r ApiV1DevicesDeviceIdEdgesGetRequest) Execute() (*V1DevicesDeviceIdEdgesGetResponse, *http.Response, error) {
 	return r.ApiService.V1DevicesDeviceIdEdgesGetExecute(r)
 }
 
 /*
 V1DevicesDeviceIdEdgesGet Method for V1DevicesDeviceIdEdgesGet
+
+Get a list of candidate edges for a Core, ODP server or T2
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @param deviceId 
@@ -15898,13 +16998,13 @@ func (a *DefaultAPIService) V1DevicesDeviceIdEdgesGet(ctx context.Context, devic
 }
 
 // Execute executes the request
-//  @return V1DevicesDeviceIdEdgesGet200Response
-func (a *DefaultAPIService) V1DevicesDeviceIdEdgesGetExecute(r ApiV1DevicesDeviceIdEdgesGetRequest) (*V1DevicesDeviceIdEdgesGet200Response, *http.Response, error) {
+//  @return V1DevicesDeviceIdEdgesGetResponse
+func (a *DefaultAPIService) V1DevicesDeviceIdEdgesGetExecute(r ApiV1DevicesDeviceIdEdgesGetRequest) (*V1DevicesDeviceIdEdgesGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1DevicesDeviceIdEdgesGet200Response
+		localVarReturnValue  *V1DevicesDeviceIdEdgesGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1DevicesDeviceIdEdgesGet")
@@ -16004,12 +17104,14 @@ func (r ApiV1DevicesDeviceIdGetRequest) Authorization(authorization string) ApiV
 	return r
 }
 
-func (r ApiV1DevicesDeviceIdGetRequest) Execute() (*V1DevicesDeviceIdGet200Response, *http.Response, error) {
+func (r ApiV1DevicesDeviceIdGetRequest) Execute() (*V1DevicesDeviceIdGetResponse, *http.Response, error) {
 	return r.ApiService.V1DevicesDeviceIdGetExecute(r)
 }
 
 /*
 V1DevicesDeviceIdGet Method for V1DevicesDeviceIdGet
+
+Get a specific device
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @param deviceId 
@@ -16024,13 +17126,13 @@ func (a *DefaultAPIService) V1DevicesDeviceIdGet(ctx context.Context, deviceId i
 }
 
 // Execute executes the request
-//  @return V1DevicesDeviceIdGet200Response
-func (a *DefaultAPIService) V1DevicesDeviceIdGetExecute(r ApiV1DevicesDeviceIdGetRequest) (*V1DevicesDeviceIdGet200Response, *http.Response, error) {
+//  @return V1DevicesDeviceIdGetResponse
+func (a *DefaultAPIService) V1DevicesDeviceIdGetExecute(r ApiV1DevicesDeviceIdGetRequest) (*V1DevicesDeviceIdGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1DevicesDeviceIdGet200Response
+		localVarReturnValue  *V1DevicesDeviceIdGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1DevicesDeviceIdGet")
@@ -16130,12 +17232,14 @@ func (r ApiV1DevicesDeviceIdInterfacesGetRequest) Authorization(authorization st
 	return r
 }
 
-func (r ApiV1DevicesDeviceIdInterfacesGetRequest) Execute() (*V1DevicesDeviceIdInterfacesGet200Response, *http.Response, error) {
+func (r ApiV1DevicesDeviceIdInterfacesGetRequest) Execute() (*V1DevicesDeviceIdInterfacesGetResponse, *http.Response, error) {
 	return r.ApiService.V1DevicesDeviceIdInterfacesGetExecute(r)
 }
 
 /*
 V1DevicesDeviceIdInterfacesGet Method for V1DevicesDeviceIdInterfacesGet
+
+Get interfaces for the given device
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @param deviceId 
@@ -16150,13 +17254,13 @@ func (a *DefaultAPIService) V1DevicesDeviceIdInterfacesGet(ctx context.Context, 
 }
 
 // Execute executes the request
-//  @return V1DevicesDeviceIdInterfacesGet200Response
-func (a *DefaultAPIService) V1DevicesDeviceIdInterfacesGetExecute(r ApiV1DevicesDeviceIdInterfacesGetRequest) (*V1DevicesDeviceIdInterfacesGet200Response, *http.Response, error) {
+//  @return V1DevicesDeviceIdInterfacesGetResponse
+func (a *DefaultAPIService) V1DevicesDeviceIdInterfacesGetExecute(r ApiV1DevicesDeviceIdInterfacesGetRequest) (*V1DevicesDeviceIdInterfacesGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1DevicesDeviceIdInterfacesGet200Response
+		localVarReturnValue  *V1DevicesDeviceIdInterfacesGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1DevicesDeviceIdInterfacesGet")
@@ -16257,12 +17361,14 @@ func (r ApiV1DevicesDeviceIdJobsJobIdGetRequest) Authorization(authorization str
 	return r
 }
 
-func (r ApiV1DevicesDeviceIdJobsJobIdGetRequest) Execute() (*V1DevicesDeviceIdJobsJobIdGet200Response, *http.Response, error) {
+func (r ApiV1DevicesDeviceIdJobsJobIdGetRequest) Execute() (*V1DevicesDeviceIdJobsJobIdGetResponse, *http.Response, error) {
 	return r.ApiService.V1DevicesDeviceIdJobsJobIdGetExecute(r)
 }
 
 /*
 V1DevicesDeviceIdJobsJobIdGet Method for V1DevicesDeviceIdJobsJobIdGet
+
+Get device job status
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @param deviceId 
@@ -16279,13 +17385,13 @@ func (a *DefaultAPIService) V1DevicesDeviceIdJobsJobIdGet(ctx context.Context, d
 }
 
 // Execute executes the request
-//  @return V1DevicesDeviceIdJobsJobIdGet200Response
-func (a *DefaultAPIService) V1DevicesDeviceIdJobsJobIdGetExecute(r ApiV1DevicesDeviceIdJobsJobIdGetRequest) (*V1DevicesDeviceIdJobsJobIdGet200Response, *http.Response, error) {
+//  @return V1DevicesDeviceIdJobsJobIdGetResponse
+func (a *DefaultAPIService) V1DevicesDeviceIdJobsJobIdGetExecute(r ApiV1DevicesDeviceIdJobsJobIdGetRequest) (*V1DevicesDeviceIdJobsJobIdGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1DevicesDeviceIdJobsJobIdGet200Response
+		localVarReturnValue  *V1DevicesDeviceIdJobsJobIdGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1DevicesDeviceIdJobsJobIdGet")
@@ -16386,12 +17492,14 @@ func (r ApiV1DevicesDeviceIdNdcacheGetRequest) Authorization(authorization strin
 	return r
 }
 
-func (r ApiV1DevicesDeviceIdNdcacheGetRequest) Execute() (*V1DevicesDeviceIdNdcacheGet200Response, *http.Response, error) {
+func (r ApiV1DevicesDeviceIdNdcacheGetRequest) Execute() (*V1DevicesDeviceIdNdcacheGetResponse, *http.Response, error) {
 	return r.ApiService.V1DevicesDeviceIdNdcacheGetExecute(r)
 }
 
 /*
 V1DevicesDeviceIdNdcacheGet Method for V1DevicesDeviceIdNdcacheGet
+
+Get ND ipv6 Cache for a device
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @param deviceId 
@@ -16406,13 +17514,13 @@ func (a *DefaultAPIService) V1DevicesDeviceIdNdcacheGet(ctx context.Context, dev
 }
 
 // Execute executes the request
-//  @return V1DevicesDeviceIdNdcacheGet200Response
-func (a *DefaultAPIService) V1DevicesDeviceIdNdcacheGetExecute(r ApiV1DevicesDeviceIdNdcacheGetRequest) (*V1DevicesDeviceIdNdcacheGet200Response, *http.Response, error) {
+//  @return V1DevicesDeviceIdNdcacheGetResponse
+func (a *DefaultAPIService) V1DevicesDeviceIdNdcacheGetExecute(r ApiV1DevicesDeviceIdNdcacheGetRequest) (*V1DevicesDeviceIdNdcacheGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1DevicesDeviceIdNdcacheGet200Response
+		localVarReturnValue  *V1DevicesDeviceIdNdcacheGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1DevicesDeviceIdNdcacheGet")
@@ -16512,7 +17620,7 @@ func (r ApiV1DevicesDeviceIdOspfv2DefaultOriginateGetRequest) Authorization(auth
 	return r
 }
 
-func (r ApiV1DevicesDeviceIdOspfv2DefaultOriginateGetRequest) Execute() (*V1DevicesDeviceIdOspfv2DefaultOriginateGet200Response, *http.Response, error) {
+func (r ApiV1DevicesDeviceIdOspfv2DefaultOriginateGetRequest) Execute() (*V1DevicesDeviceIdOspfv2DefaultOriginateGetResponse, *http.Response, error) {
 	return r.ApiService.V1DevicesDeviceIdOspfv2DefaultOriginateGetExecute(r)
 }
 
@@ -16532,13 +17640,13 @@ func (a *DefaultAPIService) V1DevicesDeviceIdOspfv2DefaultOriginateGet(ctx conte
 }
 
 // Execute executes the request
-//  @return V1DevicesDeviceIdOspfv2DefaultOriginateGet200Response
-func (a *DefaultAPIService) V1DevicesDeviceIdOspfv2DefaultOriginateGetExecute(r ApiV1DevicesDeviceIdOspfv2DefaultOriginateGetRequest) (*V1DevicesDeviceIdOspfv2DefaultOriginateGet200Response, *http.Response, error) {
+//  @return V1DevicesDeviceIdOspfv2DefaultOriginateGetResponse
+func (a *DefaultAPIService) V1DevicesDeviceIdOspfv2DefaultOriginateGetExecute(r ApiV1DevicesDeviceIdOspfv2DefaultOriginateGetRequest) (*V1DevicesDeviceIdOspfv2DefaultOriginateGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1DevicesDeviceIdOspfv2DefaultOriginateGet200Response
+		localVarReturnValue  *V1DevicesDeviceIdOspfv2DefaultOriginateGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1DevicesDeviceIdOspfv2DefaultOriginateGet")
@@ -16638,7 +17746,7 @@ func (r ApiV1DevicesDeviceIdOspfv3DefaultOriginateGetRequest) Authorization(auth
 	return r
 }
 
-func (r ApiV1DevicesDeviceIdOspfv3DefaultOriginateGetRequest) Execute() (*V1DevicesDeviceIdOspfv2DefaultOriginateGet200Response, *http.Response, error) {
+func (r ApiV1DevicesDeviceIdOspfv3DefaultOriginateGetRequest) Execute() (*V1DevicesDeviceIdOspfv3DefaultOriginateGetResponse, *http.Response, error) {
 	return r.ApiService.V1DevicesDeviceIdOspfv3DefaultOriginateGetExecute(r)
 }
 
@@ -16658,13 +17766,13 @@ func (a *DefaultAPIService) V1DevicesDeviceIdOspfv3DefaultOriginateGet(ctx conte
 }
 
 // Execute executes the request
-//  @return V1DevicesDeviceIdOspfv2DefaultOriginateGet200Response
-func (a *DefaultAPIService) V1DevicesDeviceIdOspfv3DefaultOriginateGetExecute(r ApiV1DevicesDeviceIdOspfv3DefaultOriginateGetRequest) (*V1DevicesDeviceIdOspfv2DefaultOriginateGet200Response, *http.Response, error) {
+//  @return V1DevicesDeviceIdOspfv3DefaultOriginateGetResponse
+func (a *DefaultAPIService) V1DevicesDeviceIdOspfv3DefaultOriginateGetExecute(r ApiV1DevicesDeviceIdOspfv3DefaultOriginateGetRequest) (*V1DevicesDeviceIdOspfv3DefaultOriginateGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1DevicesDeviceIdOspfv2DefaultOriginateGet200Response
+		localVarReturnValue  *V1DevicesDeviceIdOspfv3DefaultOriginateGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1DevicesDeviceIdOspfv3DefaultOriginateGet")
@@ -16764,12 +17872,14 @@ func (r ApiV1DevicesDeviceIdPolicyApplicationsGetRequest) Authorization(authoriz
 	return r
 }
 
-func (r ApiV1DevicesDeviceIdPolicyApplicationsGetRequest) Execute() (*V1PolicyApplicationsGet200Response, *http.Response, error) {
+func (r ApiV1DevicesDeviceIdPolicyApplicationsGetRequest) Execute() (*V1DevicesDeviceIdPolicyApplicationsGetResponse, *http.Response, error) {
 	return r.ApiService.V1DevicesDeviceIdPolicyApplicationsGetExecute(r)
 }
 
 /*
 V1DevicesDeviceIdPolicyApplicationsGet Method for V1DevicesDeviceIdPolicyApplicationsGet
+
+Get a list of builtin DPI applications able to be configured on a given device based on GNOS version
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @param deviceId 
@@ -16784,13 +17894,13 @@ func (a *DefaultAPIService) V1DevicesDeviceIdPolicyApplicationsGet(ctx context.C
 }
 
 // Execute executes the request
-//  @return V1PolicyApplicationsGet200Response
-func (a *DefaultAPIService) V1DevicesDeviceIdPolicyApplicationsGetExecute(r ApiV1DevicesDeviceIdPolicyApplicationsGetRequest) (*V1PolicyApplicationsGet200Response, *http.Response, error) {
+//  @return V1DevicesDeviceIdPolicyApplicationsGetResponse
+func (a *DefaultAPIService) V1DevicesDeviceIdPolicyApplicationsGetExecute(r ApiV1DevicesDeviceIdPolicyApplicationsGetRequest) (*V1DevicesDeviceIdPolicyApplicationsGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1PolicyApplicationsGet200Response
+		localVarReturnValue  *V1DevicesDeviceIdPolicyApplicationsGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1DevicesDeviceIdPolicyApplicationsGet")
@@ -16890,12 +18000,14 @@ func (r ApiV1DevicesDeviceIdPolicyCustomapplicationsGetRequest) Authorization(au
 	return r
 }
 
-func (r ApiV1DevicesDeviceIdPolicyCustomapplicationsGetRequest) Execute() (*V1PolicyApplicationsGet200Response, *http.Response, error) {
+func (r ApiV1DevicesDeviceIdPolicyCustomapplicationsGetRequest) Execute() (*V1DevicesDeviceIdPolicyCustomapplicationsGetResponse, *http.Response, error) {
 	return r.ApiService.V1DevicesDeviceIdPolicyCustomapplicationsGetExecute(r)
 }
 
 /*
 V1DevicesDeviceIdPolicyCustomapplicationsGet Method for V1DevicesDeviceIdPolicyCustomapplicationsGet
+
+Get a list of custom DPI applications able to be configured on a given device based on GNOS version
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @param deviceId 
@@ -16910,13 +18022,13 @@ func (a *DefaultAPIService) V1DevicesDeviceIdPolicyCustomapplicationsGet(ctx con
 }
 
 // Execute executes the request
-//  @return V1PolicyApplicationsGet200Response
-func (a *DefaultAPIService) V1DevicesDeviceIdPolicyCustomapplicationsGetExecute(r ApiV1DevicesDeviceIdPolicyCustomapplicationsGetRequest) (*V1PolicyApplicationsGet200Response, *http.Response, error) {
+//  @return V1DevicesDeviceIdPolicyCustomapplicationsGetResponse
+func (a *DefaultAPIService) V1DevicesDeviceIdPolicyCustomapplicationsGetExecute(r ApiV1DevicesDeviceIdPolicyCustomapplicationsGetRequest) (*V1DevicesDeviceIdPolicyCustomapplicationsGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1PolicyApplicationsGet200Response
+		localVarReturnValue  *V1DevicesDeviceIdPolicyCustomapplicationsGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1DevicesDeviceIdPolicyCustomapplicationsGet")
@@ -17016,12 +18128,14 @@ func (r ApiV1DevicesDeviceIdPolicyZonepairsGetRequest) Authorization(authorizati
 	return r
 }
 
-func (r ApiV1DevicesDeviceIdPolicyZonepairsGetRequest) Execute() (*V1DevicesDeviceIdPolicyZonepairsGet200Response, *http.Response, error) {
+func (r ApiV1DevicesDeviceIdPolicyZonepairsGetRequest) Execute() (*V1DevicesDeviceIdPolicyZonepairsGetResponse, *http.Response, error) {
 	return r.ApiService.V1DevicesDeviceIdPolicyZonepairsGetExecute(r)
 }
 
 /*
 V1DevicesDeviceIdPolicyZonepairsGet Method for V1DevicesDeviceIdPolicyZonepairsGet
+
+Get a list of firewall zone pairs each with holding nested policy rule sets
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @param deviceId 
@@ -17036,13 +18150,13 @@ func (a *DefaultAPIService) V1DevicesDeviceIdPolicyZonepairsGet(ctx context.Cont
 }
 
 // Execute executes the request
-//  @return V1DevicesDeviceIdPolicyZonepairsGet200Response
-func (a *DefaultAPIService) V1DevicesDeviceIdPolicyZonepairsGetExecute(r ApiV1DevicesDeviceIdPolicyZonepairsGetRequest) (*V1DevicesDeviceIdPolicyZonepairsGet200Response, *http.Response, error) {
+//  @return V1DevicesDeviceIdPolicyZonepairsGetResponse
+func (a *DefaultAPIService) V1DevicesDeviceIdPolicyZonepairsGetExecute(r ApiV1DevicesDeviceIdPolicyZonepairsGetRequest) (*V1DevicesDeviceIdPolicyZonepairsGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1DevicesDeviceIdPolicyZonepairsGet200Response
+		localVarReturnValue  *V1DevicesDeviceIdPolicyZonepairsGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1DevicesDeviceIdPolicyZonepairsGet")
@@ -17142,7 +18256,7 @@ func (r ApiV1DevicesDeviceIdSlicePeersGetRequest) Authorization(authorization st
 	return r
 }
 
-func (r ApiV1DevicesDeviceIdSlicePeersGetRequest) Execute() (*V1DevicesDeviceIdSlicePeersGet200Response, *http.Response, error) {
+func (r ApiV1DevicesDeviceIdSlicePeersGetRequest) Execute() (*V1DevicesDeviceIdSlicePeersGetResponse, *http.Response, error) {
 	return r.ApiService.V1DevicesDeviceIdSlicePeersGetExecute(r)
 }
 
@@ -17162,13 +18276,13 @@ func (a *DefaultAPIService) V1DevicesDeviceIdSlicePeersGet(ctx context.Context, 
 }
 
 // Execute executes the request
-//  @return V1DevicesDeviceIdSlicePeersGet200Response
-func (a *DefaultAPIService) V1DevicesDeviceIdSlicePeersGetExecute(r ApiV1DevicesDeviceIdSlicePeersGetRequest) (*V1DevicesDeviceIdSlicePeersGet200Response, *http.Response, error) {
+//  @return V1DevicesDeviceIdSlicePeersGetResponse
+func (a *DefaultAPIService) V1DevicesDeviceIdSlicePeersGetExecute(r ApiV1DevicesDeviceIdSlicePeersGetRequest) (*V1DevicesDeviceIdSlicePeersGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1DevicesDeviceIdSlicePeersGet200Response
+		localVarReturnValue  *V1DevicesDeviceIdSlicePeersGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1DevicesDeviceIdSlicePeersGet")
@@ -17268,12 +18382,14 @@ func (r ApiV1DevicesDeviceIdTwampCoreGetRequest) Authorization(authorization str
 	return r
 }
 
-func (r ApiV1DevicesDeviceIdTwampCoreGetRequest) Execute() (*V1DevicesDeviceIdTwampCoreGet200Response, *http.Response, error) {
+func (r ApiV1DevicesDeviceIdTwampCoreGetRequest) Execute() (*V1DevicesDeviceIdTwampCoreGetResponse, *http.Response, error) {
 	return r.ApiService.V1DevicesDeviceIdTwampCoreGetExecute(r)
 }
 
 /*
 V1DevicesDeviceIdTwampCoreGet Method for V1DevicesDeviceIdTwampCoreGet
+
+Get core TWAMP neighbors for a given device
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @param deviceId 
@@ -17288,13 +18404,13 @@ func (a *DefaultAPIService) V1DevicesDeviceIdTwampCoreGet(ctx context.Context, d
 }
 
 // Execute executes the request
-//  @return V1DevicesDeviceIdTwampCoreGet200Response
-func (a *DefaultAPIService) V1DevicesDeviceIdTwampCoreGetExecute(r ApiV1DevicesDeviceIdTwampCoreGetRequest) (*V1DevicesDeviceIdTwampCoreGet200Response, *http.Response, error) {
+//  @return V1DevicesDeviceIdTwampCoreGetResponse
+func (a *DefaultAPIService) V1DevicesDeviceIdTwampCoreGetExecute(r ApiV1DevicesDeviceIdTwampCoreGetRequest) (*V1DevicesDeviceIdTwampCoreGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1DevicesDeviceIdTwampCoreGet200Response
+		localVarReturnValue  *V1DevicesDeviceIdTwampCoreGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1DevicesDeviceIdTwampCoreGet")
@@ -17394,12 +18510,14 @@ func (r ApiV1DevicesDeviceIdVersionsCompareGetRequest) Authorization(authorizati
 	return r
 }
 
-func (r ApiV1DevicesDeviceIdVersionsCompareGetRequest) Execute() (*V1DevicesDeviceIdVersionsCompareGet200Response, *http.Response, error) {
+func (r ApiV1DevicesDeviceIdVersionsCompareGetRequest) Execute() (*V1DevicesDeviceIdVersionsCompareGetResponse, *http.Response, error) {
 	return r.ApiService.V1DevicesDeviceIdVersionsCompareGetExecute(r)
 }
 
 /*
 V1DevicesDeviceIdVersionsCompareGet Method for V1DevicesDeviceIdVersionsCompareGet
+
+Compare device config versions
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @param deviceId 16 bytes (base64 encoded) identifier for the device.
@@ -17414,13 +18532,13 @@ func (a *DefaultAPIService) V1DevicesDeviceIdVersionsCompareGet(ctx context.Cont
 }
 
 // Execute executes the request
-//  @return V1DevicesDeviceIdVersionsCompareGet200Response
-func (a *DefaultAPIService) V1DevicesDeviceIdVersionsCompareGetExecute(r ApiV1DevicesDeviceIdVersionsCompareGetRequest) (*V1DevicesDeviceIdVersionsCompareGet200Response, *http.Response, error) {
+//  @return V1DevicesDeviceIdVersionsCompareGetResponse
+func (a *DefaultAPIService) V1DevicesDeviceIdVersionsCompareGetExecute(r ApiV1DevicesDeviceIdVersionsCompareGetRequest) (*V1DevicesDeviceIdVersionsCompareGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1DevicesDeviceIdVersionsCompareGet200Response
+		localVarReturnValue  *V1DevicesDeviceIdVersionsCompareGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1DevicesDeviceIdVersionsCompareGet")
@@ -17520,12 +18638,14 @@ func (r ApiV1DevicesDeviceIdVersionsGetRequest) Authorization(authorization stri
 	return r
 }
 
-func (r ApiV1DevicesDeviceIdVersionsGetRequest) Execute() (*V1DevicesDeviceIdVersionsGet200Response, *http.Response, error) {
+func (r ApiV1DevicesDeviceIdVersionsGetRequest) Execute() (*V1DevicesDeviceIdVersionsGetResponse, *http.Response, error) {
 	return r.ApiService.V1DevicesDeviceIdVersionsGetExecute(r)
 }
 
 /*
 V1DevicesDeviceIdVersionsGet Method for V1DevicesDeviceIdVersionsGet
+
+Get device config versions
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @param deviceId 16 bytes (base64 encoded) identifier for the device.
@@ -17540,13 +18660,13 @@ func (a *DefaultAPIService) V1DevicesDeviceIdVersionsGet(ctx context.Context, de
 }
 
 // Execute executes the request
-//  @return V1DevicesDeviceIdVersionsGet200Response
-func (a *DefaultAPIService) V1DevicesDeviceIdVersionsGetExecute(r ApiV1DevicesDeviceIdVersionsGetRequest) (*V1DevicesDeviceIdVersionsGet200Response, *http.Response, error) {
+//  @return V1DevicesDeviceIdVersionsGetResponse
+func (a *DefaultAPIService) V1DevicesDeviceIdVersionsGetExecute(r ApiV1DevicesDeviceIdVersionsGetRequest) (*V1DevicesDeviceIdVersionsGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1DevicesDeviceIdVersionsGet200Response
+		localVarReturnValue  *V1DevicesDeviceIdVersionsGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1DevicesDeviceIdVersionsGet")
@@ -17647,12 +18767,14 @@ func (r ApiV1DevicesDeviceIdVersionsVersionGetRequest) Authorization(authorizati
 	return r
 }
 
-func (r ApiV1DevicesDeviceIdVersionsVersionGetRequest) Execute() (*V1DevicesDeviceIdVersionsVersionGet200Response, *http.Response, error) {
+func (r ApiV1DevicesDeviceIdVersionsVersionGetRequest) Execute() (*V1DevicesDeviceIdVersionsVersionGetResponse, *http.Response, error) {
 	return r.ApiService.V1DevicesDeviceIdVersionsVersionGetExecute(r)
 }
 
 /*
 V1DevicesDeviceIdVersionsVersionGet Method for V1DevicesDeviceIdVersionsVersionGet
+
+Get device config for a specific version
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @param deviceId 16 bytes (base64 encoded) identifier for the device.
@@ -17669,13 +18791,13 @@ func (a *DefaultAPIService) V1DevicesDeviceIdVersionsVersionGet(ctx context.Cont
 }
 
 // Execute executes the request
-//  @return V1DevicesDeviceIdVersionsVersionGet200Response
-func (a *DefaultAPIService) V1DevicesDeviceIdVersionsVersionGetExecute(r ApiV1DevicesDeviceIdVersionsVersionGetRequest) (*V1DevicesDeviceIdVersionsVersionGet200Response, *http.Response, error) {
+//  @return V1DevicesDeviceIdVersionsVersionGetResponse
+func (a *DefaultAPIService) V1DevicesDeviceIdVersionsVersionGetExecute(r ApiV1DevicesDeviceIdVersionsVersionGetRequest) (*V1DevicesDeviceIdVersionsVersionGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1DevicesDeviceIdVersionsVersionGet200Response
+		localVarReturnValue  *V1DevicesDeviceIdVersionsVersionGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1DevicesDeviceIdVersionsVersionGet")
@@ -17779,7 +18901,7 @@ func (r ApiV1DevicesDeviceIdVrfBgpAsGetRequest) Authorization(authorization stri
 	return r
 }
 
-func (r ApiV1DevicesDeviceIdVrfBgpAsGetRequest) Execute() (*V1DevicesDeviceIdVrfBgpAsGet200Response, *http.Response, error) {
+func (r ApiV1DevicesDeviceIdVrfBgpAsGetRequest) Execute() (*V1DevicesDeviceIdVrfBgpAsGetResponse, *http.Response, error) {
 	return r.ApiService.V1DevicesDeviceIdVrfBgpAsGetExecute(r)
 }
 
@@ -17799,13 +18921,13 @@ func (a *DefaultAPIService) V1DevicesDeviceIdVrfBgpAsGet(ctx context.Context, de
 }
 
 // Execute executes the request
-//  @return V1DevicesDeviceIdVrfBgpAsGet200Response
-func (a *DefaultAPIService) V1DevicesDeviceIdVrfBgpAsGetExecute(r ApiV1DevicesDeviceIdVrfBgpAsGetRequest) (*V1DevicesDeviceIdVrfBgpAsGet200Response, *http.Response, error) {
+//  @return V1DevicesDeviceIdVrfBgpAsGetResponse
+func (a *DefaultAPIService) V1DevicesDeviceIdVrfBgpAsGetExecute(r ApiV1DevicesDeviceIdVrfBgpAsGetRequest) (*V1DevicesDeviceIdVrfBgpAsGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1DevicesDeviceIdVrfBgpAsGet200Response
+		localVarReturnValue  *V1DevicesDeviceIdVrfBgpAsGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1DevicesDeviceIdVrfBgpAsGet")
@@ -17905,7 +19027,7 @@ func (r ApiV1DevicesDeviceIdVrfProtocolsGetRequest) Authorization(authorization 
 	return r
 }
 
-func (r ApiV1DevicesDeviceIdVrfProtocolsGetRequest) Execute() (*V1DevicesDeviceIdVrfProtocolsGet200Response, *http.Response, error) {
+func (r ApiV1DevicesDeviceIdVrfProtocolsGetRequest) Execute() (*V1DevicesDeviceIdVrfProtocolsGetResponse, *http.Response, error) {
 	return r.ApiService.V1DevicesDeviceIdVrfProtocolsGetExecute(r)
 }
 
@@ -17925,13 +19047,13 @@ func (a *DefaultAPIService) V1DevicesDeviceIdVrfProtocolsGet(ctx context.Context
 }
 
 // Execute executes the request
-//  @return V1DevicesDeviceIdVrfProtocolsGet200Response
-func (a *DefaultAPIService) V1DevicesDeviceIdVrfProtocolsGetExecute(r ApiV1DevicesDeviceIdVrfProtocolsGetRequest) (*V1DevicesDeviceIdVrfProtocolsGet200Response, *http.Response, error) {
+//  @return V1DevicesDeviceIdVrfProtocolsGetResponse
+func (a *DefaultAPIService) V1DevicesDeviceIdVrfProtocolsGetExecute(r ApiV1DevicesDeviceIdVrfProtocolsGetRequest) (*V1DevicesDeviceIdVrfProtocolsGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1DevicesDeviceIdVrfProtocolsGet200Response
+		localVarReturnValue  *V1DevicesDeviceIdVrfProtocolsGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1DevicesDeviceIdVrfProtocolsGet")
@@ -18031,12 +19153,14 @@ func (r ApiV1DevicesDeviceIdVrrpGetRequest) Authorization(authorization string) 
 	return r
 }
 
-func (r ApiV1DevicesDeviceIdVrrpGetRequest) Execute() (*V1DevicesDeviceIdVrrpGet200Response, *http.Response, error) {
+func (r ApiV1DevicesDeviceIdVrrpGetRequest) Execute() (*V1DevicesDeviceIdVrrpGetResponse, *http.Response, error) {
 	return r.ApiService.V1DevicesDeviceIdVrrpGetExecute(r)
 }
 
 /*
 V1DevicesDeviceIdVrrpGet Method for V1DevicesDeviceIdVrrpGet
+
+Get VRRP monitoring table for a device
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @param deviceId 
@@ -18051,13 +19175,13 @@ func (a *DefaultAPIService) V1DevicesDeviceIdVrrpGet(ctx context.Context, device
 }
 
 // Execute executes the request
-//  @return V1DevicesDeviceIdVrrpGet200Response
-func (a *DefaultAPIService) V1DevicesDeviceIdVrrpGetExecute(r ApiV1DevicesDeviceIdVrrpGetRequest) (*V1DevicesDeviceIdVrrpGet200Response, *http.Response, error) {
+//  @return V1DevicesDeviceIdVrrpGetResponse
+func (a *DefaultAPIService) V1DevicesDeviceIdVrrpGetExecute(r ApiV1DevicesDeviceIdVrrpGetRequest) (*V1DevicesDeviceIdVrrpGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1DevicesDeviceIdVrrpGet200Response
+		localVarReturnValue  *V1DevicesDeviceIdVrrpGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1DevicesDeviceIdVrrpGet")
@@ -18156,12 +19280,14 @@ func (r ApiV1DevicesGetRequest) Authorization(authorization string) ApiV1Devices
 	return r
 }
 
-func (r ApiV1DevicesGetRequest) Execute() (*V1DevicesDeviceIdEdgesGet200Response, *http.Response, error) {
+func (r ApiV1DevicesGetRequest) Execute() (*V1DevicesGetResponse, *http.Response, error) {
 	return r.ApiService.V1DevicesGetExecute(r)
 }
 
 /*
 V1DevicesGet Method for V1DevicesGet
+
+Get devices for the current enterprise
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV1DevicesGetRequest
@@ -18174,13 +19300,13 @@ func (a *DefaultAPIService) V1DevicesGet(ctx context.Context) ApiV1DevicesGetReq
 }
 
 // Execute executes the request
-//  @return V1DevicesDeviceIdEdgesGet200Response
-func (a *DefaultAPIService) V1DevicesGetExecute(r ApiV1DevicesGetRequest) (*V1DevicesDeviceIdEdgesGet200Response, *http.Response, error) {
+//  @return V1DevicesGetResponse
+func (a *DefaultAPIService) V1DevicesGetExecute(r ApiV1DevicesGetRequest) (*V1DevicesGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1DevicesDeviceIdEdgesGet200Response
+		localVarReturnValue  *V1DevicesGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1DevicesGet")
@@ -18536,7 +19662,7 @@ type ApiV1DevicesInventoryClearReturnPostRequest struct {
 	ctx context.Context
 	ApiService *DefaultAPIService
 	authorization *string
-	v1DevicesInventoryApproveReturnPostRequest *V1DevicesInventoryApproveReturnPostRequest
+	v1DevicesInventoryClearReturnPostRequest *V1DevicesInventoryClearReturnPostRequest
 }
 
 // Bearer token. Format: Bearer &lt;your_token_here&gt;
@@ -18545,8 +19671,8 @@ func (r ApiV1DevicesInventoryClearReturnPostRequest) Authorization(authorization
 	return r
 }
 
-func (r ApiV1DevicesInventoryClearReturnPostRequest) V1DevicesInventoryApproveReturnPostRequest(v1DevicesInventoryApproveReturnPostRequest V1DevicesInventoryApproveReturnPostRequest) ApiV1DevicesInventoryClearReturnPostRequest {
-	r.v1DevicesInventoryApproveReturnPostRequest = &v1DevicesInventoryApproveReturnPostRequest
+func (r ApiV1DevicesInventoryClearReturnPostRequest) V1DevicesInventoryClearReturnPostRequest(v1DevicesInventoryClearReturnPostRequest V1DevicesInventoryClearReturnPostRequest) ApiV1DevicesInventoryClearReturnPostRequest {
+	r.v1DevicesInventoryClearReturnPostRequest = &v1DevicesInventoryClearReturnPostRequest
 	return r
 }
 
@@ -18590,8 +19716,8 @@ func (a *DefaultAPIService) V1DevicesInventoryClearReturnPostExecute(r ApiV1Devi
 	if r.authorization == nil {
 		return localVarReturnValue, nil, reportError("authorization is required and must be specified")
 	}
-	if r.v1DevicesInventoryApproveReturnPostRequest == nil {
-		return localVarReturnValue, nil, reportError("v1DevicesInventoryApproveReturnPostRequest is required and must be specified")
+	if r.v1DevicesInventoryClearReturnPostRequest == nil {
+		return localVarReturnValue, nil, reportError("v1DevicesInventoryClearReturnPostRequest is required and must be specified")
 	}
 
 	// to determine the Content-Type header
@@ -18613,7 +19739,7 @@ func (a *DefaultAPIService) V1DevicesInventoryClearReturnPostExecute(r ApiV1Devi
 	}
 	parameterAddToHeaderOrQuery(localVarHeaderParams, "Authorization", r.authorization, "simple", "")
 	// body params
-	localVarPostBody = r.v1DevicesInventoryApproveReturnPostRequest
+	localVarPostBody = r.v1DevicesInventoryClearReturnPostRequest
 	if r.ctx != nil {
 		// API Key Authentication
 		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
@@ -18810,7 +19936,7 @@ func (r ApiV1DevicesInventoryGetRequest) Authorization(authorization string) Api
 	return r
 }
 
-func (r ApiV1DevicesInventoryGetRequest) Execute() (*V1DevicesInventoryGet200Response, *http.Response, error) {
+func (r ApiV1DevicesInventoryGetRequest) Execute() (*V1DevicesInventoryGetResponse, *http.Response, error) {
 	return r.ApiService.V1DevicesInventoryGetExecute(r)
 }
 
@@ -18828,13 +19954,13 @@ func (a *DefaultAPIService) V1DevicesInventoryGet(ctx context.Context) ApiV1Devi
 }
 
 // Execute executes the request
-//  @return V1DevicesInventoryGet200Response
-func (a *DefaultAPIService) V1DevicesInventoryGetExecute(r ApiV1DevicesInventoryGetRequest) (*V1DevicesInventoryGet200Response, *http.Response, error) {
+//  @return V1DevicesInventoryGetResponse
+func (a *DefaultAPIService) V1DevicesInventoryGetExecute(r ApiV1DevicesInventoryGetRequest) (*V1DevicesInventoryGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1DevicesInventoryGet200Response
+		localVarReturnValue  *V1DevicesInventoryGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1DevicesInventoryGet")
@@ -18938,7 +20064,7 @@ func (r ApiV1DevicesInventoryPostRequest) V1DevicesInventoryPostRequest(v1Device
 	return r
 }
 
-func (r ApiV1DevicesInventoryPostRequest) Execute() (*V1DevicesInventoryPost200Response, *http.Response, error) {
+func (r ApiV1DevicesInventoryPostRequest) Execute() (*V1DevicesInventoryPostResponse, *http.Response, error) {
 	return r.ApiService.V1DevicesInventoryPostExecute(r)
 }
 
@@ -18956,13 +20082,13 @@ func (a *DefaultAPIService) V1DevicesInventoryPost(ctx context.Context) ApiV1Dev
 }
 
 // Execute executes the request
-//  @return V1DevicesInventoryPost200Response
-func (a *DefaultAPIService) V1DevicesInventoryPostExecute(r ApiV1DevicesInventoryPostRequest) (*V1DevicesInventoryPost200Response, *http.Response, error) {
+//  @return V1DevicesInventoryPostResponse
+func (a *DefaultAPIService) V1DevicesInventoryPostExecute(r ApiV1DevicesInventoryPostRequest) (*V1DevicesInventoryPostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1DevicesInventoryPost200Response
+		localVarReturnValue  *V1DevicesInventoryPostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1DevicesInventoryPost")
@@ -19057,7 +20183,7 @@ type ApiV1DevicesInventoryRequestReturnPostRequest struct {
 	ctx context.Context
 	ApiService *DefaultAPIService
 	authorization *string
-	v1DevicesInventoryApproveReturnPostRequest *V1DevicesInventoryApproveReturnPostRequest
+	v1DevicesInventoryRequestReturnPostRequest *V1DevicesInventoryRequestReturnPostRequest
 }
 
 // Bearer token. Format: Bearer &lt;your_token_here&gt;
@@ -19066,8 +20192,8 @@ func (r ApiV1DevicesInventoryRequestReturnPostRequest) Authorization(authorizati
 	return r
 }
 
-func (r ApiV1DevicesInventoryRequestReturnPostRequest) V1DevicesInventoryApproveReturnPostRequest(v1DevicesInventoryApproveReturnPostRequest V1DevicesInventoryApproveReturnPostRequest) ApiV1DevicesInventoryRequestReturnPostRequest {
-	r.v1DevicesInventoryApproveReturnPostRequest = &v1DevicesInventoryApproveReturnPostRequest
+func (r ApiV1DevicesInventoryRequestReturnPostRequest) V1DevicesInventoryRequestReturnPostRequest(v1DevicesInventoryRequestReturnPostRequest V1DevicesInventoryRequestReturnPostRequest) ApiV1DevicesInventoryRequestReturnPostRequest {
+	r.v1DevicesInventoryRequestReturnPostRequest = &v1DevicesInventoryRequestReturnPostRequest
 	return r
 }
 
@@ -19111,8 +20237,8 @@ func (a *DefaultAPIService) V1DevicesInventoryRequestReturnPostExecute(r ApiV1De
 	if r.authorization == nil {
 		return localVarReturnValue, nil, reportError("authorization is required and must be specified")
 	}
-	if r.v1DevicesInventoryApproveReturnPostRequest == nil {
-		return localVarReturnValue, nil, reportError("v1DevicesInventoryApproveReturnPostRequest is required and must be specified")
+	if r.v1DevicesInventoryRequestReturnPostRequest == nil {
+		return localVarReturnValue, nil, reportError("v1DevicesInventoryRequestReturnPostRequest is required and must be specified")
 	}
 
 	// to determine the Content-Type header
@@ -19134,7 +20260,7 @@ func (a *DefaultAPIService) V1DevicesInventoryRequestReturnPostExecute(r ApiV1De
 	}
 	parameterAddToHeaderOrQuery(localVarHeaderParams, "Authorization", r.authorization, "simple", "")
 	// body params
-	localVarPostBody = r.v1DevicesInventoryApproveReturnPostRequest
+	localVarPostBody = r.v1DevicesInventoryRequestReturnPostRequest
 	if r.ctx != nil {
 		// API Key Authentication
 		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
@@ -19330,7 +20456,7 @@ type ApiV1DevicesInventorySerialNumPostRequest struct {
 	ctx context.Context
 	ApiService *DefaultAPIService
 	authorization *string
-	v1DevicesInventoryApproveReturnPostRequest *V1DevicesInventoryApproveReturnPostRequest
+	v1DevicesInventorySerialNumPostRequest *V1DevicesInventorySerialNumPostRequest
 }
 
 // Bearer token. Format: Bearer &lt;your_token_here&gt;
@@ -19339,12 +20465,12 @@ func (r ApiV1DevicesInventorySerialNumPostRequest) Authorization(authorization s
 	return r
 }
 
-func (r ApiV1DevicesInventorySerialNumPostRequest) V1DevicesInventoryApproveReturnPostRequest(v1DevicesInventoryApproveReturnPostRequest V1DevicesInventoryApproveReturnPostRequest) ApiV1DevicesInventorySerialNumPostRequest {
-	r.v1DevicesInventoryApproveReturnPostRequest = &v1DevicesInventoryApproveReturnPostRequest
+func (r ApiV1DevicesInventorySerialNumPostRequest) V1DevicesInventorySerialNumPostRequest(v1DevicesInventorySerialNumPostRequest V1DevicesInventorySerialNumPostRequest) ApiV1DevicesInventorySerialNumPostRequest {
+	r.v1DevicesInventorySerialNumPostRequest = &v1DevicesInventorySerialNumPostRequest
 	return r
 }
 
-func (r ApiV1DevicesInventorySerialNumPostRequest) Execute() (*V1DevicesInventorySerialNumPost200Response, *http.Response, error) {
+func (r ApiV1DevicesInventorySerialNumPostRequest) Execute() (*V1DevicesInventorySerialNumPostResponse, *http.Response, error) {
 	return r.ApiService.V1DevicesInventorySerialNumPostExecute(r)
 }
 
@@ -19362,13 +20488,13 @@ func (a *DefaultAPIService) V1DevicesInventorySerialNumPost(ctx context.Context)
 }
 
 // Execute executes the request
-//  @return V1DevicesInventorySerialNumPost200Response
-func (a *DefaultAPIService) V1DevicesInventorySerialNumPostExecute(r ApiV1DevicesInventorySerialNumPostRequest) (*V1DevicesInventorySerialNumPost200Response, *http.Response, error) {
+//  @return V1DevicesInventorySerialNumPostResponse
+func (a *DefaultAPIService) V1DevicesInventorySerialNumPostExecute(r ApiV1DevicesInventorySerialNumPostRequest) (*V1DevicesInventorySerialNumPostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1DevicesInventorySerialNumPost200Response
+		localVarReturnValue  *V1DevicesInventorySerialNumPostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1DevicesInventorySerialNumPost")
@@ -19384,8 +20510,8 @@ func (a *DefaultAPIService) V1DevicesInventorySerialNumPostExecute(r ApiV1Device
 	if r.authorization == nil {
 		return localVarReturnValue, nil, reportError("authorization is required and must be specified")
 	}
-	if r.v1DevicesInventoryApproveReturnPostRequest == nil {
-		return localVarReturnValue, nil, reportError("v1DevicesInventoryApproveReturnPostRequest is required and must be specified")
+	if r.v1DevicesInventorySerialNumPostRequest == nil {
+		return localVarReturnValue, nil, reportError("v1DevicesInventorySerialNumPostRequest is required and must be specified")
 	}
 
 	// to determine the Content-Type header
@@ -19407,7 +20533,418 @@ func (a *DefaultAPIService) V1DevicesInventorySerialNumPostExecute(r ApiV1Device
 	}
 	parameterAddToHeaderOrQuery(localVarHeaderParams, "Authorization", r.authorization, "simple", "")
 	// body params
-	localVarPostBody = r.v1DevicesInventoryApproveReturnPostRequest
+	localVarPostBody = r.v1DevicesInventorySerialNumPostRequest
+	if r.ctx != nil {
+		// API Key Authentication
+		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
+			if apiKey, ok := auth["jwtAuth"]; ok {
+				var key string
+				if apiKey.Prefix != "" {
+					key = apiKey.Prefix + " " + apiKey.Key
+				} else {
+					key = apiKey.Key
+				}
+				localVarHeaderParams["authorization"] = key
+			}
+		}
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
+type ApiV1DevicesOauthAuthorizationGetRequest struct {
+	ctx context.Context
+	ApiService *DefaultAPIService
+	relayState *string
+}
+
+// Base64 encoded relay state containing OAuth parameters
+func (r ApiV1DevicesOauthAuthorizationGetRequest) RelayState(relayState string) ApiV1DevicesOauthAuthorizationGetRequest {
+	r.relayState = &relayState
+	return r
+}
+
+func (r ApiV1DevicesOauthAuthorizationGetRequest) Execute() (*V1DevicesOauthAuthorizationGetResponse, *http.Response, error) {
+	return r.ApiService.V1DevicesOauthAuthorizationGetExecute(r)
+}
+
+/*
+V1DevicesOauthAuthorizationGet Method for V1DevicesOauthAuthorizationGet
+
+Process OAuth authorization for device onboarding
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiV1DevicesOauthAuthorizationGetRequest
+*/
+func (a *DefaultAPIService) V1DevicesOauthAuthorizationGet(ctx context.Context) ApiV1DevicesOauthAuthorizationGetRequest {
+	return ApiV1DevicesOauthAuthorizationGetRequest{
+		ApiService: a,
+		ctx: ctx,
+	}
+}
+
+// Execute executes the request
+//  @return V1DevicesOauthAuthorizationGetResponse
+func (a *DefaultAPIService) V1DevicesOauthAuthorizationGetExecute(r ApiV1DevicesOauthAuthorizationGetRequest) (*V1DevicesOauthAuthorizationGetResponse, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  *V1DevicesOauthAuthorizationGetResponse
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1DevicesOauthAuthorizationGet")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/v1/devices/oauth/authorization"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+	if r.relayState == nil {
+		return localVarReturnValue, nil, reportError("relayState is required and must be specified")
+	}
+
+	parameterAddToHeaderOrQuery(localVarQueryParams, "relayState", r.relayState, "form", "")
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"application/json"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	if r.ctx != nil {
+		// API Key Authentication
+		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
+			if apiKey, ok := auth["jwtAuth"]; ok {
+				var key string
+				if apiKey.Prefix != "" {
+					key = apiKey.Prefix + " " + apiKey.Key
+				} else {
+					key = apiKey.Key
+				}
+				localVarHeaderParams["authorization"] = key
+			}
+		}
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
+type ApiV1DevicesOauthGetRequest struct {
+	ctx context.Context
+	ApiService *DefaultAPIService
+	scope *string
+	state *string
+	codeChallenge *string
+	codeChallengeMethod *string
+	pt *string
+	bm *string
+}
+
+// OAuth scope containing device type, UUID, and hostname
+func (r ApiV1DevicesOauthGetRequest) Scope(scope string) ApiV1DevicesOauthGetRequest {
+	r.scope = &scope
+	return r
+}
+
+// OAuth state parameter
+func (r ApiV1DevicesOauthGetRequest) State(state string) ApiV1DevicesOauthGetRequest {
+	r.state = &state
+	return r
+}
+
+// PKCE code challenge
+func (r ApiV1DevicesOauthGetRequest) CodeChallenge(codeChallenge string) ApiV1DevicesOauthGetRequest {
+	r.codeChallenge = &codeChallenge
+	return r
+}
+
+// PKCE code challenge method
+func (r ApiV1DevicesOauthGetRequest) CodeChallengeMethod(codeChallengeMethod string) ApiV1DevicesOauthGetRequest {
+	r.codeChallengeMethod = &codeChallengeMethod
+	return r
+}
+
+// Platform type
+func (r ApiV1DevicesOauthGetRequest) Pt(pt string) ApiV1DevicesOauthGetRequest {
+	r.pt = &pt
+	return r
+}
+
+// Boot mode
+func (r ApiV1DevicesOauthGetRequest) Bm(bm string) ApiV1DevicesOauthGetRequest {
+	r.bm = &bm
+	return r
+}
+
+func (r ApiV1DevicesOauthGetRequest) Execute() (*http.Response, error) {
+	return r.ApiService.V1DevicesOauthGetExecute(r)
+}
+
+/*
+V1DevicesOauthGet Method for V1DevicesOauthGet
+
+Redirect to OAuth authorization page for device onboarding
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiV1DevicesOauthGetRequest
+*/
+func (a *DefaultAPIService) V1DevicesOauthGet(ctx context.Context) ApiV1DevicesOauthGetRequest {
+	return ApiV1DevicesOauthGetRequest{
+		ApiService: a,
+		ctx: ctx,
+	}
+}
+
+// Execute executes the request
+func (a *DefaultAPIService) V1DevicesOauthGetExecute(r ApiV1DevicesOauthGetRequest) (*http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1DevicesOauthGet")
+	if err != nil {
+		return nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/v1/devices/oauth"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+	if r.scope == nil {
+		return nil, reportError("scope is required and must be specified")
+	}
+
+	parameterAddToHeaderOrQuery(localVarQueryParams, "scope", r.scope, "form", "")
+	if r.state != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "state", r.state, "form", "")
+	}
+	if r.codeChallenge != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "code_challenge", r.codeChallenge, "form", "")
+	}
+	if r.codeChallengeMethod != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "code_challenge_method", r.codeChallengeMethod, "form", "")
+	}
+	if r.pt != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "pt", r.pt, "form", "")
+	}
+	if r.bm != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "bm", r.bm, "form", "")
+	}
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	if r.ctx != nil {
+		// API Key Authentication
+		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
+			if apiKey, ok := auth["jwtAuth"]; ok {
+				var key string
+				if apiKey.Prefix != "" {
+					key = apiKey.Prefix + " " + apiKey.Key
+				} else {
+					key = apiKey.Key
+				}
+				localVarHeaderParams["authorization"] = key
+			}
+		}
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarHTTPResponse, err
+	}
+
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarHTTPResponse, newErr
+	}
+
+	return localVarHTTPResponse, nil
+}
+
+type ApiV1DevicesOauthPostRequest struct {
+	ctx context.Context
+	ApiService *DefaultAPIService
+	v1DevicesOauthPostRequest *V1DevicesOauthPostRequest
+}
+
+func (r ApiV1DevicesOauthPostRequest) V1DevicesOauthPostRequest(v1DevicesOauthPostRequest V1DevicesOauthPostRequest) ApiV1DevicesOauthPostRequest {
+	r.v1DevicesOauthPostRequest = &v1DevicesOauthPostRequest
+	return r
+}
+
+func (r ApiV1DevicesOauthPostRequest) Execute() (*V1DevicesOauthPostResponse, *http.Response, error) {
+	return r.ApiService.V1DevicesOauthPostExecute(r)
+}
+
+/*
+V1DevicesOauthPost Method for V1DevicesOauthPost
+
+Process OAuth client credentials for device onboarding
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiV1DevicesOauthPostRequest
+*/
+func (a *DefaultAPIService) V1DevicesOauthPost(ctx context.Context) ApiV1DevicesOauthPostRequest {
+	return ApiV1DevicesOauthPostRequest{
+		ApiService: a,
+		ctx: ctx,
+	}
+}
+
+// Execute executes the request
+//  @return V1DevicesOauthPostResponse
+func (a *DefaultAPIService) V1DevicesOauthPostExecute(r ApiV1DevicesOauthPostRequest) (*V1DevicesOauthPostResponse, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodPost
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  *V1DevicesOauthPostResponse
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1DevicesOauthPost")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/v1/devices/oauth"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+	if r.v1DevicesOauthPostRequest == nil {
+		return localVarReturnValue, nil, reportError("v1DevicesOauthPostRequest is required and must be specified")
+	}
+
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{"application/json"}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"application/json"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	// body params
+	localVarPostBody = r.v1DevicesOauthPostRequest
 	if r.ctx != nil {
 		// API Key Authentication
 		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
@@ -19471,7 +21008,7 @@ func (r ApiV1DevicesOauthRedirectGetRequest) Authorization(authorization string)
 	return r
 }
 
-func (r ApiV1DevicesOauthRedirectGetRequest) Execute() (*V1DevicesOauthRedirectGet200Response, *http.Response, error) {
+func (r ApiV1DevicesOauthRedirectGetRequest) Execute() (*V1DevicesOauthRedirectGetResponse, *http.Response, error) {
 	return r.ApiService.V1DevicesOauthRedirectGetExecute(r)
 }
 
@@ -19489,13 +21026,13 @@ func (a *DefaultAPIService) V1DevicesOauthRedirectGet(ctx context.Context) ApiV1
 }
 
 // Execute executes the request
-//  @return V1DevicesOauthRedirectGet200Response
-func (a *DefaultAPIService) V1DevicesOauthRedirectGetExecute(r ApiV1DevicesOauthRedirectGetRequest) (*V1DevicesOauthRedirectGet200Response, *http.Response, error) {
+//  @return V1DevicesOauthRedirectGetResponse
+func (a *DefaultAPIService) V1DevicesOauthRedirectGetExecute(r ApiV1DevicesOauthRedirectGetRequest) (*V1DevicesOauthRedirectGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1DevicesOauthRedirectGet200Response
+		localVarReturnValue  *V1DevicesOauthRedirectGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1DevicesOauthRedirectGet")
@@ -19747,12 +21284,14 @@ func (r ApiV1DevicesRoutingVrfProtocolRouteCountGetRequest) VrfName(vrfName stri
 	return r
 }
 
-func (r ApiV1DevicesRoutingVrfProtocolRouteCountGetRequest) Execute() (*V1DevicesRoutingVrfProtocolRouteCountGet200Response, *http.Response, error) {
+func (r ApiV1DevicesRoutingVrfProtocolRouteCountGetRequest) Execute() (*V1DevicesRoutingVrfProtocolRouteCountGetResponse, *http.Response, error) {
 	return r.ApiService.V1DevicesRoutingVrfProtocolRouteCountGetExecute(r)
 }
 
 /*
 V1DevicesRoutingVrfProtocolRouteCountGet Method for V1DevicesRoutingVrfProtocolRouteCountGet
+
+Get per VRF per protocol route count
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV1DevicesRoutingVrfProtocolRouteCountGetRequest
@@ -19765,13 +21304,13 @@ func (a *DefaultAPIService) V1DevicesRoutingVrfProtocolRouteCountGet(ctx context
 }
 
 // Execute executes the request
-//  @return V1DevicesRoutingVrfProtocolRouteCountGet200Response
-func (a *DefaultAPIService) V1DevicesRoutingVrfProtocolRouteCountGetExecute(r ApiV1DevicesRoutingVrfProtocolRouteCountGetRequest) (*V1DevicesRoutingVrfProtocolRouteCountGet200Response, *http.Response, error) {
+//  @return V1DevicesRoutingVrfProtocolRouteCountGetResponse
+func (a *DefaultAPIService) V1DevicesRoutingVrfProtocolRouteCountGetExecute(r ApiV1DevicesRoutingVrfProtocolRouteCountGetRequest) (*V1DevicesRoutingVrfProtocolRouteCountGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1DevicesRoutingVrfProtocolRouteCountGet200Response
+		localVarReturnValue  *V1DevicesRoutingVrfProtocolRouteCountGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1DevicesRoutingVrfProtocolRouteCountGet")
@@ -19787,11 +21326,18 @@ func (a *DefaultAPIService) V1DevicesRoutingVrfProtocolRouteCountGetExecute(r Ap
 	if r.authorization == nil {
 		return localVarReturnValue, nil, reportError("authorization is required and must be specified")
 	}
-
-	if r.deviceId != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "deviceId", r.deviceId, "form", "")
+	if r.deviceId == nil {
+		return localVarReturnValue, nil, reportError("deviceId is required and must be specified")
 	}
-	if r.protocols != nil {
+	if r.protocols == nil {
+		return localVarReturnValue, nil, reportError("protocols is required and must be specified")
+	}
+	if r.vrfName == nil {
+		return localVarReturnValue, nil, reportError("vrfName is required and must be specified")
+	}
+
+	parameterAddToHeaderOrQuery(localVarQueryParams, "deviceId", r.deviceId, "form", "")
+	{
 		t := *r.protocols
 		if reflect.TypeOf(t).Kind() == reflect.Slice {
 			s := reflect.ValueOf(t)
@@ -19802,9 +21348,7 @@ func (a *DefaultAPIService) V1DevicesRoutingVrfProtocolRouteCountGetExecute(r Ap
 			parameterAddToHeaderOrQuery(localVarQueryParams, "protocols", t, "form", "multi")
 		}
 	}
-	if r.vrfName != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "vrfName", r.vrfName, "form", "")
-	}
+	parameterAddToHeaderOrQuery(localVarQueryParams, "vrfName", r.vrfName, "form", "")
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
 
@@ -19878,7 +21422,7 @@ type ApiV1DevicesRunningVersionPostRequest struct {
 	ctx context.Context
 	ApiService *DefaultAPIService
 	authorization *string
-	v1DevicesSessionStatusPostRequest *V1DevicesSessionStatusPostRequest
+	v1DevicesRunningVersionPostRequest *V1DevicesRunningVersionPostRequest
 }
 
 // Bearer token. Format: Bearer &lt;your_token_here&gt;
@@ -19887,12 +21431,12 @@ func (r ApiV1DevicesRunningVersionPostRequest) Authorization(authorization strin
 	return r
 }
 
-func (r ApiV1DevicesRunningVersionPostRequest) V1DevicesSessionStatusPostRequest(v1DevicesSessionStatusPostRequest V1DevicesSessionStatusPostRequest) ApiV1DevicesRunningVersionPostRequest {
-	r.v1DevicesSessionStatusPostRequest = &v1DevicesSessionStatusPostRequest
+func (r ApiV1DevicesRunningVersionPostRequest) V1DevicesRunningVersionPostRequest(v1DevicesRunningVersionPostRequest V1DevicesRunningVersionPostRequest) ApiV1DevicesRunningVersionPostRequest {
+	r.v1DevicesRunningVersionPostRequest = &v1DevicesRunningVersionPostRequest
 	return r
 }
 
-func (r ApiV1DevicesRunningVersionPostRequest) Execute() (*V1DevicesRunningVersionPost200Response, *http.Response, error) {
+func (r ApiV1DevicesRunningVersionPostRequest) Execute() (*V1DevicesRunningVersionPostResponse, *http.Response, error) {
 	return r.ApiService.V1DevicesRunningVersionPostExecute(r)
 }
 
@@ -19910,13 +21454,13 @@ func (a *DefaultAPIService) V1DevicesRunningVersionPost(ctx context.Context) Api
 }
 
 // Execute executes the request
-//  @return V1DevicesRunningVersionPost200Response
-func (a *DefaultAPIService) V1DevicesRunningVersionPostExecute(r ApiV1DevicesRunningVersionPostRequest) (*V1DevicesRunningVersionPost200Response, *http.Response, error) {
+//  @return V1DevicesRunningVersionPostResponse
+func (a *DefaultAPIService) V1DevicesRunningVersionPostExecute(r ApiV1DevicesRunningVersionPostRequest) (*V1DevicesRunningVersionPostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1DevicesRunningVersionPost200Response
+		localVarReturnValue  *V1DevicesRunningVersionPostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1DevicesRunningVersionPost")
@@ -19932,8 +21476,8 @@ func (a *DefaultAPIService) V1DevicesRunningVersionPostExecute(r ApiV1DevicesRun
 	if r.authorization == nil {
 		return localVarReturnValue, nil, reportError("authorization is required and must be specified")
 	}
-	if r.v1DevicesSessionStatusPostRequest == nil {
-		return localVarReturnValue, nil, reportError("v1DevicesSessionStatusPostRequest is required and must be specified")
+	if r.v1DevicesRunningVersionPostRequest == nil {
+		return localVarReturnValue, nil, reportError("v1DevicesRunningVersionPostRequest is required and must be specified")
 	}
 
 	// to determine the Content-Type header
@@ -19955,7 +21499,7 @@ func (a *DefaultAPIService) V1DevicesRunningVersionPostExecute(r ApiV1DevicesRun
 	}
 	parameterAddToHeaderOrQuery(localVarHeaderParams, "Authorization", r.authorization, "simple", "")
 	// body params
-	localVarPostBody = r.v1DevicesSessionStatusPostRequest
+	localVarPostBody = r.v1DevicesRunningVersionPostRequest
 	if r.ctx != nil {
 		// API Key Authentication
 		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
@@ -20025,12 +21569,14 @@ func (r ApiV1DevicesSessionStatusPostRequest) V1DevicesSessionStatusPostRequest(
 	return r
 }
 
-func (r ApiV1DevicesSessionStatusPostRequest) Execute() (*V1DevicesSessionStatusPost200Response, *http.Response, error) {
+func (r ApiV1DevicesSessionStatusPostRequest) Execute() (*V1DevicesSessionStatusPostResponse, *http.Response, error) {
 	return r.ApiService.V1DevicesSessionStatusPostExecute(r)
 }
 
 /*
 V1DevicesSessionStatusPost Method for V1DevicesSessionStatusPost
+
+Get all the BGP session states for the devices
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV1DevicesSessionStatusPostRequest
@@ -20043,13 +21589,13 @@ func (a *DefaultAPIService) V1DevicesSessionStatusPost(ctx context.Context) ApiV
 }
 
 // Execute executes the request
-//  @return V1DevicesSessionStatusPost200Response
-func (a *DefaultAPIService) V1DevicesSessionStatusPostExecute(r ApiV1DevicesSessionStatusPostRequest) (*V1DevicesSessionStatusPost200Response, *http.Response, error) {
+//  @return V1DevicesSessionStatusPostResponse
+func (a *DefaultAPIService) V1DevicesSessionStatusPostExecute(r ApiV1DevicesSessionStatusPostRequest) (*V1DevicesSessionStatusPostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1DevicesSessionStatusPost200Response
+		localVarReturnValue  *V1DevicesSessionStatusPostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1DevicesSessionStatusPost")
@@ -20152,12 +21698,14 @@ func (r ApiV1DevicesSummaryGetRequest) Authorization(authorization string) ApiV1
 	return r
 }
 
-func (r ApiV1DevicesSummaryGetRequest) Execute() (*V1DevicesSummaryGet200Response, *http.Response, error) {
+func (r ApiV1DevicesSummaryGetRequest) Execute() (*V1DevicesSummaryGetResponse, *http.Response, error) {
 	return r.ApiService.V1DevicesSummaryGetExecute(r)
 }
 
 /*
 V1DevicesSummaryGet Method for V1DevicesSummaryGet
+
+Get devices summary for the specified enterprise
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV1DevicesSummaryGetRequest
@@ -20170,13 +21718,13 @@ func (a *DefaultAPIService) V1DevicesSummaryGet(ctx context.Context) ApiV1Device
 }
 
 // Execute executes the request
-//  @return V1DevicesSummaryGet200Response
-func (a *DefaultAPIService) V1DevicesSummaryGetExecute(r ApiV1DevicesSummaryGetRequest) (*V1DevicesSummaryGet200Response, *http.Response, error) {
+//  @return V1DevicesSummaryGetResponse
+func (a *DefaultAPIService) V1DevicesSummaryGetExecute(r ApiV1DevicesSummaryGetRequest) (*V1DevicesSummaryGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1DevicesSummaryGet200Response
+		localVarReturnValue  *V1DevicesSummaryGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1DevicesSummaryGet")
@@ -20266,7 +21814,7 @@ type ApiV1DevicesUpgradeCancelPutRequest struct {
 	ctx context.Context
 	ApiService *DefaultAPIService
 	authorization *string
-	v1DevicesSessionStatusPostRequest *V1DevicesSessionStatusPostRequest
+	v1DevicesUpgradeCancelPutRequest *V1DevicesUpgradeCancelPutRequest
 }
 
 // Bearer token. Format: Bearer &lt;your_token_here&gt;
@@ -20275,8 +21823,8 @@ func (r ApiV1DevicesUpgradeCancelPutRequest) Authorization(authorization string)
 	return r
 }
 
-func (r ApiV1DevicesUpgradeCancelPutRequest) V1DevicesSessionStatusPostRequest(v1DevicesSessionStatusPostRequest V1DevicesSessionStatusPostRequest) ApiV1DevicesUpgradeCancelPutRequest {
-	r.v1DevicesSessionStatusPostRequest = &v1DevicesSessionStatusPostRequest
+func (r ApiV1DevicesUpgradeCancelPutRequest) V1DevicesUpgradeCancelPutRequest(v1DevicesUpgradeCancelPutRequest V1DevicesUpgradeCancelPutRequest) ApiV1DevicesUpgradeCancelPutRequest {
+	r.v1DevicesUpgradeCancelPutRequest = &v1DevicesUpgradeCancelPutRequest
 	return r
 }
 
@@ -20320,8 +21868,8 @@ func (a *DefaultAPIService) V1DevicesUpgradeCancelPutExecute(r ApiV1DevicesUpgra
 	if r.authorization == nil {
 		return localVarReturnValue, nil, reportError("authorization is required and must be specified")
 	}
-	if r.v1DevicesSessionStatusPostRequest == nil {
-		return localVarReturnValue, nil, reportError("v1DevicesSessionStatusPostRequest is required and must be specified")
+	if r.v1DevicesUpgradeCancelPutRequest == nil {
+		return localVarReturnValue, nil, reportError("v1DevicesUpgradeCancelPutRequest is required and must be specified")
 	}
 
 	// to determine the Content-Type header
@@ -20343,7 +21891,7 @@ func (a *DefaultAPIService) V1DevicesUpgradeCancelPutExecute(r ApiV1DevicesUpgra
 	}
 	parameterAddToHeaderOrQuery(localVarHeaderParams, "Authorization", r.authorization, "simple", "")
 	// body params
-	localVarPostBody = r.v1DevicesSessionStatusPostRequest
+	localVarPostBody = r.v1DevicesUpgradeCancelPutRequest
 	if r.ctx != nil {
 		// API Key Authentication
 		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
@@ -20547,12 +22095,14 @@ func (r ApiV1DiagnosticArchiveCreateDeviceIdPostRequest) V1DiagnosticArchiveCrea
 	return r
 }
 
-func (r ApiV1DiagnosticArchiveCreateDeviceIdPostRequest) Execute() (*V1DiagnosticArchiveCreateDeviceIdPost201Response, *http.Response, error) {
+func (r ApiV1DiagnosticArchiveCreateDeviceIdPostRequest) Execute() (*V1DiagnosticArchiveCreateDeviceIdPostResponse, *http.Response, error) {
 	return r.ApiService.V1DiagnosticArchiveCreateDeviceIdPostExecute(r)
 }
 
 /*
 V1DiagnosticArchiveCreateDeviceIdPost Method for V1DiagnosticArchiveCreateDeviceIdPost
+
+Create a device debug archive
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @param deviceId Valid Provisioned device ID
@@ -20567,13 +22117,13 @@ func (a *DefaultAPIService) V1DiagnosticArchiveCreateDeviceIdPost(ctx context.Co
 }
 
 // Execute executes the request
-//  @return V1DiagnosticArchiveCreateDeviceIdPost201Response
-func (a *DefaultAPIService) V1DiagnosticArchiveCreateDeviceIdPostExecute(r ApiV1DiagnosticArchiveCreateDeviceIdPostRequest) (*V1DiagnosticArchiveCreateDeviceIdPost201Response, *http.Response, error) {
+//  @return V1DiagnosticArchiveCreateDeviceIdPostResponse
+func (a *DefaultAPIService) V1DiagnosticArchiveCreateDeviceIdPostExecute(r ApiV1DiagnosticArchiveCreateDeviceIdPostRequest) (*V1DiagnosticArchiveCreateDeviceIdPostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1DiagnosticArchiveCreateDeviceIdPost201Response
+		localVarReturnValue  *V1DiagnosticArchiveCreateDeviceIdPostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1DiagnosticArchiveCreateDeviceIdPost")
@@ -20684,6 +22234,8 @@ func (r ApiV1DiagnosticArchiveDeleteArchiveIdDeleteRequest) Execute() (map[strin
 
 /*
 V1DiagnosticArchiveDeleteArchiveIdDelete Method for V1DiagnosticArchiveDeleteArchiveIdDelete
+
+Delete a device debug archive
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @param archiveId Unique identifier for a specific archive
@@ -20796,7 +22348,7 @@ type ApiV1DiagnosticArchiveEditArchiveIdPutRequest struct {
 	ApiService *DefaultAPIService
 	authorization *string
 	archiveId int64
-	v1DiagnosticArchiveCreateDeviceIdPostRequest *V1DiagnosticArchiveCreateDeviceIdPostRequest
+	v1DiagnosticArchiveEditArchiveIdPutRequest *V1DiagnosticArchiveEditArchiveIdPutRequest
 }
 
 // Bearer token. Format: Bearer &lt;your_token_here&gt;
@@ -20805,8 +22357,8 @@ func (r ApiV1DiagnosticArchiveEditArchiveIdPutRequest) Authorization(authorizati
 	return r
 }
 
-func (r ApiV1DiagnosticArchiveEditArchiveIdPutRequest) V1DiagnosticArchiveCreateDeviceIdPostRequest(v1DiagnosticArchiveCreateDeviceIdPostRequest V1DiagnosticArchiveCreateDeviceIdPostRequest) ApiV1DiagnosticArchiveEditArchiveIdPutRequest {
-	r.v1DiagnosticArchiveCreateDeviceIdPostRequest = &v1DiagnosticArchiveCreateDeviceIdPostRequest
+func (r ApiV1DiagnosticArchiveEditArchiveIdPutRequest) V1DiagnosticArchiveEditArchiveIdPutRequest(v1DiagnosticArchiveEditArchiveIdPutRequest V1DiagnosticArchiveEditArchiveIdPutRequest) ApiV1DiagnosticArchiveEditArchiveIdPutRequest {
+	r.v1DiagnosticArchiveEditArchiveIdPutRequest = &v1DiagnosticArchiveEditArchiveIdPutRequest
 	return r
 }
 
@@ -20816,6 +22368,8 @@ func (r ApiV1DiagnosticArchiveEditArchiveIdPutRequest) Execute() (map[string]int
 
 /*
 V1DiagnosticArchiveEditArchiveIdPut Method for V1DiagnosticArchiveEditArchiveIdPut
+
+Edit metadata for a previously generated device debug archive
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @param archiveId Unique identifier for a specific archive
@@ -20853,8 +22407,8 @@ func (a *DefaultAPIService) V1DiagnosticArchiveEditArchiveIdPutExecute(r ApiV1Di
 	if r.authorization == nil {
 		return localVarReturnValue, nil, reportError("authorization is required and must be specified")
 	}
-	if r.v1DiagnosticArchiveCreateDeviceIdPostRequest == nil {
-		return localVarReturnValue, nil, reportError("v1DiagnosticArchiveCreateDeviceIdPostRequest is required and must be specified")
+	if r.v1DiagnosticArchiveEditArchiveIdPutRequest == nil {
+		return localVarReturnValue, nil, reportError("v1DiagnosticArchiveEditArchiveIdPutRequest is required and must be specified")
 	}
 
 	// to determine the Content-Type header
@@ -20876,7 +22430,7 @@ func (a *DefaultAPIService) V1DiagnosticArchiveEditArchiveIdPutExecute(r ApiV1Di
 	}
 	parameterAddToHeaderOrQuery(localVarHeaderParams, "Authorization", r.authorization, "simple", "")
 	// body params
-	localVarPostBody = r.v1DiagnosticArchiveCreateDeviceIdPostRequest
+	localVarPostBody = r.v1DiagnosticArchiveEditArchiveIdPutRequest
 	if r.ctx != nil {
 		// API Key Authentication
 		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
@@ -20941,12 +22495,14 @@ func (r ApiV1DiagnosticArchivesDeviceIdGetRequest) Authorization(authorization s
 	return r
 }
 
-func (r ApiV1DiagnosticArchivesDeviceIdGetRequest) Execute() (*V1DiagnosticArchivesDeviceIdGet200Response, *http.Response, error) {
+func (r ApiV1DiagnosticArchivesDeviceIdGetRequest) Execute() (*V1DiagnosticArchivesDeviceIdGetResponse, *http.Response, error) {
 	return r.ApiService.V1DiagnosticArchivesDeviceIdGetExecute(r)
 }
 
 /*
 V1DiagnosticArchivesDeviceIdGet Method for V1DiagnosticArchivesDeviceIdGet
+
+Get a list of device debug archive collections
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @param deviceId Valid Provisioned device ID
@@ -20961,13 +22517,13 @@ func (a *DefaultAPIService) V1DiagnosticArchivesDeviceIdGet(ctx context.Context,
 }
 
 // Execute executes the request
-//  @return V1DiagnosticArchivesDeviceIdGet200Response
-func (a *DefaultAPIService) V1DiagnosticArchivesDeviceIdGetExecute(r ApiV1DiagnosticArchivesDeviceIdGetRequest) (*V1DiagnosticArchivesDeviceIdGet200Response, *http.Response, error) {
+//  @return V1DiagnosticArchivesDeviceIdGetResponse
+func (a *DefaultAPIService) V1DiagnosticArchivesDeviceIdGetExecute(r ApiV1DiagnosticArchivesDeviceIdGetRequest) (*V1DiagnosticArchivesDeviceIdGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1DiagnosticArchivesDeviceIdGet200Response
+		localVarReturnValue  *V1DiagnosticArchivesDeviceIdGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1DiagnosticArchivesDeviceIdGet")
@@ -21079,6 +22635,8 @@ func (r ApiV1DiagnosticBgpResetDeviceIdPutRequest) Execute() (map[string]interfa
 
 /*
 V1DiagnosticBgpResetDeviceIdPut Method for V1DiagnosticBgpResetDeviceIdPut
+
+Reset a BGP neighbor
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @param deviceId Unique identifier for a specific device
@@ -21217,6 +22775,8 @@ func (r ApiV1DiagnosticClearArpDeviceIdPutRequest) Execute() (map[string]interfa
 /*
 V1DiagnosticClearArpDeviceIdPut Method for V1DiagnosticClearArpDeviceIdPut
 
+Clear arp entries
+
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @param deviceId Unique identifier for a specific device
  @return ApiV1DiagnosticClearArpDeviceIdPutRequest
@@ -21340,12 +22900,14 @@ func (r ApiV1DiagnosticGnmiPingGetRequest) Authorization(authorization string) A
 	return r
 }
 
-func (r ApiV1DiagnosticGnmiPingGetRequest) Execute() (*V1DiagnosticGnmiPingGet200Response, *http.Response, error) {
+func (r ApiV1DiagnosticGnmiPingGetRequest) Execute() (*V1DiagnosticGnmiPingGetResponse, *http.Response, error) {
 	return r.ApiService.V1DiagnosticGnmiPingGetExecute(r)
 }
 
 /*
 V1DiagnosticGnmiPingGet Method for V1DiagnosticGnmiPingGet
+
+perform GNMI ping test
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV1DiagnosticGnmiPingGetRequest
@@ -21358,13 +22920,13 @@ func (a *DefaultAPIService) V1DiagnosticGnmiPingGet(ctx context.Context) ApiV1Di
 }
 
 // Execute executes the request
-//  @return V1DiagnosticGnmiPingGet200Response
-func (a *DefaultAPIService) V1DiagnosticGnmiPingGetExecute(r ApiV1DiagnosticGnmiPingGetRequest) (*V1DiagnosticGnmiPingGet200Response, *http.Response, error) {
+//  @return V1DiagnosticGnmiPingGetResponse
+func (a *DefaultAPIService) V1DiagnosticGnmiPingGetExecute(r ApiV1DiagnosticGnmiPingGetRequest) (*V1DiagnosticGnmiPingGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1DiagnosticGnmiPingGet200Response
+		localVarReturnValue  *V1DiagnosticGnmiPingGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1DiagnosticGnmiPingGet")
@@ -21475,6 +23037,8 @@ func (r ApiV1DiagnosticInterfaceResetDeviceIdPutRequest) Execute() (map[string]i
 
 /*
 V1DiagnosticInterfaceResetDeviceIdPut Method for V1DiagnosticInterfaceResetDeviceIdPut
+
+Reset an interface
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @param deviceId Unique identifier for a specific device
@@ -21600,12 +23164,14 @@ func (r ApiV1DiagnosticOtpDeviceIdGetRequest) Authorization(authorization string
 	return r
 }
 
-func (r ApiV1DiagnosticOtpDeviceIdGetRequest) Execute() (*V1DiagnosticOtpDeviceIdGet200Response, *http.Response, error) {
+func (r ApiV1DiagnosticOtpDeviceIdGetRequest) Execute() (*V1DiagnosticOtpDeviceIdGetResponse, *http.Response, error) {
 	return r.ApiService.V1DiagnosticOtpDeviceIdGetExecute(r)
 }
 
 /*
 V1DiagnosticOtpDeviceIdGet Method for V1DiagnosticOtpDeviceIdGet
+
+Get a one-time passcode to access a device
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @param deviceId Unique identifier for a specific device
@@ -21620,13 +23186,13 @@ func (a *DefaultAPIService) V1DiagnosticOtpDeviceIdGet(ctx context.Context, devi
 }
 
 // Execute executes the request
-//  @return V1DiagnosticOtpDeviceIdGet200Response
-func (a *DefaultAPIService) V1DiagnosticOtpDeviceIdGetExecute(r ApiV1DiagnosticOtpDeviceIdGetRequest) (*V1DiagnosticOtpDeviceIdGet200Response, *http.Response, error) {
+//  @return V1DiagnosticOtpDeviceIdGetResponse
+func (a *DefaultAPIService) V1DiagnosticOtpDeviceIdGetExecute(r ApiV1DiagnosticOtpDeviceIdGetRequest) (*V1DiagnosticOtpDeviceIdGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1DiagnosticOtpDeviceIdGet200Response
+		localVarReturnValue  *V1DiagnosticOtpDeviceIdGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1DiagnosticOtpDeviceIdGet")
@@ -21726,12 +23292,14 @@ func (r ApiV1DiagnosticPacketcapturePcapIdGetRequest) Authorization(authorizatio
 	return r
 }
 
-func (r ApiV1DiagnosticPacketcapturePcapIdGetRequest) Execute() (*V1DiagnosticPacketcapturePcapIdGet200Response, *http.Response, error) {
+func (r ApiV1DiagnosticPacketcapturePcapIdGetRequest) Execute() (*V1DiagnosticPacketcapturePcapIdGetResponse, *http.Response, error) {
 	return r.ApiService.V1DiagnosticPacketcapturePcapIdGetExecute(r)
 }
 
 /*
 V1DiagnosticPacketcapturePcapIdGet Method for V1DiagnosticPacketcapturePcapIdGet
+
+get a packet capture
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @param pcapId Unique identifier for a specific packet capture
@@ -21746,13 +23314,13 @@ func (a *DefaultAPIService) V1DiagnosticPacketcapturePcapIdGet(ctx context.Conte
 }
 
 // Execute executes the request
-//  @return V1DiagnosticPacketcapturePcapIdGet200Response
-func (a *DefaultAPIService) V1DiagnosticPacketcapturePcapIdGetExecute(r ApiV1DiagnosticPacketcapturePcapIdGetRequest) (*V1DiagnosticPacketcapturePcapIdGet200Response, *http.Response, error) {
+//  @return V1DiagnosticPacketcapturePcapIdGetResponse
+func (a *DefaultAPIService) V1DiagnosticPacketcapturePcapIdGetExecute(r ApiV1DiagnosticPacketcapturePcapIdGetRequest) (*V1DiagnosticPacketcapturePcapIdGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1DiagnosticPacketcapturePcapIdGet200Response
+		localVarReturnValue  *V1DiagnosticPacketcapturePcapIdGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1DiagnosticPacketcapturePcapIdGet")
@@ -21857,12 +23425,14 @@ func (r ApiV1DiagnosticPacketcaptureStartPostRequest) V1DiagnosticPacketcaptureS
 	return r
 }
 
-func (r ApiV1DiagnosticPacketcaptureStartPostRequest) Execute() (*V1DiagnosticPacketcaptureStartPost201Response, *http.Response, error) {
+func (r ApiV1DiagnosticPacketcaptureStartPostRequest) Execute() (*V1DiagnosticPacketcaptureStartPostResponse, *http.Response, error) {
 	return r.ApiService.V1DiagnosticPacketcaptureStartPostExecute(r)
 }
 
 /*
 V1DiagnosticPacketcaptureStartPost Method for V1DiagnosticPacketcaptureStartPost
+
+Start packet capture
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV1DiagnosticPacketcaptureStartPostRequest
@@ -21875,13 +23445,13 @@ func (a *DefaultAPIService) V1DiagnosticPacketcaptureStartPost(ctx context.Conte
 }
 
 // Execute executes the request
-//  @return V1DiagnosticPacketcaptureStartPost201Response
-func (a *DefaultAPIService) V1DiagnosticPacketcaptureStartPostExecute(r ApiV1DiagnosticPacketcaptureStartPostRequest) (*V1DiagnosticPacketcaptureStartPost201Response, *http.Response, error) {
+//  @return V1DiagnosticPacketcaptureStartPostResponse
+func (a *DefaultAPIService) V1DiagnosticPacketcaptureStartPostExecute(r ApiV1DiagnosticPacketcaptureStartPostRequest) (*V1DiagnosticPacketcaptureStartPostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1DiagnosticPacketcaptureStartPost201Response
+		localVarReturnValue  *V1DiagnosticPacketcaptureStartPostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1DiagnosticPacketcaptureStartPost")
@@ -21976,7 +23546,7 @@ type ApiV1DiagnosticPacketcaptureStopPostRequest struct {
 	ctx context.Context
 	ApiService *DefaultAPIService
 	authorization *string
-	v1DiagnosticPacketcaptureStartPost201Response *V1DiagnosticPacketcaptureStartPost201Response
+	v1DiagnosticPacketcaptureStopPostRequest *V1DiagnosticPacketcaptureStopPostRequest
 }
 
 // Bearer token. Format: Bearer &lt;your_token_here&gt;
@@ -21985,8 +23555,8 @@ func (r ApiV1DiagnosticPacketcaptureStopPostRequest) Authorization(authorization
 	return r
 }
 
-func (r ApiV1DiagnosticPacketcaptureStopPostRequest) V1DiagnosticPacketcaptureStartPost201Response(v1DiagnosticPacketcaptureStartPost201Response V1DiagnosticPacketcaptureStartPost201Response) ApiV1DiagnosticPacketcaptureStopPostRequest {
-	r.v1DiagnosticPacketcaptureStartPost201Response = &v1DiagnosticPacketcaptureStartPost201Response
+func (r ApiV1DiagnosticPacketcaptureStopPostRequest) V1DiagnosticPacketcaptureStopPostRequest(v1DiagnosticPacketcaptureStopPostRequest V1DiagnosticPacketcaptureStopPostRequest) ApiV1DiagnosticPacketcaptureStopPostRequest {
+	r.v1DiagnosticPacketcaptureStopPostRequest = &v1DiagnosticPacketcaptureStopPostRequest
 	return r
 }
 
@@ -21996,6 +23566,8 @@ func (r ApiV1DiagnosticPacketcaptureStopPostRequest) Execute() (map[string]inter
 
 /*
 V1DiagnosticPacketcaptureStopPost Method for V1DiagnosticPacketcaptureStopPost
+
+Stop packet capture
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV1DiagnosticPacketcaptureStopPostRequest
@@ -22030,8 +23602,8 @@ func (a *DefaultAPIService) V1DiagnosticPacketcaptureStopPostExecute(r ApiV1Diag
 	if r.authorization == nil {
 		return localVarReturnValue, nil, reportError("authorization is required and must be specified")
 	}
-	if r.v1DiagnosticPacketcaptureStartPost201Response == nil {
-		return localVarReturnValue, nil, reportError("v1DiagnosticPacketcaptureStartPost201Response is required and must be specified")
+	if r.v1DiagnosticPacketcaptureStopPostRequest == nil {
+		return localVarReturnValue, nil, reportError("v1DiagnosticPacketcaptureStopPostRequest is required and must be specified")
 	}
 
 	// to determine the Content-Type header
@@ -22053,7 +23625,7 @@ func (a *DefaultAPIService) V1DiagnosticPacketcaptureStopPostExecute(r ApiV1Diag
 	}
 	parameterAddToHeaderOrQuery(localVarHeaderParams, "Authorization", r.authorization, "simple", "")
 	// body params
-	localVarPostBody = r.v1DiagnosticPacketcaptureStartPost201Response
+	localVarPostBody = r.v1DiagnosticPacketcaptureStopPostRequest
 	if r.ctx != nil {
 		// API Key Authentication
 		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
@@ -22123,12 +23695,14 @@ func (r ApiV1DiagnosticPingPauseResumePostRequest) V1DiagnosticPingPauseResumePo
 	return r
 }
 
-func (r ApiV1DiagnosticPingPauseResumePostRequest) Execute() (*V1DiagnosticPingPauseResumePost204Response, *http.Response, error) {
+func (r ApiV1DiagnosticPingPauseResumePostRequest) Execute() (*V1DiagnosticPingPauseResumePostResponse, *http.Response, error) {
 	return r.ApiService.V1DiagnosticPingPauseResumePostExecute(r)
 }
 
 /*
 V1DiagnosticPingPauseResumePost Method for V1DiagnosticPingPauseResumePost
+
+Pause and/or Resume a ping session
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV1DiagnosticPingPauseResumePostRequest
@@ -22141,13 +23715,13 @@ func (a *DefaultAPIService) V1DiagnosticPingPauseResumePost(ctx context.Context)
 }
 
 // Execute executes the request
-//  @return V1DiagnosticPingPauseResumePost204Response
-func (a *DefaultAPIService) V1DiagnosticPingPauseResumePostExecute(r ApiV1DiagnosticPingPauseResumePostRequest) (*V1DiagnosticPingPauseResumePost204Response, *http.Response, error) {
+//  @return V1DiagnosticPingPauseResumePostResponse
+func (a *DefaultAPIService) V1DiagnosticPingPauseResumePostExecute(r ApiV1DiagnosticPingPauseResumePostRequest) (*V1DiagnosticPingPauseResumePostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1DiagnosticPingPauseResumePost204Response
+		localVarReturnValue  *V1DiagnosticPingPauseResumePostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1DiagnosticPingPauseResumePost")
@@ -22242,7 +23816,7 @@ type ApiV1DiagnosticPingPostRequest struct {
 	ctx context.Context
 	ApiService *DefaultAPIService
 	authorization *string
-	v1DiagnosticPingPauseResumePostRequest *V1DiagnosticPingPauseResumePostRequest
+	v1DiagnosticPingPostRequest *V1DiagnosticPingPostRequest
 }
 
 // Bearer token. Format: Bearer &lt;your_token_here&gt;
@@ -22251,17 +23825,19 @@ func (r ApiV1DiagnosticPingPostRequest) Authorization(authorization string) ApiV
 	return r
 }
 
-func (r ApiV1DiagnosticPingPostRequest) V1DiagnosticPingPauseResumePostRequest(v1DiagnosticPingPauseResumePostRequest V1DiagnosticPingPauseResumePostRequest) ApiV1DiagnosticPingPostRequest {
-	r.v1DiagnosticPingPauseResumePostRequest = &v1DiagnosticPingPauseResumePostRequest
+func (r ApiV1DiagnosticPingPostRequest) V1DiagnosticPingPostRequest(v1DiagnosticPingPostRequest V1DiagnosticPingPostRequest) ApiV1DiagnosticPingPostRequest {
+	r.v1DiagnosticPingPostRequest = &v1DiagnosticPingPostRequest
 	return r
 }
 
-func (r ApiV1DiagnosticPingPostRequest) Execute() (*V1DiagnosticPingPauseResumePost204Response, *http.Response, error) {
+func (r ApiV1DiagnosticPingPostRequest) Execute() (*V1DiagnosticPingPostResponse, *http.Response, error) {
 	return r.ApiService.V1DiagnosticPingPostExecute(r)
 }
 
 /*
 V1DiagnosticPingPost Method for V1DiagnosticPingPost
+
+Trigger a diagnostic test
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV1DiagnosticPingPostRequest
@@ -22274,13 +23850,13 @@ func (a *DefaultAPIService) V1DiagnosticPingPost(ctx context.Context) ApiV1Diagn
 }
 
 // Execute executes the request
-//  @return V1DiagnosticPingPauseResumePost204Response
-func (a *DefaultAPIService) V1DiagnosticPingPostExecute(r ApiV1DiagnosticPingPostRequest) (*V1DiagnosticPingPauseResumePost204Response, *http.Response, error) {
+//  @return V1DiagnosticPingPostResponse
+func (a *DefaultAPIService) V1DiagnosticPingPostExecute(r ApiV1DiagnosticPingPostRequest) (*V1DiagnosticPingPostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1DiagnosticPingPauseResumePost204Response
+		localVarReturnValue  *V1DiagnosticPingPostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1DiagnosticPingPost")
@@ -22296,8 +23872,8 @@ func (a *DefaultAPIService) V1DiagnosticPingPostExecute(r ApiV1DiagnosticPingPos
 	if r.authorization == nil {
 		return localVarReturnValue, nil, reportError("authorization is required and must be specified")
 	}
-	if r.v1DiagnosticPingPauseResumePostRequest == nil {
-		return localVarReturnValue, nil, reportError("v1DiagnosticPingPauseResumePostRequest is required and must be specified")
+	if r.v1DiagnosticPingPostRequest == nil {
+		return localVarReturnValue, nil, reportError("v1DiagnosticPingPostRequest is required and must be specified")
 	}
 
 	// to determine the Content-Type header
@@ -22319,7 +23895,7 @@ func (a *DefaultAPIService) V1DiagnosticPingPostExecute(r ApiV1DiagnosticPingPos
 	}
 	parameterAddToHeaderOrQuery(localVarHeaderParams, "Authorization", r.authorization, "simple", "")
 	// body params
-	localVarPostBody = r.v1DiagnosticPingPauseResumePostRequest
+	localVarPostBody = r.v1DiagnosticPingPostRequest
 	if r.ctx != nil {
 		// API Key Authentication
 		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
@@ -22396,6 +23972,8 @@ func (r ApiV1DiagnosticPingStopTokenPostRequest) Execute() (map[string]interface
 
 /*
 V1DiagnosticPingStopTokenPost Method for V1DiagnosticPingStopTokenPost
+
+Stop ping session
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @param token Identifier which was received in initial response
@@ -22533,6 +24111,8 @@ func (r ApiV1DiagnosticRebootDeviceIdPutRequest) Execute() (map[string]interface
 
 /*
 V1DiagnosticRebootDeviceIdPut Method for V1DiagnosticRebootDeviceIdPut
+
+Trigger a device reboot
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @param deviceId Valid Provisioned device ID
@@ -22674,6 +24254,8 @@ func (r ApiV1DiagnosticResetIpsecSessionDeviceIdPutRequest) Execute() (map[strin
 /*
 V1DiagnosticResetIpsecSessionDeviceIdPut Method for V1DiagnosticResetIpsecSessionDeviceIdPut
 
+Reset IPSec sessions
+
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @param deviceId Unique identifier for a specific device
  @return ApiV1DiagnosticResetIpsecSessionDeviceIdPutRequest
@@ -22803,12 +24385,14 @@ func (r ApiV1DiagnosticSpeedtestPostRequest) V1DiagnosticSpeedtestPostRequest(v1
 	return r
 }
 
-func (r ApiV1DiagnosticSpeedtestPostRequest) Execute() (*V1DiagnosticSpeedtestPost200Response, *http.Response, error) {
+func (r ApiV1DiagnosticSpeedtestPostRequest) Execute() (*V1DiagnosticSpeedtestPostResponse, *http.Response, error) {
 	return r.ApiService.V1DiagnosticSpeedtestPostExecute(r)
 }
 
 /*
 V1DiagnosticSpeedtestPost Method for V1DiagnosticSpeedtestPost
+
+Trigger Speedtest utility
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV1DiagnosticSpeedtestPostRequest
@@ -22821,13 +24405,13 @@ func (a *DefaultAPIService) V1DiagnosticSpeedtestPost(ctx context.Context) ApiV1
 }
 
 // Execute executes the request
-//  @return V1DiagnosticSpeedtestPost200Response
-func (a *DefaultAPIService) V1DiagnosticSpeedtestPostExecute(r ApiV1DiagnosticSpeedtestPostRequest) (*V1DiagnosticSpeedtestPost200Response, *http.Response, error) {
+//  @return V1DiagnosticSpeedtestPostResponse
+func (a *DefaultAPIService) V1DiagnosticSpeedtestPostExecute(r ApiV1DiagnosticSpeedtestPostRequest) (*V1DiagnosticSpeedtestPostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1DiagnosticSpeedtestPost200Response
+		localVarReturnValue  *V1DiagnosticSpeedtestPostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1DiagnosticSpeedtestPost")
@@ -22930,12 +24514,14 @@ func (r ApiV1DiagnosticSpeedtestProvidersGetRequest) Authorization(authorization
 	return r
 }
 
-func (r ApiV1DiagnosticSpeedtestProvidersGetRequest) Execute() (*V1DiagnosticSpeedtestProvidersGet200Response, *http.Response, error) {
+func (r ApiV1DiagnosticSpeedtestProvidersGetRequest) Execute() (*V1DiagnosticSpeedtestProvidersGetResponse, *http.Response, error) {
 	return r.ApiService.V1DiagnosticSpeedtestProvidersGetExecute(r)
 }
 
 /*
 V1DiagnosticSpeedtestProvidersGet Method for V1DiagnosticSpeedtestProvidersGet
+
+Get list of supported speedtest service providers
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV1DiagnosticSpeedtestProvidersGetRequest
@@ -22948,13 +24534,13 @@ func (a *DefaultAPIService) V1DiagnosticSpeedtestProvidersGet(ctx context.Contex
 }
 
 // Execute executes the request
-//  @return V1DiagnosticSpeedtestProvidersGet200Response
-func (a *DefaultAPIService) V1DiagnosticSpeedtestProvidersGetExecute(r ApiV1DiagnosticSpeedtestProvidersGetRequest) (*V1DiagnosticSpeedtestProvidersGet200Response, *http.Response, error) {
+//  @return V1DiagnosticSpeedtestProvidersGetResponse
+func (a *DefaultAPIService) V1DiagnosticSpeedtestProvidersGetExecute(r ApiV1DiagnosticSpeedtestProvidersGetRequest) (*V1DiagnosticSpeedtestProvidersGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1DiagnosticSpeedtestProvidersGet200Response
+		localVarReturnValue  *V1DiagnosticSpeedtestProvidersGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1DiagnosticSpeedtestProvidersGet")
@@ -23058,12 +24644,14 @@ func (r ApiV1DiagnosticSpeedtestReportPutRequest) V1DiagnosticSpeedtestReportPut
 	return r
 }
 
-func (r ApiV1DiagnosticSpeedtestReportPutRequest) Execute() (*V1DiagnosticSpeedtestReportPut200Response, *http.Response, error) {
+func (r ApiV1DiagnosticSpeedtestReportPutRequest) Execute() (*V1DiagnosticSpeedtestReportPutResponse, *http.Response, error) {
 	return r.ApiService.V1DiagnosticSpeedtestReportPutExecute(r)
 }
 
 /*
 V1DiagnosticSpeedtestReportPut Method for V1DiagnosticSpeedtestReportPut
+
+Generate a speedtest history report
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV1DiagnosticSpeedtestReportPutRequest
@@ -23076,13 +24664,13 @@ func (a *DefaultAPIService) V1DiagnosticSpeedtestReportPut(ctx context.Context) 
 }
 
 // Execute executes the request
-//  @return V1DiagnosticSpeedtestReportPut200Response
-func (a *DefaultAPIService) V1DiagnosticSpeedtestReportPutExecute(r ApiV1DiagnosticSpeedtestReportPutRequest) (*V1DiagnosticSpeedtestReportPut200Response, *http.Response, error) {
+//  @return V1DiagnosticSpeedtestReportPutResponse
+func (a *DefaultAPIService) V1DiagnosticSpeedtestReportPutExecute(r ApiV1DiagnosticSpeedtestReportPutRequest) (*V1DiagnosticSpeedtestReportPutResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPut
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1DiagnosticSpeedtestReportPut200Response
+		localVarReturnValue  *V1DiagnosticSpeedtestReportPutResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1DiagnosticSpeedtestReportPut")
@@ -23185,12 +24773,14 @@ func (r ApiV1DiagnosticSpeedtestServersGetRequest) Authorization(authorization s
 	return r
 }
 
-func (r ApiV1DiagnosticSpeedtestServersGetRequest) Execute() (*V1DiagnosticSpeedtestServersGet200Response, *http.Response, error) {
+func (r ApiV1DiagnosticSpeedtestServersGetRequest) Execute() (*V1DiagnosticSpeedtestServersGetResponse, *http.Response, error) {
 	return r.ApiService.V1DiagnosticSpeedtestServersGetExecute(r)
 }
 
 /*
 V1DiagnosticSpeedtestServersGet Method for V1DiagnosticSpeedtestServersGet
+
+Get list of servers for a provider
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV1DiagnosticSpeedtestServersGetRequest
@@ -23203,13 +24793,13 @@ func (a *DefaultAPIService) V1DiagnosticSpeedtestServersGet(ctx context.Context)
 }
 
 // Execute executes the request
-//  @return V1DiagnosticSpeedtestServersGet200Response
-func (a *DefaultAPIService) V1DiagnosticSpeedtestServersGetExecute(r ApiV1DiagnosticSpeedtestServersGetRequest) (*V1DiagnosticSpeedtestServersGet200Response, *http.Response, error) {
+//  @return V1DiagnosticSpeedtestServersGetResponse
+func (a *DefaultAPIService) V1DiagnosticSpeedtestServersGetExecute(r ApiV1DiagnosticSpeedtestServersGetRequest) (*V1DiagnosticSpeedtestServersGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1DiagnosticSpeedtestServersGet200Response
+		localVarReturnValue  *V1DiagnosticSpeedtestServersGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1DiagnosticSpeedtestServersGet")
@@ -23299,7 +24889,7 @@ type ApiV1DiagnosticTraceroutePostRequest struct {
 	ctx context.Context
 	ApiService *DefaultAPIService
 	authorization *string
-	v1DiagnosticPingPauseResumePostRequest *V1DiagnosticPingPauseResumePostRequest
+	v1DiagnosticTraceroutePostRequest *V1DiagnosticTraceroutePostRequest
 }
 
 // Bearer token. Format: Bearer &lt;your_token_here&gt;
@@ -23308,17 +24898,19 @@ func (r ApiV1DiagnosticTraceroutePostRequest) Authorization(authorization string
 	return r
 }
 
-func (r ApiV1DiagnosticTraceroutePostRequest) V1DiagnosticPingPauseResumePostRequest(v1DiagnosticPingPauseResumePostRequest V1DiagnosticPingPauseResumePostRequest) ApiV1DiagnosticTraceroutePostRequest {
-	r.v1DiagnosticPingPauseResumePostRequest = &v1DiagnosticPingPauseResumePostRequest
+func (r ApiV1DiagnosticTraceroutePostRequest) V1DiagnosticTraceroutePostRequest(v1DiagnosticTraceroutePostRequest V1DiagnosticTraceroutePostRequest) ApiV1DiagnosticTraceroutePostRequest {
+	r.v1DiagnosticTraceroutePostRequest = &v1DiagnosticTraceroutePostRequest
 	return r
 }
 
-func (r ApiV1DiagnosticTraceroutePostRequest) Execute() (*V1DiagnosticPingPauseResumePost204Response, *http.Response, error) {
+func (r ApiV1DiagnosticTraceroutePostRequest) Execute() (*V1DiagnosticTraceroutePostResponse, *http.Response, error) {
 	return r.ApiService.V1DiagnosticTraceroutePostExecute(r)
 }
 
 /*
 V1DiagnosticTraceroutePost Method for V1DiagnosticTraceroutePost
+
+Trigger a diagnostic test
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV1DiagnosticTraceroutePostRequest
@@ -23331,13 +24923,13 @@ func (a *DefaultAPIService) V1DiagnosticTraceroutePost(ctx context.Context) ApiV
 }
 
 // Execute executes the request
-//  @return V1DiagnosticPingPauseResumePost204Response
-func (a *DefaultAPIService) V1DiagnosticTraceroutePostExecute(r ApiV1DiagnosticTraceroutePostRequest) (*V1DiagnosticPingPauseResumePost204Response, *http.Response, error) {
+//  @return V1DiagnosticTraceroutePostResponse
+func (a *DefaultAPIService) V1DiagnosticTraceroutePostExecute(r ApiV1DiagnosticTraceroutePostRequest) (*V1DiagnosticTraceroutePostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1DiagnosticPingPauseResumePost204Response
+		localVarReturnValue  *V1DiagnosticTraceroutePostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1DiagnosticTraceroutePost")
@@ -23353,8 +24945,8 @@ func (a *DefaultAPIService) V1DiagnosticTraceroutePostExecute(r ApiV1DiagnosticT
 	if r.authorization == nil {
 		return localVarReturnValue, nil, reportError("authorization is required and must be specified")
 	}
-	if r.v1DiagnosticPingPauseResumePostRequest == nil {
-		return localVarReturnValue, nil, reportError("v1DiagnosticPingPauseResumePostRequest is required and must be specified")
+	if r.v1DiagnosticTraceroutePostRequest == nil {
+		return localVarReturnValue, nil, reportError("v1DiagnosticTraceroutePostRequest is required and must be specified")
 	}
 
 	// to determine the Content-Type header
@@ -23376,7 +24968,7 @@ func (a *DefaultAPIService) V1DiagnosticTraceroutePostExecute(r ApiV1DiagnosticT
 	}
 	parameterAddToHeaderOrQuery(localVarHeaderParams, "Authorization", r.authorization, "simple", "")
 	// body params
-	localVarPostBody = r.v1DiagnosticPingPauseResumePostRequest
+	localVarPostBody = r.v1DiagnosticTraceroutePostRequest
 	if r.ctx != nil {
 		// API Key Authentication
 		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
@@ -23440,7 +25032,7 @@ func (r ApiV1EdgesHardwareAssignedGetRequest) Authorization(authorization string
 	return r
 }
 
-func (r ApiV1EdgesHardwareAssignedGetRequest) Execute() (*V1EdgesHardwareAssignedGet200Response, *http.Response, error) {
+func (r ApiV1EdgesHardwareAssignedGetRequest) Execute() (*V1EdgesHardwareAssignedGetResponse, *http.Response, error) {
 	return r.ApiService.V1EdgesHardwareAssignedGetExecute(r)
 }
 
@@ -23458,13 +25050,13 @@ func (a *DefaultAPIService) V1EdgesHardwareAssignedGet(ctx context.Context) ApiV
 }
 
 // Execute executes the request
-//  @return V1EdgesHardwareAssignedGet200Response
-func (a *DefaultAPIService) V1EdgesHardwareAssignedGetExecute(r ApiV1EdgesHardwareAssignedGetRequest) (*V1EdgesHardwareAssignedGet200Response, *http.Response, error) {
+//  @return V1EdgesHardwareAssignedGetResponse
+func (a *DefaultAPIService) V1EdgesHardwareAssignedGetExecute(r ApiV1EdgesHardwareAssignedGetRequest) (*V1EdgesHardwareAssignedGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1EdgesHardwareAssignedGet200Response
+		localVarReturnValue  *V1EdgesHardwareAssignedGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1EdgesHardwareAssignedGet")
@@ -23562,7 +25154,7 @@ func (r ApiV1EdgesHardwareUnassignedGetRequest) Authorization(authorization stri
 	return r
 }
 
-func (r ApiV1EdgesHardwareUnassignedGetRequest) Execute() (*V1EdgesHardwareUnassignedGet200Response, *http.Response, error) {
+func (r ApiV1EdgesHardwareUnassignedGetRequest) Execute() (*V1EdgesHardwareUnassignedGetResponse, *http.Response, error) {
 	return r.ApiService.V1EdgesHardwareUnassignedGetExecute(r)
 }
 
@@ -23580,13 +25172,13 @@ func (a *DefaultAPIService) V1EdgesHardwareUnassignedGet(ctx context.Context) Ap
 }
 
 // Execute executes the request
-//  @return V1EdgesHardwareUnassignedGet200Response
-func (a *DefaultAPIService) V1EdgesHardwareUnassignedGetExecute(r ApiV1EdgesHardwareUnassignedGetRequest) (*V1EdgesHardwareUnassignedGet200Response, *http.Response, error) {
+//  @return V1EdgesHardwareUnassignedGetResponse
+func (a *DefaultAPIService) V1EdgesHardwareUnassignedGetExecute(r ApiV1EdgesHardwareUnassignedGetRequest) (*V1EdgesHardwareUnassignedGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1EdgesHardwareUnassignedGet200Response
+		localVarReturnValue  *V1EdgesHardwareUnassignedGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1EdgesHardwareUnassignedGet")
@@ -23684,7 +25276,7 @@ func (r ApiV1EdgesSummaryGetRequest) Authorization(authorization string) ApiV1Ed
 	return r
 }
 
-func (r ApiV1EdgesSummaryGetRequest) Execute() (*V1EdgesSummaryGet200Response, *http.Response, error) {
+func (r ApiV1EdgesSummaryGetRequest) Execute() (*V1EdgesSummaryGetResponse, *http.Response, error) {
 	return r.ApiService.V1EdgesSummaryGetExecute(r)
 }
 
@@ -23702,13 +25294,13 @@ func (a *DefaultAPIService) V1EdgesSummaryGet(ctx context.Context) ApiV1EdgesSum
 }
 
 // Execute executes the request
-//  @return V1EdgesSummaryGet200Response
-func (a *DefaultAPIService) V1EdgesSummaryGetExecute(r ApiV1EdgesSummaryGetRequest) (*V1EdgesSummaryGet200Response, *http.Response, error) {
+//  @return V1EdgesSummaryGetResponse
+func (a *DefaultAPIService) V1EdgesSummaryGetExecute(r ApiV1EdgesSummaryGetRequest) (*V1EdgesSummaryGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1EdgesSummaryGet200Response
+		localVarReturnValue  *V1EdgesSummaryGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1EdgesSummaryGet")
@@ -23806,12 +25398,14 @@ func (r ApiV1EnterpriseAllocationGetRequest) Authorization(authorization string)
 	return r
 }
 
-func (r ApiV1EnterpriseAllocationGetRequest) Execute() (*V1EnterpriseAllocationGet200Response, *http.Response, error) {
+func (r ApiV1EnterpriseAllocationGetRequest) Execute() (*V1EnterpriseAllocationGetResponse, *http.Response, error) {
 	return r.ApiService.V1EnterpriseAllocationGetExecute(r)
 }
 
 /*
 V1EnterpriseAllocationGet Method for V1EnterpriseAllocationGet
+
+Get all allocation for the given enterprise on a given month
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV1EnterpriseAllocationGetRequest
@@ -23824,13 +25418,13 @@ func (a *DefaultAPIService) V1EnterpriseAllocationGet(ctx context.Context) ApiV1
 }
 
 // Execute executes the request
-//  @return V1EnterpriseAllocationGet200Response
-func (a *DefaultAPIService) V1EnterpriseAllocationGetExecute(r ApiV1EnterpriseAllocationGetRequest) (*V1EnterpriseAllocationGet200Response, *http.Response, error) {
+//  @return V1EnterpriseAllocationGetResponse
+func (a *DefaultAPIService) V1EnterpriseAllocationGetExecute(r ApiV1EnterpriseAllocationGetRequest) (*V1EnterpriseAllocationGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1EnterpriseAllocationGet200Response
+		localVarReturnValue  *V1EnterpriseAllocationGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1EnterpriseAllocationGet")
@@ -23928,12 +25522,14 @@ func (r ApiV1EnterpriseConfigurationGetRequest) Authorization(authorization stri
 	return r
 }
 
-func (r ApiV1EnterpriseConfigurationGetRequest) Execute() (*V1EnterpriseConfigurationGet200Response, *http.Response, error) {
+func (r ApiV1EnterpriseConfigurationGetRequest) Execute() (*V1EnterpriseConfigurationGetResponse, *http.Response, error) {
 	return r.ApiService.V1EnterpriseConfigurationGetExecute(r)
 }
 
 /*
 V1EnterpriseConfigurationGet Method for V1EnterpriseConfigurationGet
+
+Get enterprise-level information relevant to device configuration
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV1EnterpriseConfigurationGetRequest
@@ -23946,13 +25542,13 @@ func (a *DefaultAPIService) V1EnterpriseConfigurationGet(ctx context.Context) Ap
 }
 
 // Execute executes the request
-//  @return V1EnterpriseConfigurationGet200Response
-func (a *DefaultAPIService) V1EnterpriseConfigurationGetExecute(r ApiV1EnterpriseConfigurationGetRequest) (*V1EnterpriseConfigurationGet200Response, *http.Response, error) {
+//  @return V1EnterpriseConfigurationGetResponse
+func (a *DefaultAPIService) V1EnterpriseConfigurationGetExecute(r ApiV1EnterpriseConfigurationGetRequest) (*V1EnterpriseConfigurationGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1EnterpriseConfigurationGet200Response
+		localVarReturnValue  *V1EnterpriseConfigurationGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1EnterpriseConfigurationGet")
@@ -24042,7 +25638,7 @@ type ApiV1EnterpriseConfigurationPutRequest struct {
 	ctx context.Context
 	ApiService *DefaultAPIService
 	authorization *string
-	v1EnterpriseConfigurationGet200Response *V1EnterpriseConfigurationGet200Response
+	v1EnterpriseConfigurationPutRequest *V1EnterpriseConfigurationPutRequest
 }
 
 // Bearer token. Format: Bearer &lt;your_token_here&gt;
@@ -24051,8 +25647,8 @@ func (r ApiV1EnterpriseConfigurationPutRequest) Authorization(authorization stri
 	return r
 }
 
-func (r ApiV1EnterpriseConfigurationPutRequest) V1EnterpriseConfigurationGet200Response(v1EnterpriseConfigurationGet200Response V1EnterpriseConfigurationGet200Response) ApiV1EnterpriseConfigurationPutRequest {
-	r.v1EnterpriseConfigurationGet200Response = &v1EnterpriseConfigurationGet200Response
+func (r ApiV1EnterpriseConfigurationPutRequest) V1EnterpriseConfigurationPutRequest(v1EnterpriseConfigurationPutRequest V1EnterpriseConfigurationPutRequest) ApiV1EnterpriseConfigurationPutRequest {
+	r.v1EnterpriseConfigurationPutRequest = &v1EnterpriseConfigurationPutRequest
 	return r
 }
 
@@ -24062,6 +25658,8 @@ func (r ApiV1EnterpriseConfigurationPutRequest) Execute() (map[string]interface{
 
 /*
 V1EnterpriseConfigurationPut Method for V1EnterpriseConfigurationPut
+
+Update enterprise-level information relevant to device configuration
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV1EnterpriseConfigurationPutRequest
@@ -24096,8 +25694,8 @@ func (a *DefaultAPIService) V1EnterpriseConfigurationPutExecute(r ApiV1Enterpris
 	if r.authorization == nil {
 		return localVarReturnValue, nil, reportError("authorization is required and must be specified")
 	}
-	if r.v1EnterpriseConfigurationGet200Response == nil {
-		return localVarReturnValue, nil, reportError("v1EnterpriseConfigurationGet200Response is required and must be specified")
+	if r.v1EnterpriseConfigurationPutRequest == nil {
+		return localVarReturnValue, nil, reportError("v1EnterpriseConfigurationPutRequest is required and must be specified")
 	}
 
 	// to determine the Content-Type header
@@ -24119,7 +25717,7 @@ func (a *DefaultAPIService) V1EnterpriseConfigurationPutExecute(r ApiV1Enterpris
 	}
 	parameterAddToHeaderOrQuery(localVarHeaderParams, "Authorization", r.authorization, "simple", "")
 	// body params
-	localVarPostBody = r.v1EnterpriseConfigurationGet200Response
+	localVarPostBody = r.v1EnterpriseConfigurationPutRequest
 	if r.ctx != nil {
 		// API Key Authentication
 		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
@@ -24195,6 +25793,8 @@ func (r ApiV1EnterpriseContractPutRequest) Execute() (map[string]interface{}, *h
 
 /*
 V1EnterpriseContractPut Method for V1EnterpriseContractPut
+
+Update an enterprise to use a new monthly or term-based contract
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV1EnterpriseContractPutRequest
@@ -24316,12 +25916,14 @@ func (r ApiV1EnterpriseSnapshotGetRequest) Authorization(authorization string) A
 	return r
 }
 
-func (r ApiV1EnterpriseSnapshotGetRequest) Execute() (*V1EnterpriseSnapshotGet200Response, *http.Response, error) {
+func (r ApiV1EnterpriseSnapshotGetRequest) Execute() (*V1EnterpriseSnapshotGetResponse, *http.Response, error) {
 	return r.ApiService.V1EnterpriseSnapshotGetExecute(r)
 }
 
 /*
 V1EnterpriseSnapshotGet Method for V1EnterpriseSnapshotGet
+
+Get a all of the device snapshots for every device in an enterprise
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV1EnterpriseSnapshotGetRequest
@@ -24334,13 +25936,13 @@ func (a *DefaultAPIService) V1EnterpriseSnapshotGet(ctx context.Context) ApiV1En
 }
 
 // Execute executes the request
-//  @return V1EnterpriseSnapshotGet200Response
-func (a *DefaultAPIService) V1EnterpriseSnapshotGetExecute(r ApiV1EnterpriseSnapshotGetRequest) (*V1EnterpriseSnapshotGet200Response, *http.Response, error) {
+//  @return V1EnterpriseSnapshotGetResponse
+func (a *DefaultAPIService) V1EnterpriseSnapshotGetExecute(r ApiV1EnterpriseSnapshotGetRequest) (*V1EnterpriseSnapshotGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1EnterpriseSnapshotGet200Response
+		localVarReturnValue  *V1EnterpriseSnapshotGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1EnterpriseSnapshotGet")
@@ -24439,12 +26041,14 @@ func (r ApiV1EnterprisesEnterpriseIdAdminGetRequest) Authorization(authorization
 	return r
 }
 
-func (r ApiV1EnterprisesEnterpriseIdAdminGetRequest) Execute() (*V1EnterprisesEnterpriseIdAdminGet200Response, *http.Response, error) {
+func (r ApiV1EnterprisesEnterpriseIdAdminGetRequest) Execute() (*V1EnterprisesEnterpriseIdAdminGetResponse, *http.Response, error) {
 	return r.ApiService.V1EnterprisesEnterpriseIdAdminGetExecute(r)
 }
 
 /*
 V1EnterprisesEnterpriseIdAdminGet Method for V1EnterprisesEnterpriseIdAdminGet
+
+Get the admin account for an enterprise.
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @param enterpriseId 
@@ -24459,13 +26063,13 @@ func (a *DefaultAPIService) V1EnterprisesEnterpriseIdAdminGet(ctx context.Contex
 }
 
 // Execute executes the request
-//  @return V1EnterprisesEnterpriseIdAdminGet200Response
-func (a *DefaultAPIService) V1EnterprisesEnterpriseIdAdminGetExecute(r ApiV1EnterprisesEnterpriseIdAdminGetRequest) (*V1EnterprisesEnterpriseIdAdminGet200Response, *http.Response, error) {
+//  @return V1EnterprisesEnterpriseIdAdminGetResponse
+func (a *DefaultAPIService) V1EnterprisesEnterpriseIdAdminGetExecute(r ApiV1EnterprisesEnterpriseIdAdminGetRequest) (*V1EnterprisesEnterpriseIdAdminGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1EnterprisesEnterpriseIdAdminGet200Response
+		localVarReturnValue  *V1EnterprisesEnterpriseIdAdminGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1EnterprisesEnterpriseIdAdminGet")
@@ -24565,12 +26169,14 @@ func (r ApiV1EnterprisesEnterpriseIdDeleteRequest) Authorization(authorization s
 	return r
 }
 
-func (r ApiV1EnterprisesEnterpriseIdDeleteRequest) Execute() (*V1AuthPut204Response, *http.Response, error) {
+func (r ApiV1EnterprisesEnterpriseIdDeleteRequest) Execute() (*V1EnterprisesEnterpriseIdDeleteResponse, *http.Response, error) {
 	return r.ApiService.V1EnterprisesEnterpriseIdDeleteExecute(r)
 }
 
 /*
 V1EnterprisesEnterpriseIdDelete Method for V1EnterprisesEnterpriseIdDelete
+
+Delete a specific enterprise by ID (you must manage this tenant).
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @param enterpriseId 
@@ -24585,13 +26191,13 @@ func (a *DefaultAPIService) V1EnterprisesEnterpriseIdDelete(ctx context.Context,
 }
 
 // Execute executes the request
-//  @return V1AuthPut204Response
-func (a *DefaultAPIService) V1EnterprisesEnterpriseIdDeleteExecute(r ApiV1EnterprisesEnterpriseIdDeleteRequest) (*V1AuthPut204Response, *http.Response, error) {
+//  @return V1EnterprisesEnterpriseIdDeleteResponse
+func (a *DefaultAPIService) V1EnterprisesEnterpriseIdDeleteExecute(r ApiV1EnterprisesEnterpriseIdDeleteRequest) (*V1EnterprisesEnterpriseIdDeleteResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodDelete
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1AuthPut204Response
+		localVarReturnValue  *V1EnterprisesEnterpriseIdDeleteResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1EnterprisesEnterpriseIdDelete")
@@ -24691,7 +26297,7 @@ func (r ApiV1EnterprisesEnterpriseIdDeviceStatusGetRequest) Authorization(author
 	return r
 }
 
-func (r ApiV1EnterprisesEnterpriseIdDeviceStatusGetRequest) Execute() (*V1DeviceStatusPost200Response, *http.Response, error) {
+func (r ApiV1EnterprisesEnterpriseIdDeviceStatusGetRequest) Execute() (*V1EnterprisesEnterpriseIdDeviceStatusGetResponse, *http.Response, error) {
 	return r.ApiService.V1EnterprisesEnterpriseIdDeviceStatusGetExecute(r)
 }
 
@@ -24711,13 +26317,13 @@ func (a *DefaultAPIService) V1EnterprisesEnterpriseIdDeviceStatusGet(ctx context
 }
 
 // Execute executes the request
-//  @return V1DeviceStatusPost200Response
-func (a *DefaultAPIService) V1EnterprisesEnterpriseIdDeviceStatusGetExecute(r ApiV1EnterprisesEnterpriseIdDeviceStatusGetRequest) (*V1DeviceStatusPost200Response, *http.Response, error) {
+//  @return V1EnterprisesEnterpriseIdDeviceStatusGetResponse
+func (a *DefaultAPIService) V1EnterprisesEnterpriseIdDeviceStatusGetExecute(r ApiV1EnterprisesEnterpriseIdDeviceStatusGetRequest) (*V1EnterprisesEnterpriseIdDeviceStatusGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1DeviceStatusPost200Response
+		localVarReturnValue  *V1EnterprisesEnterpriseIdDeviceStatusGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1EnterprisesEnterpriseIdDeviceStatusGet")
@@ -24831,6 +26437,8 @@ func (r ApiV1EnterprisesEulaPostRequest) Execute() (map[string]interface{}, *htt
 
 /*
 V1EnterprisesEulaPost Method for V1EnterprisesEulaPost
+
+Accept End User License Agreement for the enterprise.
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV1EnterprisesEulaPostRequest
@@ -24959,12 +26567,14 @@ func (r ApiV1EnterprisesGetRequest) EnterpriseIds(enterpriseIds []int64) ApiV1En
 	return r
 }
 
-func (r ApiV1EnterprisesGetRequest) Execute() (*V1EnterprisesGet200Response, *http.Response, error) {
+func (r ApiV1EnterprisesGetRequest) Execute() (*V1EnterprisesGetResponse, *http.Response, error) {
 	return r.ApiService.V1EnterprisesGetExecute(r)
 }
 
 /*
 V1EnterprisesGet Method for V1EnterprisesGet
+
+Get specific enterprises by their IDs with detailed information. Query just your own enterprise Id for more detailed info.
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV1EnterprisesGetRequest
@@ -24977,13 +26587,13 @@ func (a *DefaultAPIService) V1EnterprisesGet(ctx context.Context) ApiV1Enterpris
 }
 
 // Execute executes the request
-//  @return V1EnterprisesGet200Response
-func (a *DefaultAPIService) V1EnterprisesGetExecute(r ApiV1EnterprisesGetRequest) (*V1EnterprisesGet200Response, *http.Response, error) {
+//  @return V1EnterprisesGetResponse
+func (a *DefaultAPIService) V1EnterprisesGetExecute(r ApiV1EnterprisesGetRequest) (*V1EnterprisesGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1EnterprisesGet200Response
+		localVarReturnValue  *V1EnterprisesGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1EnterprisesGet")
@@ -25099,12 +26709,14 @@ func (r ApiV1EnterprisesManagedGetRequest) Type_(type_ string) ApiV1EnterprisesM
 	return r
 }
 
-func (r ApiV1EnterprisesManagedGetRequest) Execute() (*V1EnterprisesManagedGet200Response, *http.Response, error) {
+func (r ApiV1EnterprisesManagedGetRequest) Execute() (*V1EnterprisesManagedGetResponse, *http.Response, error) {
 	return r.ApiService.V1EnterprisesManagedGetExecute(r)
 }
 
 /*
 V1EnterprisesManagedGet Method for V1EnterprisesManagedGet
+
+Get enterprises managed by your tenant, filtered by enterprise type.
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV1EnterprisesManagedGetRequest
@@ -25117,13 +26729,13 @@ func (a *DefaultAPIService) V1EnterprisesManagedGet(ctx context.Context) ApiV1En
 }
 
 // Execute executes the request
-//  @return V1EnterprisesManagedGet200Response
-func (a *DefaultAPIService) V1EnterprisesManagedGetExecute(r ApiV1EnterprisesManagedGetRequest) (*V1EnterprisesManagedGet200Response, *http.Response, error) {
+//  @return V1EnterprisesManagedGetResponse
+func (a *DefaultAPIService) V1EnterprisesManagedGetExecute(r ApiV1EnterprisesManagedGetRequest) (*V1EnterprisesManagedGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1EnterprisesManagedGet200Response
+		localVarReturnValue  *V1EnterprisesManagedGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1EnterprisesManagedGet")
@@ -25139,10 +26751,11 @@ func (a *DefaultAPIService) V1EnterprisesManagedGetExecute(r ApiV1EnterprisesMan
 	if r.authorization == nil {
 		return localVarReturnValue, nil, reportError("authorization is required and must be specified")
 	}
-
-	if r.type_ != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "type", r.type_, "form", "")
+	if r.type_ == nil {
+		return localVarReturnValue, nil, reportError("type_ is required and must be specified")
 	}
+
+	parameterAddToHeaderOrQuery(localVarQueryParams, "type", r.type_, "form", "")
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
 
@@ -25236,6 +26849,8 @@ func (r ApiV1EnterprisesPatchRequest) Execute() (map[string]interface{}, *http.R
 
 /*
 V1EnterprisesPatch Method for V1EnterprisesPatch
+
+Updates all relevent enterprise information.
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV1EnterprisesPatchRequest
@@ -25370,6 +26985,8 @@ func (r ApiV1EnterprisesPutRequest) Execute() (map[string]interface{}, *http.Res
 /*
 V1EnterprisesPut Method for V1EnterprisesPut
 
+Create a new enterprise with company details, account type, and admin user.
+
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV1EnterprisesPutRequest
 */
@@ -25490,12 +27107,14 @@ func (r ApiV1EnterprisesSelfDeleteRequest) Authorization(authorization string) A
 	return r
 }
 
-func (r ApiV1EnterprisesSelfDeleteRequest) Execute() (*V1AuthPut204Response, *http.Response, error) {
+func (r ApiV1EnterprisesSelfDeleteRequest) Execute() (*V1EnterprisesSelfDeleteResponse, *http.Response, error) {
 	return r.ApiService.V1EnterprisesSelfDeleteExecute(r)
 }
 
 /*
 V1EnterprisesSelfDelete Method for V1EnterprisesSelfDelete
+
+Delete the current user's enterprise (self-deletion).
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV1EnterprisesSelfDeleteRequest
@@ -25508,13 +27127,13 @@ func (a *DefaultAPIService) V1EnterprisesSelfDelete(ctx context.Context) ApiV1En
 }
 
 // Execute executes the request
-//  @return V1AuthPut204Response
-func (a *DefaultAPIService) V1EnterprisesSelfDeleteExecute(r ApiV1EnterprisesSelfDeleteRequest) (*V1AuthPut204Response, *http.Response, error) {
+//  @return V1EnterprisesSelfDeleteResponse
+func (a *DefaultAPIService) V1EnterprisesSelfDeleteExecute(r ApiV1EnterprisesSelfDeleteRequest) (*V1EnterprisesSelfDeleteResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodDelete
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1AuthPut204Response
+		localVarReturnValue  *V1EnterprisesSelfDeleteResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1EnterprisesSelfDelete")
@@ -25612,12 +27231,14 @@ func (r ApiV1EventDeviceGetRequest) Authorization(authorization string) ApiV1Eve
 	return r
 }
 
-func (r ApiV1EventDeviceGetRequest) Execute() (*V1EventDeviceGet200Response, *http.Response, error) {
+func (r ApiV1EventDeviceGetRequest) Execute() (*V1EventDeviceGetResponse, *http.Response, error) {
 	return r.ApiService.V1EventDeviceGetExecute(r)
 }
 
 /*
 V1EventDeviceGet Method for V1EventDeviceGet
+
+Get All events by DeviceID
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV1EventDeviceGetRequest
@@ -25630,13 +27251,13 @@ func (a *DefaultAPIService) V1EventDeviceGet(ctx context.Context) ApiV1EventDevi
 }
 
 // Execute executes the request
-//  @return V1EventDeviceGet200Response
-func (a *DefaultAPIService) V1EventDeviceGetExecute(r ApiV1EventDeviceGetRequest) (*V1EventDeviceGet200Response, *http.Response, error) {
+//  @return V1EventDeviceGetResponse
+func (a *DefaultAPIService) V1EventDeviceGetExecute(r ApiV1EventDeviceGetRequest) (*V1EventDeviceGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1EventDeviceGet200Response
+		localVarReturnValue  *V1EventDeviceGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1EventDeviceGet")
@@ -25734,12 +27355,14 @@ func (r ApiV1EventEnterpriseGetRequest) Authorization(authorization string) ApiV
 	return r
 }
 
-func (r ApiV1EventEnterpriseGetRequest) Execute() (*V1EventDeviceGet200Response, *http.Response, error) {
+func (r ApiV1EventEnterpriseGetRequest) Execute() (*V1EventEnterpriseGetResponse, *http.Response, error) {
 	return r.ApiService.V1EventEnterpriseGetExecute(r)
 }
 
 /*
 V1EventEnterpriseGet Method for V1EventEnterpriseGet
+
+Get All events by EnterpriseID
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV1EventEnterpriseGetRequest
@@ -25752,13 +27375,13 @@ func (a *DefaultAPIService) V1EventEnterpriseGet(ctx context.Context) ApiV1Event
 }
 
 // Execute executes the request
-//  @return V1EventDeviceGet200Response
-func (a *DefaultAPIService) V1EventEnterpriseGetExecute(r ApiV1EventEnterpriseGetRequest) (*V1EventDeviceGet200Response, *http.Response, error) {
+//  @return V1EventEnterpriseGetResponse
+func (a *DefaultAPIService) V1EventEnterpriseGetExecute(r ApiV1EventEnterpriseGetRequest) (*V1EventEnterpriseGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1EventDeviceGet200Response
+		localVarReturnValue  *V1EventEnterpriseGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1EventEnterpriseGet")
@@ -25868,6 +27491,8 @@ func (r ApiV1EventSystemAckPostRequest) Execute() (map[string]interface{}, *http
 
 /*
 V1EventSystemAckPost Method for V1EventSystemAckPost
+
+Update User Acknowledgement for an event
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV1EventSystemAckPostRequest
@@ -25989,12 +27614,14 @@ func (r ApiV1EventSystemGetRequest) Authorization(authorization string) ApiV1Eve
 	return r
 }
 
-func (r ApiV1EventSystemGetRequest) Execute() (*V1EventDeviceGet200Response, *http.Response, error) {
+func (r ApiV1EventSystemGetRequest) Execute() (*V1EventSystemGetResponse, *http.Response, error) {
 	return r.ApiService.V1EventSystemGetExecute(r)
 }
 
 /*
 V1EventSystemGet Method for V1EventSystemGet
+
+Get All system level events
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV1EventSystemGetRequest
@@ -26007,13 +27634,13 @@ func (a *DefaultAPIService) V1EventSystemGet(ctx context.Context) ApiV1EventSyst
 }
 
 // Execute executes the request
-//  @return V1EventDeviceGet200Response
-func (a *DefaultAPIService) V1EventSystemGetExecute(r ApiV1EventSystemGetRequest) (*V1EventDeviceGet200Response, *http.Response, error) {
+//  @return V1EventSystemGetResponse
+func (a *DefaultAPIService) V1EventSystemGetExecute(r ApiV1EventSystemGetRequest) (*V1EventSystemGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1EventDeviceGet200Response
+		localVarReturnValue  *V1EventSystemGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1EventSystemGet")
@@ -26117,12 +27744,14 @@ func (r ApiV1ExtranetB2bMonitoringPeeringServiceBandwidthUsagePostRequest) V1Ext
 	return r
 }
 
-func (r ApiV1ExtranetB2bMonitoringPeeringServiceBandwidthUsagePostRequest) Execute() (*V1ExtranetB2bMonitoringPeeringServiceBandwidthUsagePost200Response, *http.Response, error) {
+func (r ApiV1ExtranetB2bMonitoringPeeringServiceBandwidthUsagePostRequest) Execute() (*V1ExtranetB2bMonitoringPeeringServiceBandwidthUsagePostResponse, *http.Response, error) {
 	return r.ApiService.V1ExtranetB2bMonitoringPeeringServiceBandwidthUsagePostExecute(r)
 }
 
 /*
 V1ExtranetB2bMonitoringPeeringServiceBandwidthUsagePost Method for V1ExtranetB2bMonitoringPeeringServiceBandwidthUsagePost
+
+Get b2b extranet peering service sites usage stats
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV1ExtranetB2bMonitoringPeeringServiceBandwidthUsagePostRequest
@@ -26135,13 +27764,13 @@ func (a *DefaultAPIService) V1ExtranetB2bMonitoringPeeringServiceBandwidthUsageP
 }
 
 // Execute executes the request
-//  @return V1ExtranetB2bMonitoringPeeringServiceBandwidthUsagePost200Response
-func (a *DefaultAPIService) V1ExtranetB2bMonitoringPeeringServiceBandwidthUsagePostExecute(r ApiV1ExtranetB2bMonitoringPeeringServiceBandwidthUsagePostRequest) (*V1ExtranetB2bMonitoringPeeringServiceBandwidthUsagePost200Response, *http.Response, error) {
+//  @return V1ExtranetB2bMonitoringPeeringServiceBandwidthUsagePostResponse
+func (a *DefaultAPIService) V1ExtranetB2bMonitoringPeeringServiceBandwidthUsagePostExecute(r ApiV1ExtranetB2bMonitoringPeeringServiceBandwidthUsagePostRequest) (*V1ExtranetB2bMonitoringPeeringServiceBandwidthUsagePostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1ExtranetB2bMonitoringPeeringServiceBandwidthUsagePost200Response
+		localVarReturnValue  *V1ExtranetB2bMonitoringPeeringServiceBandwidthUsagePostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1ExtranetB2bMonitoringPeeringServiceBandwidthUsagePost")
@@ -26250,12 +27879,14 @@ func (r ApiV1ExtranetB2bMonitoringPeeringServiceConsumersUsageTopPostRequest) V1
 	return r
 }
 
-func (r ApiV1ExtranetB2bMonitoringPeeringServiceConsumersUsageTopPostRequest) Execute() (*V1ExtranetB2bMonitoringPeeringServiceConsumersUsageTopPost200Response, *http.Response, error) {
+func (r ApiV1ExtranetB2bMonitoringPeeringServiceConsumersUsageTopPostRequest) Execute() (*V1ExtranetB2bMonitoringPeeringServiceConsumersUsageTopPostResponse, *http.Response, error) {
 	return r.ApiService.V1ExtranetB2bMonitoringPeeringServiceConsumersUsageTopPostExecute(r)
 }
 
 /*
 V1ExtranetB2bMonitoringPeeringServiceConsumersUsageTopPost Method for V1ExtranetB2bMonitoringPeeringServiceConsumersUsageTopPost
+
+Get b2b extranet peering service top consumers usage stats
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV1ExtranetB2bMonitoringPeeringServiceConsumersUsageTopPostRequest
@@ -26268,13 +27899,13 @@ func (a *DefaultAPIService) V1ExtranetB2bMonitoringPeeringServiceConsumersUsageT
 }
 
 // Execute executes the request
-//  @return V1ExtranetB2bMonitoringPeeringServiceConsumersUsageTopPost200Response
-func (a *DefaultAPIService) V1ExtranetB2bMonitoringPeeringServiceConsumersUsageTopPostExecute(r ApiV1ExtranetB2bMonitoringPeeringServiceConsumersUsageTopPostRequest) (*V1ExtranetB2bMonitoringPeeringServiceConsumersUsageTopPost200Response, *http.Response, error) {
+//  @return V1ExtranetB2bMonitoringPeeringServiceConsumersUsageTopPostResponse
+func (a *DefaultAPIService) V1ExtranetB2bMonitoringPeeringServiceConsumersUsageTopPostExecute(r ApiV1ExtranetB2bMonitoringPeeringServiceConsumersUsageTopPostRequest) (*V1ExtranetB2bMonitoringPeeringServiceConsumersUsageTopPostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1ExtranetB2bMonitoringPeeringServiceConsumersUsageTopPost200Response
+		localVarReturnValue  *V1ExtranetB2bMonitoringPeeringServiceConsumersUsageTopPostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1ExtranetB2bMonitoringPeeringServiceConsumersUsageTopPost")
@@ -26383,12 +28014,14 @@ func (r ApiV1ExtranetB2bMonitoringPeeringServiceConsumptionOverviewPostRequest) 
 	return r
 }
 
-func (r ApiV1ExtranetB2bMonitoringPeeringServiceConsumptionOverviewPostRequest) Execute() (*V1ExtranetB2bMonitoringPeeringServiceConsumptionOverviewPost200Response, *http.Response, error) {
+func (r ApiV1ExtranetB2bMonitoringPeeringServiceConsumptionOverviewPostRequest) Execute() (*V1ExtranetB2bMonitoringPeeringServiceConsumptionOverviewPostResponse, *http.Response, error) {
 	return r.ApiService.V1ExtranetB2bMonitoringPeeringServiceConsumptionOverviewPostExecute(r)
 }
 
 /*
 V1ExtranetB2bMonitoringPeeringServiceConsumptionOverviewPost Method for V1ExtranetB2bMonitoringPeeringServiceConsumptionOverviewPost
+
+Get b2b extranet peering consumption overview
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV1ExtranetB2bMonitoringPeeringServiceConsumptionOverviewPostRequest
@@ -26401,13 +28034,13 @@ func (a *DefaultAPIService) V1ExtranetB2bMonitoringPeeringServiceConsumptionOver
 }
 
 // Execute executes the request
-//  @return V1ExtranetB2bMonitoringPeeringServiceConsumptionOverviewPost200Response
-func (a *DefaultAPIService) V1ExtranetB2bMonitoringPeeringServiceConsumptionOverviewPostExecute(r ApiV1ExtranetB2bMonitoringPeeringServiceConsumptionOverviewPostRequest) (*V1ExtranetB2bMonitoringPeeringServiceConsumptionOverviewPost200Response, *http.Response, error) {
+//  @return V1ExtranetB2bMonitoringPeeringServiceConsumptionOverviewPostResponse
+func (a *DefaultAPIService) V1ExtranetB2bMonitoringPeeringServiceConsumptionOverviewPostExecute(r ApiV1ExtranetB2bMonitoringPeeringServiceConsumptionOverviewPostRequest) (*V1ExtranetB2bMonitoringPeeringServiceConsumptionOverviewPostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1ExtranetB2bMonitoringPeeringServiceConsumptionOverviewPost200Response
+		localVarReturnValue  *V1ExtranetB2bMonitoringPeeringServiceConsumptionOverviewPostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1ExtranetB2bMonitoringPeeringServiceConsumptionOverviewPost")
@@ -26516,12 +28149,14 @@ func (r ApiV1ExtranetB2bMonitoringPeeringServiceServiceCustomerListPostRequest) 
 	return r
 }
 
-func (r ApiV1ExtranetB2bMonitoringPeeringServiceServiceCustomerListPostRequest) Execute() (*V1ExtranetB2bMonitoringPeeringServiceServiceCustomerListPost200Response, *http.Response, error) {
+func (r ApiV1ExtranetB2bMonitoringPeeringServiceServiceCustomerListPostRequest) Execute() (*V1ExtranetB2bMonitoringPeeringServiceServiceCustomerListPostResponse, *http.Response, error) {
 	return r.ApiService.V1ExtranetB2bMonitoringPeeringServiceServiceCustomerListPostExecute(r)
 }
 
 /*
 V1ExtranetB2bMonitoringPeeringServiceServiceCustomerListPost Method for V1ExtranetB2bMonitoringPeeringServiceServiceCustomerListPost
+
+Get b2b extranet peering service customer list within a time window
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV1ExtranetB2bMonitoringPeeringServiceServiceCustomerListPostRequest
@@ -26534,13 +28169,13 @@ func (a *DefaultAPIService) V1ExtranetB2bMonitoringPeeringServiceServiceCustomer
 }
 
 // Execute executes the request
-//  @return V1ExtranetB2bMonitoringPeeringServiceServiceCustomerListPost200Response
-func (a *DefaultAPIService) V1ExtranetB2bMonitoringPeeringServiceServiceCustomerListPostExecute(r ApiV1ExtranetB2bMonitoringPeeringServiceServiceCustomerListPostRequest) (*V1ExtranetB2bMonitoringPeeringServiceServiceCustomerListPost200Response, *http.Response, error) {
+//  @return V1ExtranetB2bMonitoringPeeringServiceServiceCustomerListPostResponse
+func (a *DefaultAPIService) V1ExtranetB2bMonitoringPeeringServiceServiceCustomerListPostExecute(r ApiV1ExtranetB2bMonitoringPeeringServiceServiceCustomerListPostRequest) (*V1ExtranetB2bMonitoringPeeringServiceServiceCustomerListPostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1ExtranetB2bMonitoringPeeringServiceServiceCustomerListPost200Response
+		localVarReturnValue  *V1ExtranetB2bMonitoringPeeringServiceServiceCustomerListPostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1ExtranetB2bMonitoringPeeringServiceServiceCustomerListPost")
@@ -26635,7 +28270,7 @@ type ApiV1ExtranetB2bMonitoringPeeringServiceServiceHealthPostRequest struct {
 	ctx context.Context
 	ApiService *DefaultAPIService
 	authorization *string
-	v1ExtranetsMonitoringTrafficSecurityPolicyPostRequest *V1ExtranetsMonitoringTrafficSecurityPolicyPostRequest
+	v1ExtranetB2bMonitoringPeeringServiceServiceHealthPostRequest *V1ExtranetB2bMonitoringPeeringServiceServiceHealthPostRequest
 }
 
 // Bearer token. Format: Bearer &lt;your_token_here&gt;
@@ -26644,12 +28279,12 @@ func (r ApiV1ExtranetB2bMonitoringPeeringServiceServiceHealthPostRequest) Author
 	return r
 }
 
-func (r ApiV1ExtranetB2bMonitoringPeeringServiceServiceHealthPostRequest) V1ExtranetsMonitoringTrafficSecurityPolicyPostRequest(v1ExtranetsMonitoringTrafficSecurityPolicyPostRequest V1ExtranetsMonitoringTrafficSecurityPolicyPostRequest) ApiV1ExtranetB2bMonitoringPeeringServiceServiceHealthPostRequest {
-	r.v1ExtranetsMonitoringTrafficSecurityPolicyPostRequest = &v1ExtranetsMonitoringTrafficSecurityPolicyPostRequest
+func (r ApiV1ExtranetB2bMonitoringPeeringServiceServiceHealthPostRequest) V1ExtranetB2bMonitoringPeeringServiceServiceHealthPostRequest(v1ExtranetB2bMonitoringPeeringServiceServiceHealthPostRequest V1ExtranetB2bMonitoringPeeringServiceServiceHealthPostRequest) ApiV1ExtranetB2bMonitoringPeeringServiceServiceHealthPostRequest {
+	r.v1ExtranetB2bMonitoringPeeringServiceServiceHealthPostRequest = &v1ExtranetB2bMonitoringPeeringServiceServiceHealthPostRequest
 	return r
 }
 
-func (r ApiV1ExtranetB2bMonitoringPeeringServiceServiceHealthPostRequest) Execute() (*V1ExtranetB2bMonitoringPeeringServiceServiceHealthPost200Response, *http.Response, error) {
+func (r ApiV1ExtranetB2bMonitoringPeeringServiceServiceHealthPostRequest) Execute() (*V1ExtranetB2bMonitoringPeeringServiceServiceHealthPostResponse, *http.Response, error) {
 	return r.ApiService.V1ExtranetB2bMonitoringPeeringServiceServiceHealthPostExecute(r)
 }
 
@@ -26667,13 +28302,13 @@ func (a *DefaultAPIService) V1ExtranetB2bMonitoringPeeringServiceServiceHealthPo
 }
 
 // Execute executes the request
-//  @return V1ExtranetB2bMonitoringPeeringServiceServiceHealthPost200Response
-func (a *DefaultAPIService) V1ExtranetB2bMonitoringPeeringServiceServiceHealthPostExecute(r ApiV1ExtranetB2bMonitoringPeeringServiceServiceHealthPostRequest) (*V1ExtranetB2bMonitoringPeeringServiceServiceHealthPost200Response, *http.Response, error) {
+//  @return V1ExtranetB2bMonitoringPeeringServiceServiceHealthPostResponse
+func (a *DefaultAPIService) V1ExtranetB2bMonitoringPeeringServiceServiceHealthPostExecute(r ApiV1ExtranetB2bMonitoringPeeringServiceServiceHealthPostRequest) (*V1ExtranetB2bMonitoringPeeringServiceServiceHealthPostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1ExtranetB2bMonitoringPeeringServiceServiceHealthPost200Response
+		localVarReturnValue  *V1ExtranetB2bMonitoringPeeringServiceServiceHealthPostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1ExtranetB2bMonitoringPeeringServiceServiceHealthPost")
@@ -26689,8 +28324,8 @@ func (a *DefaultAPIService) V1ExtranetB2bMonitoringPeeringServiceServiceHealthPo
 	if r.authorization == nil {
 		return localVarReturnValue, nil, reportError("authorization is required and must be specified")
 	}
-	if r.v1ExtranetsMonitoringTrafficSecurityPolicyPostRequest == nil {
-		return localVarReturnValue, nil, reportError("v1ExtranetsMonitoringTrafficSecurityPolicyPostRequest is required and must be specified")
+	if r.v1ExtranetB2bMonitoringPeeringServiceServiceHealthPostRequest == nil {
+		return localVarReturnValue, nil, reportError("v1ExtranetB2bMonitoringPeeringServiceServiceHealthPostRequest is required and must be specified")
 	}
 
 	// to determine the Content-Type header
@@ -26712,7 +28347,7 @@ func (a *DefaultAPIService) V1ExtranetB2bMonitoringPeeringServiceServiceHealthPo
 	}
 	parameterAddToHeaderOrQuery(localVarHeaderParams, "Authorization", r.authorization, "simple", "")
 	// body params
-	localVarPostBody = r.v1ExtranetsMonitoringTrafficSecurityPolicyPostRequest
+	localVarPostBody = r.v1ExtranetB2bMonitoringPeeringServiceServiceHealthPostRequest
 	if r.ctx != nil {
 		// API Key Authentication
 		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
@@ -26782,12 +28417,14 @@ func (r ApiV1ExtranetB2bMonitoringPeeringServiceServiceOvertimeConsumptionPostRe
 	return r
 }
 
-func (r ApiV1ExtranetB2bMonitoringPeeringServiceServiceOvertimeConsumptionPostRequest) Execute() (*V1ExtranetB2bMonitoringPeeringServiceServiceOvertimeConsumptionPost200Response, *http.Response, error) {
+func (r ApiV1ExtranetB2bMonitoringPeeringServiceServiceOvertimeConsumptionPostRequest) Execute() (*V1ExtranetB2bMonitoringPeeringServiceServiceOvertimeConsumptionPostResponse, *http.Response, error) {
 	return r.ApiService.V1ExtranetB2bMonitoringPeeringServiceServiceOvertimeConsumptionPostExecute(r)
 }
 
 /*
 V1ExtranetB2bMonitoringPeeringServiceServiceOvertimeConsumptionPost Method for V1ExtranetB2bMonitoringPeeringServiceServiceOvertimeConsumptionPost
+
+Get b2b extranet peering service overtime consumption
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV1ExtranetB2bMonitoringPeeringServiceServiceOvertimeConsumptionPostRequest
@@ -26800,13 +28437,13 @@ func (a *DefaultAPIService) V1ExtranetB2bMonitoringPeeringServiceServiceOvertime
 }
 
 // Execute executes the request
-//  @return V1ExtranetB2bMonitoringPeeringServiceServiceOvertimeConsumptionPost200Response
-func (a *DefaultAPIService) V1ExtranetB2bMonitoringPeeringServiceServiceOvertimeConsumptionPostExecute(r ApiV1ExtranetB2bMonitoringPeeringServiceServiceOvertimeConsumptionPostRequest) (*V1ExtranetB2bMonitoringPeeringServiceServiceOvertimeConsumptionPost200Response, *http.Response, error) {
+//  @return V1ExtranetB2bMonitoringPeeringServiceServiceOvertimeConsumptionPostResponse
+func (a *DefaultAPIService) V1ExtranetB2bMonitoringPeeringServiceServiceOvertimeConsumptionPostExecute(r ApiV1ExtranetB2bMonitoringPeeringServiceServiceOvertimeConsumptionPostRequest) (*V1ExtranetB2bMonitoringPeeringServiceServiceOvertimeConsumptionPostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1ExtranetB2bMonitoringPeeringServiceServiceOvertimeConsumptionPost200Response
+		localVarReturnValue  *V1ExtranetB2bMonitoringPeeringServiceServiceOvertimeConsumptionPostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1ExtranetB2bMonitoringPeeringServiceServiceOvertimeConsumptionPost")
@@ -26901,7 +28538,7 @@ type ApiV1ExtranetSitesUsagePostRequest struct {
 	ctx context.Context
 	ApiService *DefaultAPIService
 	authorization *string
-	v1ExtranetB2bMonitoringPeeringServiceBandwidthUsagePostRequest *V1ExtranetB2bMonitoringPeeringServiceBandwidthUsagePostRequest
+	v1ExtranetSitesUsagePostRequest *V1ExtranetSitesUsagePostRequest
 }
 
 // Bearer token. Format: Bearer &lt;your_token_here&gt;
@@ -26910,17 +28547,19 @@ func (r ApiV1ExtranetSitesUsagePostRequest) Authorization(authorization string) 
 	return r
 }
 
-func (r ApiV1ExtranetSitesUsagePostRequest) V1ExtranetB2bMonitoringPeeringServiceBandwidthUsagePostRequest(v1ExtranetB2bMonitoringPeeringServiceBandwidthUsagePostRequest V1ExtranetB2bMonitoringPeeringServiceBandwidthUsagePostRequest) ApiV1ExtranetSitesUsagePostRequest {
-	r.v1ExtranetB2bMonitoringPeeringServiceBandwidthUsagePostRequest = &v1ExtranetB2bMonitoringPeeringServiceBandwidthUsagePostRequest
+func (r ApiV1ExtranetSitesUsagePostRequest) V1ExtranetSitesUsagePostRequest(v1ExtranetSitesUsagePostRequest V1ExtranetSitesUsagePostRequest) ApiV1ExtranetSitesUsagePostRequest {
+	r.v1ExtranetSitesUsagePostRequest = &v1ExtranetSitesUsagePostRequest
 	return r
 }
 
-func (r ApiV1ExtranetSitesUsagePostRequest) Execute() (*V1ExtranetB2bMonitoringPeeringServiceBandwidthUsagePost200Response, *http.Response, error) {
+func (r ApiV1ExtranetSitesUsagePostRequest) Execute() (*V1ExtranetSitesUsagePostResponse, *http.Response, error) {
 	return r.ApiService.V1ExtranetSitesUsagePostExecute(r)
 }
 
 /*
 V1ExtranetSitesUsagePost Method for V1ExtranetSitesUsagePost
+
+Get extranet service sites usage stats
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV1ExtranetSitesUsagePostRequest
@@ -26933,13 +28572,13 @@ func (a *DefaultAPIService) V1ExtranetSitesUsagePost(ctx context.Context) ApiV1E
 }
 
 // Execute executes the request
-//  @return V1ExtranetB2bMonitoringPeeringServiceBandwidthUsagePost200Response
-func (a *DefaultAPIService) V1ExtranetSitesUsagePostExecute(r ApiV1ExtranetSitesUsagePostRequest) (*V1ExtranetB2bMonitoringPeeringServiceBandwidthUsagePost200Response, *http.Response, error) {
+//  @return V1ExtranetSitesUsagePostResponse
+func (a *DefaultAPIService) V1ExtranetSitesUsagePostExecute(r ApiV1ExtranetSitesUsagePostRequest) (*V1ExtranetSitesUsagePostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1ExtranetB2bMonitoringPeeringServiceBandwidthUsagePost200Response
+		localVarReturnValue  *V1ExtranetSitesUsagePostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1ExtranetSitesUsagePost")
@@ -26955,8 +28594,8 @@ func (a *DefaultAPIService) V1ExtranetSitesUsagePostExecute(r ApiV1ExtranetSites
 	if r.authorization == nil {
 		return localVarReturnValue, nil, reportError("authorization is required and must be specified")
 	}
-	if r.v1ExtranetB2bMonitoringPeeringServiceBandwidthUsagePostRequest == nil {
-		return localVarReturnValue, nil, reportError("v1ExtranetB2bMonitoringPeeringServiceBandwidthUsagePostRequest is required and must be specified")
+	if r.v1ExtranetSitesUsagePostRequest == nil {
+		return localVarReturnValue, nil, reportError("v1ExtranetSitesUsagePostRequest is required and must be specified")
 	}
 
 	// to determine the Content-Type header
@@ -26978,7 +28617,7 @@ func (a *DefaultAPIService) V1ExtranetSitesUsagePostExecute(r ApiV1ExtranetSites
 	}
 	parameterAddToHeaderOrQuery(localVarHeaderParams, "Authorization", r.authorization, "simple", "")
 	// body params
-	localVarPostBody = r.v1ExtranetB2bMonitoringPeeringServiceBandwidthUsagePostRequest
+	localVarPostBody = r.v1ExtranetSitesUsagePostRequest
 	if r.ctx != nil {
 		// API Key Authentication
 		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
@@ -27048,12 +28687,14 @@ func (r ApiV1ExtranetSitesUsageTopPostRequest) V1ExtranetSitesUsageTopPostReques
 	return r
 }
 
-func (r ApiV1ExtranetSitesUsageTopPostRequest) Execute() (*V1ExtranetSitesUsageTopPost200Response, *http.Response, error) {
+func (r ApiV1ExtranetSitesUsageTopPostRequest) Execute() (*V1ExtranetSitesUsageTopPostResponse, *http.Response, error) {
 	return r.ApiService.V1ExtranetSitesUsageTopPostExecute(r)
 }
 
 /*
 V1ExtranetSitesUsageTopPost Method for V1ExtranetSitesUsageTopPost
+
+Get extranet service top sites usage stats
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV1ExtranetSitesUsageTopPostRequest
@@ -27066,13 +28707,13 @@ func (a *DefaultAPIService) V1ExtranetSitesUsageTopPost(ctx context.Context) Api
 }
 
 // Execute executes the request
-//  @return V1ExtranetSitesUsageTopPost200Response
-func (a *DefaultAPIService) V1ExtranetSitesUsageTopPostExecute(r ApiV1ExtranetSitesUsageTopPostRequest) (*V1ExtranetSitesUsageTopPost200Response, *http.Response, error) {
+//  @return V1ExtranetSitesUsageTopPostResponse
+func (a *DefaultAPIService) V1ExtranetSitesUsageTopPostExecute(r ApiV1ExtranetSitesUsageTopPostRequest) (*V1ExtranetSitesUsageTopPostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1ExtranetSitesUsageTopPost200Response
+		localVarReturnValue  *V1ExtranetSitesUsageTopPostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1ExtranetSitesUsageTopPost")
@@ -27176,7 +28817,7 @@ func (r ApiV1ExtranetsB2bConsumerDeviceStatusIdGetRequest) Authorization(authori
 	return r
 }
 
-func (r ApiV1ExtranetsB2bConsumerDeviceStatusIdGetRequest) Execute() (*V1ExtranetsB2bConsumerDeviceStatusIdGet200Response, *http.Response, error) {
+func (r ApiV1ExtranetsB2bConsumerDeviceStatusIdGetRequest) Execute() (*V1ExtranetsB2bConsumerDeviceStatusIdGetResponse, *http.Response, error) {
 	return r.ApiService.V1ExtranetsB2bConsumerDeviceStatusIdGetExecute(r)
 }
 
@@ -27196,13 +28837,13 @@ func (a *DefaultAPIService) V1ExtranetsB2bConsumerDeviceStatusIdGet(ctx context.
 }
 
 // Execute executes the request
-//  @return V1ExtranetsB2bConsumerDeviceStatusIdGet200Response
-func (a *DefaultAPIService) V1ExtranetsB2bConsumerDeviceStatusIdGetExecute(r ApiV1ExtranetsB2bConsumerDeviceStatusIdGetRequest) (*V1ExtranetsB2bConsumerDeviceStatusIdGet200Response, *http.Response, error) {
+//  @return V1ExtranetsB2bConsumerDeviceStatusIdGetResponse
+func (a *DefaultAPIService) V1ExtranetsB2bConsumerDeviceStatusIdGetExecute(r ApiV1ExtranetsB2bConsumerDeviceStatusIdGetRequest) (*V1ExtranetsB2bConsumerDeviceStatusIdGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1ExtranetsB2bConsumerDeviceStatusIdGet200Response
+		localVarReturnValue  *V1ExtranetsB2bConsumerDeviceStatusIdGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1ExtranetsB2bConsumerDeviceStatusIdGet")
@@ -27428,7 +29069,7 @@ func (r ApiV1ExtranetsB2bConsumerIdGetRequest) Authorization(authorization strin
 	return r
 }
 
-func (r ApiV1ExtranetsB2bConsumerIdGetRequest) Execute() (*V1ExtranetsB2bConsumerIdGet200Response, *http.Response, error) {
+func (r ApiV1ExtranetsB2bConsumerIdGetRequest) Execute() (*V1ExtranetsB2bConsumerIdGetResponse, *http.Response, error) {
 	return r.ApiService.V1ExtranetsB2bConsumerIdGetExecute(r)
 }
 
@@ -27448,13 +29089,13 @@ func (a *DefaultAPIService) V1ExtranetsB2bConsumerIdGet(ctx context.Context, id 
 }
 
 // Execute executes the request
-//  @return V1ExtranetsB2bConsumerIdGet200Response
-func (a *DefaultAPIService) V1ExtranetsB2bConsumerIdGetExecute(r ApiV1ExtranetsB2bConsumerIdGetRequest) (*V1ExtranetsB2bConsumerIdGet200Response, *http.Response, error) {
+//  @return V1ExtranetsB2bConsumerIdGetResponse
+func (a *DefaultAPIService) V1ExtranetsB2bConsumerIdGetExecute(r ApiV1ExtranetsB2bConsumerIdGetRequest) (*V1ExtranetsB2bConsumerIdGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1ExtranetsB2bConsumerIdGet200Response
+		localVarReturnValue  *V1ExtranetsB2bConsumerIdGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1ExtranetsB2bConsumerIdGet")
@@ -27559,7 +29200,7 @@ func (r ApiV1ExtranetsB2bConsumerPostRequest) V1ExtranetsB2bConsumerPostRequest(
 	return r
 }
 
-func (r ApiV1ExtranetsB2bConsumerPostRequest) Execute() (*V1ExtranetsB2bConsumerPost200Response, *http.Response, error) {
+func (r ApiV1ExtranetsB2bConsumerPostRequest) Execute() (*V1ExtranetsB2bConsumerPostResponse, *http.Response, error) {
 	return r.ApiService.V1ExtranetsB2bConsumerPostExecute(r)
 }
 
@@ -27577,13 +29218,13 @@ func (a *DefaultAPIService) V1ExtranetsB2bConsumerPost(ctx context.Context) ApiV
 }
 
 // Execute executes the request
-//  @return V1ExtranetsB2bConsumerPost200Response
-func (a *DefaultAPIService) V1ExtranetsB2bConsumerPostExecute(r ApiV1ExtranetsB2bConsumerPostRequest) (*V1ExtranetsB2bConsumerPost200Response, *http.Response, error) {
+//  @return V1ExtranetsB2bConsumerPostResponse
+func (a *DefaultAPIService) V1ExtranetsB2bConsumerPostExecute(r ApiV1ExtranetsB2bConsumerPostRequest) (*V1ExtranetsB2bConsumerPostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1ExtranetsB2bConsumerPost200Response
+		localVarReturnValue  *V1ExtranetsB2bConsumerPostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1ExtranetsB2bConsumerPost")
@@ -27686,7 +29327,7 @@ func (r ApiV1ExtranetsB2bConsumerSummaryGetRequest) Authorization(authorization 
 	return r
 }
 
-func (r ApiV1ExtranetsB2bConsumerSummaryGetRequest) Execute() (*V1ExtranetsB2bConsumerSummaryGet200Response, *http.Response, error) {
+func (r ApiV1ExtranetsB2bConsumerSummaryGetRequest) Execute() (*V1ExtranetsB2bConsumerSummaryGetResponse, *http.Response, error) {
 	return r.ApiService.V1ExtranetsB2bConsumerSummaryGetExecute(r)
 }
 
@@ -27704,13 +29345,13 @@ func (a *DefaultAPIService) V1ExtranetsB2bConsumerSummaryGet(ctx context.Context
 }
 
 // Execute executes the request
-//  @return V1ExtranetsB2bConsumerSummaryGet200Response
-func (a *DefaultAPIService) V1ExtranetsB2bConsumerSummaryGetExecute(r ApiV1ExtranetsB2bConsumerSummaryGetRequest) (*V1ExtranetsB2bConsumerSummaryGet200Response, *http.Response, error) {
+//  @return V1ExtranetsB2bConsumerSummaryGetResponse
+func (a *DefaultAPIService) V1ExtranetsB2bConsumerSummaryGetExecute(r ApiV1ExtranetsB2bConsumerSummaryGetRequest) (*V1ExtranetsB2bConsumerSummaryGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1ExtranetsB2bConsumerSummaryGet200Response
+		localVarReturnValue  *V1ExtranetsB2bConsumerSummaryGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1ExtranetsB2bConsumerSummaryGet")
@@ -27935,7 +29576,7 @@ func (r ApiV1ExtranetsB2bCustomerInfoIdGetRequest) Authorization(authorization s
 	return r
 }
 
-func (r ApiV1ExtranetsB2bCustomerInfoIdGetRequest) Execute() (*V1ExtranetsB2bCustomerInfoIdGet200Response, *http.Response, error) {
+func (r ApiV1ExtranetsB2bCustomerInfoIdGetRequest) Execute() (*V1ExtranetsB2bCustomerInfoIdGetResponse, *http.Response, error) {
 	return r.ApiService.V1ExtranetsB2bCustomerInfoIdGetExecute(r)
 }
 
@@ -27955,13 +29596,13 @@ func (a *DefaultAPIService) V1ExtranetsB2bCustomerInfoIdGet(ctx context.Context,
 }
 
 // Execute executes the request
-//  @return V1ExtranetsB2bCustomerInfoIdGet200Response
-func (a *DefaultAPIService) V1ExtranetsB2bCustomerInfoIdGetExecute(r ApiV1ExtranetsB2bCustomerInfoIdGetRequest) (*V1ExtranetsB2bCustomerInfoIdGet200Response, *http.Response, error) {
+//  @return V1ExtranetsB2bCustomerInfoIdGetResponse
+func (a *DefaultAPIService) V1ExtranetsB2bCustomerInfoIdGetExecute(r ApiV1ExtranetsB2bCustomerInfoIdGetRequest) (*V1ExtranetsB2bCustomerInfoIdGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1ExtranetsB2bCustomerInfoIdGet200Response
+		localVarReturnValue  *V1ExtranetsB2bCustomerInfoIdGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1ExtranetsB2bCustomerInfoIdGet")
@@ -28060,7 +29701,7 @@ func (r ApiV1ExtranetsB2bGeneralCustomersSummaryGetRequest) Authorization(author
 	return r
 }
 
-func (r ApiV1ExtranetsB2bGeneralCustomersSummaryGetRequest) Execute() (*V1ExtranetsB2bGeneralCustomersSummaryGet200Response, *http.Response, error) {
+func (r ApiV1ExtranetsB2bGeneralCustomersSummaryGetRequest) Execute() (*V1ExtranetsB2bGeneralCustomersSummaryGetResponse, *http.Response, error) {
 	return r.ApiService.V1ExtranetsB2bGeneralCustomersSummaryGetExecute(r)
 }
 
@@ -28078,13 +29719,13 @@ func (a *DefaultAPIService) V1ExtranetsB2bGeneralCustomersSummaryGet(ctx context
 }
 
 // Execute executes the request
-//  @return V1ExtranetsB2bGeneralCustomersSummaryGet200Response
-func (a *DefaultAPIService) V1ExtranetsB2bGeneralCustomersSummaryGetExecute(r ApiV1ExtranetsB2bGeneralCustomersSummaryGetRequest) (*V1ExtranetsB2bGeneralCustomersSummaryGet200Response, *http.Response, error) {
+//  @return V1ExtranetsB2bGeneralCustomersSummaryGetResponse
+func (a *DefaultAPIService) V1ExtranetsB2bGeneralCustomersSummaryGetExecute(r ApiV1ExtranetsB2bGeneralCustomersSummaryGetRequest) (*V1ExtranetsB2bGeneralCustomersSummaryGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1ExtranetsB2bGeneralCustomersSummaryGet200Response
+		localVarReturnValue  *V1ExtranetsB2bGeneralCustomersSummaryGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1ExtranetsB2bGeneralCustomersSummaryGet")
@@ -28182,7 +29823,7 @@ func (r ApiV1ExtranetsB2bGeneralServicesSummaryGetRequest) Authorization(authori
 	return r
 }
 
-func (r ApiV1ExtranetsB2bGeneralServicesSummaryGetRequest) Execute() (*V1ExtranetsB2bProducersSummaryGet200Response, *http.Response, error) {
+func (r ApiV1ExtranetsB2bGeneralServicesSummaryGetRequest) Execute() (*V1ExtranetsB2bGeneralServicesSummaryGetResponse, *http.Response, error) {
 	return r.ApiService.V1ExtranetsB2bGeneralServicesSummaryGetExecute(r)
 }
 
@@ -28200,13 +29841,13 @@ func (a *DefaultAPIService) V1ExtranetsB2bGeneralServicesSummaryGet(ctx context.
 }
 
 // Execute executes the request
-//  @return V1ExtranetsB2bProducersSummaryGet200Response
-func (a *DefaultAPIService) V1ExtranetsB2bGeneralServicesSummaryGetExecute(r ApiV1ExtranetsB2bGeneralServicesSummaryGetRequest) (*V1ExtranetsB2bProducersSummaryGet200Response, *http.Response, error) {
+//  @return V1ExtranetsB2bGeneralServicesSummaryGetResponse
+func (a *DefaultAPIService) V1ExtranetsB2bGeneralServicesSummaryGetExecute(r ApiV1ExtranetsB2bGeneralServicesSummaryGetRequest) (*V1ExtranetsB2bGeneralServicesSummaryGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1ExtranetsB2bProducersSummaryGet200Response
+		localVarReturnValue  *V1ExtranetsB2bGeneralServicesSummaryGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1ExtranetsB2bGeneralServicesSummaryGet")
@@ -28311,7 +29952,7 @@ func (r ApiV1ExtranetsB2bIdCustomerPostRequest) V1ExtranetsB2bIdCustomerPostRequ
 	return r
 }
 
-func (r ApiV1ExtranetsB2bIdCustomerPostRequest) Execute() (*V1ExtranetsB2bIdCustomerPost200Response, *http.Response, error) {
+func (r ApiV1ExtranetsB2bIdCustomerPostRequest) Execute() (*V1ExtranetsB2bIdCustomerPostResponse, *http.Response, error) {
 	return r.ApiService.V1ExtranetsB2bIdCustomerPostExecute(r)
 }
 
@@ -28331,13 +29972,13 @@ func (a *DefaultAPIService) V1ExtranetsB2bIdCustomerPost(ctx context.Context, id
 }
 
 // Execute executes the request
-//  @return V1ExtranetsB2bIdCustomerPost200Response
-func (a *DefaultAPIService) V1ExtranetsB2bIdCustomerPostExecute(r ApiV1ExtranetsB2bIdCustomerPostRequest) (*V1ExtranetsB2bIdCustomerPost200Response, *http.Response, error) {
+//  @return V1ExtranetsB2bIdCustomerPostResponse
+func (a *DefaultAPIService) V1ExtranetsB2bIdCustomerPostExecute(r ApiV1ExtranetsB2bIdCustomerPostRequest) (*V1ExtranetsB2bIdCustomerPostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1ExtranetsB2bIdCustomerPost200Response
+		localVarReturnValue  *V1ExtranetsB2bIdCustomerPostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1ExtranetsB2bIdCustomerPost")
@@ -28442,7 +30083,7 @@ func (r ApiV1ExtranetsB2bIdCustomerSummaryGetRequest) Authorization(authorizatio
 	return r
 }
 
-func (r ApiV1ExtranetsB2bIdCustomerSummaryGetRequest) Execute() (*V1ExtranetsB2bIdCustomerSummaryGet200Response, *http.Response, error) {
+func (r ApiV1ExtranetsB2bIdCustomerSummaryGetRequest) Execute() (*V1ExtranetsB2bIdCustomerSummaryGetResponse, *http.Response, error) {
 	return r.ApiService.V1ExtranetsB2bIdCustomerSummaryGetExecute(r)
 }
 
@@ -28462,13 +30103,13 @@ func (a *DefaultAPIService) V1ExtranetsB2bIdCustomerSummaryGet(ctx context.Conte
 }
 
 // Execute executes the request
-//  @return V1ExtranetsB2bIdCustomerSummaryGet200Response
-func (a *DefaultAPIService) V1ExtranetsB2bIdCustomerSummaryGetExecute(r ApiV1ExtranetsB2bIdCustomerSummaryGetRequest) (*V1ExtranetsB2bIdCustomerSummaryGet200Response, *http.Response, error) {
+//  @return V1ExtranetsB2bIdCustomerSummaryGetResponse
+func (a *DefaultAPIService) V1ExtranetsB2bIdCustomerSummaryGetExecute(r ApiV1ExtranetsB2bIdCustomerSummaryGetRequest) (*V1ExtranetsB2bIdCustomerSummaryGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1ExtranetsB2bIdCustomerSummaryGet200Response
+		localVarReturnValue  *V1ExtranetsB2bIdCustomerSummaryGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1ExtranetsB2bIdCustomerSummaryGet")
@@ -28701,7 +30342,7 @@ func (r ApiV1ExtranetsB2bIdProducerGetRequest) Type_(type_ string) ApiV1Extranet
 	return r
 }
 
-func (r ApiV1ExtranetsB2bIdProducerGetRequest) Execute() (*V1ExtranetsB2bPost200Response, *http.Response, error) {
+func (r ApiV1ExtranetsB2bIdProducerGetRequest) Execute() (*V1ExtranetsB2bIdProducerGetResponse, *http.Response, error) {
 	return r.ApiService.V1ExtranetsB2bIdProducerGetExecute(r)
 }
 
@@ -28721,13 +30362,13 @@ func (a *DefaultAPIService) V1ExtranetsB2bIdProducerGet(ctx context.Context, id 
 }
 
 // Execute executes the request
-//  @return V1ExtranetsB2bPost200Response
-func (a *DefaultAPIService) V1ExtranetsB2bIdProducerGetExecute(r ApiV1ExtranetsB2bIdProducerGetRequest) (*V1ExtranetsB2bPost200Response, *http.Response, error) {
+//  @return V1ExtranetsB2bIdProducerGetResponse
+func (a *DefaultAPIService) V1ExtranetsB2bIdProducerGetExecute(r ApiV1ExtranetsB2bIdProducerGetRequest) (*V1ExtranetsB2bIdProducerGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1ExtranetsB2bPost200Response
+		localVarReturnValue  *V1ExtranetsB2bIdProducerGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1ExtranetsB2bIdProducerGet")
@@ -28836,7 +30477,7 @@ func (r ApiV1ExtranetsB2bIdPutRequest) V1ExtranetsB2bIdPutRequest(v1ExtranetsB2b
 	return r
 }
 
-func (r ApiV1ExtranetsB2bIdPutRequest) Execute() (*V1ExtranetsB2bPost200Response, *http.Response, error) {
+func (r ApiV1ExtranetsB2bIdPutRequest) Execute() (*V1ExtranetsB2bIdPutResponse, *http.Response, error) {
 	return r.ApiService.V1ExtranetsB2bIdPutExecute(r)
 }
 
@@ -28856,13 +30497,13 @@ func (a *DefaultAPIService) V1ExtranetsB2bIdPut(ctx context.Context, id int64) A
 }
 
 // Execute executes the request
-//  @return V1ExtranetsB2bPost200Response
-func (a *DefaultAPIService) V1ExtranetsB2bIdPutExecute(r ApiV1ExtranetsB2bIdPutRequest) (*V1ExtranetsB2bPost200Response, *http.Response, error) {
+//  @return V1ExtranetsB2bIdPutResponse
+func (a *DefaultAPIService) V1ExtranetsB2bIdPutExecute(r ApiV1ExtranetsB2bIdPutRequest) (*V1ExtranetsB2bIdPutResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPut
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1ExtranetsB2bPost200Response
+		localVarReturnValue  *V1ExtranetsB2bIdPutResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1ExtranetsB2bIdPut")
@@ -28967,7 +30608,7 @@ func (r ApiV1ExtranetsB2bPeeringConsumerCustomerIdConsumerDetailsGetRequest) Aut
 	return r
 }
 
-func (r ApiV1ExtranetsB2bPeeringConsumerCustomerIdConsumerDetailsGetRequest) Execute() (*V1ExtranetsB2bPeeringConsumerCustomerIdConsumerDetailsGet200Response, *http.Response, error) {
+func (r ApiV1ExtranetsB2bPeeringConsumerCustomerIdConsumerDetailsGetRequest) Execute() (*V1ExtranetsB2bPeeringConsumerCustomerIdConsumerDetailsGetResponse, *http.Response, error) {
 	return r.ApiService.V1ExtranetsB2bPeeringConsumerCustomerIdConsumerDetailsGetExecute(r)
 }
 
@@ -28987,13 +30628,13 @@ func (a *DefaultAPIService) V1ExtranetsB2bPeeringConsumerCustomerIdConsumerDetai
 }
 
 // Execute executes the request
-//  @return V1ExtranetsB2bPeeringConsumerCustomerIdConsumerDetailsGet200Response
-func (a *DefaultAPIService) V1ExtranetsB2bPeeringConsumerCustomerIdConsumerDetailsGetExecute(r ApiV1ExtranetsB2bPeeringConsumerCustomerIdConsumerDetailsGetRequest) (*V1ExtranetsB2bPeeringConsumerCustomerIdConsumerDetailsGet200Response, *http.Response, error) {
+//  @return V1ExtranetsB2bPeeringConsumerCustomerIdConsumerDetailsGetResponse
+func (a *DefaultAPIService) V1ExtranetsB2bPeeringConsumerCustomerIdConsumerDetailsGetExecute(r ApiV1ExtranetsB2bPeeringConsumerCustomerIdConsumerDetailsGetRequest) (*V1ExtranetsB2bPeeringConsumerCustomerIdConsumerDetailsGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1ExtranetsB2bPeeringConsumerCustomerIdConsumerDetailsGet200Response
+		localVarReturnValue  *V1ExtranetsB2bPeeringConsumerCustomerIdConsumerDetailsGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1ExtranetsB2bPeeringConsumerCustomerIdConsumerDetailsGet")
@@ -29093,7 +30734,7 @@ func (r ApiV1ExtranetsB2bPeeringConsumerMatchIdMatchDetailsGetRequest) Authoriza
 	return r
 }
 
-func (r ApiV1ExtranetsB2bPeeringConsumerMatchIdMatchDetailsGetRequest) Execute() (*V1ExtranetsB2bPeeringConsumerMatchIdMatchDetailsGet200Response, *http.Response, error) {
+func (r ApiV1ExtranetsB2bPeeringConsumerMatchIdMatchDetailsGetRequest) Execute() (*V1ExtranetsB2bPeeringConsumerMatchIdMatchDetailsGetResponse, *http.Response, error) {
 	return r.ApiService.V1ExtranetsB2bPeeringConsumerMatchIdMatchDetailsGetExecute(r)
 }
 
@@ -29113,13 +30754,13 @@ func (a *DefaultAPIService) V1ExtranetsB2bPeeringConsumerMatchIdMatchDetailsGet(
 }
 
 // Execute executes the request
-//  @return V1ExtranetsB2bPeeringConsumerMatchIdMatchDetailsGet200Response
-func (a *DefaultAPIService) V1ExtranetsB2bPeeringConsumerMatchIdMatchDetailsGetExecute(r ApiV1ExtranetsB2bPeeringConsumerMatchIdMatchDetailsGetRequest) (*V1ExtranetsB2bPeeringConsumerMatchIdMatchDetailsGet200Response, *http.Response, error) {
+//  @return V1ExtranetsB2bPeeringConsumerMatchIdMatchDetailsGetResponse
+func (a *DefaultAPIService) V1ExtranetsB2bPeeringConsumerMatchIdMatchDetailsGetExecute(r ApiV1ExtranetsB2bPeeringConsumerMatchIdMatchDetailsGetRequest) (*V1ExtranetsB2bPeeringConsumerMatchIdMatchDetailsGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1ExtranetsB2bPeeringConsumerMatchIdMatchDetailsGet200Response
+		localVarReturnValue  *V1ExtranetsB2bPeeringConsumerMatchIdMatchDetailsGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1ExtranetsB2bPeeringConsumerMatchIdMatchDetailsGet")
@@ -29225,7 +30866,7 @@ func (r ApiV1ExtranetsB2bPeeringConsumerMatchIdPostRequest) V1ExtranetsB2bPeerin
 	return r
 }
 
-func (r ApiV1ExtranetsB2bPeeringConsumerMatchIdPostRequest) Execute() (*V1ExtranetsB2bPeeringConsumerMatchIdPost200Response, *http.Response, error) {
+func (r ApiV1ExtranetsB2bPeeringConsumerMatchIdPostRequest) Execute() (*V1ExtranetsB2bPeeringConsumerMatchIdPostResponse, *http.Response, error) {
 	return r.ApiService.V1ExtranetsB2bPeeringConsumerMatchIdPostExecute(r)
 }
 
@@ -29245,13 +30886,13 @@ func (a *DefaultAPIService) V1ExtranetsB2bPeeringConsumerMatchIdPost(ctx context
 }
 
 // Execute executes the request
-//  @return V1ExtranetsB2bPeeringConsumerMatchIdPost200Response
-func (a *DefaultAPIService) V1ExtranetsB2bPeeringConsumerMatchIdPostExecute(r ApiV1ExtranetsB2bPeeringConsumerMatchIdPostRequest) (*V1ExtranetsB2bPeeringConsumerMatchIdPost200Response, *http.Response, error) {
+//  @return V1ExtranetsB2bPeeringConsumerMatchIdPostResponse
+func (a *DefaultAPIService) V1ExtranetsB2bPeeringConsumerMatchIdPostExecute(r ApiV1ExtranetsB2bPeeringConsumerMatchIdPostRequest) (*V1ExtranetsB2bPeeringConsumerMatchIdPostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1ExtranetsB2bPeeringConsumerMatchIdPost200Response
+		localVarReturnValue  *V1ExtranetsB2bPeeringConsumerMatchIdPostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1ExtranetsB2bPeeringConsumerMatchIdPost")
@@ -29356,7 +30997,7 @@ func (r ApiV1ExtranetsB2bPeeringCustomerIdDeleteRequest) Authorization(authoriza
 	return r
 }
 
-func (r ApiV1ExtranetsB2bPeeringCustomerIdDeleteRequest) Execute() (map[string]interface{}, *http.Response, error) {
+func (r ApiV1ExtranetsB2bPeeringCustomerIdDeleteRequest) Execute() (*V1ExtranetsB2bPeeringCustomerIdDeleteResponse, *http.Response, error) {
 	return r.ApiService.V1ExtranetsB2bPeeringCustomerIdDeleteExecute(r)
 }
 
@@ -29376,13 +31017,13 @@ func (a *DefaultAPIService) V1ExtranetsB2bPeeringCustomerIdDelete(ctx context.Co
 }
 
 // Execute executes the request
-//  @return map[string]interface{}
-func (a *DefaultAPIService) V1ExtranetsB2bPeeringCustomerIdDeleteExecute(r ApiV1ExtranetsB2bPeeringCustomerIdDeleteRequest) (map[string]interface{}, *http.Response, error) {
+//  @return V1ExtranetsB2bPeeringCustomerIdDeleteResponse
+func (a *DefaultAPIService) V1ExtranetsB2bPeeringCustomerIdDeleteExecute(r ApiV1ExtranetsB2bPeeringCustomerIdDeleteRequest) (*V1ExtranetsB2bPeeringCustomerIdDeleteResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodDelete
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  map[string]interface{}
+		localVarReturnValue  *V1ExtranetsB2bPeeringCustomerIdDeleteResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1ExtranetsB2bPeeringCustomerIdDelete")
@@ -29482,7 +31123,7 @@ func (r ApiV1ExtranetsB2bPeeringCustomerIdGetRequest) Authorization(authorizatio
 	return r
 }
 
-func (r ApiV1ExtranetsB2bPeeringCustomerIdGetRequest) Execute() (*V1ExtranetsB2bPeeringCustomerIdGet200Response, *http.Response, error) {
+func (r ApiV1ExtranetsB2bPeeringCustomerIdGetRequest) Execute() (*V1ExtranetsB2bPeeringCustomerIdGetResponse, *http.Response, error) {
 	return r.ApiService.V1ExtranetsB2bPeeringCustomerIdGetExecute(r)
 }
 
@@ -29502,13 +31143,13 @@ func (a *DefaultAPIService) V1ExtranetsB2bPeeringCustomerIdGet(ctx context.Conte
 }
 
 // Execute executes the request
-//  @return V1ExtranetsB2bPeeringCustomerIdGet200Response
-func (a *DefaultAPIService) V1ExtranetsB2bPeeringCustomerIdGetExecute(r ApiV1ExtranetsB2bPeeringCustomerIdGetRequest) (*V1ExtranetsB2bPeeringCustomerIdGet200Response, *http.Response, error) {
+//  @return V1ExtranetsB2bPeeringCustomerIdGetResponse
+func (a *DefaultAPIService) V1ExtranetsB2bPeeringCustomerIdGetExecute(r ApiV1ExtranetsB2bPeeringCustomerIdGetRequest) (*V1ExtranetsB2bPeeringCustomerIdGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1ExtranetsB2bPeeringCustomerIdGet200Response
+		localVarReturnValue  *V1ExtranetsB2bPeeringCustomerIdGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1ExtranetsB2bPeeringCustomerIdGet")
@@ -29613,7 +31254,7 @@ func (r ApiV1ExtranetsB2bPeeringCustomerPostRequest) V1ExtranetsB2bPeeringCustom
 	return r
 }
 
-func (r ApiV1ExtranetsB2bPeeringCustomerPostRequest) Execute() (*V1ExtranetsB2bPeeringCustomerPost200Response, *http.Response, error) {
+func (r ApiV1ExtranetsB2bPeeringCustomerPostRequest) Execute() (*V1ExtranetsB2bPeeringCustomerPostResponse, *http.Response, error) {
 	return r.ApiService.V1ExtranetsB2bPeeringCustomerPostExecute(r)
 }
 
@@ -29631,13 +31272,13 @@ func (a *DefaultAPIService) V1ExtranetsB2bPeeringCustomerPost(ctx context.Contex
 }
 
 // Execute executes the request
-//  @return V1ExtranetsB2bPeeringCustomerPost200Response
-func (a *DefaultAPIService) V1ExtranetsB2bPeeringCustomerPostExecute(r ApiV1ExtranetsB2bPeeringCustomerPostRequest) (*V1ExtranetsB2bPeeringCustomerPost200Response, *http.Response, error) {
+//  @return V1ExtranetsB2bPeeringCustomerPostResponse
+func (a *DefaultAPIService) V1ExtranetsB2bPeeringCustomerPostExecute(r ApiV1ExtranetsB2bPeeringCustomerPostRequest) (*V1ExtranetsB2bPeeringCustomerPostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1ExtranetsB2bPeeringCustomerPost200Response
+		localVarReturnValue  *V1ExtranetsB2bPeeringCustomerPostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1ExtranetsB2bPeeringCustomerPost")
@@ -29728,6 +31369,262 @@ func (a *DefaultAPIService) V1ExtranetsB2bPeeringCustomerPostExecute(r ApiV1Extr
 	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
+type ApiV1ExtranetsB2bPeeringMatchServiceToCustomerIdDeleteRequest struct {
+	ctx context.Context
+	ApiService *DefaultAPIService
+	authorization *string
+	id int64
+}
+
+// Bearer token. Format: Bearer &lt;your_token_here&gt;
+func (r ApiV1ExtranetsB2bPeeringMatchServiceToCustomerIdDeleteRequest) Authorization(authorization string) ApiV1ExtranetsB2bPeeringMatchServiceToCustomerIdDeleteRequest {
+	r.authorization = &authorization
+	return r
+}
+
+func (r ApiV1ExtranetsB2bPeeringMatchServiceToCustomerIdDeleteRequest) Execute() (map[string]interface{}, *http.Response, error) {
+	return r.ApiService.V1ExtranetsB2bPeeringMatchServiceToCustomerIdDeleteExecute(r)
+}
+
+/*
+V1ExtranetsB2bPeeringMatchServiceToCustomerIdDelete Method for V1ExtranetsB2bPeeringMatchServiceToCustomerIdDelete
+
+Unsubscribe a customer from a service
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @param id id for service to customer match
+ @return ApiV1ExtranetsB2bPeeringMatchServiceToCustomerIdDeleteRequest
+*/
+func (a *DefaultAPIService) V1ExtranetsB2bPeeringMatchServiceToCustomerIdDelete(ctx context.Context, id int64) ApiV1ExtranetsB2bPeeringMatchServiceToCustomerIdDeleteRequest {
+	return ApiV1ExtranetsB2bPeeringMatchServiceToCustomerIdDeleteRequest{
+		ApiService: a,
+		ctx: ctx,
+		id: id,
+	}
+}
+
+// Execute executes the request
+//  @return map[string]interface{}
+func (a *DefaultAPIService) V1ExtranetsB2bPeeringMatchServiceToCustomerIdDeleteExecute(r ApiV1ExtranetsB2bPeeringMatchServiceToCustomerIdDeleteRequest) (map[string]interface{}, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodDelete
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  map[string]interface{}
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1ExtranetsB2bPeeringMatchServiceToCustomerIdDelete")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/v1/extranets-b2b-peering/match/service-to-customer/{id}"
+	localVarPath = strings.Replace(localVarPath, "{"+"id"+"}", url.PathEscape(parameterValueToString(r.id, "id")), -1)
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+	if r.authorization == nil {
+		return localVarReturnValue, nil, reportError("authorization is required and must be specified")
+	}
+
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"application/json"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	parameterAddToHeaderOrQuery(localVarHeaderParams, "Authorization", r.authorization, "simple", "")
+	if r.ctx != nil {
+		// API Key Authentication
+		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
+			if apiKey, ok := auth["jwtAuth"]; ok {
+				var key string
+				if apiKey.Prefix != "" {
+					key = apiKey.Prefix + " " + apiKey.Key
+				} else {
+					key = apiKey.Key
+				}
+				localVarHeaderParams["authorization"] = key
+			}
+		}
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
+type ApiV1ExtranetsB2bPeeringMatchServiceToCustomerIdGetRequest struct {
+	ctx context.Context
+	ApiService *DefaultAPIService
+	authorization *string
+	id int64
+}
+
+// Bearer token. Format: Bearer &lt;your_token_here&gt;
+func (r ApiV1ExtranetsB2bPeeringMatchServiceToCustomerIdGetRequest) Authorization(authorization string) ApiV1ExtranetsB2bPeeringMatchServiceToCustomerIdGetRequest {
+	r.authorization = &authorization
+	return r
+}
+
+func (r ApiV1ExtranetsB2bPeeringMatchServiceToCustomerIdGetRequest) Execute() (*V1ExtranetsB2bPeeringMatchServiceToCustomerIdGetResponse, *http.Response, error) {
+	return r.ApiService.V1ExtranetsB2bPeeringMatchServiceToCustomerIdGetExecute(r)
+}
+
+/*
+V1ExtranetsB2bPeeringMatchServiceToCustomerIdGet Method for V1ExtranetsB2bPeeringMatchServiceToCustomerIdGet
+
+Get details for a service to customer subscription
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @param id service id
+ @return ApiV1ExtranetsB2bPeeringMatchServiceToCustomerIdGetRequest
+*/
+func (a *DefaultAPIService) V1ExtranetsB2bPeeringMatchServiceToCustomerIdGet(ctx context.Context, id int64) ApiV1ExtranetsB2bPeeringMatchServiceToCustomerIdGetRequest {
+	return ApiV1ExtranetsB2bPeeringMatchServiceToCustomerIdGetRequest{
+		ApiService: a,
+		ctx: ctx,
+		id: id,
+	}
+}
+
+// Execute executes the request
+//  @return V1ExtranetsB2bPeeringMatchServiceToCustomerIdGetResponse
+func (a *DefaultAPIService) V1ExtranetsB2bPeeringMatchServiceToCustomerIdGetExecute(r ApiV1ExtranetsB2bPeeringMatchServiceToCustomerIdGetRequest) (*V1ExtranetsB2bPeeringMatchServiceToCustomerIdGetResponse, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  *V1ExtranetsB2bPeeringMatchServiceToCustomerIdGetResponse
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1ExtranetsB2bPeeringMatchServiceToCustomerIdGet")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/v1/extranets-b2b-peering/match/service-to-customer/{id}"
+	localVarPath = strings.Replace(localVarPath, "{"+"id"+"}", url.PathEscape(parameterValueToString(r.id, "id")), -1)
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+	if r.authorization == nil {
+		return localVarReturnValue, nil, reportError("authorization is required and must be specified")
+	}
+
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"application/json"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	parameterAddToHeaderOrQuery(localVarHeaderParams, "Authorization", r.authorization, "simple", "")
+	if r.ctx != nil {
+		// API Key Authentication
+		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
+			if apiKey, ok := auth["jwtAuth"]; ok {
+				var key string
+				if apiKey.Prefix != "" {
+					key = apiKey.Prefix + " " + apiKey.Key
+				} else {
+					key = apiKey.Key
+				}
+				localVarHeaderParams["authorization"] = key
+			}
+		}
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
 type ApiV1ExtranetsB2bPeeringMatchServiceToCustomerPostRequest struct {
 	ctx context.Context
 	ApiService *DefaultAPIService
@@ -29746,7 +31643,7 @@ func (r ApiV1ExtranetsB2bPeeringMatchServiceToCustomerPostRequest) V1ExtranetsB2
 	return r
 }
 
-func (r ApiV1ExtranetsB2bPeeringMatchServiceToCustomerPostRequest) Execute() (*V1ExtranetsB2bPeeringMatchServiceToCustomerPost200Response, *http.Response, error) {
+func (r ApiV1ExtranetsB2bPeeringMatchServiceToCustomerPostRequest) Execute() (*V1ExtranetsB2bPeeringMatchServiceToCustomerPostResponse, *http.Response, error) {
 	return r.ApiService.V1ExtranetsB2bPeeringMatchServiceToCustomerPostExecute(r)
 }
 
@@ -29764,13 +31661,13 @@ func (a *DefaultAPIService) V1ExtranetsB2bPeeringMatchServiceToCustomerPost(ctx 
 }
 
 // Execute executes the request
-//  @return V1ExtranetsB2bPeeringMatchServiceToCustomerPost200Response
-func (a *DefaultAPIService) V1ExtranetsB2bPeeringMatchServiceToCustomerPostExecute(r ApiV1ExtranetsB2bPeeringMatchServiceToCustomerPostRequest) (*V1ExtranetsB2bPeeringMatchServiceToCustomerPost200Response, *http.Response, error) {
+//  @return V1ExtranetsB2bPeeringMatchServiceToCustomerPostResponse
+func (a *DefaultAPIService) V1ExtranetsB2bPeeringMatchServiceToCustomerPostExecute(r ApiV1ExtranetsB2bPeeringMatchServiceToCustomerPostRequest) (*V1ExtranetsB2bPeeringMatchServiceToCustomerPostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1ExtranetsB2bPeeringMatchServiceToCustomerPost200Response
+		localVarReturnValue  *V1ExtranetsB2bPeeringMatchServiceToCustomerPostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1ExtranetsB2bPeeringMatchServiceToCustomerPost")
@@ -29861,51 +31758,55 @@ func (a *DefaultAPIService) V1ExtranetsB2bPeeringMatchServiceToCustomerPostExecu
 	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
-type ApiV1ExtranetsB2bPeeringMatchServicesSummaryGetRequest struct {
+type ApiV1ExtranetsB2bPeeringMatchServicesSummaryIdGetRequest struct {
 	ctx context.Context
 	ApiService *DefaultAPIService
 	authorization *string
+	id int64
 }
 
 // Bearer token. Format: Bearer &lt;your_token_here&gt;
-func (r ApiV1ExtranetsB2bPeeringMatchServicesSummaryGetRequest) Authorization(authorization string) ApiV1ExtranetsB2bPeeringMatchServicesSummaryGetRequest {
+func (r ApiV1ExtranetsB2bPeeringMatchServicesSummaryIdGetRequest) Authorization(authorization string) ApiV1ExtranetsB2bPeeringMatchServicesSummaryIdGetRequest {
 	r.authorization = &authorization
 	return r
 }
 
-func (r ApiV1ExtranetsB2bPeeringMatchServicesSummaryGetRequest) Execute() (*V1ExtranetsB2bPeeringMatchServicesSummaryGet200Response, *http.Response, error) {
-	return r.ApiService.V1ExtranetsB2bPeeringMatchServicesSummaryGetExecute(r)
+func (r ApiV1ExtranetsB2bPeeringMatchServicesSummaryIdGetRequest) Execute() (*V1ExtranetsB2bPeeringMatchServicesSummaryIdGetResponse, *http.Response, error) {
+	return r.ApiService.V1ExtranetsB2bPeeringMatchServicesSummaryIdGetExecute(r)
 }
 
 /*
-V1ExtranetsB2bPeeringMatchServicesSummaryGet Method for V1ExtranetsB2bPeeringMatchServicesSummaryGet
+V1ExtranetsB2bPeeringMatchServicesSummaryIdGet Method for V1ExtranetsB2bPeeringMatchServicesSummaryIdGet
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiV1ExtranetsB2bPeeringMatchServicesSummaryGetRequest
+ @param id 
+ @return ApiV1ExtranetsB2bPeeringMatchServicesSummaryIdGetRequest
 */
-func (a *DefaultAPIService) V1ExtranetsB2bPeeringMatchServicesSummaryGet(ctx context.Context) ApiV1ExtranetsB2bPeeringMatchServicesSummaryGetRequest {
-	return ApiV1ExtranetsB2bPeeringMatchServicesSummaryGetRequest{
+func (a *DefaultAPIService) V1ExtranetsB2bPeeringMatchServicesSummaryIdGet(ctx context.Context, id int64) ApiV1ExtranetsB2bPeeringMatchServicesSummaryIdGetRequest {
+	return ApiV1ExtranetsB2bPeeringMatchServicesSummaryIdGetRequest{
 		ApiService: a,
 		ctx: ctx,
+		id: id,
 	}
 }
 
 // Execute executes the request
-//  @return V1ExtranetsB2bPeeringMatchServicesSummaryGet200Response
-func (a *DefaultAPIService) V1ExtranetsB2bPeeringMatchServicesSummaryGetExecute(r ApiV1ExtranetsB2bPeeringMatchServicesSummaryGetRequest) (*V1ExtranetsB2bPeeringMatchServicesSummaryGet200Response, *http.Response, error) {
+//  @return V1ExtranetsB2bPeeringMatchServicesSummaryIdGetResponse
+func (a *DefaultAPIService) V1ExtranetsB2bPeeringMatchServicesSummaryIdGetExecute(r ApiV1ExtranetsB2bPeeringMatchServicesSummaryIdGetRequest) (*V1ExtranetsB2bPeeringMatchServicesSummaryIdGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1ExtranetsB2bPeeringMatchServicesSummaryGet200Response
+		localVarReturnValue  *V1ExtranetsB2bPeeringMatchServicesSummaryIdGetResponse
 	)
 
-	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1ExtranetsB2bPeeringMatchServicesSummaryGet")
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1ExtranetsB2bPeeringMatchServicesSummaryIdGet")
 	if err != nil {
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/v1/extranets-b2b-peering/match/services/summary"
+	localVarPath := localBasePath + "/v1/extranets-b2b-peering/match/services/summary/{id}"
+	localVarPath = strings.Replace(localVarPath, "{"+"id"+"}", url.PathEscape(parameterValueToString(r.id, "id")), -1)
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -29996,7 +31897,7 @@ func (r ApiV1ExtranetsB2bPeeringProducerIdGetRequest) Authorization(authorizatio
 	return r
 }
 
-func (r ApiV1ExtranetsB2bPeeringProducerIdGetRequest) Execute() (*V1ExtranetsB2bPeeringProducerIdGet200Response, *http.Response, error) {
+func (r ApiV1ExtranetsB2bPeeringProducerIdGetRequest) Execute() (*V1ExtranetsB2bPeeringProducerIdGetResponse, *http.Response, error) {
 	return r.ApiService.V1ExtranetsB2bPeeringProducerIdGetExecute(r)
 }
 
@@ -30016,13 +31917,13 @@ func (a *DefaultAPIService) V1ExtranetsB2bPeeringProducerIdGet(ctx context.Conte
 }
 
 // Execute executes the request
-//  @return V1ExtranetsB2bPeeringProducerIdGet200Response
-func (a *DefaultAPIService) V1ExtranetsB2bPeeringProducerIdGetExecute(r ApiV1ExtranetsB2bPeeringProducerIdGetRequest) (*V1ExtranetsB2bPeeringProducerIdGet200Response, *http.Response, error) {
+//  @return V1ExtranetsB2bPeeringProducerIdGetResponse
+func (a *DefaultAPIService) V1ExtranetsB2bPeeringProducerIdGetExecute(r ApiV1ExtranetsB2bPeeringProducerIdGetRequest) (*V1ExtranetsB2bPeeringProducerIdGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1ExtranetsB2bPeeringProducerIdGet200Response
+		localVarReturnValue  *V1ExtranetsB2bPeeringProducerIdGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1ExtranetsB2bPeeringProducerIdGet")
@@ -30122,7 +32023,7 @@ func (r ApiV1ExtranetsB2bPeeringProducerIdMatchingCustomersSummaryGetRequest) Au
 	return r
 }
 
-func (r ApiV1ExtranetsB2bPeeringProducerIdMatchingCustomersSummaryGetRequest) Execute() (*V1ExtranetsB2bPeeringProducerIdMatchingCustomersSummaryGet200Response, *http.Response, error) {
+func (r ApiV1ExtranetsB2bPeeringProducerIdMatchingCustomersSummaryGetRequest) Execute() (*V1ExtranetsB2bPeeringProducerIdMatchingCustomersSummaryGetResponse, *http.Response, error) {
 	return r.ApiService.V1ExtranetsB2bPeeringProducerIdMatchingCustomersSummaryGetExecute(r)
 }
 
@@ -30142,13 +32043,13 @@ func (a *DefaultAPIService) V1ExtranetsB2bPeeringProducerIdMatchingCustomersSumm
 }
 
 // Execute executes the request
-//  @return V1ExtranetsB2bPeeringProducerIdMatchingCustomersSummaryGet200Response
-func (a *DefaultAPIService) V1ExtranetsB2bPeeringProducerIdMatchingCustomersSummaryGetExecute(r ApiV1ExtranetsB2bPeeringProducerIdMatchingCustomersSummaryGetRequest) (*V1ExtranetsB2bPeeringProducerIdMatchingCustomersSummaryGet200Response, *http.Response, error) {
+//  @return V1ExtranetsB2bPeeringProducerIdMatchingCustomersSummaryGetResponse
+func (a *DefaultAPIService) V1ExtranetsB2bPeeringProducerIdMatchingCustomersSummaryGetExecute(r ApiV1ExtranetsB2bPeeringProducerIdMatchingCustomersSummaryGetRequest) (*V1ExtranetsB2bPeeringProducerIdMatchingCustomersSummaryGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1ExtranetsB2bPeeringProducerIdMatchingCustomersSummaryGet200Response
+		localVarReturnValue  *V1ExtranetsB2bPeeringProducerIdMatchingCustomersSummaryGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1ExtranetsB2bPeeringProducerIdMatchingCustomersSummaryGet")
@@ -30253,7 +32154,7 @@ func (r ApiV1ExtranetsB2bPeeringProducerPostRequest) V1ExtranetsB2bPeeringProduc
 	return r
 }
 
-func (r ApiV1ExtranetsB2bPeeringProducerPostRequest) Execute() (*V1ExtranetsB2bPeeringProducerPost200Response, *http.Response, error) {
+func (r ApiV1ExtranetsB2bPeeringProducerPostRequest) Execute() (*V1ExtranetsB2bPeeringProducerPostResponse, *http.Response, error) {
 	return r.ApiService.V1ExtranetsB2bPeeringProducerPostExecute(r)
 }
 
@@ -30271,13 +32172,13 @@ func (a *DefaultAPIService) V1ExtranetsB2bPeeringProducerPost(ctx context.Contex
 }
 
 // Execute executes the request
-//  @return V1ExtranetsB2bPeeringProducerPost200Response
-func (a *DefaultAPIService) V1ExtranetsB2bPeeringProducerPostExecute(r ApiV1ExtranetsB2bPeeringProducerPostRequest) (*V1ExtranetsB2bPeeringProducerPost200Response, *http.Response, error) {
+//  @return V1ExtranetsB2bPeeringProducerPostResponse
+func (a *DefaultAPIService) V1ExtranetsB2bPeeringProducerPostExecute(r ApiV1ExtranetsB2bPeeringProducerPostRequest) (*V1ExtranetsB2bPeeringProducerPostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1ExtranetsB2bPeeringProducerPost200Response
+		localVarReturnValue  *V1ExtranetsB2bPeeringProducerPostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1ExtranetsB2bPeeringProducerPost")
@@ -30386,7 +32287,7 @@ func (r ApiV1ExtranetsB2bPostRequest) V1ExtranetsB2bPostRequest(v1ExtranetsB2bPo
 	return r
 }
 
-func (r ApiV1ExtranetsB2bPostRequest) Execute() (*V1ExtranetsB2bPost200Response, *http.Response, error) {
+func (r ApiV1ExtranetsB2bPostRequest) Execute() (*V1ExtranetsB2bPostResponse, *http.Response, error) {
 	return r.ApiService.V1ExtranetsB2bPostExecute(r)
 }
 
@@ -30404,13 +32305,13 @@ func (a *DefaultAPIService) V1ExtranetsB2bPost(ctx context.Context) ApiV1Extrane
 }
 
 // Execute executes the request
-//  @return V1ExtranetsB2bPost200Response
-func (a *DefaultAPIService) V1ExtranetsB2bPostExecute(r ApiV1ExtranetsB2bPostRequest) (*V1ExtranetsB2bPost200Response, *http.Response, error) {
+//  @return V1ExtranetsB2bPostResponse
+func (a *DefaultAPIService) V1ExtranetsB2bPostExecute(r ApiV1ExtranetsB2bPostRequest) (*V1ExtranetsB2bPostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1ExtranetsB2bPost200Response
+		localVarReturnValue  *V1ExtranetsB2bPostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1ExtranetsB2bPost")
@@ -30514,7 +32415,7 @@ func (r ApiV1ExtranetsB2bProducerDeviceStatusIdGetRequest) Authorization(authori
 	return r
 }
 
-func (r ApiV1ExtranetsB2bProducerDeviceStatusIdGetRequest) Execute() (*V1ExtranetsB2bProducerDeviceStatusIdGet200Response, *http.Response, error) {
+func (r ApiV1ExtranetsB2bProducerDeviceStatusIdGetRequest) Execute() (*V1ExtranetsB2bProducerDeviceStatusIdGetResponse, *http.Response, error) {
 	return r.ApiService.V1ExtranetsB2bProducerDeviceStatusIdGetExecute(r)
 }
 
@@ -30534,13 +32435,13 @@ func (a *DefaultAPIService) V1ExtranetsB2bProducerDeviceStatusIdGet(ctx context.
 }
 
 // Execute executes the request
-//  @return V1ExtranetsB2bProducerDeviceStatusIdGet200Response
-func (a *DefaultAPIService) V1ExtranetsB2bProducerDeviceStatusIdGetExecute(r ApiV1ExtranetsB2bProducerDeviceStatusIdGetRequest) (*V1ExtranetsB2bProducerDeviceStatusIdGet200Response, *http.Response, error) {
+//  @return V1ExtranetsB2bProducerDeviceStatusIdGetResponse
+func (a *DefaultAPIService) V1ExtranetsB2bProducerDeviceStatusIdGetExecute(r ApiV1ExtranetsB2bProducerDeviceStatusIdGetRequest) (*V1ExtranetsB2bProducerDeviceStatusIdGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1ExtranetsB2bProducerDeviceStatusIdGet200Response
+		localVarReturnValue  *V1ExtranetsB2bProducerDeviceStatusIdGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1ExtranetsB2bProducerDeviceStatusIdGet")
@@ -30639,7 +32540,7 @@ func (r ApiV1ExtranetsB2bProducersSummaryGetRequest) Authorization(authorization
 	return r
 }
 
-func (r ApiV1ExtranetsB2bProducersSummaryGetRequest) Execute() (*V1ExtranetsB2bProducersSummaryGet200Response, *http.Response, error) {
+func (r ApiV1ExtranetsB2bProducersSummaryGetRequest) Execute() (*V1ExtranetsB2bProducersSummaryGetResponse, *http.Response, error) {
 	return r.ApiService.V1ExtranetsB2bProducersSummaryGetExecute(r)
 }
 
@@ -30657,13 +32558,13 @@ func (a *DefaultAPIService) V1ExtranetsB2bProducersSummaryGet(ctx context.Contex
 }
 
 // Execute executes the request
-//  @return V1ExtranetsB2bProducersSummaryGet200Response
-func (a *DefaultAPIService) V1ExtranetsB2bProducersSummaryGetExecute(r ApiV1ExtranetsB2bProducersSummaryGetRequest) (*V1ExtranetsB2bProducersSummaryGet200Response, *http.Response, error) {
+//  @return V1ExtranetsB2bProducersSummaryGetResponse
+func (a *DefaultAPIService) V1ExtranetsB2bProducersSummaryGetExecute(r ApiV1ExtranetsB2bProducersSummaryGetRequest) (*V1ExtranetsB2bProducersSummaryGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1ExtranetsB2bProducersSummaryGet200Response
+		localVarReturnValue  *V1ExtranetsB2bProducersSummaryGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1ExtranetsB2bProducersSummaryGet")
@@ -30761,7 +32662,7 @@ func (r ApiV1ExtranetsGetRequest) Authorization(authorization string) ApiV1Extra
 	return r
 }
 
-func (r ApiV1ExtranetsGetRequest) Execute() (*V1ExtranetsGet200Response, *http.Response, error) {
+func (r ApiV1ExtranetsGetRequest) Execute() (*V1ExtranetsGetResponse, *http.Response, error) {
 	return r.ApiService.V1ExtranetsGetExecute(r)
 }
 
@@ -30779,13 +32680,13 @@ func (a *DefaultAPIService) V1ExtranetsGet(ctx context.Context) ApiV1ExtranetsGe
 }
 
 // Execute executes the request
-//  @return V1ExtranetsGet200Response
-func (a *DefaultAPIService) V1ExtranetsGetExecute(r ApiV1ExtranetsGetRequest) (*V1ExtranetsGet200Response, *http.Response, error) {
+//  @return V1ExtranetsGetResponse
+func (a *DefaultAPIService) V1ExtranetsGetExecute(r ApiV1ExtranetsGetRequest) (*V1ExtranetsGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1ExtranetsGet200Response
+		localVarReturnValue  *V1ExtranetsGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1ExtranetsGet")
@@ -30890,7 +32791,7 @@ func (r ApiV1ExtranetsIdApplyPostRequest) V1ExtranetsIdApplyPostRequest(v1Extran
 	return r
 }
 
-func (r ApiV1ExtranetsIdApplyPostRequest) Execute() (*V1ExtranetsIdApplyPost202Response, *http.Response, error) {
+func (r ApiV1ExtranetsIdApplyPostRequest) Execute() (*V1ExtranetsIdApplyPostResponse, *http.Response, error) {
 	return r.ApiService.V1ExtranetsIdApplyPostExecute(r)
 }
 
@@ -30910,13 +32811,13 @@ func (a *DefaultAPIService) V1ExtranetsIdApplyPost(ctx context.Context, id int64
 }
 
 // Execute executes the request
-//  @return V1ExtranetsIdApplyPost202Response
-func (a *DefaultAPIService) V1ExtranetsIdApplyPostExecute(r ApiV1ExtranetsIdApplyPostRequest) (*V1ExtranetsIdApplyPost202Response, *http.Response, error) {
+//  @return V1ExtranetsIdApplyPostResponse
+func (a *DefaultAPIService) V1ExtranetsIdApplyPostExecute(r ApiV1ExtranetsIdApplyPostRequest) (*V1ExtranetsIdApplyPostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1ExtranetsIdApplyPost202Response
+		localVarReturnValue  *V1ExtranetsIdApplyPostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1ExtranetsIdApplyPost")
@@ -31021,7 +32922,7 @@ func (r ApiV1ExtranetsIdDeleteRequest) Authorization(authorization string) ApiV1
 	return r
 }
 
-func (r ApiV1ExtranetsIdDeleteRequest) Execute() (*V1ExtranetsIdDelete200Response, *http.Response, error) {
+func (r ApiV1ExtranetsIdDeleteRequest) Execute() (*V1ExtranetsIdDeleteResponse, *http.Response, error) {
 	return r.ApiService.V1ExtranetsIdDeleteExecute(r)
 }
 
@@ -31041,13 +32942,13 @@ func (a *DefaultAPIService) V1ExtranetsIdDelete(ctx context.Context, id int64) A
 }
 
 // Execute executes the request
-//  @return V1ExtranetsIdDelete200Response
-func (a *DefaultAPIService) V1ExtranetsIdDeleteExecute(r ApiV1ExtranetsIdDeleteRequest) (*V1ExtranetsIdDelete200Response, *http.Response, error) {
+//  @return V1ExtranetsIdDeleteResponse
+func (a *DefaultAPIService) V1ExtranetsIdDeleteExecute(r ApiV1ExtranetsIdDeleteRequest) (*V1ExtranetsIdDeleteResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodDelete
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1ExtranetsIdDelete200Response
+		localVarReturnValue  *V1ExtranetsIdDeleteResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1ExtranetsIdDelete")
@@ -31147,7 +33048,7 @@ func (r ApiV1ExtranetsIdGetRequest) Authorization(authorization string) ApiV1Ext
 	return r
 }
 
-func (r ApiV1ExtranetsIdGetRequest) Execute() (*V1ExtranetsPost200Response, *http.Response, error) {
+func (r ApiV1ExtranetsIdGetRequest) Execute() (*V1ExtranetsIdGetResponse, *http.Response, error) {
 	return r.ApiService.V1ExtranetsIdGetExecute(r)
 }
 
@@ -31167,13 +33068,13 @@ func (a *DefaultAPIService) V1ExtranetsIdGet(ctx context.Context, id int64) ApiV
 }
 
 // Execute executes the request
-//  @return V1ExtranetsPost200Response
-func (a *DefaultAPIService) V1ExtranetsIdGetExecute(r ApiV1ExtranetsIdGetRequest) (*V1ExtranetsPost200Response, *http.Response, error) {
+//  @return V1ExtranetsIdGetResponse
+func (a *DefaultAPIService) V1ExtranetsIdGetExecute(r ApiV1ExtranetsIdGetRequest) (*V1ExtranetsIdGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1ExtranetsPost200Response
+		localVarReturnValue  *V1ExtranetsIdGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1ExtranetsIdGet")
@@ -31265,7 +33166,7 @@ type ApiV1ExtranetsIdPutRequest struct {
 	ApiService *DefaultAPIService
 	authorization *string
 	id int64
-	v1ExtranetsPostRequest *V1ExtranetsPostRequest
+	v1ExtranetsIdPutRequest *V1ExtranetsIdPutRequest
 }
 
 // Bearer token. Format: Bearer &lt;your_token_here&gt;
@@ -31274,12 +33175,12 @@ func (r ApiV1ExtranetsIdPutRequest) Authorization(authorization string) ApiV1Ext
 	return r
 }
 
-func (r ApiV1ExtranetsIdPutRequest) V1ExtranetsPostRequest(v1ExtranetsPostRequest V1ExtranetsPostRequest) ApiV1ExtranetsIdPutRequest {
-	r.v1ExtranetsPostRequest = &v1ExtranetsPostRequest
+func (r ApiV1ExtranetsIdPutRequest) V1ExtranetsIdPutRequest(v1ExtranetsIdPutRequest V1ExtranetsIdPutRequest) ApiV1ExtranetsIdPutRequest {
+	r.v1ExtranetsIdPutRequest = &v1ExtranetsIdPutRequest
 	return r
 }
 
-func (r ApiV1ExtranetsIdPutRequest) Execute() (*V1ExtranetsPost200Response, *http.Response, error) {
+func (r ApiV1ExtranetsIdPutRequest) Execute() (*V1ExtranetsIdPutResponse, *http.Response, error) {
 	return r.ApiService.V1ExtranetsIdPutExecute(r)
 }
 
@@ -31299,13 +33200,13 @@ func (a *DefaultAPIService) V1ExtranetsIdPut(ctx context.Context, id int64) ApiV
 }
 
 // Execute executes the request
-//  @return V1ExtranetsPost200Response
-func (a *DefaultAPIService) V1ExtranetsIdPutExecute(r ApiV1ExtranetsIdPutRequest) (*V1ExtranetsPost200Response, *http.Response, error) {
+//  @return V1ExtranetsIdPutResponse
+func (a *DefaultAPIService) V1ExtranetsIdPutExecute(r ApiV1ExtranetsIdPutRequest) (*V1ExtranetsIdPutResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPut
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1ExtranetsPost200Response
+		localVarReturnValue  *V1ExtranetsIdPutResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1ExtranetsIdPut")
@@ -31322,8 +33223,8 @@ func (a *DefaultAPIService) V1ExtranetsIdPutExecute(r ApiV1ExtranetsIdPutRequest
 	if r.authorization == nil {
 		return localVarReturnValue, nil, reportError("authorization is required and must be specified")
 	}
-	if r.v1ExtranetsPostRequest == nil {
-		return localVarReturnValue, nil, reportError("v1ExtranetsPostRequest is required and must be specified")
+	if r.v1ExtranetsIdPutRequest == nil {
+		return localVarReturnValue, nil, reportError("v1ExtranetsIdPutRequest is required and must be specified")
 	}
 
 	// to determine the Content-Type header
@@ -31345,7 +33246,7 @@ func (a *DefaultAPIService) V1ExtranetsIdPutExecute(r ApiV1ExtranetsIdPutRequest
 	}
 	parameterAddToHeaderOrQuery(localVarHeaderParams, "Authorization", r.authorization, "simple", "")
 	// body params
-	localVarPostBody = r.v1ExtranetsPostRequest
+	localVarPostBody = r.v1ExtranetsIdPutRequest
 	if r.ctx != nil {
 		// API Key Authentication
 		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
@@ -31410,7 +33311,7 @@ func (r ApiV1ExtranetsIdStatusGetRequest) Authorization(authorization string) Ap
 	return r
 }
 
-func (r ApiV1ExtranetsIdStatusGetRequest) Execute() (*V1ExtranetsIdDelete200Response, *http.Response, error) {
+func (r ApiV1ExtranetsIdStatusGetRequest) Execute() (*V1ExtranetsIdStatusGetResponse, *http.Response, error) {
 	return r.ApiService.V1ExtranetsIdStatusGetExecute(r)
 }
 
@@ -31430,13 +33331,13 @@ func (a *DefaultAPIService) V1ExtranetsIdStatusGet(ctx context.Context, id int64
 }
 
 // Execute executes the request
-//  @return V1ExtranetsIdDelete200Response
-func (a *DefaultAPIService) V1ExtranetsIdStatusGetExecute(r ApiV1ExtranetsIdStatusGetRequest) (*V1ExtranetsIdDelete200Response, *http.Response, error) {
+//  @return V1ExtranetsIdStatusGetResponse
+func (a *DefaultAPIService) V1ExtranetsIdStatusGetExecute(r ApiV1ExtranetsIdStatusGetRequest) (*V1ExtranetsIdStatusGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1ExtranetsIdDelete200Response
+		localVarReturnValue  *V1ExtranetsIdStatusGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1ExtranetsIdStatusGet")
@@ -31535,7 +33436,7 @@ func (r ApiV1ExtranetsMonitoringLanSegmentsGetRequest) Authorization(authorizati
 	return r
 }
 
-func (r ApiV1ExtranetsMonitoringLanSegmentsGetRequest) Execute() (*V1ExtranetsMonitoringLanSegmentsGet200Response, *http.Response, error) {
+func (r ApiV1ExtranetsMonitoringLanSegmentsGetRequest) Execute() (*V1ExtranetsMonitoringLanSegmentsGetResponse, *http.Response, error) {
 	return r.ApiService.V1ExtranetsMonitoringLanSegmentsGetExecute(r)
 }
 
@@ -31553,13 +33454,13 @@ func (a *DefaultAPIService) V1ExtranetsMonitoringLanSegmentsGet(ctx context.Cont
 }
 
 // Execute executes the request
-//  @return V1ExtranetsMonitoringLanSegmentsGet200Response
-func (a *DefaultAPIService) V1ExtranetsMonitoringLanSegmentsGetExecute(r ApiV1ExtranetsMonitoringLanSegmentsGetRequest) (*V1ExtranetsMonitoringLanSegmentsGet200Response, *http.Response, error) {
+//  @return V1ExtranetsMonitoringLanSegmentsGetResponse
+func (a *DefaultAPIService) V1ExtranetsMonitoringLanSegmentsGetExecute(r ApiV1ExtranetsMonitoringLanSegmentsGetRequest) (*V1ExtranetsMonitoringLanSegmentsGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1ExtranetsMonitoringLanSegmentsGet200Response
+		localVarReturnValue  *V1ExtranetsMonitoringLanSegmentsGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1ExtranetsMonitoringLanSegmentsGet")
@@ -31657,7 +33558,7 @@ func (r ApiV1ExtranetsMonitoringNatUsageGetRequest) Authorization(authorization 
 	return r
 }
 
-func (r ApiV1ExtranetsMonitoringNatUsageGetRequest) Execute() (*V1ExtranetsMonitoringNatUsageGet200Response, *http.Response, error) {
+func (r ApiV1ExtranetsMonitoringNatUsageGetRequest) Execute() (*V1ExtranetsMonitoringNatUsageGetResponse, *http.Response, error) {
 	return r.ApiService.V1ExtranetsMonitoringNatUsageGetExecute(r)
 }
 
@@ -31675,13 +33576,13 @@ func (a *DefaultAPIService) V1ExtranetsMonitoringNatUsageGet(ctx context.Context
 }
 
 // Execute executes the request
-//  @return V1ExtranetsMonitoringNatUsageGet200Response
-func (a *DefaultAPIService) V1ExtranetsMonitoringNatUsageGetExecute(r ApiV1ExtranetsMonitoringNatUsageGetRequest) (*V1ExtranetsMonitoringNatUsageGet200Response, *http.Response, error) {
+//  @return V1ExtranetsMonitoringNatUsageGetResponse
+func (a *DefaultAPIService) V1ExtranetsMonitoringNatUsageGetExecute(r ApiV1ExtranetsMonitoringNatUsageGetRequest) (*V1ExtranetsMonitoringNatUsageGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1ExtranetsMonitoringNatUsageGet200Response
+		localVarReturnValue  *V1ExtranetsMonitoringNatUsageGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1ExtranetsMonitoringNatUsageGet")
@@ -31785,12 +33686,14 @@ func (r ApiV1ExtranetsMonitoringTrafficSecurityPolicyPostRequest) V1ExtranetsMon
 	return r
 }
 
-func (r ApiV1ExtranetsMonitoringTrafficSecurityPolicyPostRequest) Execute() (*V1ExtranetsMonitoringTrafficSecurityPolicyPost200Response, *http.Response, error) {
+func (r ApiV1ExtranetsMonitoringTrafficSecurityPolicyPostRequest) Execute() (*V1ExtranetsMonitoringTrafficSecurityPolicyPostResponse, *http.Response, error) {
 	return r.ApiService.V1ExtranetsMonitoringTrafficSecurityPolicyPostExecute(r)
 }
 
 /*
 V1ExtranetsMonitoringTrafficSecurityPolicyPost Method for V1ExtranetsMonitoringTrafficSecurityPolicyPost
+
+Get lists of traffic and security policies
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV1ExtranetsMonitoringTrafficSecurityPolicyPostRequest
@@ -31803,13 +33706,13 @@ func (a *DefaultAPIService) V1ExtranetsMonitoringTrafficSecurityPolicyPost(ctx c
 }
 
 // Execute executes the request
-//  @return V1ExtranetsMonitoringTrafficSecurityPolicyPost200Response
-func (a *DefaultAPIService) V1ExtranetsMonitoringTrafficSecurityPolicyPostExecute(r ApiV1ExtranetsMonitoringTrafficSecurityPolicyPostRequest) (*V1ExtranetsMonitoringTrafficSecurityPolicyPost200Response, *http.Response, error) {
+//  @return V1ExtranetsMonitoringTrafficSecurityPolicyPostResponse
+func (a *DefaultAPIService) V1ExtranetsMonitoringTrafficSecurityPolicyPostExecute(r ApiV1ExtranetsMonitoringTrafficSecurityPolicyPostRequest) (*V1ExtranetsMonitoringTrafficSecurityPolicyPostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1ExtranetsMonitoringTrafficSecurityPolicyPost200Response
+		localVarReturnValue  *V1ExtranetsMonitoringTrafficSecurityPolicyPostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1ExtranetsMonitoringTrafficSecurityPolicyPost")
@@ -31918,7 +33821,7 @@ func (r ApiV1ExtranetsPostRequest) V1ExtranetsPostRequest(v1ExtranetsPostRequest
 	return r
 }
 
-func (r ApiV1ExtranetsPostRequest) Execute() (*V1ExtranetsPost200Response, *http.Response, error) {
+func (r ApiV1ExtranetsPostRequest) Execute() (*V1ExtranetsPostResponse, *http.Response, error) {
 	return r.ApiService.V1ExtranetsPostExecute(r)
 }
 
@@ -31936,13 +33839,13 @@ func (a *DefaultAPIService) V1ExtranetsPost(ctx context.Context) ApiV1ExtranetsP
 }
 
 // Execute executes the request
-//  @return V1ExtranetsPost200Response
-func (a *DefaultAPIService) V1ExtranetsPostExecute(r ApiV1ExtranetsPostRequest) (*V1ExtranetsPost200Response, *http.Response, error) {
+//  @return V1ExtranetsPostResponse
+func (a *DefaultAPIService) V1ExtranetsPostExecute(r ApiV1ExtranetsPostRequest) (*V1ExtranetsPostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1ExtranetsPost200Response
+		localVarReturnValue  *V1ExtranetsPostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1ExtranetsPost")
@@ -32051,7 +33954,7 @@ func (r ApiV1ExtranetsResolvePolicyTargetPostRequest) V1ExtranetsResolvePolicyTa
 	return r
 }
 
-func (r ApiV1ExtranetsResolvePolicyTargetPostRequest) Execute() (*V1ExtranetsResolvePolicyTargetPost200Response, *http.Response, error) {
+func (r ApiV1ExtranetsResolvePolicyTargetPostRequest) Execute() (*V1ExtranetsResolvePolicyTargetPostResponse, *http.Response, error) {
 	return r.ApiService.V1ExtranetsResolvePolicyTargetPostExecute(r)
 }
 
@@ -32069,13 +33972,13 @@ func (a *DefaultAPIService) V1ExtranetsResolvePolicyTargetPost(ctx context.Conte
 }
 
 // Execute executes the request
-//  @return V1ExtranetsResolvePolicyTargetPost200Response
-func (a *DefaultAPIService) V1ExtranetsResolvePolicyTargetPostExecute(r ApiV1ExtranetsResolvePolicyTargetPostRequest) (*V1ExtranetsResolvePolicyTargetPost200Response, *http.Response, error) {
+//  @return V1ExtranetsResolvePolicyTargetPostResponse
+func (a *DefaultAPIService) V1ExtranetsResolvePolicyTargetPostExecute(r ApiV1ExtranetsResolvePolicyTargetPostRequest) (*V1ExtranetsResolvePolicyTargetPostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1ExtranetsResolvePolicyTargetPost200Response
+		localVarReturnValue  *V1ExtranetsResolvePolicyTargetPostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1ExtranetsResolvePolicyTargetPost")
@@ -32184,7 +34087,7 @@ func (r ApiV1ExtranetsSourceSegmentsPostRequest) V1ExtranetsSourceSegmentsPostRe
 	return r
 }
 
-func (r ApiV1ExtranetsSourceSegmentsPostRequest) Execute() (*V1ExtranetsSourceSegmentsPost200Response, *http.Response, error) {
+func (r ApiV1ExtranetsSourceSegmentsPostRequest) Execute() (*V1ExtranetsSourceSegmentsPostResponse, *http.Response, error) {
 	return r.ApiService.V1ExtranetsSourceSegmentsPostExecute(r)
 }
 
@@ -32202,13 +34105,13 @@ func (a *DefaultAPIService) V1ExtranetsSourceSegmentsPost(ctx context.Context) A
 }
 
 // Execute executes the request
-//  @return V1ExtranetsSourceSegmentsPost200Response
-func (a *DefaultAPIService) V1ExtranetsSourceSegmentsPostExecute(r ApiV1ExtranetsSourceSegmentsPostRequest) (*V1ExtranetsSourceSegmentsPost200Response, *http.Response, error) {
+//  @return V1ExtranetsSourceSegmentsPostResponse
+func (a *DefaultAPIService) V1ExtranetsSourceSegmentsPostExecute(r ApiV1ExtranetsSourceSegmentsPostRequest) (*V1ExtranetsSourceSegmentsPostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1ExtranetsSourceSegmentsPost200Response
+		localVarReturnValue  *V1ExtranetsSourceSegmentsPostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1ExtranetsSourceSegmentsPost")
@@ -32317,12 +34220,14 @@ func (r ApiV1FlowsFlowTablePostRequest) V1FlowsFlowTablePostRequest(v1FlowsFlowT
 	return r
 }
 
-func (r ApiV1FlowsFlowTablePostRequest) Execute() (*V1FlowsFlowTablePost200Response, *http.Response, error) {
+func (r ApiV1FlowsFlowTablePostRequest) Execute() (*V1FlowsFlowTablePostResponse, *http.Response, error) {
 	return r.ApiService.V1FlowsFlowTablePostExecute(r)
 }
 
 /*
 V1FlowsFlowTablePost Method for V1FlowsFlowTablePost
+
+Get flow table for the app on the device
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV1FlowsFlowTablePostRequest
@@ -32335,13 +34240,13 @@ func (a *DefaultAPIService) V1FlowsFlowTablePost(ctx context.Context) ApiV1Flows
 }
 
 // Execute executes the request
-//  @return V1FlowsFlowTablePost200Response
-func (a *DefaultAPIService) V1FlowsFlowTablePostExecute(r ApiV1FlowsFlowTablePostRequest) (*V1FlowsFlowTablePost200Response, *http.Response, error) {
+//  @return V1FlowsFlowTablePostResponse
+func (a *DefaultAPIService) V1FlowsFlowTablePostExecute(r ApiV1FlowsFlowTablePostRequest) (*V1FlowsFlowTablePostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1FlowsFlowTablePost200Response
+		localVarReturnValue  *V1FlowsFlowTablePostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1FlowsFlowTablePost")
@@ -32450,12 +34355,14 @@ func (r ApiV1FlowsTopologyPostRequest) V1FlowsTopologyPostRequest(v1FlowsTopolog
 	return r
 }
 
-func (r ApiV1FlowsTopologyPostRequest) Execute() (*V1FlowsTopologyPost200Response, *http.Response, error) {
+func (r ApiV1FlowsTopologyPostRequest) Execute() (*V1FlowsTopologyPostResponse, *http.Response, error) {
 	return r.ApiService.V1FlowsTopologyPostExecute(r)
 }
 
 /*
 V1FlowsTopologyPost Method for V1FlowsTopologyPost
+
+Get flow based node and circuit topology for the device
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV1FlowsTopologyPostRequest
@@ -32468,13 +34375,13 @@ func (a *DefaultAPIService) V1FlowsTopologyPost(ctx context.Context) ApiV1FlowsT
 }
 
 // Execute executes the request
-//  @return V1FlowsTopologyPost200Response
-func (a *DefaultAPIService) V1FlowsTopologyPostExecute(r ApiV1FlowsTopologyPostRequest) (*V1FlowsTopologyPost200Response, *http.Response, error) {
+//  @return V1FlowsTopologyPostResponse
+func (a *DefaultAPIService) V1FlowsTopologyPostExecute(r ApiV1FlowsTopologyPostRequest) (*V1FlowsTopologyPostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1FlowsTopologyPost200Response
+		localVarReturnValue  *V1FlowsTopologyPostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1FlowsTopologyPost")
@@ -32717,12 +34624,14 @@ func (r ApiV1GatewaysGuestConsumerMatchIdGetRequest) Email(email string) ApiV1Ga
 	return r
 }
 
-func (r ApiV1GatewaysGuestConsumerMatchIdGetRequest) Execute() (*V1GatewaysGuestConsumerMatchIdGet200Response, *http.Response, error) {
+func (r ApiV1GatewaysGuestConsumerMatchIdGetRequest) Execute() (*V1GatewaysGuestConsumerMatchIdGetResponse, *http.Response, error) {
 	return r.ApiService.V1GatewaysGuestConsumerMatchIdGetExecute(r)
 }
 
 /*
 V1GatewaysGuestConsumerMatchIdGet Method for V1GatewaysGuestConsumerMatchIdGet
+
+Get Site to Site VPN information for a non-Graphiant guest consumer by their email
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @param matchId 
@@ -32737,13 +34646,13 @@ func (a *DefaultAPIService) V1GatewaysGuestConsumerMatchIdGet(ctx context.Contex
 }
 
 // Execute executes the request
-//  @return V1GatewaysGuestConsumerMatchIdGet200Response
-func (a *DefaultAPIService) V1GatewaysGuestConsumerMatchIdGetExecute(r ApiV1GatewaysGuestConsumerMatchIdGetRequest) (*V1GatewaysGuestConsumerMatchIdGet200Response, *http.Response, error) {
+//  @return V1GatewaysGuestConsumerMatchIdGetResponse
+func (a *DefaultAPIService) V1GatewaysGuestConsumerMatchIdGetExecute(r ApiV1GatewaysGuestConsumerMatchIdGetRequest) (*V1GatewaysGuestConsumerMatchIdGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1GatewaysGuestConsumerMatchIdGet200Response
+		localVarReturnValue  *V1GatewaysGuestConsumerMatchIdGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1GatewaysGuestConsumerMatchIdGet")
@@ -32846,7 +34755,7 @@ func (r ApiV1GatewaysIdDetailsGetRequest) Authorization(authorization string) Ap
 	return r
 }
 
-func (r ApiV1GatewaysIdDetailsGetRequest) Execute() (*V1GatewaysPostRequest, *http.Response, error) {
+func (r ApiV1GatewaysIdDetailsGetRequest) Execute() (*V1GatewaysIdDetailsGetResponse, *http.Response, error) {
 	return r.ApiService.V1GatewaysIdDetailsGetExecute(r)
 }
 
@@ -32866,13 +34775,13 @@ func (a *DefaultAPIService) V1GatewaysIdDetailsGet(ctx context.Context, id int64
 }
 
 // Execute executes the request
-//  @return V1GatewaysPostRequest
-func (a *DefaultAPIService) V1GatewaysIdDetailsGetExecute(r ApiV1GatewaysIdDetailsGetRequest) (*V1GatewaysPostRequest, *http.Response, error) {
+//  @return V1GatewaysIdDetailsGetResponse
+func (a *DefaultAPIService) V1GatewaysIdDetailsGetExecute(r ApiV1GatewaysIdDetailsGetRequest) (*V1GatewaysIdDetailsGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1GatewaysPostRequest
+		localVarReturnValue  *V1GatewaysIdDetailsGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1GatewaysIdDetailsGet")
@@ -32980,12 +34889,14 @@ func (r ApiV1GatewaysIpsecRegionsRegionIdVrfsVrfIdInsideSubnetGetRequest) Addres
 	return r
 }
 
-func (r ApiV1GatewaysIpsecRegionsRegionIdVrfsVrfIdInsideSubnetGetRequest) Execute() (*V1GatewaysIpsecRegionsRegionIdVrfsVrfIdInsideSubnetGet200Response, *http.Response, error) {
+func (r ApiV1GatewaysIpsecRegionsRegionIdVrfsVrfIdInsideSubnetGetRequest) Execute() (*V1GatewaysIpsecRegionsRegionIdVrfsVrfIdInsideSubnetGetResponse, *http.Response, error) {
 	return r.ApiService.V1GatewaysIpsecRegionsRegionIdVrfsVrfIdInsideSubnetGetExecute(r)
 }
 
 /*
 V1GatewaysIpsecRegionsRegionIdVrfsVrfIdInsideSubnetGet Method for V1GatewaysIpsecRegionsRegionIdVrfsVrfIdInsideSubnetGet
+
+Get the IPv4/Ipv6 Overlay Subnet for an ipsec gateway
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @param regionId 
@@ -33002,13 +34913,13 @@ func (a *DefaultAPIService) V1GatewaysIpsecRegionsRegionIdVrfsVrfIdInsideSubnetG
 }
 
 // Execute executes the request
-//  @return V1GatewaysIpsecRegionsRegionIdVrfsVrfIdInsideSubnetGet200Response
-func (a *DefaultAPIService) V1GatewaysIpsecRegionsRegionIdVrfsVrfIdInsideSubnetGetExecute(r ApiV1GatewaysIpsecRegionsRegionIdVrfsVrfIdInsideSubnetGetRequest) (*V1GatewaysIpsecRegionsRegionIdVrfsVrfIdInsideSubnetGet200Response, *http.Response, error) {
+//  @return V1GatewaysIpsecRegionsRegionIdVrfsVrfIdInsideSubnetGetResponse
+func (a *DefaultAPIService) V1GatewaysIpsecRegionsRegionIdVrfsVrfIdInsideSubnetGetExecute(r ApiV1GatewaysIpsecRegionsRegionIdVrfsVrfIdInsideSubnetGetRequest) (*V1GatewaysIpsecRegionsRegionIdVrfsVrfIdInsideSubnetGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1GatewaysIpsecRegionsRegionIdVrfsVrfIdInsideSubnetGet200Response
+		localVarReturnValue  *V1GatewaysIpsecRegionsRegionIdVrfsVrfIdInsideSubnetGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1GatewaysIpsecRegionsRegionIdVrfsVrfIdInsideSubnetGet")
@@ -33117,7 +35028,7 @@ func (r ApiV1GatewaysPostRequest) V1GatewaysPostRequest(v1GatewaysPostRequest V1
 	return r
 }
 
-func (r ApiV1GatewaysPostRequest) Execute() (*V1GatewaysPost200Response, *http.Response, error) {
+func (r ApiV1GatewaysPostRequest) Execute() (*V1GatewaysPostResponse, *http.Response, error) {
 	return r.ApiService.V1GatewaysPostExecute(r)
 }
 
@@ -33135,13 +35046,13 @@ func (a *DefaultAPIService) V1GatewaysPost(ctx context.Context) ApiV1GatewaysPos
 }
 
 // Execute executes the request
-//  @return V1GatewaysPost200Response
-func (a *DefaultAPIService) V1GatewaysPostExecute(r ApiV1GatewaysPostRequest) (*V1GatewaysPost200Response, *http.Response, error) {
+//  @return V1GatewaysPostResponse
+func (a *DefaultAPIService) V1GatewaysPostExecute(r ApiV1GatewaysPostRequest) (*V1GatewaysPostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1GatewaysPost200Response
+		localVarReturnValue  *V1GatewaysPostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1GatewaysPost")
@@ -33365,6 +35276,130 @@ func (a *DefaultAPIService) V1GatewaysPutExecute(r ApiV1GatewaysPutRequest) (map
 	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
+type ApiV1GatewaysReferenceConsumerGetRequest struct {
+	ctx context.Context
+	ApiService *DefaultAPIService
+	authorization *string
+}
+
+// Bearer token. Format: Bearer &lt;your_token_here&gt;
+func (r ApiV1GatewaysReferenceConsumerGetRequest) Authorization(authorization string) ApiV1GatewaysReferenceConsumerGetRequest {
+	r.authorization = &authorization
+	return r
+}
+
+func (r ApiV1GatewaysReferenceConsumerGetRequest) Execute() (*V1GatewaysReferenceConsumerGetResponse, *http.Response, error) {
+	return r.ApiService.V1GatewaysReferenceConsumerGetExecute(r)
+}
+
+/*
+V1GatewaysReferenceConsumerGet Method for V1GatewaysReferenceConsumerGet
+
+Get the priorly-configured IPSec gateway details for a customer, lan segment, region combination to be re-used for any new service matches for that customer with the given lan segment and region
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiV1GatewaysReferenceConsumerGetRequest
+*/
+func (a *DefaultAPIService) V1GatewaysReferenceConsumerGet(ctx context.Context) ApiV1GatewaysReferenceConsumerGetRequest {
+	return ApiV1GatewaysReferenceConsumerGetRequest{
+		ApiService: a,
+		ctx: ctx,
+	}
+}
+
+// Execute executes the request
+//  @return V1GatewaysReferenceConsumerGetResponse
+func (a *DefaultAPIService) V1GatewaysReferenceConsumerGetExecute(r ApiV1GatewaysReferenceConsumerGetRequest) (*V1GatewaysReferenceConsumerGetResponse, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  *V1GatewaysReferenceConsumerGetResponse
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1GatewaysReferenceConsumerGet")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/v1/gateways/reference-consumer"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+	if r.authorization == nil {
+		return localVarReturnValue, nil, reportError("authorization is required and must be specified")
+	}
+
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"application/json"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	parameterAddToHeaderOrQuery(localVarHeaderParams, "Authorization", r.authorization, "simple", "")
+	if r.ctx != nil {
+		// API Key Authentication
+		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
+			if apiKey, ok := auth["jwtAuth"]; ok {
+				var key string
+				if apiKey.Prefix != "" {
+					key = apiKey.Prefix + " " + apiKey.Key
+				} else {
+					key = apiKey.Key
+				}
+				localVarHeaderParams["authorization"] = key
+			}
+		}
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
 type ApiV1GatewaysRegionsGetRequest struct {
 	ctx context.Context
 	ApiService *DefaultAPIService
@@ -33377,7 +35412,7 @@ func (r ApiV1GatewaysRegionsGetRequest) Authorization(authorization string) ApiV
 	return r
 }
 
-func (r ApiV1GatewaysRegionsGetRequest) Execute() (*V1GatewaysRegionsGet200Response, *http.Response, error) {
+func (r ApiV1GatewaysRegionsGetRequest) Execute() (*V1GatewaysRegionsGetResponse, *http.Response, error) {
 	return r.ApiService.V1GatewaysRegionsGetExecute(r)
 }
 
@@ -33395,13 +35430,13 @@ func (a *DefaultAPIService) V1GatewaysRegionsGet(ctx context.Context) ApiV1Gatew
 }
 
 // Execute executes the request
-//  @return V1GatewaysRegionsGet200Response
-func (a *DefaultAPIService) V1GatewaysRegionsGetExecute(r ApiV1GatewaysRegionsGetRequest) (*V1GatewaysRegionsGet200Response, *http.Response, error) {
+//  @return V1GatewaysRegionsGetResponse
+func (a *DefaultAPIService) V1GatewaysRegionsGetExecute(r ApiV1GatewaysRegionsGetRequest) (*V1GatewaysRegionsGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1GatewaysRegionsGet200Response
+		localVarReturnValue  *V1GatewaysRegionsGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1GatewaysRegionsGet")
@@ -33632,7 +35667,7 @@ func (r ApiV1GatewaysSummaryGetRequest) Authorization(authorization string) ApiV
 	return r
 }
 
-func (r ApiV1GatewaysSummaryGetRequest) Execute() (*V1GatewaysSummaryGet200Response, *http.Response, error) {
+func (r ApiV1GatewaysSummaryGetRequest) Execute() (*V1GatewaysSummaryGetResponse, *http.Response, error) {
 	return r.ApiService.V1GatewaysSummaryGetExecute(r)
 }
 
@@ -33650,13 +35685,13 @@ func (a *DefaultAPIService) V1GatewaysSummaryGet(ctx context.Context) ApiV1Gatew
 }
 
 // Execute executes the request
-//  @return V1GatewaysSummaryGet200Response
-func (a *DefaultAPIService) V1GatewaysSummaryGetExecute(r ApiV1GatewaysSummaryGetRequest) (*V1GatewaysSummaryGet200Response, *http.Response, error) {
+//  @return V1GatewaysSummaryGetResponse
+func (a *DefaultAPIService) V1GatewaysSummaryGetExecute(r ApiV1GatewaysSummaryGetRequest) (*V1GatewaysSummaryGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1GatewaysSummaryGet200Response
+		localVarReturnValue  *V1GatewaysSummaryGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1GatewaysSummaryGet")
@@ -33754,12 +35789,14 @@ func (r ApiV1GlobalAppsAppListOptionsGetRequest) Authorization(authorization str
 	return r
 }
 
-func (r ApiV1GlobalAppsAppListOptionsGetRequest) Execute() (*V1GlobalAppsAppListOptionsGet200Response, *http.Response, error) {
+func (r ApiV1GlobalAppsAppListOptionsGetRequest) Execute() (*V1GlobalAppsAppListOptionsGetResponse, *http.Response, error) {
 	return r.ApiService.V1GlobalAppsAppListOptionsGetExecute(r)
 }
 
 /*
 V1GlobalAppsAppListOptionsGet Method for V1GlobalAppsAppListOptionsGet
+
+Gets all apps and categories assignable to an app list for the the current enterprise
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV1GlobalAppsAppListOptionsGetRequest
@@ -33772,13 +35809,13 @@ func (a *DefaultAPIService) V1GlobalAppsAppListOptionsGet(ctx context.Context) A
 }
 
 // Execute executes the request
-//  @return V1GlobalAppsAppListOptionsGet200Response
-func (a *DefaultAPIService) V1GlobalAppsAppListOptionsGetExecute(r ApiV1GlobalAppsAppListOptionsGetRequest) (*V1GlobalAppsAppListOptionsGet200Response, *http.Response, error) {
+//  @return V1GlobalAppsAppListOptionsGetResponse
+func (a *DefaultAPIService) V1GlobalAppsAppListOptionsGetExecute(r ApiV1GlobalAppsAppListOptionsGetRequest) (*V1GlobalAppsAppListOptionsGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1GlobalAppsAppListOptionsGet200Response
+		localVarReturnValue  *V1GlobalAppsAppListOptionsGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1GlobalAppsAppListOptionsGet")
@@ -33883,6 +35920,8 @@ func (r ApiV1GlobalAppsAppListsAppListIdDeleteRequest) Execute() (map[string]int
 
 /*
 V1GlobalAppsAppListsAppListIdDelete Method for V1GlobalAppsAppListsAppListIdDelete
+
+Delete an app list under the current enterprise
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @param appListId 
@@ -34003,12 +36042,14 @@ func (r ApiV1GlobalAppsAppListsAppListIdDetailsAppsGetRequest) Authorization(aut
 	return r
 }
 
-func (r ApiV1GlobalAppsAppListsAppListIdDetailsAppsGetRequest) Execute() (*V1GlobalAppsAppListOptionsGet200Response, *http.Response, error) {
+func (r ApiV1GlobalAppsAppListsAppListIdDetailsAppsGetRequest) Execute() (*V1GlobalAppsAppListsAppListIdDetailsAppsGetResponse, *http.Response, error) {
 	return r.ApiService.V1GlobalAppsAppListsAppListIdDetailsAppsGetExecute(r)
 }
 
 /*
 V1GlobalAppsAppListsAppListIdDetailsAppsGet Method for V1GlobalAppsAppListsAppListIdDetailsAppsGet
+
+Get all apps that are members of the provided app list
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @param appListId 
@@ -34023,13 +36064,13 @@ func (a *DefaultAPIService) V1GlobalAppsAppListsAppListIdDetailsAppsGet(ctx cont
 }
 
 // Execute executes the request
-//  @return V1GlobalAppsAppListOptionsGet200Response
-func (a *DefaultAPIService) V1GlobalAppsAppListsAppListIdDetailsAppsGetExecute(r ApiV1GlobalAppsAppListsAppListIdDetailsAppsGetRequest) (*V1GlobalAppsAppListOptionsGet200Response, *http.Response, error) {
+//  @return V1GlobalAppsAppListsAppListIdDetailsAppsGetResponse
+func (a *DefaultAPIService) V1GlobalAppsAppListsAppListIdDetailsAppsGetExecute(r ApiV1GlobalAppsAppListsAppListIdDetailsAppsGetRequest) (*V1GlobalAppsAppListsAppListIdDetailsAppsGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1GlobalAppsAppListOptionsGet200Response
+		localVarReturnValue  *V1GlobalAppsAppListsAppListIdDetailsAppsGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1GlobalAppsAppListsAppListIdDetailsAppsGet")
@@ -34129,12 +36170,14 @@ func (r ApiV1GlobalAppsAppListsAppListIdGetRequest) Authorization(authorization 
 	return r
 }
 
-func (r ApiV1GlobalAppsAppListsAppListIdGetRequest) Execute() (*V1GlobalAppsAppListsPostRequest, *http.Response, error) {
+func (r ApiV1GlobalAppsAppListsAppListIdGetRequest) Execute() (*V1GlobalAppsAppListsAppListIdGetResponse, *http.Response, error) {
 	return r.ApiService.V1GlobalAppsAppListsAppListIdGetExecute(r)
 }
 
 /*
 V1GlobalAppsAppListsAppListIdGet Method for V1GlobalAppsAppListsAppListIdGet
+
+Get the configuration for an app list under the current enterprise
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @param appListId 
@@ -34149,13 +36192,13 @@ func (a *DefaultAPIService) V1GlobalAppsAppListsAppListIdGet(ctx context.Context
 }
 
 // Execute executes the request
-//  @return V1GlobalAppsAppListsPostRequest
-func (a *DefaultAPIService) V1GlobalAppsAppListsAppListIdGetExecute(r ApiV1GlobalAppsAppListsAppListIdGetRequest) (*V1GlobalAppsAppListsPostRequest, *http.Response, error) {
+//  @return V1GlobalAppsAppListsAppListIdGetResponse
+func (a *DefaultAPIService) V1GlobalAppsAppListsAppListIdGetExecute(r ApiV1GlobalAppsAppListsAppListIdGetRequest) (*V1GlobalAppsAppListsAppListIdGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1GlobalAppsAppListsPostRequest
+		localVarReturnValue  *V1GlobalAppsAppListsAppListIdGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1GlobalAppsAppListsAppListIdGet")
@@ -34247,7 +36290,7 @@ type ApiV1GlobalAppsAppListsAppListIdPutRequest struct {
 	ApiService *DefaultAPIService
 	authorization *string
 	appListId int64
-	v1GlobalAppsAppListsPostRequest *V1GlobalAppsAppListsPostRequest
+	v1GlobalAppsAppListsAppListIdPutRequest *V1GlobalAppsAppListsAppListIdPutRequest
 }
 
 // Bearer token. Format: Bearer &lt;your_token_here&gt;
@@ -34256,8 +36299,8 @@ func (r ApiV1GlobalAppsAppListsAppListIdPutRequest) Authorization(authorization 
 	return r
 }
 
-func (r ApiV1GlobalAppsAppListsAppListIdPutRequest) V1GlobalAppsAppListsPostRequest(v1GlobalAppsAppListsPostRequest V1GlobalAppsAppListsPostRequest) ApiV1GlobalAppsAppListsAppListIdPutRequest {
-	r.v1GlobalAppsAppListsPostRequest = &v1GlobalAppsAppListsPostRequest
+func (r ApiV1GlobalAppsAppListsAppListIdPutRequest) V1GlobalAppsAppListsAppListIdPutRequest(v1GlobalAppsAppListsAppListIdPutRequest V1GlobalAppsAppListsAppListIdPutRequest) ApiV1GlobalAppsAppListsAppListIdPutRequest {
+	r.v1GlobalAppsAppListsAppListIdPutRequest = &v1GlobalAppsAppListsAppListIdPutRequest
 	return r
 }
 
@@ -34267,6 +36310,8 @@ func (r ApiV1GlobalAppsAppListsAppListIdPutRequest) Execute() (map[string]interf
 
 /*
 V1GlobalAppsAppListsAppListIdPut Method for V1GlobalAppsAppListsAppListIdPut
+
+Overwrite the configuration for an app list under the current enterprise
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @param appListId 
@@ -34304,8 +36349,8 @@ func (a *DefaultAPIService) V1GlobalAppsAppListsAppListIdPutExecute(r ApiV1Globa
 	if r.authorization == nil {
 		return localVarReturnValue, nil, reportError("authorization is required and must be specified")
 	}
-	if r.v1GlobalAppsAppListsPostRequest == nil {
-		return localVarReturnValue, nil, reportError("v1GlobalAppsAppListsPostRequest is required and must be specified")
+	if r.v1GlobalAppsAppListsAppListIdPutRequest == nil {
+		return localVarReturnValue, nil, reportError("v1GlobalAppsAppListsAppListIdPutRequest is required and must be specified")
 	}
 
 	// to determine the Content-Type header
@@ -34327,7 +36372,7 @@ func (a *DefaultAPIService) V1GlobalAppsAppListsAppListIdPutExecute(r ApiV1Globa
 	}
 	parameterAddToHeaderOrQuery(localVarHeaderParams, "Authorization", r.authorization, "simple", "")
 	// body params
-	localVarPostBody = r.v1GlobalAppsAppListsPostRequest
+	localVarPostBody = r.v1GlobalAppsAppListsAppListIdPutRequest
 	if r.ctx != nil {
 		// API Key Authentication
 		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
@@ -34391,12 +36436,14 @@ func (r ApiV1GlobalAppsAppListsGetRequest) Authorization(authorization string) A
 	return r
 }
 
-func (r ApiV1GlobalAppsAppListsGetRequest) Execute() (*V1GlobalAppsAppListsGet200Response, *http.Response, error) {
+func (r ApiV1GlobalAppsAppListsGetRequest) Execute() (*V1GlobalAppsAppListsGetResponse, *http.Response, error) {
 	return r.ApiService.V1GlobalAppsAppListsGetExecute(r)
 }
 
 /*
 V1GlobalAppsAppListsGet Method for V1GlobalAppsAppListsGet
+
+Get all app lists for the current enterprise
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV1GlobalAppsAppListsGetRequest
@@ -34409,13 +36456,13 @@ func (a *DefaultAPIService) V1GlobalAppsAppListsGet(ctx context.Context) ApiV1Gl
 }
 
 // Execute executes the request
-//  @return V1GlobalAppsAppListsGet200Response
-func (a *DefaultAPIService) V1GlobalAppsAppListsGetExecute(r ApiV1GlobalAppsAppListsGetRequest) (*V1GlobalAppsAppListsGet200Response, *http.Response, error) {
+//  @return V1GlobalAppsAppListsGetResponse
+func (a *DefaultAPIService) V1GlobalAppsAppListsGetExecute(r ApiV1GlobalAppsAppListsGetRequest) (*V1GlobalAppsAppListsGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1GlobalAppsAppListsGet200Response
+		localVarReturnValue  *V1GlobalAppsAppListsGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1GlobalAppsAppListsGet")
@@ -34519,12 +36566,14 @@ func (r ApiV1GlobalAppsAppListsPostRequest) V1GlobalAppsAppListsPostRequest(v1Gl
 	return r
 }
 
-func (r ApiV1GlobalAppsAppListsPostRequest) Execute() (*V1GlobalAppsAppListsPost200Response, *http.Response, error) {
+func (r ApiV1GlobalAppsAppListsPostRequest) Execute() (*V1GlobalAppsAppListsPostResponse, *http.Response, error) {
 	return r.ApiService.V1GlobalAppsAppListsPostExecute(r)
 }
 
 /*
 V1GlobalAppsAppListsPost Method for V1GlobalAppsAppListsPost
+
+Create an app list under the current enterprise
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV1GlobalAppsAppListsPostRequest
@@ -34537,13 +36586,13 @@ func (a *DefaultAPIService) V1GlobalAppsAppListsPost(ctx context.Context) ApiV1G
 }
 
 // Execute executes the request
-//  @return V1GlobalAppsAppListsPost200Response
-func (a *DefaultAPIService) V1GlobalAppsAppListsPostExecute(r ApiV1GlobalAppsAppListsPostRequest) (*V1GlobalAppsAppListsPost200Response, *http.Response, error) {
+//  @return V1GlobalAppsAppListsPostResponse
+func (a *DefaultAPIService) V1GlobalAppsAppListsPostExecute(r ApiV1GlobalAppsAppListsPostRequest) (*V1GlobalAppsAppListsPostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1GlobalAppsAppListsPost200Response
+		localVarReturnValue  *V1GlobalAppsAppListsPostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1GlobalAppsAppListsPost")
@@ -34647,12 +36696,14 @@ func (r ApiV1GlobalAppsCategoriesCategoryIdAppsGetRequest) Authorization(authori
 	return r
 }
 
-func (r ApiV1GlobalAppsCategoriesCategoryIdAppsGetRequest) Execute() (*V1GlobalAppsAppListOptionsGet200Response, *http.Response, error) {
+func (r ApiV1GlobalAppsCategoriesCategoryIdAppsGetRequest) Execute() (*V1GlobalAppsCategoriesCategoryIdAppsGetResponse, *http.Response, error) {
 	return r.ApiService.V1GlobalAppsCategoriesCategoryIdAppsGetExecute(r)
 }
 
 /*
 V1GlobalAppsCategoriesCategoryIdAppsGet Method for V1GlobalAppsCategoriesCategoryIdAppsGet
+
+Get all Graphiant apps in an app category
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @param categoryId 
@@ -34667,13 +36718,13 @@ func (a *DefaultAPIService) V1GlobalAppsCategoriesCategoryIdAppsGet(ctx context.
 }
 
 // Execute executes the request
-//  @return V1GlobalAppsAppListOptionsGet200Response
-func (a *DefaultAPIService) V1GlobalAppsCategoriesCategoryIdAppsGetExecute(r ApiV1GlobalAppsCategoriesCategoryIdAppsGetRequest) (*V1GlobalAppsAppListOptionsGet200Response, *http.Response, error) {
+//  @return V1GlobalAppsCategoriesCategoryIdAppsGetResponse
+func (a *DefaultAPIService) V1GlobalAppsCategoriesCategoryIdAppsGetExecute(r ApiV1GlobalAppsCategoriesCategoryIdAppsGetRequest) (*V1GlobalAppsCategoriesCategoryIdAppsGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1GlobalAppsAppListOptionsGet200Response
+		localVarReturnValue  *V1GlobalAppsCategoriesCategoryIdAppsGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1GlobalAppsCategoriesCategoryIdAppsGet")
@@ -34772,12 +36823,14 @@ func (r ApiV1GlobalAppsCategoriesGetRequest) Authorization(authorization string)
 	return r
 }
 
-func (r ApiV1GlobalAppsCategoriesGetRequest) Execute() (*V1GlobalAppsCategoriesGet200Response, *http.Response, error) {
+func (r ApiV1GlobalAppsCategoriesGetRequest) Execute() (*V1GlobalAppsCategoriesGetResponse, *http.Response, error) {
 	return r.ApiService.V1GlobalAppsCategoriesGetExecute(r)
 }
 
 /*
 V1GlobalAppsCategoriesGet Method for V1GlobalAppsCategoriesGet
+
+Get all app categories holding Graphiant apps
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV1GlobalAppsCategoriesGetRequest
@@ -34790,13 +36843,13 @@ func (a *DefaultAPIService) V1GlobalAppsCategoriesGet(ctx context.Context) ApiV1
 }
 
 // Execute executes the request
-//  @return V1GlobalAppsCategoriesGet200Response
-func (a *DefaultAPIService) V1GlobalAppsCategoriesGetExecute(r ApiV1GlobalAppsCategoriesGetRequest) (*V1GlobalAppsCategoriesGet200Response, *http.Response, error) {
+//  @return V1GlobalAppsCategoriesGetResponse
+func (a *DefaultAPIService) V1GlobalAppsCategoriesGetExecute(r ApiV1GlobalAppsCategoriesGetRequest) (*V1GlobalAppsCategoriesGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1GlobalAppsCategoriesGet200Response
+		localVarReturnValue  *V1GlobalAppsCategoriesGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1GlobalAppsCategoriesGet")
@@ -34901,6 +36954,8 @@ func (r ApiV1GlobalAppsCustomAppIdDeleteRequest) Execute() (map[string]interface
 
 /*
 V1GlobalAppsCustomAppIdDelete Method for V1GlobalAppsCustomAppIdDelete
+
+Delete a global app under the current enterprise
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @param appId 
@@ -35021,12 +37076,14 @@ func (r ApiV1GlobalAppsCustomAppIdDetailsAppListsGetRequest) Authorization(autho
 	return r
 }
 
-func (r ApiV1GlobalAppsCustomAppIdDetailsAppListsGetRequest) Execute() (*V1GlobalAppsCustomAppIdDetailsAppListsGet200Response, *http.Response, error) {
+func (r ApiV1GlobalAppsCustomAppIdDetailsAppListsGetRequest) Execute() (*V1GlobalAppsCustomAppIdDetailsAppListsGetResponse, *http.Response, error) {
 	return r.ApiService.V1GlobalAppsCustomAppIdDetailsAppListsGetExecute(r)
 }
 
 /*
 V1GlobalAppsCustomAppIdDetailsAppListsGet Method for V1GlobalAppsCustomAppIdDetailsAppListsGet
+
+Get all app lists that contain the relevant global app
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @param appId 
@@ -35041,13 +37098,13 @@ func (a *DefaultAPIService) V1GlobalAppsCustomAppIdDetailsAppListsGet(ctx contex
 }
 
 // Execute executes the request
-//  @return V1GlobalAppsCustomAppIdDetailsAppListsGet200Response
-func (a *DefaultAPIService) V1GlobalAppsCustomAppIdDetailsAppListsGetExecute(r ApiV1GlobalAppsCustomAppIdDetailsAppListsGetRequest) (*V1GlobalAppsCustomAppIdDetailsAppListsGet200Response, *http.Response, error) {
+//  @return V1GlobalAppsCustomAppIdDetailsAppListsGetResponse
+func (a *DefaultAPIService) V1GlobalAppsCustomAppIdDetailsAppListsGetExecute(r ApiV1GlobalAppsCustomAppIdDetailsAppListsGetRequest) (*V1GlobalAppsCustomAppIdDetailsAppListsGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1GlobalAppsCustomAppIdDetailsAppListsGet200Response
+		localVarReturnValue  *V1GlobalAppsCustomAppIdDetailsAppListsGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1GlobalAppsCustomAppIdDetailsAppListsGet")
@@ -35147,12 +37204,14 @@ func (r ApiV1GlobalAppsCustomAppIdGetRequest) Authorization(authorization string
 	return r
 }
 
-func (r ApiV1GlobalAppsCustomAppIdGetRequest) Execute() (*V1GlobalAppsCustomPostRequest, *http.Response, error) {
+func (r ApiV1GlobalAppsCustomAppIdGetRequest) Execute() (*V1GlobalAppsCustomAppIdGetResponse, *http.Response, error) {
 	return r.ApiService.V1GlobalAppsCustomAppIdGetExecute(r)
 }
 
 /*
 V1GlobalAppsCustomAppIdGet Method for V1GlobalAppsCustomAppIdGet
+
+Get the configuration for a global app under the current enterprise
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @param appId 
@@ -35167,13 +37226,13 @@ func (a *DefaultAPIService) V1GlobalAppsCustomAppIdGet(ctx context.Context, appI
 }
 
 // Execute executes the request
-//  @return V1GlobalAppsCustomPostRequest
-func (a *DefaultAPIService) V1GlobalAppsCustomAppIdGetExecute(r ApiV1GlobalAppsCustomAppIdGetRequest) (*V1GlobalAppsCustomPostRequest, *http.Response, error) {
+//  @return V1GlobalAppsCustomAppIdGetResponse
+func (a *DefaultAPIService) V1GlobalAppsCustomAppIdGetExecute(r ApiV1GlobalAppsCustomAppIdGetRequest) (*V1GlobalAppsCustomAppIdGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1GlobalAppsCustomPostRequest
+		localVarReturnValue  *V1GlobalAppsCustomAppIdGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1GlobalAppsCustomAppIdGet")
@@ -35265,7 +37324,7 @@ type ApiV1GlobalAppsCustomAppIdPutRequest struct {
 	ApiService *DefaultAPIService
 	authorization *string
 	appId int64
-	v1GlobalAppsCustomPostRequest *V1GlobalAppsCustomPostRequest
+	v1GlobalAppsCustomAppIdPutRequest *V1GlobalAppsCustomAppIdPutRequest
 }
 
 // Bearer token. Format: Bearer &lt;your_token_here&gt;
@@ -35274,8 +37333,8 @@ func (r ApiV1GlobalAppsCustomAppIdPutRequest) Authorization(authorization string
 	return r
 }
 
-func (r ApiV1GlobalAppsCustomAppIdPutRequest) V1GlobalAppsCustomPostRequest(v1GlobalAppsCustomPostRequest V1GlobalAppsCustomPostRequest) ApiV1GlobalAppsCustomAppIdPutRequest {
-	r.v1GlobalAppsCustomPostRequest = &v1GlobalAppsCustomPostRequest
+func (r ApiV1GlobalAppsCustomAppIdPutRequest) V1GlobalAppsCustomAppIdPutRequest(v1GlobalAppsCustomAppIdPutRequest V1GlobalAppsCustomAppIdPutRequest) ApiV1GlobalAppsCustomAppIdPutRequest {
+	r.v1GlobalAppsCustomAppIdPutRequest = &v1GlobalAppsCustomAppIdPutRequest
 	return r
 }
 
@@ -35285,6 +37344,8 @@ func (r ApiV1GlobalAppsCustomAppIdPutRequest) Execute() (map[string]interface{},
 
 /*
 V1GlobalAppsCustomAppIdPut Method for V1GlobalAppsCustomAppIdPut
+
+Overwrite the configuration for a global app under the current enterprise
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @param appId 
@@ -35322,8 +37383,8 @@ func (a *DefaultAPIService) V1GlobalAppsCustomAppIdPutExecute(r ApiV1GlobalAppsC
 	if r.authorization == nil {
 		return localVarReturnValue, nil, reportError("authorization is required and must be specified")
 	}
-	if r.v1GlobalAppsCustomPostRequest == nil {
-		return localVarReturnValue, nil, reportError("v1GlobalAppsCustomPostRequest is required and must be specified")
+	if r.v1GlobalAppsCustomAppIdPutRequest == nil {
+		return localVarReturnValue, nil, reportError("v1GlobalAppsCustomAppIdPutRequest is required and must be specified")
 	}
 
 	// to determine the Content-Type header
@@ -35345,7 +37406,7 @@ func (a *DefaultAPIService) V1GlobalAppsCustomAppIdPutExecute(r ApiV1GlobalAppsC
 	}
 	parameterAddToHeaderOrQuery(localVarHeaderParams, "Authorization", r.authorization, "simple", "")
 	// body params
-	localVarPostBody = r.v1GlobalAppsCustomPostRequest
+	localVarPostBody = r.v1GlobalAppsCustomAppIdPutRequest
 	if r.ctx != nil {
 		// API Key Authentication
 		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
@@ -35409,12 +37470,14 @@ func (r ApiV1GlobalAppsCustomGetRequest) Authorization(authorization string) Api
 	return r
 }
 
-func (r ApiV1GlobalAppsCustomGetRequest) Execute() (*V1GlobalAppsCustomGet200Response, *http.Response, error) {
+func (r ApiV1GlobalAppsCustomGetRequest) Execute() (*V1GlobalAppsCustomGetResponse, *http.Response, error) {
 	return r.ApiService.V1GlobalAppsCustomGetExecute(r)
 }
 
 /*
 V1GlobalAppsCustomGet Method for V1GlobalAppsCustomGet
+
+Get all global apps mapped by the current enterprise
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV1GlobalAppsCustomGetRequest
@@ -35427,13 +37490,13 @@ func (a *DefaultAPIService) V1GlobalAppsCustomGet(ctx context.Context) ApiV1Glob
 }
 
 // Execute executes the request
-//  @return V1GlobalAppsCustomGet200Response
-func (a *DefaultAPIService) V1GlobalAppsCustomGetExecute(r ApiV1GlobalAppsCustomGetRequest) (*V1GlobalAppsCustomGet200Response, *http.Response, error) {
+//  @return V1GlobalAppsCustomGetResponse
+func (a *DefaultAPIService) V1GlobalAppsCustomGetExecute(r ApiV1GlobalAppsCustomGetRequest) (*V1GlobalAppsCustomGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1GlobalAppsCustomGet200Response
+		localVarReturnValue  *V1GlobalAppsCustomGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1GlobalAppsCustomGet")
@@ -35537,12 +37600,14 @@ func (r ApiV1GlobalAppsCustomPostRequest) V1GlobalAppsCustomPostRequest(v1Global
 	return r
 }
 
-func (r ApiV1GlobalAppsCustomPostRequest) Execute() (*V1GlobalAppsAppListsPost200Response, *http.Response, error) {
+func (r ApiV1GlobalAppsCustomPostRequest) Execute() (*V1GlobalAppsCustomPostResponse, *http.Response, error) {
 	return r.ApiService.V1GlobalAppsCustomPostExecute(r)
 }
 
 /*
 V1GlobalAppsCustomPost Method for V1GlobalAppsCustomPost
+
+Create a new global app under the current enterprise
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV1GlobalAppsCustomPostRequest
@@ -35555,13 +37620,13 @@ func (a *DefaultAPIService) V1GlobalAppsCustomPost(ctx context.Context) ApiV1Glo
 }
 
 // Execute executes the request
-//  @return V1GlobalAppsAppListsPost200Response
-func (a *DefaultAPIService) V1GlobalAppsCustomPostExecute(r ApiV1GlobalAppsCustomPostRequest) (*V1GlobalAppsAppListsPost200Response, *http.Response, error) {
+//  @return V1GlobalAppsCustomPostResponse
+func (a *DefaultAPIService) V1GlobalAppsCustomPostExecute(r ApiV1GlobalAppsCustomPostRequest) (*V1GlobalAppsCustomPostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1GlobalAppsAppListsPost200Response
+		localVarReturnValue  *V1GlobalAppsCustomPostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1GlobalAppsCustomPost")
@@ -35664,12 +37729,14 @@ func (r ApiV1GlobalAppsGraphiantGetRequest) Authorization(authorization string) 
 	return r
 }
 
-func (r ApiV1GlobalAppsGraphiantGetRequest) Execute() (*V1GlobalAppsGraphiantGet200Response, *http.Response, error) {
+func (r ApiV1GlobalAppsGraphiantGetRequest) Execute() (*V1GlobalAppsGraphiantGetResponse, *http.Response, error) {
 	return r.ApiService.V1GlobalAppsGraphiantGetExecute(r)
 }
 
 /*
 V1GlobalAppsGraphiantGet Method for V1GlobalAppsGraphiantGet
+
+Get all apps mapped by Graphiant
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV1GlobalAppsGraphiantGetRequest
@@ -35682,13 +37749,13 @@ func (a *DefaultAPIService) V1GlobalAppsGraphiantGet(ctx context.Context) ApiV1G
 }
 
 // Execute executes the request
-//  @return V1GlobalAppsGraphiantGet200Response
-func (a *DefaultAPIService) V1GlobalAppsGraphiantGetExecute(r ApiV1GlobalAppsGraphiantGetRequest) (*V1GlobalAppsGraphiantGet200Response, *http.Response, error) {
+//  @return V1GlobalAppsGraphiantGetResponse
+func (a *DefaultAPIService) V1GlobalAppsGraphiantGetExecute(r ApiV1GlobalAppsGraphiantGetRequest) (*V1GlobalAppsGraphiantGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1GlobalAppsGraphiantGet200Response
+		localVarReturnValue  *V1GlobalAppsGraphiantGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1GlobalAppsGraphiantGet")
@@ -35792,12 +37859,14 @@ func (r ApiV1GlobalAttachedEdgesPostRequest) V1GlobalAttachedEdgesPostRequest(v1
 	return r
 }
 
-func (r ApiV1GlobalAttachedEdgesPostRequest) Execute() (*V1GlobalAttachedEdgesPost200Response, *http.Response, error) {
+func (r ApiV1GlobalAttachedEdgesPostRequest) Execute() (*V1GlobalAttachedEdgesPostResponse, *http.Response, error) {
 	return r.ApiService.V1GlobalAttachedEdgesPostExecute(r)
 }
 
 /*
 V1GlobalAttachedEdgesPost Method for V1GlobalAttachedEdgesPost
+
+Returns attached edges for global object
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV1GlobalAttachedEdgesPostRequest
@@ -35810,13 +37879,13 @@ func (a *DefaultAPIService) V1GlobalAttachedEdgesPost(ctx context.Context) ApiV1
 }
 
 // Execute executes the request
-//  @return V1GlobalAttachedEdgesPost200Response
-func (a *DefaultAPIService) V1GlobalAttachedEdgesPostExecute(r ApiV1GlobalAttachedEdgesPostRequest) (*V1GlobalAttachedEdgesPost200Response, *http.Response, error) {
+//  @return V1GlobalAttachedEdgesPostResponse
+func (a *DefaultAPIService) V1GlobalAttachedEdgesPostExecute(r ApiV1GlobalAttachedEdgesPostRequest) (*V1GlobalAttachedEdgesPostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1GlobalAttachedEdgesPost200Response
+		localVarReturnValue  *V1GlobalAttachedEdgesPostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1GlobalAttachedEdgesPost")
@@ -35925,12 +37994,14 @@ func (r ApiV1GlobalConfigPatchRequest) V1GlobalConfigPatchRequest(v1GlobalConfig
 	return r
 }
 
-func (r ApiV1GlobalConfigPatchRequest) Execute() (*V1GlobalConfigPatch200Response, *http.Response, error) {
+func (r ApiV1GlobalConfigPatchRequest) Execute() (*V1GlobalConfigPatchResponse, *http.Response, error) {
 	return r.ApiService.V1GlobalConfigPatchExecute(r)
 }
 
 /*
 V1GlobalConfigPatch Method for V1GlobalConfigPatch
+
+Update global objects for an enterprise
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV1GlobalConfigPatchRequest
@@ -35943,13 +38014,13 @@ func (a *DefaultAPIService) V1GlobalConfigPatch(ctx context.Context) ApiV1Global
 }
 
 // Execute executes the request
-//  @return V1GlobalConfigPatch200Response
-func (a *DefaultAPIService) V1GlobalConfigPatchExecute(r ApiV1GlobalConfigPatchRequest) (*V1GlobalConfigPatch200Response, *http.Response, error) {
+//  @return V1GlobalConfigPatchResponse
+func (a *DefaultAPIService) V1GlobalConfigPatchExecute(r ApiV1GlobalConfigPatchRequest) (*V1GlobalConfigPatchResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPatch
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1GlobalConfigPatch200Response
+		localVarReturnValue  *V1GlobalConfigPatchResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1GlobalConfigPatch")
@@ -36064,6 +38135,8 @@ func (r ApiV1GlobalConfigSitePostRequest) Execute() (map[string]interface{}, *ht
 
 /*
 V1GlobalConfigSitePost Method for V1GlobalConfigSitePost
+
+Attach or detach global objects from a site
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV1GlobalConfigSitePostRequest
@@ -36185,12 +38258,14 @@ func (r ApiV1GlobalDeviceStatusGetRequest) Authorization(authorization string) A
 	return r
 }
 
-func (r ApiV1GlobalDeviceStatusGetRequest) Execute() (*V1GlobalAttachedEdgesPost200Response, *http.Response, error) {
+func (r ApiV1GlobalDeviceStatusGetRequest) Execute() (*V1GlobalDeviceStatusGetResponse, *http.Response, error) {
 	return r.ApiService.V1GlobalDeviceStatusGetExecute(r)
 }
 
 /*
 V1GlobalDeviceStatusGet Method for V1GlobalDeviceStatusGet
+
+Get status on global collector attached to devices
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV1GlobalDeviceStatusGetRequest
@@ -36203,13 +38278,13 @@ func (a *DefaultAPIService) V1GlobalDeviceStatusGet(ctx context.Context) ApiV1Gl
 }
 
 // Execute executes the request
-//  @return V1GlobalAttachedEdgesPost200Response
-func (a *DefaultAPIService) V1GlobalDeviceStatusGetExecute(r ApiV1GlobalDeviceStatusGetRequest) (*V1GlobalAttachedEdgesPost200Response, *http.Response, error) {
+//  @return V1GlobalDeviceStatusGetResponse
+func (a *DefaultAPIService) V1GlobalDeviceStatusGetExecute(r ApiV1GlobalDeviceStatusGetRequest) (*V1GlobalDeviceStatusGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1GlobalAttachedEdgesPost200Response
+		localVarReturnValue  *V1GlobalDeviceStatusGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1GlobalDeviceStatusGet")
@@ -36307,12 +38382,14 @@ func (r ApiV1GlobalIpfixDeviceGetRequest) Authorization(authorization string) Ap
 	return r
 }
 
-func (r ApiV1GlobalIpfixDeviceGetRequest) Execute() (*V1GlobalIpfixDeviceGet200Response, *http.Response, error) {
+func (r ApiV1GlobalIpfixDeviceGetRequest) Execute() (*V1GlobalIpfixDeviceGetResponse, *http.Response, error) {
 	return r.ApiService.V1GlobalIpfixDeviceGetExecute(r)
 }
 
 /*
 V1GlobalIpfixDeviceGet Method for V1GlobalIpfixDeviceGet
+
+Get global ipfix exporters objects that failed to attach for a device
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV1GlobalIpfixDeviceGetRequest
@@ -36325,13 +38402,13 @@ func (a *DefaultAPIService) V1GlobalIpfixDeviceGet(ctx context.Context) ApiV1Glo
 }
 
 // Execute executes the request
-//  @return V1GlobalIpfixDeviceGet200Response
-func (a *DefaultAPIService) V1GlobalIpfixDeviceGetExecute(r ApiV1GlobalIpfixDeviceGetRequest) (*V1GlobalIpfixDeviceGet200Response, *http.Response, error) {
+//  @return V1GlobalIpfixDeviceGetResponse
+func (a *DefaultAPIService) V1GlobalIpfixDeviceGetExecute(r ApiV1GlobalIpfixDeviceGetRequest) (*V1GlobalIpfixDeviceGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1GlobalIpfixDeviceGet200Response
+		localVarReturnValue  *V1GlobalIpfixDeviceGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1GlobalIpfixDeviceGet")
@@ -36435,12 +38512,14 @@ func (r ApiV1GlobalIpfixPostRequest) V1GlobalIpfixPostRequest(v1GlobalIpfixPostR
 	return r
 }
 
-func (r ApiV1GlobalIpfixPostRequest) Execute() (*V1GlobalIpfixDeviceGet200Response, *http.Response, error) {
+func (r ApiV1GlobalIpfixPostRequest) Execute() (*V1GlobalIpfixPostResponse, *http.Response, error) {
 	return r.ApiService.V1GlobalIpfixPostExecute(r)
 }
 
 /*
 V1GlobalIpfixPost Method for V1GlobalIpfixPost
+
+Get configured global ipfix exporters
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV1GlobalIpfixPostRequest
@@ -36453,13 +38532,13 @@ func (a *DefaultAPIService) V1GlobalIpfixPost(ctx context.Context) ApiV1GlobalIp
 }
 
 // Execute executes the request
-//  @return V1GlobalIpfixDeviceGet200Response
-func (a *DefaultAPIService) V1GlobalIpfixPostExecute(r ApiV1GlobalIpfixPostRequest) (*V1GlobalIpfixDeviceGet200Response, *http.Response, error) {
+//  @return V1GlobalIpfixPostResponse
+func (a *DefaultAPIService) V1GlobalIpfixPostExecute(r ApiV1GlobalIpfixPostRequest) (*V1GlobalIpfixPostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1GlobalIpfixDeviceGet200Response
+		localVarReturnValue  *V1GlobalIpfixPostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1GlobalIpfixPost")
@@ -36562,12 +38641,14 @@ func (r ApiV1GlobalIpfixSiteGetRequest) Authorization(authorization string) ApiV
 	return r
 }
 
-func (r ApiV1GlobalIpfixSiteGetRequest) Execute() (*V1GlobalIpfixDeviceGet200Response, *http.Response, error) {
+func (r ApiV1GlobalIpfixSiteGetRequest) Execute() (*V1GlobalIpfixSiteGetResponse, *http.Response, error) {
 	return r.ApiService.V1GlobalIpfixSiteGetExecute(r)
 }
 
 /*
 V1GlobalIpfixSiteGet Method for V1GlobalIpfixSiteGet
+
+Get configured global ipfix exporters for a site
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV1GlobalIpfixSiteGetRequest
@@ -36580,13 +38661,13 @@ func (a *DefaultAPIService) V1GlobalIpfixSiteGet(ctx context.Context) ApiV1Globa
 }
 
 // Execute executes the request
-//  @return V1GlobalIpfixDeviceGet200Response
-func (a *DefaultAPIService) V1GlobalIpfixSiteGetExecute(r ApiV1GlobalIpfixSiteGetRequest) (*V1GlobalIpfixDeviceGet200Response, *http.Response, error) {
+//  @return V1GlobalIpfixSiteGetResponse
+func (a *DefaultAPIService) V1GlobalIpfixSiteGetExecute(r ApiV1GlobalIpfixSiteGetRequest) (*V1GlobalIpfixSiteGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1GlobalIpfixDeviceGet200Response
+		localVarReturnValue  *V1GlobalIpfixSiteGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1GlobalIpfixSiteGet")
@@ -36684,12 +38765,14 @@ func (r ApiV1GlobalIpsecProfileGetRequest) Authorization(authorization string) A
 	return r
 }
 
-func (r ApiV1GlobalIpsecProfileGetRequest) Execute() (*V1GlobalIpsecProfileGet200Response, *http.Response, error) {
+func (r ApiV1GlobalIpsecProfileGetRequest) Execute() (*V1GlobalIpsecProfileGetResponse, *http.Response, error) {
 	return r.ApiService.V1GlobalIpsecProfileGetExecute(r)
 }
 
 /*
 V1GlobalIpsecProfileGet Method for V1GlobalIpsecProfileGet
+
+Get all the configured global IPsec Profiles for the current enterprise
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV1GlobalIpsecProfileGetRequest
@@ -36702,13 +38785,13 @@ func (a *DefaultAPIService) V1GlobalIpsecProfileGet(ctx context.Context) ApiV1Gl
 }
 
 // Execute executes the request
-//  @return V1GlobalIpsecProfileGet200Response
-func (a *DefaultAPIService) V1GlobalIpsecProfileGetExecute(r ApiV1GlobalIpsecProfileGetRequest) (*V1GlobalIpsecProfileGet200Response, *http.Response, error) {
+//  @return V1GlobalIpsecProfileGetResponse
+func (a *DefaultAPIService) V1GlobalIpsecProfileGetExecute(r ApiV1GlobalIpsecProfileGetRequest) (*V1GlobalIpsecProfileGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1GlobalIpsecProfileGet200Response
+		localVarReturnValue  *V1GlobalIpsecProfileGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1GlobalIpsecProfileGet")
@@ -36807,12 +38890,14 @@ func (r ApiV1GlobalIpsecProfileIdGetRequest) Authorization(authorization string)
 	return r
 }
 
-func (r ApiV1GlobalIpsecProfileIdGetRequest) Execute() (*V1GlobalIpsecProfileIdGet200Response, *http.Response, error) {
+func (r ApiV1GlobalIpsecProfileIdGetRequest) Execute() (*V1GlobalIpsecProfileIdGetResponse, *http.Response, error) {
 	return r.ApiService.V1GlobalIpsecProfileIdGetExecute(r)
 }
 
 /*
 V1GlobalIpsecProfileIdGet Method for V1GlobalIpsecProfileIdGet
+
+Get details of the configured global IPsec Profiles
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @param id 
@@ -36827,13 +38912,13 @@ func (a *DefaultAPIService) V1GlobalIpsecProfileIdGet(ctx context.Context, id in
 }
 
 // Execute executes the request
-//  @return V1GlobalIpsecProfileIdGet200Response
-func (a *DefaultAPIService) V1GlobalIpsecProfileIdGetExecute(r ApiV1GlobalIpsecProfileIdGetRequest) (*V1GlobalIpsecProfileIdGet200Response, *http.Response, error) {
+//  @return V1GlobalIpsecProfileIdGetResponse
+func (a *DefaultAPIService) V1GlobalIpsecProfileIdGetExecute(r ApiV1GlobalIpsecProfileIdGetRequest) (*V1GlobalIpsecProfileIdGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1GlobalIpsecProfileIdGet200Response
+		localVarReturnValue  *V1GlobalIpsecProfileIdGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1GlobalIpsecProfileIdGet")
@@ -36933,12 +39018,14 @@ func (r ApiV1GlobalIpsecProfileVpnProfileIdSiteToSiteGetRequest) Authorization(a
 	return r
 }
 
-func (r ApiV1GlobalIpsecProfileVpnProfileIdSiteToSiteGetRequest) Execute() (*V1GlobalIpsecProfileVpnProfileIdSiteToSiteGet200Response, *http.Response, error) {
+func (r ApiV1GlobalIpsecProfileVpnProfileIdSiteToSiteGetRequest) Execute() (*V1GlobalIpsecProfileVpnProfileIdSiteToSiteGetResponse, *http.Response, error) {
 	return r.ApiService.V1GlobalIpsecProfileVpnProfileIdSiteToSiteGetExecute(r)
 }
 
 /*
 V1GlobalIpsecProfileVpnProfileIdSiteToSiteGet Method for V1GlobalIpsecProfileVpnProfileIdSiteToSiteGet
+
+Get Site-to-site VPNs that are using the given global IPsec Profile
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @param vpnProfileId 
@@ -36953,13 +39040,13 @@ func (a *DefaultAPIService) V1GlobalIpsecProfileVpnProfileIdSiteToSiteGet(ctx co
 }
 
 // Execute executes the request
-//  @return V1GlobalIpsecProfileVpnProfileIdSiteToSiteGet200Response
-func (a *DefaultAPIService) V1GlobalIpsecProfileVpnProfileIdSiteToSiteGetExecute(r ApiV1GlobalIpsecProfileVpnProfileIdSiteToSiteGetRequest) (*V1GlobalIpsecProfileVpnProfileIdSiteToSiteGet200Response, *http.Response, error) {
+//  @return V1GlobalIpsecProfileVpnProfileIdSiteToSiteGetResponse
+func (a *DefaultAPIService) V1GlobalIpsecProfileVpnProfileIdSiteToSiteGetExecute(r ApiV1GlobalIpsecProfileVpnProfileIdSiteToSiteGetRequest) (*V1GlobalIpsecProfileVpnProfileIdSiteToSiteGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1GlobalIpsecProfileVpnProfileIdSiteToSiteGet200Response
+		localVarReturnValue  *V1GlobalIpsecProfileVpnProfileIdSiteToSiteGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1GlobalIpsecProfileVpnProfileIdSiteToSiteGet")
@@ -37058,12 +39145,14 @@ func (r ApiV1GlobalLanSegmentsGetRequest) Authorization(authorization string) Ap
 	return r
 }
 
-func (r ApiV1GlobalLanSegmentsGetRequest) Execute() (*V1GlobalLanSegmentsGet200Response, *http.Response, error) {
+func (r ApiV1GlobalLanSegmentsGetRequest) Execute() (*V1GlobalLanSegmentsGetResponse, *http.Response, error) {
 	return r.ApiService.V1GlobalLanSegmentsGetExecute(r)
 }
 
 /*
 V1GlobalLanSegmentsGet Method for V1GlobalLanSegmentsGet
+
+Get a list of lan-segments under the currently logged in enterprise
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV1GlobalLanSegmentsGetRequest
@@ -37076,13 +39165,13 @@ func (a *DefaultAPIService) V1GlobalLanSegmentsGet(ctx context.Context) ApiV1Glo
 }
 
 // Execute executes the request
-//  @return V1GlobalLanSegmentsGet200Response
-func (a *DefaultAPIService) V1GlobalLanSegmentsGetExecute(r ApiV1GlobalLanSegmentsGetRequest) (*V1GlobalLanSegmentsGet200Response, *http.Response, error) {
+//  @return V1GlobalLanSegmentsGetResponse
+func (a *DefaultAPIService) V1GlobalLanSegmentsGetExecute(r ApiV1GlobalLanSegmentsGetRequest) (*V1GlobalLanSegmentsGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1GlobalLanSegmentsGet200Response
+		localVarReturnValue  *V1GlobalLanSegmentsGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1GlobalLanSegmentsGet")
@@ -37181,12 +39270,14 @@ func (r ApiV1GlobalLanSegmentsIdDeleteRequest) Authorization(authorization strin
 	return r
 }
 
-func (r ApiV1GlobalLanSegmentsIdDeleteRequest) Execute() (*V1GlobalLanSegmentsPost200Response, *http.Response, error) {
+func (r ApiV1GlobalLanSegmentsIdDeleteRequest) Execute() (*V1GlobalLanSegmentsIdDeleteResponse, *http.Response, error) {
 	return r.ApiService.V1GlobalLanSegmentsIdDeleteExecute(r)
 }
 
 /*
 V1GlobalLanSegmentsIdDelete Method for V1GlobalLanSegmentsIdDelete
+
+Delete a lan-segment
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @param id 
@@ -37201,13 +39292,13 @@ func (a *DefaultAPIService) V1GlobalLanSegmentsIdDelete(ctx context.Context, id 
 }
 
 // Execute executes the request
-//  @return V1GlobalLanSegmentsPost200Response
-func (a *DefaultAPIService) V1GlobalLanSegmentsIdDeleteExecute(r ApiV1GlobalLanSegmentsIdDeleteRequest) (*V1GlobalLanSegmentsPost200Response, *http.Response, error) {
+//  @return V1GlobalLanSegmentsIdDeleteResponse
+func (a *DefaultAPIService) V1GlobalLanSegmentsIdDeleteExecute(r ApiV1GlobalLanSegmentsIdDeleteRequest) (*V1GlobalLanSegmentsIdDeleteResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodDelete
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1GlobalLanSegmentsPost200Response
+		localVarReturnValue  *V1GlobalLanSegmentsIdDeleteResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1GlobalLanSegmentsIdDelete")
@@ -37312,12 +39403,14 @@ func (r ApiV1GlobalLanSegmentsPostRequest) V1GlobalLanSegmentsPostRequest(v1Glob
 	return r
 }
 
-func (r ApiV1GlobalLanSegmentsPostRequest) Execute() (*V1GlobalLanSegmentsPost200Response, *http.Response, error) {
+func (r ApiV1GlobalLanSegmentsPostRequest) Execute() (*V1GlobalLanSegmentsPostResponse, *http.Response, error) {
 	return r.ApiService.V1GlobalLanSegmentsPostExecute(r)
 }
 
 /*
 V1GlobalLanSegmentsPost Method for V1GlobalLanSegmentsPost
+
+Create a new lan-segment scoped to the enterprise
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV1GlobalLanSegmentsPostRequest
@@ -37330,13 +39423,13 @@ func (a *DefaultAPIService) V1GlobalLanSegmentsPost(ctx context.Context) ApiV1Gl
 }
 
 // Execute executes the request
-//  @return V1GlobalLanSegmentsPost200Response
-func (a *DefaultAPIService) V1GlobalLanSegmentsPostExecute(r ApiV1GlobalLanSegmentsPostRequest) (*V1GlobalLanSegmentsPost200Response, *http.Response, error) {
+//  @return V1GlobalLanSegmentsPostResponse
+func (a *DefaultAPIService) V1GlobalLanSegmentsPostExecute(r ApiV1GlobalLanSegmentsPostRequest) (*V1GlobalLanSegmentsPostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1GlobalLanSegmentsPost200Response
+		localVarReturnValue  *V1GlobalLanSegmentsPostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1GlobalLanSegmentsPost")
@@ -37440,12 +39533,14 @@ func (r ApiV1GlobalLanSegmentsVrfIdDevicesGetRequest) Authorization(authorizatio
 	return r
 }
 
-func (r ApiV1GlobalLanSegmentsVrfIdDevicesGetRequest) Execute() (*V1GlobalLanSegmentsVrfIdDevicesGet200Response, *http.Response, error) {
+func (r ApiV1GlobalLanSegmentsVrfIdDevicesGetRequest) Execute() (*V1GlobalLanSegmentsVrfIdDevicesGetResponse, *http.Response, error) {
 	return r.ApiService.V1GlobalLanSegmentsVrfIdDevicesGetExecute(r)
 }
 
 /*
 V1GlobalLanSegmentsVrfIdDevicesGet Method for V1GlobalLanSegmentsVrfIdDevicesGet
+
+Get a list of lan-segment devices under the currently logged in enterprise
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @param vrfId 
@@ -37460,13 +39555,13 @@ func (a *DefaultAPIService) V1GlobalLanSegmentsVrfIdDevicesGet(ctx context.Conte
 }
 
 // Execute executes the request
-//  @return V1GlobalLanSegmentsVrfIdDevicesGet200Response
-func (a *DefaultAPIService) V1GlobalLanSegmentsVrfIdDevicesGetExecute(r ApiV1GlobalLanSegmentsVrfIdDevicesGetRequest) (*V1GlobalLanSegmentsVrfIdDevicesGet200Response, *http.Response, error) {
+//  @return V1GlobalLanSegmentsVrfIdDevicesGetResponse
+func (a *DefaultAPIService) V1GlobalLanSegmentsVrfIdDevicesGetExecute(r ApiV1GlobalLanSegmentsVrfIdDevicesGetRequest) (*V1GlobalLanSegmentsVrfIdDevicesGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1GlobalLanSegmentsVrfIdDevicesGet200Response
+		localVarReturnValue  *V1GlobalLanSegmentsVrfIdDevicesGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1GlobalLanSegmentsVrfIdDevicesGet")
@@ -37565,12 +39660,14 @@ func (r ApiV1GlobalPrefixSetsDeviceGetRequest) Authorization(authorization strin
 	return r
 }
 
-func (r ApiV1GlobalPrefixSetsDeviceGetRequest) Execute() (*V1GlobalPrefixSetsDeviceGet200Response, *http.Response, error) {
+func (r ApiV1GlobalPrefixSetsDeviceGetRequest) Execute() (*V1GlobalPrefixSetsDeviceGetResponse, *http.Response, error) {
 	return r.ApiService.V1GlobalPrefixSetsDeviceGetExecute(r)
 }
 
 /*
 V1GlobalPrefixSetsDeviceGet Method for V1GlobalPrefixSetsDeviceGet
+
+Get global prefix-set objects that failed to attach for a device
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV1GlobalPrefixSetsDeviceGetRequest
@@ -37583,13 +39680,13 @@ func (a *DefaultAPIService) V1GlobalPrefixSetsDeviceGet(ctx context.Context) Api
 }
 
 // Execute executes the request
-//  @return V1GlobalPrefixSetsDeviceGet200Response
-func (a *DefaultAPIService) V1GlobalPrefixSetsDeviceGetExecute(r ApiV1GlobalPrefixSetsDeviceGetRequest) (*V1GlobalPrefixSetsDeviceGet200Response, *http.Response, error) {
+//  @return V1GlobalPrefixSetsDeviceGetResponse
+func (a *DefaultAPIService) V1GlobalPrefixSetsDeviceGetExecute(r ApiV1GlobalPrefixSetsDeviceGetRequest) (*V1GlobalPrefixSetsDeviceGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1GlobalPrefixSetsDeviceGet200Response
+		localVarReturnValue  *V1GlobalPrefixSetsDeviceGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1GlobalPrefixSetsDeviceGet")
@@ -37679,7 +39776,7 @@ type ApiV1GlobalPrefixSetsPostRequest struct {
 	ctx context.Context
 	ApiService *DefaultAPIService
 	authorization *string
-	v1GlobalIpfixPostRequest *V1GlobalIpfixPostRequest
+	v1GlobalPrefixSetsPostRequest *V1GlobalPrefixSetsPostRequest
 }
 
 // Bearer token. Format: Bearer &lt;your_token_here&gt;
@@ -37688,17 +39785,19 @@ func (r ApiV1GlobalPrefixSetsPostRequest) Authorization(authorization string) Ap
 	return r
 }
 
-func (r ApiV1GlobalPrefixSetsPostRequest) V1GlobalIpfixPostRequest(v1GlobalIpfixPostRequest V1GlobalIpfixPostRequest) ApiV1GlobalPrefixSetsPostRequest {
-	r.v1GlobalIpfixPostRequest = &v1GlobalIpfixPostRequest
+func (r ApiV1GlobalPrefixSetsPostRequest) V1GlobalPrefixSetsPostRequest(v1GlobalPrefixSetsPostRequest V1GlobalPrefixSetsPostRequest) ApiV1GlobalPrefixSetsPostRequest {
+	r.v1GlobalPrefixSetsPostRequest = &v1GlobalPrefixSetsPostRequest
 	return r
 }
 
-func (r ApiV1GlobalPrefixSetsPostRequest) Execute() (*V1GlobalPrefixSetsDeviceGet200Response, *http.Response, error) {
+func (r ApiV1GlobalPrefixSetsPostRequest) Execute() (*V1GlobalPrefixSetsPostResponse, *http.Response, error) {
 	return r.ApiService.V1GlobalPrefixSetsPostExecute(r)
 }
 
 /*
 V1GlobalPrefixSetsPost Method for V1GlobalPrefixSetsPost
+
+Get configured global prefix-sets
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV1GlobalPrefixSetsPostRequest
@@ -37711,13 +39810,13 @@ func (a *DefaultAPIService) V1GlobalPrefixSetsPost(ctx context.Context) ApiV1Glo
 }
 
 // Execute executes the request
-//  @return V1GlobalPrefixSetsDeviceGet200Response
-func (a *DefaultAPIService) V1GlobalPrefixSetsPostExecute(r ApiV1GlobalPrefixSetsPostRequest) (*V1GlobalPrefixSetsDeviceGet200Response, *http.Response, error) {
+//  @return V1GlobalPrefixSetsPostResponse
+func (a *DefaultAPIService) V1GlobalPrefixSetsPostExecute(r ApiV1GlobalPrefixSetsPostRequest) (*V1GlobalPrefixSetsPostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1GlobalPrefixSetsDeviceGet200Response
+		localVarReturnValue  *V1GlobalPrefixSetsPostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1GlobalPrefixSetsPost")
@@ -37733,8 +39832,8 @@ func (a *DefaultAPIService) V1GlobalPrefixSetsPostExecute(r ApiV1GlobalPrefixSet
 	if r.authorization == nil {
 		return localVarReturnValue, nil, reportError("authorization is required and must be specified")
 	}
-	if r.v1GlobalIpfixPostRequest == nil {
-		return localVarReturnValue, nil, reportError("v1GlobalIpfixPostRequest is required and must be specified")
+	if r.v1GlobalPrefixSetsPostRequest == nil {
+		return localVarReturnValue, nil, reportError("v1GlobalPrefixSetsPostRequest is required and must be specified")
 	}
 
 	// to determine the Content-Type header
@@ -37756,7 +39855,7 @@ func (a *DefaultAPIService) V1GlobalPrefixSetsPostExecute(r ApiV1GlobalPrefixSet
 	}
 	parameterAddToHeaderOrQuery(localVarHeaderParams, "Authorization", r.authorization, "simple", "")
 	// body params
-	localVarPostBody = r.v1GlobalIpfixPostRequest
+	localVarPostBody = r.v1GlobalPrefixSetsPostRequest
 	if r.ctx != nil {
 		// API Key Authentication
 		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
@@ -37820,12 +39919,14 @@ func (r ApiV1GlobalPrefixSetsSiteGetRequest) Authorization(authorization string)
 	return r
 }
 
-func (r ApiV1GlobalPrefixSetsSiteGetRequest) Execute() (*V1GlobalPrefixSetsDeviceGet200Response, *http.Response, error) {
+func (r ApiV1GlobalPrefixSetsSiteGetRequest) Execute() (*V1GlobalPrefixSetsSiteGetResponse, *http.Response, error) {
 	return r.ApiService.V1GlobalPrefixSetsSiteGetExecute(r)
 }
 
 /*
 V1GlobalPrefixSetsSiteGet Method for V1GlobalPrefixSetsSiteGet
+
+Get configured global prefix-sets
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV1GlobalPrefixSetsSiteGetRequest
@@ -37838,13 +39939,13 @@ func (a *DefaultAPIService) V1GlobalPrefixSetsSiteGet(ctx context.Context) ApiV1
 }
 
 // Execute executes the request
-//  @return V1GlobalPrefixSetsDeviceGet200Response
-func (a *DefaultAPIService) V1GlobalPrefixSetsSiteGetExecute(r ApiV1GlobalPrefixSetsSiteGetRequest) (*V1GlobalPrefixSetsDeviceGet200Response, *http.Response, error) {
+//  @return V1GlobalPrefixSetsSiteGetResponse
+func (a *DefaultAPIService) V1GlobalPrefixSetsSiteGetExecute(r ApiV1GlobalPrefixSetsSiteGetRequest) (*V1GlobalPrefixSetsSiteGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1GlobalPrefixSetsDeviceGet200Response
+		localVarReturnValue  *V1GlobalPrefixSetsSiteGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1GlobalPrefixSetsSiteGet")
@@ -37942,12 +40043,14 @@ func (r ApiV1GlobalRoutingPoliciesDeviceGetRequest) Authorization(authorization 
 	return r
 }
 
-func (r ApiV1GlobalRoutingPoliciesDeviceGetRequest) Execute() (*V1GlobalRoutingPoliciesDeviceGet200Response, *http.Response, error) {
+func (r ApiV1GlobalRoutingPoliciesDeviceGetRequest) Execute() (*V1GlobalRoutingPoliciesDeviceGetResponse, *http.Response, error) {
 	return r.ApiService.V1GlobalRoutingPoliciesDeviceGetExecute(r)
 }
 
 /*
 V1GlobalRoutingPoliciesDeviceGet Method for V1GlobalRoutingPoliciesDeviceGet
+
+Get global routing-policy objects that failed to attach for a device
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV1GlobalRoutingPoliciesDeviceGetRequest
@@ -37960,13 +40063,13 @@ func (a *DefaultAPIService) V1GlobalRoutingPoliciesDeviceGet(ctx context.Context
 }
 
 // Execute executes the request
-//  @return V1GlobalRoutingPoliciesDeviceGet200Response
-func (a *DefaultAPIService) V1GlobalRoutingPoliciesDeviceGetExecute(r ApiV1GlobalRoutingPoliciesDeviceGetRequest) (*V1GlobalRoutingPoliciesDeviceGet200Response, *http.Response, error) {
+//  @return V1GlobalRoutingPoliciesDeviceGetResponse
+func (a *DefaultAPIService) V1GlobalRoutingPoliciesDeviceGetExecute(r ApiV1GlobalRoutingPoliciesDeviceGetRequest) (*V1GlobalRoutingPoliciesDeviceGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1GlobalRoutingPoliciesDeviceGet200Response
+		localVarReturnValue  *V1GlobalRoutingPoliciesDeviceGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1GlobalRoutingPoliciesDeviceGet")
@@ -38056,7 +40159,7 @@ type ApiV1GlobalRoutingPoliciesPostRequest struct {
 	ctx context.Context
 	ApiService *DefaultAPIService
 	authorization *string
-	v1GlobalIpfixPostRequest *V1GlobalIpfixPostRequest
+	v1GlobalRoutingPoliciesPostRequest *V1GlobalRoutingPoliciesPostRequest
 }
 
 // Bearer token. Format: Bearer &lt;your_token_here&gt;
@@ -38065,17 +40168,19 @@ func (r ApiV1GlobalRoutingPoliciesPostRequest) Authorization(authorization strin
 	return r
 }
 
-func (r ApiV1GlobalRoutingPoliciesPostRequest) V1GlobalIpfixPostRequest(v1GlobalIpfixPostRequest V1GlobalIpfixPostRequest) ApiV1GlobalRoutingPoliciesPostRequest {
-	r.v1GlobalIpfixPostRequest = &v1GlobalIpfixPostRequest
+func (r ApiV1GlobalRoutingPoliciesPostRequest) V1GlobalRoutingPoliciesPostRequest(v1GlobalRoutingPoliciesPostRequest V1GlobalRoutingPoliciesPostRequest) ApiV1GlobalRoutingPoliciesPostRequest {
+	r.v1GlobalRoutingPoliciesPostRequest = &v1GlobalRoutingPoliciesPostRequest
 	return r
 }
 
-func (r ApiV1GlobalRoutingPoliciesPostRequest) Execute() (*V1GlobalRoutingPoliciesDeviceGet200Response, *http.Response, error) {
+func (r ApiV1GlobalRoutingPoliciesPostRequest) Execute() (*V1GlobalRoutingPoliciesPostResponse, *http.Response, error) {
 	return r.ApiService.V1GlobalRoutingPoliciesPostExecute(r)
 }
 
 /*
 V1GlobalRoutingPoliciesPost Method for V1GlobalRoutingPoliciesPost
+
+Get configured global routing-policies
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV1GlobalRoutingPoliciesPostRequest
@@ -38088,13 +40193,13 @@ func (a *DefaultAPIService) V1GlobalRoutingPoliciesPost(ctx context.Context) Api
 }
 
 // Execute executes the request
-//  @return V1GlobalRoutingPoliciesDeviceGet200Response
-func (a *DefaultAPIService) V1GlobalRoutingPoliciesPostExecute(r ApiV1GlobalRoutingPoliciesPostRequest) (*V1GlobalRoutingPoliciesDeviceGet200Response, *http.Response, error) {
+//  @return V1GlobalRoutingPoliciesPostResponse
+func (a *DefaultAPIService) V1GlobalRoutingPoliciesPostExecute(r ApiV1GlobalRoutingPoliciesPostRequest) (*V1GlobalRoutingPoliciesPostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1GlobalRoutingPoliciesDeviceGet200Response
+		localVarReturnValue  *V1GlobalRoutingPoliciesPostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1GlobalRoutingPoliciesPost")
@@ -38110,8 +40215,8 @@ func (a *DefaultAPIService) V1GlobalRoutingPoliciesPostExecute(r ApiV1GlobalRout
 	if r.authorization == nil {
 		return localVarReturnValue, nil, reportError("authorization is required and must be specified")
 	}
-	if r.v1GlobalIpfixPostRequest == nil {
-		return localVarReturnValue, nil, reportError("v1GlobalIpfixPostRequest is required and must be specified")
+	if r.v1GlobalRoutingPoliciesPostRequest == nil {
+		return localVarReturnValue, nil, reportError("v1GlobalRoutingPoliciesPostRequest is required and must be specified")
 	}
 
 	// to determine the Content-Type header
@@ -38133,7 +40238,7 @@ func (a *DefaultAPIService) V1GlobalRoutingPoliciesPostExecute(r ApiV1GlobalRout
 	}
 	parameterAddToHeaderOrQuery(localVarHeaderParams, "Authorization", r.authorization, "simple", "")
 	// body params
-	localVarPostBody = r.v1GlobalIpfixPostRequest
+	localVarPostBody = r.v1GlobalRoutingPoliciesPostRequest
 	if r.ctx != nil {
 		// API Key Authentication
 		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
@@ -38197,12 +40302,14 @@ func (r ApiV1GlobalRoutingPoliciesSiteGetRequest) Authorization(authorization st
 	return r
 }
 
-func (r ApiV1GlobalRoutingPoliciesSiteGetRequest) Execute() (*V1GlobalRoutingPoliciesDeviceGet200Response, *http.Response, error) {
+func (r ApiV1GlobalRoutingPoliciesSiteGetRequest) Execute() (*V1GlobalRoutingPoliciesSiteGetResponse, *http.Response, error) {
 	return r.ApiService.V1GlobalRoutingPoliciesSiteGetExecute(r)
 }
 
 /*
 V1GlobalRoutingPoliciesSiteGet Method for V1GlobalRoutingPoliciesSiteGet
+
+Get configured global routing-policies
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV1GlobalRoutingPoliciesSiteGetRequest
@@ -38215,13 +40322,13 @@ func (a *DefaultAPIService) V1GlobalRoutingPoliciesSiteGet(ctx context.Context) 
 }
 
 // Execute executes the request
-//  @return V1GlobalRoutingPoliciesDeviceGet200Response
-func (a *DefaultAPIService) V1GlobalRoutingPoliciesSiteGetExecute(r ApiV1GlobalRoutingPoliciesSiteGetRequest) (*V1GlobalRoutingPoliciesDeviceGet200Response, *http.Response, error) {
+//  @return V1GlobalRoutingPoliciesSiteGetResponse
+func (a *DefaultAPIService) V1GlobalRoutingPoliciesSiteGetExecute(r ApiV1GlobalRoutingPoliciesSiteGetRequest) (*V1GlobalRoutingPoliciesSiteGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1GlobalRoutingPoliciesDeviceGet200Response
+		localVarReturnValue  *V1GlobalRoutingPoliciesSiteGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1GlobalRoutingPoliciesSiteGet")
@@ -38319,12 +40426,14 @@ func (r ApiV1GlobalSiteListsGetRequest) Authorization(authorization string) ApiV
 	return r
 }
 
-func (r ApiV1GlobalSiteListsGetRequest) Execute() (*V1GlobalSiteListsGet200Response, *http.Response, error) {
+func (r ApiV1GlobalSiteListsGetRequest) Execute() (*V1GlobalSiteListsGetResponse, *http.Response, error) {
 	return r.ApiService.V1GlobalSiteListsGetExecute(r)
 }
 
 /*
 V1GlobalSiteListsGet Method for V1GlobalSiteListsGet
+
+Get a list of site lists under the currently logged in enterprise
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV1GlobalSiteListsGetRequest
@@ -38337,13 +40446,13 @@ func (a *DefaultAPIService) V1GlobalSiteListsGet(ctx context.Context) ApiV1Globa
 }
 
 // Execute executes the request
-//  @return V1GlobalSiteListsGet200Response
-func (a *DefaultAPIService) V1GlobalSiteListsGetExecute(r ApiV1GlobalSiteListsGetRequest) (*V1GlobalSiteListsGet200Response, *http.Response, error) {
+//  @return V1GlobalSiteListsGetResponse
+func (a *DefaultAPIService) V1GlobalSiteListsGetExecute(r ApiV1GlobalSiteListsGetRequest) (*V1GlobalSiteListsGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1GlobalSiteListsGet200Response
+		localVarReturnValue  *V1GlobalSiteListsGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1GlobalSiteListsGet")
@@ -38442,12 +40551,14 @@ func (r ApiV1GlobalSiteListsIdDeleteRequest) Authorization(authorization string)
 	return r
 }
 
-func (r ApiV1GlobalSiteListsIdDeleteRequest) Execute() (*V1GlobalLanSegmentsPost200Response, *http.Response, error) {
+func (r ApiV1GlobalSiteListsIdDeleteRequest) Execute() (*V1GlobalSiteListsIdDeleteResponse, *http.Response, error) {
 	return r.ApiService.V1GlobalSiteListsIdDeleteExecute(r)
 }
 
 /*
 V1GlobalSiteListsIdDelete Method for V1GlobalSiteListsIdDelete
+
+Delete a site list
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @param id 
@@ -38462,13 +40573,13 @@ func (a *DefaultAPIService) V1GlobalSiteListsIdDelete(ctx context.Context, id in
 }
 
 // Execute executes the request
-//  @return V1GlobalLanSegmentsPost200Response
-func (a *DefaultAPIService) V1GlobalSiteListsIdDeleteExecute(r ApiV1GlobalSiteListsIdDeleteRequest) (*V1GlobalLanSegmentsPost200Response, *http.Response, error) {
+//  @return V1GlobalSiteListsIdDeleteResponse
+func (a *DefaultAPIService) V1GlobalSiteListsIdDeleteExecute(r ApiV1GlobalSiteListsIdDeleteRequest) (*V1GlobalSiteListsIdDeleteResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodDelete
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1GlobalLanSegmentsPost200Response
+		localVarReturnValue  *V1GlobalSiteListsIdDeleteResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1GlobalSiteListsIdDelete")
@@ -38568,12 +40679,14 @@ func (r ApiV1GlobalSiteListsIdGetRequest) Authorization(authorization string) Ap
 	return r
 }
 
-func (r ApiV1GlobalSiteListsIdGetRequest) Execute() (*V1GlobalSiteListsIdGet200Response, *http.Response, error) {
+func (r ApiV1GlobalSiteListsIdGetRequest) Execute() (*V1GlobalSiteListsIdGetResponse, *http.Response, error) {
 	return r.ApiService.V1GlobalSiteListsIdGetExecute(r)
 }
 
 /*
 V1GlobalSiteListsIdGet Method for V1GlobalSiteListsIdGet
+
+Get a details of a site list
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @param id 
@@ -38588,13 +40701,13 @@ func (a *DefaultAPIService) V1GlobalSiteListsIdGet(ctx context.Context, id int64
 }
 
 // Execute executes the request
-//  @return V1GlobalSiteListsIdGet200Response
-func (a *DefaultAPIService) V1GlobalSiteListsIdGetExecute(r ApiV1GlobalSiteListsIdGetRequest) (*V1GlobalSiteListsIdGet200Response, *http.Response, error) {
+//  @return V1GlobalSiteListsIdGetResponse
+func (a *DefaultAPIService) V1GlobalSiteListsIdGetExecute(r ApiV1GlobalSiteListsIdGetRequest) (*V1GlobalSiteListsIdGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1GlobalSiteListsIdGet200Response
+		localVarReturnValue  *V1GlobalSiteListsIdGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1GlobalSiteListsIdGet")
@@ -38686,7 +40799,7 @@ type ApiV1GlobalSiteListsIdPutRequest struct {
 	ApiService *DefaultAPIService
 	authorization *string
 	id int64
-	v1GlobalSiteListsIdGet200Response *V1GlobalSiteListsIdGet200Response
+	v1GlobalSiteListsIdPutRequest *V1GlobalSiteListsIdPutRequest
 }
 
 // Bearer token. Format: Bearer &lt;your_token_here&gt;
@@ -38695,17 +40808,19 @@ func (r ApiV1GlobalSiteListsIdPutRequest) Authorization(authorization string) Ap
 	return r
 }
 
-func (r ApiV1GlobalSiteListsIdPutRequest) V1GlobalSiteListsIdGet200Response(v1GlobalSiteListsIdGet200Response V1GlobalSiteListsIdGet200Response) ApiV1GlobalSiteListsIdPutRequest {
-	r.v1GlobalSiteListsIdGet200Response = &v1GlobalSiteListsIdGet200Response
+func (r ApiV1GlobalSiteListsIdPutRequest) V1GlobalSiteListsIdPutRequest(v1GlobalSiteListsIdPutRequest V1GlobalSiteListsIdPutRequest) ApiV1GlobalSiteListsIdPutRequest {
+	r.v1GlobalSiteListsIdPutRequest = &v1GlobalSiteListsIdPutRequest
 	return r
 }
 
-func (r ApiV1GlobalSiteListsIdPutRequest) Execute() (*V1GlobalLanSegmentsPost200Response, *http.Response, error) {
+func (r ApiV1GlobalSiteListsIdPutRequest) Execute() (*V1GlobalSiteListsIdPutResponse, *http.Response, error) {
 	return r.ApiService.V1GlobalSiteListsIdPutExecute(r)
 }
 
 /*
 V1GlobalSiteListsIdPut Method for V1GlobalSiteListsIdPut
+
+Update a new site list scoped to the enterprise
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @param id 
@@ -38720,13 +40835,13 @@ func (a *DefaultAPIService) V1GlobalSiteListsIdPut(ctx context.Context, id int64
 }
 
 // Execute executes the request
-//  @return V1GlobalLanSegmentsPost200Response
-func (a *DefaultAPIService) V1GlobalSiteListsIdPutExecute(r ApiV1GlobalSiteListsIdPutRequest) (*V1GlobalLanSegmentsPost200Response, *http.Response, error) {
+//  @return V1GlobalSiteListsIdPutResponse
+func (a *DefaultAPIService) V1GlobalSiteListsIdPutExecute(r ApiV1GlobalSiteListsIdPutRequest) (*V1GlobalSiteListsIdPutResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPut
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1GlobalLanSegmentsPost200Response
+		localVarReturnValue  *V1GlobalSiteListsIdPutResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1GlobalSiteListsIdPut")
@@ -38743,8 +40858,8 @@ func (a *DefaultAPIService) V1GlobalSiteListsIdPutExecute(r ApiV1GlobalSiteLists
 	if r.authorization == nil {
 		return localVarReturnValue, nil, reportError("authorization is required and must be specified")
 	}
-	if r.v1GlobalSiteListsIdGet200Response == nil {
-		return localVarReturnValue, nil, reportError("v1GlobalSiteListsIdGet200Response is required and must be specified")
+	if r.v1GlobalSiteListsIdPutRequest == nil {
+		return localVarReturnValue, nil, reportError("v1GlobalSiteListsIdPutRequest is required and must be specified")
 	}
 
 	// to determine the Content-Type header
@@ -38766,7 +40881,7 @@ func (a *DefaultAPIService) V1GlobalSiteListsIdPutExecute(r ApiV1GlobalSiteLists
 	}
 	parameterAddToHeaderOrQuery(localVarHeaderParams, "Authorization", r.authorization, "simple", "")
 	// body params
-	localVarPostBody = r.v1GlobalSiteListsIdGet200Response
+	localVarPostBody = r.v1GlobalSiteListsIdPutRequest
 	if r.ctx != nil {
 		// API Key Authentication
 		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
@@ -38831,12 +40946,14 @@ func (r ApiV1GlobalSiteListsIdSitesGetRequest) Authorization(authorization strin
 	return r
 }
 
-func (r ApiV1GlobalSiteListsIdSitesGetRequest) Execute() (*V1GlobalSiteListsIdSitesGet200Response, *http.Response, error) {
+func (r ApiV1GlobalSiteListsIdSitesGetRequest) Execute() (*V1GlobalSiteListsIdSitesGetResponse, *http.Response, error) {
 	return r.ApiService.V1GlobalSiteListsIdSitesGetExecute(r)
 }
 
 /*
 V1GlobalSiteListsIdSitesGet Method for V1GlobalSiteListsIdSitesGet
+
+Get a details of a site list sites
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @param id 
@@ -38851,13 +40968,13 @@ func (a *DefaultAPIService) V1GlobalSiteListsIdSitesGet(ctx context.Context, id 
 }
 
 // Execute executes the request
-//  @return V1GlobalSiteListsIdSitesGet200Response
-func (a *DefaultAPIService) V1GlobalSiteListsIdSitesGetExecute(r ApiV1GlobalSiteListsIdSitesGetRequest) (*V1GlobalSiteListsIdSitesGet200Response, *http.Response, error) {
+//  @return V1GlobalSiteListsIdSitesGetResponse
+func (a *DefaultAPIService) V1GlobalSiteListsIdSitesGetExecute(r ApiV1GlobalSiteListsIdSitesGetRequest) (*V1GlobalSiteListsIdSitesGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1GlobalSiteListsIdSitesGet200Response
+		localVarReturnValue  *V1GlobalSiteListsIdSitesGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1GlobalSiteListsIdSitesGet")
@@ -38962,12 +41079,14 @@ func (r ApiV1GlobalSiteListsPostRequest) V1GlobalSiteListsPostRequest(v1GlobalSi
 	return r
 }
 
-func (r ApiV1GlobalSiteListsPostRequest) Execute() (*V1GlobalLanSegmentsPost200Response, *http.Response, error) {
+func (r ApiV1GlobalSiteListsPostRequest) Execute() (*V1GlobalSiteListsPostResponse, *http.Response, error) {
 	return r.ApiService.V1GlobalSiteListsPostExecute(r)
 }
 
 /*
 V1GlobalSiteListsPost Method for V1GlobalSiteListsPost
+
+Create a new site list scoped to the enterprise
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV1GlobalSiteListsPostRequest
@@ -38980,13 +41099,13 @@ func (a *DefaultAPIService) V1GlobalSiteListsPost(ctx context.Context) ApiV1Glob
 }
 
 // Execute executes the request
-//  @return V1GlobalLanSegmentsPost200Response
-func (a *DefaultAPIService) V1GlobalSiteListsPostExecute(r ApiV1GlobalSiteListsPostRequest) (*V1GlobalLanSegmentsPost200Response, *http.Response, error) {
+//  @return V1GlobalSiteListsPostResponse
+func (a *DefaultAPIService) V1GlobalSiteListsPostExecute(r ApiV1GlobalSiteListsPostRequest) (*V1GlobalSiteListsPostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1GlobalLanSegmentsPost200Response
+		localVarReturnValue  *V1GlobalSiteListsPostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1GlobalSiteListsPost")
@@ -39089,12 +41208,14 @@ func (r ApiV1GlobalSiteStatusGetRequest) Authorization(authorization string) Api
 	return r
 }
 
-func (r ApiV1GlobalSiteStatusGetRequest) Execute() (*V1GlobalAttachedEdgesPost200Response, *http.Response, error) {
+func (r ApiV1GlobalSiteStatusGetRequest) Execute() (*V1GlobalSiteStatusGetResponse, *http.Response, error) {
 	return r.ApiService.V1GlobalSiteStatusGetExecute(r)
 }
 
 /*
 V1GlobalSiteStatusGet Method for V1GlobalSiteStatusGet
+
+Get status on global objects attached to a site
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV1GlobalSiteStatusGetRequest
@@ -39107,13 +41228,13 @@ func (a *DefaultAPIService) V1GlobalSiteStatusGet(ctx context.Context) ApiV1Glob
 }
 
 // Execute executes the request
-//  @return V1GlobalAttachedEdgesPost200Response
-func (a *DefaultAPIService) V1GlobalSiteStatusGetExecute(r ApiV1GlobalSiteStatusGetRequest) (*V1GlobalAttachedEdgesPost200Response, *http.Response, error) {
+//  @return V1GlobalSiteStatusGetResponse
+func (a *DefaultAPIService) V1GlobalSiteStatusGetExecute(r ApiV1GlobalSiteStatusGetRequest) (*V1GlobalSiteStatusGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1GlobalAttachedEdgesPost200Response
+		localVarReturnValue  *V1GlobalSiteStatusGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1GlobalSiteStatusGet")
@@ -39211,12 +41332,14 @@ func (r ApiV1GlobalSnmpsDeviceGetRequest) Authorization(authorization string) Ap
 	return r
 }
 
-func (r ApiV1GlobalSnmpsDeviceGetRequest) Execute() (*V1GlobalSnmpsDeviceGet200Response, *http.Response, error) {
+func (r ApiV1GlobalSnmpsDeviceGetRequest) Execute() (*V1GlobalSnmpsDeviceGetResponse, *http.Response, error) {
 	return r.ApiService.V1GlobalSnmpsDeviceGetExecute(r)
 }
 
 /*
 V1GlobalSnmpsDeviceGet Method for V1GlobalSnmpsDeviceGet
+
+Get global snmp objects that failed to attach for a device
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV1GlobalSnmpsDeviceGetRequest
@@ -39229,13 +41352,13 @@ func (a *DefaultAPIService) V1GlobalSnmpsDeviceGet(ctx context.Context) ApiV1Glo
 }
 
 // Execute executes the request
-//  @return V1GlobalSnmpsDeviceGet200Response
-func (a *DefaultAPIService) V1GlobalSnmpsDeviceGetExecute(r ApiV1GlobalSnmpsDeviceGetRequest) (*V1GlobalSnmpsDeviceGet200Response, *http.Response, error) {
+//  @return V1GlobalSnmpsDeviceGetResponse
+func (a *DefaultAPIService) V1GlobalSnmpsDeviceGetExecute(r ApiV1GlobalSnmpsDeviceGetRequest) (*V1GlobalSnmpsDeviceGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1GlobalSnmpsDeviceGet200Response
+		localVarReturnValue  *V1GlobalSnmpsDeviceGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1GlobalSnmpsDeviceGet")
@@ -39325,7 +41448,7 @@ type ApiV1GlobalSnmpsPostRequest struct {
 	ctx context.Context
 	ApiService *DefaultAPIService
 	authorization *string
-	v1GlobalIpfixPostRequest *V1GlobalIpfixPostRequest
+	v1GlobalSnmpsPostRequest *V1GlobalSnmpsPostRequest
 }
 
 // Bearer token. Format: Bearer &lt;your_token_here&gt;
@@ -39334,17 +41457,19 @@ func (r ApiV1GlobalSnmpsPostRequest) Authorization(authorization string) ApiV1Gl
 	return r
 }
 
-func (r ApiV1GlobalSnmpsPostRequest) V1GlobalIpfixPostRequest(v1GlobalIpfixPostRequest V1GlobalIpfixPostRequest) ApiV1GlobalSnmpsPostRequest {
-	r.v1GlobalIpfixPostRequest = &v1GlobalIpfixPostRequest
+func (r ApiV1GlobalSnmpsPostRequest) V1GlobalSnmpsPostRequest(v1GlobalSnmpsPostRequest V1GlobalSnmpsPostRequest) ApiV1GlobalSnmpsPostRequest {
+	r.v1GlobalSnmpsPostRequest = &v1GlobalSnmpsPostRequest
 	return r
 }
 
-func (r ApiV1GlobalSnmpsPostRequest) Execute() (*V1GlobalSnmpsDeviceGet200Response, *http.Response, error) {
+func (r ApiV1GlobalSnmpsPostRequest) Execute() (*V1GlobalSnmpsPostResponse, *http.Response, error) {
 	return r.ApiService.V1GlobalSnmpsPostExecute(r)
 }
 
 /*
 V1GlobalSnmpsPost Method for V1GlobalSnmpsPost
+
+Get configured global snmps
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV1GlobalSnmpsPostRequest
@@ -39357,13 +41482,13 @@ func (a *DefaultAPIService) V1GlobalSnmpsPost(ctx context.Context) ApiV1GlobalSn
 }
 
 // Execute executes the request
-//  @return V1GlobalSnmpsDeviceGet200Response
-func (a *DefaultAPIService) V1GlobalSnmpsPostExecute(r ApiV1GlobalSnmpsPostRequest) (*V1GlobalSnmpsDeviceGet200Response, *http.Response, error) {
+//  @return V1GlobalSnmpsPostResponse
+func (a *DefaultAPIService) V1GlobalSnmpsPostExecute(r ApiV1GlobalSnmpsPostRequest) (*V1GlobalSnmpsPostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1GlobalSnmpsDeviceGet200Response
+		localVarReturnValue  *V1GlobalSnmpsPostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1GlobalSnmpsPost")
@@ -39379,8 +41504,8 @@ func (a *DefaultAPIService) V1GlobalSnmpsPostExecute(r ApiV1GlobalSnmpsPostReque
 	if r.authorization == nil {
 		return localVarReturnValue, nil, reportError("authorization is required and must be specified")
 	}
-	if r.v1GlobalIpfixPostRequest == nil {
-		return localVarReturnValue, nil, reportError("v1GlobalIpfixPostRequest is required and must be specified")
+	if r.v1GlobalSnmpsPostRequest == nil {
+		return localVarReturnValue, nil, reportError("v1GlobalSnmpsPostRequest is required and must be specified")
 	}
 
 	// to determine the Content-Type header
@@ -39402,7 +41527,7 @@ func (a *DefaultAPIService) V1GlobalSnmpsPostExecute(r ApiV1GlobalSnmpsPostReque
 	}
 	parameterAddToHeaderOrQuery(localVarHeaderParams, "Authorization", r.authorization, "simple", "")
 	// body params
-	localVarPostBody = r.v1GlobalIpfixPostRequest
+	localVarPostBody = r.v1GlobalSnmpsPostRequest
 	if r.ctx != nil {
 		// API Key Authentication
 		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
@@ -39466,12 +41591,14 @@ func (r ApiV1GlobalSnmpsSiteGetRequest) Authorization(authorization string) ApiV
 	return r
 }
 
-func (r ApiV1GlobalSnmpsSiteGetRequest) Execute() (*V1GlobalSnmpsDeviceGet200Response, *http.Response, error) {
+func (r ApiV1GlobalSnmpsSiteGetRequest) Execute() (*V1GlobalSnmpsSiteGetResponse, *http.Response, error) {
 	return r.ApiService.V1GlobalSnmpsSiteGetExecute(r)
 }
 
 /*
 V1GlobalSnmpsSiteGet Method for V1GlobalSnmpsSiteGet
+
+Get configured global snmps
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV1GlobalSnmpsSiteGetRequest
@@ -39484,13 +41611,13 @@ func (a *DefaultAPIService) V1GlobalSnmpsSiteGet(ctx context.Context) ApiV1Globa
 }
 
 // Execute executes the request
-//  @return V1GlobalSnmpsDeviceGet200Response
-func (a *DefaultAPIService) V1GlobalSnmpsSiteGetExecute(r ApiV1GlobalSnmpsSiteGetRequest) (*V1GlobalSnmpsDeviceGet200Response, *http.Response, error) {
+//  @return V1GlobalSnmpsSiteGetResponse
+func (a *DefaultAPIService) V1GlobalSnmpsSiteGetExecute(r ApiV1GlobalSnmpsSiteGetRequest) (*V1GlobalSnmpsSiteGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1GlobalSnmpsDeviceGet200Response
+		localVarReturnValue  *V1GlobalSnmpsSiteGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1GlobalSnmpsSiteGet")
@@ -39594,12 +41721,14 @@ func (r ApiV1GlobalSummaryPostRequest) V1GlobalSummaryPostRequest(v1GlobalSummar
 	return r
 }
 
-func (r ApiV1GlobalSummaryPostRequest) Execute() (*V1GlobalSummaryPost200Response, *http.Response, error) {
+func (r ApiV1GlobalSummaryPostRequest) Execute() (*V1GlobalSummaryPostResponse, *http.Response, error) {
 	return r.ApiService.V1GlobalSummaryPostExecute(r)
 }
 
 /*
 V1GlobalSummaryPost Method for V1GlobalSummaryPost
+
+Get summary on global objects
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV1GlobalSummaryPostRequest
@@ -39612,13 +41741,13 @@ func (a *DefaultAPIService) V1GlobalSummaryPost(ctx context.Context) ApiV1Global
 }
 
 // Execute executes the request
-//  @return V1GlobalSummaryPost200Response
-func (a *DefaultAPIService) V1GlobalSummaryPostExecute(r ApiV1GlobalSummaryPostRequest) (*V1GlobalSummaryPost200Response, *http.Response, error) {
+//  @return V1GlobalSummaryPostResponse
+func (a *DefaultAPIService) V1GlobalSummaryPostExecute(r ApiV1GlobalSummaryPostRequest) (*V1GlobalSummaryPostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1GlobalSummaryPost200Response
+		localVarReturnValue  *V1GlobalSummaryPostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1GlobalSummaryPost")
@@ -39733,6 +41862,8 @@ func (r ApiV1GlobalSyncPostRequest) Execute() (map[string]interface{}, *http.Res
 
 /*
 V1GlobalSyncPost Method for V1GlobalSyncPost
+
+Tries synching device with the global objects
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV1GlobalSyncPostRequest
@@ -39854,12 +41985,14 @@ func (r ApiV1GlobalSyslogsDeviceGetRequest) Authorization(authorization string) 
 	return r
 }
 
-func (r ApiV1GlobalSyslogsDeviceGetRequest) Execute() (*V1GlobalSyslogsDeviceGet200Response, *http.Response, error) {
+func (r ApiV1GlobalSyslogsDeviceGetRequest) Execute() (*V1GlobalSyslogsDeviceGetResponse, *http.Response, error) {
 	return r.ApiService.V1GlobalSyslogsDeviceGetExecute(r)
 }
 
 /*
 V1GlobalSyslogsDeviceGet Method for V1GlobalSyslogsDeviceGet
+
+Get global syslog objects that failed to attach for a device
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV1GlobalSyslogsDeviceGetRequest
@@ -39872,13 +42005,13 @@ func (a *DefaultAPIService) V1GlobalSyslogsDeviceGet(ctx context.Context) ApiV1G
 }
 
 // Execute executes the request
-//  @return V1GlobalSyslogsDeviceGet200Response
-func (a *DefaultAPIService) V1GlobalSyslogsDeviceGetExecute(r ApiV1GlobalSyslogsDeviceGetRequest) (*V1GlobalSyslogsDeviceGet200Response, *http.Response, error) {
+//  @return V1GlobalSyslogsDeviceGetResponse
+func (a *DefaultAPIService) V1GlobalSyslogsDeviceGetExecute(r ApiV1GlobalSyslogsDeviceGetRequest) (*V1GlobalSyslogsDeviceGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1GlobalSyslogsDeviceGet200Response
+		localVarReturnValue  *V1GlobalSyslogsDeviceGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1GlobalSyslogsDeviceGet")
@@ -39968,7 +42101,7 @@ type ApiV1GlobalSyslogsPostRequest struct {
 	ctx context.Context
 	ApiService *DefaultAPIService
 	authorization *string
-	v1GlobalIpfixPostRequest *V1GlobalIpfixPostRequest
+	v1GlobalSyslogsPostRequest *V1GlobalSyslogsPostRequest
 }
 
 // Bearer token. Format: Bearer &lt;your_token_here&gt;
@@ -39977,17 +42110,19 @@ func (r ApiV1GlobalSyslogsPostRequest) Authorization(authorization string) ApiV1
 	return r
 }
 
-func (r ApiV1GlobalSyslogsPostRequest) V1GlobalIpfixPostRequest(v1GlobalIpfixPostRequest V1GlobalIpfixPostRequest) ApiV1GlobalSyslogsPostRequest {
-	r.v1GlobalIpfixPostRequest = &v1GlobalIpfixPostRequest
+func (r ApiV1GlobalSyslogsPostRequest) V1GlobalSyslogsPostRequest(v1GlobalSyslogsPostRequest V1GlobalSyslogsPostRequest) ApiV1GlobalSyslogsPostRequest {
+	r.v1GlobalSyslogsPostRequest = &v1GlobalSyslogsPostRequest
 	return r
 }
 
-func (r ApiV1GlobalSyslogsPostRequest) Execute() (*V1GlobalSyslogsDeviceGet200Response, *http.Response, error) {
+func (r ApiV1GlobalSyslogsPostRequest) Execute() (*V1GlobalSyslogsPostResponse, *http.Response, error) {
 	return r.ApiService.V1GlobalSyslogsPostExecute(r)
 }
 
 /*
 V1GlobalSyslogsPost Method for V1GlobalSyslogsPost
+
+Get configured global syslog collectors
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV1GlobalSyslogsPostRequest
@@ -40000,13 +42135,13 @@ func (a *DefaultAPIService) V1GlobalSyslogsPost(ctx context.Context) ApiV1Global
 }
 
 // Execute executes the request
-//  @return V1GlobalSyslogsDeviceGet200Response
-func (a *DefaultAPIService) V1GlobalSyslogsPostExecute(r ApiV1GlobalSyslogsPostRequest) (*V1GlobalSyslogsDeviceGet200Response, *http.Response, error) {
+//  @return V1GlobalSyslogsPostResponse
+func (a *DefaultAPIService) V1GlobalSyslogsPostExecute(r ApiV1GlobalSyslogsPostRequest) (*V1GlobalSyslogsPostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1GlobalSyslogsDeviceGet200Response
+		localVarReturnValue  *V1GlobalSyslogsPostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1GlobalSyslogsPost")
@@ -40022,8 +42157,8 @@ func (a *DefaultAPIService) V1GlobalSyslogsPostExecute(r ApiV1GlobalSyslogsPostR
 	if r.authorization == nil {
 		return localVarReturnValue, nil, reportError("authorization is required and must be specified")
 	}
-	if r.v1GlobalIpfixPostRequest == nil {
-		return localVarReturnValue, nil, reportError("v1GlobalIpfixPostRequest is required and must be specified")
+	if r.v1GlobalSyslogsPostRequest == nil {
+		return localVarReturnValue, nil, reportError("v1GlobalSyslogsPostRequest is required and must be specified")
 	}
 
 	// to determine the Content-Type header
@@ -40045,7 +42180,7 @@ func (a *DefaultAPIService) V1GlobalSyslogsPostExecute(r ApiV1GlobalSyslogsPostR
 	}
 	parameterAddToHeaderOrQuery(localVarHeaderParams, "Authorization", r.authorization, "simple", "")
 	// body params
-	localVarPostBody = r.v1GlobalIpfixPostRequest
+	localVarPostBody = r.v1GlobalSyslogsPostRequest
 	if r.ctx != nil {
 		// API Key Authentication
 		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
@@ -40109,12 +42244,14 @@ func (r ApiV1GlobalSyslogsSiteGetRequest) Authorization(authorization string) Ap
 	return r
 }
 
-func (r ApiV1GlobalSyslogsSiteGetRequest) Execute() (*V1GlobalSyslogsDeviceGet200Response, *http.Response, error) {
+func (r ApiV1GlobalSyslogsSiteGetRequest) Execute() (*V1GlobalSyslogsSiteGetResponse, *http.Response, error) {
 	return r.ApiService.V1GlobalSyslogsSiteGetExecute(r)
 }
 
 /*
 V1GlobalSyslogsSiteGet Method for V1GlobalSyslogsSiteGet
+
+Get configured global syslog collectors
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV1GlobalSyslogsSiteGetRequest
@@ -40127,13 +42264,13 @@ func (a *DefaultAPIService) V1GlobalSyslogsSiteGet(ctx context.Context) ApiV1Glo
 }
 
 // Execute executes the request
-//  @return V1GlobalSyslogsDeviceGet200Response
-func (a *DefaultAPIService) V1GlobalSyslogsSiteGetExecute(r ApiV1GlobalSyslogsSiteGetRequest) (*V1GlobalSyslogsDeviceGet200Response, *http.Response, error) {
+//  @return V1GlobalSyslogsSiteGetResponse
+func (a *DefaultAPIService) V1GlobalSyslogsSiteGetExecute(r ApiV1GlobalSyslogsSiteGetRequest) (*V1GlobalSyslogsSiteGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1GlobalSyslogsDeviceGet200Response
+		localVarReturnValue  *V1GlobalSyslogsSiteGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1GlobalSyslogsSiteGet")
@@ -40231,12 +42368,14 @@ func (r ApiV1GlobalTrafficPoliciesDeviceGetRequest) Authorization(authorization 
 	return r
 }
 
-func (r ApiV1GlobalTrafficPoliciesDeviceGetRequest) Execute() (*V1GlobalTrafficPoliciesDeviceGet200Response, *http.Response, error) {
+func (r ApiV1GlobalTrafficPoliciesDeviceGetRequest) Execute() (*V1GlobalTrafficPoliciesDeviceGetResponse, *http.Response, error) {
 	return r.ApiService.V1GlobalTrafficPoliciesDeviceGetExecute(r)
 }
 
 /*
 V1GlobalTrafficPoliciesDeviceGet Method for V1GlobalTrafficPoliciesDeviceGet
+
+Get global traffic-policy objects that failed to attach for a device
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV1GlobalTrafficPoliciesDeviceGetRequest
@@ -40249,13 +42388,13 @@ func (a *DefaultAPIService) V1GlobalTrafficPoliciesDeviceGet(ctx context.Context
 }
 
 // Execute executes the request
-//  @return V1GlobalTrafficPoliciesDeviceGet200Response
-func (a *DefaultAPIService) V1GlobalTrafficPoliciesDeviceGetExecute(r ApiV1GlobalTrafficPoliciesDeviceGetRequest) (*V1GlobalTrafficPoliciesDeviceGet200Response, *http.Response, error) {
+//  @return V1GlobalTrafficPoliciesDeviceGetResponse
+func (a *DefaultAPIService) V1GlobalTrafficPoliciesDeviceGetExecute(r ApiV1GlobalTrafficPoliciesDeviceGetRequest) (*V1GlobalTrafficPoliciesDeviceGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1GlobalTrafficPoliciesDeviceGet200Response
+		localVarReturnValue  *V1GlobalTrafficPoliciesDeviceGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1GlobalTrafficPoliciesDeviceGet")
@@ -40345,7 +42484,7 @@ type ApiV1GlobalTrafficPoliciesPostRequest struct {
 	ctx context.Context
 	ApiService *DefaultAPIService
 	authorization *string
-	v1GlobalIpfixPostRequest *V1GlobalIpfixPostRequest
+	v1GlobalTrafficPoliciesPostRequest *V1GlobalTrafficPoliciesPostRequest
 }
 
 // Bearer token. Format: Bearer &lt;your_token_here&gt;
@@ -40354,17 +42493,19 @@ func (r ApiV1GlobalTrafficPoliciesPostRequest) Authorization(authorization strin
 	return r
 }
 
-func (r ApiV1GlobalTrafficPoliciesPostRequest) V1GlobalIpfixPostRequest(v1GlobalIpfixPostRequest V1GlobalIpfixPostRequest) ApiV1GlobalTrafficPoliciesPostRequest {
-	r.v1GlobalIpfixPostRequest = &v1GlobalIpfixPostRequest
+func (r ApiV1GlobalTrafficPoliciesPostRequest) V1GlobalTrafficPoliciesPostRequest(v1GlobalTrafficPoliciesPostRequest V1GlobalTrafficPoliciesPostRequest) ApiV1GlobalTrafficPoliciesPostRequest {
+	r.v1GlobalTrafficPoliciesPostRequest = &v1GlobalTrafficPoliciesPostRequest
 	return r
 }
 
-func (r ApiV1GlobalTrafficPoliciesPostRequest) Execute() (*V1GlobalTrafficPoliciesDeviceGet200Response, *http.Response, error) {
+func (r ApiV1GlobalTrafficPoliciesPostRequest) Execute() (*V1GlobalTrafficPoliciesPostResponse, *http.Response, error) {
 	return r.ApiService.V1GlobalTrafficPoliciesPostExecute(r)
 }
 
 /*
 V1GlobalTrafficPoliciesPost Method for V1GlobalTrafficPoliciesPost
+
+Get configured global traffic-policies
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV1GlobalTrafficPoliciesPostRequest
@@ -40377,13 +42518,13 @@ func (a *DefaultAPIService) V1GlobalTrafficPoliciesPost(ctx context.Context) Api
 }
 
 // Execute executes the request
-//  @return V1GlobalTrafficPoliciesDeviceGet200Response
-func (a *DefaultAPIService) V1GlobalTrafficPoliciesPostExecute(r ApiV1GlobalTrafficPoliciesPostRequest) (*V1GlobalTrafficPoliciesDeviceGet200Response, *http.Response, error) {
+//  @return V1GlobalTrafficPoliciesPostResponse
+func (a *DefaultAPIService) V1GlobalTrafficPoliciesPostExecute(r ApiV1GlobalTrafficPoliciesPostRequest) (*V1GlobalTrafficPoliciesPostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1GlobalTrafficPoliciesDeviceGet200Response
+		localVarReturnValue  *V1GlobalTrafficPoliciesPostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1GlobalTrafficPoliciesPost")
@@ -40399,8 +42540,8 @@ func (a *DefaultAPIService) V1GlobalTrafficPoliciesPostExecute(r ApiV1GlobalTraf
 	if r.authorization == nil {
 		return localVarReturnValue, nil, reportError("authorization is required and must be specified")
 	}
-	if r.v1GlobalIpfixPostRequest == nil {
-		return localVarReturnValue, nil, reportError("v1GlobalIpfixPostRequest is required and must be specified")
+	if r.v1GlobalTrafficPoliciesPostRequest == nil {
+		return localVarReturnValue, nil, reportError("v1GlobalTrafficPoliciesPostRequest is required and must be specified")
 	}
 
 	// to determine the Content-Type header
@@ -40422,7 +42563,7 @@ func (a *DefaultAPIService) V1GlobalTrafficPoliciesPostExecute(r ApiV1GlobalTraf
 	}
 	parameterAddToHeaderOrQuery(localVarHeaderParams, "Authorization", r.authorization, "simple", "")
 	// body params
-	localVarPostBody = r.v1GlobalIpfixPostRequest
+	localVarPostBody = r.v1GlobalTrafficPoliciesPostRequest
 	if r.ctx != nil {
 		// API Key Authentication
 		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
@@ -40486,12 +42627,14 @@ func (r ApiV1GlobalTrafficPoliciesSiteGetRequest) Authorization(authorization st
 	return r
 }
 
-func (r ApiV1GlobalTrafficPoliciesSiteGetRequest) Execute() (*V1GlobalTrafficPoliciesDeviceGet200Response, *http.Response, error) {
+func (r ApiV1GlobalTrafficPoliciesSiteGetRequest) Execute() (*V1GlobalTrafficPoliciesSiteGetResponse, *http.Response, error) {
 	return r.ApiService.V1GlobalTrafficPoliciesSiteGetExecute(r)
 }
 
 /*
 V1GlobalTrafficPoliciesSiteGet Method for V1GlobalTrafficPoliciesSiteGet
+
+Get configured global traffic-policies
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV1GlobalTrafficPoliciesSiteGetRequest
@@ -40504,13 +42647,13 @@ func (a *DefaultAPIService) V1GlobalTrafficPoliciesSiteGet(ctx context.Context) 
 }
 
 // Execute executes the request
-//  @return V1GlobalTrafficPoliciesDeviceGet200Response
-func (a *DefaultAPIService) V1GlobalTrafficPoliciesSiteGetExecute(r ApiV1GlobalTrafficPoliciesSiteGetRequest) (*V1GlobalTrafficPoliciesDeviceGet200Response, *http.Response, error) {
+//  @return V1GlobalTrafficPoliciesSiteGetResponse
+func (a *DefaultAPIService) V1GlobalTrafficPoliciesSiteGetExecute(r ApiV1GlobalTrafficPoliciesSiteGetRequest) (*V1GlobalTrafficPoliciesSiteGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1GlobalTrafficPoliciesDeviceGet200Response
+		localVarReturnValue  *V1GlobalTrafficPoliciesSiteGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1GlobalTrafficPoliciesSiteGet")
@@ -40608,12 +42751,14 @@ func (r ApiV1GroupsEnterprisesGetRequest) Authorization(authorization string) Ap
 	return r
 }
 
-func (r ApiV1GroupsEnterprisesGetRequest) Execute() (*V1GroupsGet200Response, *http.Response, error) {
+func (r ApiV1GroupsEnterprisesGetRequest) Execute() (*V1GroupsEnterprisesGetResponse, *http.Response, error) {
 	return r.ApiService.V1GroupsEnterprisesGetExecute(r)
 }
 
 /*
 V1GroupsEnterprisesGet Method for V1GroupsEnterprisesGet
+
+Get all enterprise-level groups.
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV1GroupsEnterprisesGetRequest
@@ -40626,13 +42771,13 @@ func (a *DefaultAPIService) V1GroupsEnterprisesGet(ctx context.Context) ApiV1Gro
 }
 
 // Execute executes the request
-//  @return V1GroupsGet200Response
-func (a *DefaultAPIService) V1GroupsEnterprisesGetExecute(r ApiV1GroupsEnterprisesGetRequest) (*V1GroupsGet200Response, *http.Response, error) {
+//  @return V1GroupsEnterprisesGetResponse
+func (a *DefaultAPIService) V1GroupsEnterprisesGetExecute(r ApiV1GroupsEnterprisesGetRequest) (*V1GroupsEnterprisesGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1GroupsGet200Response
+		localVarReturnValue  *V1GroupsEnterprisesGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1GroupsEnterprisesGet")
@@ -40730,12 +42875,14 @@ func (r ApiV1GroupsGetRequest) Authorization(authorization string) ApiV1GroupsGe
 	return r
 }
 
-func (r ApiV1GroupsGetRequest) Execute() (*V1GroupsGet200Response, *http.Response, error) {
+func (r ApiV1GroupsGetRequest) Execute() (*V1GroupsGetResponse, *http.Response, error) {
 	return r.ApiService.V1GroupsGetExecute(r)
 }
 
 /*
 V1GroupsGet Method for V1GroupsGet
+
+Get all groups in the enterprise.
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV1GroupsGetRequest
@@ -40748,13 +42895,13 @@ func (a *DefaultAPIService) V1GroupsGet(ctx context.Context) ApiV1GroupsGetReque
 }
 
 // Execute executes the request
-//  @return V1GroupsGet200Response
-func (a *DefaultAPIService) V1GroupsGetExecute(r ApiV1GroupsGetRequest) (*V1GroupsGet200Response, *http.Response, error) {
+//  @return V1GroupsGetResponse
+func (a *DefaultAPIService) V1GroupsGetExecute(r ApiV1GroupsGetRequest) (*V1GroupsGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1GroupsGet200Response
+		localVarReturnValue  *V1GroupsGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1GroupsGet")
@@ -40853,12 +43000,14 @@ func (r ApiV1GroupsIdDeleteRequest) Authorization(authorization string) ApiV1Gro
 	return r
 }
 
-func (r ApiV1GroupsIdDeleteRequest) Execute() (*V1GroupsIdMembersPost204Response, *http.Response, error) {
+func (r ApiV1GroupsIdDeleteRequest) Execute() (*V1GroupsIdDeleteResponse, *http.Response, error) {
 	return r.ApiService.V1GroupsIdDeleteExecute(r)
 }
 
 /*
 V1GroupsIdDelete Method for V1GroupsIdDelete
+
+Delete a group and remove all member associations and enterprise relationships. Replace with a different group if specified.
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @param id 
@@ -40873,13 +43022,13 @@ func (a *DefaultAPIService) V1GroupsIdDelete(ctx context.Context, id string) Api
 }
 
 // Execute executes the request
-//  @return V1GroupsIdMembersPost204Response
-func (a *DefaultAPIService) V1GroupsIdDeleteExecute(r ApiV1GroupsIdDeleteRequest) (*V1GroupsIdMembersPost204Response, *http.Response, error) {
+//  @return V1GroupsIdDeleteResponse
+func (a *DefaultAPIService) V1GroupsIdDeleteExecute(r ApiV1GroupsIdDeleteRequest) (*V1GroupsIdDeleteResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodDelete
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1GroupsIdMembersPost204Response
+		localVarReturnValue  *V1GroupsIdDeleteResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1GroupsIdDelete")
@@ -40980,12 +43129,14 @@ func (r ApiV1GroupsIdEnterprisesEnterpriseIdDeleteRequest) Authorization(authori
 	return r
 }
 
-func (r ApiV1GroupsIdEnterprisesEnterpriseIdDeleteRequest) Execute() (*V1GroupsIdMembersPost204Response, *http.Response, error) {
+func (r ApiV1GroupsIdEnterprisesEnterpriseIdDeleteRequest) Execute() (*V1GroupsIdEnterprisesEnterpriseIdDeleteResponse, *http.Response, error) {
 	return r.ApiService.V1GroupsIdEnterprisesEnterpriseIdDeleteExecute(r)
 }
 
 /*
 V1GroupsIdEnterprisesEnterpriseIdDelete Method for V1GroupsIdEnterprisesEnterpriseIdDelete
+
+Remove group's association with a specific enterprise, revoking cross-enterprise access.
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @param enterpriseId 
@@ -41002,13 +43153,13 @@ func (a *DefaultAPIService) V1GroupsIdEnterprisesEnterpriseIdDelete(ctx context.
 }
 
 // Execute executes the request
-//  @return V1GroupsIdMembersPost204Response
-func (a *DefaultAPIService) V1GroupsIdEnterprisesEnterpriseIdDeleteExecute(r ApiV1GroupsIdEnterprisesEnterpriseIdDeleteRequest) (*V1GroupsIdMembersPost204Response, *http.Response, error) {
+//  @return V1GroupsIdEnterprisesEnterpriseIdDeleteResponse
+func (a *DefaultAPIService) V1GroupsIdEnterprisesEnterpriseIdDeleteExecute(r ApiV1GroupsIdEnterprisesEnterpriseIdDeleteRequest) (*V1GroupsIdEnterprisesEnterpriseIdDeleteResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodDelete
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1GroupsIdMembersPost204Response
+		localVarReturnValue  *V1GroupsIdEnterprisesEnterpriseIdDeleteResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1GroupsIdEnterprisesEnterpriseIdDelete")
@@ -41121,6 +43272,8 @@ func (r ApiV1GroupsIdEnterprisesPostRequest) Execute() (map[string]interface{}, 
 
 /*
 V1GroupsIdEnterprisesPost Method for V1GroupsIdEnterprisesPost
+
+Associate group with additional enterprises to enable cross-enterprise access and management.
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @param id 
@@ -41246,12 +43399,14 @@ func (r ApiV1GroupsIdGetRequest) Authorization(authorization string) ApiV1Groups
 	return r
 }
 
-func (r ApiV1GroupsIdGetRequest) Execute() (*V1GroupsIdGet200Response, *http.Response, error) {
+func (r ApiV1GroupsIdGetRequest) Execute() (*V1GroupsIdGetResponse, *http.Response, error) {
 	return r.ApiService.V1GroupsIdGetExecute(r)
 }
 
 /*
 V1GroupsIdGet Method for V1GroupsIdGet
+
+Get group information including permissions and members.
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @param id 
@@ -41266,13 +43421,13 @@ func (a *DefaultAPIService) V1GroupsIdGet(ctx context.Context, id string) ApiV1G
 }
 
 // Execute executes the request
-//  @return V1GroupsIdGet200Response
-func (a *DefaultAPIService) V1GroupsIdGetExecute(r ApiV1GroupsIdGetRequest) (*V1GroupsIdGet200Response, *http.Response, error) {
+//  @return V1GroupsIdGetResponse
+func (a *DefaultAPIService) V1GroupsIdGetExecute(r ApiV1GroupsIdGetRequest) (*V1GroupsIdGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1GroupsIdGet200Response
+		localVarReturnValue  *V1GroupsIdGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1GroupsIdGet")
@@ -41378,12 +43533,14 @@ func (r ApiV1GroupsIdMembersDeletePostRequest) V1GroupsIdMembersDeletePostReques
 	return r
 }
 
-func (r ApiV1GroupsIdMembersDeletePostRequest) Execute() (*V1GroupsIdMembersPost204Response, *http.Response, error) {
+func (r ApiV1GroupsIdMembersDeletePostRequest) Execute() (*V1GroupsIdMembersDeletePostResponse, *http.Response, error) {
 	return r.ApiService.V1GroupsIdMembersDeletePostExecute(r)
 }
 
 /*
 V1GroupsIdMembersDeletePost Method for V1GroupsIdMembersDeletePost
+
+Remove multiple users from a group by their member IDs.
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @param id 
@@ -41398,13 +43555,13 @@ func (a *DefaultAPIService) V1GroupsIdMembersDeletePost(ctx context.Context, id 
 }
 
 // Execute executes the request
-//  @return V1GroupsIdMembersPost204Response
-func (a *DefaultAPIService) V1GroupsIdMembersDeletePostExecute(r ApiV1GroupsIdMembersDeletePostRequest) (*V1GroupsIdMembersPost204Response, *http.Response, error) {
+//  @return V1GroupsIdMembersDeletePostResponse
+func (a *DefaultAPIService) V1GroupsIdMembersDeletePostExecute(r ApiV1GroupsIdMembersDeletePostRequest) (*V1GroupsIdMembersDeletePostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1GroupsIdMembersPost204Response
+		localVarReturnValue  *V1GroupsIdMembersDeletePostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1GroupsIdMembersDeletePost")
@@ -41509,12 +43666,14 @@ func (r ApiV1GroupsIdMembersGetRequest) Authorization(authorization string) ApiV
 	return r
 }
 
-func (r ApiV1GroupsIdMembersGetRequest) Execute() (*V1GroupsIdMembersGet200Response, *http.Response, error) {
+func (r ApiV1GroupsIdMembersGetRequest) Execute() (*V1GroupsIdMembersGetResponse, *http.Response, error) {
 	return r.ApiService.V1GroupsIdMembersGetExecute(r)
 }
 
 /*
 V1GroupsIdMembersGet Method for V1GroupsIdMembersGet
+
+Get all members of a specific group.
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @param id 
@@ -41529,13 +43688,13 @@ func (a *DefaultAPIService) V1GroupsIdMembersGet(ctx context.Context, id string)
 }
 
 // Execute executes the request
-//  @return V1GroupsIdMembersGet200Response
-func (a *DefaultAPIService) V1GroupsIdMembersGetExecute(r ApiV1GroupsIdMembersGetRequest) (*V1GroupsIdMembersGet200Response, *http.Response, error) {
+//  @return V1GroupsIdMembersGetResponse
+func (a *DefaultAPIService) V1GroupsIdMembersGetExecute(r ApiV1GroupsIdMembersGetRequest) (*V1GroupsIdMembersGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1GroupsIdMembersGet200Response
+		localVarReturnValue  *V1GroupsIdMembersGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1GroupsIdMembersGet")
@@ -41636,12 +43795,14 @@ func (r ApiV1GroupsIdMembersMemberIdDeleteRequest) Authorization(authorization s
 	return r
 }
 
-func (r ApiV1GroupsIdMembersMemberIdDeleteRequest) Execute() (*V1GroupsIdMembersPost204Response, *http.Response, error) {
+func (r ApiV1GroupsIdMembersMemberIdDeleteRequest) Execute() (*V1GroupsIdMembersMemberIdDeleteResponse, *http.Response, error) {
 	return r.ApiService.V1GroupsIdMembersMemberIdDeleteExecute(r)
 }
 
 /*
 V1GroupsIdMembersMemberIdDelete Method for V1GroupsIdMembersMemberIdDelete
+
+Remove a specific user from a group by member ID.
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @param id 
@@ -41658,13 +43819,13 @@ func (a *DefaultAPIService) V1GroupsIdMembersMemberIdDelete(ctx context.Context,
 }
 
 // Execute executes the request
-//  @return V1GroupsIdMembersPost204Response
-func (a *DefaultAPIService) V1GroupsIdMembersMemberIdDeleteExecute(r ApiV1GroupsIdMembersMemberIdDeleteRequest) (*V1GroupsIdMembersPost204Response, *http.Response, error) {
+//  @return V1GroupsIdMembersMemberIdDeleteResponse
+func (a *DefaultAPIService) V1GroupsIdMembersMemberIdDeleteExecute(r ApiV1GroupsIdMembersMemberIdDeleteRequest) (*V1GroupsIdMembersMemberIdDeleteResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodDelete
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1GroupsIdMembersPost204Response
+		localVarReturnValue  *V1GroupsIdMembersMemberIdDeleteResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1GroupsIdMembersMemberIdDelete")
@@ -41771,12 +43932,14 @@ func (r ApiV1GroupsIdMembersPostRequest) V1GroupsIdMembersPostRequest(v1GroupsId
 	return r
 }
 
-func (r ApiV1GroupsIdMembersPostRequest) Execute() (*V1GroupsIdMembersPost204Response, *http.Response, error) {
+func (r ApiV1GroupsIdMembersPostRequest) Execute() (*V1GroupsIdMembersPostResponse, *http.Response, error) {
 	return r.ApiService.V1GroupsIdMembersPostExecute(r)
 }
 
 /*
 V1GroupsIdMembersPost Method for V1GroupsIdMembersPost
+
+Add multiple users to a group by their global IDs.
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @param id 
@@ -41791,13 +43954,13 @@ func (a *DefaultAPIService) V1GroupsIdMembersPost(ctx context.Context, id string
 }
 
 // Execute executes the request
-//  @return V1GroupsIdMembersPost204Response
-func (a *DefaultAPIService) V1GroupsIdMembersPostExecute(r ApiV1GroupsIdMembersPostRequest) (*V1GroupsIdMembersPost204Response, *http.Response, error) {
+//  @return V1GroupsIdMembersPostResponse
+func (a *DefaultAPIService) V1GroupsIdMembersPostExecute(r ApiV1GroupsIdMembersPostRequest) (*V1GroupsIdMembersPostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1GroupsIdMembersPost204Response
+		localVarReturnValue  *V1GroupsIdMembersPostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1GroupsIdMembersPost")
@@ -41908,12 +44071,14 @@ func (r ApiV1GroupsIdPatchRequest) V1GroupsIdPatchRequest(v1GroupsIdPatchRequest
 	return r
 }
 
-func (r ApiV1GroupsIdPatchRequest) Execute() (*V1GroupsIdMembersPost204Response, *http.Response, error) {
+func (r ApiV1GroupsIdPatchRequest) Execute() (*V1GroupsIdPatchResponse, *http.Response, error) {
 	return r.ApiService.V1GroupsIdPatchExecute(r)
 }
 
 /*
 V1GroupsIdPatch Method for V1GroupsIdPatch
+
+Update group information.
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @param id 
@@ -41928,13 +44093,13 @@ func (a *DefaultAPIService) V1GroupsIdPatch(ctx context.Context, id string) ApiV
 }
 
 // Execute executes the request
-//  @return V1GroupsIdMembersPost204Response
-func (a *DefaultAPIService) V1GroupsIdPatchExecute(r ApiV1GroupsIdPatchRequest) (*V1GroupsIdMembersPost204Response, *http.Response, error) {
+//  @return V1GroupsIdPatchResponse
+func (a *DefaultAPIService) V1GroupsIdPatchExecute(r ApiV1GroupsIdPatchRequest) (*V1GroupsIdPatchResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPatch
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1GroupsIdMembersPost204Response
+		localVarReturnValue  *V1GroupsIdPatchResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1GroupsIdPatch")
@@ -42050,6 +44215,8 @@ func (r ApiV1GroupsPutRequest) Execute() (map[string]interface{}, *http.Response
 
 /*
 V1GroupsPut Method for V1GroupsPut
+
+Create a new group with and set permissions. Set group's enterprise management capabilities (msp only).
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV1GroupsPutRequest
@@ -42171,12 +44338,14 @@ func (r ApiV1GroupsRootGetRequest) Authorization(authorization string) ApiV1Grou
 	return r
 }
 
-func (r ApiV1GroupsRootGetRequest) Execute() (*V1GroupsGet200Response, *http.Response, error) {
+func (r ApiV1GroupsRootGetRequest) Execute() (*V1GroupsRootGetResponse, *http.Response, error) {
 	return r.ApiService.V1GroupsRootGetExecute(r)
 }
 
 /*
 V1GroupsRootGet Method for V1GroupsRootGet
+
+Get all root-level groups.
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV1GroupsRootGetRequest
@@ -42189,13 +44358,13 @@ func (a *DefaultAPIService) V1GroupsRootGet(ctx context.Context) ApiV1GroupsRoot
 }
 
 // Execute executes the request
-//  @return V1GroupsGet200Response
-func (a *DefaultAPIService) V1GroupsRootGetExecute(r ApiV1GroupsRootGetRequest) (*V1GroupsGet200Response, *http.Response, error) {
+//  @return V1GroupsRootGetResponse
+func (a *DefaultAPIService) V1GroupsRootGetExecute(r ApiV1GroupsRootGetRequest) (*V1GroupsRootGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1GroupsGet200Response
+		localVarReturnValue  *V1GroupsRootGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1GroupsRootGet")
@@ -42306,6 +44475,8 @@ func (r ApiV1IdPasswordRecoverPatchRequest) Execute() (map[string]interface{}, *
 
 /*
 V1IdPasswordRecoverPatch Method for V1IdPasswordRecoverPatch
+
+Initiate password recovery for specific user (Graphiant cloud only).
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @param id 
@@ -42443,6 +44614,8 @@ func (r ApiV1InvitationEmailPostRequest) Execute() (map[string]interface{}, *htt
 /*
 V1InvitationEmailPost Method for V1InvitationEmailPost
 
+Send invitation emails for B2B data exchange service connections. For non-Graphiant enterprises, sends invite to all admin users in the proxy tenant desiganted by your msp. For Graphiant, sends to specified admin email.
+
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV1InvitationEmailPostRequest
 */
@@ -42563,12 +44736,14 @@ func (r ApiV1LanSegmentsGetRequest) Authorization(authorization string) ApiV1Lan
 	return r
 }
 
-func (r ApiV1LanSegmentsGetRequest) Execute() (*V1LanSegmentsGet200Response, *http.Response, error) {
+func (r ApiV1LanSegmentsGetRequest) Execute() (*V1LanSegmentsGetResponse, *http.Response, error) {
 	return r.ApiService.V1LanSegmentsGetExecute(r)
 }
 
 /*
 V1LanSegmentsGet Method for V1LanSegmentsGet
+
+Get LAN Segments for the current enterprise
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV1LanSegmentsGetRequest
@@ -42581,13 +44756,13 @@ func (a *DefaultAPIService) V1LanSegmentsGet(ctx context.Context) ApiV1LanSegmen
 }
 
 // Execute executes the request
-//  @return V1LanSegmentsGet200Response
-func (a *DefaultAPIService) V1LanSegmentsGetExecute(r ApiV1LanSegmentsGetRequest) (*V1LanSegmentsGet200Response, *http.Response, error) {
+//  @return V1LanSegmentsGetResponse
+func (a *DefaultAPIService) V1LanSegmentsGetExecute(r ApiV1LanSegmentsGetRequest) (*V1LanSegmentsGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1LanSegmentsGet200Response
+		localVarReturnValue  *V1LanSegmentsGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1LanSegmentsGet")
@@ -42686,12 +44861,14 @@ func (r ApiV1LldpInterfaceIdNeighborsGetRequest) Authorization(authorization str
 	return r
 }
 
-func (r ApiV1LldpInterfaceIdNeighborsGetRequest) Execute() (*V1LldpInterfaceIdNeighborsGet200Response, *http.Response, error) {
+func (r ApiV1LldpInterfaceIdNeighborsGetRequest) Execute() (*V1LldpInterfaceIdNeighborsGetResponse, *http.Response, error) {
 	return r.ApiService.V1LldpInterfaceIdNeighborsGetExecute(r)
 }
 
 /*
 V1LldpInterfaceIdNeighborsGet Method for V1LldpInterfaceIdNeighborsGet
+
+Get the LLDP neighbors for an interface and optionally for a specific vendor
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @param interfaceId 
@@ -42706,13 +44883,13 @@ func (a *DefaultAPIService) V1LldpInterfaceIdNeighborsGet(ctx context.Context, i
 }
 
 // Execute executes the request
-//  @return V1LldpInterfaceIdNeighborsGet200Response
-func (a *DefaultAPIService) V1LldpInterfaceIdNeighborsGetExecute(r ApiV1LldpInterfaceIdNeighborsGetRequest) (*V1LldpInterfaceIdNeighborsGet200Response, *http.Response, error) {
+//  @return V1LldpInterfaceIdNeighborsGetResponse
+func (a *DefaultAPIService) V1LldpInterfaceIdNeighborsGetExecute(r ApiV1LldpInterfaceIdNeighborsGetRequest) (*V1LldpInterfaceIdNeighborsGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1LldpInterfaceIdNeighborsGet200Response
+		localVarReturnValue  *V1LldpInterfaceIdNeighborsGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1LldpInterfaceIdNeighborsGet")
@@ -42812,12 +44989,14 @@ func (r ApiV1LldpInterfaceIdSummaryGetRequest) Authorization(authorization strin
 	return r
 }
 
-func (r ApiV1LldpInterfaceIdSummaryGetRequest) Execute() (*V1LldpInterfaceIdSummaryGet200Response, *http.Response, error) {
+func (r ApiV1LldpInterfaceIdSummaryGetRequest) Execute() (*V1LldpInterfaceIdSummaryGetResponse, *http.Response, error) {
 	return r.ApiService.V1LldpInterfaceIdSummaryGetExecute(r)
 }
 
 /*
 V1LldpInterfaceIdSummaryGet Method for V1LldpInterfaceIdSummaryGet
+
+Get the summary of LLDP neighbors for an interface
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @param interfaceId 
@@ -42832,13 +45011,13 @@ func (a *DefaultAPIService) V1LldpInterfaceIdSummaryGet(ctx context.Context, int
 }
 
 // Execute executes the request
-//  @return V1LldpInterfaceIdSummaryGet200Response
-func (a *DefaultAPIService) V1LldpInterfaceIdSummaryGetExecute(r ApiV1LldpInterfaceIdSummaryGetRequest) (*V1LldpInterfaceIdSummaryGet200Response, *http.Response, error) {
+//  @return V1LldpInterfaceIdSummaryGetResponse
+func (a *DefaultAPIService) V1LldpInterfaceIdSummaryGetExecute(r ApiV1LldpInterfaceIdSummaryGetRequest) (*V1LldpInterfaceIdSummaryGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1LldpInterfaceIdSummaryGet200Response
+		localVarReturnValue  *V1LldpInterfaceIdSummaryGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1LldpInterfaceIdSummaryGet")
@@ -42938,12 +45117,14 @@ func (r ApiV1LldpInterfaceIdVendorsGetRequest) Authorization(authorization strin
 	return r
 }
 
-func (r ApiV1LldpInterfaceIdVendorsGetRequest) Execute() (*V1LldpInterfaceIdVendorsGet200Response, *http.Response, error) {
+func (r ApiV1LldpInterfaceIdVendorsGetRequest) Execute() (*V1LldpInterfaceIdVendorsGetResponse, *http.Response, error) {
 	return r.ApiService.V1LldpInterfaceIdVendorsGetExecute(r)
 }
 
 /*
 V1LldpInterfaceIdVendorsGet Method for V1LldpInterfaceIdVendorsGet
+
+Get the list LLDP vendors for an interface
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @param interfaceId 
@@ -42958,13 +45139,13 @@ func (a *DefaultAPIService) V1LldpInterfaceIdVendorsGet(ctx context.Context, int
 }
 
 // Execute executes the request
-//  @return V1LldpInterfaceIdVendorsGet200Response
-func (a *DefaultAPIService) V1LldpInterfaceIdVendorsGetExecute(r ApiV1LldpInterfaceIdVendorsGetRequest) (*V1LldpInterfaceIdVendorsGet200Response, *http.Response, error) {
+//  @return V1LldpInterfaceIdVendorsGetResponse
+func (a *DefaultAPIService) V1LldpInterfaceIdVendorsGetExecute(r ApiV1LldpInterfaceIdVendorsGetRequest) (*V1LldpInterfaceIdVendorsGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1LldpInterfaceIdVendorsGet200Response
+		localVarReturnValue  *V1LldpInterfaceIdVendorsGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1LldpInterfaceIdVendorsGet")
@@ -43069,7 +45250,7 @@ func (r ApiV1LogsPostRequest) V1LogsPostRequest(v1LogsPostRequest V1LogsPostRequ
 	return r
 }
 
-func (r ApiV1LogsPostRequest) Execute() (*V1LogsPost200Response, *http.Response, error) {
+func (r ApiV1LogsPostRequest) Execute() (*V1LogsPostResponse, *http.Response, error) {
 	return r.ApiService.V1LogsPostExecute(r)
 }
 
@@ -43087,13 +45268,13 @@ func (a *DefaultAPIService) V1LogsPost(ctx context.Context) ApiV1LogsPostRequest
 }
 
 // Execute executes the request
-//  @return V1LogsPost200Response
-func (a *DefaultAPIService) V1LogsPostExecute(r ApiV1LogsPostRequest) (*V1LogsPost200Response, *http.Response, error) {
+//  @return V1LogsPostResponse
+func (a *DefaultAPIService) V1LogsPostExecute(r ApiV1LogsPostRequest) (*V1LogsPostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1LogsPost200Response
+		localVarReturnValue  *V1LogsPostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1LogsPost")
@@ -43202,7 +45383,7 @@ func (r ApiV1MonitoringCircuitsBandwidthPostRequest) V1MonitoringCircuitsBandwid
 	return r
 }
 
-func (r ApiV1MonitoringCircuitsBandwidthPostRequest) Execute() (*V1MonitoringCircuitsBandwidthPost200Response, *http.Response, error) {
+func (r ApiV1MonitoringCircuitsBandwidthPostRequest) Execute() (*V1MonitoringCircuitsBandwidthPostResponse, *http.Response, error) {
 	return r.ApiService.V1MonitoringCircuitsBandwidthPostExecute(r)
 }
 
@@ -43220,13 +45401,13 @@ func (a *DefaultAPIService) V1MonitoringCircuitsBandwidthPost(ctx context.Contex
 }
 
 // Execute executes the request
-//  @return V1MonitoringCircuitsBandwidthPost200Response
-func (a *DefaultAPIService) V1MonitoringCircuitsBandwidthPostExecute(r ApiV1MonitoringCircuitsBandwidthPostRequest) (*V1MonitoringCircuitsBandwidthPost200Response, *http.Response, error) {
+//  @return V1MonitoringCircuitsBandwidthPostResponse
+func (a *DefaultAPIService) V1MonitoringCircuitsBandwidthPostExecute(r ApiV1MonitoringCircuitsBandwidthPostRequest) (*V1MonitoringCircuitsBandwidthPostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1MonitoringCircuitsBandwidthPost200Response
+		localVarReturnValue  *V1MonitoringCircuitsBandwidthPostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1MonitoringCircuitsBandwidthPost")
@@ -43321,7 +45502,7 @@ type ApiV1MonitoringCircuitsIncidentsPostRequest struct {
 	ctx context.Context
 	ApiService *DefaultAPIService
 	authorization *string
-	v2MonitoringCircuitsUtilizationPostRequest *V2MonitoringCircuitsUtilizationPostRequest
+	v1MonitoringCircuitsIncidentsPostRequest *V1MonitoringCircuitsIncidentsPostRequest
 }
 
 // Bearer token. Format: Bearer &lt;your_token_here&gt;
@@ -43330,12 +45511,12 @@ func (r ApiV1MonitoringCircuitsIncidentsPostRequest) Authorization(authorization
 	return r
 }
 
-func (r ApiV1MonitoringCircuitsIncidentsPostRequest) V2MonitoringCircuitsUtilizationPostRequest(v2MonitoringCircuitsUtilizationPostRequest V2MonitoringCircuitsUtilizationPostRequest) ApiV1MonitoringCircuitsIncidentsPostRequest {
-	r.v2MonitoringCircuitsUtilizationPostRequest = &v2MonitoringCircuitsUtilizationPostRequest
+func (r ApiV1MonitoringCircuitsIncidentsPostRequest) V1MonitoringCircuitsIncidentsPostRequest(v1MonitoringCircuitsIncidentsPostRequest V1MonitoringCircuitsIncidentsPostRequest) ApiV1MonitoringCircuitsIncidentsPostRequest {
+	r.v1MonitoringCircuitsIncidentsPostRequest = &v1MonitoringCircuitsIncidentsPostRequest
 	return r
 }
 
-func (r ApiV1MonitoringCircuitsIncidentsPostRequest) Execute() (*V1MonitoringCircuitsIncidentsPost200Response, *http.Response, error) {
+func (r ApiV1MonitoringCircuitsIncidentsPostRequest) Execute() (*V1MonitoringCircuitsIncidentsPostResponse, *http.Response, error) {
 	return r.ApiService.V1MonitoringCircuitsIncidentsPostExecute(r)
 }
 
@@ -43353,13 +45534,13 @@ func (a *DefaultAPIService) V1MonitoringCircuitsIncidentsPost(ctx context.Contex
 }
 
 // Execute executes the request
-//  @return V1MonitoringCircuitsIncidentsPost200Response
-func (a *DefaultAPIService) V1MonitoringCircuitsIncidentsPostExecute(r ApiV1MonitoringCircuitsIncidentsPostRequest) (*V1MonitoringCircuitsIncidentsPost200Response, *http.Response, error) {
+//  @return V1MonitoringCircuitsIncidentsPostResponse
+func (a *DefaultAPIService) V1MonitoringCircuitsIncidentsPostExecute(r ApiV1MonitoringCircuitsIncidentsPostRequest) (*V1MonitoringCircuitsIncidentsPostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1MonitoringCircuitsIncidentsPost200Response
+		localVarReturnValue  *V1MonitoringCircuitsIncidentsPostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1MonitoringCircuitsIncidentsPost")
@@ -43375,8 +45556,8 @@ func (a *DefaultAPIService) V1MonitoringCircuitsIncidentsPostExecute(r ApiV1Moni
 	if r.authorization == nil {
 		return localVarReturnValue, nil, reportError("authorization is required and must be specified")
 	}
-	if r.v2MonitoringCircuitsUtilizationPostRequest == nil {
-		return localVarReturnValue, nil, reportError("v2MonitoringCircuitsUtilizationPostRequest is required and must be specified")
+	if r.v1MonitoringCircuitsIncidentsPostRequest == nil {
+		return localVarReturnValue, nil, reportError("v1MonitoringCircuitsIncidentsPostRequest is required and must be specified")
 	}
 
 	// to determine the Content-Type header
@@ -43398,7 +45579,7 @@ func (a *DefaultAPIService) V1MonitoringCircuitsIncidentsPostExecute(r ApiV1Moni
 	}
 	parameterAddToHeaderOrQuery(localVarHeaderParams, "Authorization", r.authorization, "simple", "")
 	// body params
-	localVarPostBody = r.v2MonitoringCircuitsUtilizationPostRequest
+	localVarPostBody = r.v1MonitoringCircuitsIncidentsPostRequest
 	if r.ctx != nil {
 		// API Key Authentication
 		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
@@ -43454,7 +45635,7 @@ type ApiV1MonitoringCircuitsSummaryPostRequest struct {
 	ctx context.Context
 	ApiService *DefaultAPIService
 	authorization *string
-	v2MonitoringCircuitsSummaryPostRequest *V2MonitoringCircuitsSummaryPostRequest
+	v1MonitoringCircuitsSummaryPostRequest *V1MonitoringCircuitsSummaryPostRequest
 }
 
 // Bearer token. Format: Bearer &lt;your_token_here&gt;
@@ -43463,12 +45644,12 @@ func (r ApiV1MonitoringCircuitsSummaryPostRequest) Authorization(authorization s
 	return r
 }
 
-func (r ApiV1MonitoringCircuitsSummaryPostRequest) V2MonitoringCircuitsSummaryPostRequest(v2MonitoringCircuitsSummaryPostRequest V2MonitoringCircuitsSummaryPostRequest) ApiV1MonitoringCircuitsSummaryPostRequest {
-	r.v2MonitoringCircuitsSummaryPostRequest = &v2MonitoringCircuitsSummaryPostRequest
+func (r ApiV1MonitoringCircuitsSummaryPostRequest) V1MonitoringCircuitsSummaryPostRequest(v1MonitoringCircuitsSummaryPostRequest V1MonitoringCircuitsSummaryPostRequest) ApiV1MonitoringCircuitsSummaryPostRequest {
+	r.v1MonitoringCircuitsSummaryPostRequest = &v1MonitoringCircuitsSummaryPostRequest
 	return r
 }
 
-func (r ApiV1MonitoringCircuitsSummaryPostRequest) Execute() (*V1MonitoringCircuitsSummaryPost200Response, *http.Response, error) {
+func (r ApiV1MonitoringCircuitsSummaryPostRequest) Execute() (*V1MonitoringCircuitsSummaryPostResponse, *http.Response, error) {
 	return r.ApiService.V1MonitoringCircuitsSummaryPostExecute(r)
 }
 
@@ -43486,13 +45667,13 @@ func (a *DefaultAPIService) V1MonitoringCircuitsSummaryPost(ctx context.Context)
 }
 
 // Execute executes the request
-//  @return V1MonitoringCircuitsSummaryPost200Response
-func (a *DefaultAPIService) V1MonitoringCircuitsSummaryPostExecute(r ApiV1MonitoringCircuitsSummaryPostRequest) (*V1MonitoringCircuitsSummaryPost200Response, *http.Response, error) {
+//  @return V1MonitoringCircuitsSummaryPostResponse
+func (a *DefaultAPIService) V1MonitoringCircuitsSummaryPostExecute(r ApiV1MonitoringCircuitsSummaryPostRequest) (*V1MonitoringCircuitsSummaryPostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1MonitoringCircuitsSummaryPost200Response
+		localVarReturnValue  *V1MonitoringCircuitsSummaryPostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1MonitoringCircuitsSummaryPost")
@@ -43508,8 +45689,8 @@ func (a *DefaultAPIService) V1MonitoringCircuitsSummaryPostExecute(r ApiV1Monito
 	if r.authorization == nil {
 		return localVarReturnValue, nil, reportError("authorization is required and must be specified")
 	}
-	if r.v2MonitoringCircuitsSummaryPostRequest == nil {
-		return localVarReturnValue, nil, reportError("v2MonitoringCircuitsSummaryPostRequest is required and must be specified")
+	if r.v1MonitoringCircuitsSummaryPostRequest == nil {
+		return localVarReturnValue, nil, reportError("v1MonitoringCircuitsSummaryPostRequest is required and must be specified")
 	}
 
 	// to determine the Content-Type header
@@ -43531,7 +45712,7 @@ func (a *DefaultAPIService) V1MonitoringCircuitsSummaryPostExecute(r ApiV1Monito
 	}
 	parameterAddToHeaderOrQuery(localVarHeaderParams, "Authorization", r.authorization, "simple", "")
 	// body params
-	localVarPostBody = r.v2MonitoringCircuitsSummaryPostRequest
+	localVarPostBody = r.v1MonitoringCircuitsSummaryPostRequest
 	if r.ctx != nil {
 		// API Key Authentication
 		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
@@ -43587,7 +45768,7 @@ type ApiV1MonitoringCircuitsUtilizationPostRequest struct {
 	ctx context.Context
 	ApiService *DefaultAPIService
 	authorization *string
-	v2MonitoringCircuitsUtilizationPostRequest *V2MonitoringCircuitsUtilizationPostRequest
+	v1MonitoringCircuitsUtilizationPostRequest *V1MonitoringCircuitsUtilizationPostRequest
 }
 
 // Bearer token. Format: Bearer &lt;your_token_here&gt;
@@ -43596,12 +45777,12 @@ func (r ApiV1MonitoringCircuitsUtilizationPostRequest) Authorization(authorizati
 	return r
 }
 
-func (r ApiV1MonitoringCircuitsUtilizationPostRequest) V2MonitoringCircuitsUtilizationPostRequest(v2MonitoringCircuitsUtilizationPostRequest V2MonitoringCircuitsUtilizationPostRequest) ApiV1MonitoringCircuitsUtilizationPostRequest {
-	r.v2MonitoringCircuitsUtilizationPostRequest = &v2MonitoringCircuitsUtilizationPostRequest
+func (r ApiV1MonitoringCircuitsUtilizationPostRequest) V1MonitoringCircuitsUtilizationPostRequest(v1MonitoringCircuitsUtilizationPostRequest V1MonitoringCircuitsUtilizationPostRequest) ApiV1MonitoringCircuitsUtilizationPostRequest {
+	r.v1MonitoringCircuitsUtilizationPostRequest = &v1MonitoringCircuitsUtilizationPostRequest
 	return r
 }
 
-func (r ApiV1MonitoringCircuitsUtilizationPostRequest) Execute() (*V1MonitoringCircuitsUtilizationPost200Response, *http.Response, error) {
+func (r ApiV1MonitoringCircuitsUtilizationPostRequest) Execute() (*V1MonitoringCircuitsUtilizationPostResponse, *http.Response, error) {
 	return r.ApiService.V1MonitoringCircuitsUtilizationPostExecute(r)
 }
 
@@ -43619,13 +45800,13 @@ func (a *DefaultAPIService) V1MonitoringCircuitsUtilizationPost(ctx context.Cont
 }
 
 // Execute executes the request
-//  @return V1MonitoringCircuitsUtilizationPost200Response
-func (a *DefaultAPIService) V1MonitoringCircuitsUtilizationPostExecute(r ApiV1MonitoringCircuitsUtilizationPostRequest) (*V1MonitoringCircuitsUtilizationPost200Response, *http.Response, error) {
+//  @return V1MonitoringCircuitsUtilizationPostResponse
+func (a *DefaultAPIService) V1MonitoringCircuitsUtilizationPostExecute(r ApiV1MonitoringCircuitsUtilizationPostRequest) (*V1MonitoringCircuitsUtilizationPostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1MonitoringCircuitsUtilizationPost200Response
+		localVarReturnValue  *V1MonitoringCircuitsUtilizationPostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1MonitoringCircuitsUtilizationPost")
@@ -43641,8 +45822,8 @@ func (a *DefaultAPIService) V1MonitoringCircuitsUtilizationPostExecute(r ApiV1Mo
 	if r.authorization == nil {
 		return localVarReturnValue, nil, reportError("authorization is required and must be specified")
 	}
-	if r.v2MonitoringCircuitsUtilizationPostRequest == nil {
-		return localVarReturnValue, nil, reportError("v2MonitoringCircuitsUtilizationPostRequest is required and must be specified")
+	if r.v1MonitoringCircuitsUtilizationPostRequest == nil {
+		return localVarReturnValue, nil, reportError("v1MonitoringCircuitsUtilizationPostRequest is required and must be specified")
 	}
 
 	// to determine the Content-Type header
@@ -43664,7 +45845,7 @@ func (a *DefaultAPIService) V1MonitoringCircuitsUtilizationPostExecute(r ApiV1Mo
 	}
 	parameterAddToHeaderOrQuery(localVarHeaderParams, "Authorization", r.authorization, "simple", "")
 	// body params
-	localVarPostBody = r.v2MonitoringCircuitsUtilizationPostRequest
+	localVarPostBody = r.v1MonitoringCircuitsUtilizationPostRequest
 	if r.ctx != nil {
 		// API Key Authentication
 		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
@@ -43734,7 +45915,7 @@ func (r ApiV1MonitoringCircuitsVisualizationPostRequest) V1MonitoringCircuitsVis
 	return r
 }
 
-func (r ApiV1MonitoringCircuitsVisualizationPostRequest) Execute() (*V1MonitoringCircuitsVisualizationPost200Response, *http.Response, error) {
+func (r ApiV1MonitoringCircuitsVisualizationPostRequest) Execute() (*V1MonitoringCircuitsVisualizationPostResponse, *http.Response, error) {
 	return r.ApiService.V1MonitoringCircuitsVisualizationPostExecute(r)
 }
 
@@ -43752,13 +45933,13 @@ func (a *DefaultAPIService) V1MonitoringCircuitsVisualizationPost(ctx context.Co
 }
 
 // Execute executes the request
-//  @return V1MonitoringCircuitsVisualizationPost200Response
-func (a *DefaultAPIService) V1MonitoringCircuitsVisualizationPostExecute(r ApiV1MonitoringCircuitsVisualizationPostRequest) (*V1MonitoringCircuitsVisualizationPost200Response, *http.Response, error) {
+//  @return V1MonitoringCircuitsVisualizationPostResponse
+func (a *DefaultAPIService) V1MonitoringCircuitsVisualizationPostExecute(r ApiV1MonitoringCircuitsVisualizationPostRequest) (*V1MonitoringCircuitsVisualizationPostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1MonitoringCircuitsVisualizationPost200Response
+		localVarReturnValue  *V1MonitoringCircuitsVisualizationPostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1MonitoringCircuitsVisualizationPost")
@@ -43862,12 +46043,14 @@ func (r ApiV1NatEntriesDeviceIdGetRequest) Authorization(authorization string) A
 	return r
 }
 
-func (r ApiV1NatEntriesDeviceIdGetRequest) Execute() (*V1NatEntriesDeviceIdGet200Response, *http.Response, error) {
+func (r ApiV1NatEntriesDeviceIdGetRequest) Execute() (*V1NatEntriesDeviceIdGetResponse, *http.Response, error) {
 	return r.ApiService.V1NatEntriesDeviceIdGetExecute(r)
 }
 
 /*
 V1NatEntriesDeviceIdGet Method for V1NatEntriesDeviceIdGet
+
+Get the NAT entries for the device
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @param deviceId 
@@ -43882,13 +46065,13 @@ func (a *DefaultAPIService) V1NatEntriesDeviceIdGet(ctx context.Context, deviceI
 }
 
 // Execute executes the request
-//  @return V1NatEntriesDeviceIdGet200Response
-func (a *DefaultAPIService) V1NatEntriesDeviceIdGetExecute(r ApiV1NatEntriesDeviceIdGetRequest) (*V1NatEntriesDeviceIdGet200Response, *http.Response, error) {
+//  @return V1NatEntriesDeviceIdGetResponse
+func (a *DefaultAPIService) V1NatEntriesDeviceIdGetExecute(r ApiV1NatEntriesDeviceIdGetRequest) (*V1NatEntriesDeviceIdGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1NatEntriesDeviceIdGet200Response
+		localVarReturnValue  *V1NatEntriesDeviceIdGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1NatEntriesDeviceIdGet")
@@ -43988,12 +46171,14 @@ func (r ApiV1NatUtilizationDeviceIdGetRequest) Authorization(authorization strin
 	return r
 }
 
-func (r ApiV1NatUtilizationDeviceIdGetRequest) Execute() (*V1NatUtilizationDeviceIdGet200Response, *http.Response, error) {
+func (r ApiV1NatUtilizationDeviceIdGetRequest) Execute() (*V1NatUtilizationDeviceIdGetResponse, *http.Response, error) {
 	return r.ApiService.V1NatUtilizationDeviceIdGetExecute(r)
 }
 
 /*
 V1NatUtilizationDeviceIdGet Method for V1NatUtilizationDeviceIdGet
+
+Get the NAT usage for the device
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @param deviceId 
@@ -44008,13 +46193,13 @@ func (a *DefaultAPIService) V1NatUtilizationDeviceIdGet(ctx context.Context, dev
 }
 
 // Execute executes the request
-//  @return V1NatUtilizationDeviceIdGet200Response
-func (a *DefaultAPIService) V1NatUtilizationDeviceIdGetExecute(r ApiV1NatUtilizationDeviceIdGetRequest) (*V1NatUtilizationDeviceIdGet200Response, *http.Response, error) {
+//  @return V1NatUtilizationDeviceIdGetResponse
+func (a *DefaultAPIService) V1NatUtilizationDeviceIdGetExecute(r ApiV1NatUtilizationDeviceIdGetRequest) (*V1NatUtilizationDeviceIdGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1NatUtilizationDeviceIdGet200Response
+		localVarReturnValue  *V1NatUtilizationDeviceIdGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1NatUtilizationDeviceIdGet")
@@ -44119,6 +46304,8 @@ func (r ApiV1OnboardingCloudinitDeleteRequest) Execute() (map[string]interface{}
 
 /*
 V1OnboardingCloudinitDelete Method for V1OnboardingCloudinitDelete
+
+Delete the onboarding token
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV1OnboardingCloudinitDeleteRequest
@@ -44235,12 +46422,14 @@ func (r ApiV1OnboardingCloudinitGetRequest) Authorization(authorization string) 
 	return r
 }
 
-func (r ApiV1OnboardingCloudinitGetRequest) Execute() (*V1OnboardingCloudinitGet200Response, *http.Response, error) {
+func (r ApiV1OnboardingCloudinitGetRequest) Execute() (*V1OnboardingCloudinitGetResponse, *http.Response, error) {
 	return r.ApiService.V1OnboardingCloudinitGetExecute(r)
 }
 
 /*
 V1OnboardingCloudinitGet Method for V1OnboardingCloudinitGet
+
+Get all the onboarding tokens
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV1OnboardingCloudinitGetRequest
@@ -44253,13 +46442,13 @@ func (a *DefaultAPIService) V1OnboardingCloudinitGet(ctx context.Context) ApiV1O
 }
 
 // Execute executes the request
-//  @return V1OnboardingCloudinitGet200Response
-func (a *DefaultAPIService) V1OnboardingCloudinitGetExecute(r ApiV1OnboardingCloudinitGetRequest) (*V1OnboardingCloudinitGet200Response, *http.Response, error) {
+//  @return V1OnboardingCloudinitGetResponse
+func (a *DefaultAPIService) V1OnboardingCloudinitGetExecute(r ApiV1OnboardingCloudinitGetRequest) (*V1OnboardingCloudinitGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1OnboardingCloudinitGet200Response
+		localVarReturnValue  *V1OnboardingCloudinitGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1OnboardingCloudinitGet")
@@ -44349,7 +46538,7 @@ type ApiV1OnboardingCloudinitPostRequest struct {
 	ctx context.Context
 	ApiService *DefaultAPIService
 	authorization *string
-	v1OnboardingCloudinitGet200Response *V1OnboardingCloudinitGet200Response
+	v1OnboardingCloudinitPostRequest *V1OnboardingCloudinitPostRequest
 }
 
 // Bearer token. Format: Bearer &lt;your_token_here&gt;
@@ -44358,8 +46547,8 @@ func (r ApiV1OnboardingCloudinitPostRequest) Authorization(authorization string)
 	return r
 }
 
-func (r ApiV1OnboardingCloudinitPostRequest) V1OnboardingCloudinitGet200Response(v1OnboardingCloudinitGet200Response V1OnboardingCloudinitGet200Response) ApiV1OnboardingCloudinitPostRequest {
-	r.v1OnboardingCloudinitGet200Response = &v1OnboardingCloudinitGet200Response
+func (r ApiV1OnboardingCloudinitPostRequest) V1OnboardingCloudinitPostRequest(v1OnboardingCloudinitPostRequest V1OnboardingCloudinitPostRequest) ApiV1OnboardingCloudinitPostRequest {
+	r.v1OnboardingCloudinitPostRequest = &v1OnboardingCloudinitPostRequest
 	return r
 }
 
@@ -44369,6 +46558,8 @@ func (r ApiV1OnboardingCloudinitPostRequest) Execute() (map[string]interface{}, 
 
 /*
 V1OnboardingCloudinitPost Method for V1OnboardingCloudinitPost
+
+Create a onboarding token
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV1OnboardingCloudinitPostRequest
@@ -44403,8 +46594,8 @@ func (a *DefaultAPIService) V1OnboardingCloudinitPostExecute(r ApiV1OnboardingCl
 	if r.authorization == nil {
 		return localVarReturnValue, nil, reportError("authorization is required and must be specified")
 	}
-	if r.v1OnboardingCloudinitGet200Response == nil {
-		return localVarReturnValue, nil, reportError("v1OnboardingCloudinitGet200Response is required and must be specified")
+	if r.v1OnboardingCloudinitPostRequest == nil {
+		return localVarReturnValue, nil, reportError("v1OnboardingCloudinitPostRequest is required and must be specified")
 	}
 
 	// to determine the Content-Type header
@@ -44426,7 +46617,7 @@ func (a *DefaultAPIService) V1OnboardingCloudinitPostExecute(r ApiV1OnboardingCl
 	}
 	parameterAddToHeaderOrQuery(localVarHeaderParams, "Authorization", r.authorization, "simple", "")
 	// body params
-	localVarPostBody = r.v1OnboardingCloudinitGet200Response
+	localVarPostBody = r.v1OnboardingCloudinitPostRequest
 	if r.ctx != nil {
 		// API Key Authentication
 		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
@@ -44490,12 +46681,14 @@ func (r ApiV1PolicyApplicationsGetRequest) Authorization(authorization string) A
 	return r
 }
 
-func (r ApiV1PolicyApplicationsGetRequest) Execute() (*V1PolicyApplicationsGet200Response, *http.Response, error) {
+func (r ApiV1PolicyApplicationsGetRequest) Execute() (*V1PolicyApplicationsGetResponse, *http.Response, error) {
 	return r.ApiService.V1PolicyApplicationsGetExecute(r)
 }
 
 /*
 V1PolicyApplicationsGet Method for V1PolicyApplicationsGet
+
+Get a list of builtin DPI applications
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV1PolicyApplicationsGetRequest
@@ -44508,13 +46701,13 @@ func (a *DefaultAPIService) V1PolicyApplicationsGet(ctx context.Context) ApiV1Po
 }
 
 // Execute executes the request
-//  @return V1PolicyApplicationsGet200Response
-func (a *DefaultAPIService) V1PolicyApplicationsGetExecute(r ApiV1PolicyApplicationsGetRequest) (*V1PolicyApplicationsGet200Response, *http.Response, error) {
+//  @return V1PolicyApplicationsGetResponse
+func (a *DefaultAPIService) V1PolicyApplicationsGetExecute(r ApiV1PolicyApplicationsGetRequest) (*V1PolicyApplicationsGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1PolicyApplicationsGet200Response
+		localVarReturnValue  *V1PolicyApplicationsGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1PolicyApplicationsGet")
@@ -44619,6 +46812,8 @@ func (r ApiV1PolicyPrefixSetsIdDeleteRequest) Execute() (map[string]interface{},
 
 /*
 V1PolicyPrefixSetsIdDelete Method for V1PolicyPrefixSetsIdDelete
+
+Delete a prefix-set
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @param id 
@@ -44745,12 +46940,14 @@ func (r ApiV1PolicyPrefixSetsIdPutRequest) V1PolicyPrefixSetsIdPutRequest(v1Poli
 	return r
 }
 
-func (r ApiV1PolicyPrefixSetsIdPutRequest) Execute() (*V1PolicyPrefixSetsPost200Response, *http.Response, error) {
+func (r ApiV1PolicyPrefixSetsIdPutRequest) Execute() (*V1PolicyPrefixSetsIdPutResponse, *http.Response, error) {
 	return r.ApiService.V1PolicyPrefixSetsIdPutExecute(r)
 }
 
 /*
 V1PolicyPrefixSetsIdPut Method for V1PolicyPrefixSetsIdPut
+
+Update a prefix-set
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @param id 
@@ -44765,13 +46962,13 @@ func (a *DefaultAPIService) V1PolicyPrefixSetsIdPut(ctx context.Context, id int6
 }
 
 // Execute executes the request
-//  @return V1PolicyPrefixSetsPost200Response
-func (a *DefaultAPIService) V1PolicyPrefixSetsIdPutExecute(r ApiV1PolicyPrefixSetsIdPutRequest) (*V1PolicyPrefixSetsPost200Response, *http.Response, error) {
+//  @return V1PolicyPrefixSetsIdPutResponse
+func (a *DefaultAPIService) V1PolicyPrefixSetsIdPutExecute(r ApiV1PolicyPrefixSetsIdPutRequest) (*V1PolicyPrefixSetsIdPutResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPut
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1PolicyPrefixSetsPost200Response
+		localVarReturnValue  *V1PolicyPrefixSetsIdPutResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1PolicyPrefixSetsIdPut")
@@ -44881,12 +47078,14 @@ func (r ApiV1PolicyPrefixSetsPostRequest) V1PolicyPrefixSetsPostRequest(v1Policy
 	return r
 }
 
-func (r ApiV1PolicyPrefixSetsPostRequest) Execute() (*V1PolicyPrefixSetsPost200Response, *http.Response, error) {
+func (r ApiV1PolicyPrefixSetsPostRequest) Execute() (*V1PolicyPrefixSetsPostResponse, *http.Response, error) {
 	return r.ApiService.V1PolicyPrefixSetsPostExecute(r)
 }
 
 /*
 V1PolicyPrefixSetsPost Method for V1PolicyPrefixSetsPost
+
+Create a new prefix-set scoped to the enterprise
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV1PolicyPrefixSetsPostRequest
@@ -44899,13 +47098,13 @@ func (a *DefaultAPIService) V1PolicyPrefixSetsPost(ctx context.Context) ApiV1Pol
 }
 
 // Execute executes the request
-//  @return V1PolicyPrefixSetsPost200Response
-func (a *DefaultAPIService) V1PolicyPrefixSetsPostExecute(r ApiV1PolicyPrefixSetsPostRequest) (*V1PolicyPrefixSetsPost200Response, *http.Response, error) {
+//  @return V1PolicyPrefixSetsPostResponse
+func (a *DefaultAPIService) V1PolicyPrefixSetsPostExecute(r ApiV1PolicyPrefixSetsPostRequest) (*V1PolicyPrefixSetsPostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1PolicyPrefixSetsPost200Response
+		localVarReturnValue  *V1PolicyPrefixSetsPostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1PolicyPrefixSetsPost")
@@ -45016,12 +47215,14 @@ func (r ApiV1PolicyRouteTagSetsIdDeleteRequest) Level(level int32) ApiV1PolicyRo
 	return r
 }
 
-func (r ApiV1PolicyRouteTagSetsIdDeleteRequest) Execute() (*V1PolicyRouteTagSetsPost200Response, *http.Response, error) {
+func (r ApiV1PolicyRouteTagSetsIdDeleteRequest) Execute() (*V1PolicyRouteTagSetsIdDeleteResponse, *http.Response, error) {
 	return r.ApiService.V1PolicyRouteTagSetsIdDeleteExecute(r)
 }
 
 /*
 V1PolicyRouteTagSetsIdDelete Method for V1PolicyRouteTagSetsIdDelete
+
+Create a new route-tag scoped to the enterprise
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @param id 
@@ -45036,13 +47237,13 @@ func (a *DefaultAPIService) V1PolicyRouteTagSetsIdDelete(ctx context.Context, id
 }
 
 // Execute executes the request
-//  @return V1PolicyRouteTagSetsPost200Response
-func (a *DefaultAPIService) V1PolicyRouteTagSetsIdDeleteExecute(r ApiV1PolicyRouteTagSetsIdDeleteRequest) (*V1PolicyRouteTagSetsPost200Response, *http.Response, error) {
+//  @return V1PolicyRouteTagSetsIdDeleteResponse
+func (a *DefaultAPIService) V1PolicyRouteTagSetsIdDeleteExecute(r ApiV1PolicyRouteTagSetsIdDeleteRequest) (*V1PolicyRouteTagSetsIdDeleteResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodDelete
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1PolicyRouteTagSetsPost200Response
+		localVarReturnValue  *V1PolicyRouteTagSetsIdDeleteResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1PolicyRouteTagSetsIdDelete")
@@ -45150,12 +47351,14 @@ func (r ApiV1PolicyRouteTagSetsPostRequest) V1PolicyRouteTagSetsPostRequest(v1Po
 	return r
 }
 
-func (r ApiV1PolicyRouteTagSetsPostRequest) Execute() (*V1PolicyRouteTagSetsPost200Response, *http.Response, error) {
+func (r ApiV1PolicyRouteTagSetsPostRequest) Execute() (*V1PolicyRouteTagSetsPostResponse, *http.Response, error) {
 	return r.ApiService.V1PolicyRouteTagSetsPostExecute(r)
 }
 
 /*
 V1PolicyRouteTagSetsPost Method for V1PolicyRouteTagSetsPost
+
+Create a new route tag scoped to the enterprise
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV1PolicyRouteTagSetsPostRequest
@@ -45168,13 +47371,13 @@ func (a *DefaultAPIService) V1PolicyRouteTagSetsPost(ctx context.Context) ApiV1P
 }
 
 // Execute executes the request
-//  @return V1PolicyRouteTagSetsPost200Response
-func (a *DefaultAPIService) V1PolicyRouteTagSetsPostExecute(r ApiV1PolicyRouteTagSetsPostRequest) (*V1PolicyRouteTagSetsPost200Response, *http.Response, error) {
+//  @return V1PolicyRouteTagSetsPostResponse
+func (a *DefaultAPIService) V1PolicyRouteTagSetsPostExecute(r ApiV1PolicyRouteTagSetsPostRequest) (*V1PolicyRouteTagSetsPostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1PolicyRouteTagSetsPost200Response
+		localVarReturnValue  *V1PolicyRouteTagSetsPostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1PolicyRouteTagSetsPost")
@@ -45277,12 +47480,14 @@ func (r ApiV1PolicyRouteTagSetsTagDetailGetRequest) Authorization(authorization 
 	return r
 }
 
-func (r ApiV1PolicyRouteTagSetsTagDetailGetRequest) Execute() (*V1PolicyRouteTagSetsTagDetailGet200Response, *http.Response, error) {
+func (r ApiV1PolicyRouteTagSetsTagDetailGetRequest) Execute() (*V1PolicyRouteTagSetsTagDetailGetResponse, *http.Response, error) {
 	return r.ApiService.V1PolicyRouteTagSetsTagDetailGetExecute(r)
 }
 
 /*
 V1PolicyRouteTagSetsTagDetailGet Method for V1PolicyRouteTagSetsTagDetailGet
+
+Get all the route tags summary for the the enterprise
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV1PolicyRouteTagSetsTagDetailGetRequest
@@ -45295,13 +47500,13 @@ func (a *DefaultAPIService) V1PolicyRouteTagSetsTagDetailGet(ctx context.Context
 }
 
 // Execute executes the request
-//  @return V1PolicyRouteTagSetsTagDetailGet200Response
-func (a *DefaultAPIService) V1PolicyRouteTagSetsTagDetailGetExecute(r ApiV1PolicyRouteTagSetsTagDetailGetRequest) (*V1PolicyRouteTagSetsTagDetailGet200Response, *http.Response, error) {
+//  @return V1PolicyRouteTagSetsTagDetailGetResponse
+func (a *DefaultAPIService) V1PolicyRouteTagSetsTagDetailGetExecute(r ApiV1PolicyRouteTagSetsTagDetailGetRequest) (*V1PolicyRouteTagSetsTagDetailGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1PolicyRouteTagSetsTagDetailGet200Response
+		localVarReturnValue  *V1PolicyRouteTagSetsTagDetailGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1PolicyRouteTagSetsTagDetailGet")
@@ -45399,12 +47604,14 @@ func (r ApiV1PolicyRouteTagSetsTagsGetRequest) Authorization(authorization strin
 	return r
 }
 
-func (r ApiV1PolicyRouteTagSetsTagsGetRequest) Execute() (*V1PolicyRouteTagSetsTagsGet200Response, *http.Response, error) {
+func (r ApiV1PolicyRouteTagSetsTagsGetRequest) Execute() (*V1PolicyRouteTagSetsTagsGetResponse, *http.Response, error) {
 	return r.ApiService.V1PolicyRouteTagSetsTagsGetExecute(r)
 }
 
 /*
 V1PolicyRouteTagSetsTagsGet Method for V1PolicyRouteTagSetsTagsGet
+
+Get all the route tags for the enterprise
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV1PolicyRouteTagSetsTagsGetRequest
@@ -45417,13 +47624,13 @@ func (a *DefaultAPIService) V1PolicyRouteTagSetsTagsGet(ctx context.Context) Api
 }
 
 // Execute executes the request
-//  @return V1PolicyRouteTagSetsTagsGet200Response
-func (a *DefaultAPIService) V1PolicyRouteTagSetsTagsGetExecute(r ApiV1PolicyRouteTagSetsTagsGetRequest) (*V1PolicyRouteTagSetsTagsGet200Response, *http.Response, error) {
+//  @return V1PolicyRouteTagSetsTagsGetResponse
+func (a *DefaultAPIService) V1PolicyRouteTagSetsTagsGetExecute(r ApiV1PolicyRouteTagSetsTagsGetRequest) (*V1PolicyRouteTagSetsTagsGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1PolicyRouteTagSetsTagsGet200Response
+		localVarReturnValue  *V1PolicyRouteTagSetsTagsGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1PolicyRouteTagSetsTagsGet")
@@ -45521,12 +47728,14 @@ func (r ApiV1PolicyRouteTagSetsTagsSummaryGetRequest) Authorization(authorizatio
 	return r
 }
 
-func (r ApiV1PolicyRouteTagSetsTagsSummaryGetRequest) Execute() (*V1PolicyRouteTagSetsTagsSummaryGet200Response, *http.Response, error) {
+func (r ApiV1PolicyRouteTagSetsTagsSummaryGetRequest) Execute() (*V1PolicyRouteTagSetsTagsSummaryGetResponse, *http.Response, error) {
 	return r.ApiService.V1PolicyRouteTagSetsTagsSummaryGetExecute(r)
 }
 
 /*
 V1PolicyRouteTagSetsTagsSummaryGet Method for V1PolicyRouteTagSetsTagsSummaryGet
+
+Get all the route tags summary for the the enterprise
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV1PolicyRouteTagSetsTagsSummaryGetRequest
@@ -45539,13 +47748,13 @@ func (a *DefaultAPIService) V1PolicyRouteTagSetsTagsSummaryGet(ctx context.Conte
 }
 
 // Execute executes the request
-//  @return V1PolicyRouteTagSetsTagsSummaryGet200Response
-func (a *DefaultAPIService) V1PolicyRouteTagSetsTagsSummaryGetExecute(r ApiV1PolicyRouteTagSetsTagsSummaryGetRequest) (*V1PolicyRouteTagSetsTagsSummaryGet200Response, *http.Response, error) {
+//  @return V1PolicyRouteTagSetsTagsSummaryGetResponse
+func (a *DefaultAPIService) V1PolicyRouteTagSetsTagsSummaryGetExecute(r ApiV1PolicyRouteTagSetsTagsSummaryGetRequest) (*V1PolicyRouteTagSetsTagsSummaryGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1PolicyRouteTagSetsTagsSummaryGet200Response
+		localVarReturnValue  *V1PolicyRouteTagSetsTagsSummaryGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1PolicyRouteTagSetsTagsSummaryGet")
@@ -45657,6 +47866,8 @@ func (r ApiV1PortalApikeysDeleteRequest) Execute() (map[string]interface{}, *htt
 /*
 V1PortalApikeysDelete Method for V1PortalApikeysDelete
 
+Remove private GCS API key by GCS name to revoke portal access.
+
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV1PortalApikeysDeleteRequest
 */
@@ -45690,10 +47901,11 @@ func (a *DefaultAPIService) V1PortalApikeysDeleteExecute(r ApiV1PortalApikeysDel
 	if r.authorization == nil {
 		return localVarReturnValue, nil, reportError("authorization is required and must be specified")
 	}
-
-	if r.gcsName != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "gcsName", r.gcsName, "form", "")
+	if r.gcsName == nil {
+		return localVarReturnValue, nil, reportError("gcsName is required and must be specified")
 	}
+
+	parameterAddToHeaderOrQuery(localVarQueryParams, "gcsName", r.gcsName, "form", "")
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
 
@@ -45775,12 +47987,14 @@ func (r ApiV1PortalApikeysGetRequest) Authorization(authorization string) ApiV1P
 	return r
 }
 
-func (r ApiV1PortalApikeysGetRequest) Execute() (*V1PortalApikeysGet200Response, *http.Response, error) {
+func (r ApiV1PortalApikeysGetRequest) Execute() (*V1PortalApikeysGetResponse, *http.Response, error) {
 	return r.ApiService.V1PortalApikeysGetExecute(r)
 }
 
 /*
 V1PortalApikeysGet Method for V1PortalApikeysGet
+
+Get private GCS API key information and status for portal access.
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV1PortalApikeysGetRequest
@@ -45793,13 +48007,13 @@ func (a *DefaultAPIService) V1PortalApikeysGet(ctx context.Context) ApiV1PortalA
 }
 
 // Execute executes the request
-//  @return V1PortalApikeysGet200Response
-func (a *DefaultAPIService) V1PortalApikeysGetExecute(r ApiV1PortalApikeysGetRequest) (*V1PortalApikeysGet200Response, *http.Response, error) {
+//  @return V1PortalApikeysGetResponse
+func (a *DefaultAPIService) V1PortalApikeysGetExecute(r ApiV1PortalApikeysGetRequest) (*V1PortalApikeysGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1PortalApikeysGet200Response
+		localVarReturnValue  *V1PortalApikeysGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1PortalApikeysGet")
@@ -45903,12 +48117,14 @@ func (r ApiV1PortalApikeysPostRequest) V1PortalApikeysPostRequest(v1PortalApikey
 	return r
 }
 
-func (r ApiV1PortalApikeysPostRequest) Execute() (*V1PortalApikeysPost200Response, *http.Response, error) {
+func (r ApiV1PortalApikeysPostRequest) Execute() (*V1PortalApikeysPostResponse, *http.Response, error) {
 	return r.ApiService.V1PortalApikeysPostExecute(r)
 }
 
 /*
 V1PortalApikeysPost Method for V1PortalApikeysPost
+
+Generate private GCS API key for portal access and authentication.
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV1PortalApikeysPostRequest
@@ -45921,13 +48137,13 @@ func (a *DefaultAPIService) V1PortalApikeysPost(ctx context.Context) ApiV1Portal
 }
 
 // Execute executes the request
-//  @return V1PortalApikeysPost200Response
-func (a *DefaultAPIService) V1PortalApikeysPostExecute(r ApiV1PortalApikeysPostRequest) (*V1PortalApikeysPost200Response, *http.Response, error) {
+//  @return V1PortalApikeysPostResponse
+func (a *DefaultAPIService) V1PortalApikeysPostExecute(r ApiV1PortalApikeysPostRequest) (*V1PortalApikeysPostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1PortalApikeysPost200Response
+		localVarReturnValue  *V1PortalApikeysPostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1PortalApikeysPost")
@@ -46030,7 +48246,7 @@ func (r ApiV1PortalPrivateDetailsGetRequest) Authorization(authorization string)
 	return r
 }
 
-func (r ApiV1PortalPrivateDetailsGetRequest) Execute() (*V1PortalPrivateDetailsGet200Response, *http.Response, error) {
+func (r ApiV1PortalPrivateDetailsGetRequest) Execute() (*V1PortalPrivateDetailsGetResponse, *http.Response, error) {
 	return r.ApiService.V1PortalPrivateDetailsGetExecute(r)
 }
 
@@ -46048,13 +48264,13 @@ func (a *DefaultAPIService) V1PortalPrivateDetailsGet(ctx context.Context) ApiV1
 }
 
 // Execute executes the request
-//  @return V1PortalPrivateDetailsGet200Response
-func (a *DefaultAPIService) V1PortalPrivateDetailsGetExecute(r ApiV1PortalPrivateDetailsGetRequest) (*V1PortalPrivateDetailsGet200Response, *http.Response, error) {
+//  @return V1PortalPrivateDetailsGetResponse
+func (a *DefaultAPIService) V1PortalPrivateDetailsGetExecute(r ApiV1PortalPrivateDetailsGetRequest) (*V1PortalPrivateDetailsGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1PortalPrivateDetailsGet200Response
+		localVarReturnValue  *V1PortalPrivateDetailsGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1PortalPrivateDetailsGet")
@@ -46152,7 +48368,7 @@ func (r ApiV1PortalPrivateInventoryDetailsGetRequest) Authorization(authorizatio
 	return r
 }
 
-func (r ApiV1PortalPrivateInventoryDetailsGetRequest) Execute() (*V1PortalPrivateInventoryDetailsGet200Response, *http.Response, error) {
+func (r ApiV1PortalPrivateInventoryDetailsGetRequest) Execute() (*V1PortalPrivateInventoryDetailsGetResponse, *http.Response, error) {
 	return r.ApiService.V1PortalPrivateInventoryDetailsGetExecute(r)
 }
 
@@ -46170,13 +48386,13 @@ func (a *DefaultAPIService) V1PortalPrivateInventoryDetailsGet(ctx context.Conte
 }
 
 // Execute executes the request
-//  @return V1PortalPrivateInventoryDetailsGet200Response
-func (a *DefaultAPIService) V1PortalPrivateInventoryDetailsGetExecute(r ApiV1PortalPrivateInventoryDetailsGetRequest) (*V1PortalPrivateInventoryDetailsGet200Response, *http.Response, error) {
+//  @return V1PortalPrivateInventoryDetailsGetResponse
+func (a *DefaultAPIService) V1PortalPrivateInventoryDetailsGetExecute(r ApiV1PortalPrivateInventoryDetailsGetRequest) (*V1PortalPrivateInventoryDetailsGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1PortalPrivateInventoryDetailsGet200Response
+		localVarReturnValue  *V1PortalPrivateInventoryDetailsGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1PortalPrivateInventoryDetailsGet")
@@ -46399,7 +48615,7 @@ type ApiV1PortalPrivateRegisterPostRequest struct {
 	ctx context.Context
 	ApiService *DefaultAPIService
 	authorization *string
-	v1PortalPrivatePostRequest *V1PortalPrivatePostRequest
+	v1PortalPrivateRegisterPostRequest *V1PortalPrivateRegisterPostRequest
 }
 
 // Bearer token. Format: Bearer &lt;your_token_here&gt;
@@ -46408,8 +48624,8 @@ func (r ApiV1PortalPrivateRegisterPostRequest) Authorization(authorization strin
 	return r
 }
 
-func (r ApiV1PortalPrivateRegisterPostRequest) V1PortalPrivatePostRequest(v1PortalPrivatePostRequest V1PortalPrivatePostRequest) ApiV1PortalPrivateRegisterPostRequest {
-	r.v1PortalPrivatePostRequest = &v1PortalPrivatePostRequest
+func (r ApiV1PortalPrivateRegisterPostRequest) V1PortalPrivateRegisterPostRequest(v1PortalPrivateRegisterPostRequest V1PortalPrivateRegisterPostRequest) ApiV1PortalPrivateRegisterPostRequest {
+	r.v1PortalPrivateRegisterPostRequest = &v1PortalPrivateRegisterPostRequest
 	return r
 }
 
@@ -46453,8 +48669,8 @@ func (a *DefaultAPIService) V1PortalPrivateRegisterPostExecute(r ApiV1PortalPriv
 	if r.authorization == nil {
 		return localVarReturnValue, nil, reportError("authorization is required and must be specified")
 	}
-	if r.v1PortalPrivatePostRequest == nil {
-		return localVarReturnValue, nil, reportError("v1PortalPrivatePostRequest is required and must be specified")
+	if r.v1PortalPrivateRegisterPostRequest == nil {
+		return localVarReturnValue, nil, reportError("v1PortalPrivateRegisterPostRequest is required and must be specified")
 	}
 
 	// to determine the Content-Type header
@@ -46476,7 +48692,7 @@ func (a *DefaultAPIService) V1PortalPrivateRegisterPostExecute(r ApiV1PortalPriv
 	}
 	parameterAddToHeaderOrQuery(localVarHeaderParams, "Authorization", r.authorization, "simple", "")
 	// body params
-	localVarPostBody = r.v1PortalPrivatePostRequest
+	localVarPostBody = r.v1PortalPrivateRegisterPostRequest
 	if r.ctx != nil {
 		// API Key Authentication
 		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
@@ -46673,12 +48889,14 @@ func (r ApiV1PresharedkeyGetRequest) Authorization(authorization string) ApiV1Pr
 	return r
 }
 
-func (r ApiV1PresharedkeyGetRequest) Execute() (*V1PresharedkeyGet200Response, *http.Response, error) {
+func (r ApiV1PresharedkeyGetRequest) Execute() (*V1PresharedkeyGetResponse, *http.Response, error) {
 	return r.ApiService.V1PresharedkeyGetExecute(r)
 }
 
 /*
 V1PresharedkeyGet Method for V1PresharedkeyGet
+
+Get all domain categories from the DPI engine
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV1PresharedkeyGetRequest
@@ -46691,13 +48909,13 @@ func (a *DefaultAPIService) V1PresharedkeyGet(ctx context.Context) ApiV1Preshare
 }
 
 // Execute executes the request
-//  @return V1PresharedkeyGet200Response
-func (a *DefaultAPIService) V1PresharedkeyGetExecute(r ApiV1PresharedkeyGetRequest) (*V1PresharedkeyGet200Response, *http.Response, error) {
+//  @return V1PresharedkeyGetResponse
+func (a *DefaultAPIService) V1PresharedkeyGetExecute(r ApiV1PresharedkeyGetRequest) (*V1PresharedkeyGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1PresharedkeyGet200Response
+		localVarReturnValue  *V1PresharedkeyGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1PresharedkeyGet")
@@ -46795,12 +49013,14 @@ func (r ApiV1QosCircuitProfilesGetRequest) Authorization(authorization string) A
 	return r
 }
 
-func (r ApiV1QosCircuitProfilesGetRequest) Execute() (*V1QosCircuitProfilesGet200Response, *http.Response, error) {
+func (r ApiV1QosCircuitProfilesGetRequest) Execute() (*V1QosCircuitProfilesGetResponse, *http.Response, error) {
 	return r.ApiService.V1QosCircuitProfilesGetExecute(r)
 }
 
 /*
 V1QosCircuitProfilesGet Method for V1QosCircuitProfilesGet
+
+Returns a list of QoS profiles for circuits with associated queues & attributes
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV1QosCircuitProfilesGetRequest
@@ -46813,13 +49033,13 @@ func (a *DefaultAPIService) V1QosCircuitProfilesGet(ctx context.Context) ApiV1Qo
 }
 
 // Execute executes the request
-//  @return V1QosCircuitProfilesGet200Response
-func (a *DefaultAPIService) V1QosCircuitProfilesGetExecute(r ApiV1QosCircuitProfilesGetRequest) (*V1QosCircuitProfilesGet200Response, *http.Response, error) {
+//  @return V1QosCircuitProfilesGetResponse
+func (a *DefaultAPIService) V1QosCircuitProfilesGetExecute(r ApiV1QosCircuitProfilesGetRequest) (*V1QosCircuitProfilesGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1QosCircuitProfilesGet200Response
+		localVarReturnValue  *V1QosCircuitProfilesGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1QosCircuitProfilesGet")
@@ -46917,12 +49137,14 @@ func (r ApiV1RegionsGetRequest) Authorization(authorization string) ApiV1Regions
 	return r
 }
 
-func (r ApiV1RegionsGetRequest) Execute() (*V1GatewaysRegionsGet200Response, *http.Response, error) {
+func (r ApiV1RegionsGetRequest) Execute() (*V1RegionsGetResponse, *http.Response, error) {
 	return r.ApiService.V1RegionsGetExecute(r)
 }
 
 /*
 V1RegionsGet Method for V1RegionsGet
+
+Get regions used for the current enterprise
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV1RegionsGetRequest
@@ -46935,13 +49157,13 @@ func (a *DefaultAPIService) V1RegionsGet(ctx context.Context) ApiV1RegionsGetReq
 }
 
 // Execute executes the request
-//  @return V1GatewaysRegionsGet200Response
-func (a *DefaultAPIService) V1RegionsGetExecute(r ApiV1RegionsGetRequest) (*V1GatewaysRegionsGet200Response, *http.Response, error) {
+//  @return V1RegionsGetResponse
+func (a *DefaultAPIService) V1RegionsGetExecute(r ApiV1RegionsGetRequest) (*V1RegionsGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1GatewaysRegionsGet200Response
+		localVarReturnValue  *V1RegionsGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1RegionsGet")
@@ -47053,7 +49275,7 @@ func (r ApiV1SearchGetRequest) Search(search string) ApiV1SearchGetRequest {
 	return r
 }
 
-func (r ApiV1SearchGetRequest) Execute() (*V1SearchGet200Response, *http.Response, error) {
+func (r ApiV1SearchGetRequest) Execute() (*V1SearchGetResponse, *http.Response, error) {
 	return r.ApiService.V1SearchGetExecute(r)
 }
 
@@ -47071,13 +49293,13 @@ func (a *DefaultAPIService) V1SearchGet(ctx context.Context) ApiV1SearchGetReque
 }
 
 // Execute executes the request
-//  @return V1SearchGet200Response
-func (a *DefaultAPIService) V1SearchGetExecute(r ApiV1SearchGetRequest) (*V1SearchGet200Response, *http.Response, error) {
+//  @return V1SearchGetResponse
+func (a *DefaultAPIService) V1SearchGetExecute(r ApiV1SearchGetRequest) (*V1SearchGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1SearchGet200Response
+		localVarReturnValue  *V1SearchGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1SearchGet")
@@ -47187,12 +49409,14 @@ func (r ApiV1SiteDetailsSitelistsPostRequest) V1SiteDetailsSitelistsPostRequest(
 	return r
 }
 
-func (r ApiV1SiteDetailsSitelistsPostRequest) Execute() (*V1SiteDetailsSitelistsPost200Response, *http.Response, error) {
+func (r ApiV1SiteDetailsSitelistsPostRequest) Execute() (*V1SiteDetailsSitelistsPostResponse, *http.Response, error) {
 	return r.ApiService.V1SiteDetailsSitelistsPostExecute(r)
 }
 
 /*
 V1SiteDetailsSitelistsPost Method for V1SiteDetailsSitelistsPost
+
+Get a list of site list references for a site
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV1SiteDetailsSitelistsPostRequest
@@ -47205,13 +49429,13 @@ func (a *DefaultAPIService) V1SiteDetailsSitelistsPost(ctx context.Context) ApiV
 }
 
 // Execute executes the request
-//  @return V1SiteDetailsSitelistsPost200Response
-func (a *DefaultAPIService) V1SiteDetailsSitelistsPostExecute(r ApiV1SiteDetailsSitelistsPostRequest) (*V1SiteDetailsSitelistsPost200Response, *http.Response, error) {
+//  @return V1SiteDetailsSitelistsPostResponse
+func (a *DefaultAPIService) V1SiteDetailsSitelistsPostExecute(r ApiV1SiteDetailsSitelistsPostRequest) (*V1SiteDetailsSitelistsPostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1SiteDetailsSitelistsPost200Response
+		localVarReturnValue  *V1SiteDetailsSitelistsPostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1SiteDetailsSitelistsPost")
@@ -47315,12 +49539,14 @@ func (r ApiV1SiteIdDetailsInterfacesGetRequest) Authorization(authorization stri
 	return r
 }
 
-func (r ApiV1SiteIdDetailsInterfacesGetRequest) Execute() (*V1SiteIdDetailsInterfacesGet200Response, *http.Response, error) {
+func (r ApiV1SiteIdDetailsInterfacesGetRequest) Execute() (*V1SiteIdDetailsInterfacesGetResponse, *http.Response, error) {
 	return r.ApiService.V1SiteIdDetailsInterfacesGetExecute(r)
 }
 
 /*
 V1SiteIdDetailsInterfacesGet Method for V1SiteIdDetailsInterfacesGet
+
+Get a list of a site's interfaces, loopback listed first
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @param id 
@@ -47335,13 +49561,13 @@ func (a *DefaultAPIService) V1SiteIdDetailsInterfacesGet(ctx context.Context, id
 }
 
 // Execute executes the request
-//  @return V1SiteIdDetailsInterfacesGet200Response
-func (a *DefaultAPIService) V1SiteIdDetailsInterfacesGetExecute(r ApiV1SiteIdDetailsInterfacesGetRequest) (*V1SiteIdDetailsInterfacesGet200Response, *http.Response, error) {
+//  @return V1SiteIdDetailsInterfacesGetResponse
+func (a *DefaultAPIService) V1SiteIdDetailsInterfacesGetExecute(r ApiV1SiteIdDetailsInterfacesGetRequest) (*V1SiteIdDetailsInterfacesGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1SiteIdDetailsInterfacesGet200Response
+		localVarReturnValue  *V1SiteIdDetailsInterfacesGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1SiteIdDetailsInterfacesGet")
@@ -47440,12 +49666,14 @@ func (r ApiV1SitesDetailsGetRequest) Authorization(authorization string) ApiV1Si
 	return r
 }
 
-func (r ApiV1SitesDetailsGetRequest) Execute() (*V1SitesDetailsGet200Response, *http.Response, error) {
+func (r ApiV1SitesDetailsGetRequest) Execute() (*V1SitesDetailsGetResponse, *http.Response, error) {
 	return r.ApiService.V1SitesDetailsGetExecute(r)
 }
 
 /*
 V1SitesDetailsGet Method for V1SitesDetailsGet
+
+Get a list of sites with aggregated values and site wide status
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV1SitesDetailsGetRequest
@@ -47458,13 +49686,13 @@ func (a *DefaultAPIService) V1SitesDetailsGet(ctx context.Context) ApiV1SitesDet
 }
 
 // Execute executes the request
-//  @return V1SitesDetailsGet200Response
-func (a *DefaultAPIService) V1SitesDetailsGetExecute(r ApiV1SitesDetailsGetRequest) (*V1SitesDetailsGet200Response, *http.Response, error) {
+//  @return V1SitesDetailsGetResponse
+func (a *DefaultAPIService) V1SitesDetailsGetExecute(r ApiV1SitesDetailsGetRequest) (*V1SitesDetailsGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1SitesDetailsGet200Response
+		localVarReturnValue  *V1SitesDetailsGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1SitesDetailsGet")
@@ -47562,12 +49790,14 @@ func (r ApiV1SitesGetRequest) Authorization(authorization string) ApiV1SitesGetR
 	return r
 }
 
-func (r ApiV1SitesGetRequest) Execute() (*V1SitesGet200Response, *http.Response, error) {
+func (r ApiV1SitesGetRequest) Execute() (*V1SitesGetResponse, *http.Response, error) {
 	return r.ApiService.V1SitesGetExecute(r)
 }
 
 /*
 V1SitesGet Method for V1SitesGet
+
+Get sites for the current enterprise
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV1SitesGetRequest
@@ -47580,13 +49810,13 @@ func (a *DefaultAPIService) V1SitesGet(ctx context.Context) ApiV1SitesGetRequest
 }
 
 // Execute executes the request
-//  @return V1SitesGet200Response
-func (a *DefaultAPIService) V1SitesGetExecute(r ApiV1SitesGetRequest) (*V1SitesGet200Response, *http.Response, error) {
+//  @return V1SitesGetResponse
+func (a *DefaultAPIService) V1SitesGetExecute(r ApiV1SitesGetRequest) (*V1SitesGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1SitesGet200Response
+		localVarReturnValue  *V1SitesGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1SitesGet")
@@ -47690,12 +49920,14 @@ func (r ApiV1SitesPostRequest) V1SitesPostRequest(v1SitesPostRequest V1SitesPost
 	return r
 }
 
-func (r ApiV1SitesPostRequest) Execute() (*V1SitesPost200Response, *http.Response, error) {
+func (r ApiV1SitesPostRequest) Execute() (*V1SitesPostResponse, *http.Response, error) {
 	return r.ApiService.V1SitesPostExecute(r)
 }
 
 /*
 V1SitesPost Method for V1SitesPost
+
+Create an enterprise site
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV1SitesPostRequest
@@ -47708,13 +49940,13 @@ func (a *DefaultAPIService) V1SitesPost(ctx context.Context) ApiV1SitesPostReque
 }
 
 // Execute executes the request
-//  @return V1SitesPost200Response
-func (a *DefaultAPIService) V1SitesPostExecute(r ApiV1SitesPostRequest) (*V1SitesPost200Response, *http.Response, error) {
+//  @return V1SitesPostResponse
+func (a *DefaultAPIService) V1SitesPostExecute(r ApiV1SitesPostRequest) (*V1SitesPostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1SitesPost200Response
+		localVarReturnValue  *V1SitesPostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1SitesPost")
@@ -47818,12 +50050,14 @@ func (r ApiV1SitesSiteIdCircuitsGetRequest) Authorization(authorization string) 
 	return r
 }
 
-func (r ApiV1SitesSiteIdCircuitsGetRequest) Execute() (*V1SitesSiteIdCircuitsGet200Response, *http.Response, error) {
+func (r ApiV1SitesSiteIdCircuitsGetRequest) Execute() (*V1SitesSiteIdCircuitsGetResponse, *http.Response, error) {
 	return r.ApiService.V1SitesSiteIdCircuitsGetExecute(r)
 }
 
 /*
 V1SitesSiteIdCircuitsGet Method for V1SitesSiteIdCircuitsGet
+
+Get Circuits for the site
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @param siteId 
@@ -47838,13 +50072,13 @@ func (a *DefaultAPIService) V1SitesSiteIdCircuitsGet(ctx context.Context, siteId
 }
 
 // Execute executes the request
-//  @return V1SitesSiteIdCircuitsGet200Response
-func (a *DefaultAPIService) V1SitesSiteIdCircuitsGetExecute(r ApiV1SitesSiteIdCircuitsGetRequest) (*V1SitesSiteIdCircuitsGet200Response, *http.Response, error) {
+//  @return V1SitesSiteIdCircuitsGetResponse
+func (a *DefaultAPIService) V1SitesSiteIdCircuitsGetExecute(r ApiV1SitesSiteIdCircuitsGetRequest) (*V1SitesSiteIdCircuitsGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1SitesSiteIdCircuitsGet200Response
+		localVarReturnValue  *V1SitesSiteIdCircuitsGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1SitesSiteIdCircuitsGet")
@@ -47950,6 +50184,8 @@ func (r ApiV1SitesSiteIdDeleteRequest) Execute() (map[string]interface{}, *http.
 
 /*
 V1SitesSiteIdDelete Method for V1SitesSiteIdDelete
+
+Delete a site
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @param siteId 
@@ -48070,12 +50306,14 @@ func (r ApiV1SitesSiteIdDevicesGetRequest) Authorization(authorization string) A
 	return r
 }
 
-func (r ApiV1SitesSiteIdDevicesGetRequest) Execute() (*V1SitesSiteIdDevicesGet200Response, *http.Response, error) {
+func (r ApiV1SitesSiteIdDevicesGetRequest) Execute() (*V1SitesSiteIdDevicesGetResponse, *http.Response, error) {
 	return r.ApiService.V1SitesSiteIdDevicesGetExecute(r)
 }
 
 /*
 V1SitesSiteIdDevicesGet Method for V1SitesSiteIdDevicesGet
+
+Get Devices for the site
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @param siteId 
@@ -48090,13 +50328,13 @@ func (a *DefaultAPIService) V1SitesSiteIdDevicesGet(ctx context.Context, siteId 
 }
 
 // Execute executes the request
-//  @return V1SitesSiteIdDevicesGet200Response
-func (a *DefaultAPIService) V1SitesSiteIdDevicesGetExecute(r ApiV1SitesSiteIdDevicesGetRequest) (*V1SitesSiteIdDevicesGet200Response, *http.Response, error) {
+//  @return V1SitesSiteIdDevicesGetResponse
+func (a *DefaultAPIService) V1SitesSiteIdDevicesGetExecute(r ApiV1SitesSiteIdDevicesGetRequest) (*V1SitesSiteIdDevicesGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1SitesSiteIdDevicesGet200Response
+		localVarReturnValue  *V1SitesSiteIdDevicesGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1SitesSiteIdDevicesGet")
@@ -48205,12 +50443,14 @@ func (r ApiV1SitesSiteIdPostRequest) V1SitesSiteIdPostRequest(v1SitesSiteIdPostR
 	return r
 }
 
-func (r ApiV1SitesSiteIdPostRequest) Execute() (*V1SitesPost200Response, *http.Response, error) {
+func (r ApiV1SitesSiteIdPostRequest) Execute() (*V1SitesSiteIdPostResponse, *http.Response, error) {
 	return r.ApiService.V1SitesSiteIdPostExecute(r)
 }
 
 /*
 V1SitesSiteIdPost Method for V1SitesSiteIdPost
+
+Update a site
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @param siteId 
@@ -48225,13 +50465,13 @@ func (a *DefaultAPIService) V1SitesSiteIdPost(ctx context.Context, siteId int64)
 }
 
 // Execute executes the request
-//  @return V1SitesPost200Response
-func (a *DefaultAPIService) V1SitesSiteIdPostExecute(r ApiV1SitesSiteIdPostRequest) (*V1SitesPost200Response, *http.Response, error) {
+//  @return V1SitesSiteIdPostResponse
+func (a *DefaultAPIService) V1SitesSiteIdPostExecute(r ApiV1SitesSiteIdPostRequest) (*V1SitesSiteIdPostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1SitesPost200Response
+		localVarReturnValue  *V1SitesSiteIdPostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1SitesSiteIdPost")
@@ -48335,7 +50575,7 @@ func (r ApiV1SoftwareAutoUpgradeDefaultGetRequest) Authorization(authorization s
 	return r
 }
 
-func (r ApiV1SoftwareAutoUpgradeDefaultGetRequest) Execute() (*V1SoftwareAutoUpgradeDefaultGet200Response, *http.Response, error) {
+func (r ApiV1SoftwareAutoUpgradeDefaultGetRequest) Execute() (*V1SoftwareAutoUpgradeDefaultGetResponse, *http.Response, error) {
 	return r.ApiService.V1SoftwareAutoUpgradeDefaultGetExecute(r)
 }
 
@@ -48353,13 +50593,13 @@ func (a *DefaultAPIService) V1SoftwareAutoUpgradeDefaultGet(ctx context.Context)
 }
 
 // Execute executes the request
-//  @return V1SoftwareAutoUpgradeDefaultGet200Response
-func (a *DefaultAPIService) V1SoftwareAutoUpgradeDefaultGetExecute(r ApiV1SoftwareAutoUpgradeDefaultGetRequest) (*V1SoftwareAutoUpgradeDefaultGet200Response, *http.Response, error) {
+//  @return V1SoftwareAutoUpgradeDefaultGetResponse
+func (a *DefaultAPIService) V1SoftwareAutoUpgradeDefaultGetExecute(r ApiV1SoftwareAutoUpgradeDefaultGetRequest) (*V1SoftwareAutoUpgradeDefaultGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1SoftwareAutoUpgradeDefaultGet200Response
+		localVarReturnValue  *V1SoftwareAutoUpgradeDefaultGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1SoftwareAutoUpgradeDefaultGet")
@@ -48449,7 +50689,7 @@ type ApiV1SoftwareAutoUpgradeDefaultPutRequest struct {
 	ctx context.Context
 	ApiService *DefaultAPIService
 	authorization *string
-	v1SoftwareAutoUpgradeDefaultGet200Response *V1SoftwareAutoUpgradeDefaultGet200Response
+	v1SoftwareAutoUpgradeDefaultPutRequest *V1SoftwareAutoUpgradeDefaultPutRequest
 }
 
 // Bearer token. Format: Bearer &lt;your_token_here&gt;
@@ -48458,8 +50698,8 @@ func (r ApiV1SoftwareAutoUpgradeDefaultPutRequest) Authorization(authorization s
 	return r
 }
 
-func (r ApiV1SoftwareAutoUpgradeDefaultPutRequest) V1SoftwareAutoUpgradeDefaultGet200Response(v1SoftwareAutoUpgradeDefaultGet200Response V1SoftwareAutoUpgradeDefaultGet200Response) ApiV1SoftwareAutoUpgradeDefaultPutRequest {
-	r.v1SoftwareAutoUpgradeDefaultGet200Response = &v1SoftwareAutoUpgradeDefaultGet200Response
+func (r ApiV1SoftwareAutoUpgradeDefaultPutRequest) V1SoftwareAutoUpgradeDefaultPutRequest(v1SoftwareAutoUpgradeDefaultPutRequest V1SoftwareAutoUpgradeDefaultPutRequest) ApiV1SoftwareAutoUpgradeDefaultPutRequest {
+	r.v1SoftwareAutoUpgradeDefaultPutRequest = &v1SoftwareAutoUpgradeDefaultPutRequest
 	return r
 }
 
@@ -48503,8 +50743,8 @@ func (a *DefaultAPIService) V1SoftwareAutoUpgradeDefaultPutExecute(r ApiV1Softwa
 	if r.authorization == nil {
 		return localVarReturnValue, nil, reportError("authorization is required and must be specified")
 	}
-	if r.v1SoftwareAutoUpgradeDefaultGet200Response == nil {
-		return localVarReturnValue, nil, reportError("v1SoftwareAutoUpgradeDefaultGet200Response is required and must be specified")
+	if r.v1SoftwareAutoUpgradeDefaultPutRequest == nil {
+		return localVarReturnValue, nil, reportError("v1SoftwareAutoUpgradeDefaultPutRequest is required and must be specified")
 	}
 
 	// to determine the Content-Type header
@@ -48526,7 +50766,7 @@ func (a *DefaultAPIService) V1SoftwareAutoUpgradeDefaultPutExecute(r ApiV1Softwa
 	}
 	parameterAddToHeaderOrQuery(localVarHeaderParams, "Authorization", r.authorization, "simple", "")
 	// body params
-	localVarPostBody = r.v1SoftwareAutoUpgradeDefaultGet200Response
+	localVarPostBody = r.v1SoftwareAutoUpgradeDefaultPutRequest
 	if r.ctx != nil {
 		// API Key Authentication
 		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
@@ -48723,7 +50963,7 @@ func (r ApiV1SoftwareReleaseNotesGetRequest) Authorization(authorization string)
 	return r
 }
 
-func (r ApiV1SoftwareReleaseNotesGetRequest) Execute() (*V1SoftwareReleaseNotesGet200Response, *http.Response, error) {
+func (r ApiV1SoftwareReleaseNotesGetRequest) Execute() (*V1SoftwareReleaseNotesGetResponse, *http.Response, error) {
 	return r.ApiService.V1SoftwareReleaseNotesGetExecute(r)
 }
 
@@ -48741,13 +50981,13 @@ func (a *DefaultAPIService) V1SoftwareReleaseNotesGet(ctx context.Context) ApiV1
 }
 
 // Execute executes the request
-//  @return V1SoftwareReleaseNotesGet200Response
-func (a *DefaultAPIService) V1SoftwareReleaseNotesGetExecute(r ApiV1SoftwareReleaseNotesGetRequest) (*V1SoftwareReleaseNotesGet200Response, *http.Response, error) {
+//  @return V1SoftwareReleaseNotesGetResponse
+func (a *DefaultAPIService) V1SoftwareReleaseNotesGetExecute(r ApiV1SoftwareReleaseNotesGetRequest) (*V1SoftwareReleaseNotesGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1SoftwareReleaseNotesGet200Response
+		localVarReturnValue  *V1SoftwareReleaseNotesGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1SoftwareReleaseNotesGet")
@@ -48845,7 +51085,7 @@ func (r ApiV1SoftwareReleasesDownloadGetRequest) Authorization(authorization str
 	return r
 }
 
-func (r ApiV1SoftwareReleasesDownloadGetRequest) Execute() (*V1SoftwareReleasesDownloadGet200Response, *http.Response, error) {
+func (r ApiV1SoftwareReleasesDownloadGetRequest) Execute() (*V1SoftwareReleasesDownloadGetResponse, *http.Response, error) {
 	return r.ApiService.V1SoftwareReleasesDownloadGetExecute(r)
 }
 
@@ -48863,13 +51103,13 @@ func (a *DefaultAPIService) V1SoftwareReleasesDownloadGet(ctx context.Context) A
 }
 
 // Execute executes the request
-//  @return V1SoftwareReleasesDownloadGet200Response
-func (a *DefaultAPIService) V1SoftwareReleasesDownloadGetExecute(r ApiV1SoftwareReleasesDownloadGetRequest) (*V1SoftwareReleasesDownloadGet200Response, *http.Response, error) {
+//  @return V1SoftwareReleasesDownloadGetResponse
+func (a *DefaultAPIService) V1SoftwareReleasesDownloadGetExecute(r ApiV1SoftwareReleasesDownloadGetRequest) (*V1SoftwareReleasesDownloadGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1SoftwareReleasesDownloadGet200Response
+		localVarReturnValue  *V1SoftwareReleasesDownloadGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1SoftwareReleasesDownloadGet")
@@ -48967,7 +51207,7 @@ func (r ApiV1SoftwareReleasesSummaryGetRequest) Authorization(authorization stri
 	return r
 }
 
-func (r ApiV1SoftwareReleasesSummaryGetRequest) Execute() (*V1SoftwareReleasesSummaryGet200Response, *http.Response, error) {
+func (r ApiV1SoftwareReleasesSummaryGetRequest) Execute() (*V1SoftwareReleasesSummaryGetResponse, *http.Response, error) {
 	return r.ApiService.V1SoftwareReleasesSummaryGetExecute(r)
 }
 
@@ -48985,13 +51225,13 @@ func (a *DefaultAPIService) V1SoftwareReleasesSummaryGet(ctx context.Context) Ap
 }
 
 // Execute executes the request
-//  @return V1SoftwareReleasesSummaryGet200Response
-func (a *DefaultAPIService) V1SoftwareReleasesSummaryGetExecute(r ApiV1SoftwareReleasesSummaryGetRequest) (*V1SoftwareReleasesSummaryGet200Response, *http.Response, error) {
+//  @return V1SoftwareReleasesSummaryGetResponse
+func (a *DefaultAPIService) V1SoftwareReleasesSummaryGetExecute(r ApiV1SoftwareReleasesSummaryGetRequest) (*V1SoftwareReleasesSummaryGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1SoftwareReleasesSummaryGet200Response
+		localVarReturnValue  *V1SoftwareReleasesSummaryGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1SoftwareReleasesSummaryGet")
@@ -49089,7 +51329,7 @@ func (r ApiV1SoftwareRunningDetailsGetRequest) Authorization(authorization strin
 	return r
 }
 
-func (r ApiV1SoftwareRunningDetailsGetRequest) Execute() (*V1SoftwareRunningDetailsGet200Response, *http.Response, error) {
+func (r ApiV1SoftwareRunningDetailsGetRequest) Execute() (*V1SoftwareRunningDetailsGetResponse, *http.Response, error) {
 	return r.ApiService.V1SoftwareRunningDetailsGetExecute(r)
 }
 
@@ -49107,13 +51347,13 @@ func (a *DefaultAPIService) V1SoftwareRunningDetailsGet(ctx context.Context) Api
 }
 
 // Execute executes the request
-//  @return V1SoftwareRunningDetailsGet200Response
-func (a *DefaultAPIService) V1SoftwareRunningDetailsGetExecute(r ApiV1SoftwareRunningDetailsGetRequest) (*V1SoftwareRunningDetailsGet200Response, *http.Response, error) {
+//  @return V1SoftwareRunningDetailsGetResponse
+func (a *DefaultAPIService) V1SoftwareRunningDetailsGetExecute(r ApiV1SoftwareRunningDetailsGetRequest) (*V1SoftwareRunningDetailsGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1SoftwareRunningDetailsGet200Response
+		localVarReturnValue  *V1SoftwareRunningDetailsGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1SoftwareRunningDetailsGet")
@@ -49211,7 +51451,7 @@ func (r ApiV1SoftwareRunningSummaryGetRequest) Authorization(authorization strin
 	return r
 }
 
-func (r ApiV1SoftwareRunningSummaryGetRequest) Execute() (*V1SoftwareRunningSummaryGet200Response, *http.Response, error) {
+func (r ApiV1SoftwareRunningSummaryGetRequest) Execute() (*V1SoftwareRunningSummaryGetResponse, *http.Response, error) {
 	return r.ApiService.V1SoftwareRunningSummaryGetExecute(r)
 }
 
@@ -49229,13 +51469,13 @@ func (a *DefaultAPIService) V1SoftwareRunningSummaryGet(ctx context.Context) Api
 }
 
 // Execute executes the request
-//  @return V1SoftwareRunningSummaryGet200Response
-func (a *DefaultAPIService) V1SoftwareRunningSummaryGetExecute(r ApiV1SoftwareRunningSummaryGetRequest) (*V1SoftwareRunningSummaryGet200Response, *http.Response, error) {
+//  @return V1SoftwareRunningSummaryGetResponse
+func (a *DefaultAPIService) V1SoftwareRunningSummaryGetExecute(r ApiV1SoftwareRunningSummaryGetRequest) (*V1SoftwareRunningSummaryGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1SoftwareRunningSummaryGet200Response
+		localVarReturnValue  *V1SoftwareRunningSummaryGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1SoftwareRunningSummaryGet")
@@ -49340,12 +51580,14 @@ func (r ApiV1TalkersDeviceDeviceIdTopPostRequest) V1TalkersDeviceDeviceIdTopPost
 	return r
 }
 
-func (r ApiV1TalkersDeviceDeviceIdTopPostRequest) Execute() (*V1TalkersDeviceDeviceIdTopPost200Response, *http.Response, error) {
+func (r ApiV1TalkersDeviceDeviceIdTopPostRequest) Execute() (*V1TalkersDeviceDeviceIdTopPostResponse, *http.Response, error) {
 	return r.ApiService.V1TalkersDeviceDeviceIdTopPostExecute(r)
 }
 
 /*
 V1TalkersDeviceDeviceIdTopPost Method for V1TalkersDeviceDeviceIdTopPost
+
+Get top talkers for a device
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @param deviceId 
@@ -49360,13 +51602,13 @@ func (a *DefaultAPIService) V1TalkersDeviceDeviceIdTopPost(ctx context.Context, 
 }
 
 // Execute executes the request
-//  @return V1TalkersDeviceDeviceIdTopPost200Response
-func (a *DefaultAPIService) V1TalkersDeviceDeviceIdTopPostExecute(r ApiV1TalkersDeviceDeviceIdTopPostRequest) (*V1TalkersDeviceDeviceIdTopPost200Response, *http.Response, error) {
+//  @return V1TalkersDeviceDeviceIdTopPostResponse
+func (a *DefaultAPIService) V1TalkersDeviceDeviceIdTopPostExecute(r ApiV1TalkersDeviceDeviceIdTopPostRequest) (*V1TalkersDeviceDeviceIdTopPostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1TalkersDeviceDeviceIdTopPost200Response
+		localVarReturnValue  *V1TalkersDeviceDeviceIdTopPostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1TalkersDeviceDeviceIdTopPost")
@@ -49463,7 +51705,7 @@ type ApiV1TalkersSiteSiteIdTopPostRequest struct {
 	ApiService *DefaultAPIService
 	authorization *string
 	siteId int64
-	v1TalkersDeviceDeviceIdTopPostRequest *V1TalkersDeviceDeviceIdTopPostRequest
+	v1TalkersSiteSiteIdTopPostRequest *V1TalkersSiteSiteIdTopPostRequest
 }
 
 // Bearer token. Format: Bearer &lt;your_token_here&gt;
@@ -49472,17 +51714,19 @@ func (r ApiV1TalkersSiteSiteIdTopPostRequest) Authorization(authorization string
 	return r
 }
 
-func (r ApiV1TalkersSiteSiteIdTopPostRequest) V1TalkersDeviceDeviceIdTopPostRequest(v1TalkersDeviceDeviceIdTopPostRequest V1TalkersDeviceDeviceIdTopPostRequest) ApiV1TalkersSiteSiteIdTopPostRequest {
-	r.v1TalkersDeviceDeviceIdTopPostRequest = &v1TalkersDeviceDeviceIdTopPostRequest
+func (r ApiV1TalkersSiteSiteIdTopPostRequest) V1TalkersSiteSiteIdTopPostRequest(v1TalkersSiteSiteIdTopPostRequest V1TalkersSiteSiteIdTopPostRequest) ApiV1TalkersSiteSiteIdTopPostRequest {
+	r.v1TalkersSiteSiteIdTopPostRequest = &v1TalkersSiteSiteIdTopPostRequest
 	return r
 }
 
-func (r ApiV1TalkersSiteSiteIdTopPostRequest) Execute() (*V1TalkersDeviceDeviceIdTopPost200Response, *http.Response, error) {
+func (r ApiV1TalkersSiteSiteIdTopPostRequest) Execute() (*V1TalkersSiteSiteIdTopPostResponse, *http.Response, error) {
 	return r.ApiService.V1TalkersSiteSiteIdTopPostExecute(r)
 }
 
 /*
 V1TalkersSiteSiteIdTopPost Method for V1TalkersSiteSiteIdTopPost
+
+Get top talkers for a site
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @param siteId 
@@ -49497,13 +51741,13 @@ func (a *DefaultAPIService) V1TalkersSiteSiteIdTopPost(ctx context.Context, site
 }
 
 // Execute executes the request
-//  @return V1TalkersDeviceDeviceIdTopPost200Response
-func (a *DefaultAPIService) V1TalkersSiteSiteIdTopPostExecute(r ApiV1TalkersSiteSiteIdTopPostRequest) (*V1TalkersDeviceDeviceIdTopPost200Response, *http.Response, error) {
+//  @return V1TalkersSiteSiteIdTopPostResponse
+func (a *DefaultAPIService) V1TalkersSiteSiteIdTopPostExecute(r ApiV1TalkersSiteSiteIdTopPostRequest) (*V1TalkersSiteSiteIdTopPostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1TalkersDeviceDeviceIdTopPost200Response
+		localVarReturnValue  *V1TalkersSiteSiteIdTopPostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1TalkersSiteSiteIdTopPost")
@@ -49520,8 +51764,8 @@ func (a *DefaultAPIService) V1TalkersSiteSiteIdTopPostExecute(r ApiV1TalkersSite
 	if r.authorization == nil {
 		return localVarReturnValue, nil, reportError("authorization is required and must be specified")
 	}
-	if r.v1TalkersDeviceDeviceIdTopPostRequest == nil {
-		return localVarReturnValue, nil, reportError("v1TalkersDeviceDeviceIdTopPostRequest is required and must be specified")
+	if r.v1TalkersSiteSiteIdTopPostRequest == nil {
+		return localVarReturnValue, nil, reportError("v1TalkersSiteSiteIdTopPostRequest is required and must be specified")
 	}
 
 	// to determine the Content-Type header
@@ -49543,7 +51787,7 @@ func (a *DefaultAPIService) V1TalkersSiteSiteIdTopPostExecute(r ApiV1TalkersSite
 	}
 	parameterAddToHeaderOrQuery(localVarHeaderParams, "Authorization", r.authorization, "simple", "")
 	// body params
-	localVarPostBody = r.v1TalkersDeviceDeviceIdTopPostRequest
+	localVarPostBody = r.v1TalkersSiteSiteIdTopPostRequest
 	if r.ctx != nil {
 		// API Key Authentication
 		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
@@ -49619,6 +51863,8 @@ func (r ApiV1TempPasswordPutRequest) Execute() (map[string]interface{}, *http.Re
 
 /*
 V1TempPasswordPut Method for V1TempPasswordPut
+
+Generate and send temporary passwords to multiple emails for B2B service access.
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV1TempPasswordPutRequest
@@ -49733,7 +51979,7 @@ type ApiV1TroubleshootingDeviceDeviceIdPostRequest struct {
 	ApiService *DefaultAPIService
 	authorization *string
 	deviceId int64
-	v2NotificationlistPostRequest *V2NotificationlistPostRequest
+	v1TroubleshootingDeviceDeviceIdPostRequest *V1TroubleshootingDeviceDeviceIdPostRequest
 }
 
 // Bearer token. Format: Bearer &lt;your_token_here&gt;
@@ -49742,12 +51988,12 @@ func (r ApiV1TroubleshootingDeviceDeviceIdPostRequest) Authorization(authorizati
 	return r
 }
 
-func (r ApiV1TroubleshootingDeviceDeviceIdPostRequest) V2NotificationlistPostRequest(v2NotificationlistPostRequest V2NotificationlistPostRequest) ApiV1TroubleshootingDeviceDeviceIdPostRequest {
-	r.v2NotificationlistPostRequest = &v2NotificationlistPostRequest
+func (r ApiV1TroubleshootingDeviceDeviceIdPostRequest) V1TroubleshootingDeviceDeviceIdPostRequest(v1TroubleshootingDeviceDeviceIdPostRequest V1TroubleshootingDeviceDeviceIdPostRequest) ApiV1TroubleshootingDeviceDeviceIdPostRequest {
+	r.v1TroubleshootingDeviceDeviceIdPostRequest = &v1TroubleshootingDeviceDeviceIdPostRequest
 	return r
 }
 
-func (r ApiV1TroubleshootingDeviceDeviceIdPostRequest) Execute() (*V1TroubleshootingDeviceDeviceIdPost200Response, *http.Response, error) {
+func (r ApiV1TroubleshootingDeviceDeviceIdPostRequest) Execute() (*V1TroubleshootingDeviceDeviceIdPostResponse, *http.Response, error) {
 	return r.ApiService.V1TroubleshootingDeviceDeviceIdPostExecute(r)
 }
 
@@ -49767,13 +52013,13 @@ func (a *DefaultAPIService) V1TroubleshootingDeviceDeviceIdPost(ctx context.Cont
 }
 
 // Execute executes the request
-//  @return V1TroubleshootingDeviceDeviceIdPost200Response
-func (a *DefaultAPIService) V1TroubleshootingDeviceDeviceIdPostExecute(r ApiV1TroubleshootingDeviceDeviceIdPostRequest) (*V1TroubleshootingDeviceDeviceIdPost200Response, *http.Response, error) {
+//  @return V1TroubleshootingDeviceDeviceIdPostResponse
+func (a *DefaultAPIService) V1TroubleshootingDeviceDeviceIdPostExecute(r ApiV1TroubleshootingDeviceDeviceIdPostRequest) (*V1TroubleshootingDeviceDeviceIdPostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1TroubleshootingDeviceDeviceIdPost200Response
+		localVarReturnValue  *V1TroubleshootingDeviceDeviceIdPostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1TroubleshootingDeviceDeviceIdPost")
@@ -49790,8 +52036,8 @@ func (a *DefaultAPIService) V1TroubleshootingDeviceDeviceIdPostExecute(r ApiV1Tr
 	if r.authorization == nil {
 		return localVarReturnValue, nil, reportError("authorization is required and must be specified")
 	}
-	if r.v2NotificationlistPostRequest == nil {
-		return localVarReturnValue, nil, reportError("v2NotificationlistPostRequest is required and must be specified")
+	if r.v1TroubleshootingDeviceDeviceIdPostRequest == nil {
+		return localVarReturnValue, nil, reportError("v1TroubleshootingDeviceDeviceIdPostRequest is required and must be specified")
 	}
 
 	// to determine the Content-Type header
@@ -49813,7 +52059,7 @@ func (a *DefaultAPIService) V1TroubleshootingDeviceDeviceIdPostExecute(r ApiV1Tr
 	}
 	parameterAddToHeaderOrQuery(localVarHeaderParams, "Authorization", r.authorization, "simple", "")
 	// body params
-	localVarPostBody = r.v2NotificationlistPostRequest
+	localVarPostBody = r.v1TroubleshootingDeviceDeviceIdPostRequest
 	if r.ctx != nil {
 		// API Key Authentication
 		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
@@ -49883,7 +52129,7 @@ func (r ApiV1TroubleshootingEnterprisePostRequest) V1TroubleshootingEnterprisePo
 	return r
 }
 
-func (r ApiV1TroubleshootingEnterprisePostRequest) Execute() (*V1TroubleshootingEnterprisePost200Response, *http.Response, error) {
+func (r ApiV1TroubleshootingEnterprisePostRequest) Execute() (*V1TroubleshootingEnterprisePostResponse, *http.Response, error) {
 	return r.ApiService.V1TroubleshootingEnterprisePostExecute(r)
 }
 
@@ -49901,13 +52147,13 @@ func (a *DefaultAPIService) V1TroubleshootingEnterprisePost(ctx context.Context)
 }
 
 // Execute executes the request
-//  @return V1TroubleshootingEnterprisePost200Response
-func (a *DefaultAPIService) V1TroubleshootingEnterprisePostExecute(r ApiV1TroubleshootingEnterprisePostRequest) (*V1TroubleshootingEnterprisePost200Response, *http.Response, error) {
+//  @return V1TroubleshootingEnterprisePostResponse
+func (a *DefaultAPIService) V1TroubleshootingEnterprisePostExecute(r ApiV1TroubleshootingEnterprisePostRequest) (*V1TroubleshootingEnterprisePostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1TroubleshootingEnterprisePost200Response
+		localVarReturnValue  *V1TroubleshootingEnterprisePostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1TroubleshootingEnterprisePost")
@@ -50010,7 +52256,7 @@ func (r ApiV1TroubleshootingFilterGetRequest) Authorization(authorization string
 	return r
 }
 
-func (r ApiV1TroubleshootingFilterGetRequest) Execute() (*V1BackboneHealthFilterGet200Response, *http.Response, error) {
+func (r ApiV1TroubleshootingFilterGetRequest) Execute() (*V1TroubleshootingFilterGetResponse, *http.Response, error) {
 	return r.ApiService.V1TroubleshootingFilterGetExecute(r)
 }
 
@@ -50028,13 +52274,13 @@ func (a *DefaultAPIService) V1TroubleshootingFilterGet(ctx context.Context) ApiV
 }
 
 // Execute executes the request
-//  @return V1BackboneHealthFilterGet200Response
-func (a *DefaultAPIService) V1TroubleshootingFilterGetExecute(r ApiV1TroubleshootingFilterGetRequest) (*V1BackboneHealthFilterGet200Response, *http.Response, error) {
+//  @return V1TroubleshootingFilterGetResponse
+func (a *DefaultAPIService) V1TroubleshootingFilterGetExecute(r ApiV1TroubleshootingFilterGetRequest) (*V1TroubleshootingFilterGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1BackboneHealthFilterGet200Response
+		localVarReturnValue  *V1TroubleshootingFilterGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1TroubleshootingFilterGet")
@@ -50132,7 +52378,7 @@ func (r ApiV1TroubleshootingSiteConnectivityStatusGetRequest) Authorization(auth
 	return r
 }
 
-func (r ApiV1TroubleshootingSiteConnectivityStatusGetRequest) Execute() (*V1TroubleshootingSiteConnectivityStatusGet200Response, *http.Response, error) {
+func (r ApiV1TroubleshootingSiteConnectivityStatusGetRequest) Execute() (*V1TroubleshootingSiteConnectivityStatusGetResponse, *http.Response, error) {
 	return r.ApiService.V1TroubleshootingSiteConnectivityStatusGetExecute(r)
 }
 
@@ -50150,13 +52396,13 @@ func (a *DefaultAPIService) V1TroubleshootingSiteConnectivityStatusGet(ctx conte
 }
 
 // Execute executes the request
-//  @return V1TroubleshootingSiteConnectivityStatusGet200Response
-func (a *DefaultAPIService) V1TroubleshootingSiteConnectivityStatusGetExecute(r ApiV1TroubleshootingSiteConnectivityStatusGetRequest) (*V1TroubleshootingSiteConnectivityStatusGet200Response, *http.Response, error) {
+//  @return V1TroubleshootingSiteConnectivityStatusGetResponse
+func (a *DefaultAPIService) V1TroubleshootingSiteConnectivityStatusGetExecute(r ApiV1TroubleshootingSiteConnectivityStatusGetRequest) (*V1TroubleshootingSiteConnectivityStatusGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1TroubleshootingSiteConnectivityStatusGet200Response
+		localVarReturnValue  *V1TroubleshootingSiteConnectivityStatusGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1TroubleshootingSiteConnectivityStatusGet")
@@ -50255,7 +52501,7 @@ func (r ApiV1TroubleshootingSiteSiteIdGetRequest) Authorization(authorization st
 	return r
 }
 
-func (r ApiV1TroubleshootingSiteSiteIdGetRequest) Execute() (*V1TroubleshootingSiteSiteIdGet200Response, *http.Response, error) {
+func (r ApiV1TroubleshootingSiteSiteIdGetRequest) Execute() (*V1TroubleshootingSiteSiteIdGetResponse, *http.Response, error) {
 	return r.ApiService.V1TroubleshootingSiteSiteIdGetExecute(r)
 }
 
@@ -50275,13 +52521,13 @@ func (a *DefaultAPIService) V1TroubleshootingSiteSiteIdGet(ctx context.Context, 
 }
 
 // Execute executes the request
-//  @return V1TroubleshootingSiteSiteIdGet200Response
-func (a *DefaultAPIService) V1TroubleshootingSiteSiteIdGetExecute(r ApiV1TroubleshootingSiteSiteIdGetRequest) (*V1TroubleshootingSiteSiteIdGet200Response, *http.Response, error) {
+//  @return V1TroubleshootingSiteSiteIdGetResponse
+func (a *DefaultAPIService) V1TroubleshootingSiteSiteIdGetExecute(r ApiV1TroubleshootingSiteSiteIdGetRequest) (*V1TroubleshootingSiteSiteIdGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1TroubleshootingSiteSiteIdGet200Response
+		localVarReturnValue  *V1TroubleshootingSiteSiteIdGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1TroubleshootingSiteSiteIdGet")
@@ -50372,7 +52618,7 @@ type ApiV1TroubleshootingTopSitesByAlertsPostRequest struct {
 	ctx context.Context
 	ApiService *DefaultAPIService
 	authorization *string
-	v1BackboneHealthTopDevicesByAlertsPostRequest *V1BackboneHealthTopDevicesByAlertsPostRequest
+	v1TroubleshootingTopSitesByAlertsPostRequest *V1TroubleshootingTopSitesByAlertsPostRequest
 }
 
 // Bearer token. Format: Bearer &lt;your_token_here&gt;
@@ -50381,12 +52627,12 @@ func (r ApiV1TroubleshootingTopSitesByAlertsPostRequest) Authorization(authoriza
 	return r
 }
 
-func (r ApiV1TroubleshootingTopSitesByAlertsPostRequest) V1BackboneHealthTopDevicesByAlertsPostRequest(v1BackboneHealthTopDevicesByAlertsPostRequest V1BackboneHealthTopDevicesByAlertsPostRequest) ApiV1TroubleshootingTopSitesByAlertsPostRequest {
-	r.v1BackboneHealthTopDevicesByAlertsPostRequest = &v1BackboneHealthTopDevicesByAlertsPostRequest
+func (r ApiV1TroubleshootingTopSitesByAlertsPostRequest) V1TroubleshootingTopSitesByAlertsPostRequest(v1TroubleshootingTopSitesByAlertsPostRequest V1TroubleshootingTopSitesByAlertsPostRequest) ApiV1TroubleshootingTopSitesByAlertsPostRequest {
+	r.v1TroubleshootingTopSitesByAlertsPostRequest = &v1TroubleshootingTopSitesByAlertsPostRequest
 	return r
 }
 
-func (r ApiV1TroubleshootingTopSitesByAlertsPostRequest) Execute() (*V1TroubleshootingTopSitesByAlertsPost200Response, *http.Response, error) {
+func (r ApiV1TroubleshootingTopSitesByAlertsPostRequest) Execute() (*V1TroubleshootingTopSitesByAlertsPostResponse, *http.Response, error) {
 	return r.ApiService.V1TroubleshootingTopSitesByAlertsPostExecute(r)
 }
 
@@ -50404,13 +52650,13 @@ func (a *DefaultAPIService) V1TroubleshootingTopSitesByAlertsPost(ctx context.Co
 }
 
 // Execute executes the request
-//  @return V1TroubleshootingTopSitesByAlertsPost200Response
-func (a *DefaultAPIService) V1TroubleshootingTopSitesByAlertsPostExecute(r ApiV1TroubleshootingTopSitesByAlertsPostRequest) (*V1TroubleshootingTopSitesByAlertsPost200Response, *http.Response, error) {
+//  @return V1TroubleshootingTopSitesByAlertsPostResponse
+func (a *DefaultAPIService) V1TroubleshootingTopSitesByAlertsPostExecute(r ApiV1TroubleshootingTopSitesByAlertsPostRequest) (*V1TroubleshootingTopSitesByAlertsPostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1TroubleshootingTopSitesByAlertsPost200Response
+		localVarReturnValue  *V1TroubleshootingTopSitesByAlertsPostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1TroubleshootingTopSitesByAlertsPost")
@@ -50426,8 +52672,8 @@ func (a *DefaultAPIService) V1TroubleshootingTopSitesByAlertsPostExecute(r ApiV1
 	if r.authorization == nil {
 		return localVarReturnValue, nil, reportError("authorization is required and must be specified")
 	}
-	if r.v1BackboneHealthTopDevicesByAlertsPostRequest == nil {
-		return localVarReturnValue, nil, reportError("v1BackboneHealthTopDevicesByAlertsPostRequest is required and must be specified")
+	if r.v1TroubleshootingTopSitesByAlertsPostRequest == nil {
+		return localVarReturnValue, nil, reportError("v1TroubleshootingTopSitesByAlertsPostRequest is required and must be specified")
 	}
 
 	// to determine the Content-Type header
@@ -50449,7 +52695,7 @@ func (a *DefaultAPIService) V1TroubleshootingTopSitesByAlertsPostExecute(r ApiV1
 	}
 	parameterAddToHeaderOrQuery(localVarHeaderParams, "Authorization", r.authorization, "simple", "")
 	// body params
-	localVarPostBody = r.v1BackboneHealthTopDevicesByAlertsPostRequest
+	localVarPostBody = r.v1TroubleshootingTopSitesByAlertsPostRequest
 	if r.ctx != nil {
 		// API Key Authentication
 		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
@@ -50514,7 +52760,7 @@ func (r ApiV1TtTtIdentityDeviceStatusGetRequest) Authorization(authorization str
 	return r
 }
 
-func (r ApiV1TtTtIdentityDeviceStatusGetRequest) Execute() (*V1DeviceStatusPost200Response, *http.Response, error) {
+func (r ApiV1TtTtIdentityDeviceStatusGetRequest) Execute() (*V1TtTtIdentityDeviceStatusGetResponse, *http.Response, error) {
 	return r.ApiService.V1TtTtIdentityDeviceStatusGetExecute(r)
 }
 
@@ -50534,13 +52780,13 @@ func (a *DefaultAPIService) V1TtTtIdentityDeviceStatusGet(ctx context.Context, t
 }
 
 // Execute executes the request
-//  @return V1DeviceStatusPost200Response
-func (a *DefaultAPIService) V1TtTtIdentityDeviceStatusGetExecute(r ApiV1TtTtIdentityDeviceStatusGetRequest) (*V1DeviceStatusPost200Response, *http.Response, error) {
+//  @return V1TtTtIdentityDeviceStatusGetResponse
+func (a *DefaultAPIService) V1TtTtIdentityDeviceStatusGetExecute(r ApiV1TtTtIdentityDeviceStatusGetRequest) (*V1TtTtIdentityDeviceStatusGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1DeviceStatusPost200Response
+		localVarReturnValue  *V1TtTtIdentityDeviceStatusGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1TtTtIdentityDeviceStatusGet")
@@ -50627,6 +52873,357 @@ func (a *DefaultAPIService) V1TtTtIdentityDeviceStatusGetExecute(r ApiV1TtTtIden
 	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
+type ApiV1UsersEmailPasswordPatchRequest struct {
+	ctx context.Context
+	ApiService *DefaultAPIService
+	email string
+	token *string
+	v1UsersEmailPasswordPatchRequest *V1UsersEmailPasswordPatchRequest
+}
+
+// Password reset token
+func (r ApiV1UsersEmailPasswordPatchRequest) Token(token string) ApiV1UsersEmailPasswordPatchRequest {
+	r.token = &token
+	return r
+}
+
+func (r ApiV1UsersEmailPasswordPatchRequest) V1UsersEmailPasswordPatchRequest(v1UsersEmailPasswordPatchRequest V1UsersEmailPasswordPatchRequest) ApiV1UsersEmailPasswordPatchRequest {
+	r.v1UsersEmailPasswordPatchRequest = &v1UsersEmailPasswordPatchRequest
+	return r
+}
+
+func (r ApiV1UsersEmailPasswordPatchRequest) Execute() (*http.Response, error) {
+	return r.ApiService.V1UsersEmailPasswordPatchExecute(r)
+}
+
+/*
+V1UsersEmailPasswordPatch Method for V1UsersEmailPasswordPatch
+
+Change password for a user using email and token
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @param email User email address
+ @return ApiV1UsersEmailPasswordPatchRequest
+*/
+func (a *DefaultAPIService) V1UsersEmailPasswordPatch(ctx context.Context, email string) ApiV1UsersEmailPasswordPatchRequest {
+	return ApiV1UsersEmailPasswordPatchRequest{
+		ApiService: a,
+		ctx: ctx,
+		email: email,
+	}
+}
+
+// Execute executes the request
+func (a *DefaultAPIService) V1UsersEmailPasswordPatchExecute(r ApiV1UsersEmailPasswordPatchRequest) (*http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodPatch
+		localVarPostBody     interface{}
+		formFiles            []formFile
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1UsersEmailPasswordPatch")
+	if err != nil {
+		return nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/v1/users/{email}/password"
+	localVarPath = strings.Replace(localVarPath, "{"+"email"+"}", url.PathEscape(parameterValueToString(r.email, "email")), -1)
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+	if r.token == nil {
+		return nil, reportError("token is required and must be specified")
+	}
+	if r.v1UsersEmailPasswordPatchRequest == nil {
+		return nil, reportError("v1UsersEmailPasswordPatchRequest is required and must be specified")
+	}
+
+	parameterAddToHeaderOrQuery(localVarQueryParams, "token", r.token, "form", "")
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{"application/json"}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	// body params
+	localVarPostBody = r.v1UsersEmailPasswordPatchRequest
+	if r.ctx != nil {
+		// API Key Authentication
+		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
+			if apiKey, ok := auth["jwtAuth"]; ok {
+				var key string
+				if apiKey.Prefix != "" {
+					key = apiKey.Prefix + " " + apiKey.Key
+				} else {
+					key = apiKey.Key
+				}
+				localVarHeaderParams["authorization"] = key
+			}
+		}
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarHTTPResponse, err
+	}
+
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarHTTPResponse, newErr
+	}
+
+	return localVarHTTPResponse, nil
+}
+
+type ApiV1UsersEmailRecoveryGetRequest struct {
+	ctx context.Context
+	ApiService *DefaultAPIService
+	email string
+}
+
+func (r ApiV1UsersEmailRecoveryGetRequest) Execute() (*http.Response, error) {
+	return r.ApiService.V1UsersEmailRecoveryGetExecute(r)
+}
+
+/*
+V1UsersEmailRecoveryGet Method for V1UsersEmailRecoveryGet
+
+Send password recovery email to user
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @param email User email address
+ @return ApiV1UsersEmailRecoveryGetRequest
+*/
+func (a *DefaultAPIService) V1UsersEmailRecoveryGet(ctx context.Context, email string) ApiV1UsersEmailRecoveryGetRequest {
+	return ApiV1UsersEmailRecoveryGetRequest{
+		ApiService: a,
+		ctx: ctx,
+		email: email,
+	}
+}
+
+// Execute executes the request
+func (a *DefaultAPIService) V1UsersEmailRecoveryGetExecute(r ApiV1UsersEmailRecoveryGetRequest) (*http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1UsersEmailRecoveryGet")
+	if err != nil {
+		return nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/v1/users/{email}/recovery"
+	localVarPath = strings.Replace(localVarPath, "{"+"email"+"}", url.PathEscape(parameterValueToString(r.email, "email")), -1)
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	if r.ctx != nil {
+		// API Key Authentication
+		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
+			if apiKey, ok := auth["jwtAuth"]; ok {
+				var key string
+				if apiKey.Prefix != "" {
+					key = apiKey.Prefix + " " + apiKey.Key
+				} else {
+					key = apiKey.Key
+				}
+				localVarHeaderParams["authorization"] = key
+			}
+		}
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarHTTPResponse, err
+	}
+
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarHTTPResponse, newErr
+	}
+
+	return localVarHTTPResponse, nil
+}
+
+type ApiV1UsersEmailVerifiedPatchRequest struct {
+	ctx context.Context
+	ApiService *DefaultAPIService
+	email string
+	token *string
+}
+
+// Email verification token
+func (r ApiV1UsersEmailVerifiedPatchRequest) Token(token string) ApiV1UsersEmailVerifiedPatchRequest {
+	r.token = &token
+	return r
+}
+
+func (r ApiV1UsersEmailVerifiedPatchRequest) Execute() (*http.Response, error) {
+	return r.ApiService.V1UsersEmailVerifiedPatchExecute(r)
+}
+
+/*
+V1UsersEmailVerifiedPatch Method for V1UsersEmailVerifiedPatch
+
+Verify user email using verification token
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @param email User email address
+ @return ApiV1UsersEmailVerifiedPatchRequest
+*/
+func (a *DefaultAPIService) V1UsersEmailVerifiedPatch(ctx context.Context, email string) ApiV1UsersEmailVerifiedPatchRequest {
+	return ApiV1UsersEmailVerifiedPatchRequest{
+		ApiService: a,
+		ctx: ctx,
+		email: email,
+	}
+}
+
+// Execute executes the request
+func (a *DefaultAPIService) V1UsersEmailVerifiedPatchExecute(r ApiV1UsersEmailVerifiedPatchRequest) (*http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodPatch
+		localVarPostBody     interface{}
+		formFiles            []formFile
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1UsersEmailVerifiedPatch")
+	if err != nil {
+		return nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/v1/users/{email}/verified"
+	localVarPath = strings.Replace(localVarPath, "{"+"email"+"}", url.PathEscape(parameterValueToString(r.email, "email")), -1)
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+	if r.token == nil {
+		return nil, reportError("token is required and must be specified")
+	}
+
+	parameterAddToHeaderOrQuery(localVarQueryParams, "token", r.token, "form", "")
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	if r.ctx != nil {
+		// API Key Authentication
+		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
+			if apiKey, ok := auth["jwtAuth"]; ok {
+				var key string
+				if apiKey.Prefix != "" {
+					key = apiKey.Prefix + " " + apiKey.Key
+				} else {
+					key = apiKey.Key
+				}
+				localVarHeaderParams["authorization"] = key
+			}
+		}
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarHTTPResponse, err
+	}
+
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarHTTPResponse, newErr
+	}
+
+	return localVarHTTPResponse, nil
+}
+
 type ApiV1UsersGetRequest struct {
 	ctx context.Context
 	ApiService *DefaultAPIService
@@ -50646,12 +53243,14 @@ func (r ApiV1UsersGetRequest) Id(id string) ApiV1UsersGetRequest {
 	return r
 }
 
-func (r ApiV1UsersGetRequest) Execute() (*V1GroupsIdMembersGet200Response, *http.Response, error) {
+func (r ApiV1UsersGetRequest) Execute() (*V1UsersGetResponse, *http.Response, error) {
 	return r.ApiService.V1UsersGetExecute(r)
 }
 
 /*
 V1UsersGet Method for V1UsersGet
+
+Get user information by user IDs with detailed profile data.
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV1UsersGetRequest
@@ -50664,13 +53263,13 @@ func (a *DefaultAPIService) V1UsersGet(ctx context.Context) ApiV1UsersGetRequest
 }
 
 // Execute executes the request
-//  @return V1GroupsIdMembersGet200Response
-func (a *DefaultAPIService) V1UsersGetExecute(r ApiV1UsersGetRequest) (*V1GroupsIdMembersGet200Response, *http.Response, error) {
+//  @return V1UsersGetResponse
+func (a *DefaultAPIService) V1UsersGetExecute(r ApiV1UsersGetRequest) (*V1UsersGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1GroupsIdMembersGet200Response
+		localVarReturnValue  *V1UsersGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1UsersGet")
@@ -50778,6 +53377,8 @@ func (r ApiV1UsersIdDeleteRequest) Execute() (map[string]interface{}, *http.Resp
 
 /*
 V1UsersIdDelete Method for V1UsersIdDelete
+
+Delete user account.
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @param id 
@@ -50898,12 +53499,14 @@ func (r ApiV1UsersIdEnterprisesGetRequest) Authorization(authorization string) A
 	return r
 }
 
-func (r ApiV1UsersIdEnterprisesGetRequest) Execute() (*V1EnterprisesGet200Response, *http.Response, error) {
+func (r ApiV1UsersIdEnterprisesGetRequest) Execute() (*V1UsersIdEnterprisesGetResponse, *http.Response, error) {
 	return r.ApiService.V1UsersIdEnterprisesGetExecute(r)
 }
 
 /*
 V1UsersIdEnterprisesGet Method for V1UsersIdEnterprisesGet
+
+Get all enterprises a specific user can access.
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @param id 
@@ -50918,13 +53521,13 @@ func (a *DefaultAPIService) V1UsersIdEnterprisesGet(ctx context.Context, id stri
 }
 
 // Execute executes the request
-//  @return V1EnterprisesGet200Response
-func (a *DefaultAPIService) V1UsersIdEnterprisesGetExecute(r ApiV1UsersIdEnterprisesGetRequest) (*V1EnterprisesGet200Response, *http.Response, error) {
+//  @return V1UsersIdEnterprisesGetResponse
+func (a *DefaultAPIService) V1UsersIdEnterprisesGetExecute(r ApiV1UsersIdEnterprisesGetRequest) (*V1UsersIdEnterprisesGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1EnterprisesGet200Response
+		localVarReturnValue  *V1UsersIdEnterprisesGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1UsersIdEnterprisesGet")
@@ -51024,12 +53627,14 @@ func (r ApiV1UsersIdGroupsEnterprisesGetRequest) Authorization(authorization str
 	return r
 }
 
-func (r ApiV1UsersIdGroupsEnterprisesGetRequest) Execute() (*V1GroupsGet200Response, *http.Response, error) {
+func (r ApiV1UsersIdGroupsEnterprisesGetRequest) Execute() (*V1UsersIdGroupsEnterprisesGetResponse, *http.Response, error) {
 	return r.ApiService.V1UsersIdGroupsEnterprisesGetExecute(r)
 }
 
 /*
 V1UsersIdGroupsEnterprisesGet Method for V1UsersIdGroupsEnterprisesGet
+
+Get enterprise-specific groups for a user.
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @param id 
@@ -51044,13 +53649,13 @@ func (a *DefaultAPIService) V1UsersIdGroupsEnterprisesGet(ctx context.Context, i
 }
 
 // Execute executes the request
-//  @return V1GroupsGet200Response
-func (a *DefaultAPIService) V1UsersIdGroupsEnterprisesGetExecute(r ApiV1UsersIdGroupsEnterprisesGetRequest) (*V1GroupsGet200Response, *http.Response, error) {
+//  @return V1UsersIdGroupsEnterprisesGetResponse
+func (a *DefaultAPIService) V1UsersIdGroupsEnterprisesGetExecute(r ApiV1UsersIdGroupsEnterprisesGetRequest) (*V1UsersIdGroupsEnterprisesGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1GroupsGet200Response
+		localVarReturnValue  *V1UsersIdGroupsEnterprisesGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1UsersIdGroupsEnterprisesGet")
@@ -51150,12 +53755,14 @@ func (r ApiV1UsersIdGroupsGetRequest) Authorization(authorization string) ApiV1U
 	return r
 }
 
-func (r ApiV1UsersIdGroupsGetRequest) Execute() (*V1GroupsGet200Response, *http.Response, error) {
+func (r ApiV1UsersIdGroupsGetRequest) Execute() (*V1UsersIdGroupsGetResponse, *http.Response, error) {
 	return r.ApiService.V1UsersIdGroupsGetExecute(r)
 }
 
 /*
 V1UsersIdGroupsGet Method for V1UsersIdGroupsGet
+
+Get all groups that a specific user belongs to.
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @param id 
@@ -51170,13 +53777,13 @@ func (a *DefaultAPIService) V1UsersIdGroupsGet(ctx context.Context, id string) A
 }
 
 // Execute executes the request
-//  @return V1GroupsGet200Response
-func (a *DefaultAPIService) V1UsersIdGroupsGetExecute(r ApiV1UsersIdGroupsGetRequest) (*V1GroupsGet200Response, *http.Response, error) {
+//  @return V1UsersIdGroupsGetResponse
+func (a *DefaultAPIService) V1UsersIdGroupsGetExecute(r ApiV1UsersIdGroupsGetRequest) (*V1UsersIdGroupsGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1GroupsGet200Response
+		localVarReturnValue  *V1UsersIdGroupsGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1UsersIdGroupsGet")
@@ -51276,12 +53883,14 @@ func (r ApiV1UsersIdGroupsRootGetRequest) Authorization(authorization string) Ap
 	return r
 }
 
-func (r ApiV1UsersIdGroupsRootGetRequest) Execute() (*V1GroupsGet200Response, *http.Response, error) {
+func (r ApiV1UsersIdGroupsRootGetRequest) Execute() (*V1UsersIdGroupsRootGetResponse, *http.Response, error) {
 	return r.ApiService.V1UsersIdGroupsRootGetExecute(r)
 }
 
 /*
 V1UsersIdGroupsRootGet Method for V1UsersIdGroupsRootGet
+
+Get root-level groups for a user.
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @param id 
@@ -51296,13 +53905,13 @@ func (a *DefaultAPIService) V1UsersIdGroupsRootGet(ctx context.Context, id strin
 }
 
 // Execute executes the request
-//  @return V1GroupsGet200Response
-func (a *DefaultAPIService) V1UsersIdGroupsRootGetExecute(r ApiV1UsersIdGroupsRootGetRequest) (*V1GroupsGet200Response, *http.Response, error) {
+//  @return V1UsersIdGroupsRootGetResponse
+func (a *DefaultAPIService) V1UsersIdGroupsRootGetExecute(r ApiV1UsersIdGroupsRootGetRequest) (*V1UsersIdGroupsRootGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1GroupsGet200Response
+		localVarReturnValue  *V1UsersIdGroupsRootGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1UsersIdGroupsRootGet")
@@ -51414,6 +54023,8 @@ func (r ApiV1UsersIdVerifyPatchRequest) Execute() (map[string]interface{}, *http
 
 /*
 V1UsersIdVerifyPatch Method for V1UsersIdVerifyPatch
+
+Resend account verification email to user.
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @param id 
@@ -51551,6 +54162,8 @@ func (r ApiV1UsersPutRequest) Execute() (map[string]interface{}, *http.Response,
 /*
 V1UsersPut Method for V1UsersPut
 
+Create a new user account with profile information. Assigns to specified group or default read-only group. Handles both IDP and non-IDP configured enterprises.
+
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV1UsersPutRequest
 */
@@ -51677,12 +54290,14 @@ func (r ApiV1VersionPostRequest) V1VersionPostRequest(v1VersionPostRequest V1Ver
 	return r
 }
 
-func (r ApiV1VersionPostRequest) Execute() (*V1VersionPost200Response, *http.Response, error) {
+func (r ApiV1VersionPostRequest) Execute() (*V1VersionPostResponse, *http.Response, error) {
 	return r.ApiService.V1VersionPostExecute(r)
 }
 
 /*
 V1VersionPost Method for V1VersionPost
+
+Update device config version
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV1VersionPostRequest
@@ -51695,13 +54310,13 @@ func (a *DefaultAPIService) V1VersionPost(ctx context.Context) ApiV1VersionPostR
 }
 
 // Execute executes the request
-//  @return V1VersionPost200Response
-func (a *DefaultAPIService) V1VersionPostExecute(r ApiV1VersionPostRequest) (*V1VersionPost200Response, *http.Response, error) {
+//  @return V1VersionPostResponse
+func (a *DefaultAPIService) V1VersionPostExecute(r ApiV1VersionPostRequest) (*V1VersionPostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1VersionPost200Response
+		localVarReturnValue  *V1VersionPostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1VersionPost")
@@ -51804,12 +54419,14 @@ func (r ApiV1ZonesGetRequest) Authorization(authorization string) ApiV1ZonesGetR
 	return r
 }
 
-func (r ApiV1ZonesGetRequest) Execute() (*V1ZonesGet200Response, *http.Response, error) {
+func (r ApiV1ZonesGetRequest) Execute() (*V1ZonesGetResponse, *http.Response, error) {
 	return r.ApiService.V1ZonesGetExecute(r)
 }
 
 /*
 V1ZonesGet Method for V1ZonesGet
+
+Get Zones for the current enterprise
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV1ZonesGetRequest
@@ -51822,13 +54439,13 @@ func (a *DefaultAPIService) V1ZonesGet(ctx context.Context) ApiV1ZonesGetRequest
 }
 
 // Execute executes the request
-//  @return V1ZonesGet200Response
-func (a *DefaultAPIService) V1ZonesGetExecute(r ApiV1ZonesGetRequest) (*V1ZonesGet200Response, *http.Response, error) {
+//  @return V1ZonesGetResponse
+func (a *DefaultAPIService) V1ZonesGetExecute(r ApiV1ZonesGetRequest) (*V1ZonesGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1ZonesGet200Response
+		localVarReturnValue  *V1ZonesGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V1ZonesGet")
@@ -52192,7 +54809,7 @@ func (r ApiV2AggregatedNotificationGetStateGetRequest) Authorization(authorizati
 	return r
 }
 
-func (r ApiV2AggregatedNotificationGetStateGetRequest) Execute() (*V2AggregatedNotificationGetStateGet200Response, *http.Response, error) {
+func (r ApiV2AggregatedNotificationGetStateGetRequest) Execute() (*V2AggregatedNotificationGetStateGetResponse, *http.Response, error) {
 	return r.ApiService.V2AggregatedNotificationGetStateGetExecute(r)
 }
 
@@ -52210,13 +54827,13 @@ func (a *DefaultAPIService) V2AggregatedNotificationGetStateGet(ctx context.Cont
 }
 
 // Execute executes the request
-//  @return V2AggregatedNotificationGetStateGet200Response
-func (a *DefaultAPIService) V2AggregatedNotificationGetStateGetExecute(r ApiV2AggregatedNotificationGetStateGetRequest) (*V2AggregatedNotificationGetStateGet200Response, *http.Response, error) {
+//  @return V2AggregatedNotificationGetStateGetResponse
+func (a *DefaultAPIService) V2AggregatedNotificationGetStateGetExecute(r ApiV2AggregatedNotificationGetStateGetRequest) (*V2AggregatedNotificationGetStateGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V2AggregatedNotificationGetStateGet200Response
+		localVarReturnValue  *V2AggregatedNotificationGetStateGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V2AggregatedNotificationGetStateGet")
@@ -52314,7 +54931,7 @@ func (r ApiV2AllowlistByEnterpriseGetRequest) Authorization(authorization string
 	return r
 }
 
-func (r ApiV2AllowlistByEnterpriseGetRequest) Execute() (*V2AllowlistRuleIdGet200Response, *http.Response, error) {
+func (r ApiV2AllowlistByEnterpriseGetRequest) Execute() (*V2AllowlistByEnterpriseGetResponse, *http.Response, error) {
 	return r.ApiService.V2AllowlistByEnterpriseGetExecute(r)
 }
 
@@ -52332,13 +54949,13 @@ func (a *DefaultAPIService) V2AllowlistByEnterpriseGet(ctx context.Context) ApiV
 }
 
 // Execute executes the request
-//  @return V2AllowlistRuleIdGet200Response
-func (a *DefaultAPIService) V2AllowlistByEnterpriseGetExecute(r ApiV2AllowlistByEnterpriseGetRequest) (*V2AllowlistRuleIdGet200Response, *http.Response, error) {
+//  @return V2AllowlistByEnterpriseGetResponse
+func (a *DefaultAPIService) V2AllowlistByEnterpriseGetExecute(r ApiV2AllowlistByEnterpriseGetRequest) (*V2AllowlistByEnterpriseGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V2AllowlistRuleIdGet200Response
+		localVarReturnValue  *V2AllowlistByEnterpriseGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V2AllowlistByEnterpriseGet")
@@ -52822,7 +55439,7 @@ func (r ApiV2AllowlistRuleIdGetRequest) Authorization(authorization string) ApiV
 	return r
 }
 
-func (r ApiV2AllowlistRuleIdGetRequest) Execute() (*V2AllowlistRuleIdGet200Response, *http.Response, error) {
+func (r ApiV2AllowlistRuleIdGetRequest) Execute() (*V2AllowlistRuleIdGetResponse, *http.Response, error) {
 	return r.ApiService.V2AllowlistRuleIdGetExecute(r)
 }
 
@@ -52842,13 +55459,13 @@ func (a *DefaultAPIService) V2AllowlistRuleIdGet(ctx context.Context, ruleId str
 }
 
 // Execute executes the request
-//  @return V2AllowlistRuleIdGet200Response
-func (a *DefaultAPIService) V2AllowlistRuleIdGetExecute(r ApiV2AllowlistRuleIdGetRequest) (*V2AllowlistRuleIdGet200Response, *http.Response, error) {
+//  @return V2AllowlistRuleIdGetResponse
+func (a *DefaultAPIService) V2AllowlistRuleIdGetExecute(r ApiV2AllowlistRuleIdGetRequest) (*V2AllowlistRuleIdGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V2AllowlistRuleIdGet200Response
+		localVarReturnValue  *V2AllowlistRuleIdGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V2AllowlistRuleIdGet")
@@ -52953,7 +55570,7 @@ func (r ApiV2AssistantAddToConversationPostRequest) V2AssistantAddToConversation
 	return r
 }
 
-func (r ApiV2AssistantAddToConversationPostRequest) Execute() (*V2AssistantAddToConversationPost200Response, *http.Response, error) {
+func (r ApiV2AssistantAddToConversationPostRequest) Execute() (*V2AssistantAddToConversationPostResponse, *http.Response, error) {
 	return r.ApiService.V2AssistantAddToConversationPostExecute(r)
 }
 
@@ -52971,13 +55588,13 @@ func (a *DefaultAPIService) V2AssistantAddToConversationPost(ctx context.Context
 }
 
 // Execute executes the request
-//  @return V2AssistantAddToConversationPost200Response
-func (a *DefaultAPIService) V2AssistantAddToConversationPostExecute(r ApiV2AssistantAddToConversationPostRequest) (*V2AssistantAddToConversationPost200Response, *http.Response, error) {
+//  @return V2AssistantAddToConversationPostResponse
+func (a *DefaultAPIService) V2AssistantAddToConversationPostExecute(r ApiV2AssistantAddToConversationPostRequest) (*V2AssistantAddToConversationPostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V2AssistantAddToConversationPost200Response
+		localVarReturnValue  *V2AssistantAddToConversationPostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V2AssistantAddToConversationPost")
@@ -53072,7 +55689,7 @@ type ApiV2AssistantConversationContextHistoryPostRequest struct {
 	ctx context.Context
 	ApiService *DefaultAPIService
 	authorization *string
-	v2AggregatedNotificationEnableDisablePostRequest *V2AggregatedNotificationEnableDisablePostRequest
+	v2AssistantConversationContextHistoryPostRequest *V2AssistantConversationContextHistoryPostRequest
 }
 
 // Bearer token. Format: Bearer &lt;your_token_here&gt;
@@ -53081,8 +55698,8 @@ func (r ApiV2AssistantConversationContextHistoryPostRequest) Authorization(autho
 	return r
 }
 
-func (r ApiV2AssistantConversationContextHistoryPostRequest) V2AggregatedNotificationEnableDisablePostRequest(v2AggregatedNotificationEnableDisablePostRequest V2AggregatedNotificationEnableDisablePostRequest) ApiV2AssistantConversationContextHistoryPostRequest {
-	r.v2AggregatedNotificationEnableDisablePostRequest = &v2AggregatedNotificationEnableDisablePostRequest
+func (r ApiV2AssistantConversationContextHistoryPostRequest) V2AssistantConversationContextHistoryPostRequest(v2AssistantConversationContextHistoryPostRequest V2AssistantConversationContextHistoryPostRequest) ApiV2AssistantConversationContextHistoryPostRequest {
+	r.v2AssistantConversationContextHistoryPostRequest = &v2AssistantConversationContextHistoryPostRequest
 	return r
 }
 
@@ -53126,8 +55743,8 @@ func (a *DefaultAPIService) V2AssistantConversationContextHistoryPostExecute(r A
 	if r.authorization == nil {
 		return localVarReturnValue, nil, reportError("authorization is required and must be specified")
 	}
-	if r.v2AggregatedNotificationEnableDisablePostRequest == nil {
-		return localVarReturnValue, nil, reportError("v2AggregatedNotificationEnableDisablePostRequest is required and must be specified")
+	if r.v2AssistantConversationContextHistoryPostRequest == nil {
+		return localVarReturnValue, nil, reportError("v2AssistantConversationContextHistoryPostRequest is required and must be specified")
 	}
 
 	// to determine the Content-Type header
@@ -53149,7 +55766,7 @@ func (a *DefaultAPIService) V2AssistantConversationContextHistoryPostExecute(r A
 	}
 	parameterAddToHeaderOrQuery(localVarHeaderParams, "Authorization", r.authorization, "simple", "")
 	// body params
-	localVarPostBody = r.v2AggregatedNotificationEnableDisablePostRequest
+	localVarPostBody = r.v2AssistantConversationContextHistoryPostRequest
 	if r.ctx != nil {
 		// API Key Authentication
 		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
@@ -53331,7 +55948,7 @@ type ApiV2AssistantConversationInterfaceEnableDisablePostRequest struct {
 	ctx context.Context
 	ApiService *DefaultAPIService
 	authorization *string
-	v2AggregatedNotificationEnableDisablePostRequest *V2AggregatedNotificationEnableDisablePostRequest
+	v2AssistantConversationInterfaceEnableDisablePostRequest *V2AssistantConversationInterfaceEnableDisablePostRequest
 }
 
 // Bearer token. Format: Bearer &lt;your_token_here&gt;
@@ -53340,8 +55957,8 @@ func (r ApiV2AssistantConversationInterfaceEnableDisablePostRequest) Authorizati
 	return r
 }
 
-func (r ApiV2AssistantConversationInterfaceEnableDisablePostRequest) V2AggregatedNotificationEnableDisablePostRequest(v2AggregatedNotificationEnableDisablePostRequest V2AggregatedNotificationEnableDisablePostRequest) ApiV2AssistantConversationInterfaceEnableDisablePostRequest {
-	r.v2AggregatedNotificationEnableDisablePostRequest = &v2AggregatedNotificationEnableDisablePostRequest
+func (r ApiV2AssistantConversationInterfaceEnableDisablePostRequest) V2AssistantConversationInterfaceEnableDisablePostRequest(v2AssistantConversationInterfaceEnableDisablePostRequest V2AssistantConversationInterfaceEnableDisablePostRequest) ApiV2AssistantConversationInterfaceEnableDisablePostRequest {
+	r.v2AssistantConversationInterfaceEnableDisablePostRequest = &v2AssistantConversationInterfaceEnableDisablePostRequest
 	return r
 }
 
@@ -53385,8 +56002,8 @@ func (a *DefaultAPIService) V2AssistantConversationInterfaceEnableDisablePostExe
 	if r.authorization == nil {
 		return localVarReturnValue, nil, reportError("authorization is required and must be specified")
 	}
-	if r.v2AggregatedNotificationEnableDisablePostRequest == nil {
-		return localVarReturnValue, nil, reportError("v2AggregatedNotificationEnableDisablePostRequest is required and must be specified")
+	if r.v2AssistantConversationInterfaceEnableDisablePostRequest == nil {
+		return localVarReturnValue, nil, reportError("v2AssistantConversationInterfaceEnableDisablePostRequest is required and must be specified")
 	}
 
 	// to determine the Content-Type header
@@ -53408,7 +56025,7 @@ func (a *DefaultAPIService) V2AssistantConversationInterfaceEnableDisablePostExe
 	}
 	parameterAddToHeaderOrQuery(localVarHeaderParams, "Authorization", r.authorization, "simple", "")
 	// body params
-	localVarPostBody = r.v2AggregatedNotificationEnableDisablePostRequest
+	localVarPostBody = r.v2AssistantConversationInterfaceEnableDisablePostRequest
 	if r.ctx != nil {
 		// API Key Authentication
 		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
@@ -53472,7 +56089,7 @@ func (r ApiV2AssistantConversationInterfaceStateGetRequest) Authorization(author
 	return r
 }
 
-func (r ApiV2AssistantConversationInterfaceStateGetRequest) Execute() (*V2AssistantConversationInterfaceStateGet200Response, *http.Response, error) {
+func (r ApiV2AssistantConversationInterfaceStateGetRequest) Execute() (*V2AssistantConversationInterfaceStateGetResponse, *http.Response, error) {
 	return r.ApiService.V2AssistantConversationInterfaceStateGetExecute(r)
 }
 
@@ -53490,13 +56107,13 @@ func (a *DefaultAPIService) V2AssistantConversationInterfaceStateGet(ctx context
 }
 
 // Execute executes the request
-//  @return V2AssistantConversationInterfaceStateGet200Response
-func (a *DefaultAPIService) V2AssistantConversationInterfaceStateGetExecute(r ApiV2AssistantConversationInterfaceStateGetRequest) (*V2AssistantConversationInterfaceStateGet200Response, *http.Response, error) {
+//  @return V2AssistantConversationInterfaceStateGetResponse
+func (a *DefaultAPIService) V2AssistantConversationInterfaceStateGetExecute(r ApiV2AssistantConversationInterfaceStateGetRequest) (*V2AssistantConversationInterfaceStateGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V2AssistantConversationInterfaceStateGet200Response
+		localVarReturnValue  *V2AssistantConversationInterfaceStateGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V2AssistantConversationInterfaceStateGet")
@@ -53852,7 +56469,7 @@ func (r ApiV2AssistantGetConversationDetailsPostRequest) V2AssistantGetConversat
 	return r
 }
 
-func (r ApiV2AssistantGetConversationDetailsPostRequest) Execute() (*V2AssistantGetConversationDetailsPost200Response, *http.Response, error) {
+func (r ApiV2AssistantGetConversationDetailsPostRequest) Execute() (*V2AssistantGetConversationDetailsPostResponse, *http.Response, error) {
 	return r.ApiService.V2AssistantGetConversationDetailsPostExecute(r)
 }
 
@@ -53870,13 +56487,13 @@ func (a *DefaultAPIService) V2AssistantGetConversationDetailsPost(ctx context.Co
 }
 
 // Execute executes the request
-//  @return V2AssistantGetConversationDetailsPost200Response
-func (a *DefaultAPIService) V2AssistantGetConversationDetailsPostExecute(r ApiV2AssistantGetConversationDetailsPostRequest) (*V2AssistantGetConversationDetailsPost200Response, *http.Response, error) {
+//  @return V2AssistantGetConversationDetailsPostResponse
+func (a *DefaultAPIService) V2AssistantGetConversationDetailsPostExecute(r ApiV2AssistantGetConversationDetailsPostRequest) (*V2AssistantGetConversationDetailsPostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V2AssistantGetConversationDetailsPost200Response
+		localVarReturnValue  *V2AssistantGetConversationDetailsPostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V2AssistantGetConversationDetailsPost")
@@ -53985,7 +56602,7 @@ func (r ApiV2AssistantGetConversationsPostRequest) V2AssistantGetConversationsPo
 	return r
 }
 
-func (r ApiV2AssistantGetConversationsPostRequest) Execute() (*V2AssistantGetConversationsPost200Response, *http.Response, error) {
+func (r ApiV2AssistantGetConversationsPostRequest) Execute() (*V2AssistantGetConversationsPostResponse, *http.Response, error) {
 	return r.ApiService.V2AssistantGetConversationsPostExecute(r)
 }
 
@@ -54003,13 +56620,13 @@ func (a *DefaultAPIService) V2AssistantGetConversationsPost(ctx context.Context)
 }
 
 // Execute executes the request
-//  @return V2AssistantGetConversationsPost200Response
-func (a *DefaultAPIService) V2AssistantGetConversationsPostExecute(r ApiV2AssistantGetConversationsPostRequest) (*V2AssistantGetConversationsPost200Response, *http.Response, error) {
+//  @return V2AssistantGetConversationsPostResponse
+func (a *DefaultAPIService) V2AssistantGetConversationsPostExecute(r ApiV2AssistantGetConversationsPostRequest) (*V2AssistantGetConversationsPostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V2AssistantGetConversationsPost200Response
+		localVarReturnValue  *V2AssistantGetConversationsPostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V2AssistantGetConversationsPost")
@@ -54251,7 +56868,7 @@ func (r ApiV2AssistantVersionPostRequest) Body(body map[string]interface{}) ApiV
 	return r
 }
 
-func (r ApiV2AssistantVersionPostRequest) Execute() (*V2VersionPost200Response, *http.Response, error) {
+func (r ApiV2AssistantVersionPostRequest) Execute() (*V2AssistantVersionPostResponse, *http.Response, error) {
 	return r.ApiService.V2AssistantVersionPostExecute(r)
 }
 
@@ -54269,13 +56886,13 @@ func (a *DefaultAPIService) V2AssistantVersionPost(ctx context.Context) ApiV2Ass
 }
 
 // Execute executes the request
-//  @return V2VersionPost200Response
-func (a *DefaultAPIService) V2AssistantVersionPostExecute(r ApiV2AssistantVersionPostRequest) (*V2VersionPost200Response, *http.Response, error) {
+//  @return V2AssistantVersionPostResponse
+func (a *DefaultAPIService) V2AssistantVersionPostExecute(r ApiV2AssistantVersionPostRequest) (*V2AssistantVersionPostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V2VersionPost200Response
+		localVarReturnValue  *V2AssistantVersionPostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V2AssistantVersionPost")
@@ -54384,7 +57001,7 @@ func (r ApiV2AssuranceApplicationdetailsbynamePostRequest) V2AssuranceApplicatio
 	return r
 }
 
-func (r ApiV2AssuranceApplicationdetailsbynamePostRequest) Execute() (*V2AssuranceApplicationdetailsbynamePost200Response, *http.Response, error) {
+func (r ApiV2AssuranceApplicationdetailsbynamePostRequest) Execute() (*V2AssuranceApplicationdetailsbynamePostResponse, *http.Response, error) {
 	return r.ApiService.V2AssuranceApplicationdetailsbynamePostExecute(r)
 }
 
@@ -54402,13 +57019,13 @@ func (a *DefaultAPIService) V2AssuranceApplicationdetailsbynamePost(ctx context.
 }
 
 // Execute executes the request
-//  @return V2AssuranceApplicationdetailsbynamePost200Response
-func (a *DefaultAPIService) V2AssuranceApplicationdetailsbynamePostExecute(r ApiV2AssuranceApplicationdetailsbynamePostRequest) (*V2AssuranceApplicationdetailsbynamePost200Response, *http.Response, error) {
+//  @return V2AssuranceApplicationdetailsbynamePostResponse
+func (a *DefaultAPIService) V2AssuranceApplicationdetailsbynamePostExecute(r ApiV2AssuranceApplicationdetailsbynamePostRequest) (*V2AssuranceApplicationdetailsbynamePostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V2AssuranceApplicationdetailsbynamePost200Response
+		localVarReturnValue  *V2AssuranceApplicationdetailsbynamePostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V2AssuranceApplicationdetailsbynamePost")
@@ -54503,7 +57120,7 @@ type ApiV2AssuranceApplicationprofilesummaryPostRequest struct {
 	ctx context.Context
 	ApiService *DefaultAPIService
 	authorization *string
-	v2NotificationlistPostRequest *V2NotificationlistPostRequest
+	v2AssuranceApplicationprofilesummaryPostRequest *V2AssuranceApplicationprofilesummaryPostRequest
 }
 
 // Bearer token. Format: Bearer &lt;your_token_here&gt;
@@ -54512,12 +57129,12 @@ func (r ApiV2AssuranceApplicationprofilesummaryPostRequest) Authorization(author
 	return r
 }
 
-func (r ApiV2AssuranceApplicationprofilesummaryPostRequest) V2NotificationlistPostRequest(v2NotificationlistPostRequest V2NotificationlistPostRequest) ApiV2AssuranceApplicationprofilesummaryPostRequest {
-	r.v2NotificationlistPostRequest = &v2NotificationlistPostRequest
+func (r ApiV2AssuranceApplicationprofilesummaryPostRequest) V2AssuranceApplicationprofilesummaryPostRequest(v2AssuranceApplicationprofilesummaryPostRequest V2AssuranceApplicationprofilesummaryPostRequest) ApiV2AssuranceApplicationprofilesummaryPostRequest {
+	r.v2AssuranceApplicationprofilesummaryPostRequest = &v2AssuranceApplicationprofilesummaryPostRequest
 	return r
 }
 
-func (r ApiV2AssuranceApplicationprofilesummaryPostRequest) Execute() (*V2AssuranceApplicationprofilesummaryPost200Response, *http.Response, error) {
+func (r ApiV2AssuranceApplicationprofilesummaryPostRequest) Execute() (*V2AssuranceApplicationprofilesummaryPostResponse, *http.Response, error) {
 	return r.ApiService.V2AssuranceApplicationprofilesummaryPostExecute(r)
 }
 
@@ -54535,13 +57152,13 @@ func (a *DefaultAPIService) V2AssuranceApplicationprofilesummaryPost(ctx context
 }
 
 // Execute executes the request
-//  @return V2AssuranceApplicationprofilesummaryPost200Response
-func (a *DefaultAPIService) V2AssuranceApplicationprofilesummaryPostExecute(r ApiV2AssuranceApplicationprofilesummaryPostRequest) (*V2AssuranceApplicationprofilesummaryPost200Response, *http.Response, error) {
+//  @return V2AssuranceApplicationprofilesummaryPostResponse
+func (a *DefaultAPIService) V2AssuranceApplicationprofilesummaryPostExecute(r ApiV2AssuranceApplicationprofilesummaryPostRequest) (*V2AssuranceApplicationprofilesummaryPostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V2AssuranceApplicationprofilesummaryPost200Response
+		localVarReturnValue  *V2AssuranceApplicationprofilesummaryPostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V2AssuranceApplicationprofilesummaryPost")
@@ -54557,8 +57174,8 @@ func (a *DefaultAPIService) V2AssuranceApplicationprofilesummaryPostExecute(r Ap
 	if r.authorization == nil {
 		return localVarReturnValue, nil, reportError("authorization is required and must be specified")
 	}
-	if r.v2NotificationlistPostRequest == nil {
-		return localVarReturnValue, nil, reportError("v2NotificationlistPostRequest is required and must be specified")
+	if r.v2AssuranceApplicationprofilesummaryPostRequest == nil {
+		return localVarReturnValue, nil, reportError("v2AssuranceApplicationprofilesummaryPostRequest is required and must be specified")
 	}
 
 	// to determine the Content-Type header
@@ -54580,7 +57197,7 @@ func (a *DefaultAPIService) V2AssuranceApplicationprofilesummaryPostExecute(r Ap
 	}
 	parameterAddToHeaderOrQuery(localVarHeaderParams, "Authorization", r.authorization, "simple", "")
 	// body params
-	localVarPostBody = r.v2NotificationlistPostRequest
+	localVarPostBody = r.v2AssuranceApplicationprofilesummaryPostRequest
 	if r.ctx != nil {
 		// API Key Authentication
 		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
@@ -54644,12 +57261,14 @@ func (r ApiV2AssuranceBucketAppServersAllGetRequest) Authorization(authorization
 	return r
 }
 
-func (r ApiV2AssuranceBucketAppServersAllGetRequest) Execute() (*V2AssuranceBucketAppServersAllGet200Response, *http.Response, error) {
+func (r ApiV2AssuranceBucketAppServersAllGetRequest) Execute() (*V2AssuranceBucketAppServersAllGetResponse, *http.Response, error) {
 	return r.ApiService.V2AssuranceBucketAppServersAllGetExecute(r)
 }
 
 /*
 V2AssuranceBucketAppServersAllGet Method for V2AssuranceBucketAppServersAllGet
+
+Get all servers associated with each item in a list of bucket apps
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV2AssuranceBucketAppServersAllGetRequest
@@ -54662,13 +57281,13 @@ func (a *DefaultAPIService) V2AssuranceBucketAppServersAllGet(ctx context.Contex
 }
 
 // Execute executes the request
-//  @return V2AssuranceBucketAppServersAllGet200Response
-func (a *DefaultAPIService) V2AssuranceBucketAppServersAllGetExecute(r ApiV2AssuranceBucketAppServersAllGetRequest) (*V2AssuranceBucketAppServersAllGet200Response, *http.Response, error) {
+//  @return V2AssuranceBucketAppServersAllGetResponse
+func (a *DefaultAPIService) V2AssuranceBucketAppServersAllGetExecute(r ApiV2AssuranceBucketAppServersAllGetRequest) (*V2AssuranceBucketAppServersAllGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V2AssuranceBucketAppServersAllGet200Response
+		localVarReturnValue  *V2AssuranceBucketAppServersAllGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V2AssuranceBucketAppServersAllGet")
@@ -54772,7 +57391,7 @@ func (r ApiV2AssuranceBucketAppServersPostRequest) V2AssuranceBucketAppServersPo
 	return r
 }
 
-func (r ApiV2AssuranceBucketAppServersPostRequest) Execute() (*V2AssuranceBucketAppServersPost200Response, *http.Response, error) {
+func (r ApiV2AssuranceBucketAppServersPostRequest) Execute() (*V2AssuranceBucketAppServersPostResponse, *http.Response, error) {
 	return r.ApiService.V2AssuranceBucketAppServersPostExecute(r)
 }
 
@@ -54790,13 +57409,13 @@ func (a *DefaultAPIService) V2AssuranceBucketAppServersPost(ctx context.Context)
 }
 
 // Execute executes the request
-//  @return V2AssuranceBucketAppServersPost200Response
-func (a *DefaultAPIService) V2AssuranceBucketAppServersPostExecute(r ApiV2AssuranceBucketAppServersPostRequest) (*V2AssuranceBucketAppServersPost200Response, *http.Response, error) {
+//  @return V2AssuranceBucketAppServersPostResponse
+func (a *DefaultAPIService) V2AssuranceBucketAppServersPostExecute(r ApiV2AssuranceBucketAppServersPostRequest) (*V2AssuranceBucketAppServersPostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V2AssuranceBucketAppServersPost200Response
+		localVarReturnValue  *V2AssuranceBucketAppServersPostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V2AssuranceBucketAppServersPost")
@@ -54905,7 +57524,7 @@ func (r ApiV2AssuranceBucketAppsPostRequest) V2AssuranceBucketAppsPostRequest(v2
 	return r
 }
 
-func (r ApiV2AssuranceBucketAppsPostRequest) Execute() (*V2AssuranceBucketAppsPost200Response, *http.Response, error) {
+func (r ApiV2AssuranceBucketAppsPostRequest) Execute() (*V2AssuranceBucketAppsPostResponse, *http.Response, error) {
 	return r.ApiService.V2AssuranceBucketAppsPostExecute(r)
 }
 
@@ -54923,13 +57542,13 @@ func (a *DefaultAPIService) V2AssuranceBucketAppsPost(ctx context.Context) ApiV2
 }
 
 // Execute executes the request
-//  @return V2AssuranceBucketAppsPost200Response
-func (a *DefaultAPIService) V2AssuranceBucketAppsPostExecute(r ApiV2AssuranceBucketAppsPostRequest) (*V2AssuranceBucketAppsPost200Response, *http.Response, error) {
+//  @return V2AssuranceBucketAppsPostResponse
+func (a *DefaultAPIService) V2AssuranceBucketAppsPostExecute(r ApiV2AssuranceBucketAppsPostRequest) (*V2AssuranceBucketAppsPostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V2AssuranceBucketAppsPost200Response
+		localVarReturnValue  *V2AssuranceBucketAppsPostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V2AssuranceBucketAppsPost")
@@ -55038,7 +57657,7 @@ func (r ApiV2AssuranceBucketServicesPostRequest) V2AssuranceBucketServicesPostRe
 	return r
 }
 
-func (r ApiV2AssuranceBucketServicesPostRequest) Execute() (*V2AssuranceBucketServicesPost200Response, *http.Response, error) {
+func (r ApiV2AssuranceBucketServicesPostRequest) Execute() (*V2AssuranceBucketServicesPostResponse, *http.Response, error) {
 	return r.ApiService.V2AssuranceBucketServicesPostExecute(r)
 }
 
@@ -55056,13 +57675,13 @@ func (a *DefaultAPIService) V2AssuranceBucketServicesPost(ctx context.Context) A
 }
 
 // Execute executes the request
-//  @return V2AssuranceBucketServicesPost200Response
-func (a *DefaultAPIService) V2AssuranceBucketServicesPostExecute(r ApiV2AssuranceBucketServicesPostRequest) (*V2AssuranceBucketServicesPost200Response, *http.Response, error) {
+//  @return V2AssuranceBucketServicesPostResponse
+func (a *DefaultAPIService) V2AssuranceBucketServicesPostExecute(r ApiV2AssuranceBucketServicesPostRequest) (*V2AssuranceBucketServicesPostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V2AssuranceBucketServicesPost200Response
+		localVarReturnValue  *V2AssuranceBucketServicesPostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V2AssuranceBucketServicesPost")
@@ -55157,7 +57776,7 @@ type ApiV2AssuranceBucketTopologiesPostRequest struct {
 	ctx context.Context
 	ApiService *DefaultAPIService
 	authorization *string
-	v2AssuranceBucketServicesPostRequest *V2AssuranceBucketServicesPostRequest
+	v2AssuranceBucketTopologiesPostRequest *V2AssuranceBucketTopologiesPostRequest
 }
 
 // Bearer token. Format: Bearer &lt;your_token_here&gt;
@@ -55166,12 +57785,12 @@ func (r ApiV2AssuranceBucketTopologiesPostRequest) Authorization(authorization s
 	return r
 }
 
-func (r ApiV2AssuranceBucketTopologiesPostRequest) V2AssuranceBucketServicesPostRequest(v2AssuranceBucketServicesPostRequest V2AssuranceBucketServicesPostRequest) ApiV2AssuranceBucketTopologiesPostRequest {
-	r.v2AssuranceBucketServicesPostRequest = &v2AssuranceBucketServicesPostRequest
+func (r ApiV2AssuranceBucketTopologiesPostRequest) V2AssuranceBucketTopologiesPostRequest(v2AssuranceBucketTopologiesPostRequest V2AssuranceBucketTopologiesPostRequest) ApiV2AssuranceBucketTopologiesPostRequest {
+	r.v2AssuranceBucketTopologiesPostRequest = &v2AssuranceBucketTopologiesPostRequest
 	return r
 }
 
-func (r ApiV2AssuranceBucketTopologiesPostRequest) Execute() (*V2AssuranceBucketTopologiesPost200Response, *http.Response, error) {
+func (r ApiV2AssuranceBucketTopologiesPostRequest) Execute() (*V2AssuranceBucketTopologiesPostResponse, *http.Response, error) {
 	return r.ApiService.V2AssuranceBucketTopologiesPostExecute(r)
 }
 
@@ -55189,13 +57808,13 @@ func (a *DefaultAPIService) V2AssuranceBucketTopologiesPost(ctx context.Context)
 }
 
 // Execute executes the request
-//  @return V2AssuranceBucketTopologiesPost200Response
-func (a *DefaultAPIService) V2AssuranceBucketTopologiesPostExecute(r ApiV2AssuranceBucketTopologiesPostRequest) (*V2AssuranceBucketTopologiesPost200Response, *http.Response, error) {
+//  @return V2AssuranceBucketTopologiesPostResponse
+func (a *DefaultAPIService) V2AssuranceBucketTopologiesPostExecute(r ApiV2AssuranceBucketTopologiesPostRequest) (*V2AssuranceBucketTopologiesPostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V2AssuranceBucketTopologiesPost200Response
+		localVarReturnValue  *V2AssuranceBucketTopologiesPostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V2AssuranceBucketTopologiesPost")
@@ -55211,8 +57830,8 @@ func (a *DefaultAPIService) V2AssuranceBucketTopologiesPostExecute(r ApiV2Assura
 	if r.authorization == nil {
 		return localVarReturnValue, nil, reportError("authorization is required and must be specified")
 	}
-	if r.v2AssuranceBucketServicesPostRequest == nil {
-		return localVarReturnValue, nil, reportError("v2AssuranceBucketServicesPostRequest is required and must be specified")
+	if r.v2AssuranceBucketTopologiesPostRequest == nil {
+		return localVarReturnValue, nil, reportError("v2AssuranceBucketTopologiesPostRequest is required and must be specified")
 	}
 
 	// to determine the Content-Type header
@@ -55234,7 +57853,7 @@ func (a *DefaultAPIService) V2AssuranceBucketTopologiesPostExecute(r ApiV2Assura
 	}
 	parameterAddToHeaderOrQuery(localVarHeaderParams, "Authorization", r.authorization, "simple", "")
 	// body params
-	localVarPostBody = r.v2AssuranceBucketServicesPostRequest
+	localVarPostBody = r.v2AssuranceBucketTopologiesPostRequest
 	if r.ctx != nil {
 		// API Key Authentication
 		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
@@ -55304,7 +57923,7 @@ func (r ApiV2AssuranceBucketdetailsPostRequest) V2AssuranceBucketdetailsPostRequ
 	return r
 }
 
-func (r ApiV2AssuranceBucketdetailsPostRequest) Execute() (*V2AssuranceBucketdetailsPost200Response, *http.Response, error) {
+func (r ApiV2AssuranceBucketdetailsPostRequest) Execute() (*V2AssuranceBucketdetailsPostResponse, *http.Response, error) {
 	return r.ApiService.V2AssuranceBucketdetailsPostExecute(r)
 }
 
@@ -55322,13 +57941,13 @@ func (a *DefaultAPIService) V2AssuranceBucketdetailsPost(ctx context.Context) Ap
 }
 
 // Execute executes the request
-//  @return V2AssuranceBucketdetailsPost200Response
-func (a *DefaultAPIService) V2AssuranceBucketdetailsPostExecute(r ApiV2AssuranceBucketdetailsPostRequest) (*V2AssuranceBucketdetailsPost200Response, *http.Response, error) {
+//  @return V2AssuranceBucketdetailsPostResponse
+func (a *DefaultAPIService) V2AssuranceBucketdetailsPostExecute(r ApiV2AssuranceBucketdetailsPostRequest) (*V2AssuranceBucketdetailsPostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V2AssuranceBucketdetailsPost200Response
+		localVarReturnValue  *V2AssuranceBucketdetailsPostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V2AssuranceBucketdetailsPost")
@@ -55437,7 +58056,7 @@ func (r ApiV2AssuranceCreateUserReportPostRequest) V2AssuranceCreateUserReportPo
 	return r
 }
 
-func (r ApiV2AssuranceCreateUserReportPostRequest) Execute() (*V2AssuranceCreateUserReportPost200Response, *http.Response, error) {
+func (r ApiV2AssuranceCreateUserReportPostRequest) Execute() (*V2AssuranceCreateUserReportPostResponse, *http.Response, error) {
 	return r.ApiService.V2AssuranceCreateUserReportPostExecute(r)
 }
 
@@ -55455,13 +58074,13 @@ func (a *DefaultAPIService) V2AssuranceCreateUserReportPost(ctx context.Context)
 }
 
 // Execute executes the request
-//  @return V2AssuranceCreateUserReportPost200Response
-func (a *DefaultAPIService) V2AssuranceCreateUserReportPostExecute(r ApiV2AssuranceCreateUserReportPostRequest) (*V2AssuranceCreateUserReportPost200Response, *http.Response, error) {
+//  @return V2AssuranceCreateUserReportPostResponse
+func (a *DefaultAPIService) V2AssuranceCreateUserReportPostExecute(r ApiV2AssuranceCreateUserReportPostRequest) (*V2AssuranceCreateUserReportPostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V2AssuranceCreateUserReportPost200Response
+		localVarReturnValue  *V2AssuranceCreateUserReportPostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V2AssuranceCreateUserReportPost")
@@ -55570,7 +58189,7 @@ func (r ApiV2AssuranceCreateclassifiedapplicationPostRequest) V2AssuranceCreatec
 	return r
 }
 
-func (r ApiV2AssuranceCreateclassifiedapplicationPostRequest) Execute() (*V2AssuranceCreateclassifiedapplicationPost200Response, *http.Response, error) {
+func (r ApiV2AssuranceCreateclassifiedapplicationPostRequest) Execute() (*V2AssuranceCreateclassifiedapplicationPostResponse, *http.Response, error) {
 	return r.ApiService.V2AssuranceCreateclassifiedapplicationPostExecute(r)
 }
 
@@ -55588,13 +58207,13 @@ func (a *DefaultAPIService) V2AssuranceCreateclassifiedapplicationPost(ctx conte
 }
 
 // Execute executes the request
-//  @return V2AssuranceCreateclassifiedapplicationPost200Response
-func (a *DefaultAPIService) V2AssuranceCreateclassifiedapplicationPostExecute(r ApiV2AssuranceCreateclassifiedapplicationPostRequest) (*V2AssuranceCreateclassifiedapplicationPost200Response, *http.Response, error) {
+//  @return V2AssuranceCreateclassifiedapplicationPostResponse
+func (a *DefaultAPIService) V2AssuranceCreateclassifiedapplicationPostExecute(r ApiV2AssuranceCreateclassifiedapplicationPostRequest) (*V2AssuranceCreateclassifiedapplicationPostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V2AssuranceCreateclassifiedapplicationPost200Response
+		localVarReturnValue  *V2AssuranceCreateclassifiedapplicationPostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V2AssuranceCreateclassifiedapplicationPost")
@@ -55969,7 +58588,7 @@ func (r ApiV2AssuranceDownloadUserReportGetRequest) Authorization(authorization 
 	return r
 }
 
-func (r ApiV2AssuranceDownloadUserReportGetRequest) Execute() (*V2AssuranceDownloadUserReportGet200Response, *http.Response, error) {
+func (r ApiV2AssuranceDownloadUserReportGetRequest) Execute() (*V2AssuranceDownloadUserReportGetResponse, *http.Response, error) {
 	return r.ApiService.V2AssuranceDownloadUserReportGetExecute(r)
 }
 
@@ -55987,13 +58606,13 @@ func (a *DefaultAPIService) V2AssuranceDownloadUserReportGet(ctx context.Context
 }
 
 // Execute executes the request
-//  @return V2AssuranceDownloadUserReportGet200Response
-func (a *DefaultAPIService) V2AssuranceDownloadUserReportGetExecute(r ApiV2AssuranceDownloadUserReportGetRequest) (*V2AssuranceDownloadUserReportGet200Response, *http.Response, error) {
+//  @return V2AssuranceDownloadUserReportGetResponse
+func (a *DefaultAPIService) V2AssuranceDownloadUserReportGetExecute(r ApiV2AssuranceDownloadUserReportGetRequest) (*V2AssuranceDownloadUserReportGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V2AssuranceDownloadUserReportGet200Response
+		localVarReturnValue  *V2AssuranceDownloadUserReportGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V2AssuranceDownloadUserReportGet")
@@ -56097,7 +58716,7 @@ func (r ApiV2AssuranceEndpointIntelPostRequest) V2AssuranceEndpointIntelPostRequ
 	return r
 }
 
-func (r ApiV2AssuranceEndpointIntelPostRequest) Execute() (*V2AssuranceEndpointIntelPost200Response, *http.Response, error) {
+func (r ApiV2AssuranceEndpointIntelPostRequest) Execute() (*V2AssuranceEndpointIntelPostResponse, *http.Response, error) {
 	return r.ApiService.V2AssuranceEndpointIntelPostExecute(r)
 }
 
@@ -56115,13 +58734,13 @@ func (a *DefaultAPIService) V2AssuranceEndpointIntelPost(ctx context.Context) Ap
 }
 
 // Execute executes the request
-//  @return V2AssuranceEndpointIntelPost200Response
-func (a *DefaultAPIService) V2AssuranceEndpointIntelPostExecute(r ApiV2AssuranceEndpointIntelPostRequest) (*V2AssuranceEndpointIntelPost200Response, *http.Response, error) {
+//  @return V2AssuranceEndpointIntelPostResponse
+func (a *DefaultAPIService) V2AssuranceEndpointIntelPostExecute(r ApiV2AssuranceEndpointIntelPostRequest) (*V2AssuranceEndpointIntelPostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V2AssuranceEndpointIntelPost200Response
+		localVarReturnValue  *V2AssuranceEndpointIntelPostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V2AssuranceEndpointIntelPost")
@@ -56216,7 +58835,7 @@ type ApiV2AssuranceEnterprisesummaryPostRequest struct {
 	ctx context.Context
 	ApiService *DefaultAPIService
 	authorization *string
-	v2NotificationlistPostRequest *V2NotificationlistPostRequest
+	v2AssuranceEnterprisesummaryPostRequest *V2AssuranceEnterprisesummaryPostRequest
 }
 
 // Bearer token. Format: Bearer &lt;your_token_here&gt;
@@ -56225,12 +58844,12 @@ func (r ApiV2AssuranceEnterprisesummaryPostRequest) Authorization(authorization 
 	return r
 }
 
-func (r ApiV2AssuranceEnterprisesummaryPostRequest) V2NotificationlistPostRequest(v2NotificationlistPostRequest V2NotificationlistPostRequest) ApiV2AssuranceEnterprisesummaryPostRequest {
-	r.v2NotificationlistPostRequest = &v2NotificationlistPostRequest
+func (r ApiV2AssuranceEnterprisesummaryPostRequest) V2AssuranceEnterprisesummaryPostRequest(v2AssuranceEnterprisesummaryPostRequest V2AssuranceEnterprisesummaryPostRequest) ApiV2AssuranceEnterprisesummaryPostRequest {
+	r.v2AssuranceEnterprisesummaryPostRequest = &v2AssuranceEnterprisesummaryPostRequest
 	return r
 }
 
-func (r ApiV2AssuranceEnterprisesummaryPostRequest) Execute() (*V2AssuranceEnterprisesummaryPost200Response, *http.Response, error) {
+func (r ApiV2AssuranceEnterprisesummaryPostRequest) Execute() (*V2AssuranceEnterprisesummaryPostResponse, *http.Response, error) {
 	return r.ApiService.V2AssuranceEnterprisesummaryPostExecute(r)
 }
 
@@ -56248,13 +58867,13 @@ func (a *DefaultAPIService) V2AssuranceEnterprisesummaryPost(ctx context.Context
 }
 
 // Execute executes the request
-//  @return V2AssuranceEnterprisesummaryPost200Response
-func (a *DefaultAPIService) V2AssuranceEnterprisesummaryPostExecute(r ApiV2AssuranceEnterprisesummaryPostRequest) (*V2AssuranceEnterprisesummaryPost200Response, *http.Response, error) {
+//  @return V2AssuranceEnterprisesummaryPostResponse
+func (a *DefaultAPIService) V2AssuranceEnterprisesummaryPostExecute(r ApiV2AssuranceEnterprisesummaryPostRequest) (*V2AssuranceEnterprisesummaryPostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V2AssuranceEnterprisesummaryPost200Response
+		localVarReturnValue  *V2AssuranceEnterprisesummaryPostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V2AssuranceEnterprisesummaryPost")
@@ -56270,8 +58889,8 @@ func (a *DefaultAPIService) V2AssuranceEnterprisesummaryPostExecute(r ApiV2Assur
 	if r.authorization == nil {
 		return localVarReturnValue, nil, reportError("authorization is required and must be specified")
 	}
-	if r.v2NotificationlistPostRequest == nil {
-		return localVarReturnValue, nil, reportError("v2NotificationlistPostRequest is required and must be specified")
+	if r.v2AssuranceEnterprisesummaryPostRequest == nil {
+		return localVarReturnValue, nil, reportError("v2AssuranceEnterprisesummaryPostRequest is required and must be specified")
 	}
 
 	// to determine the Content-Type header
@@ -56293,7 +58912,7 @@ func (a *DefaultAPIService) V2AssuranceEnterprisesummaryPostExecute(r ApiV2Assur
 	}
 	parameterAddToHeaderOrQuery(localVarHeaderParams, "Authorization", r.authorization, "simple", "")
 	// body params
-	localVarPostBody = r.v2NotificationlistPostRequest
+	localVarPostBody = r.v2AssuranceEnterprisesummaryPostRequest
 	if r.ctx != nil {
 		// API Key Authentication
 		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
@@ -56363,7 +58982,7 @@ func (r ApiV2AssuranceFlowSummaryPostRequest) V2AssuranceFlowSummaryPostRequest(
 	return r
 }
 
-func (r ApiV2AssuranceFlowSummaryPostRequest) Execute() (*V2AssuranceFlowSummaryPost200Response, *http.Response, error) {
+func (r ApiV2AssuranceFlowSummaryPostRequest) Execute() (*V2AssuranceFlowSummaryPostResponse, *http.Response, error) {
 	return r.ApiService.V2AssuranceFlowSummaryPostExecute(r)
 }
 
@@ -56381,13 +59000,13 @@ func (a *DefaultAPIService) V2AssuranceFlowSummaryPost(ctx context.Context) ApiV
 }
 
 // Execute executes the request
-//  @return V2AssuranceFlowSummaryPost200Response
-func (a *DefaultAPIService) V2AssuranceFlowSummaryPostExecute(r ApiV2AssuranceFlowSummaryPostRequest) (*V2AssuranceFlowSummaryPost200Response, *http.Response, error) {
+//  @return V2AssuranceFlowSummaryPostResponse
+func (a *DefaultAPIService) V2AssuranceFlowSummaryPostExecute(r ApiV2AssuranceFlowSummaryPostRequest) (*V2AssuranceFlowSummaryPostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V2AssuranceFlowSummaryPost200Response
+		localVarReturnValue  *V2AssuranceFlowSummaryPostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V2AssuranceFlowSummaryPost")
@@ -56490,7 +59109,7 @@ func (r ApiV2AssuranceGetclassifiedapplicationlistGetRequest) Authorization(auth
 	return r
 }
 
-func (r ApiV2AssuranceGetclassifiedapplicationlistGetRequest) Execute() (*V2AssuranceGetclassifiedapplicationlistGet200Response, *http.Response, error) {
+func (r ApiV2AssuranceGetclassifiedapplicationlistGetRequest) Execute() (*V2AssuranceGetclassifiedapplicationlistGetResponse, *http.Response, error) {
 	return r.ApiService.V2AssuranceGetclassifiedapplicationlistGetExecute(r)
 }
 
@@ -56508,13 +59127,13 @@ func (a *DefaultAPIService) V2AssuranceGetclassifiedapplicationlistGet(ctx conte
 }
 
 // Execute executes the request
-//  @return V2AssuranceGetclassifiedapplicationlistGet200Response
-func (a *DefaultAPIService) V2AssuranceGetclassifiedapplicationlistGetExecute(r ApiV2AssuranceGetclassifiedapplicationlistGetRequest) (*V2AssuranceGetclassifiedapplicationlistGet200Response, *http.Response, error) {
+//  @return V2AssuranceGetclassifiedapplicationlistGetResponse
+func (a *DefaultAPIService) V2AssuranceGetclassifiedapplicationlistGetExecute(r ApiV2AssuranceGetclassifiedapplicationlistGetRequest) (*V2AssuranceGetclassifiedapplicationlistGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V2AssuranceGetclassifiedapplicationlistGet200Response
+		localVarReturnValue  *V2AssuranceGetclassifiedapplicationlistGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V2AssuranceGetclassifiedapplicationlistGet")
@@ -56612,7 +59231,7 @@ func (r ApiV2AssuranceReadUserReportListGetRequest) Authorization(authorization 
 	return r
 }
 
-func (r ApiV2AssuranceReadUserReportListGetRequest) Execute() (*V2AssuranceReadUserReportListGet200Response, *http.Response, error) {
+func (r ApiV2AssuranceReadUserReportListGetRequest) Execute() (*V2AssuranceReadUserReportListGetResponse, *http.Response, error) {
 	return r.ApiService.V2AssuranceReadUserReportListGetExecute(r)
 }
 
@@ -56630,13 +59249,13 @@ func (a *DefaultAPIService) V2AssuranceReadUserReportListGet(ctx context.Context
 }
 
 // Execute executes the request
-//  @return V2AssuranceReadUserReportListGet200Response
-func (a *DefaultAPIService) V2AssuranceReadUserReportListGetExecute(r ApiV2AssuranceReadUserReportListGetRequest) (*V2AssuranceReadUserReportListGet200Response, *http.Response, error) {
+//  @return V2AssuranceReadUserReportListGetResponse
+func (a *DefaultAPIService) V2AssuranceReadUserReportListGetExecute(r ApiV2AssuranceReadUserReportListGetRequest) (*V2AssuranceReadUserReportListGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V2AssuranceReadUserReportListGet200Response
+		localVarReturnValue  *V2AssuranceReadUserReportListGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V2AssuranceReadUserReportListGet")
@@ -56726,7 +59345,7 @@ type ApiV2AssuranceScoredetailsPostRequest struct {
 	ctx context.Context
 	ApiService *DefaultAPIService
 	authorization *string
-	v2NotificationlistPostRequest *V2NotificationlistPostRequest
+	v2AssuranceScoredetailsPostRequest *V2AssuranceScoredetailsPostRequest
 }
 
 // Bearer token. Format: Bearer &lt;your_token_here&gt;
@@ -56735,12 +59354,12 @@ func (r ApiV2AssuranceScoredetailsPostRequest) Authorization(authorization strin
 	return r
 }
 
-func (r ApiV2AssuranceScoredetailsPostRequest) V2NotificationlistPostRequest(v2NotificationlistPostRequest V2NotificationlistPostRequest) ApiV2AssuranceScoredetailsPostRequest {
-	r.v2NotificationlistPostRequest = &v2NotificationlistPostRequest
+func (r ApiV2AssuranceScoredetailsPostRequest) V2AssuranceScoredetailsPostRequest(v2AssuranceScoredetailsPostRequest V2AssuranceScoredetailsPostRequest) ApiV2AssuranceScoredetailsPostRequest {
+	r.v2AssuranceScoredetailsPostRequest = &v2AssuranceScoredetailsPostRequest
 	return r
 }
 
-func (r ApiV2AssuranceScoredetailsPostRequest) Execute() (*V2AssuranceScoredetailsPost200Response, *http.Response, error) {
+func (r ApiV2AssuranceScoredetailsPostRequest) Execute() (*V2AssuranceScoredetailsPostResponse, *http.Response, error) {
 	return r.ApiService.V2AssuranceScoredetailsPostExecute(r)
 }
 
@@ -56758,13 +59377,13 @@ func (a *DefaultAPIService) V2AssuranceScoredetailsPost(ctx context.Context) Api
 }
 
 // Execute executes the request
-//  @return V2AssuranceScoredetailsPost200Response
-func (a *DefaultAPIService) V2AssuranceScoredetailsPostExecute(r ApiV2AssuranceScoredetailsPostRequest) (*V2AssuranceScoredetailsPost200Response, *http.Response, error) {
+//  @return V2AssuranceScoredetailsPostResponse
+func (a *DefaultAPIService) V2AssuranceScoredetailsPostExecute(r ApiV2AssuranceScoredetailsPostRequest) (*V2AssuranceScoredetailsPostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V2AssuranceScoredetailsPost200Response
+		localVarReturnValue  *V2AssuranceScoredetailsPostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V2AssuranceScoredetailsPost")
@@ -56780,8 +59399,8 @@ func (a *DefaultAPIService) V2AssuranceScoredetailsPostExecute(r ApiV2AssuranceS
 	if r.authorization == nil {
 		return localVarReturnValue, nil, reportError("authorization is required and must be specified")
 	}
-	if r.v2NotificationlistPostRequest == nil {
-		return localVarReturnValue, nil, reportError("v2NotificationlistPostRequest is required and must be specified")
+	if r.v2AssuranceScoredetailsPostRequest == nil {
+		return localVarReturnValue, nil, reportError("v2AssuranceScoredetailsPostRequest is required and must be specified")
 	}
 
 	// to determine the Content-Type header
@@ -56803,7 +59422,7 @@ func (a *DefaultAPIService) V2AssuranceScoredetailsPostExecute(r ApiV2AssuranceS
 	}
 	parameterAddToHeaderOrQuery(localVarHeaderParams, "Authorization", r.authorization, "simple", "")
 	// body params
-	localVarPostBody = r.v2NotificationlistPostRequest
+	localVarPostBody = r.v2AssuranceScoredetailsPostRequest
 	if r.ctx != nil {
 		// API Key Authentication
 		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
@@ -56873,7 +59492,7 @@ func (r ApiV2AssuranceTopologyClientSessionDetailsPostRequest) V2AssuranceTopolo
 	return r
 }
 
-func (r ApiV2AssuranceTopologyClientSessionDetailsPostRequest) Execute() (*V2AssuranceTopologyClientSessionDetailsPost200Response, *http.Response, error) {
+func (r ApiV2AssuranceTopologyClientSessionDetailsPostRequest) Execute() (*V2AssuranceTopologyClientSessionDetailsPostResponse, *http.Response, error) {
 	return r.ApiService.V2AssuranceTopologyClientSessionDetailsPostExecute(r)
 }
 
@@ -56891,13 +59510,13 @@ func (a *DefaultAPIService) V2AssuranceTopologyClientSessionDetailsPost(ctx cont
 }
 
 // Execute executes the request
-//  @return V2AssuranceTopologyClientSessionDetailsPost200Response
-func (a *DefaultAPIService) V2AssuranceTopologyClientSessionDetailsPostExecute(r ApiV2AssuranceTopologyClientSessionDetailsPostRequest) (*V2AssuranceTopologyClientSessionDetailsPost200Response, *http.Response, error) {
+//  @return V2AssuranceTopologyClientSessionDetailsPostResponse
+func (a *DefaultAPIService) V2AssuranceTopologyClientSessionDetailsPostExecute(r ApiV2AssuranceTopologyClientSessionDetailsPostRequest) (*V2AssuranceTopologyClientSessionDetailsPostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V2AssuranceTopologyClientSessionDetailsPost200Response
+		localVarReturnValue  *V2AssuranceTopologyClientSessionDetailsPostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V2AssuranceTopologyClientSessionDetailsPost")
@@ -57006,7 +59625,7 @@ func (r ApiV2AssuranceTopologyClientSessionsPostRequest) V2AssuranceTopologyClie
 	return r
 }
 
-func (r ApiV2AssuranceTopologyClientSessionsPostRequest) Execute() (*V2AssuranceTopologyClientSessionsPost200Response, *http.Response, error) {
+func (r ApiV2AssuranceTopologyClientSessionsPostRequest) Execute() (*V2AssuranceTopologyClientSessionsPostResponse, *http.Response, error) {
 	return r.ApiService.V2AssuranceTopologyClientSessionsPostExecute(r)
 }
 
@@ -57024,13 +59643,13 @@ func (a *DefaultAPIService) V2AssuranceTopologyClientSessionsPost(ctx context.Co
 }
 
 // Execute executes the request
-//  @return V2AssuranceTopologyClientSessionsPost200Response
-func (a *DefaultAPIService) V2AssuranceTopologyClientSessionsPostExecute(r ApiV2AssuranceTopologyClientSessionsPostRequest) (*V2AssuranceTopologyClientSessionsPost200Response, *http.Response, error) {
+//  @return V2AssuranceTopologyClientSessionsPostResponse
+func (a *DefaultAPIService) V2AssuranceTopologyClientSessionsPostExecute(r ApiV2AssuranceTopologyClientSessionsPostRequest) (*V2AssuranceTopologyClientSessionsPostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V2AssuranceTopologyClientSessionsPost200Response
+		localVarReturnValue  *V2AssuranceTopologyClientSessionsPostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V2AssuranceTopologyClientSessionsPost")
@@ -57139,7 +59758,7 @@ func (r ApiV2AssuranceTopologyClientSummariesPostRequest) V2AssuranceTopologyCli
 	return r
 }
 
-func (r ApiV2AssuranceTopologyClientSummariesPostRequest) Execute() (*V2AssuranceTopologyClientSummariesPost200Response, *http.Response, error) {
+func (r ApiV2AssuranceTopologyClientSummariesPostRequest) Execute() (*V2AssuranceTopologyClientSummariesPostResponse, *http.Response, error) {
 	return r.ApiService.V2AssuranceTopologyClientSummariesPostExecute(r)
 }
 
@@ -57157,13 +59776,13 @@ func (a *DefaultAPIService) V2AssuranceTopologyClientSummariesPost(ctx context.C
 }
 
 // Execute executes the request
-//  @return V2AssuranceTopologyClientSummariesPost200Response
-func (a *DefaultAPIService) V2AssuranceTopologyClientSummariesPostExecute(r ApiV2AssuranceTopologyClientSummariesPostRequest) (*V2AssuranceTopologyClientSummariesPost200Response, *http.Response, error) {
+//  @return V2AssuranceTopologyClientSummariesPostResponse
+func (a *DefaultAPIService) V2AssuranceTopologyClientSummariesPostExecute(r ApiV2AssuranceTopologyClientSummariesPostRequest) (*V2AssuranceTopologyClientSummariesPostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V2AssuranceTopologyClientSummariesPost200Response
+		localVarReturnValue  *V2AssuranceTopologyClientSummariesPostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V2AssuranceTopologyClientSummariesPost")
@@ -57272,7 +59891,7 @@ func (r ApiV2AssuranceTopologyFlowsPostRequest) V2AssuranceTopologyFlowsPostRequ
 	return r
 }
 
-func (r ApiV2AssuranceTopologyFlowsPostRequest) Execute() (*V2AssuranceTopologyFlowsPost200Response, *http.Response, error) {
+func (r ApiV2AssuranceTopologyFlowsPostRequest) Execute() (*V2AssuranceTopologyFlowsPostResponse, *http.Response, error) {
 	return r.ApiService.V2AssuranceTopologyFlowsPostExecute(r)
 }
 
@@ -57290,13 +59909,13 @@ func (a *DefaultAPIService) V2AssuranceTopologyFlowsPost(ctx context.Context) Ap
 }
 
 // Execute executes the request
-//  @return V2AssuranceTopologyFlowsPost200Response
-func (a *DefaultAPIService) V2AssuranceTopologyFlowsPostExecute(r ApiV2AssuranceTopologyFlowsPostRequest) (*V2AssuranceTopologyFlowsPost200Response, *http.Response, error) {
+//  @return V2AssuranceTopologyFlowsPostResponse
+func (a *DefaultAPIService) V2AssuranceTopologyFlowsPostExecute(r ApiV2AssuranceTopologyFlowsPostRequest) (*V2AssuranceTopologyFlowsPostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V2AssuranceTopologyFlowsPost200Response
+		localVarReturnValue  *V2AssuranceTopologyFlowsPostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V2AssuranceTopologyFlowsPost")
@@ -57405,7 +60024,7 @@ func (r ApiV2AssuranceTopologyInventoryPostRequest) V2AssuranceTopologyInventory
 	return r
 }
 
-func (r ApiV2AssuranceTopologyInventoryPostRequest) Execute() (*V2AssuranceTopologyInventoryPost200Response, *http.Response, error) {
+func (r ApiV2AssuranceTopologyInventoryPostRequest) Execute() (*V2AssuranceTopologyInventoryPostResponse, *http.Response, error) {
 	return r.ApiService.V2AssuranceTopologyInventoryPostExecute(r)
 }
 
@@ -57423,13 +60042,13 @@ func (a *DefaultAPIService) V2AssuranceTopologyInventoryPost(ctx context.Context
 }
 
 // Execute executes the request
-//  @return V2AssuranceTopologyInventoryPost200Response
-func (a *DefaultAPIService) V2AssuranceTopologyInventoryPostExecute(r ApiV2AssuranceTopologyInventoryPostRequest) (*V2AssuranceTopologyInventoryPost200Response, *http.Response, error) {
+//  @return V2AssuranceTopologyInventoryPostResponse
+func (a *DefaultAPIService) V2AssuranceTopologyInventoryPostExecute(r ApiV2AssuranceTopologyInventoryPostRequest) (*V2AssuranceTopologyInventoryPostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V2AssuranceTopologyInventoryPost200Response
+		localVarReturnValue  *V2AssuranceTopologyInventoryPostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V2AssuranceTopologyInventoryPost")
@@ -57538,7 +60157,7 @@ func (r ApiV2AssuranceTopologyOverviewPostRequest) V2AssuranceTopologyOverviewPo
 	return r
 }
 
-func (r ApiV2AssuranceTopologyOverviewPostRequest) Execute() (*V2AssuranceTopologyOverviewPost200Response, *http.Response, error) {
+func (r ApiV2AssuranceTopologyOverviewPostRequest) Execute() (*V2AssuranceTopologyOverviewPostResponse, *http.Response, error) {
 	return r.ApiService.V2AssuranceTopologyOverviewPostExecute(r)
 }
 
@@ -57556,13 +60175,13 @@ func (a *DefaultAPIService) V2AssuranceTopologyOverviewPost(ctx context.Context)
 }
 
 // Execute executes the request
-//  @return V2AssuranceTopologyOverviewPost200Response
-func (a *DefaultAPIService) V2AssuranceTopologyOverviewPostExecute(r ApiV2AssuranceTopologyOverviewPostRequest) (*V2AssuranceTopologyOverviewPost200Response, *http.Response, error) {
+//  @return V2AssuranceTopologyOverviewPostResponse
+func (a *DefaultAPIService) V2AssuranceTopologyOverviewPostExecute(r ApiV2AssuranceTopologyOverviewPostRequest) (*V2AssuranceTopologyOverviewPostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V2AssuranceTopologyOverviewPost200Response
+		localVarReturnValue  *V2AssuranceTopologyOverviewPostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V2AssuranceTopologyOverviewPost")
@@ -57671,7 +60290,7 @@ func (r ApiV2AssuranceTopologyRegionSummaryPostRequest) V2AssuranceTopologyRegio
 	return r
 }
 
-func (r ApiV2AssuranceTopologyRegionSummaryPostRequest) Execute() (*V2AssuranceTopologyRegionSummaryPost200Response, *http.Response, error) {
+func (r ApiV2AssuranceTopologyRegionSummaryPostRequest) Execute() (*V2AssuranceTopologyRegionSummaryPostResponse, *http.Response, error) {
 	return r.ApiService.V2AssuranceTopologyRegionSummaryPostExecute(r)
 }
 
@@ -57689,13 +60308,13 @@ func (a *DefaultAPIService) V2AssuranceTopologyRegionSummaryPost(ctx context.Con
 }
 
 // Execute executes the request
-//  @return V2AssuranceTopologyRegionSummaryPost200Response
-func (a *DefaultAPIService) V2AssuranceTopologyRegionSummaryPostExecute(r ApiV2AssuranceTopologyRegionSummaryPostRequest) (*V2AssuranceTopologyRegionSummaryPost200Response, *http.Response, error) {
+//  @return V2AssuranceTopologyRegionSummaryPostResponse
+func (a *DefaultAPIService) V2AssuranceTopologyRegionSummaryPostExecute(r ApiV2AssuranceTopologyRegionSummaryPostRequest) (*V2AssuranceTopologyRegionSummaryPostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V2AssuranceTopologyRegionSummaryPost200Response
+		localVarReturnValue  *V2AssuranceTopologyRegionSummaryPostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V2AssuranceTopologyRegionSummaryPost")
@@ -57804,7 +60423,7 @@ func (r ApiV2AssuranceTopologySiteSummariesPostRequest) V2AssuranceTopologySiteS
 	return r
 }
 
-func (r ApiV2AssuranceTopologySiteSummariesPostRequest) Execute() (*V2AssuranceTopologySiteSummariesPost200Response, *http.Response, error) {
+func (r ApiV2AssuranceTopologySiteSummariesPostRequest) Execute() (*V2AssuranceTopologySiteSummariesPostResponse, *http.Response, error) {
 	return r.ApiService.V2AssuranceTopologySiteSummariesPostExecute(r)
 }
 
@@ -57822,13 +60441,13 @@ func (a *DefaultAPIService) V2AssuranceTopologySiteSummariesPost(ctx context.Con
 }
 
 // Execute executes the request
-//  @return V2AssuranceTopologySiteSummariesPost200Response
-func (a *DefaultAPIService) V2AssuranceTopologySiteSummariesPostExecute(r ApiV2AssuranceTopologySiteSummariesPostRequest) (*V2AssuranceTopologySiteSummariesPost200Response, *http.Response, error) {
+//  @return V2AssuranceTopologySiteSummariesPostResponse
+func (a *DefaultAPIService) V2AssuranceTopologySiteSummariesPostExecute(r ApiV2AssuranceTopologySiteSummariesPostRequest) (*V2AssuranceTopologySiteSummariesPostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V2AssuranceTopologySiteSummariesPost200Response
+		localVarReturnValue  *V2AssuranceTopologySiteSummariesPostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V2AssuranceTopologySiteSummariesPost")
@@ -57923,7 +60542,7 @@ type ApiV2AssuranceUnclassifiedapplicationprofilesummaryPostRequest struct {
 	ctx context.Context
 	ApiService *DefaultAPIService
 	authorization *string
-	v2NotificationlistPostRequest *V2NotificationlistPostRequest
+	v2AssuranceUnclassifiedapplicationprofilesummaryPostRequest *V2AssuranceUnclassifiedapplicationprofilesummaryPostRequest
 }
 
 // Bearer token. Format: Bearer &lt;your_token_here&gt;
@@ -57932,12 +60551,12 @@ func (r ApiV2AssuranceUnclassifiedapplicationprofilesummaryPostRequest) Authoriz
 	return r
 }
 
-func (r ApiV2AssuranceUnclassifiedapplicationprofilesummaryPostRequest) V2NotificationlistPostRequest(v2NotificationlistPostRequest V2NotificationlistPostRequest) ApiV2AssuranceUnclassifiedapplicationprofilesummaryPostRequest {
-	r.v2NotificationlistPostRequest = &v2NotificationlistPostRequest
+func (r ApiV2AssuranceUnclassifiedapplicationprofilesummaryPostRequest) V2AssuranceUnclassifiedapplicationprofilesummaryPostRequest(v2AssuranceUnclassifiedapplicationprofilesummaryPostRequest V2AssuranceUnclassifiedapplicationprofilesummaryPostRequest) ApiV2AssuranceUnclassifiedapplicationprofilesummaryPostRequest {
+	r.v2AssuranceUnclassifiedapplicationprofilesummaryPostRequest = &v2AssuranceUnclassifiedapplicationprofilesummaryPostRequest
 	return r
 }
 
-func (r ApiV2AssuranceUnclassifiedapplicationprofilesummaryPostRequest) Execute() (*V2AssuranceApplicationprofilesummaryPost200Response, *http.Response, error) {
+func (r ApiV2AssuranceUnclassifiedapplicationprofilesummaryPostRequest) Execute() (*V2AssuranceUnclassifiedapplicationprofilesummaryPostResponse, *http.Response, error) {
 	return r.ApiService.V2AssuranceUnclassifiedapplicationprofilesummaryPostExecute(r)
 }
 
@@ -57955,13 +60574,13 @@ func (a *DefaultAPIService) V2AssuranceUnclassifiedapplicationprofilesummaryPost
 }
 
 // Execute executes the request
-//  @return V2AssuranceApplicationprofilesummaryPost200Response
-func (a *DefaultAPIService) V2AssuranceUnclassifiedapplicationprofilesummaryPostExecute(r ApiV2AssuranceUnclassifiedapplicationprofilesummaryPostRequest) (*V2AssuranceApplicationprofilesummaryPost200Response, *http.Response, error) {
+//  @return V2AssuranceUnclassifiedapplicationprofilesummaryPostResponse
+func (a *DefaultAPIService) V2AssuranceUnclassifiedapplicationprofilesummaryPostExecute(r ApiV2AssuranceUnclassifiedapplicationprofilesummaryPostRequest) (*V2AssuranceUnclassifiedapplicationprofilesummaryPostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V2AssuranceApplicationprofilesummaryPost200Response
+		localVarReturnValue  *V2AssuranceUnclassifiedapplicationprofilesummaryPostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V2AssuranceUnclassifiedapplicationprofilesummaryPost")
@@ -57977,8 +60596,8 @@ func (a *DefaultAPIService) V2AssuranceUnclassifiedapplicationprofilesummaryPost
 	if r.authorization == nil {
 		return localVarReturnValue, nil, reportError("authorization is required and must be specified")
 	}
-	if r.v2NotificationlistPostRequest == nil {
-		return localVarReturnValue, nil, reportError("v2NotificationlistPostRequest is required and must be specified")
+	if r.v2AssuranceUnclassifiedapplicationprofilesummaryPostRequest == nil {
+		return localVarReturnValue, nil, reportError("v2AssuranceUnclassifiedapplicationprofilesummaryPostRequest is required and must be specified")
 	}
 
 	// to determine the Content-Type header
@@ -58000,7 +60619,7 @@ func (a *DefaultAPIService) V2AssuranceUnclassifiedapplicationprofilesummaryPost
 	}
 	parameterAddToHeaderOrQuery(localVarHeaderParams, "Authorization", r.authorization, "simple", "")
 	// body params
-	localVarPostBody = r.v2NotificationlistPostRequest
+	localVarPostBody = r.v2AssuranceUnclassifiedapplicationprofilesummaryPostRequest
 	if r.ctx != nil {
 		// API Key Authentication
 		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
@@ -58056,7 +60675,7 @@ type ApiV2AssuranceUpdateclassifiedapplicationPostRequest struct {
 	ctx context.Context
 	ApiService *DefaultAPIService
 	authorization *string
-	v2AssuranceGetclassifiedapplicationlistGet200Response *V2AssuranceGetclassifiedapplicationlistGet200Response
+	v2AssuranceUpdateclassifiedapplicationPostRequest *V2AssuranceUpdateclassifiedapplicationPostRequest
 }
 
 // Bearer token. Format: Bearer &lt;your_token_here&gt;
@@ -58065,8 +60684,8 @@ func (r ApiV2AssuranceUpdateclassifiedapplicationPostRequest) Authorization(auth
 	return r
 }
 
-func (r ApiV2AssuranceUpdateclassifiedapplicationPostRequest) V2AssuranceGetclassifiedapplicationlistGet200Response(v2AssuranceGetclassifiedapplicationlistGet200Response V2AssuranceGetclassifiedapplicationlistGet200Response) ApiV2AssuranceUpdateclassifiedapplicationPostRequest {
-	r.v2AssuranceGetclassifiedapplicationlistGet200Response = &v2AssuranceGetclassifiedapplicationlistGet200Response
+func (r ApiV2AssuranceUpdateclassifiedapplicationPostRequest) V2AssuranceUpdateclassifiedapplicationPostRequest(v2AssuranceUpdateclassifiedapplicationPostRequest V2AssuranceUpdateclassifiedapplicationPostRequest) ApiV2AssuranceUpdateclassifiedapplicationPostRequest {
+	r.v2AssuranceUpdateclassifiedapplicationPostRequest = &v2AssuranceUpdateclassifiedapplicationPostRequest
 	return r
 }
 
@@ -58110,8 +60729,8 @@ func (a *DefaultAPIService) V2AssuranceUpdateclassifiedapplicationPostExecute(r 
 	if r.authorization == nil {
 		return localVarReturnValue, nil, reportError("authorization is required and must be specified")
 	}
-	if r.v2AssuranceGetclassifiedapplicationlistGet200Response == nil {
-		return localVarReturnValue, nil, reportError("v2AssuranceGetclassifiedapplicationlistGet200Response is required and must be specified")
+	if r.v2AssuranceUpdateclassifiedapplicationPostRequest == nil {
+		return localVarReturnValue, nil, reportError("v2AssuranceUpdateclassifiedapplicationPostRequest is required and must be specified")
 	}
 
 	// to determine the Content-Type header
@@ -58133,7 +60752,7 @@ func (a *DefaultAPIService) V2AssuranceUpdateclassifiedapplicationPostExecute(r 
 	}
 	parameterAddToHeaderOrQuery(localVarHeaderParams, "Authorization", r.authorization, "simple", "")
 	// body params
-	localVarPostBody = r.v2AssuranceGetclassifiedapplicationlistGet200Response
+	localVarPostBody = r.v2AssuranceUpdateclassifiedapplicationPostRequest
 	if r.ctx != nil {
 		// API Key Authentication
 		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
@@ -58203,7 +60822,7 @@ func (r ApiV2AssuranceVersionPostRequest) Body(body map[string]interface{}) ApiV
 	return r
 }
 
-func (r ApiV2AssuranceVersionPostRequest) Execute() (*V2VersionPost200Response, *http.Response, error) {
+func (r ApiV2AssuranceVersionPostRequest) Execute() (*V2AssuranceVersionPostResponse, *http.Response, error) {
 	return r.ApiService.V2AssuranceVersionPostExecute(r)
 }
 
@@ -58221,13 +60840,13 @@ func (a *DefaultAPIService) V2AssuranceVersionPost(ctx context.Context) ApiV2Ass
 }
 
 // Execute executes the request
-//  @return V2VersionPost200Response
-func (a *DefaultAPIService) V2AssuranceVersionPostExecute(r ApiV2AssuranceVersionPostRequest) (*V2VersionPost200Response, *http.Response, error) {
+//  @return V2AssuranceVersionPostResponse
+func (a *DefaultAPIService) V2AssuranceVersionPostExecute(r ApiV2AssuranceVersionPostRequest) (*V2AssuranceVersionPostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V2VersionPost200Response
+		localVarReturnValue  *V2AssuranceVersionPostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V2AssuranceVersionPost")
@@ -58336,7 +60955,7 @@ func (r ApiV2AuditLogsPostRequest) V2AuditLogsPostRequest(v2AuditLogsPostRequest
 	return r
 }
 
-func (r ApiV2AuditLogsPostRequest) Execute() (*V2AuditLogsPost200Response, *http.Response, error) {
+func (r ApiV2AuditLogsPostRequest) Execute() (*V2AuditLogsPostResponse, *http.Response, error) {
 	return r.ApiService.V2AuditLogsPostExecute(r)
 }
 
@@ -58354,13 +60973,13 @@ func (a *DefaultAPIService) V2AuditLogsPost(ctx context.Context) ApiV2AuditLogsP
 }
 
 // Execute executes the request
-//  @return V2AuditLogsPost200Response
-func (a *DefaultAPIService) V2AuditLogsPostExecute(r ApiV2AuditLogsPostRequest) (*V2AuditLogsPost200Response, *http.Response, error) {
+//  @return V2AuditLogsPostResponse
+func (a *DefaultAPIService) V2AuditLogsPostExecute(r ApiV2AuditLogsPostRequest) (*V2AuditLogsPostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V2AuditLogsPost200Response
+		localVarReturnValue  *V2AuditLogsPostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V2AuditLogsPost")
@@ -58469,7 +61088,7 @@ func (r ApiV2ChildalertlistPostRequest) V2ChildalertlistPostRequest(v2Childalert
 	return r
 }
 
-func (r ApiV2ChildalertlistPostRequest) Execute() (*V2ChildalertlistPost200Response, *http.Response, error) {
+func (r ApiV2ChildalertlistPostRequest) Execute() (*V2ChildalertlistPostResponse, *http.Response, error) {
 	return r.ApiService.V2ChildalertlistPostExecute(r)
 }
 
@@ -58487,13 +61106,13 @@ func (a *DefaultAPIService) V2ChildalertlistPost(ctx context.Context) ApiV2Child
 }
 
 // Execute executes the request
-//  @return V2ChildalertlistPost200Response
-func (a *DefaultAPIService) V2ChildalertlistPostExecute(r ApiV2ChildalertlistPostRequest) (*V2ChildalertlistPost200Response, *http.Response, error) {
+//  @return V2ChildalertlistPostResponse
+func (a *DefaultAPIService) V2ChildalertlistPostExecute(r ApiV2ChildalertlistPostRequest) (*V2ChildalertlistPostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V2ChildalertlistPost200Response
+		localVarReturnValue  *V2ChildalertlistPostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V2ChildalertlistPost")
@@ -58589,7 +61208,7 @@ type ApiV2DeviceDeviceIdLanSegmentsPostRequest struct {
 	ApiService *DefaultAPIService
 	authorization *string
 	deviceId int64
-	v2NotificationlistPostRequest *V2NotificationlistPostRequest
+	v2DeviceDeviceIdLanSegmentsPostRequest *V2DeviceDeviceIdLanSegmentsPostRequest
 }
 
 // Bearer token. Format: Bearer &lt;your_token_here&gt;
@@ -58598,17 +61217,19 @@ func (r ApiV2DeviceDeviceIdLanSegmentsPostRequest) Authorization(authorization s
 	return r
 }
 
-func (r ApiV2DeviceDeviceIdLanSegmentsPostRequest) V2NotificationlistPostRequest(v2NotificationlistPostRequest V2NotificationlistPostRequest) ApiV2DeviceDeviceIdLanSegmentsPostRequest {
-	r.v2NotificationlistPostRequest = &v2NotificationlistPostRequest
+func (r ApiV2DeviceDeviceIdLanSegmentsPostRequest) V2DeviceDeviceIdLanSegmentsPostRequest(v2DeviceDeviceIdLanSegmentsPostRequest V2DeviceDeviceIdLanSegmentsPostRequest) ApiV2DeviceDeviceIdLanSegmentsPostRequest {
+	r.v2DeviceDeviceIdLanSegmentsPostRequest = &v2DeviceDeviceIdLanSegmentsPostRequest
 	return r
 }
 
-func (r ApiV2DeviceDeviceIdLanSegmentsPostRequest) Execute() (*V2DeviceDeviceIdLanSegmentsPost200Response, *http.Response, error) {
+func (r ApiV2DeviceDeviceIdLanSegmentsPostRequest) Execute() (*V2DeviceDeviceIdLanSegmentsPostResponse, *http.Response, error) {
 	return r.ApiService.V2DeviceDeviceIdLanSegmentsPostExecute(r)
 }
 
 /*
 V2DeviceDeviceIdLanSegmentsPost Method for V2DeviceDeviceIdLanSegmentsPost
+
+Get route count for all the LAN Segments in a device
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @param deviceId 
@@ -58623,13 +61244,13 @@ func (a *DefaultAPIService) V2DeviceDeviceIdLanSegmentsPost(ctx context.Context,
 }
 
 // Execute executes the request
-//  @return V2DeviceDeviceIdLanSegmentsPost200Response
-func (a *DefaultAPIService) V2DeviceDeviceIdLanSegmentsPostExecute(r ApiV2DeviceDeviceIdLanSegmentsPostRequest) (*V2DeviceDeviceIdLanSegmentsPost200Response, *http.Response, error) {
+//  @return V2DeviceDeviceIdLanSegmentsPostResponse
+func (a *DefaultAPIService) V2DeviceDeviceIdLanSegmentsPostExecute(r ApiV2DeviceDeviceIdLanSegmentsPostRequest) (*V2DeviceDeviceIdLanSegmentsPostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V2DeviceDeviceIdLanSegmentsPost200Response
+		localVarReturnValue  *V2DeviceDeviceIdLanSegmentsPostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V2DeviceDeviceIdLanSegmentsPost")
@@ -58646,8 +61267,8 @@ func (a *DefaultAPIService) V2DeviceDeviceIdLanSegmentsPostExecute(r ApiV2Device
 	if r.authorization == nil {
 		return localVarReturnValue, nil, reportError("authorization is required and must be specified")
 	}
-	if r.v2NotificationlistPostRequest == nil {
-		return localVarReturnValue, nil, reportError("v2NotificationlistPostRequest is required and must be specified")
+	if r.v2DeviceDeviceIdLanSegmentsPostRequest == nil {
+		return localVarReturnValue, nil, reportError("v2DeviceDeviceIdLanSegmentsPostRequest is required and must be specified")
 	}
 
 	// to determine the Content-Type header
@@ -58669,7 +61290,7 @@ func (a *DefaultAPIService) V2DeviceDeviceIdLanSegmentsPostExecute(r ApiV2Device
 	}
 	parameterAddToHeaderOrQuery(localVarHeaderParams, "Authorization", r.authorization, "simple", "")
 	// body params
-	localVarPostBody = r.v2NotificationlistPostRequest
+	localVarPostBody = r.v2DeviceDeviceIdLanSegmentsPostRequest
 	if r.ctx != nil {
 		// API Key Authentication
 		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
@@ -58740,12 +61361,14 @@ func (r ApiV2DeviceDeviceIdTopologyPostRequest) V2DeviceDeviceIdTopologyPostRequ
 	return r
 }
 
-func (r ApiV2DeviceDeviceIdTopologyPostRequest) Execute() (*V2DeviceDeviceIdTopologyPost200Response, *http.Response, error) {
+func (r ApiV2DeviceDeviceIdTopologyPostRequest) Execute() (*V2DeviceDeviceIdTopologyPostResponse, *http.Response, error) {
 	return r.ApiService.V2DeviceDeviceIdTopologyPostExecute(r)
 }
 
 /*
 V2DeviceDeviceIdTopologyPost Method for V2DeviceDeviceIdTopologyPost
+
+Get the device topology
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @param deviceId 
@@ -58760,13 +61383,13 @@ func (a *DefaultAPIService) V2DeviceDeviceIdTopologyPost(ctx context.Context, de
 }
 
 // Execute executes the request
-//  @return V2DeviceDeviceIdTopologyPost200Response
-func (a *DefaultAPIService) V2DeviceDeviceIdTopologyPostExecute(r ApiV2DeviceDeviceIdTopologyPostRequest) (*V2DeviceDeviceIdTopologyPost200Response, *http.Response, error) {
+//  @return V2DeviceDeviceIdTopologyPostResponse
+func (a *DefaultAPIService) V2DeviceDeviceIdTopologyPostExecute(r ApiV2DeviceDeviceIdTopologyPostRequest) (*V2DeviceDeviceIdTopologyPostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V2DeviceDeviceIdTopologyPost200Response
+		localVarReturnValue  *V2DeviceDeviceIdTopologyPostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V2DeviceDeviceIdTopologyPost")
@@ -58862,7 +61485,7 @@ type ApiV2ExtranetConsumersUsageTopPostRequest struct {
 	ctx context.Context
 	ApiService *DefaultAPIService
 	authorization *string
-	v1ExtranetB2bMonitoringPeeringServiceConsumersUsageTopPostRequest *V1ExtranetB2bMonitoringPeeringServiceConsumersUsageTopPostRequest
+	v2ExtranetConsumersUsageTopPostRequest *V2ExtranetConsumersUsageTopPostRequest
 }
 
 // Bearer token. Format: Bearer &lt;your_token_here&gt;
@@ -58871,17 +61494,19 @@ func (r ApiV2ExtranetConsumersUsageTopPostRequest) Authorization(authorization s
 	return r
 }
 
-func (r ApiV2ExtranetConsumersUsageTopPostRequest) V1ExtranetB2bMonitoringPeeringServiceConsumersUsageTopPostRequest(v1ExtranetB2bMonitoringPeeringServiceConsumersUsageTopPostRequest V1ExtranetB2bMonitoringPeeringServiceConsumersUsageTopPostRequest) ApiV2ExtranetConsumersUsageTopPostRequest {
-	r.v1ExtranetB2bMonitoringPeeringServiceConsumersUsageTopPostRequest = &v1ExtranetB2bMonitoringPeeringServiceConsumersUsageTopPostRequest
+func (r ApiV2ExtranetConsumersUsageTopPostRequest) V2ExtranetConsumersUsageTopPostRequest(v2ExtranetConsumersUsageTopPostRequest V2ExtranetConsumersUsageTopPostRequest) ApiV2ExtranetConsumersUsageTopPostRequest {
+	r.v2ExtranetConsumersUsageTopPostRequest = &v2ExtranetConsumersUsageTopPostRequest
 	return r
 }
 
-func (r ApiV2ExtranetConsumersUsageTopPostRequest) Execute() (*V1ExtranetB2bMonitoringPeeringServiceConsumersUsageTopPost200Response, *http.Response, error) {
+func (r ApiV2ExtranetConsumersUsageTopPostRequest) Execute() (*V2ExtranetConsumersUsageTopPostResponse, *http.Response, error) {
 	return r.ApiService.V2ExtranetConsumersUsageTopPostExecute(r)
 }
 
 /*
 V2ExtranetConsumersUsageTopPost Method for V2ExtranetConsumersUsageTopPost
+
+Get extranet service top consumer usage stats
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV2ExtranetConsumersUsageTopPostRequest
@@ -58894,13 +61519,13 @@ func (a *DefaultAPIService) V2ExtranetConsumersUsageTopPost(ctx context.Context)
 }
 
 // Execute executes the request
-//  @return V1ExtranetB2bMonitoringPeeringServiceConsumersUsageTopPost200Response
-func (a *DefaultAPIService) V2ExtranetConsumersUsageTopPostExecute(r ApiV2ExtranetConsumersUsageTopPostRequest) (*V1ExtranetB2bMonitoringPeeringServiceConsumersUsageTopPost200Response, *http.Response, error) {
+//  @return V2ExtranetConsumersUsageTopPostResponse
+func (a *DefaultAPIService) V2ExtranetConsumersUsageTopPostExecute(r ApiV2ExtranetConsumersUsageTopPostRequest) (*V2ExtranetConsumersUsageTopPostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1ExtranetB2bMonitoringPeeringServiceConsumersUsageTopPost200Response
+		localVarReturnValue  *V2ExtranetConsumersUsageTopPostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V2ExtranetConsumersUsageTopPost")
@@ -58916,8 +61541,8 @@ func (a *DefaultAPIService) V2ExtranetConsumersUsageTopPostExecute(r ApiV2Extran
 	if r.authorization == nil {
 		return localVarReturnValue, nil, reportError("authorization is required and must be specified")
 	}
-	if r.v1ExtranetB2bMonitoringPeeringServiceConsumersUsageTopPostRequest == nil {
-		return localVarReturnValue, nil, reportError("v1ExtranetB2bMonitoringPeeringServiceConsumersUsageTopPostRequest is required and must be specified")
+	if r.v2ExtranetConsumersUsageTopPostRequest == nil {
+		return localVarReturnValue, nil, reportError("v2ExtranetConsumersUsageTopPostRequest is required and must be specified")
 	}
 
 	// to determine the Content-Type header
@@ -58939,7 +61564,7 @@ func (a *DefaultAPIService) V2ExtranetConsumersUsageTopPostExecute(r ApiV2Extran
 	}
 	parameterAddToHeaderOrQuery(localVarHeaderParams, "Authorization", r.authorization, "simple", "")
 	// body params
-	localVarPostBody = r.v1ExtranetB2bMonitoringPeeringServiceConsumersUsageTopPostRequest
+	localVarPostBody = r.v2ExtranetConsumersUsageTopPostRequest
 	if r.ctx != nil {
 		// API Key Authentication
 		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
@@ -58995,7 +61620,7 @@ type ApiV2ExtranetLanSegmentsUsageTopPostRequest struct {
 	ctx context.Context
 	ApiService *DefaultAPIService
 	authorization *string
-	v1ExtranetB2bMonitoringPeeringServiceConsumersUsageTopPostRequest *V1ExtranetB2bMonitoringPeeringServiceConsumersUsageTopPostRequest
+	v2ExtranetLanSegmentsUsageTopPostRequest *V2ExtranetLanSegmentsUsageTopPostRequest
 }
 
 // Bearer token. Format: Bearer &lt;your_token_here&gt;
@@ -59004,17 +61629,19 @@ func (r ApiV2ExtranetLanSegmentsUsageTopPostRequest) Authorization(authorization
 	return r
 }
 
-func (r ApiV2ExtranetLanSegmentsUsageTopPostRequest) V1ExtranetB2bMonitoringPeeringServiceConsumersUsageTopPostRequest(v1ExtranetB2bMonitoringPeeringServiceConsumersUsageTopPostRequest V1ExtranetB2bMonitoringPeeringServiceConsumersUsageTopPostRequest) ApiV2ExtranetLanSegmentsUsageTopPostRequest {
-	r.v1ExtranetB2bMonitoringPeeringServiceConsumersUsageTopPostRequest = &v1ExtranetB2bMonitoringPeeringServiceConsumersUsageTopPostRequest
+func (r ApiV2ExtranetLanSegmentsUsageTopPostRequest) V2ExtranetLanSegmentsUsageTopPostRequest(v2ExtranetLanSegmentsUsageTopPostRequest V2ExtranetLanSegmentsUsageTopPostRequest) ApiV2ExtranetLanSegmentsUsageTopPostRequest {
+	r.v2ExtranetLanSegmentsUsageTopPostRequest = &v2ExtranetLanSegmentsUsageTopPostRequest
 	return r
 }
 
-func (r ApiV2ExtranetLanSegmentsUsageTopPostRequest) Execute() (*V2ExtranetLanSegmentsUsageTopPost200Response, *http.Response, error) {
+func (r ApiV2ExtranetLanSegmentsUsageTopPostRequest) Execute() (*V2ExtranetLanSegmentsUsageTopPostResponse, *http.Response, error) {
 	return r.ApiService.V2ExtranetLanSegmentsUsageTopPostExecute(r)
 }
 
 /*
 V2ExtranetLanSegmentsUsageTopPost Method for V2ExtranetLanSegmentsUsageTopPost
+
+Get extranet service top lan segment usage stats
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV2ExtranetLanSegmentsUsageTopPostRequest
@@ -59027,13 +61654,13 @@ func (a *DefaultAPIService) V2ExtranetLanSegmentsUsageTopPost(ctx context.Contex
 }
 
 // Execute executes the request
-//  @return V2ExtranetLanSegmentsUsageTopPost200Response
-func (a *DefaultAPIService) V2ExtranetLanSegmentsUsageTopPostExecute(r ApiV2ExtranetLanSegmentsUsageTopPostRequest) (*V2ExtranetLanSegmentsUsageTopPost200Response, *http.Response, error) {
+//  @return V2ExtranetLanSegmentsUsageTopPostResponse
+func (a *DefaultAPIService) V2ExtranetLanSegmentsUsageTopPostExecute(r ApiV2ExtranetLanSegmentsUsageTopPostRequest) (*V2ExtranetLanSegmentsUsageTopPostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V2ExtranetLanSegmentsUsageTopPost200Response
+		localVarReturnValue  *V2ExtranetLanSegmentsUsageTopPostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V2ExtranetLanSegmentsUsageTopPost")
@@ -59049,8 +61676,8 @@ func (a *DefaultAPIService) V2ExtranetLanSegmentsUsageTopPostExecute(r ApiV2Extr
 	if r.authorization == nil {
 		return localVarReturnValue, nil, reportError("authorization is required and must be specified")
 	}
-	if r.v1ExtranetB2bMonitoringPeeringServiceConsumersUsageTopPostRequest == nil {
-		return localVarReturnValue, nil, reportError("v1ExtranetB2bMonitoringPeeringServiceConsumersUsageTopPostRequest is required and must be specified")
+	if r.v2ExtranetLanSegmentsUsageTopPostRequest == nil {
+		return localVarReturnValue, nil, reportError("v2ExtranetLanSegmentsUsageTopPostRequest is required and must be specified")
 	}
 
 	// to determine the Content-Type header
@@ -59072,7 +61699,7 @@ func (a *DefaultAPIService) V2ExtranetLanSegmentsUsageTopPostExecute(r ApiV2Extr
 	}
 	parameterAddToHeaderOrQuery(localVarHeaderParams, "Authorization", r.authorization, "simple", "")
 	// body params
-	localVarPostBody = r.v1ExtranetB2bMonitoringPeeringServiceConsumersUsageTopPostRequest
+	localVarPostBody = r.v2ExtranetLanSegmentsUsageTopPostRequest
 	if r.ctx != nil {
 		// API Key Authentication
 		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
@@ -59128,7 +61755,7 @@ type ApiV2ExtranetServiceOvertimeConsumptionPostRequest struct {
 	ctx context.Context
 	ApiService *DefaultAPIService
 	authorization *string
-	v1ExtranetB2bMonitoringPeeringServiceServiceOvertimeConsumptionPostRequest *V1ExtranetB2bMonitoringPeeringServiceServiceOvertimeConsumptionPostRequest
+	v2ExtranetServiceOvertimeConsumptionPostRequest *V2ExtranetServiceOvertimeConsumptionPostRequest
 }
 
 // Bearer token. Format: Bearer &lt;your_token_here&gt;
@@ -59137,17 +61764,19 @@ func (r ApiV2ExtranetServiceOvertimeConsumptionPostRequest) Authorization(author
 	return r
 }
 
-func (r ApiV2ExtranetServiceOvertimeConsumptionPostRequest) V1ExtranetB2bMonitoringPeeringServiceServiceOvertimeConsumptionPostRequest(v1ExtranetB2bMonitoringPeeringServiceServiceOvertimeConsumptionPostRequest V1ExtranetB2bMonitoringPeeringServiceServiceOvertimeConsumptionPostRequest) ApiV2ExtranetServiceOvertimeConsumptionPostRequest {
-	r.v1ExtranetB2bMonitoringPeeringServiceServiceOvertimeConsumptionPostRequest = &v1ExtranetB2bMonitoringPeeringServiceServiceOvertimeConsumptionPostRequest
+func (r ApiV2ExtranetServiceOvertimeConsumptionPostRequest) V2ExtranetServiceOvertimeConsumptionPostRequest(v2ExtranetServiceOvertimeConsumptionPostRequest V2ExtranetServiceOvertimeConsumptionPostRequest) ApiV2ExtranetServiceOvertimeConsumptionPostRequest {
+	r.v2ExtranetServiceOvertimeConsumptionPostRequest = &v2ExtranetServiceOvertimeConsumptionPostRequest
 	return r
 }
 
-func (r ApiV2ExtranetServiceOvertimeConsumptionPostRequest) Execute() (*V1ExtranetB2bMonitoringPeeringServiceServiceOvertimeConsumptionPost200Response, *http.Response, error) {
+func (r ApiV2ExtranetServiceOvertimeConsumptionPostRequest) Execute() (*V2ExtranetServiceOvertimeConsumptionPostResponse, *http.Response, error) {
 	return r.ApiService.V2ExtranetServiceOvertimeConsumptionPostExecute(r)
 }
 
 /*
 V2ExtranetServiceOvertimeConsumptionPost Method for V2ExtranetServiceOvertimeConsumptionPost
+
+Get extranet service cumulative consumption over timewindow
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV2ExtranetServiceOvertimeConsumptionPostRequest
@@ -59160,13 +61789,13 @@ func (a *DefaultAPIService) V2ExtranetServiceOvertimeConsumptionPost(ctx context
 }
 
 // Execute executes the request
-//  @return V1ExtranetB2bMonitoringPeeringServiceServiceOvertimeConsumptionPost200Response
-func (a *DefaultAPIService) V2ExtranetServiceOvertimeConsumptionPostExecute(r ApiV2ExtranetServiceOvertimeConsumptionPostRequest) (*V1ExtranetB2bMonitoringPeeringServiceServiceOvertimeConsumptionPost200Response, *http.Response, error) {
+//  @return V2ExtranetServiceOvertimeConsumptionPostResponse
+func (a *DefaultAPIService) V2ExtranetServiceOvertimeConsumptionPostExecute(r ApiV2ExtranetServiceOvertimeConsumptionPostRequest) (*V2ExtranetServiceOvertimeConsumptionPostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1ExtranetB2bMonitoringPeeringServiceServiceOvertimeConsumptionPost200Response
+		localVarReturnValue  *V2ExtranetServiceOvertimeConsumptionPostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V2ExtranetServiceOvertimeConsumptionPost")
@@ -59182,8 +61811,8 @@ func (a *DefaultAPIService) V2ExtranetServiceOvertimeConsumptionPostExecute(r Ap
 	if r.authorization == nil {
 		return localVarReturnValue, nil, reportError("authorization is required and must be specified")
 	}
-	if r.v1ExtranetB2bMonitoringPeeringServiceServiceOvertimeConsumptionPostRequest == nil {
-		return localVarReturnValue, nil, reportError("v1ExtranetB2bMonitoringPeeringServiceServiceOvertimeConsumptionPostRequest is required and must be specified")
+	if r.v2ExtranetServiceOvertimeConsumptionPostRequest == nil {
+		return localVarReturnValue, nil, reportError("v2ExtranetServiceOvertimeConsumptionPostRequest is required and must be specified")
 	}
 
 	// to determine the Content-Type header
@@ -59205,7 +61834,7 @@ func (a *DefaultAPIService) V2ExtranetServiceOvertimeConsumptionPostExecute(r Ap
 	}
 	parameterAddToHeaderOrQuery(localVarHeaderParams, "Authorization", r.authorization, "simple", "")
 	// body params
-	localVarPostBody = r.v1ExtranetB2bMonitoringPeeringServiceServiceOvertimeConsumptionPostRequest
+	localVarPostBody = r.v2ExtranetServiceOvertimeConsumptionPostRequest
 	if r.ctx != nil {
 		// API Key Authentication
 		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
@@ -59261,7 +61890,7 @@ type ApiV2ExtranetSitesConsumptionOverviewPostRequest struct {
 	ctx context.Context
 	ApiService *DefaultAPIService
 	authorization *string
-	v1ExtranetB2bMonitoringPeeringServiceConsumptionOverviewPostRequest *V1ExtranetB2bMonitoringPeeringServiceConsumptionOverviewPostRequest
+	v2ExtranetSitesConsumptionOverviewPostRequest *V2ExtranetSitesConsumptionOverviewPostRequest
 }
 
 // Bearer token. Format: Bearer &lt;your_token_here&gt;
@@ -59270,17 +61899,19 @@ func (r ApiV2ExtranetSitesConsumptionOverviewPostRequest) Authorization(authoriz
 	return r
 }
 
-func (r ApiV2ExtranetSitesConsumptionOverviewPostRequest) V1ExtranetB2bMonitoringPeeringServiceConsumptionOverviewPostRequest(v1ExtranetB2bMonitoringPeeringServiceConsumptionOverviewPostRequest V1ExtranetB2bMonitoringPeeringServiceConsumptionOverviewPostRequest) ApiV2ExtranetSitesConsumptionOverviewPostRequest {
-	r.v1ExtranetB2bMonitoringPeeringServiceConsumptionOverviewPostRequest = &v1ExtranetB2bMonitoringPeeringServiceConsumptionOverviewPostRequest
+func (r ApiV2ExtranetSitesConsumptionOverviewPostRequest) V2ExtranetSitesConsumptionOverviewPostRequest(v2ExtranetSitesConsumptionOverviewPostRequest V2ExtranetSitesConsumptionOverviewPostRequest) ApiV2ExtranetSitesConsumptionOverviewPostRequest {
+	r.v2ExtranetSitesConsumptionOverviewPostRequest = &v2ExtranetSitesConsumptionOverviewPostRequest
 	return r
 }
 
-func (r ApiV2ExtranetSitesConsumptionOverviewPostRequest) Execute() (*V2ExtranetSitesConsumptionOverviewPost200Response, *http.Response, error) {
+func (r ApiV2ExtranetSitesConsumptionOverviewPostRequest) Execute() (*V2ExtranetSitesConsumptionOverviewPostResponse, *http.Response, error) {
 	return r.ApiService.V2ExtranetSitesConsumptionOverviewPostExecute(r)
 }
 
 /*
 V2ExtranetSitesConsumptionOverviewPost Method for V2ExtranetSitesConsumptionOverviewPost
+
+Get extranet service consumption overview over timewindow
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV2ExtranetSitesConsumptionOverviewPostRequest
@@ -59293,13 +61924,13 @@ func (a *DefaultAPIService) V2ExtranetSitesConsumptionOverviewPost(ctx context.C
 }
 
 // Execute executes the request
-//  @return V2ExtranetSitesConsumptionOverviewPost200Response
-func (a *DefaultAPIService) V2ExtranetSitesConsumptionOverviewPostExecute(r ApiV2ExtranetSitesConsumptionOverviewPostRequest) (*V2ExtranetSitesConsumptionOverviewPost200Response, *http.Response, error) {
+//  @return V2ExtranetSitesConsumptionOverviewPostResponse
+func (a *DefaultAPIService) V2ExtranetSitesConsumptionOverviewPostExecute(r ApiV2ExtranetSitesConsumptionOverviewPostRequest) (*V2ExtranetSitesConsumptionOverviewPostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V2ExtranetSitesConsumptionOverviewPost200Response
+		localVarReturnValue  *V2ExtranetSitesConsumptionOverviewPostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V2ExtranetSitesConsumptionOverviewPost")
@@ -59315,8 +61946,8 @@ func (a *DefaultAPIService) V2ExtranetSitesConsumptionOverviewPostExecute(r ApiV
 	if r.authorization == nil {
 		return localVarReturnValue, nil, reportError("authorization is required and must be specified")
 	}
-	if r.v1ExtranetB2bMonitoringPeeringServiceConsumptionOverviewPostRequest == nil {
-		return localVarReturnValue, nil, reportError("v1ExtranetB2bMonitoringPeeringServiceConsumptionOverviewPostRequest is required and must be specified")
+	if r.v2ExtranetSitesConsumptionOverviewPostRequest == nil {
+		return localVarReturnValue, nil, reportError("v2ExtranetSitesConsumptionOverviewPostRequest is required and must be specified")
 	}
 
 	// to determine the Content-Type header
@@ -59338,7 +61969,7 @@ func (a *DefaultAPIService) V2ExtranetSitesConsumptionOverviewPostExecute(r ApiV
 	}
 	parameterAddToHeaderOrQuery(localVarHeaderParams, "Authorization", r.authorization, "simple", "")
 	// body params
-	localVarPostBody = r.v1ExtranetB2bMonitoringPeeringServiceConsumptionOverviewPostRequest
+	localVarPostBody = r.v2ExtranetSitesConsumptionOverviewPostRequest
 	if r.ctx != nil {
 		// API Key Authentication
 		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
@@ -59394,7 +62025,7 @@ type ApiV2ExtranetSitesUsagePostRequest struct {
 	ctx context.Context
 	ApiService *DefaultAPIService
 	authorization *string
-	v1ExtranetB2bMonitoringPeeringServiceBandwidthUsagePostRequest *V1ExtranetB2bMonitoringPeeringServiceBandwidthUsagePostRequest
+	v2ExtranetSitesUsagePostRequest *V2ExtranetSitesUsagePostRequest
 }
 
 // Bearer token. Format: Bearer &lt;your_token_here&gt;
@@ -59403,17 +62034,19 @@ func (r ApiV2ExtranetSitesUsagePostRequest) Authorization(authorization string) 
 	return r
 }
 
-func (r ApiV2ExtranetSitesUsagePostRequest) V1ExtranetB2bMonitoringPeeringServiceBandwidthUsagePostRequest(v1ExtranetB2bMonitoringPeeringServiceBandwidthUsagePostRequest V1ExtranetB2bMonitoringPeeringServiceBandwidthUsagePostRequest) ApiV2ExtranetSitesUsagePostRequest {
-	r.v1ExtranetB2bMonitoringPeeringServiceBandwidthUsagePostRequest = &v1ExtranetB2bMonitoringPeeringServiceBandwidthUsagePostRequest
+func (r ApiV2ExtranetSitesUsagePostRequest) V2ExtranetSitesUsagePostRequest(v2ExtranetSitesUsagePostRequest V2ExtranetSitesUsagePostRequest) ApiV2ExtranetSitesUsagePostRequest {
+	r.v2ExtranetSitesUsagePostRequest = &v2ExtranetSitesUsagePostRequest
 	return r
 }
 
-func (r ApiV2ExtranetSitesUsagePostRequest) Execute() (*V1ExtranetB2bMonitoringPeeringServiceBandwidthUsagePost200Response, *http.Response, error) {
+func (r ApiV2ExtranetSitesUsagePostRequest) Execute() (*V2ExtranetSitesUsagePostResponse, *http.Response, error) {
 	return r.ApiService.V2ExtranetSitesUsagePostExecute(r)
 }
 
 /*
 V2ExtranetSitesUsagePost Method for V2ExtranetSitesUsagePost
+
+Get extranet service sites usage stats v2
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV2ExtranetSitesUsagePostRequest
@@ -59426,13 +62059,13 @@ func (a *DefaultAPIService) V2ExtranetSitesUsagePost(ctx context.Context) ApiV2E
 }
 
 // Execute executes the request
-//  @return V1ExtranetB2bMonitoringPeeringServiceBandwidthUsagePost200Response
-func (a *DefaultAPIService) V2ExtranetSitesUsagePostExecute(r ApiV2ExtranetSitesUsagePostRequest) (*V1ExtranetB2bMonitoringPeeringServiceBandwidthUsagePost200Response, *http.Response, error) {
+//  @return V2ExtranetSitesUsagePostResponse
+func (a *DefaultAPIService) V2ExtranetSitesUsagePostExecute(r ApiV2ExtranetSitesUsagePostRequest) (*V2ExtranetSitesUsagePostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1ExtranetB2bMonitoringPeeringServiceBandwidthUsagePost200Response
+		localVarReturnValue  *V2ExtranetSitesUsagePostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V2ExtranetSitesUsagePost")
@@ -59448,8 +62081,8 @@ func (a *DefaultAPIService) V2ExtranetSitesUsagePostExecute(r ApiV2ExtranetSites
 	if r.authorization == nil {
 		return localVarReturnValue, nil, reportError("authorization is required and must be specified")
 	}
-	if r.v1ExtranetB2bMonitoringPeeringServiceBandwidthUsagePostRequest == nil {
-		return localVarReturnValue, nil, reportError("v1ExtranetB2bMonitoringPeeringServiceBandwidthUsagePostRequest is required and must be specified")
+	if r.v2ExtranetSitesUsagePostRequest == nil {
+		return localVarReturnValue, nil, reportError("v2ExtranetSitesUsagePostRequest is required and must be specified")
 	}
 
 	// to determine the Content-Type header
@@ -59471,7 +62104,7 @@ func (a *DefaultAPIService) V2ExtranetSitesUsagePostExecute(r ApiV2ExtranetSites
 	}
 	parameterAddToHeaderOrQuery(localVarHeaderParams, "Authorization", r.authorization, "simple", "")
 	// body params
-	localVarPostBody = r.v1ExtranetB2bMonitoringPeeringServiceBandwidthUsagePostRequest
+	localVarPostBody = r.v2ExtranetSitesUsagePostRequest
 	if r.ctx != nil {
 		// API Key Authentication
 		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
@@ -59527,7 +62160,7 @@ type ApiV2ExtranetTotalUsagePostRequest struct {
 	ctx context.Context
 	ApiService *DefaultAPIService
 	authorization *string
-	v1ExtranetB2bMonitoringPeeringServiceConsumersUsageTopPostRequest *V1ExtranetB2bMonitoringPeeringServiceConsumersUsageTopPostRequest
+	v2ExtranetTotalUsagePostRequest *V2ExtranetTotalUsagePostRequest
 }
 
 // Bearer token. Format: Bearer &lt;your_token_here&gt;
@@ -59536,17 +62169,19 @@ func (r ApiV2ExtranetTotalUsagePostRequest) Authorization(authorization string) 
 	return r
 }
 
-func (r ApiV2ExtranetTotalUsagePostRequest) V1ExtranetB2bMonitoringPeeringServiceConsumersUsageTopPostRequest(v1ExtranetB2bMonitoringPeeringServiceConsumersUsageTopPostRequest V1ExtranetB2bMonitoringPeeringServiceConsumersUsageTopPostRequest) ApiV2ExtranetTotalUsagePostRequest {
-	r.v1ExtranetB2bMonitoringPeeringServiceConsumersUsageTopPostRequest = &v1ExtranetB2bMonitoringPeeringServiceConsumersUsageTopPostRequest
+func (r ApiV2ExtranetTotalUsagePostRequest) V2ExtranetTotalUsagePostRequest(v2ExtranetTotalUsagePostRequest V2ExtranetTotalUsagePostRequest) ApiV2ExtranetTotalUsagePostRequest {
+	r.v2ExtranetTotalUsagePostRequest = &v2ExtranetTotalUsagePostRequest
 	return r
 }
 
-func (r ApiV2ExtranetTotalUsagePostRequest) Execute() (*V2ExtranetTotalUsagePost200Response, *http.Response, error) {
+func (r ApiV2ExtranetTotalUsagePostRequest) Execute() (*V2ExtranetTotalUsagePostResponse, *http.Response, error) {
 	return r.ApiService.V2ExtranetTotalUsagePostExecute(r)
 }
 
 /*
 V2ExtranetTotalUsagePost Method for V2ExtranetTotalUsagePost
+
+Get extranet service total usage stats
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV2ExtranetTotalUsagePostRequest
@@ -59559,13 +62194,13 @@ func (a *DefaultAPIService) V2ExtranetTotalUsagePost(ctx context.Context) ApiV2E
 }
 
 // Execute executes the request
-//  @return V2ExtranetTotalUsagePost200Response
-func (a *DefaultAPIService) V2ExtranetTotalUsagePostExecute(r ApiV2ExtranetTotalUsagePostRequest) (*V2ExtranetTotalUsagePost200Response, *http.Response, error) {
+//  @return V2ExtranetTotalUsagePostResponse
+func (a *DefaultAPIService) V2ExtranetTotalUsagePostExecute(r ApiV2ExtranetTotalUsagePostRequest) (*V2ExtranetTotalUsagePostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V2ExtranetTotalUsagePost200Response
+		localVarReturnValue  *V2ExtranetTotalUsagePostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V2ExtranetTotalUsagePost")
@@ -59581,8 +62216,8 @@ func (a *DefaultAPIService) V2ExtranetTotalUsagePostExecute(r ApiV2ExtranetTotal
 	if r.authorization == nil {
 		return localVarReturnValue, nil, reportError("authorization is required and must be specified")
 	}
-	if r.v1ExtranetB2bMonitoringPeeringServiceConsumersUsageTopPostRequest == nil {
-		return localVarReturnValue, nil, reportError("v1ExtranetB2bMonitoringPeeringServiceConsumersUsageTopPostRequest is required and must be specified")
+	if r.v2ExtranetTotalUsagePostRequest == nil {
+		return localVarReturnValue, nil, reportError("v2ExtranetTotalUsagePostRequest is required and must be specified")
 	}
 
 	// to determine the Content-Type header
@@ -59604,7 +62239,7 @@ func (a *DefaultAPIService) V2ExtranetTotalUsagePostExecute(r ApiV2ExtranetTotal
 	}
 	parameterAddToHeaderOrQuery(localVarHeaderParams, "Authorization", r.authorization, "simple", "")
 	// body params
-	localVarPostBody = r.v1ExtranetB2bMonitoringPeeringServiceConsumersUsageTopPostRequest
+	localVarPostBody = r.v2ExtranetTotalUsagePostRequest
 	if r.ctx != nil {
 		// API Key Authentication
 		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
@@ -59660,7 +62295,7 @@ type ApiV2ExtranetsMonitoringConsumersPostRequest struct {
 	ctx context.Context
 	ApiService *DefaultAPIService
 	authorization *string
-	v1PolicyRouteTagSetsPost200Response *V1PolicyRouteTagSetsPost200Response
+	v2ExtranetsMonitoringConsumersPostRequest *V2ExtranetsMonitoringConsumersPostRequest
 }
 
 // Bearer token. Format: Bearer &lt;your_token_here&gt;
@@ -59669,17 +62304,19 @@ func (r ApiV2ExtranetsMonitoringConsumersPostRequest) Authorization(authorizatio
 	return r
 }
 
-func (r ApiV2ExtranetsMonitoringConsumersPostRequest) V1PolicyRouteTagSetsPost200Response(v1PolicyRouteTagSetsPost200Response V1PolicyRouteTagSetsPost200Response) ApiV2ExtranetsMonitoringConsumersPostRequest {
-	r.v1PolicyRouteTagSetsPost200Response = &v1PolicyRouteTagSetsPost200Response
+func (r ApiV2ExtranetsMonitoringConsumersPostRequest) V2ExtranetsMonitoringConsumersPostRequest(v2ExtranetsMonitoringConsumersPostRequest V2ExtranetsMonitoringConsumersPostRequest) ApiV2ExtranetsMonitoringConsumersPostRequest {
+	r.v2ExtranetsMonitoringConsumersPostRequest = &v2ExtranetsMonitoringConsumersPostRequest
 	return r
 }
 
-func (r ApiV2ExtranetsMonitoringConsumersPostRequest) Execute() (*V2ExtranetsMonitoringConsumersPost200Response, *http.Response, error) {
+func (r ApiV2ExtranetsMonitoringConsumersPostRequest) Execute() (*V2ExtranetsMonitoringConsumersPostResponse, *http.Response, error) {
 	return r.ApiService.V2ExtranetsMonitoringConsumersPostExecute(r)
 }
 
 /*
 V2ExtranetsMonitoringConsumersPost Method for V2ExtranetsMonitoringConsumersPost
+
+Get consumer list for b2b producer service
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiV2ExtranetsMonitoringConsumersPostRequest
@@ -59692,13 +62329,13 @@ func (a *DefaultAPIService) V2ExtranetsMonitoringConsumersPost(ctx context.Conte
 }
 
 // Execute executes the request
-//  @return V2ExtranetsMonitoringConsumersPost200Response
-func (a *DefaultAPIService) V2ExtranetsMonitoringConsumersPostExecute(r ApiV2ExtranetsMonitoringConsumersPostRequest) (*V2ExtranetsMonitoringConsumersPost200Response, *http.Response, error) {
+//  @return V2ExtranetsMonitoringConsumersPostResponse
+func (a *DefaultAPIService) V2ExtranetsMonitoringConsumersPostExecute(r ApiV2ExtranetsMonitoringConsumersPostRequest) (*V2ExtranetsMonitoringConsumersPostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V2ExtranetsMonitoringConsumersPost200Response
+		localVarReturnValue  *V2ExtranetsMonitoringConsumersPostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V2ExtranetsMonitoringConsumersPost")
@@ -59714,8 +62351,8 @@ func (a *DefaultAPIService) V2ExtranetsMonitoringConsumersPostExecute(r ApiV2Ext
 	if r.authorization == nil {
 		return localVarReturnValue, nil, reportError("authorization is required and must be specified")
 	}
-	if r.v1PolicyRouteTagSetsPost200Response == nil {
-		return localVarReturnValue, nil, reportError("v1PolicyRouteTagSetsPost200Response is required and must be specified")
+	if r.v2ExtranetsMonitoringConsumersPostRequest == nil {
+		return localVarReturnValue, nil, reportError("v2ExtranetsMonitoringConsumersPostRequest is required and must be specified")
 	}
 
 	// to determine the Content-Type header
@@ -59737,7 +62374,7 @@ func (a *DefaultAPIService) V2ExtranetsMonitoringConsumersPostExecute(r ApiV2Ext
 	}
 	parameterAddToHeaderOrQuery(localVarHeaderParams, "Authorization", r.authorization, "simple", "")
 	// body params
-	localVarPostBody = r.v1PolicyRouteTagSetsPost200Response
+	localVarPostBody = r.v2ExtranetsMonitoringConsumersPostRequest
 	if r.ctx != nil {
 		// API Key Authentication
 		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
@@ -59802,7 +62439,7 @@ func (r ApiV2IntegrationGetallEnterpriseIdGetRequest) Authorization(authorizatio
 	return r
 }
 
-func (r ApiV2IntegrationGetallEnterpriseIdGetRequest) Execute() (*V2IntegrationGetallEnterpriseIdGet200Response, *http.Response, error) {
+func (r ApiV2IntegrationGetallEnterpriseIdGetRequest) Execute() (*V2IntegrationGetallEnterpriseIdGetResponse, *http.Response, error) {
 	return r.ApiService.V2IntegrationGetallEnterpriseIdGetExecute(r)
 }
 
@@ -59822,13 +62459,13 @@ func (a *DefaultAPIService) V2IntegrationGetallEnterpriseIdGet(ctx context.Conte
 }
 
 // Execute executes the request
-//  @return V2IntegrationGetallEnterpriseIdGet200Response
-func (a *DefaultAPIService) V2IntegrationGetallEnterpriseIdGetExecute(r ApiV2IntegrationGetallEnterpriseIdGetRequest) (*V2IntegrationGetallEnterpriseIdGet200Response, *http.Response, error) {
+//  @return V2IntegrationGetallEnterpriseIdGetResponse
+func (a *DefaultAPIService) V2IntegrationGetallEnterpriseIdGetExecute(r ApiV2IntegrationGetallEnterpriseIdGetRequest) (*V2IntegrationGetallEnterpriseIdGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V2IntegrationGetallEnterpriseIdGet200Response
+		localVarReturnValue  *V2IntegrationGetallEnterpriseIdGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V2IntegrationGetallEnterpriseIdGet")
@@ -60196,7 +62833,7 @@ func (r ApiV2IntegrationPostRequest) V2IntegrationPostRequest(v2IntegrationPostR
 	return r
 }
 
-func (r ApiV2IntegrationPostRequest) Execute() (*V2IntegrationPost200Response, *http.Response, error) {
+func (r ApiV2IntegrationPostRequest) Execute() (*V2IntegrationPostResponse, *http.Response, error) {
 	return r.ApiService.V2IntegrationPostExecute(r)
 }
 
@@ -60214,13 +62851,13 @@ func (a *DefaultAPIService) V2IntegrationPost(ctx context.Context) ApiV2Integrat
 }
 
 // Execute executes the request
-//  @return V2IntegrationPost200Response
-func (a *DefaultAPIService) V2IntegrationPostExecute(r ApiV2IntegrationPostRequest) (*V2IntegrationPost200Response, *http.Response, error) {
+//  @return V2IntegrationPostResponse
+func (a *DefaultAPIService) V2IntegrationPostExecute(r ApiV2IntegrationPostRequest) (*V2IntegrationPostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V2IntegrationPost200Response
+		localVarReturnValue  *V2IntegrationPostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V2IntegrationPost")
@@ -60459,7 +63096,7 @@ func (r ApiV2MonitoringBfdPostRequest) V2MonitoringBfdPostRequest(v2MonitoringBf
 	return r
 }
 
-func (r ApiV2MonitoringBfdPostRequest) Execute() (*V2MonitoringBfdPost200Response, *http.Response, error) {
+func (r ApiV2MonitoringBfdPostRequest) Execute() (*V2MonitoringBfdPostResponse, *http.Response, error) {
 	return r.ApiService.V2MonitoringBfdPostExecute(r)
 }
 
@@ -60477,13 +63114,13 @@ func (a *DefaultAPIService) V2MonitoringBfdPost(ctx context.Context) ApiV2Monito
 }
 
 // Execute executes the request
-//  @return V2MonitoringBfdPost200Response
-func (a *DefaultAPIService) V2MonitoringBfdPostExecute(r ApiV2MonitoringBfdPostRequest) (*V2MonitoringBfdPost200Response, *http.Response, error) {
+//  @return V2MonitoringBfdPostResponse
+func (a *DefaultAPIService) V2MonitoringBfdPostExecute(r ApiV2MonitoringBfdPostRequest) (*V2MonitoringBfdPostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V2MonitoringBfdPost200Response
+		localVarReturnValue  *V2MonitoringBfdPostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V2MonitoringBfdPost")
@@ -60592,7 +63229,7 @@ func (r ApiV2MonitoringBgpPostRequest) V2MonitoringBgpPostRequest(v2MonitoringBg
 	return r
 }
 
-func (r ApiV2MonitoringBgpPostRequest) Execute() (*V2MonitoringBgpPost200Response, *http.Response, error) {
+func (r ApiV2MonitoringBgpPostRequest) Execute() (*V2MonitoringBgpPostResponse, *http.Response, error) {
 	return r.ApiService.V2MonitoringBgpPostExecute(r)
 }
 
@@ -60610,13 +63247,13 @@ func (a *DefaultAPIService) V2MonitoringBgpPost(ctx context.Context) ApiV2Monito
 }
 
 // Execute executes the request
-//  @return V2MonitoringBgpPost200Response
-func (a *DefaultAPIService) V2MonitoringBgpPostExecute(r ApiV2MonitoringBgpPostRequest) (*V2MonitoringBgpPost200Response, *http.Response, error) {
+//  @return V2MonitoringBgpPostResponse
+func (a *DefaultAPIService) V2MonitoringBgpPostExecute(r ApiV2MonitoringBgpPostRequest) (*V2MonitoringBgpPostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V2MonitoringBgpPost200Response
+		localVarReturnValue  *V2MonitoringBgpPostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V2MonitoringBgpPost")
@@ -60711,7 +63348,7 @@ type ApiV2MonitoringCircuitsBandwidthPostRequest struct {
 	ctx context.Context
 	ApiService *DefaultAPIService
 	authorization *string
-	v1MonitoringCircuitsBandwidthPostRequest *V1MonitoringCircuitsBandwidthPostRequest
+	v2MonitoringCircuitsBandwidthPostRequest *V2MonitoringCircuitsBandwidthPostRequest
 }
 
 // Bearer token. Format: Bearer &lt;your_token_here&gt;
@@ -60720,12 +63357,12 @@ func (r ApiV2MonitoringCircuitsBandwidthPostRequest) Authorization(authorization
 	return r
 }
 
-func (r ApiV2MonitoringCircuitsBandwidthPostRequest) V1MonitoringCircuitsBandwidthPostRequest(v1MonitoringCircuitsBandwidthPostRequest V1MonitoringCircuitsBandwidthPostRequest) ApiV2MonitoringCircuitsBandwidthPostRequest {
-	r.v1MonitoringCircuitsBandwidthPostRequest = &v1MonitoringCircuitsBandwidthPostRequest
+func (r ApiV2MonitoringCircuitsBandwidthPostRequest) V2MonitoringCircuitsBandwidthPostRequest(v2MonitoringCircuitsBandwidthPostRequest V2MonitoringCircuitsBandwidthPostRequest) ApiV2MonitoringCircuitsBandwidthPostRequest {
+	r.v2MonitoringCircuitsBandwidthPostRequest = &v2MonitoringCircuitsBandwidthPostRequest
 	return r
 }
 
-func (r ApiV2MonitoringCircuitsBandwidthPostRequest) Execute() (*V1MonitoringCircuitsBandwidthPost200Response, *http.Response, error) {
+func (r ApiV2MonitoringCircuitsBandwidthPostRequest) Execute() (*V2MonitoringCircuitsBandwidthPostResponse, *http.Response, error) {
 	return r.ApiService.V2MonitoringCircuitsBandwidthPostExecute(r)
 }
 
@@ -60743,13 +63380,13 @@ func (a *DefaultAPIService) V2MonitoringCircuitsBandwidthPost(ctx context.Contex
 }
 
 // Execute executes the request
-//  @return V1MonitoringCircuitsBandwidthPost200Response
-func (a *DefaultAPIService) V2MonitoringCircuitsBandwidthPostExecute(r ApiV2MonitoringCircuitsBandwidthPostRequest) (*V1MonitoringCircuitsBandwidthPost200Response, *http.Response, error) {
+//  @return V2MonitoringCircuitsBandwidthPostResponse
+func (a *DefaultAPIService) V2MonitoringCircuitsBandwidthPostExecute(r ApiV2MonitoringCircuitsBandwidthPostRequest) (*V2MonitoringCircuitsBandwidthPostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1MonitoringCircuitsBandwidthPost200Response
+		localVarReturnValue  *V2MonitoringCircuitsBandwidthPostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V2MonitoringCircuitsBandwidthPost")
@@ -60765,8 +63402,8 @@ func (a *DefaultAPIService) V2MonitoringCircuitsBandwidthPostExecute(r ApiV2Moni
 	if r.authorization == nil {
 		return localVarReturnValue, nil, reportError("authorization is required and must be specified")
 	}
-	if r.v1MonitoringCircuitsBandwidthPostRequest == nil {
-		return localVarReturnValue, nil, reportError("v1MonitoringCircuitsBandwidthPostRequest is required and must be specified")
+	if r.v2MonitoringCircuitsBandwidthPostRequest == nil {
+		return localVarReturnValue, nil, reportError("v2MonitoringCircuitsBandwidthPostRequest is required and must be specified")
 	}
 
 	// to determine the Content-Type header
@@ -60788,7 +63425,7 @@ func (a *DefaultAPIService) V2MonitoringCircuitsBandwidthPostExecute(r ApiV2Moni
 	}
 	parameterAddToHeaderOrQuery(localVarHeaderParams, "Authorization", r.authorization, "simple", "")
 	// body params
-	localVarPostBody = r.v1MonitoringCircuitsBandwidthPostRequest
+	localVarPostBody = r.v2MonitoringCircuitsBandwidthPostRequest
 	if r.ctx != nil {
 		// API Key Authentication
 		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
@@ -60858,7 +63495,7 @@ func (r ApiV2MonitoringCircuitsSummaryPostRequest) V2MonitoringCircuitsSummaryPo
 	return r
 }
 
-func (r ApiV2MonitoringCircuitsSummaryPostRequest) Execute() (*V2MonitoringCircuitsSummaryPost200Response, *http.Response, error) {
+func (r ApiV2MonitoringCircuitsSummaryPostRequest) Execute() (*V2MonitoringCircuitsSummaryPostResponse, *http.Response, error) {
 	return r.ApiService.V2MonitoringCircuitsSummaryPostExecute(r)
 }
 
@@ -60876,13 +63513,13 @@ func (a *DefaultAPIService) V2MonitoringCircuitsSummaryPost(ctx context.Context)
 }
 
 // Execute executes the request
-//  @return V2MonitoringCircuitsSummaryPost200Response
-func (a *DefaultAPIService) V2MonitoringCircuitsSummaryPostExecute(r ApiV2MonitoringCircuitsSummaryPostRequest) (*V2MonitoringCircuitsSummaryPost200Response, *http.Response, error) {
+//  @return V2MonitoringCircuitsSummaryPostResponse
+func (a *DefaultAPIService) V2MonitoringCircuitsSummaryPostExecute(r ApiV2MonitoringCircuitsSummaryPostRequest) (*V2MonitoringCircuitsSummaryPostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V2MonitoringCircuitsSummaryPost200Response
+		localVarReturnValue  *V2MonitoringCircuitsSummaryPostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V2MonitoringCircuitsSummaryPost")
@@ -60991,7 +63628,7 @@ func (r ApiV2MonitoringCircuitsUtilizationPostRequest) V2MonitoringCircuitsUtili
 	return r
 }
 
-func (r ApiV2MonitoringCircuitsUtilizationPostRequest) Execute() (*V2MonitoringCircuitsUtilizationPost200Response, *http.Response, error) {
+func (r ApiV2MonitoringCircuitsUtilizationPostRequest) Execute() (*V2MonitoringCircuitsUtilizationPostResponse, *http.Response, error) {
 	return r.ApiService.V2MonitoringCircuitsUtilizationPostExecute(r)
 }
 
@@ -61009,13 +63646,13 @@ func (a *DefaultAPIService) V2MonitoringCircuitsUtilizationPost(ctx context.Cont
 }
 
 // Execute executes the request
-//  @return V2MonitoringCircuitsUtilizationPost200Response
-func (a *DefaultAPIService) V2MonitoringCircuitsUtilizationPostExecute(r ApiV2MonitoringCircuitsUtilizationPostRequest) (*V2MonitoringCircuitsUtilizationPost200Response, *http.Response, error) {
+//  @return V2MonitoringCircuitsUtilizationPostResponse
+func (a *DefaultAPIService) V2MonitoringCircuitsUtilizationPostExecute(r ApiV2MonitoringCircuitsUtilizationPostRequest) (*V2MonitoringCircuitsUtilizationPostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V2MonitoringCircuitsUtilizationPost200Response
+		localVarReturnValue  *V2MonitoringCircuitsUtilizationPostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V2MonitoringCircuitsUtilizationPost")
@@ -61110,7 +63747,7 @@ type ApiV2MonitoringCircuitsVisualizationPostRequest struct {
 	ctx context.Context
 	ApiService *DefaultAPIService
 	authorization *string
-	v1MonitoringCircuitsVisualizationPostRequest *V1MonitoringCircuitsVisualizationPostRequest
+	v2MonitoringCircuitsVisualizationPostRequest *V2MonitoringCircuitsVisualizationPostRequest
 }
 
 // Bearer token. Format: Bearer &lt;your_token_here&gt;
@@ -61119,12 +63756,12 @@ func (r ApiV2MonitoringCircuitsVisualizationPostRequest) Authorization(authoriza
 	return r
 }
 
-func (r ApiV2MonitoringCircuitsVisualizationPostRequest) V1MonitoringCircuitsVisualizationPostRequest(v1MonitoringCircuitsVisualizationPostRequest V1MonitoringCircuitsVisualizationPostRequest) ApiV2MonitoringCircuitsVisualizationPostRequest {
-	r.v1MonitoringCircuitsVisualizationPostRequest = &v1MonitoringCircuitsVisualizationPostRequest
+func (r ApiV2MonitoringCircuitsVisualizationPostRequest) V2MonitoringCircuitsVisualizationPostRequest(v2MonitoringCircuitsVisualizationPostRequest V2MonitoringCircuitsVisualizationPostRequest) ApiV2MonitoringCircuitsVisualizationPostRequest {
+	r.v2MonitoringCircuitsVisualizationPostRequest = &v2MonitoringCircuitsVisualizationPostRequest
 	return r
 }
 
-func (r ApiV2MonitoringCircuitsVisualizationPostRequest) Execute() (*V1MonitoringCircuitsVisualizationPost200Response, *http.Response, error) {
+func (r ApiV2MonitoringCircuitsVisualizationPostRequest) Execute() (*V2MonitoringCircuitsVisualizationPostResponse, *http.Response, error) {
 	return r.ApiService.V2MonitoringCircuitsVisualizationPostExecute(r)
 }
 
@@ -61142,13 +63779,13 @@ func (a *DefaultAPIService) V2MonitoringCircuitsVisualizationPost(ctx context.Co
 }
 
 // Execute executes the request
-//  @return V1MonitoringCircuitsVisualizationPost200Response
-func (a *DefaultAPIService) V2MonitoringCircuitsVisualizationPostExecute(r ApiV2MonitoringCircuitsVisualizationPostRequest) (*V1MonitoringCircuitsVisualizationPost200Response, *http.Response, error) {
+//  @return V2MonitoringCircuitsVisualizationPostResponse
+func (a *DefaultAPIService) V2MonitoringCircuitsVisualizationPostExecute(r ApiV2MonitoringCircuitsVisualizationPostRequest) (*V2MonitoringCircuitsVisualizationPostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V1MonitoringCircuitsVisualizationPost200Response
+		localVarReturnValue  *V2MonitoringCircuitsVisualizationPostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V2MonitoringCircuitsVisualizationPost")
@@ -61164,8 +63801,8 @@ func (a *DefaultAPIService) V2MonitoringCircuitsVisualizationPostExecute(r ApiV2
 	if r.authorization == nil {
 		return localVarReturnValue, nil, reportError("authorization is required and must be specified")
 	}
-	if r.v1MonitoringCircuitsVisualizationPostRequest == nil {
-		return localVarReturnValue, nil, reportError("v1MonitoringCircuitsVisualizationPostRequest is required and must be specified")
+	if r.v2MonitoringCircuitsVisualizationPostRequest == nil {
+		return localVarReturnValue, nil, reportError("v2MonitoringCircuitsVisualizationPostRequest is required and must be specified")
 	}
 
 	// to determine the Content-Type header
@@ -61187,7 +63824,7 @@ func (a *DefaultAPIService) V2MonitoringCircuitsVisualizationPostExecute(r ApiV2
 	}
 	parameterAddToHeaderOrQuery(localVarHeaderParams, "Authorization", r.authorization, "simple", "")
 	// body params
-	localVarPostBody = r.v1MonitoringCircuitsVisualizationPostRequest
+	localVarPostBody = r.v2MonitoringCircuitsVisualizationPostRequest
 	if r.ctx != nil {
 		// API Key Authentication
 		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
@@ -61251,7 +63888,7 @@ func (r ApiV2MonitoringExtranetEdgeStatusGetRequest) Authorization(authorization
 	return r
 }
 
-func (r ApiV2MonitoringExtranetEdgeStatusGetRequest) Execute() (*V2MonitoringExtranetEdgeStatusGet200Response, *http.Response, error) {
+func (r ApiV2MonitoringExtranetEdgeStatusGetRequest) Execute() (*V2MonitoringExtranetEdgeStatusGetResponse, *http.Response, error) {
 	return r.ApiService.V2MonitoringExtranetEdgeStatusGetExecute(r)
 }
 
@@ -61269,13 +63906,13 @@ func (a *DefaultAPIService) V2MonitoringExtranetEdgeStatusGet(ctx context.Contex
 }
 
 // Execute executes the request
-//  @return V2MonitoringExtranetEdgeStatusGet200Response
-func (a *DefaultAPIService) V2MonitoringExtranetEdgeStatusGetExecute(r ApiV2MonitoringExtranetEdgeStatusGetRequest) (*V2MonitoringExtranetEdgeStatusGet200Response, *http.Response, error) {
+//  @return V2MonitoringExtranetEdgeStatusGetResponse
+func (a *DefaultAPIService) V2MonitoringExtranetEdgeStatusGetExecute(r ApiV2MonitoringExtranetEdgeStatusGetRequest) (*V2MonitoringExtranetEdgeStatusGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V2MonitoringExtranetEdgeStatusGet200Response
+		localVarReturnValue  *V2MonitoringExtranetEdgeStatusGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V2MonitoringExtranetEdgeStatusGet")
@@ -61365,7 +64002,7 @@ type ApiV2MonitoringExtranetLogDetailsPostRequest struct {
 	ctx context.Context
 	ApiService *DefaultAPIService
 	authorization *string
-	v1B2bExtranetMonitoringFilterPostRequest *V1B2bExtranetMonitoringFilterPostRequest
+	v2MonitoringExtranetLogDetailsPostRequest *V2MonitoringExtranetLogDetailsPostRequest
 }
 
 // Bearer token. Format: Bearer &lt;your_token_here&gt;
@@ -61374,12 +64011,12 @@ func (r ApiV2MonitoringExtranetLogDetailsPostRequest) Authorization(authorizatio
 	return r
 }
 
-func (r ApiV2MonitoringExtranetLogDetailsPostRequest) V1B2bExtranetMonitoringFilterPostRequest(v1B2bExtranetMonitoringFilterPostRequest V1B2bExtranetMonitoringFilterPostRequest) ApiV2MonitoringExtranetLogDetailsPostRequest {
-	r.v1B2bExtranetMonitoringFilterPostRequest = &v1B2bExtranetMonitoringFilterPostRequest
+func (r ApiV2MonitoringExtranetLogDetailsPostRequest) V2MonitoringExtranetLogDetailsPostRequest(v2MonitoringExtranetLogDetailsPostRequest V2MonitoringExtranetLogDetailsPostRequest) ApiV2MonitoringExtranetLogDetailsPostRequest {
+	r.v2MonitoringExtranetLogDetailsPostRequest = &v2MonitoringExtranetLogDetailsPostRequest
 	return r
 }
 
-func (r ApiV2MonitoringExtranetLogDetailsPostRequest) Execute() (*V2MonitoringExtranetLogDetailsPost200Response, *http.Response, error) {
+func (r ApiV2MonitoringExtranetLogDetailsPostRequest) Execute() (*V2MonitoringExtranetLogDetailsPostResponse, *http.Response, error) {
 	return r.ApiService.V2MonitoringExtranetLogDetailsPostExecute(r)
 }
 
@@ -61397,13 +64034,13 @@ func (a *DefaultAPIService) V2MonitoringExtranetLogDetailsPost(ctx context.Conte
 }
 
 // Execute executes the request
-//  @return V2MonitoringExtranetLogDetailsPost200Response
-func (a *DefaultAPIService) V2MonitoringExtranetLogDetailsPostExecute(r ApiV2MonitoringExtranetLogDetailsPostRequest) (*V2MonitoringExtranetLogDetailsPost200Response, *http.Response, error) {
+//  @return V2MonitoringExtranetLogDetailsPostResponse
+func (a *DefaultAPIService) V2MonitoringExtranetLogDetailsPostExecute(r ApiV2MonitoringExtranetLogDetailsPostRequest) (*V2MonitoringExtranetLogDetailsPostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V2MonitoringExtranetLogDetailsPost200Response
+		localVarReturnValue  *V2MonitoringExtranetLogDetailsPostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V2MonitoringExtranetLogDetailsPost")
@@ -61419,8 +64056,8 @@ func (a *DefaultAPIService) V2MonitoringExtranetLogDetailsPostExecute(r ApiV2Mon
 	if r.authorization == nil {
 		return localVarReturnValue, nil, reportError("authorization is required and must be specified")
 	}
-	if r.v1B2bExtranetMonitoringFilterPostRequest == nil {
-		return localVarReturnValue, nil, reportError("v1B2bExtranetMonitoringFilterPostRequest is required and must be specified")
+	if r.v2MonitoringExtranetLogDetailsPostRequest == nil {
+		return localVarReturnValue, nil, reportError("v2MonitoringExtranetLogDetailsPostRequest is required and must be specified")
 	}
 
 	// to determine the Content-Type header
@@ -61442,7 +64079,7 @@ func (a *DefaultAPIService) V2MonitoringExtranetLogDetailsPostExecute(r ApiV2Mon
 	}
 	parameterAddToHeaderOrQuery(localVarHeaderParams, "Authorization", r.authorization, "simple", "")
 	// body params
-	localVarPostBody = r.v1B2bExtranetMonitoringFilterPostRequest
+	localVarPostBody = r.v2MonitoringExtranetLogDetailsPostRequest
 	if r.ctx != nil {
 		// API Key Authentication
 		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
@@ -61506,7 +64143,7 @@ func (r ApiV2MonitoringExtranetServiceStatusDetailsGetRequest) Authorization(aut
 	return r
 }
 
-func (r ApiV2MonitoringExtranetServiceStatusDetailsGetRequest) Execute() (*V2MonitoringExtranetServiceStatusDetailsGet200Response, *http.Response, error) {
+func (r ApiV2MonitoringExtranetServiceStatusDetailsGetRequest) Execute() (*V2MonitoringExtranetServiceStatusDetailsGetResponse, *http.Response, error) {
 	return r.ApiService.V2MonitoringExtranetServiceStatusDetailsGetExecute(r)
 }
 
@@ -61524,13 +64161,13 @@ func (a *DefaultAPIService) V2MonitoringExtranetServiceStatusDetailsGet(ctx cont
 }
 
 // Execute executes the request
-//  @return V2MonitoringExtranetServiceStatusDetailsGet200Response
-func (a *DefaultAPIService) V2MonitoringExtranetServiceStatusDetailsGetExecute(r ApiV2MonitoringExtranetServiceStatusDetailsGetRequest) (*V2MonitoringExtranetServiceStatusDetailsGet200Response, *http.Response, error) {
+//  @return V2MonitoringExtranetServiceStatusDetailsGetResponse
+func (a *DefaultAPIService) V2MonitoringExtranetServiceStatusDetailsGetExecute(r ApiV2MonitoringExtranetServiceStatusDetailsGetRequest) (*V2MonitoringExtranetServiceStatusDetailsGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V2MonitoringExtranetServiceStatusDetailsGet200Response
+		localVarReturnValue  *V2MonitoringExtranetServiceStatusDetailsGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V2MonitoringExtranetServiceStatusDetailsGet")
@@ -61628,7 +64265,7 @@ func (r ApiV2MonitoringExtranetServiceStatusGetRequest) Authorization(authorizat
 	return r
 }
 
-func (r ApiV2MonitoringExtranetServiceStatusGetRequest) Execute() (*V2MonitoringExtranetServiceStatusGet200Response, *http.Response, error) {
+func (r ApiV2MonitoringExtranetServiceStatusGetRequest) Execute() (*V2MonitoringExtranetServiceStatusGetResponse, *http.Response, error) {
 	return r.ApiService.V2MonitoringExtranetServiceStatusGetExecute(r)
 }
 
@@ -61646,13 +64283,13 @@ func (a *DefaultAPIService) V2MonitoringExtranetServiceStatusGet(ctx context.Con
 }
 
 // Execute executes the request
-//  @return V2MonitoringExtranetServiceStatusGet200Response
-func (a *DefaultAPIService) V2MonitoringExtranetServiceStatusGetExecute(r ApiV2MonitoringExtranetServiceStatusGetRequest) (*V2MonitoringExtranetServiceStatusGet200Response, *http.Response, error) {
+//  @return V2MonitoringExtranetServiceStatusGetResponse
+func (a *DefaultAPIService) V2MonitoringExtranetServiceStatusGetExecute(r ApiV2MonitoringExtranetServiceStatusGetRequest) (*V2MonitoringExtranetServiceStatusGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V2MonitoringExtranetServiceStatusGet200Response
+		localVarReturnValue  *V2MonitoringExtranetServiceStatusGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V2MonitoringExtranetServiceStatusGet")
@@ -61750,7 +64387,7 @@ func (r ApiV2MonitoringExtranetSiteStatusGetRequest) Authorization(authorization
 	return r
 }
 
-func (r ApiV2MonitoringExtranetSiteStatusGetRequest) Execute() (*V2MonitoringExtranetServiceStatusDetailsGet200Response, *http.Response, error) {
+func (r ApiV2MonitoringExtranetSiteStatusGetRequest) Execute() (*V2MonitoringExtranetSiteStatusGetResponse, *http.Response, error) {
 	return r.ApiService.V2MonitoringExtranetSiteStatusGetExecute(r)
 }
 
@@ -61768,13 +64405,13 @@ func (a *DefaultAPIService) V2MonitoringExtranetSiteStatusGet(ctx context.Contex
 }
 
 // Execute executes the request
-//  @return V2MonitoringExtranetServiceStatusDetailsGet200Response
-func (a *DefaultAPIService) V2MonitoringExtranetSiteStatusGetExecute(r ApiV2MonitoringExtranetSiteStatusGetRequest) (*V2MonitoringExtranetServiceStatusDetailsGet200Response, *http.Response, error) {
+//  @return V2MonitoringExtranetSiteStatusGetResponse
+func (a *DefaultAPIService) V2MonitoringExtranetSiteStatusGetExecute(r ApiV2MonitoringExtranetSiteStatusGetRequest) (*V2MonitoringExtranetSiteStatusGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V2MonitoringExtranetServiceStatusDetailsGet200Response
+		localVarReturnValue  *V2MonitoringExtranetSiteStatusGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V2MonitoringExtranetSiteStatusGet")
@@ -61872,7 +64509,7 @@ func (r ApiV2MonitoringExtranetStatusDetailsGetRequest) Authorization(authorizat
 	return r
 }
 
-func (r ApiV2MonitoringExtranetStatusDetailsGetRequest) Execute() (*V2MonitoringExtranetStatusDetailsGet200Response, *http.Response, error) {
+func (r ApiV2MonitoringExtranetStatusDetailsGetRequest) Execute() (*V2MonitoringExtranetStatusDetailsGetResponse, *http.Response, error) {
 	return r.ApiService.V2MonitoringExtranetStatusDetailsGetExecute(r)
 }
 
@@ -61890,13 +64527,13 @@ func (a *DefaultAPIService) V2MonitoringExtranetStatusDetailsGet(ctx context.Con
 }
 
 // Execute executes the request
-//  @return V2MonitoringExtranetStatusDetailsGet200Response
-func (a *DefaultAPIService) V2MonitoringExtranetStatusDetailsGetExecute(r ApiV2MonitoringExtranetStatusDetailsGetRequest) (*V2MonitoringExtranetStatusDetailsGet200Response, *http.Response, error) {
+//  @return V2MonitoringExtranetStatusDetailsGetResponse
+func (a *DefaultAPIService) V2MonitoringExtranetStatusDetailsGetExecute(r ApiV2MonitoringExtranetStatusDetailsGetRequest) (*V2MonitoringExtranetStatusDetailsGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V2MonitoringExtranetStatusDetailsGet200Response
+		localVarReturnValue  *V2MonitoringExtranetStatusDetailsGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V2MonitoringExtranetStatusDetailsGet")
@@ -62000,7 +64637,7 @@ func (r ApiV2MonitoringIkeErrorHistoryPostRequest) V2MonitoringIkeErrorHistoryPo
 	return r
 }
 
-func (r ApiV2MonitoringIkeErrorHistoryPostRequest) Execute() (*V2MonitoringIkeErrorHistoryPost200Response, *http.Response, error) {
+func (r ApiV2MonitoringIkeErrorHistoryPostRequest) Execute() (*V2MonitoringIkeErrorHistoryPostResponse, *http.Response, error) {
 	return r.ApiService.V2MonitoringIkeErrorHistoryPostExecute(r)
 }
 
@@ -62018,13 +64655,13 @@ func (a *DefaultAPIService) V2MonitoringIkeErrorHistoryPost(ctx context.Context)
 }
 
 // Execute executes the request
-//  @return V2MonitoringIkeErrorHistoryPost200Response
-func (a *DefaultAPIService) V2MonitoringIkeErrorHistoryPostExecute(r ApiV2MonitoringIkeErrorHistoryPostRequest) (*V2MonitoringIkeErrorHistoryPost200Response, *http.Response, error) {
+//  @return V2MonitoringIkeErrorHistoryPostResponse
+func (a *DefaultAPIService) V2MonitoringIkeErrorHistoryPostExecute(r ApiV2MonitoringIkeErrorHistoryPostRequest) (*V2MonitoringIkeErrorHistoryPostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V2MonitoringIkeErrorHistoryPost200Response
+		localVarReturnValue  *V2MonitoringIkeErrorHistoryPostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V2MonitoringIkeErrorHistoryPost")
@@ -62133,7 +64770,7 @@ func (r ApiV2MonitoringInterfacePostRequest) V2MonitoringInterfacePostRequest(v2
 	return r
 }
 
-func (r ApiV2MonitoringInterfacePostRequest) Execute() (*V2MonitoringInterfacePost200Response, *http.Response, error) {
+func (r ApiV2MonitoringInterfacePostRequest) Execute() (*V2MonitoringInterfacePostResponse, *http.Response, error) {
 	return r.ApiService.V2MonitoringInterfacePostExecute(r)
 }
 
@@ -62151,13 +64788,13 @@ func (a *DefaultAPIService) V2MonitoringInterfacePost(ctx context.Context) ApiV2
 }
 
 // Execute executes the request
-//  @return V2MonitoringInterfacePost200Response
-func (a *DefaultAPIService) V2MonitoringInterfacePostExecute(r ApiV2MonitoringInterfacePostRequest) (*V2MonitoringInterfacePost200Response, *http.Response, error) {
+//  @return V2MonitoringInterfacePostResponse
+func (a *DefaultAPIService) V2MonitoringInterfacePostExecute(r ApiV2MonitoringInterfacePostRequest) (*V2MonitoringInterfacePostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V2MonitoringInterfacePost200Response
+		localVarReturnValue  *V2MonitoringInterfacePostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V2MonitoringInterfacePost")
@@ -62266,7 +64903,7 @@ func (r ApiV2MonitoringIpsecPostRequest) V2MonitoringIpsecPostRequest(v2Monitori
 	return r
 }
 
-func (r ApiV2MonitoringIpsecPostRequest) Execute() (*V2MonitoringIpsecPost200Response, *http.Response, error) {
+func (r ApiV2MonitoringIpsecPostRequest) Execute() (*V2MonitoringIpsecPostResponse, *http.Response, error) {
 	return r.ApiService.V2MonitoringIpsecPostExecute(r)
 }
 
@@ -62284,13 +64921,13 @@ func (a *DefaultAPIService) V2MonitoringIpsecPost(ctx context.Context) ApiV2Moni
 }
 
 // Execute executes the request
-//  @return V2MonitoringIpsecPost200Response
-func (a *DefaultAPIService) V2MonitoringIpsecPostExecute(r ApiV2MonitoringIpsecPostRequest) (*V2MonitoringIpsecPost200Response, *http.Response, error) {
+//  @return V2MonitoringIpsecPostResponse
+func (a *DefaultAPIService) V2MonitoringIpsecPostExecute(r ApiV2MonitoringIpsecPostRequest) (*V2MonitoringIpsecPostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V2MonitoringIpsecPost200Response
+		localVarReturnValue  *V2MonitoringIpsecPostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V2MonitoringIpsecPost")
@@ -62399,7 +65036,7 @@ func (r ApiV2MonitoringOspfPostRequest) V2MonitoringOspfPostRequest(v2Monitoring
 	return r
 }
 
-func (r ApiV2MonitoringOspfPostRequest) Execute() (*V2MonitoringOspfPost200Response, *http.Response, error) {
+func (r ApiV2MonitoringOspfPostRequest) Execute() (*V2MonitoringOspfPostResponse, *http.Response, error) {
 	return r.ApiService.V2MonitoringOspfPostExecute(r)
 }
 
@@ -62417,13 +65054,13 @@ func (a *DefaultAPIService) V2MonitoringOspfPost(ctx context.Context) ApiV2Monit
 }
 
 // Execute executes the request
-//  @return V2MonitoringOspfPost200Response
-func (a *DefaultAPIService) V2MonitoringOspfPostExecute(r ApiV2MonitoringOspfPostRequest) (*V2MonitoringOspfPost200Response, *http.Response, error) {
+//  @return V2MonitoringOspfPostResponse
+func (a *DefaultAPIService) V2MonitoringOspfPostExecute(r ApiV2MonitoringOspfPostRequest) (*V2MonitoringOspfPostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V2MonitoringOspfPost200Response
+		localVarReturnValue  *V2MonitoringOspfPostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V2MonitoringOspfPost")
@@ -62532,7 +65169,7 @@ func (r ApiV2MonitoringPolicyPostRequest) V2MonitoringPolicyPostRequest(v2Monito
 	return r
 }
 
-func (r ApiV2MonitoringPolicyPostRequest) Execute() (*V2MonitoringPolicyPost200Response, *http.Response, error) {
+func (r ApiV2MonitoringPolicyPostRequest) Execute() (*V2MonitoringPolicyPostResponse, *http.Response, error) {
 	return r.ApiService.V2MonitoringPolicyPostExecute(r)
 }
 
@@ -62550,13 +65187,13 @@ func (a *DefaultAPIService) V2MonitoringPolicyPost(ctx context.Context) ApiV2Mon
 }
 
 // Execute executes the request
-//  @return V2MonitoringPolicyPost200Response
-func (a *DefaultAPIService) V2MonitoringPolicyPostExecute(r ApiV2MonitoringPolicyPostRequest) (*V2MonitoringPolicyPost200Response, *http.Response, error) {
+//  @return V2MonitoringPolicyPostResponse
+func (a *DefaultAPIService) V2MonitoringPolicyPostExecute(r ApiV2MonitoringPolicyPostRequest) (*V2MonitoringPolicyPostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V2MonitoringPolicyPost200Response
+		localVarReturnValue  *V2MonitoringPolicyPostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V2MonitoringPolicyPost")
@@ -62665,7 +65302,7 @@ func (r ApiV2MonitoringQueueInstantPostRequest) V2MonitoringQueueInstantPostRequ
 	return r
 }
 
-func (r ApiV2MonitoringQueueInstantPostRequest) Execute() (*V2MonitoringQueueInstantPost200Response, *http.Response, error) {
+func (r ApiV2MonitoringQueueInstantPostRequest) Execute() (*V2MonitoringQueueInstantPostResponse, *http.Response, error) {
 	return r.ApiService.V2MonitoringQueueInstantPostExecute(r)
 }
 
@@ -62683,13 +65320,13 @@ func (a *DefaultAPIService) V2MonitoringQueueInstantPost(ctx context.Context) Ap
 }
 
 // Execute executes the request
-//  @return V2MonitoringQueueInstantPost200Response
-func (a *DefaultAPIService) V2MonitoringQueueInstantPostExecute(r ApiV2MonitoringQueueInstantPostRequest) (*V2MonitoringQueueInstantPost200Response, *http.Response, error) {
+//  @return V2MonitoringQueueInstantPostResponse
+func (a *DefaultAPIService) V2MonitoringQueueInstantPostExecute(r ApiV2MonitoringQueueInstantPostRequest) (*V2MonitoringQueueInstantPostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V2MonitoringQueueInstantPost200Response
+		localVarReturnValue  *V2MonitoringQueueInstantPostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V2MonitoringQueueInstantPost")
@@ -62798,7 +65435,7 @@ func (r ApiV2MonitoringQueuePostRequest) V2MonitoringQueuePostRequest(v2Monitori
 	return r
 }
 
-func (r ApiV2MonitoringQueuePostRequest) Execute() (*V2MonitoringQueuePost200Response, *http.Response, error) {
+func (r ApiV2MonitoringQueuePostRequest) Execute() (*V2MonitoringQueuePostResponse, *http.Response, error) {
 	return r.ApiService.V2MonitoringQueuePostExecute(r)
 }
 
@@ -62816,13 +65453,13 @@ func (a *DefaultAPIService) V2MonitoringQueuePost(ctx context.Context) ApiV2Moni
 }
 
 // Execute executes the request
-//  @return V2MonitoringQueuePost200Response
-func (a *DefaultAPIService) V2MonitoringQueuePostExecute(r ApiV2MonitoringQueuePostRequest) (*V2MonitoringQueuePost200Response, *http.Response, error) {
+//  @return V2MonitoringQueuePostResponse
+func (a *DefaultAPIService) V2MonitoringQueuePostExecute(r ApiV2MonitoringQueuePostRequest) (*V2MonitoringQueuePostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V2MonitoringQueuePost200Response
+		localVarReturnValue  *V2MonitoringQueuePostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V2MonitoringQueuePost")
@@ -62917,7 +65554,7 @@ type ApiV2MonitoringSegmentRouteCountsPostRequest struct {
 	ctx context.Context
 	ApiService *DefaultAPIService
 	authorization *string
-	v1DevicesBringupPostRequest *V1DevicesBringupPostRequest
+	v2MonitoringSegmentRouteCountsPostRequest *V2MonitoringSegmentRouteCountsPostRequest
 }
 
 // Bearer token. Format: Bearer &lt;your_token_here&gt;
@@ -62926,12 +65563,12 @@ func (r ApiV2MonitoringSegmentRouteCountsPostRequest) Authorization(authorizatio
 	return r
 }
 
-func (r ApiV2MonitoringSegmentRouteCountsPostRequest) V1DevicesBringupPostRequest(v1DevicesBringupPostRequest V1DevicesBringupPostRequest) ApiV2MonitoringSegmentRouteCountsPostRequest {
-	r.v1DevicesBringupPostRequest = &v1DevicesBringupPostRequest
+func (r ApiV2MonitoringSegmentRouteCountsPostRequest) V2MonitoringSegmentRouteCountsPostRequest(v2MonitoringSegmentRouteCountsPostRequest V2MonitoringSegmentRouteCountsPostRequest) ApiV2MonitoringSegmentRouteCountsPostRequest {
+	r.v2MonitoringSegmentRouteCountsPostRequest = &v2MonitoringSegmentRouteCountsPostRequest
 	return r
 }
 
-func (r ApiV2MonitoringSegmentRouteCountsPostRequest) Execute() (*V2MonitoringSegmentRouteCountsPost200Response, *http.Response, error) {
+func (r ApiV2MonitoringSegmentRouteCountsPostRequest) Execute() (*V2MonitoringSegmentRouteCountsPostResponse, *http.Response, error) {
 	return r.ApiService.V2MonitoringSegmentRouteCountsPostExecute(r)
 }
 
@@ -62949,13 +65586,13 @@ func (a *DefaultAPIService) V2MonitoringSegmentRouteCountsPost(ctx context.Conte
 }
 
 // Execute executes the request
-//  @return V2MonitoringSegmentRouteCountsPost200Response
-func (a *DefaultAPIService) V2MonitoringSegmentRouteCountsPostExecute(r ApiV2MonitoringSegmentRouteCountsPostRequest) (*V2MonitoringSegmentRouteCountsPost200Response, *http.Response, error) {
+//  @return V2MonitoringSegmentRouteCountsPostResponse
+func (a *DefaultAPIService) V2MonitoringSegmentRouteCountsPostExecute(r ApiV2MonitoringSegmentRouteCountsPostRequest) (*V2MonitoringSegmentRouteCountsPostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V2MonitoringSegmentRouteCountsPost200Response
+		localVarReturnValue  *V2MonitoringSegmentRouteCountsPostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V2MonitoringSegmentRouteCountsPost")
@@ -62971,8 +65608,8 @@ func (a *DefaultAPIService) V2MonitoringSegmentRouteCountsPostExecute(r ApiV2Mon
 	if r.authorization == nil {
 		return localVarReturnValue, nil, reportError("authorization is required and must be specified")
 	}
-	if r.v1DevicesBringupPostRequest == nil {
-		return localVarReturnValue, nil, reportError("v1DevicesBringupPostRequest is required and must be specified")
+	if r.v2MonitoringSegmentRouteCountsPostRequest == nil {
+		return localVarReturnValue, nil, reportError("v2MonitoringSegmentRouteCountsPostRequest is required and must be specified")
 	}
 
 	// to determine the Content-Type header
@@ -62994,7 +65631,7 @@ func (a *DefaultAPIService) V2MonitoringSegmentRouteCountsPostExecute(r ApiV2Mon
 	}
 	parameterAddToHeaderOrQuery(localVarHeaderParams, "Authorization", r.authorization, "simple", "")
 	// body params
-	localVarPostBody = r.v1DevicesBringupPostRequest
+	localVarPostBody = r.v2MonitoringSegmentRouteCountsPostRequest
 	if r.ctx != nil {
 		// API Key Authentication
 		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
@@ -63065,7 +65702,7 @@ func (r ApiV2MonitoringSiteCircuitsBandwidthSiteIdPostRequest) V2MonitoringSiteC
 	return r
 }
 
-func (r ApiV2MonitoringSiteCircuitsBandwidthSiteIdPostRequest) Execute() (*V2MonitoringSiteCircuitsBandwidthSiteIdPost200Response, *http.Response, error) {
+func (r ApiV2MonitoringSiteCircuitsBandwidthSiteIdPostRequest) Execute() (*V2MonitoringSiteCircuitsBandwidthSiteIdPostResponse, *http.Response, error) {
 	return r.ApiService.V2MonitoringSiteCircuitsBandwidthSiteIdPostExecute(r)
 }
 
@@ -63085,13 +65722,13 @@ func (a *DefaultAPIService) V2MonitoringSiteCircuitsBandwidthSiteIdPost(ctx cont
 }
 
 // Execute executes the request
-//  @return V2MonitoringSiteCircuitsBandwidthSiteIdPost200Response
-func (a *DefaultAPIService) V2MonitoringSiteCircuitsBandwidthSiteIdPostExecute(r ApiV2MonitoringSiteCircuitsBandwidthSiteIdPostRequest) (*V2MonitoringSiteCircuitsBandwidthSiteIdPost200Response, *http.Response, error) {
+//  @return V2MonitoringSiteCircuitsBandwidthSiteIdPostResponse
+func (a *DefaultAPIService) V2MonitoringSiteCircuitsBandwidthSiteIdPostExecute(r ApiV2MonitoringSiteCircuitsBandwidthSiteIdPostRequest) (*V2MonitoringSiteCircuitsBandwidthSiteIdPostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V2MonitoringSiteCircuitsBandwidthSiteIdPost200Response
+		localVarReturnValue  *V2MonitoringSiteCircuitsBandwidthSiteIdPostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V2MonitoringSiteCircuitsBandwidthSiteIdPost")
@@ -63205,7 +65842,7 @@ func (r ApiV2MonitoringSiteTwampSiteIdPostRequest) V2MonitoringSiteTwampSiteIdPo
 	return r
 }
 
-func (r ApiV2MonitoringSiteTwampSiteIdPostRequest) Execute() (*V2MonitoringSiteTwampSiteIdPost200Response, *http.Response, error) {
+func (r ApiV2MonitoringSiteTwampSiteIdPostRequest) Execute() (*V2MonitoringSiteTwampSiteIdPostResponse, *http.Response, error) {
 	return r.ApiService.V2MonitoringSiteTwampSiteIdPostExecute(r)
 }
 
@@ -63225,13 +65862,13 @@ func (a *DefaultAPIService) V2MonitoringSiteTwampSiteIdPost(ctx context.Context,
 }
 
 // Execute executes the request
-//  @return V2MonitoringSiteTwampSiteIdPost200Response
-func (a *DefaultAPIService) V2MonitoringSiteTwampSiteIdPostExecute(r ApiV2MonitoringSiteTwampSiteIdPostRequest) (*V2MonitoringSiteTwampSiteIdPost200Response, *http.Response, error) {
+//  @return V2MonitoringSiteTwampSiteIdPostResponse
+func (a *DefaultAPIService) V2MonitoringSiteTwampSiteIdPostExecute(r ApiV2MonitoringSiteTwampSiteIdPostRequest) (*V2MonitoringSiteTwampSiteIdPostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V2MonitoringSiteTwampSiteIdPost200Response
+		localVarReturnValue  *V2MonitoringSiteTwampSiteIdPostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V2MonitoringSiteTwampSiteIdPost")
@@ -63344,7 +65981,7 @@ func (r ApiV2MonitoringSystemGenericPostRequest) V2MonitoringSystemGenericPostRe
 	return r
 }
 
-func (r ApiV2MonitoringSystemGenericPostRequest) Execute() (*V2MonitoringSystemGenericPost200Response, *http.Response, error) {
+func (r ApiV2MonitoringSystemGenericPostRequest) Execute() (*V2MonitoringSystemGenericPostResponse, *http.Response, error) {
 	return r.ApiService.V2MonitoringSystemGenericPostExecute(r)
 }
 
@@ -63362,13 +65999,13 @@ func (a *DefaultAPIService) V2MonitoringSystemGenericPost(ctx context.Context) A
 }
 
 // Execute executes the request
-//  @return V2MonitoringSystemGenericPost200Response
-func (a *DefaultAPIService) V2MonitoringSystemGenericPostExecute(r ApiV2MonitoringSystemGenericPostRequest) (*V2MonitoringSystemGenericPost200Response, *http.Response, error) {
+//  @return V2MonitoringSystemGenericPostResponse
+func (a *DefaultAPIService) V2MonitoringSystemGenericPostExecute(r ApiV2MonitoringSystemGenericPostRequest) (*V2MonitoringSystemGenericPostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V2MonitoringSystemGenericPost200Response
+		localVarReturnValue  *V2MonitoringSystemGenericPostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V2MonitoringSystemGenericPost")
@@ -63463,7 +66100,7 @@ type ApiV2MonitoringSystemPostRequest struct {
 	ctx context.Context
 	ApiService *DefaultAPIService
 	authorization *string
-	v2MonitoringSystemGenericPostRequest *V2MonitoringSystemGenericPostRequest
+	v2MonitoringSystemPostRequest *V2MonitoringSystemPostRequest
 }
 
 // Bearer token. Format: Bearer &lt;your_token_here&gt;
@@ -63472,12 +66109,12 @@ func (r ApiV2MonitoringSystemPostRequest) Authorization(authorization string) Ap
 	return r
 }
 
-func (r ApiV2MonitoringSystemPostRequest) V2MonitoringSystemGenericPostRequest(v2MonitoringSystemGenericPostRequest V2MonitoringSystemGenericPostRequest) ApiV2MonitoringSystemPostRequest {
-	r.v2MonitoringSystemGenericPostRequest = &v2MonitoringSystemGenericPostRequest
+func (r ApiV2MonitoringSystemPostRequest) V2MonitoringSystemPostRequest(v2MonitoringSystemPostRequest V2MonitoringSystemPostRequest) ApiV2MonitoringSystemPostRequest {
+	r.v2MonitoringSystemPostRequest = &v2MonitoringSystemPostRequest
 	return r
 }
 
-func (r ApiV2MonitoringSystemPostRequest) Execute() (*V2MonitoringSystemGenericPost200Response, *http.Response, error) {
+func (r ApiV2MonitoringSystemPostRequest) Execute() (*V2MonitoringSystemPostResponse, *http.Response, error) {
 	return r.ApiService.V2MonitoringSystemPostExecute(r)
 }
 
@@ -63495,13 +66132,13 @@ func (a *DefaultAPIService) V2MonitoringSystemPost(ctx context.Context) ApiV2Mon
 }
 
 // Execute executes the request
-//  @return V2MonitoringSystemGenericPost200Response
-func (a *DefaultAPIService) V2MonitoringSystemPostExecute(r ApiV2MonitoringSystemPostRequest) (*V2MonitoringSystemGenericPost200Response, *http.Response, error) {
+//  @return V2MonitoringSystemPostResponse
+func (a *DefaultAPIService) V2MonitoringSystemPostExecute(r ApiV2MonitoringSystemPostRequest) (*V2MonitoringSystemPostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V2MonitoringSystemGenericPost200Response
+		localVarReturnValue  *V2MonitoringSystemPostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V2MonitoringSystemPost")
@@ -63517,8 +66154,8 @@ func (a *DefaultAPIService) V2MonitoringSystemPostExecute(r ApiV2MonitoringSyste
 	if r.authorization == nil {
 		return localVarReturnValue, nil, reportError("authorization is required and must be specified")
 	}
-	if r.v2MonitoringSystemGenericPostRequest == nil {
-		return localVarReturnValue, nil, reportError("v2MonitoringSystemGenericPostRequest is required and must be specified")
+	if r.v2MonitoringSystemPostRequest == nil {
+		return localVarReturnValue, nil, reportError("v2MonitoringSystemPostRequest is required and must be specified")
 	}
 
 	// to determine the Content-Type header
@@ -63540,7 +66177,7 @@ func (a *DefaultAPIService) V2MonitoringSystemPostExecute(r ApiV2MonitoringSyste
 	}
 	parameterAddToHeaderOrQuery(localVarHeaderParams, "Authorization", r.authorization, "simple", "")
 	// body params
-	localVarPostBody = r.v2MonitoringSystemGenericPostRequest
+	localVarPostBody = r.v2MonitoringSystemPostRequest
 	if r.ctx != nil {
 		// API Key Authentication
 		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
@@ -63610,7 +66247,7 @@ func (r ApiV2MonitoringTwampPostRequest) V2MonitoringTwampPostRequest(v2Monitori
 	return r
 }
 
-func (r ApiV2MonitoringTwampPostRequest) Execute() (*V2MonitoringTwampPost200Response, *http.Response, error) {
+func (r ApiV2MonitoringTwampPostRequest) Execute() (*V2MonitoringTwampPostResponse, *http.Response, error) {
 	return r.ApiService.V2MonitoringTwampPostExecute(r)
 }
 
@@ -63628,13 +66265,13 @@ func (a *DefaultAPIService) V2MonitoringTwampPost(ctx context.Context) ApiV2Moni
 }
 
 // Execute executes the request
-//  @return V2MonitoringTwampPost200Response
-func (a *DefaultAPIService) V2MonitoringTwampPostExecute(r ApiV2MonitoringTwampPostRequest) (*V2MonitoringTwampPost200Response, *http.Response, error) {
+//  @return V2MonitoringTwampPostResponse
+func (a *DefaultAPIService) V2MonitoringTwampPostExecute(r ApiV2MonitoringTwampPostRequest) (*V2MonitoringTwampPostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V2MonitoringTwampPost200Response
+		localVarReturnValue  *V2MonitoringTwampPostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V2MonitoringTwampPost")
@@ -64275,7 +66912,7 @@ func (r ApiV2NotificationlistPostRequest) V2NotificationlistPostRequest(v2Notifi
 	return r
 }
 
-func (r ApiV2NotificationlistPostRequest) Execute() (*V2NotificationlistPost200Response, *http.Response, error) {
+func (r ApiV2NotificationlistPostRequest) Execute() (*V2NotificationlistPostResponse, *http.Response, error) {
 	return r.ApiService.V2NotificationlistPostExecute(r)
 }
 
@@ -64293,13 +66930,13 @@ func (a *DefaultAPIService) V2NotificationlistPost(ctx context.Context) ApiV2Not
 }
 
 // Execute executes the request
-//  @return V2NotificationlistPost200Response
-func (a *DefaultAPIService) V2NotificationlistPostExecute(r ApiV2NotificationlistPostRequest) (*V2NotificationlistPost200Response, *http.Response, error) {
+//  @return V2NotificationlistPostResponse
+func (a *DefaultAPIService) V2NotificationlistPostExecute(r ApiV2NotificationlistPostRequest) (*V2NotificationlistPostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V2NotificationlistPost200Response
+		localVarReturnValue  *V2NotificationlistPostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V2NotificationlistPost")
@@ -64394,7 +67031,7 @@ type ApiV2NotificationmutelistCreatePostRequest struct {
 	ctx context.Context
 	ApiService *DefaultAPIService
 	authorization *string
-	v2AllowlistCreatePostRequest *V2AllowlistCreatePostRequest
+	v2NotificationmutelistCreatePostRequest *V2NotificationmutelistCreatePostRequest
 }
 
 // Bearer token. Format: Bearer &lt;your_token_here&gt;
@@ -64403,8 +67040,8 @@ func (r ApiV2NotificationmutelistCreatePostRequest) Authorization(authorization 
 	return r
 }
 
-func (r ApiV2NotificationmutelistCreatePostRequest) V2AllowlistCreatePostRequest(v2AllowlistCreatePostRequest V2AllowlistCreatePostRequest) ApiV2NotificationmutelistCreatePostRequest {
-	r.v2AllowlistCreatePostRequest = &v2AllowlistCreatePostRequest
+func (r ApiV2NotificationmutelistCreatePostRequest) V2NotificationmutelistCreatePostRequest(v2NotificationmutelistCreatePostRequest V2NotificationmutelistCreatePostRequest) ApiV2NotificationmutelistCreatePostRequest {
+	r.v2NotificationmutelistCreatePostRequest = &v2NotificationmutelistCreatePostRequest
 	return r
 }
 
@@ -64448,8 +67085,8 @@ func (a *DefaultAPIService) V2NotificationmutelistCreatePostExecute(r ApiV2Notif
 	if r.authorization == nil {
 		return localVarReturnValue, nil, reportError("authorization is required and must be specified")
 	}
-	if r.v2AllowlistCreatePostRequest == nil {
-		return localVarReturnValue, nil, reportError("v2AllowlistCreatePostRequest is required and must be specified")
+	if r.v2NotificationmutelistCreatePostRequest == nil {
+		return localVarReturnValue, nil, reportError("v2NotificationmutelistCreatePostRequest is required and must be specified")
 	}
 
 	// to determine the Content-Type header
@@ -64471,7 +67108,7 @@ func (a *DefaultAPIService) V2NotificationmutelistCreatePostExecute(r ApiV2Notif
 	}
 	parameterAddToHeaderOrQuery(localVarHeaderParams, "Authorization", r.authorization, "simple", "")
 	// body params
-	localVarPostBody = r.v2AllowlistCreatePostRequest
+	localVarPostBody = r.v2NotificationmutelistCreatePostRequest
 	if r.ctx != nil {
 		// API Key Authentication
 		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
@@ -64788,7 +67425,7 @@ func (r ApiV2NotificationmutelistRuleIdGetRequest) Authorization(authorization s
 	return r
 }
 
-func (r ApiV2NotificationmutelistRuleIdGetRequest) Execute() (*V2AllowlistRuleIdGet200Response, *http.Response, error) {
+func (r ApiV2NotificationmutelistRuleIdGetRequest) Execute() (*V2NotificationmutelistRuleIdGetResponse, *http.Response, error) {
 	return r.ApiService.V2NotificationmutelistRuleIdGetExecute(r)
 }
 
@@ -64808,13 +67445,13 @@ func (a *DefaultAPIService) V2NotificationmutelistRuleIdGet(ctx context.Context,
 }
 
 // Execute executes the request
-//  @return V2AllowlistRuleIdGet200Response
-func (a *DefaultAPIService) V2NotificationmutelistRuleIdGetExecute(r ApiV2NotificationmutelistRuleIdGetRequest) (*V2AllowlistRuleIdGet200Response, *http.Response, error) {
+//  @return V2NotificationmutelistRuleIdGetResponse
+func (a *DefaultAPIService) V2NotificationmutelistRuleIdGetExecute(r ApiV2NotificationmutelistRuleIdGetRequest) (*V2NotificationmutelistRuleIdGetResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V2AllowlistRuleIdGet200Response
+		localVarReturnValue  *V2NotificationmutelistRuleIdGetResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V2NotificationmutelistRuleIdGet")
@@ -64905,7 +67542,7 @@ type ApiV2ParentalertlistPostRequest struct {
 	ctx context.Context
 	ApiService *DefaultAPIService
 	authorization *string
-	v2NotificationlistPostRequest *V2NotificationlistPostRequest
+	v2ParentalertlistPostRequest *V2ParentalertlistPostRequest
 }
 
 // Bearer token. Format: Bearer &lt;your_token_here&gt;
@@ -64914,12 +67551,12 @@ func (r ApiV2ParentalertlistPostRequest) Authorization(authorization string) Api
 	return r
 }
 
-func (r ApiV2ParentalertlistPostRequest) V2NotificationlistPostRequest(v2NotificationlistPostRequest V2NotificationlistPostRequest) ApiV2ParentalertlistPostRequest {
-	r.v2NotificationlistPostRequest = &v2NotificationlistPostRequest
+func (r ApiV2ParentalertlistPostRequest) V2ParentalertlistPostRequest(v2ParentalertlistPostRequest V2ParentalertlistPostRequest) ApiV2ParentalertlistPostRequest {
+	r.v2ParentalertlistPostRequest = &v2ParentalertlistPostRequest
 	return r
 }
 
-func (r ApiV2ParentalertlistPostRequest) Execute() (*V2ChildalertlistPost200Response, *http.Response, error) {
+func (r ApiV2ParentalertlistPostRequest) Execute() (*V2ParentalertlistPostResponse, *http.Response, error) {
 	return r.ApiService.V2ParentalertlistPostExecute(r)
 }
 
@@ -64937,13 +67574,13 @@ func (a *DefaultAPIService) V2ParentalertlistPost(ctx context.Context) ApiV2Pare
 }
 
 // Execute executes the request
-//  @return V2ChildalertlistPost200Response
-func (a *DefaultAPIService) V2ParentalertlistPostExecute(r ApiV2ParentalertlistPostRequest) (*V2ChildalertlistPost200Response, *http.Response, error) {
+//  @return V2ParentalertlistPostResponse
+func (a *DefaultAPIService) V2ParentalertlistPostExecute(r ApiV2ParentalertlistPostRequest) (*V2ParentalertlistPostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V2ChildalertlistPost200Response
+		localVarReturnValue  *V2ParentalertlistPostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V2ParentalertlistPost")
@@ -64959,8 +67596,8 @@ func (a *DefaultAPIService) V2ParentalertlistPostExecute(r ApiV2ParentalertlistP
 	if r.authorization == nil {
 		return localVarReturnValue, nil, reportError("authorization is required and must be specified")
 	}
-	if r.v2NotificationlistPostRequest == nil {
-		return localVarReturnValue, nil, reportError("v2NotificationlistPostRequest is required and must be specified")
+	if r.v2ParentalertlistPostRequest == nil {
+		return localVarReturnValue, nil, reportError("v2ParentalertlistPostRequest is required and must be specified")
 	}
 
 	// to determine the Content-Type header
@@ -64982,7 +67619,7 @@ func (a *DefaultAPIService) V2ParentalertlistPostExecute(r ApiV2ParentalertlistP
 	}
 	parameterAddToHeaderOrQuery(localVarHeaderParams, "Authorization", r.authorization, "simple", "")
 	// body params
-	localVarPostBody = r.v2NotificationlistPostRequest
+	localVarPostBody = r.v2ParentalertlistPostRequest
 	if r.ctx != nil {
 		// API Key Authentication
 		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
@@ -65185,7 +67822,7 @@ func (r ApiV2RulelistPostRequest) Body(body map[string]interface{}) ApiV2Rulelis
 	return r
 }
 
-func (r ApiV2RulelistPostRequest) Execute() (*V2RulelistPost200Response, *http.Response, error) {
+func (r ApiV2RulelistPostRequest) Execute() (*V2RulelistPostResponse, *http.Response, error) {
 	return r.ApiService.V2RulelistPostExecute(r)
 }
 
@@ -65203,13 +67840,13 @@ func (a *DefaultAPIService) V2RulelistPost(ctx context.Context) ApiV2RulelistPos
 }
 
 // Execute executes the request
-//  @return V2RulelistPost200Response
-func (a *DefaultAPIService) V2RulelistPostExecute(r ApiV2RulelistPostRequest) (*V2RulelistPost200Response, *http.Response, error) {
+//  @return V2RulelistPostResponse
+func (a *DefaultAPIService) V2RulelistPostExecute(r ApiV2RulelistPostRequest) (*V2RulelistPostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V2RulelistPost200Response
+		localVarReturnValue  *V2RulelistPostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V2RulelistPost")
@@ -65305,7 +67942,7 @@ type ApiV2SiteSiteIdDetailPostRequest struct {
 	ApiService *DefaultAPIService
 	authorization *string
 	siteId int64
-	v2DeviceDeviceIdTopologyPostRequest *V2DeviceDeviceIdTopologyPostRequest
+	v2SiteSiteIdDetailPostRequest *V2SiteSiteIdDetailPostRequest
 }
 
 // Bearer token. Format: Bearer &lt;your_token_here&gt;
@@ -65314,17 +67951,19 @@ func (r ApiV2SiteSiteIdDetailPostRequest) Authorization(authorization string) Ap
 	return r
 }
 
-func (r ApiV2SiteSiteIdDetailPostRequest) V2DeviceDeviceIdTopologyPostRequest(v2DeviceDeviceIdTopologyPostRequest V2DeviceDeviceIdTopologyPostRequest) ApiV2SiteSiteIdDetailPostRequest {
-	r.v2DeviceDeviceIdTopologyPostRequest = &v2DeviceDeviceIdTopologyPostRequest
+func (r ApiV2SiteSiteIdDetailPostRequest) V2SiteSiteIdDetailPostRequest(v2SiteSiteIdDetailPostRequest V2SiteSiteIdDetailPostRequest) ApiV2SiteSiteIdDetailPostRequest {
+	r.v2SiteSiteIdDetailPostRequest = &v2SiteSiteIdDetailPostRequest
 	return r
 }
 
-func (r ApiV2SiteSiteIdDetailPostRequest) Execute() (*V2SiteSiteIdDetailPost200Response, *http.Response, error) {
+func (r ApiV2SiteSiteIdDetailPostRequest) Execute() (*V2SiteSiteIdDetailPostResponse, *http.Response, error) {
 	return r.ApiService.V2SiteSiteIdDetailPostExecute(r)
 }
 
 /*
 V2SiteSiteIdDetailPost Method for V2SiteSiteIdDetailPost
+
+Get site by id
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @param siteId 
@@ -65339,13 +67978,13 @@ func (a *DefaultAPIService) V2SiteSiteIdDetailPost(ctx context.Context, siteId i
 }
 
 // Execute executes the request
-//  @return V2SiteSiteIdDetailPost200Response
-func (a *DefaultAPIService) V2SiteSiteIdDetailPostExecute(r ApiV2SiteSiteIdDetailPostRequest) (*V2SiteSiteIdDetailPost200Response, *http.Response, error) {
+//  @return V2SiteSiteIdDetailPostResponse
+func (a *DefaultAPIService) V2SiteSiteIdDetailPostExecute(r ApiV2SiteSiteIdDetailPostRequest) (*V2SiteSiteIdDetailPostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V2SiteSiteIdDetailPost200Response
+		localVarReturnValue  *V2SiteSiteIdDetailPostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V2SiteSiteIdDetailPost")
@@ -65362,8 +68001,8 @@ func (a *DefaultAPIService) V2SiteSiteIdDetailPostExecute(r ApiV2SiteSiteIdDetai
 	if r.authorization == nil {
 		return localVarReturnValue, nil, reportError("authorization is required and must be specified")
 	}
-	if r.v2DeviceDeviceIdTopologyPostRequest == nil {
-		return localVarReturnValue, nil, reportError("v2DeviceDeviceIdTopologyPostRequest is required and must be specified")
+	if r.v2SiteSiteIdDetailPostRequest == nil {
+		return localVarReturnValue, nil, reportError("v2SiteSiteIdDetailPostRequest is required and must be specified")
 	}
 
 	// to determine the Content-Type header
@@ -65385,7 +68024,7 @@ func (a *DefaultAPIService) V2SiteSiteIdDetailPostExecute(r ApiV2SiteSiteIdDetai
 	}
 	parameterAddToHeaderOrQuery(localVarHeaderParams, "Authorization", r.authorization, "simple", "")
 	// body params
-	localVarPostBody = r.v2DeviceDeviceIdTopologyPostRequest
+	localVarPostBody = r.v2SiteSiteIdDetailPostRequest
 	if r.ctx != nil {
 		// API Key Authentication
 		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
@@ -65442,7 +68081,7 @@ type ApiV2SiteSiteIdLanSegmentsPostRequest struct {
 	ApiService *DefaultAPIService
 	authorization *string
 	siteId int64
-	v2NotificationlistPostRequest *V2NotificationlistPostRequest
+	v2SiteSiteIdLanSegmentsPostRequest *V2SiteSiteIdLanSegmentsPostRequest
 }
 
 // Bearer token. Format: Bearer &lt;your_token_here&gt;
@@ -65451,17 +68090,19 @@ func (r ApiV2SiteSiteIdLanSegmentsPostRequest) Authorization(authorization strin
 	return r
 }
 
-func (r ApiV2SiteSiteIdLanSegmentsPostRequest) V2NotificationlistPostRequest(v2NotificationlistPostRequest V2NotificationlistPostRequest) ApiV2SiteSiteIdLanSegmentsPostRequest {
-	r.v2NotificationlistPostRequest = &v2NotificationlistPostRequest
+func (r ApiV2SiteSiteIdLanSegmentsPostRequest) V2SiteSiteIdLanSegmentsPostRequest(v2SiteSiteIdLanSegmentsPostRequest V2SiteSiteIdLanSegmentsPostRequest) ApiV2SiteSiteIdLanSegmentsPostRequest {
+	r.v2SiteSiteIdLanSegmentsPostRequest = &v2SiteSiteIdLanSegmentsPostRequest
 	return r
 }
 
-func (r ApiV2SiteSiteIdLanSegmentsPostRequest) Execute() (*V2DeviceDeviceIdLanSegmentsPost200Response, *http.Response, error) {
+func (r ApiV2SiteSiteIdLanSegmentsPostRequest) Execute() (*V2SiteSiteIdLanSegmentsPostResponse, *http.Response, error) {
 	return r.ApiService.V2SiteSiteIdLanSegmentsPostExecute(r)
 }
 
 /*
 V2SiteSiteIdLanSegmentsPost Method for V2SiteSiteIdLanSegmentsPost
+
+Get route count for all the LAN Segments in a site
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @param siteId 
@@ -65476,13 +68117,13 @@ func (a *DefaultAPIService) V2SiteSiteIdLanSegmentsPost(ctx context.Context, sit
 }
 
 // Execute executes the request
-//  @return V2DeviceDeviceIdLanSegmentsPost200Response
-func (a *DefaultAPIService) V2SiteSiteIdLanSegmentsPostExecute(r ApiV2SiteSiteIdLanSegmentsPostRequest) (*V2DeviceDeviceIdLanSegmentsPost200Response, *http.Response, error) {
+//  @return V2SiteSiteIdLanSegmentsPostResponse
+func (a *DefaultAPIService) V2SiteSiteIdLanSegmentsPostExecute(r ApiV2SiteSiteIdLanSegmentsPostRequest) (*V2SiteSiteIdLanSegmentsPostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V2DeviceDeviceIdLanSegmentsPost200Response
+		localVarReturnValue  *V2SiteSiteIdLanSegmentsPostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V2SiteSiteIdLanSegmentsPost")
@@ -65499,8 +68140,8 @@ func (a *DefaultAPIService) V2SiteSiteIdLanSegmentsPostExecute(r ApiV2SiteSiteId
 	if r.authorization == nil {
 		return localVarReturnValue, nil, reportError("authorization is required and must be specified")
 	}
-	if r.v2NotificationlistPostRequest == nil {
-		return localVarReturnValue, nil, reportError("v2NotificationlistPostRequest is required and must be specified")
+	if r.v2SiteSiteIdLanSegmentsPostRequest == nil {
+		return localVarReturnValue, nil, reportError("v2SiteSiteIdLanSegmentsPostRequest is required and must be specified")
 	}
 
 	// to determine the Content-Type header
@@ -65522,7 +68163,7 @@ func (a *DefaultAPIService) V2SiteSiteIdLanSegmentsPostExecute(r ApiV2SiteSiteId
 	}
 	parameterAddToHeaderOrQuery(localVarHeaderParams, "Authorization", r.authorization, "simple", "")
 	// body params
-	localVarPostBody = r.v2NotificationlistPostRequest
+	localVarPostBody = r.v2SiteSiteIdLanSegmentsPostRequest
 	if r.ctx != nil {
 		// API Key Authentication
 		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
@@ -65579,7 +68220,7 @@ type ApiV2SiteSiteIdTopologyPostRequest struct {
 	ApiService *DefaultAPIService
 	authorization *string
 	siteId int64
-	v2DeviceDeviceIdTopologyPostRequest *V2DeviceDeviceIdTopologyPostRequest
+	v2SiteSiteIdTopologyPostRequest *V2SiteSiteIdTopologyPostRequest
 }
 
 // Bearer token. Format: Bearer &lt;your_token_here&gt;
@@ -65588,17 +68229,19 @@ func (r ApiV2SiteSiteIdTopologyPostRequest) Authorization(authorization string) 
 	return r
 }
 
-func (r ApiV2SiteSiteIdTopologyPostRequest) V2DeviceDeviceIdTopologyPostRequest(v2DeviceDeviceIdTopologyPostRequest V2DeviceDeviceIdTopologyPostRequest) ApiV2SiteSiteIdTopologyPostRequest {
-	r.v2DeviceDeviceIdTopologyPostRequest = &v2DeviceDeviceIdTopologyPostRequest
+func (r ApiV2SiteSiteIdTopologyPostRequest) V2SiteSiteIdTopologyPostRequest(v2SiteSiteIdTopologyPostRequest V2SiteSiteIdTopologyPostRequest) ApiV2SiteSiteIdTopologyPostRequest {
+	r.v2SiteSiteIdTopologyPostRequest = &v2SiteSiteIdTopologyPostRequest
 	return r
 }
 
-func (r ApiV2SiteSiteIdTopologyPostRequest) Execute() (*V2DeviceDeviceIdTopologyPost200Response, *http.Response, error) {
+func (r ApiV2SiteSiteIdTopologyPostRequest) Execute() (*V2SiteSiteIdTopologyPostResponse, *http.Response, error) {
 	return r.ApiService.V2SiteSiteIdTopologyPostExecute(r)
 }
 
 /*
 V2SiteSiteIdTopologyPost Method for V2SiteSiteIdTopologyPost
+
+Get the site topology
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @param siteId 
@@ -65613,13 +68256,13 @@ func (a *DefaultAPIService) V2SiteSiteIdTopologyPost(ctx context.Context, siteId
 }
 
 // Execute executes the request
-//  @return V2DeviceDeviceIdTopologyPost200Response
-func (a *DefaultAPIService) V2SiteSiteIdTopologyPostExecute(r ApiV2SiteSiteIdTopologyPostRequest) (*V2DeviceDeviceIdTopologyPost200Response, *http.Response, error) {
+//  @return V2SiteSiteIdTopologyPostResponse
+func (a *DefaultAPIService) V2SiteSiteIdTopologyPostExecute(r ApiV2SiteSiteIdTopologyPostRequest) (*V2SiteSiteIdTopologyPostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V2DeviceDeviceIdTopologyPost200Response
+		localVarReturnValue  *V2SiteSiteIdTopologyPostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V2SiteSiteIdTopologyPost")
@@ -65636,8 +68279,8 @@ func (a *DefaultAPIService) V2SiteSiteIdTopologyPostExecute(r ApiV2SiteSiteIdTop
 	if r.authorization == nil {
 		return localVarReturnValue, nil, reportError("authorization is required and must be specified")
 	}
-	if r.v2DeviceDeviceIdTopologyPostRequest == nil {
-		return localVarReturnValue, nil, reportError("v2DeviceDeviceIdTopologyPostRequest is required and must be specified")
+	if r.v2SiteSiteIdTopologyPostRequest == nil {
+		return localVarReturnValue, nil, reportError("v2SiteSiteIdTopologyPostRequest is required and must be specified")
 	}
 
 	// to determine the Content-Type header
@@ -65659,7 +68302,7 @@ func (a *DefaultAPIService) V2SiteSiteIdTopologyPostExecute(r ApiV2SiteSiteIdTop
 	}
 	parameterAddToHeaderOrQuery(localVarHeaderParams, "Authorization", r.authorization, "simple", "")
 	// body params
-	localVarPostBody = r.v2DeviceDeviceIdTopologyPostRequest
+	localVarPostBody = r.v2SiteSiteIdTopologyPostRequest
 	if r.ctx != nil {
 		// API Key Authentication
 		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
@@ -65729,7 +68372,7 @@ func (r ApiV2VersionPostRequest) Body(body map[string]interface{}) ApiV2VersionP
 	return r
 }
 
-func (r ApiV2VersionPostRequest) Execute() (*V2VersionPost200Response, *http.Response, error) {
+func (r ApiV2VersionPostRequest) Execute() (*V2VersionPostResponse, *http.Response, error) {
 	return r.ApiService.V2VersionPostExecute(r)
 }
 
@@ -65747,13 +68390,13 @@ func (a *DefaultAPIService) V2VersionPost(ctx context.Context) ApiV2VersionPostR
 }
 
 // Execute executes the request
-//  @return V2VersionPost200Response
-func (a *DefaultAPIService) V2VersionPostExecute(r ApiV2VersionPostRequest) (*V2VersionPost200Response, *http.Response, error) {
+//  @return V2VersionPostResponse
+func (a *DefaultAPIService) V2VersionPostExecute(r ApiV2VersionPostRequest) (*V2VersionPostResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *V2VersionPost200Response
+		localVarReturnValue  *V2VersionPostResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.V2VersionPost")

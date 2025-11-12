@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** |  | [optional] 
+**Name** | **string** |  (required) | 
 
 ## Methods
 
 ### NewV1PortalApikeysPostRequest
 
-`func NewV1PortalApikeysPostRequest() *V1PortalApikeysPostRequest`
+`func NewV1PortalApikeysPostRequest(name string, ) *V1PortalApikeysPostRequest`
 
 NewV1PortalApikeysPostRequest instantiates a new V1PortalApikeysPostRequest object
 This constructor will assign default values to properties that have it defined,
@@ -44,11 +44,6 @@ and a boolean to check if the value has been set.
 
 SetName sets Name field to given value.
 
-### HasName
-
-`func (o *V1PortalApikeysPostRequest) HasName() bool`
-
-HasName returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

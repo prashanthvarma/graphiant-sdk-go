@@ -4,10 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ConfigurationMetadata** | Pointer to [**V1VersionPostRequestConfigurationMetadata**](V1VersionPostRequestConfigurationMetadata.md) |  | [optional] 
-**Core** | Pointer to [**V1DevicesDeviceIdConfigPutRequestCore**](V1DevicesDeviceIdConfigPutRequestCore.md) |  | [optional] 
+**ConfigurationMetadata** | Pointer to [**ManaV2ConfigurationMetadata**](ManaV2ConfigurationMetadata.md) |  | [optional] 
+**Core** | Pointer to [**ManaV2CoreDeviceConfig**](ManaV2CoreDeviceConfig.md) |  | [optional] 
 **Description** | Pointer to **string** |  | [optional] 
-**Edge** | Pointer to [**V1DevicesDeviceIdConfigPutRequestEdge**](V1DevicesDeviceIdConfigPutRequestEdge.md) |  | [optional] 
+**Edge** | Pointer to [**ManaV2EdgeDeviceConfig**](ManaV2EdgeDeviceConfig.md) |  | [optional] 
 **LocalWebServerPassword** | Pointer to **string** |  | [optional] 
 **Replace** | Pointer to **bool** |  | [optional] 
 
@@ -32,20 +32,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetConfigurationMetadata
 
-`func (o *V1DevicesDeviceIdConfigPutRequest) GetConfigurationMetadata() V1VersionPostRequestConfigurationMetadata`
+`func (o *V1DevicesDeviceIdConfigPutRequest) GetConfigurationMetadata() ManaV2ConfigurationMetadata`
 
 GetConfigurationMetadata returns the ConfigurationMetadata field if non-nil, zero value otherwise.
 
 ### GetConfigurationMetadataOk
 
-`func (o *V1DevicesDeviceIdConfigPutRequest) GetConfigurationMetadataOk() (*V1VersionPostRequestConfigurationMetadata, bool)`
+`func (o *V1DevicesDeviceIdConfigPutRequest) GetConfigurationMetadataOk() (*ManaV2ConfigurationMetadata, bool)`
 
 GetConfigurationMetadataOk returns a tuple with the ConfigurationMetadata field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetConfigurationMetadata
 
-`func (o *V1DevicesDeviceIdConfigPutRequest) SetConfigurationMetadata(v V1VersionPostRequestConfigurationMetadata)`
+`func (o *V1DevicesDeviceIdConfigPutRequest) SetConfigurationMetadata(v ManaV2ConfigurationMetadata)`
 
 SetConfigurationMetadata sets ConfigurationMetadata field to given value.
 
@@ -57,20 +57,20 @@ HasConfigurationMetadata returns a boolean if a field has been set.
 
 ### GetCore
 
-`func (o *V1DevicesDeviceIdConfigPutRequest) GetCore() V1DevicesDeviceIdConfigPutRequestCore`
+`func (o *V1DevicesDeviceIdConfigPutRequest) GetCore() ManaV2CoreDeviceConfig`
 
 GetCore returns the Core field if non-nil, zero value otherwise.
 
 ### GetCoreOk
 
-`func (o *V1DevicesDeviceIdConfigPutRequest) GetCoreOk() (*V1DevicesDeviceIdConfigPutRequestCore, bool)`
+`func (o *V1DevicesDeviceIdConfigPutRequest) GetCoreOk() (*ManaV2CoreDeviceConfig, bool)`
 
 GetCoreOk returns a tuple with the Core field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetCore
 
-`func (o *V1DevicesDeviceIdConfigPutRequest) SetCore(v V1DevicesDeviceIdConfigPutRequestCore)`
+`func (o *V1DevicesDeviceIdConfigPutRequest) SetCore(v ManaV2CoreDeviceConfig)`
 
 SetCore sets Core field to given value.
 
@@ -107,20 +107,20 @@ HasDescription returns a boolean if a field has been set.
 
 ### GetEdge
 
-`func (o *V1DevicesDeviceIdConfigPutRequest) GetEdge() V1DevicesDeviceIdConfigPutRequestEdge`
+`func (o *V1DevicesDeviceIdConfigPutRequest) GetEdge() ManaV2EdgeDeviceConfig`
 
 GetEdge returns the Edge field if non-nil, zero value otherwise.
 
 ### GetEdgeOk
 
-`func (o *V1DevicesDeviceIdConfigPutRequest) GetEdgeOk() (*V1DevicesDeviceIdConfigPutRequestEdge, bool)`
+`func (o *V1DevicesDeviceIdConfigPutRequest) GetEdgeOk() (*ManaV2EdgeDeviceConfig, bool)`
 
 GetEdgeOk returns a tuple with the Edge field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetEdge
 
-`func (o *V1DevicesDeviceIdConfigPutRequest) SetEdge(v V1DevicesDeviceIdConfigPutRequestEdge)`
+`func (o *V1DevicesDeviceIdConfigPutRequest) SetEdge(v ManaV2EdgeDeviceConfig)`
 
 SetEdge sets Edge field to given value.
 

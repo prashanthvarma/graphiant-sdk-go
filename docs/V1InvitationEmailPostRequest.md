@@ -6,16 +6,17 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **AdminEmail** | Pointer to **string** |  | [optional] 
 **CustomerId** | Pointer to **int64** |  | [optional] 
-**CustomerName** | Pointer to **string** |  | [optional] 
+**CustomerName** | **string** |  (required) | 
 **IsGraphiant** | Pointer to **bool** |  | [optional] 
-**ServiceId** | Pointer to **int64** |  | [optional] 
-**ServiceName** | Pointer to **string** |  | [optional] 
+**MatchId** | **int64** |  (required) | 
+**ServiceId** | **int64** |  (required) | 
+**ServiceName** | **string** |  (required) | 
 
 ## Methods
 
 ### NewV1InvitationEmailPostRequest
 
-`func NewV1InvitationEmailPostRequest() *V1InvitationEmailPostRequest`
+`func NewV1InvitationEmailPostRequest(customerName string, matchId int64, serviceId int64, serviceName string, ) *V1InvitationEmailPostRequest`
 
 NewV1InvitationEmailPostRequest instantiates a new V1InvitationEmailPostRequest object
 This constructor will assign default values to properties that have it defined,
@@ -99,11 +100,6 @@ and a boolean to check if the value has been set.
 
 SetCustomerName sets CustomerName field to given value.
 
-### HasCustomerName
-
-`func (o *V1InvitationEmailPostRequest) HasCustomerName() bool`
-
-HasCustomerName returns a boolean if a field has been set.
 
 ### GetIsGraphiant
 
@@ -130,6 +126,26 @@ SetIsGraphiant sets IsGraphiant field to given value.
 
 HasIsGraphiant returns a boolean if a field has been set.
 
+### GetMatchId
+
+`func (o *V1InvitationEmailPostRequest) GetMatchId() int64`
+
+GetMatchId returns the MatchId field if non-nil, zero value otherwise.
+
+### GetMatchIdOk
+
+`func (o *V1InvitationEmailPostRequest) GetMatchIdOk() (*int64, bool)`
+
+GetMatchIdOk returns a tuple with the MatchId field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMatchId
+
+`func (o *V1InvitationEmailPostRequest) SetMatchId(v int64)`
+
+SetMatchId sets MatchId field to given value.
+
+
 ### GetServiceId
 
 `func (o *V1InvitationEmailPostRequest) GetServiceId() int64`
@@ -149,11 +165,6 @@ and a boolean to check if the value has been set.
 
 SetServiceId sets ServiceId field to given value.
 
-### HasServiceId
-
-`func (o *V1InvitationEmailPostRequest) HasServiceId() bool`
-
-HasServiceId returns a boolean if a field has been set.
 
 ### GetServiceName
 
@@ -174,11 +185,6 @@ and a boolean to check if the value has been set.
 
 SetServiceName sets ServiceName field to given value.
 
-### HasServiceName
-
-`func (o *V1InvitationEmailPostRequest) HasServiceName() bool`
-
-HasServiceName returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

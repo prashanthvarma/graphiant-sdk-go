@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Filter** | Pointer to [**V1BackboneHealthOverviewPostRequestFilter**](V1BackboneHealthOverviewPostRequestFilter.md) |  | [optional] 
+**Filter** | Pointer to [**StatsmonTroubleshootingFilter**](StatsmonTroubleshootingFilter.md) |  | [optional] 
 
 ## Methods
 
@@ -27,20 +27,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetFilter
 
-`func (o *V1BackboneHealthTopDevicesByAlertsPostRequest) GetFilter() V1BackboneHealthOverviewPostRequestFilter`
+`func (o *V1BackboneHealthTopDevicesByAlertsPostRequest) GetFilter() StatsmonTroubleshootingFilter`
 
 GetFilter returns the Filter field if non-nil, zero value otherwise.
 
 ### GetFilterOk
 
-`func (o *V1BackboneHealthTopDevicesByAlertsPostRequest) GetFilterOk() (*V1BackboneHealthOverviewPostRequestFilter, bool)`
+`func (o *V1BackboneHealthTopDevicesByAlertsPostRequest) GetFilterOk() (*StatsmonTroubleshootingFilter, bool)`
 
 GetFilterOk returns a tuple with the Filter field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetFilter
 
-`func (o *V1BackboneHealthTopDevicesByAlertsPostRequest) SetFilter(v V1BackboneHealthOverviewPostRequestFilter)`
+`func (o *V1BackboneHealthTopDevicesByAlertsPostRequest) SetFilter(v StatsmonTroubleshootingFilter)`
 
 SetFilter sets Filter field to given value.
 

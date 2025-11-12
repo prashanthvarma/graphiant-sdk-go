@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Role** | Pointer to **string** |  | [optional] 
-**ValidTillTs** | Pointer to [**V1AlarmHistoryGet200ResponseHistoryInnerTime**](V1AlarmHistoryGet200ResponseHistoryInnerTime.md) |  | [optional] 
+**ValidTillTs** | Pointer to [**GoogleProtobufTimestamp**](GoogleProtobufTimestamp.md) |  | [optional] 
 **ValiditySec** | Pointer to **int64** |  | [optional] 
 
 ## Methods
@@ -54,20 +54,20 @@ HasRole returns a boolean if a field has been set.
 
 ### GetValidTillTs
 
-`func (o *V1DevicesBringupTokenPostRequest) GetValidTillTs() V1AlarmHistoryGet200ResponseHistoryInnerTime`
+`func (o *V1DevicesBringupTokenPostRequest) GetValidTillTs() GoogleProtobufTimestamp`
 
 GetValidTillTs returns the ValidTillTs field if non-nil, zero value otherwise.
 
 ### GetValidTillTsOk
 
-`func (o *V1DevicesBringupTokenPostRequest) GetValidTillTsOk() (*V1AlarmHistoryGet200ResponseHistoryInnerTime, bool)`
+`func (o *V1DevicesBringupTokenPostRequest) GetValidTillTsOk() (*GoogleProtobufTimestamp, bool)`
 
 GetValidTillTsOk returns a tuple with the ValidTillTs field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetValidTillTs
 
-`func (o *V1DevicesBringupTokenPostRequest) SetValidTillTs(v V1AlarmHistoryGet200ResponseHistoryInnerTime)`
+`func (o *V1DevicesBringupTokenPostRequest) SetValidTillTs(v GoogleProtobufTimestamp)`
 
 SetValidTillTs sets ValidTillTs field to given value.
 

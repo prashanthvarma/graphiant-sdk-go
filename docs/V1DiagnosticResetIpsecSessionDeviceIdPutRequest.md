@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**All3RdParty** | Pointer to **bool** |  | [optional] 
-**AllControllers** | Pointer to **bool** |  | [optional] 
-**AllE2E** | Pointer to **bool** |  | [optional] 
+**All3RdParty** | Pointer to **bool** | All 3rd Party IPSec sessions | [optional] 
+**AllControllers** | Pointer to **bool** | All Graphiant controllers IPSec sessions | [optional] 
+**AllE2E** | Pointer to **bool** | All Edge to Edge sessions | [optional] 
 **Vrf** | Pointer to **[]string** |  | [optional] 
 
 ## Methods

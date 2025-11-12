@@ -4,14 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**DeviceId** | Pointer to **int64** |  | [optional] 
-**Params** | Pointer to [**V1DiagnosticSpeedtestPostRequestParams**](V1DiagnosticSpeedtestPostRequestParams.md) |  | [optional] 
+**DeviceId** | **int64** | Unique identifier for a specific device (required) | 
+**Params** | Pointer to [**DiagnosticToolsSpeedtestParams**](DiagnosticToolsSpeedtestParams.md) |  | [optional] 
 
 ## Methods
 
 ### NewV1DiagnosticSpeedtestPostRequest
 
-`func NewV1DiagnosticSpeedtestPostRequest() *V1DiagnosticSpeedtestPostRequest`
+`func NewV1DiagnosticSpeedtestPostRequest(deviceId int64, ) *V1DiagnosticSpeedtestPostRequest`
 
 NewV1DiagnosticSpeedtestPostRequest instantiates a new V1DiagnosticSpeedtestPostRequest object
 This constructor will assign default values to properties that have it defined,
@@ -45,28 +45,23 @@ and a boolean to check if the value has been set.
 
 SetDeviceId sets DeviceId field to given value.
 
-### HasDeviceId
-
-`func (o *V1DiagnosticSpeedtestPostRequest) HasDeviceId() bool`
-
-HasDeviceId returns a boolean if a field has been set.
 
 ### GetParams
 
-`func (o *V1DiagnosticSpeedtestPostRequest) GetParams() V1DiagnosticSpeedtestPostRequestParams`
+`func (o *V1DiagnosticSpeedtestPostRequest) GetParams() DiagnosticToolsSpeedtestParams`
 
 GetParams returns the Params field if non-nil, zero value otherwise.
 
 ### GetParamsOk
 
-`func (o *V1DiagnosticSpeedtestPostRequest) GetParamsOk() (*V1DiagnosticSpeedtestPostRequestParams, bool)`
+`func (o *V1DiagnosticSpeedtestPostRequest) GetParamsOk() (*DiagnosticToolsSpeedtestParams, bool)`
 
 GetParamsOk returns a tuple with the Params field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetParams
 
-`func (o *V1DiagnosticSpeedtestPostRequest) SetParams(v V1DiagnosticSpeedtestPostRequestParams)`
+`func (o *V1DiagnosticSpeedtestPostRequest) SetParams(v DiagnosticToolsSpeedtestParams)`
 
 SetParams sets Params field to given value.
 

@@ -4,14 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**NotificationBody** | Pointer to [**V2NotificationCreatePostRequestNotificationBody**](V2NotificationCreatePostRequestNotificationBody.md) |  | [optional] 
-**NotificationIdList** | Pointer to **[]string** |  | [optional] 
+**NotificationBody** | [**AlertserviceNotificationBody**](AlertserviceNotificationBody.md) |  | 
+**NotificationIdList** | **[]string** |  | 
 
 ## Methods
 
 ### NewV2NotificationUpdatePostRequest
 
-`func NewV2NotificationUpdatePostRequest() *V2NotificationUpdatePostRequest`
+`func NewV2NotificationUpdatePostRequest(notificationBody AlertserviceNotificationBody, notificationIdList []string, ) *V2NotificationUpdatePostRequest`
 
 NewV2NotificationUpdatePostRequest instantiates a new V2NotificationUpdatePostRequest object
 This constructor will assign default values to properties that have it defined,
@@ -28,28 +28,23 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetNotificationBody
 
-`func (o *V2NotificationUpdatePostRequest) GetNotificationBody() V2NotificationCreatePostRequestNotificationBody`
+`func (o *V2NotificationUpdatePostRequest) GetNotificationBody() AlertserviceNotificationBody`
 
 GetNotificationBody returns the NotificationBody field if non-nil, zero value otherwise.
 
 ### GetNotificationBodyOk
 
-`func (o *V2NotificationUpdatePostRequest) GetNotificationBodyOk() (*V2NotificationCreatePostRequestNotificationBody, bool)`
+`func (o *V2NotificationUpdatePostRequest) GetNotificationBodyOk() (*AlertserviceNotificationBody, bool)`
 
 GetNotificationBodyOk returns a tuple with the NotificationBody field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetNotificationBody
 
-`func (o *V2NotificationUpdatePostRequest) SetNotificationBody(v V2NotificationCreatePostRequestNotificationBody)`
+`func (o *V2NotificationUpdatePostRequest) SetNotificationBody(v AlertserviceNotificationBody)`
 
 SetNotificationBody sets NotificationBody field to given value.
 
-### HasNotificationBody
-
-`func (o *V2NotificationUpdatePostRequest) HasNotificationBody() bool`
-
-HasNotificationBody returns a boolean if a field has been set.
 
 ### GetNotificationIdList
 
@@ -70,11 +65,6 @@ and a boolean to check if the value has been set.
 
 SetNotificationIdList sets NotificationIdList field to given value.
 
-### HasNotificationIdList
-
-`func (o *V2NotificationUpdatePostRequest) HasNotificationIdList() bool`
-
-HasNotificationIdList returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

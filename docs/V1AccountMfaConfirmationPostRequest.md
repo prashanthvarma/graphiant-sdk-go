@@ -4,16 +4,16 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Code** | Pointer to **string** |  | [optional] 
-**Confirmed** | Pointer to **bool** |  | [optional] 
-**Id** | Pointer to **string** |  | [optional] 
-**Type** | Pointer to **string** |  | [optional] 
+**Code** | **string** |  (required) | 
+**Confirmed** | **bool** |  (required) | 
+**Id** | **string** |  (required) | 
+**Type** | **string** |  (required) | 
 
 ## Methods
 
 ### NewV1AccountMfaConfirmationPostRequest
 
-`func NewV1AccountMfaConfirmationPostRequest() *V1AccountMfaConfirmationPostRequest`
+`func NewV1AccountMfaConfirmationPostRequest(code string, confirmed bool, id string, type_ string, ) *V1AccountMfaConfirmationPostRequest`
 
 NewV1AccountMfaConfirmationPostRequest instantiates a new V1AccountMfaConfirmationPostRequest object
 This constructor will assign default values to properties that have it defined,
@@ -47,11 +47,6 @@ and a boolean to check if the value has been set.
 
 SetCode sets Code field to given value.
 
-### HasCode
-
-`func (o *V1AccountMfaConfirmationPostRequest) HasCode() bool`
-
-HasCode returns a boolean if a field has been set.
 
 ### GetConfirmed
 
@@ -72,11 +67,6 @@ and a boolean to check if the value has been set.
 
 SetConfirmed sets Confirmed field to given value.
 
-### HasConfirmed
-
-`func (o *V1AccountMfaConfirmationPostRequest) HasConfirmed() bool`
-
-HasConfirmed returns a boolean if a field has been set.
 
 ### GetId
 
@@ -97,11 +87,6 @@ and a boolean to check if the value has been set.
 
 SetId sets Id field to given value.
 
-### HasId
-
-`func (o *V1AccountMfaConfirmationPostRequest) HasId() bool`
-
-HasId returns a boolean if a field has been set.
 
 ### GetType
 
@@ -122,11 +107,6 @@ and a boolean to check if the value has been set.
 
 SetType sets Type field to given value.
 
-### HasType
-
-`func (o *V1AccountMfaConfirmationPostRequest) HasType() bool`
-
-HasType returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

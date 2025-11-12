@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **CustomerName** | Pointer to **string** |  | [optional] 
-**Emails** | Pointer to **[]string** |  | [optional] 
+**Emails** | **[]string** |  | 
 **MatchId** | Pointer to **int64** |  | [optional] 
 **ServiceName** | Pointer to **string** |  | [optional] 
 
@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 
 ### NewV1TempPasswordPutRequest
 
-`func NewV1TempPasswordPutRequest() *V1TempPasswordPutRequest`
+`func NewV1TempPasswordPutRequest(emails []string, ) *V1TempPasswordPutRequest`
 
 NewV1TempPasswordPutRequest instantiates a new V1TempPasswordPutRequest object
 This constructor will assign default values to properties that have it defined,
@@ -72,11 +72,6 @@ and a boolean to check if the value has been set.
 
 SetEmails sets Emails field to given value.
 
-### HasEmails
-
-`func (o *V1TempPasswordPutRequest) HasEmails() bool`
-
-HasEmails returns a boolean if a field has been set.
 
 ### GetMatchId
 

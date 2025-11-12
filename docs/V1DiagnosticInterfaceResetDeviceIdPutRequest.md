@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Interface** | Pointer to **string** |  | [optional] 
+**Interface** | Pointer to **string** | interface name | [optional] 
 
 ## Methods
 

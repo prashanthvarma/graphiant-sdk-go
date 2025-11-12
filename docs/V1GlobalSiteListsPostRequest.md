@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Description** | Pointer to **string** |  | [optional] 
-**Entries** | Pointer to [**[]V1GlobalSiteListsPostRequestEntriesInner**](V1GlobalSiteListsPostRequestEntriesInner.md) |  | [optional] 
+**Entries** | Pointer to [**[]ManaV2SiteListEntry**](ManaV2SiteListEntry.md) |  | [optional] 
 **Name** | Pointer to **string** |  | [optional] 
 
 ## Methods
@@ -54,20 +54,20 @@ HasDescription returns a boolean if a field has been set.
 
 ### GetEntries
 
-`func (o *V1GlobalSiteListsPostRequest) GetEntries() []V1GlobalSiteListsPostRequestEntriesInner`
+`func (o *V1GlobalSiteListsPostRequest) GetEntries() []ManaV2SiteListEntry`
 
 GetEntries returns the Entries field if non-nil, zero value otherwise.
 
 ### GetEntriesOk
 
-`func (o *V1GlobalSiteListsPostRequest) GetEntriesOk() (*[]V1GlobalSiteListsPostRequestEntriesInner, bool)`
+`func (o *V1GlobalSiteListsPostRequest) GetEntriesOk() (*[]ManaV2SiteListEntry, bool)`
 
 GetEntriesOk returns a tuple with the Entries field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetEntries
 
-`func (o *V1GlobalSiteListsPostRequest) SetEntries(v []V1GlobalSiteListsPostRequestEntriesInner)`
+`func (o *V1GlobalSiteListsPostRequest) SetEntries(v []ManaV2SiteListEntry)`
 
 SetEntries sets Entries field to given value.
 

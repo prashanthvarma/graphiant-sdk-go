@@ -4,11 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **int64** |  | [optional] 
+**CustomerName** | Pointer to **string** |  | [optional] 
+**FlippedView** | Pointer to **bool** |  | [optional] 
+**Id** | Pointer to **int64** | the id associated with an entity - consumer_id for consumer, and service_id for the producer/service | [optional] 
 **IsB2B** | Pointer to **bool** |  | [optional] 
 **IsProvider** | Pointer to **bool** |  | [optional] 
 **SiteId** | Pointer to **int64** |  | [optional] 
-**TimeWindow** | Pointer to [**V2NotificationlistPostRequestTimeWindow**](V2NotificationlistPostRequestTimeWindow.md) |  | [optional] 
+**TimeWindow** | Pointer to [**StatsmonTimeWindow**](StatsmonTimeWindow.md) |  | [optional] 
 **VrfId** | Pointer to **int64** |  | [optional] 
 
 ## Methods
@@ -29,6 +31,56 @@ will change when the set of required properties is changed
 NewV2ExtranetSitesConsumptionOverviewPostRequestWithDefaults instantiates a new V2ExtranetSitesConsumptionOverviewPostRequest object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
+
+### GetCustomerName
+
+`func (o *V2ExtranetSitesConsumptionOverviewPostRequest) GetCustomerName() string`
+
+GetCustomerName returns the CustomerName field if non-nil, zero value otherwise.
+
+### GetCustomerNameOk
+
+`func (o *V2ExtranetSitesConsumptionOverviewPostRequest) GetCustomerNameOk() (*string, bool)`
+
+GetCustomerNameOk returns a tuple with the CustomerName field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCustomerName
+
+`func (o *V2ExtranetSitesConsumptionOverviewPostRequest) SetCustomerName(v string)`
+
+SetCustomerName sets CustomerName field to given value.
+
+### HasCustomerName
+
+`func (o *V2ExtranetSitesConsumptionOverviewPostRequest) HasCustomerName() bool`
+
+HasCustomerName returns a boolean if a field has been set.
+
+### GetFlippedView
+
+`func (o *V2ExtranetSitesConsumptionOverviewPostRequest) GetFlippedView() bool`
+
+GetFlippedView returns the FlippedView field if non-nil, zero value otherwise.
+
+### GetFlippedViewOk
+
+`func (o *V2ExtranetSitesConsumptionOverviewPostRequest) GetFlippedViewOk() (*bool, bool)`
+
+GetFlippedViewOk returns a tuple with the FlippedView field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetFlippedView
+
+`func (o *V2ExtranetSitesConsumptionOverviewPostRequest) SetFlippedView(v bool)`
+
+SetFlippedView sets FlippedView field to given value.
+
+### HasFlippedView
+
+`func (o *V2ExtranetSitesConsumptionOverviewPostRequest) HasFlippedView() bool`
+
+HasFlippedView returns a boolean if a field has been set.
 
 ### GetId
 
@@ -132,20 +184,20 @@ HasSiteId returns a boolean if a field has been set.
 
 ### GetTimeWindow
 
-`func (o *V2ExtranetSitesConsumptionOverviewPostRequest) GetTimeWindow() V2NotificationlistPostRequestTimeWindow`
+`func (o *V2ExtranetSitesConsumptionOverviewPostRequest) GetTimeWindow() StatsmonTimeWindow`
 
 GetTimeWindow returns the TimeWindow field if non-nil, zero value otherwise.
 
 ### GetTimeWindowOk
 
-`func (o *V2ExtranetSitesConsumptionOverviewPostRequest) GetTimeWindowOk() (*V2NotificationlistPostRequestTimeWindow, bool)`
+`func (o *V2ExtranetSitesConsumptionOverviewPostRequest) GetTimeWindowOk() (*StatsmonTimeWindow, bool)`
 
 GetTimeWindowOk returns a tuple with the TimeWindow field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetTimeWindow
 
-`func (o *V2ExtranetSitesConsumptionOverviewPostRequest) SetTimeWindow(v V2NotificationlistPostRequestTimeWindow)`
+`func (o *V2ExtranetSitesConsumptionOverviewPostRequest) SetTimeWindow(v StatsmonTimeWindow)`
 
 SetTimeWindow sets TimeWindow field to given value.
 

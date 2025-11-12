@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **IsB2B** | Pointer to **bool** |  | [optional] 
 **IsProvider** | Pointer to **bool** |  | [optional] 
 **ServiceId** | Pointer to **int64** |  | [optional] 
-**TimeWindow** | Pointer to [**V2NotificationlistPostRequestTimeWindow**](V2NotificationlistPostRequestTimeWindow.md) |  | [optional] 
+**TimeWindow** | Pointer to [**StatsmonTimeWindow**](StatsmonTimeWindow.md) |  | [optional] 
 
 ## Methods
 
@@ -131,20 +131,20 @@ HasServiceId returns a boolean if a field has been set.
 
 ### GetTimeWindow
 
-`func (o *V1ExtranetSitesUsageTopPostRequest) GetTimeWindow() V2NotificationlistPostRequestTimeWindow`
+`func (o *V1ExtranetSitesUsageTopPostRequest) GetTimeWindow() StatsmonTimeWindow`
 
 GetTimeWindow returns the TimeWindow field if non-nil, zero value otherwise.
 
 ### GetTimeWindowOk
 
-`func (o *V1ExtranetSitesUsageTopPostRequest) GetTimeWindowOk() (*V2NotificationlistPostRequestTimeWindow, bool)`
+`func (o *V1ExtranetSitesUsageTopPostRequest) GetTimeWindowOk() (*StatsmonTimeWindow, bool)`
 
 GetTimeWindowOk returns a tuple with the TimeWindow field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetTimeWindow
 
-`func (o *V1ExtranetSitesUsageTopPostRequest) SetTimeWindow(v V2NotificationlistPostRequestTimeWindow)`
+`func (o *V1ExtranetSitesUsageTopPostRequest) SetTimeWindow(v StatsmonTimeWindow)`
 
 SetTimeWindow sets TimeWindow field to given value.
 

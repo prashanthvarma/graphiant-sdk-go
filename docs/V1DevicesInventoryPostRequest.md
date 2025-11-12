@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**HardwareInventoryList** | Pointer to [**[]V1DevicesInventoryGet200ResponseInventoryInner**](V1DevicesInventoryGet200ResponseInventoryInner.md) |  | [optional] 
+**HardwareInventoryList** | Pointer to [**[]OnboardingHardwareInventory**](OnboardingHardwareInventory.md) |  | [optional] 
 
 ## Methods
 
@@ -27,20 +27,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetHardwareInventoryList
 
-`func (o *V1DevicesInventoryPostRequest) GetHardwareInventoryList() []V1DevicesInventoryGet200ResponseInventoryInner`
+`func (o *V1DevicesInventoryPostRequest) GetHardwareInventoryList() []OnboardingHardwareInventory`
 
 GetHardwareInventoryList returns the HardwareInventoryList field if non-nil, zero value otherwise.
 
 ### GetHardwareInventoryListOk
 
-`func (o *V1DevicesInventoryPostRequest) GetHardwareInventoryListOk() (*[]V1DevicesInventoryGet200ResponseInventoryInner, bool)`
+`func (o *V1DevicesInventoryPostRequest) GetHardwareInventoryListOk() (*[]OnboardingHardwareInventory, bool)`
 
 GetHardwareInventoryListOk returns a tuple with the HardwareInventoryList field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetHardwareInventoryList
 
-`func (o *V1DevicesInventoryPostRequest) SetHardwareInventoryList(v []V1DevicesInventoryGet200ResponseInventoryInner)`
+`func (o *V1DevicesInventoryPostRequest) SetHardwareInventoryList(v []OnboardingHardwareInventory)`
 
 SetHardwareInventoryList sets HardwareInventoryList field to given value.
 

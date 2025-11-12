@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Entry** | Pointer to [**[]V1DiagnosticClearArpDeviceIdPutRequestEntryInner**](V1DiagnosticClearArpDeviceIdPutRequestEntryInner.md) |  | [optional] 
+**Entry** | Pointer to [**[]DiagnosticToolsArpEntry**](DiagnosticToolsArpEntry.md) |  | [optional] 
 
 ## Methods
 
@@ -27,20 +27,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetEntry
 
-`func (o *V1DiagnosticClearArpDeviceIdPutRequest) GetEntry() []V1DiagnosticClearArpDeviceIdPutRequestEntryInner`
+`func (o *V1DiagnosticClearArpDeviceIdPutRequest) GetEntry() []DiagnosticToolsArpEntry`
 
 GetEntry returns the Entry field if non-nil, zero value otherwise.
 
 ### GetEntryOk
 
-`func (o *V1DiagnosticClearArpDeviceIdPutRequest) GetEntryOk() (*[]V1DiagnosticClearArpDeviceIdPutRequestEntryInner, bool)`
+`func (o *V1DiagnosticClearArpDeviceIdPutRequest) GetEntryOk() (*[]DiagnosticToolsArpEntry, bool)`
 
 GetEntryOk returns a tuple with the Entry field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetEntry
 
-`func (o *V1DiagnosticClearArpDeviceIdPutRequest) SetEntry(v []V1DiagnosticClearArpDeviceIdPutRequestEntryInner)`
+`func (o *V1DiagnosticClearArpDeviceIdPutRequest) SetEntry(v []DiagnosticToolsArpEntry)`
 
 SetEntry sets Entry field to given value.
 

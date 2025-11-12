@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Tag** | Pointer to [**V1GlobalConfigPatchRequestRoutingPoliciesValuePolicyStatementsValueStatementMatchesValueMatchRouteTagEntry**](V1GlobalConfigPatchRequestRoutingPoliciesValuePolicyStatementsValueStatementMatchesValueMatchRouteTagEntry.md) |  | [optional] 
+**Tag** | Pointer to [**ManaV2RouteTag**](ManaV2RouteTag.md) |  | [optional] 
 
 ## Methods
 
@@ -27,20 +27,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetTag
 
-`func (o *V1PolicyRouteTagSetsPostRequest) GetTag() V1GlobalConfigPatchRequestRoutingPoliciesValuePolicyStatementsValueStatementMatchesValueMatchRouteTagEntry`
+`func (o *V1PolicyRouteTagSetsPostRequest) GetTag() ManaV2RouteTag`
 
 GetTag returns the Tag field if non-nil, zero value otherwise.
 
 ### GetTagOk
 
-`func (o *V1PolicyRouteTagSetsPostRequest) GetTagOk() (*V1GlobalConfigPatchRequestRoutingPoliciesValuePolicyStatementsValueStatementMatchesValueMatchRouteTagEntry, bool)`
+`func (o *V1PolicyRouteTagSetsPostRequest) GetTagOk() (*ManaV2RouteTag, bool)`
 
 GetTagOk returns a tuple with the Tag field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetTag
 
-`func (o *V1PolicyRouteTagSetsPostRequest) SetTag(v V1GlobalConfigPatchRequestRoutingPoliciesValuePolicyStatementsValueStatementMatchesValueMatchRouteTagEntry)`
+`func (o *V1PolicyRouteTagSetsPostRequest) SetTag(v ManaV2RouteTag)`
 
 SetTag sets Tag field to given value.
 

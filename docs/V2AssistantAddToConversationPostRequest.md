@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **ConversationId** | Pointer to **string** |  | [optional] 
-**Question** | Pointer to [**V2AssistantAddToConversationPostRequestQuestion**](V2AssistantAddToConversationPostRequestQuestion.md) |  | [optional] 
+**Question** | Pointer to [**AssistantAssistantQuestion**](AssistantAssistantQuestion.md) |  | [optional] 
 
 ## Methods
 
@@ -53,20 +53,20 @@ HasConversationId returns a boolean if a field has been set.
 
 ### GetQuestion
 
-`func (o *V2AssistantAddToConversationPostRequest) GetQuestion() V2AssistantAddToConversationPostRequestQuestion`
+`func (o *V2AssistantAddToConversationPostRequest) GetQuestion() AssistantAssistantQuestion`
 
 GetQuestion returns the Question field if non-nil, zero value otherwise.
 
 ### GetQuestionOk
 
-`func (o *V2AssistantAddToConversationPostRequest) GetQuestionOk() (*V2AssistantAddToConversationPostRequestQuestion, bool)`
+`func (o *V2AssistantAddToConversationPostRequest) GetQuestionOk() (*AssistantAssistantQuestion, bool)`
 
 GetQuestionOk returns a tuple with the Question field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetQuestion
 
-`func (o *V2AssistantAddToConversationPostRequest) SetQuestion(v V2AssistantAddToConversationPostRequestQuestion)`
+`func (o *V2AssistantAddToConversationPostRequest) SetQuestion(v AssistantAssistantQuestion)`
 
 SetQuestion sets Question field to given value.
 

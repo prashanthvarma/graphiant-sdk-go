@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Policy** | Pointer to [**V1ExtranetsB2bPostRequestPolicy**](V1ExtranetsB2bPostRequestPolicy.md) |  | [optional] 
+**Policy** | Pointer to [**ManaV2B2bExtranetProducerPolicy**](ManaV2B2bExtranetProducerPolicy.md) |  | [optional] 
 
 ## Methods
 
@@ -27,20 +27,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetPolicy
 
-`func (o *V1ExtranetsB2bIdPutRequest) GetPolicy() V1ExtranetsB2bPostRequestPolicy`
+`func (o *V1ExtranetsB2bIdPutRequest) GetPolicy() ManaV2B2bExtranetProducerPolicy`
 
 GetPolicy returns the Policy field if non-nil, zero value otherwise.
 
 ### GetPolicyOk
 
-`func (o *V1ExtranetsB2bIdPutRequest) GetPolicyOk() (*V1ExtranetsB2bPostRequestPolicy, bool)`
+`func (o *V1ExtranetsB2bIdPutRequest) GetPolicyOk() (*ManaV2B2bExtranetProducerPolicy, bool)`
 
 GetPolicyOk returns a tuple with the Policy field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetPolicy
 
-`func (o *V1ExtranetsB2bIdPutRequest) SetPolicy(v V1ExtranetsB2bPostRequestPolicy)`
+`func (o *V1ExtranetsB2bIdPutRequest) SetPolicy(v ManaV2B2bExtranetProducerPolicy)`
 
 SetPolicy sets Policy field to given value.
 

@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**AppConfig** | Pointer to [**V1GlobalAppsCustomGet200ResponseEntriesInnerAppConfig**](V1GlobalAppsCustomGet200ResponseEntriesInnerAppConfig.md) |  | [optional] 
+**AppConfig** | Pointer to [**ManaV2GlobalAppConfig**](ManaV2GlobalAppConfig.md) |  | [optional] 
 
 ## Methods
 
@@ -27,20 +27,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetAppConfig
 
-`func (o *V1GlobalAppsCustomPostRequest) GetAppConfig() V1GlobalAppsCustomGet200ResponseEntriesInnerAppConfig`
+`func (o *V1GlobalAppsCustomPostRequest) GetAppConfig() ManaV2GlobalAppConfig`
 
 GetAppConfig returns the AppConfig field if non-nil, zero value otherwise.
 
 ### GetAppConfigOk
 
-`func (o *V1GlobalAppsCustomPostRequest) GetAppConfigOk() (*V1GlobalAppsCustomGet200ResponseEntriesInnerAppConfig, bool)`
+`func (o *V1GlobalAppsCustomPostRequest) GetAppConfigOk() (*ManaV2GlobalAppConfig, bool)`
 
 GetAppConfigOk returns a tuple with the AppConfig field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetAppConfig
 
-`func (o *V1GlobalAppsCustomPostRequest) SetAppConfig(v V1GlobalAppsCustomGet200ResponseEntriesInnerAppConfig)`
+`func (o *V1GlobalAppsCustomPostRequest) SetAppConfig(v ManaV2GlobalAppConfig)`
 
 SetAppConfig sets AppConfig field to given value.
 

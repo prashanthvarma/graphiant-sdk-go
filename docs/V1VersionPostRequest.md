@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ConfigurationMetadata** | Pointer to [**V1VersionPostRequestConfigurationMetadata**](V1VersionPostRequestConfigurationMetadata.md) |  | [optional] 
+**ConfigurationMetadata** | Pointer to [**ManaV2ConfigurationMetadata**](ManaV2ConfigurationMetadata.md) |  | [optional] 
 **DeviceId** | Pointer to **int64** |  | [optional] 
 **Version** | Pointer to **int32** |  | [optional] 
 
@@ -29,20 +29,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetConfigurationMetadata
 
-`func (o *V1VersionPostRequest) GetConfigurationMetadata() V1VersionPostRequestConfigurationMetadata`
+`func (o *V1VersionPostRequest) GetConfigurationMetadata() ManaV2ConfigurationMetadata`
 
 GetConfigurationMetadata returns the ConfigurationMetadata field if non-nil, zero value otherwise.
 
 ### GetConfigurationMetadataOk
 
-`func (o *V1VersionPostRequest) GetConfigurationMetadataOk() (*V1VersionPostRequestConfigurationMetadata, bool)`
+`func (o *V1VersionPostRequest) GetConfigurationMetadataOk() (*ManaV2ConfigurationMetadata, bool)`
 
 GetConfigurationMetadataOk returns a tuple with the ConfigurationMetadata field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetConfigurationMetadata
 
-`func (o *V1VersionPostRequest) SetConfigurationMetadata(v V1VersionPostRequestConfigurationMetadata)`
+`func (o *V1VersionPostRequest) SetConfigurationMetadata(v ManaV2ConfigurationMetadata)`
 
 SetConfigurationMetadata sets ConfigurationMetadata field to given value.
 

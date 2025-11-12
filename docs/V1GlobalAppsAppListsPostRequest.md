@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**AppListConfig** | Pointer to [**V1GlobalAppsAppListsPostRequestAppListConfig**](V1GlobalAppsAppListsPostRequestAppListConfig.md) |  | [optional] 
+**AppListConfig** | Pointer to [**ManaV2AppListConfig**](ManaV2AppListConfig.md) |  | [optional] 
 
 ## Methods
 
@@ -27,20 +27,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetAppListConfig
 
-`func (o *V1GlobalAppsAppListsPostRequest) GetAppListConfig() V1GlobalAppsAppListsPostRequestAppListConfig`
+`func (o *V1GlobalAppsAppListsPostRequest) GetAppListConfig() ManaV2AppListConfig`
 
 GetAppListConfig returns the AppListConfig field if non-nil, zero value otherwise.
 
 ### GetAppListConfigOk
 
-`func (o *V1GlobalAppsAppListsPostRequest) GetAppListConfigOk() (*V1GlobalAppsAppListsPostRequestAppListConfig, bool)`
+`func (o *V1GlobalAppsAppListsPostRequest) GetAppListConfigOk() (*ManaV2AppListConfig, bool)`
 
 GetAppListConfigOk returns a tuple with the AppListConfig field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetAppListConfig
 
-`func (o *V1GlobalAppsAppListsPostRequest) SetAppListConfig(v V1GlobalAppsAppListsPostRequestAppListConfig)`
+`func (o *V1GlobalAppsAppListsPostRequest) SetAppListConfig(v ManaV2AppListConfig)`
 
 SetAppListConfig sets AppListConfig field to given value.
 

@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**PolicyTarget** | Pointer to [**V1ExtranetsPostRequestPolicyBranches**](V1ExtranetsPostRequestPolicyBranches.md) |  | [optional] 
+**PolicyTarget** | Pointer to [**ManaV2PolicyTargetInput**](ManaV2PolicyTargetInput.md) |  | [optional] 
 
 ## Methods
 
@@ -27,20 +27,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetPolicyTarget
 
-`func (o *V1ExtranetsResolvePolicyTargetPostRequest) GetPolicyTarget() V1ExtranetsPostRequestPolicyBranches`
+`func (o *V1ExtranetsResolvePolicyTargetPostRequest) GetPolicyTarget() ManaV2PolicyTargetInput`
 
 GetPolicyTarget returns the PolicyTarget field if non-nil, zero value otherwise.
 
 ### GetPolicyTargetOk
 
-`func (o *V1ExtranetsResolvePolicyTargetPostRequest) GetPolicyTargetOk() (*V1ExtranetsPostRequestPolicyBranches, bool)`
+`func (o *V1ExtranetsResolvePolicyTargetPostRequest) GetPolicyTargetOk() (*ManaV2PolicyTargetInput, bool)`
 
 GetPolicyTargetOk returns a tuple with the PolicyTarget field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetPolicyTarget
 
-`func (o *V1ExtranetsResolvePolicyTargetPostRequest) SetPolicyTarget(v V1ExtranetsPostRequestPolicyBranches)`
+`func (o *V1ExtranetsResolvePolicyTargetPostRequest) SetPolicyTarget(v ManaV2PolicyTargetInput)`
 
 SetPolicyTarget sets PolicyTarget field to given value.
 

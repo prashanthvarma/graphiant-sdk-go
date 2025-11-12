@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Enable** | Pointer to **bool** |  | [optional] 
+**Enable** | **bool** | Enable or disable aggregated notifications. True means enabled (required) | 
 
 ## Methods
 
 ### NewV2AggregatedNotificationEnableDisablePostRequest
 
-`func NewV2AggregatedNotificationEnableDisablePostRequest() *V2AggregatedNotificationEnableDisablePostRequest`
+`func NewV2AggregatedNotificationEnableDisablePostRequest(enable bool, ) *V2AggregatedNotificationEnableDisablePostRequest`
 
 NewV2AggregatedNotificationEnableDisablePostRequest instantiates a new V2AggregatedNotificationEnableDisablePostRequest object
 This constructor will assign default values to properties that have it defined,
@@ -44,11 +44,6 @@ and a boolean to check if the value has been set.
 
 SetEnable sets Enable field to given value.
 
-### HasEnable
-
-`func (o *V2AggregatedNotificationEnableDisablePostRequest) HasEnable() bool`
-
-HasEnable returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

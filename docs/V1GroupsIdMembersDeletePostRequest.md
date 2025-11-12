@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**MemberIds** | Pointer to **[]string** |  | [optional] 
+**MemberIds** | **[]string** |  | 
 
 ## Methods
 
 ### NewV1GroupsIdMembersDeletePostRequest
 
-`func NewV1GroupsIdMembersDeletePostRequest() *V1GroupsIdMembersDeletePostRequest`
+`func NewV1GroupsIdMembersDeletePostRequest(memberIds []string, ) *V1GroupsIdMembersDeletePostRequest`
 
 NewV1GroupsIdMembersDeletePostRequest instantiates a new V1GroupsIdMembersDeletePostRequest object
 This constructor will assign default values to properties that have it defined,
@@ -44,11 +44,6 @@ and a boolean to check if the value has been set.
 
 SetMemberIds sets MemberIds field to given value.
 
-### HasMemberIds
-
-`func (o *V1GroupsIdMembersDeletePostRequest) HasMemberIds() bool`
-
-HasMemberIds returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

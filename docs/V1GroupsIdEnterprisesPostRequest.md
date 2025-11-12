@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**EnterpriseIds** | Pointer to **[]int64** |  | [optional] 
+**EnterpriseIds** | **[]int64** |  | 
 
 ## Methods
 
 ### NewV1GroupsIdEnterprisesPostRequest
 
-`func NewV1GroupsIdEnterprisesPostRequest() *V1GroupsIdEnterprisesPostRequest`
+`func NewV1GroupsIdEnterprisesPostRequest(enterpriseIds []int64, ) *V1GroupsIdEnterprisesPostRequest`
 
 NewV1GroupsIdEnterprisesPostRequest instantiates a new V1GroupsIdEnterprisesPostRequest object
 This constructor will assign default values to properties that have it defined,
@@ -44,11 +44,6 @@ and a boolean to check if the value has been set.
 
 SetEnterpriseIds sets EnterpriseIds field to given value.
 
-### HasEnterpriseIds
-
-`func (o *V1GroupsIdEnterprisesPostRequest) HasEnterpriseIds() bool`
-
-HasEnterpriseIds returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,14 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Enable** | Pointer to **bool** |  | [optional] 
-**NotificationIdList** | Pointer to **[]string** |  | [optional] 
+**Enable** | **bool** | Enable or disable. True means enable (required) | 
+**NotificationIdList** | **[]string** |  | 
 
 ## Methods
 
 ### NewV2NotificationEnabledisablePostRequest
 
-`func NewV2NotificationEnabledisablePostRequest() *V2NotificationEnabledisablePostRequest`
+`func NewV2NotificationEnabledisablePostRequest(enable bool, notificationIdList []string, ) *V2NotificationEnabledisablePostRequest`
 
 NewV2NotificationEnabledisablePostRequest instantiates a new V2NotificationEnabledisablePostRequest object
 This constructor will assign default values to properties that have it defined,
@@ -45,11 +45,6 @@ and a boolean to check if the value has been set.
 
 SetEnable sets Enable field to given value.
 
-### HasEnable
-
-`func (o *V2NotificationEnabledisablePostRequest) HasEnable() bool`
-
-HasEnable returns a boolean if a field has been set.
 
 ### GetNotificationIdList
 
@@ -70,11 +65,6 @@ and a boolean to check if the value has been set.
 
 SetNotificationIdList sets NotificationIdList field to given value.
 
-### HasNotificationIdList
-
-`func (o *V2NotificationEnabledisablePostRequest) HasNotificationIdList() bool`
-
-HasNotificationIdList returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

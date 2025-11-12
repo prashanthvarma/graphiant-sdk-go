@@ -27,7 +27,7 @@ func Test_edge_summary(t *testing.T) {
 		require.NotEmpty(t, username, "username should not be empty")
 		require.NotEmpty(t, password, "password should not be empty")
 
-		authReq := graphiant_sdk.NewV1AuthLoginPostRequest()
+		authReq := graphiant_sdk.NewV1AuthLoginPostRequestWithDefaults()
 		authReq.SetUsername(username)
 		authReq.SetPassword(password)
 

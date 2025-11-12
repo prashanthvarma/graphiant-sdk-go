@@ -4,14 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**DeviceId** | Pointer to **int64** |  | [optional] 
-**HistoryLength** | Pointer to **int64** |  | [optional] 
+**DeviceId** | **int64** | Unique identifier for a specific device (required) | 
+**HistoryLength** | **int64** | Number of most recent speedtest records to return for a specific device (required) | 
 
 ## Methods
 
 ### NewV1DiagnosticSpeedtestReportPutRequest
 
-`func NewV1DiagnosticSpeedtestReportPutRequest() *V1DiagnosticSpeedtestReportPutRequest`
+`func NewV1DiagnosticSpeedtestReportPutRequest(deviceId int64, historyLength int64, ) *V1DiagnosticSpeedtestReportPutRequest`
 
 NewV1DiagnosticSpeedtestReportPutRequest instantiates a new V1DiagnosticSpeedtestReportPutRequest object
 This constructor will assign default values to properties that have it defined,
@@ -45,11 +45,6 @@ and a boolean to check if the value has been set.
 
 SetDeviceId sets DeviceId field to given value.
 
-### HasDeviceId
-
-`func (o *V1DiagnosticSpeedtestReportPutRequest) HasDeviceId() bool`
-
-HasDeviceId returns a boolean if a field has been set.
 
 ### GetHistoryLength
 
@@ -70,11 +65,6 @@ and a boolean to check if the value has been set.
 
 SetHistoryLength sets HistoryLength field to given value.
 
-### HasHistoryLength
-
-`func (o *V1DiagnosticSpeedtestReportPutRequest) HasHistoryLength() bool`
-
-HasHistoryLength returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,14 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**AlertId** | Pointer to **string** |  | [optional] 
-**NoteText** | Pointer to **string** |  | [optional] 
+**AlertId** | **string** | Alert id of the alert to create allowlist/mutelist for (required) | 
+**NoteText** | Pointer to **string** | Optional note | [optional] 
 
 ## Methods
 
 ### NewV2AllowlistCreatePostRequest
 
-`func NewV2AllowlistCreatePostRequest() *V2AllowlistCreatePostRequest`
+`func NewV2AllowlistCreatePostRequest(alertId string, ) *V2AllowlistCreatePostRequest`
 
 NewV2AllowlistCreatePostRequest instantiates a new V2AllowlistCreatePostRequest object
 This constructor will assign default values to properties that have it defined,
@@ -45,11 +45,6 @@ and a boolean to check if the value has been set.
 
 SetAlertId sets AlertId field to given value.
 
-### HasAlertId
-
-`func (o *V2AllowlistCreatePostRequest) HasAlertId() bool`
-
-HasAlertId returns a boolean if a field has been set.
 
 ### GetNoteText
 

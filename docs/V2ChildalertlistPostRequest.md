@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**AlertId** | Pointer to **string** |  | [optional] 
+**AlertId** | **string** | Alert id of the parent alert (required) | 
 
 ## Methods
 
 ### NewV2ChildalertlistPostRequest
 
-`func NewV2ChildalertlistPostRequest() *V2ChildalertlistPostRequest`
+`func NewV2ChildalertlistPostRequest(alertId string, ) *V2ChildalertlistPostRequest`
 
 NewV2ChildalertlistPostRequest instantiates a new V2ChildalertlistPostRequest object
 This constructor will assign default values to properties that have it defined,
@@ -44,11 +44,6 @@ and a boolean to check if the value has been set.
 
 SetAlertId sets AlertId field to given value.
 
-### HasAlertId
-
-`func (o *V2ChildalertlistPostRequest) HasAlertId() bool`
-
-HasAlertId returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

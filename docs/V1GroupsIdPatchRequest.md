@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **Description** | Pointer to **string** |  | [optional] 
 **DisplayName** | Pointer to **string** |  | [optional] 
 **GroupType** | Pointer to **string** |  | [optional] 
-**Permissions** | Pointer to [**V1GroupsGet200ResponseGroupsInnerPermissions**](V1GroupsGet200ResponseGroupsInnerPermissions.md) |  | [optional] 
+**Permissions** | Pointer to [**CommonPermissions**](CommonPermissions.md) |  | [optional] 
 **TimeWindowEnd** | Pointer to **int64** |  | [optional] 
 **TimeWindowStart** | Pointer to **int64** |  | [optional] 
 
@@ -107,20 +107,20 @@ HasGroupType returns a boolean if a field has been set.
 
 ### GetPermissions
 
-`func (o *V1GroupsIdPatchRequest) GetPermissions() V1GroupsGet200ResponseGroupsInnerPermissions`
+`func (o *V1GroupsIdPatchRequest) GetPermissions() CommonPermissions`
 
 GetPermissions returns the Permissions field if non-nil, zero value otherwise.
 
 ### GetPermissionsOk
 
-`func (o *V1GroupsIdPatchRequest) GetPermissionsOk() (*V1GroupsGet200ResponseGroupsInnerPermissions, bool)`
+`func (o *V1GroupsIdPatchRequest) GetPermissionsOk() (*CommonPermissions, bool)`
 
 GetPermissionsOk returns a tuple with the Permissions field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetPermissions
 
-`func (o *V1GroupsIdPatchRequest) SetPermissions(v V1GroupsGet200ResponseGroupsInnerPermissions)`
+`func (o *V1GroupsIdPatchRequest) SetPermissions(v CommonPermissions)`
 
 SetPermissions sets Permissions field to given value.
 

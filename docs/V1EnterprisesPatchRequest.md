@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **CloudProvider** | Pointer to **string** |  | [optional] 
 **CompanyName** | Pointer to **string** |  | [optional] 
 **CreditLimit** | Pointer to **int32** |  | [optional] 
-**EnterpriseId** | Pointer to **int64** |  | [optional] 
+**EnterpriseId** | **int64** |  (required) | 
 **ImpersonationEnabled** | Pointer to **bool** |  | [optional] 
 **Logo** | Pointer to **string** |  | [optional] 
 **PortalBanner** | Pointer to **string** |  | [optional] 
@@ -20,7 +20,7 @@ Name | Type | Description | Notes
 
 ### NewV1EnterprisesPatchRequest
 
-`func NewV1EnterprisesPatchRequest() *V1EnterprisesPatchRequest`
+`func NewV1EnterprisesPatchRequest(enterpriseId int64, ) *V1EnterprisesPatchRequest`
 
 NewV1EnterprisesPatchRequest instantiates a new V1EnterprisesPatchRequest object
 This constructor will assign default values to properties that have it defined,
@@ -154,11 +154,6 @@ and a boolean to check if the value has been set.
 
 SetEnterpriseId sets EnterpriseId field to given value.
 
-### HasEnterpriseId
-
-`func (o *V1EnterprisesPatchRequest) HasEnterpriseId() bool`
-
-HasEnterpriseId returns a boolean if a field has been set.
 
 ### GetImpersonationEnabled
 

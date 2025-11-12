@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Description** | Pointer to **string** |  | [optional] 
+**Description** | Pointer to **string** | Description of the requested archive | [optional] 
 
 ## Methods
 

@@ -5,13 +5,13 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **PhoneNumber** | Pointer to **string** |  | [optional] 
-**Type** | Pointer to **string** |  | [optional] 
+**Type** | **string** |  (required) | 
 
 ## Methods
 
 ### NewV1AccountMfaPutRequest
 
-`func NewV1AccountMfaPutRequest() *V1AccountMfaPutRequest`
+`func NewV1AccountMfaPutRequest(type_ string, ) *V1AccountMfaPutRequest`
 
 NewV1AccountMfaPutRequest instantiates a new V1AccountMfaPutRequest object
 This constructor will assign default values to properties that have it defined,
@@ -70,11 +70,6 @@ and a boolean to check if the value has been set.
 
 SetType sets Type field to given value.
 
-### HasType
-
-`func (o *V1AccountMfaPutRequest) HasType() bool`
-
-HasType returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

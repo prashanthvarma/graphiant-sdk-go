@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **EnterpriseId** | Pointer to **int64** |  | [optional] 
-**Site** | Pointer to [**V1SitesPostRequestSite**](V1SitesPostRequestSite.md) |  | [optional] 
+**Site** | Pointer to [**ManaV2NewSite**](ManaV2NewSite.md) |  | [optional] 
 
 ## Methods
 
@@ -53,20 +53,20 @@ HasEnterpriseId returns a boolean if a field has been set.
 
 ### GetSite
 
-`func (o *V1SitesPostRequest) GetSite() V1SitesPostRequestSite`
+`func (o *V1SitesPostRequest) GetSite() ManaV2NewSite`
 
 GetSite returns the Site field if non-nil, zero value otherwise.
 
 ### GetSiteOk
 
-`func (o *V1SitesPostRequest) GetSiteOk() (*V1SitesPostRequestSite, bool)`
+`func (o *V1SitesPostRequest) GetSiteOk() (*ManaV2NewSite, bool)`
 
 GetSiteOk returns a tuple with the Site field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetSite
 
-`func (o *V1SitesPostRequest) SetSite(v V1SitesPostRequestSite)`
+`func (o *V1SitesPostRequest) SetSite(v ManaV2NewSite)`
 
 SetSite sets Site field to given value.
 

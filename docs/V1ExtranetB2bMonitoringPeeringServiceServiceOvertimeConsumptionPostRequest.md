@@ -4,11 +4,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **int64** |  | [optional] 
+**Id** | Pointer to **int64** | the id associated with an entity - consumer_id for consumer, and service_id for the producer/service | [optional] 
 **IsB2B** | Pointer to **bool** |  | [optional] 
 **IsProvider** | Pointer to **bool** |  | [optional] 
 **SiteId** | Pointer to **int64** |  | [optional] 
-**TimeWindow** | Pointer to [**V2NotificationlistPostRequestTimeWindow**](V2NotificationlistPostRequestTimeWindow.md) |  | [optional] 
+**SubscriptionName** | Pointer to **string** | Optional subscription name for filter | [optional] 
+**TimeWindow** | Pointer to [**StatsmonTimeWindow**](StatsmonTimeWindow.md) |  | [optional] 
 **VrfId** | Pointer to **int64** |  | [optional] 
 
 ## Methods
@@ -130,22 +131,47 @@ SetSiteId sets SiteId field to given value.
 
 HasSiteId returns a boolean if a field has been set.
 
+### GetSubscriptionName
+
+`func (o *V1ExtranetB2bMonitoringPeeringServiceServiceOvertimeConsumptionPostRequest) GetSubscriptionName() string`
+
+GetSubscriptionName returns the SubscriptionName field if non-nil, zero value otherwise.
+
+### GetSubscriptionNameOk
+
+`func (o *V1ExtranetB2bMonitoringPeeringServiceServiceOvertimeConsumptionPostRequest) GetSubscriptionNameOk() (*string, bool)`
+
+GetSubscriptionNameOk returns a tuple with the SubscriptionName field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSubscriptionName
+
+`func (o *V1ExtranetB2bMonitoringPeeringServiceServiceOvertimeConsumptionPostRequest) SetSubscriptionName(v string)`
+
+SetSubscriptionName sets SubscriptionName field to given value.
+
+### HasSubscriptionName
+
+`func (o *V1ExtranetB2bMonitoringPeeringServiceServiceOvertimeConsumptionPostRequest) HasSubscriptionName() bool`
+
+HasSubscriptionName returns a boolean if a field has been set.
+
 ### GetTimeWindow
 
-`func (o *V1ExtranetB2bMonitoringPeeringServiceServiceOvertimeConsumptionPostRequest) GetTimeWindow() V2NotificationlistPostRequestTimeWindow`
+`func (o *V1ExtranetB2bMonitoringPeeringServiceServiceOvertimeConsumptionPostRequest) GetTimeWindow() StatsmonTimeWindow`
 
 GetTimeWindow returns the TimeWindow field if non-nil, zero value otherwise.
 
 ### GetTimeWindowOk
 
-`func (o *V1ExtranetB2bMonitoringPeeringServiceServiceOvertimeConsumptionPostRequest) GetTimeWindowOk() (*V2NotificationlistPostRequestTimeWindow, bool)`
+`func (o *V1ExtranetB2bMonitoringPeeringServiceServiceOvertimeConsumptionPostRequest) GetTimeWindowOk() (*StatsmonTimeWindow, bool)`
 
 GetTimeWindowOk returns a tuple with the TimeWindow field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetTimeWindow
 
-`func (o *V1ExtranetB2bMonitoringPeeringServiceServiceOvertimeConsumptionPostRequest) SetTimeWindow(v V2NotificationlistPostRequestTimeWindow)`
+`func (o *V1ExtranetB2bMonitoringPeeringServiceServiceOvertimeConsumptionPostRequest) SetTimeWindow(v StatsmonTimeWindow)`
 
 SetTimeWindow sets TimeWindow field to given value.
 
