@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Invites** | Pointer to [**[]V1ExtranetsB2bIdCustomerPostRequestInvitesInner**](V1ExtranetsB2bIdCustomerPostRequestInvitesInner.md) |  | [optional] 
+**Invites** | Pointer to [**[]ManaV2B2bExtranetApplicationInvite**](ManaV2B2bExtranetApplicationInvite.md) |  | [optional] 
 
 ## Methods
 
@@ -27,20 +27,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetInvites
 
-`func (o *V1ExtranetsB2bIdCustomerPostRequest) GetInvites() []V1ExtranetsB2bIdCustomerPostRequestInvitesInner`
+`func (o *V1ExtranetsB2bIdCustomerPostRequest) GetInvites() []ManaV2B2bExtranetApplicationInvite`
 
 GetInvites returns the Invites field if non-nil, zero value otherwise.
 
 ### GetInvitesOk
 
-`func (o *V1ExtranetsB2bIdCustomerPostRequest) GetInvitesOk() (*[]V1ExtranetsB2bIdCustomerPostRequestInvitesInner, bool)`
+`func (o *V1ExtranetsB2bIdCustomerPostRequest) GetInvitesOk() (*[]ManaV2B2bExtranetApplicationInvite, bool)`
 
 GetInvitesOk returns a tuple with the Invites field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetInvites
 
-`func (o *V1ExtranetsB2bIdCustomerPostRequest) SetInvites(v []V1ExtranetsB2bIdCustomerPostRequestInvitesInner)`
+`func (o *V1ExtranetsB2bIdCustomerPostRequest) SetInvites(v []ManaV2B2bExtranetApplicationInvite)`
 
 SetInvites sets Invites field to given value.
 

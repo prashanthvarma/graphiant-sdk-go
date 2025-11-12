@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Details** | Pointer to [**V1SoftwareGcsreleaseUploadNotesPostRequestDetails**](V1SoftwareGcsreleaseUploadNotesPostRequestDetails.md) |  | [optional] 
+**Details** | Pointer to [**UpgradeGcsReleaseDetails**](UpgradeGcsReleaseDetails.md) |  | [optional] 
 
 ## Methods
 
@@ -27,20 +27,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetDetails
 
-`func (o *V1SoftwareGcsreleaseUploadNotesPostRequest) GetDetails() V1SoftwareGcsreleaseUploadNotesPostRequestDetails`
+`func (o *V1SoftwareGcsreleaseUploadNotesPostRequest) GetDetails() UpgradeGcsReleaseDetails`
 
 GetDetails returns the Details field if non-nil, zero value otherwise.
 
 ### GetDetailsOk
 
-`func (o *V1SoftwareGcsreleaseUploadNotesPostRequest) GetDetailsOk() (*V1SoftwareGcsreleaseUploadNotesPostRequestDetails, bool)`
+`func (o *V1SoftwareGcsreleaseUploadNotesPostRequest) GetDetailsOk() (*UpgradeGcsReleaseDetails, bool)`
 
 GetDetailsOk returns a tuple with the Details field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetDetails
 
-`func (o *V1SoftwareGcsreleaseUploadNotesPostRequest) SetDetails(v V1SoftwareGcsreleaseUploadNotesPostRequestDetails)`
+`func (o *V1SoftwareGcsreleaseUploadNotesPostRequest) SetDetails(v UpgradeGcsReleaseDetails)`
 
 SetDetails sets Details field to given value.
 

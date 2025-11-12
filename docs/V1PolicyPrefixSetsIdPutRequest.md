@@ -5,9 +5,9 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Description** | Pointer to **string** |  | [optional] 
-**Entries** | Pointer to [**map[string]V1GlobalConfigPatchRequestGlobalPrefixSetsValuePrefixSetEntriesValueEntry**](V1GlobalConfigPatchRequestGlobalPrefixSetsValuePrefixSetEntriesValueEntry.md) |  | [optional] 
+**Entries** | Pointer to [**map[string]V1PolicyPrefixSetsIdPutRequestEntry**](V1PolicyPrefixSetsIdPutRequestEntry.md) |  | [optional] 
 **Name** | Pointer to **string** |  | [optional] 
-**PrefixSetEntries** | Pointer to [**map[string]V1GlobalConfigPatchRequestGlobalPrefixSetsValuePrefixSetEntriesValue**](V1GlobalConfigPatchRequestGlobalPrefixSetsValuePrefixSetEntriesValue.md) |  | [optional] 
+**PrefixSetEntries** | Pointer to [**map[string]V1PolicyPrefixSetsIdPutRequestNullableEntry**](V1PolicyPrefixSetsIdPutRequestNullableEntry.md) |  | [optional] 
 
 ## Methods
 
@@ -55,20 +55,20 @@ HasDescription returns a boolean if a field has been set.
 
 ### GetEntries
 
-`func (o *V1PolicyPrefixSetsIdPutRequest) GetEntries() map[string]V1GlobalConfigPatchRequestGlobalPrefixSetsValuePrefixSetEntriesValueEntry`
+`func (o *V1PolicyPrefixSetsIdPutRequest) GetEntries() map[string]V1PolicyPrefixSetsIdPutRequestEntry`
 
 GetEntries returns the Entries field if non-nil, zero value otherwise.
 
 ### GetEntriesOk
 
-`func (o *V1PolicyPrefixSetsIdPutRequest) GetEntriesOk() (*map[string]V1GlobalConfigPatchRequestGlobalPrefixSetsValuePrefixSetEntriesValueEntry, bool)`
+`func (o *V1PolicyPrefixSetsIdPutRequest) GetEntriesOk() (*map[string]V1PolicyPrefixSetsIdPutRequestEntry, bool)`
 
 GetEntriesOk returns a tuple with the Entries field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetEntries
 
-`func (o *V1PolicyPrefixSetsIdPutRequest) SetEntries(v map[string]V1GlobalConfigPatchRequestGlobalPrefixSetsValuePrefixSetEntriesValueEntry)`
+`func (o *V1PolicyPrefixSetsIdPutRequest) SetEntries(v map[string]V1PolicyPrefixSetsIdPutRequestEntry)`
 
 SetEntries sets Entries field to given value.
 
@@ -105,20 +105,20 @@ HasName returns a boolean if a field has been set.
 
 ### GetPrefixSetEntries
 
-`func (o *V1PolicyPrefixSetsIdPutRequest) GetPrefixSetEntries() map[string]V1GlobalConfigPatchRequestGlobalPrefixSetsValuePrefixSetEntriesValue`
+`func (o *V1PolicyPrefixSetsIdPutRequest) GetPrefixSetEntries() map[string]V1PolicyPrefixSetsIdPutRequestNullableEntry`
 
 GetPrefixSetEntries returns the PrefixSetEntries field if non-nil, zero value otherwise.
 
 ### GetPrefixSetEntriesOk
 
-`func (o *V1PolicyPrefixSetsIdPutRequest) GetPrefixSetEntriesOk() (*map[string]V1GlobalConfigPatchRequestGlobalPrefixSetsValuePrefixSetEntriesValue, bool)`
+`func (o *V1PolicyPrefixSetsIdPutRequest) GetPrefixSetEntriesOk() (*map[string]V1PolicyPrefixSetsIdPutRequestNullableEntry, bool)`
 
 GetPrefixSetEntriesOk returns a tuple with the PrefixSetEntries field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetPrefixSetEntries
 
-`func (o *V1PolicyPrefixSetsIdPutRequest) SetPrefixSetEntries(v map[string]V1GlobalConfigPatchRequestGlobalPrefixSetsValuePrefixSetEntriesValue)`
+`func (o *V1PolicyPrefixSetsIdPutRequest) SetPrefixSetEntries(v map[string]V1PolicyPrefixSetsIdPutRequestNullableEntry)`
 
 SetPrefixSetEntries sets PrefixSetEntries field to given value.
 

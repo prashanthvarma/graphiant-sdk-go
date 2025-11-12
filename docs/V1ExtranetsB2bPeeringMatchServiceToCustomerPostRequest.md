@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Id** | Pointer to **int64** |  | [optional] 
-**Service** | Pointer to [**V1ExtranetsB2bPeeringMatchServiceToCustomerPostRequestService**](V1ExtranetsB2bPeeringMatchServiceToCustomerPostRequestService.md) |  | [optional] 
+**Service** | Pointer to [**ManaV2B2bExtranetMatchServiceToCustomer**](ManaV2B2bExtranetMatchServiceToCustomer.md) |  | [optional] 
 
 ## Methods
 
@@ -53,20 +53,20 @@ HasId returns a boolean if a field has been set.
 
 ### GetService
 
-`func (o *V1ExtranetsB2bPeeringMatchServiceToCustomerPostRequest) GetService() V1ExtranetsB2bPeeringMatchServiceToCustomerPostRequestService`
+`func (o *V1ExtranetsB2bPeeringMatchServiceToCustomerPostRequest) GetService() ManaV2B2bExtranetMatchServiceToCustomer`
 
 GetService returns the Service field if non-nil, zero value otherwise.
 
 ### GetServiceOk
 
-`func (o *V1ExtranetsB2bPeeringMatchServiceToCustomerPostRequest) GetServiceOk() (*V1ExtranetsB2bPeeringMatchServiceToCustomerPostRequestService, bool)`
+`func (o *V1ExtranetsB2bPeeringMatchServiceToCustomerPostRequest) GetServiceOk() (*ManaV2B2bExtranetMatchServiceToCustomer, bool)`
 
 GetServiceOk returns a tuple with the Service field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetService
 
-`func (o *V1ExtranetsB2bPeeringMatchServiceToCustomerPostRequest) SetService(v V1ExtranetsB2bPeeringMatchServiceToCustomerPostRequestService)`
+`func (o *V1ExtranetsB2bPeeringMatchServiceToCustomerPostRequest) SetService(v ManaV2B2bExtranetMatchServiceToCustomer)`
 
 SetService sets Service field to given value.
 

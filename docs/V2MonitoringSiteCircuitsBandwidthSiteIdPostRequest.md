@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Selectors** | Pointer to [**[]V1MonitoringCircuitsBandwidthPostRequestSelectorsInner**](V1MonitoringCircuitsBandwidthPostRequestSelectorsInner.md) |  | [optional] 
-**TimeWindow** | Pointer to [**V2NotificationlistPostRequestTimeWindow**](V2NotificationlistPostRequestTimeWindow.md) |  | [optional] 
+**Selectors** | Pointer to [**[]StatsmonV2CircuitBandwidthStatsSelector**](StatsmonV2CircuitBandwidthStatsSelector.md) |  | [optional] 
+**TimeWindow** | Pointer to [**StatsmonV2TimeWindow**](StatsmonV2TimeWindow.md) |  | [optional] 
 
 ## Methods
 
@@ -28,20 +28,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetSelectors
 
-`func (o *V2MonitoringSiteCircuitsBandwidthSiteIdPostRequest) GetSelectors() []V1MonitoringCircuitsBandwidthPostRequestSelectorsInner`
+`func (o *V2MonitoringSiteCircuitsBandwidthSiteIdPostRequest) GetSelectors() []StatsmonV2CircuitBandwidthStatsSelector`
 
 GetSelectors returns the Selectors field if non-nil, zero value otherwise.
 
 ### GetSelectorsOk
 
-`func (o *V2MonitoringSiteCircuitsBandwidthSiteIdPostRequest) GetSelectorsOk() (*[]V1MonitoringCircuitsBandwidthPostRequestSelectorsInner, bool)`
+`func (o *V2MonitoringSiteCircuitsBandwidthSiteIdPostRequest) GetSelectorsOk() (*[]StatsmonV2CircuitBandwidthStatsSelector, bool)`
 
 GetSelectorsOk returns a tuple with the Selectors field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetSelectors
 
-`func (o *V2MonitoringSiteCircuitsBandwidthSiteIdPostRequest) SetSelectors(v []V1MonitoringCircuitsBandwidthPostRequestSelectorsInner)`
+`func (o *V2MonitoringSiteCircuitsBandwidthSiteIdPostRequest) SetSelectors(v []StatsmonV2CircuitBandwidthStatsSelector)`
 
 SetSelectors sets Selectors field to given value.
 
@@ -53,20 +53,20 @@ HasSelectors returns a boolean if a field has been set.
 
 ### GetTimeWindow
 
-`func (o *V2MonitoringSiteCircuitsBandwidthSiteIdPostRequest) GetTimeWindow() V2NotificationlistPostRequestTimeWindow`
+`func (o *V2MonitoringSiteCircuitsBandwidthSiteIdPostRequest) GetTimeWindow() StatsmonV2TimeWindow`
 
 GetTimeWindow returns the TimeWindow field if non-nil, zero value otherwise.
 
 ### GetTimeWindowOk
 
-`func (o *V2MonitoringSiteCircuitsBandwidthSiteIdPostRequest) GetTimeWindowOk() (*V2NotificationlistPostRequestTimeWindow, bool)`
+`func (o *V2MonitoringSiteCircuitsBandwidthSiteIdPostRequest) GetTimeWindowOk() (*StatsmonV2TimeWindow, bool)`
 
 GetTimeWindowOk returns a tuple with the TimeWindow field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetTimeWindow
 
-`func (o *V2MonitoringSiteCircuitsBandwidthSiteIdPostRequest) SetTimeWindow(v V2NotificationlistPostRequestTimeWindow)`
+`func (o *V2MonitoringSiteCircuitsBandwidthSiteIdPostRequest) SetTimeWindow(v StatsmonV2TimeWindow)`
 
 SetTimeWindow sets TimeWindow field to given value.
 

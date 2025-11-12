@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **RegionId** | Pointer to **int64** |  | [optional] 
-**TimeWindow** | Pointer to [**V2NotificationlistPostRequestTimeWindow**](V2NotificationlistPostRequestTimeWindow.md) |  | [optional] 
+**TimeWindow** | Pointer to [**StatsmonBandwidthtrackerTimeWindow**](StatsmonBandwidthtrackerTimeWindow.md) |  | [optional] 
 
 ## Methods
 
@@ -53,20 +53,20 @@ HasRegionId returns a boolean if a field has been set.
 
 ### GetTimeWindow
 
-`func (o *V1BwtrackerRegionCloudChartPostRequest) GetTimeWindow() V2NotificationlistPostRequestTimeWindow`
+`func (o *V1BwtrackerRegionCloudChartPostRequest) GetTimeWindow() StatsmonBandwidthtrackerTimeWindow`
 
 GetTimeWindow returns the TimeWindow field if non-nil, zero value otherwise.
 
 ### GetTimeWindowOk
 
-`func (o *V1BwtrackerRegionCloudChartPostRequest) GetTimeWindowOk() (*V2NotificationlistPostRequestTimeWindow, bool)`
+`func (o *V1BwtrackerRegionCloudChartPostRequest) GetTimeWindowOk() (*StatsmonBandwidthtrackerTimeWindow, bool)`
 
 GetTimeWindowOk returns a tuple with the TimeWindow field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetTimeWindow
 
-`func (o *V1BwtrackerRegionCloudChartPostRequest) SetTimeWindow(v V2NotificationlistPostRequestTimeWindow)`
+`func (o *V1BwtrackerRegionCloudChartPostRequest) SetTimeWindow(v StatsmonBandwidthtrackerTimeWindow)`
 
 SetTimeWindow sets TimeWindow field to given value.
 

@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**AppSelector** | Pointer to [**V1FlowsTopologyPostRequestAppSelector**](V1FlowsTopologyPostRequestAppSelector.md) |  | [optional] 
+**AppSelector** | Pointer to [**IpfixAppTopologySelector**](IpfixAppTopologySelector.md) |  | [optional] 
 **DeviceId** | Pointer to **int64** |  | [optional] 
-**TimeWindow** | Pointer to [**V2NotificationlistPostRequestTimeWindow**](V2NotificationlistPostRequestTimeWindow.md) |  | [optional] 
+**TimeWindow** | Pointer to [**StatsmonTimeWindow**](StatsmonTimeWindow.md) |  | [optional] 
 
 ## Methods
 
@@ -29,20 +29,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetAppSelector
 
-`func (o *V1FlowsTopologyPostRequest) GetAppSelector() V1FlowsTopologyPostRequestAppSelector`
+`func (o *V1FlowsTopologyPostRequest) GetAppSelector() IpfixAppTopologySelector`
 
 GetAppSelector returns the AppSelector field if non-nil, zero value otherwise.
 
 ### GetAppSelectorOk
 
-`func (o *V1FlowsTopologyPostRequest) GetAppSelectorOk() (*V1FlowsTopologyPostRequestAppSelector, bool)`
+`func (o *V1FlowsTopologyPostRequest) GetAppSelectorOk() (*IpfixAppTopologySelector, bool)`
 
 GetAppSelectorOk returns a tuple with the AppSelector field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetAppSelector
 
-`func (o *V1FlowsTopologyPostRequest) SetAppSelector(v V1FlowsTopologyPostRequestAppSelector)`
+`func (o *V1FlowsTopologyPostRequest) SetAppSelector(v IpfixAppTopologySelector)`
 
 SetAppSelector sets AppSelector field to given value.
 
@@ -79,20 +79,20 @@ HasDeviceId returns a boolean if a field has been set.
 
 ### GetTimeWindow
 
-`func (o *V1FlowsTopologyPostRequest) GetTimeWindow() V2NotificationlistPostRequestTimeWindow`
+`func (o *V1FlowsTopologyPostRequest) GetTimeWindow() StatsmonTimeWindow`
 
 GetTimeWindow returns the TimeWindow field if non-nil, zero value otherwise.
 
 ### GetTimeWindowOk
 
-`func (o *V1FlowsTopologyPostRequest) GetTimeWindowOk() (*V2NotificationlistPostRequestTimeWindow, bool)`
+`func (o *V1FlowsTopologyPostRequest) GetTimeWindowOk() (*StatsmonTimeWindow, bool)`
 
 GetTimeWindowOk returns a tuple with the TimeWindow field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetTimeWindow
 
-`func (o *V1FlowsTopologyPostRequest) SetTimeWindow(v V2NotificationlistPostRequestTimeWindow)`
+`func (o *V1FlowsTopologyPostRequest) SetTimeWindow(v StatsmonTimeWindow)`
 
 SetTimeWindow sets TimeWindow field to given value.
 

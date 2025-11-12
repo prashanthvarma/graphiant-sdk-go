@@ -4,14 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**OldPassword** | Pointer to **string** |  | [optional] 
-**Password** | Pointer to **string** |  | [optional] 
+**OldPassword** | **string** |  (required) | 
+**Password** | **string** |  (required) | 
 
 ## Methods
 
 ### NewV1AccountPasswordPatchRequest
 
-`func NewV1AccountPasswordPatchRequest() *V1AccountPasswordPatchRequest`
+`func NewV1AccountPasswordPatchRequest(oldPassword string, password string, ) *V1AccountPasswordPatchRequest`
 
 NewV1AccountPasswordPatchRequest instantiates a new V1AccountPasswordPatchRequest object
 This constructor will assign default values to properties that have it defined,
@@ -45,11 +45,6 @@ and a boolean to check if the value has been set.
 
 SetOldPassword sets OldPassword field to given value.
 
-### HasOldPassword
-
-`func (o *V1AccountPasswordPatchRequest) HasOldPassword() bool`
-
-HasOldPassword returns a boolean if a field has been set.
 
 ### GetPassword
 
@@ -70,11 +65,6 @@ and a boolean to check if the value has been set.
 
 SetPassword sets Password field to given value.
 
-### HasPassword
-
-`func (o *V1AccountPasswordPatchRequest) HasPassword() bool`
-
-HasPassword returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

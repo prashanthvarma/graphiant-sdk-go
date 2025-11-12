@@ -1,0 +1,108 @@
+# ManaV2DhcpRelay
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**Dhcpv4Relays** | Pointer to **[]string** |  | [optional] 
+**Dhcpv6Relays** | Pointer to **[]string** |  | [optional] 
+**Id** | Pointer to **int64** |  | [optional] 
+
+## Methods
+
+### NewManaV2DhcpRelay
+
+`func NewManaV2DhcpRelay() *ManaV2DhcpRelay`
+
+NewManaV2DhcpRelay instantiates a new ManaV2DhcpRelay object
+This constructor will assign default values to properties that have it defined,
+and makes sure properties required by API are set, but the set of arguments
+will change when the set of required properties is changed
+
+### NewManaV2DhcpRelayWithDefaults
+
+`func NewManaV2DhcpRelayWithDefaults() *ManaV2DhcpRelay`
+
+NewManaV2DhcpRelayWithDefaults instantiates a new ManaV2DhcpRelay object
+This constructor will only assign default values to properties that have it defined,
+but it doesn't guarantee that properties required by API are set
+
+### GetDhcpv4Relays
+
+`func (o *ManaV2DhcpRelay) GetDhcpv4Relays() []string`
+
+GetDhcpv4Relays returns the Dhcpv4Relays field if non-nil, zero value otherwise.
+
+### GetDhcpv4RelaysOk
+
+`func (o *ManaV2DhcpRelay) GetDhcpv4RelaysOk() (*[]string, bool)`
+
+GetDhcpv4RelaysOk returns a tuple with the Dhcpv4Relays field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDhcpv4Relays
+
+`func (o *ManaV2DhcpRelay) SetDhcpv4Relays(v []string)`
+
+SetDhcpv4Relays sets Dhcpv4Relays field to given value.
+
+### HasDhcpv4Relays
+
+`func (o *ManaV2DhcpRelay) HasDhcpv4Relays() bool`
+
+HasDhcpv4Relays returns a boolean if a field has been set.
+
+### GetDhcpv6Relays
+
+`func (o *ManaV2DhcpRelay) GetDhcpv6Relays() []string`
+
+GetDhcpv6Relays returns the Dhcpv6Relays field if non-nil, zero value otherwise.
+
+### GetDhcpv6RelaysOk
+
+`func (o *ManaV2DhcpRelay) GetDhcpv6RelaysOk() (*[]string, bool)`
+
+GetDhcpv6RelaysOk returns a tuple with the Dhcpv6Relays field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDhcpv6Relays
+
+`func (o *ManaV2DhcpRelay) SetDhcpv6Relays(v []string)`
+
+SetDhcpv6Relays sets Dhcpv6Relays field to given value.
+
+### HasDhcpv6Relays
+
+`func (o *ManaV2DhcpRelay) HasDhcpv6Relays() bool`
+
+HasDhcpv6Relays returns a boolean if a field has been set.
+
+### GetId
+
+`func (o *ManaV2DhcpRelay) GetId() int64`
+
+GetId returns the Id field if non-nil, zero value otherwise.
+
+### GetIdOk
+
+`func (o *ManaV2DhcpRelay) GetIdOk() (*int64, bool)`
+
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetId
+
+`func (o *ManaV2DhcpRelay) SetId(v int64)`
+
+SetId sets Id field to given value.
+
+### HasId
+
+`func (o *ManaV2DhcpRelay) HasId() bool`
+
+HasId returns a boolean if a field has been set.
+
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
+

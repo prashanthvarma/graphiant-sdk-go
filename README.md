@@ -63,7 +63,7 @@ func main() {
 	client := graphiant_sdk.NewAPIClient(config)
 	
 	// Authentication request
-	authReq := graphiant_sdk.NewV1AuthLoginPostRequest()
+	authReq := graphiant_sdk.NewV1AuthLoginPostRequestWithDefaults()
 	authReq.SetUsername("your-username")
 	authReq.SetPassword("your-password")
 	
@@ -147,7 +147,7 @@ func verifyDevicePortalStatus(client *graphiant_sdk.APIClient, bearerToken strin
 // Configure device interfaces
 func configureDeviceInterfaces(client *graphiant_sdk.APIClient, bearerToken string, deviceID int64) error {
 	// Define circuits
-	circuits := map[string]graphiant_sdk.V1DevicesDeviceIdConfigPutRequestEdgeCircuitsValue{
+	circuits := map[string]graphiant_sdk.ManaV2CircuitConfig{
 		"c-gigabitethernet5-0-0": {
 			Name:              graphiant_sdk.PtrString("c-gigabitethernet5-0-0"),
 			Description:       graphiant_sdk.PtrString("c-gigabitethernet5-0-0"),
@@ -163,21 +163,21 @@ func configureDeviceInterfaces(client *graphiant_sdk.APIClient, bearerToken stri
 	}
 	
 	// Define interfaces
-	interfaces := map[string]graphiant_sdk.V1DevicesDeviceIdConfigPutRequestEdgeInterfacesValue{
+	interfaces := map[string]graphiant_sdk.ManaV2NullableInterfaceConfig{
 		"GigabitEthernet5/0/0": {
-			Interface: &graphiant_sdk.V1DevicesDeviceIdConfigPutRequestEdgeInterfacesValueInterface{
+			Interface: &graphiant_sdk.ManaV2InterfaceConfig{
 				AdminStatus:       graphiant_sdk.PtrBool(true),
 				MaxTransmissionUnit: graphiant_sdk.PtrInt32(1500),
 				Circuit:           graphiant_sdk.PtrString("c-gigabitethernet5-0-0"),
 				Description:       graphiant_sdk.PtrString("wan_1"),
 				Alias:             graphiant_sdk.PtrString("primary_wan"),
-				Ipv4: &graphiant_sdk.V1DevicesDeviceIdConfigPutRequestCoreInterfacesValueInterfaceGwGw{
-					Dhcp: &graphiant_sdk.V1DevicesDeviceIdConfigPutRequestCoreInterfacesValueInterfaceGwGwDhcp{
+				Ipv4: &graphiant_sdk.ManaV2InterfaceIpConfig{
+					Dhcp: &graphiant_sdk.ManaV2InterfaceDhcpConfig{
 						DhcpClient: graphiant_sdk.PtrBool(true),
 					},
 				},
-				Ipv6: &graphiant_sdk.V1DevicesDeviceIdConfigPutRequestCoreInterfacesValueInterfaceGwGw{
-					Dhcp: &graphiant_sdk.V1DevicesDeviceIdConfigPutRequestCoreInterfacesValueInterfaceGwGwDhcp{
+				Ipv6: &graphiant_sdk.ManaV2InterfaceIpConfig{
+					Dhcp: &graphiant_sdk.ManaV2InterfaceDhcpConfig{
 						DhcpClient: graphiant_sdk.PtrBool(true),
 					},
 				},
@@ -186,14 +186,10 @@ func configureDeviceInterfaces(client *graphiant_sdk.APIClient, bearerToken stri
 	}
 	
 	// Create configuration request
-	edgeConfig := graphiant_sdk.V1DevicesDeviceIdConfigPutRequestEdge{
-		Circuits:   &circuits,
-		Interfaces: &interfaces,
-	}
-	
-	configRequest := graphiant_sdk.V1DevicesDeviceIdConfigPutRequest{
-		Edge: &edgeConfig,
-	}
+	configRequest := graphiant_sdk.NewV1DevicesDeviceIdConfigPutRequest()
+	configRequest.Edge = graphiant_sdk.NewManaV2EdgeDeviceConfig()
+	configRequest.Edge.SetCircuits(circuits)
+	configRequest.Edge.SetInterfaces(interfaces)
 	
 	// Verify device is ready
 	if err := verifyDevicePortalStatus(client, bearerToken, deviceID); err != nil {
@@ -204,7 +200,7 @@ func configureDeviceInterfaces(client *graphiant_sdk.APIClient, bearerToken stri
 	_, _, err := client.DefaultAPI.
 		V1DevicesDeviceIdConfigPut(context.Background(), deviceID).
 		Authorization(bearerToken).
-		V1DevicesDeviceIdConfigPutRequest(configRequest).
+		V1DevicesDeviceIdConfigPutRequest(*configRequest).
 		Execute()
 	
 	if err != nil {
@@ -363,6 +359,71 @@ func configureDeviceWhenReady(deviceID int64, config graphiant_sdk.V1DevicesDevi
 ### Available Wrapper Functions
 | `PollAndPutDeviceConfig(apiClient, token, deviceID, config)` | Poll device status and execute config when ready |
 
+## 🔄 Migration Guide: Upgrading from 25.10.2 to 25.11.1
+
+The 25.11.1 API is optimized to reuse redundant schemas. You may need to update your existing scripts to use the newer API names.
+
+### Benefits of Upgrading
+
+The new API specification (25.11.1) brings significant improvements:
+
+- **Reduced Specification Size**: The API specification file size has been reduced from **9.8M to 1.5M** (~85% reduction) through schema optimization and reuse
+- **Enhanced Documentation**: The new spec includes more comprehensive documentation for better developer experience
+- **Cleaner API Names**: Response APIs no longer include HTTP status codes, making imports and type references more intuitive
+- **Reusable Schemas**: Child APIs now use reusable schema names, meaning **common schemas share the same inner API names across different endpoints**. This reduces code duplication, improves maintainability, and allows you to reuse the same imports and type references for similar data structures
+
+### Important Changes
+
+#### 1. Remove Status Code from API Names
+
+Response API names no longer include HTTP status codes. Update your imports and type references:
+
+**Common patterns to update:**
+- `Post200Response` → `PostResponse`
+- `Get200Response` → `GetResponse`
+- `Put202Response` → `PutResponse`
+- `Put204Response` → `PutResponse`
+- `Post201Response` → `PostResponse`
+
+> **Note**: The vast majority of response APIs have been updated. A few exceptions may remain (e.g., `V1AuthRefreshGet200Response`), but these are rare edge cases. When in doubt, check the current API file (`api_default.go`) or the model documentation.
+
+#### 2. Find and Rename Inner Property API Names
+
+Inner APIs have been renamed to use reusable schema names. **Because schemas are now reused, common schemas will share the same inner API names across different endpoints.** This means you can reuse the same import and type references for similar data structures.
+
+To find the new API name:
+
+1. **Step 1**: Find the top-level API name by removing the status code (if it exists) and trimming to `Response`:
+   - `V1GlobalSummaryPost200Response` → `V1GlobalSummaryPostResponse`
+
+2. **Step 2**: Check the documentation for the inner property's new API name:
+   - Open `docs/V1GlobalSummaryPostResponse.md`
+   - Find the property (e.g., `summaries`)
+   - Note the new API name (e.g., `ManaV2GlobalObjectSummary`)
+
+**Key Benefit**: If multiple endpoints use the same schema structure, they will now share the same inner API name. For example, if both `V1GlobalSummaryPostResponse` and `V1EdgesSummaryGetResponse` use the same summary schema, they will both use `ManaV2GlobalObjectSummary` as the inner API type.
+
+#### 3. Finding Endpoint Request/Response Models
+
+To find all endpoints and their request/response models:
+
+- **API Reference**: See `default_api.go` or `docs/DefaultApi.md`
+- **Model Documentation**: Check individual model files in `docs/` directory (e.g., `docs/V1GlobalSummaryPostResponse.md`)
+
+### Migration Checklist
+
+- [ ] Search and replace all `200Response`, `202Response`, `201Response`, `204Response` patterns
+- [ ] Update imports for response APIs
+- [ ] Find and update inner API references (check documentation files)
+- [ ] Test all API calls with new API names
+- [ ] Update type hints and annotations
+
+### Need Help?
+
+- Check the [API Reference](docs/DefaultApi.md) for endpoint details
+- Review model documentation in the `docs/` directory
+- See [Support](#-support) section for additional resources
+
 ## 🛠️ Development
 
 ### Prerequisites
@@ -400,12 +461,12 @@ brew install openapi-generator  # macOS
 
 # Generate SDK
 openapi-generator generate \
-  -i graphiant_api_docs_v25.10.2.json \
+  -i graphiant_api_docs_v25.11.1.json \
   -g go \
   --git-user-id Graphiant-Inc \
   --git-repo-id graphiant-sdk-go \
   --package-name graphiant_sdk \
-  --additional-properties=packageVersion=25.10.2
+  --additional-properties=packageVersion=25.11.1
 ```
 
 > **Note**: Latest API documentation can be downloaded from the Graphiant portal under "Support Hub" > "Developer Tools".
@@ -457,7 +518,7 @@ graphiant-sdk-go/
 ### Key Models
 
 - **`V1AuthLoginPostRequest`**: Authentication request
-- **`V1EdgesSummaryGet200Response`**: Device summary response
+- **`V1EdgesSummaryGetResponse`**: Device summary response
 - **`V1DevicesDeviceIdConfigPutRequest`**: Device configuration request
 - **`V2MonitoringBgpPostRequest`**: BGP monitoring request
 - **`V2MonitoringCircuitsSummaryPostRequest`**: Circuit monitoring request

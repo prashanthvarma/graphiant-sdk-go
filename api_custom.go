@@ -2,6 +2,7 @@ package graphiant_sdk
 
 import (
 	"context"
+	"encoding/json"
 	"fmt"
 	"io"
 	"net/http"
@@ -30,13 +31,21 @@ func GetDeviceStatus(apiClient *APIClient, token string, deviceId int64) bool {
 
 func PutDeviceConfig(apiClient *APIClient, token string, deviceId int64, deviceConfig V1DevicesDeviceIdConfigPutRequest) *http.Response {
 
+	configJSON, _ := json.MarshalIndent(deviceConfig, "", "  ")
+	fmt.Printf("Executing config put request for device %d...\nConfig: %s\n", deviceId, string(configJSON))
+
 	_, httpRes, err := apiClient.DefaultAPI.
 		V1DevicesDeviceIdConfigPut(context.Background(), deviceId).
 		Authorization(token).
 		V1DevicesDeviceIdConfigPutRequest(deviceConfig).Execute()
 
 	if err != nil {
-		fmt.Printf("Error executing config put request: %v\n", err)
+		if httpRes != nil {
+			body, _ := io.ReadAll(httpRes.Body)
+			fmt.Printf("Error executing config put request: %v\nHTTP Status: %d\nResponse Body: %s\n", err, httpRes.StatusCode, string(body))
+		} else {
+			fmt.Printf("Error executing config put request: %v\n", err)
+		}
 		return nil
 	}
 	body, _ := io.ReadAll(httpRes.Body)
@@ -52,7 +61,7 @@ func PollAndPutDeviceConfig(apiClient *APIClient, token string, deviceId int64, 
 		fmt.Printf("Polling attempt %d/5 for device %d...\n", i+1, deviceId)
 
 		if GetDeviceStatus(apiClient, token, deviceId) {
-			fmt.Printf("Executing config put request...\n")
+
 			return PutDeviceConfig(apiClient, token, deviceId, deviceConfig)
 		}
 

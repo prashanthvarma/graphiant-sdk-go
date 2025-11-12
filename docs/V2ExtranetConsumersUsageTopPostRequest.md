@@ -4,9 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **int64** |  | [optional] 
+**Id** | Pointer to **int64** | the id of a producer/service | [optional] 
 **IsB2B** | Pointer to **bool** |  | [optional] 
-**TimeWindow** | Pointer to [**V2NotificationlistPostRequestTimeWindow**](V2NotificationlistPostRequestTimeWindow.md) |  | [optional] 
+**IsProvider** | Pointer to **bool** |  | [optional] 
+**TimeWindow** | Pointer to [**StatsmonTimeWindow**](StatsmonTimeWindow.md) |  | [optional] 
 
 ## Methods
 
@@ -77,22 +78,47 @@ SetIsB2B sets IsB2B field to given value.
 
 HasIsB2B returns a boolean if a field has been set.
 
+### GetIsProvider
+
+`func (o *V2ExtranetConsumersUsageTopPostRequest) GetIsProvider() bool`
+
+GetIsProvider returns the IsProvider field if non-nil, zero value otherwise.
+
+### GetIsProviderOk
+
+`func (o *V2ExtranetConsumersUsageTopPostRequest) GetIsProviderOk() (*bool, bool)`
+
+GetIsProviderOk returns a tuple with the IsProvider field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetIsProvider
+
+`func (o *V2ExtranetConsumersUsageTopPostRequest) SetIsProvider(v bool)`
+
+SetIsProvider sets IsProvider field to given value.
+
+### HasIsProvider
+
+`func (o *V2ExtranetConsumersUsageTopPostRequest) HasIsProvider() bool`
+
+HasIsProvider returns a boolean if a field has been set.
+
 ### GetTimeWindow
 
-`func (o *V2ExtranetConsumersUsageTopPostRequest) GetTimeWindow() V2NotificationlistPostRequestTimeWindow`
+`func (o *V2ExtranetConsumersUsageTopPostRequest) GetTimeWindow() StatsmonTimeWindow`
 
 GetTimeWindow returns the TimeWindow field if non-nil, zero value otherwise.
 
 ### GetTimeWindowOk
 
-`func (o *V2ExtranetConsumersUsageTopPostRequest) GetTimeWindowOk() (*V2NotificationlistPostRequestTimeWindow, bool)`
+`func (o *V2ExtranetConsumersUsageTopPostRequest) GetTimeWindowOk() (*StatsmonTimeWindow, bool)`
 
 GetTimeWindowOk returns a tuple with the TimeWindow field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetTimeWindow
 
-`func (o *V2ExtranetConsumersUsageTopPostRequest) SetTimeWindow(v V2NotificationlistPostRequestTimeWindow)`
+`func (o *V2ExtranetConsumersUsageTopPostRequest) SetTimeWindow(v StatsmonTimeWindow)`
 
 SetTimeWindow sets TimeWindow field to given value.
 

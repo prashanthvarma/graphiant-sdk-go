@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Mute** | Pointer to **bool** |  | [optional] 
+**Mute** | Pointer to **bool** | Flag to specify if you want to mute/unmute the notifications. | [optional] 
 
 ## Methods
 

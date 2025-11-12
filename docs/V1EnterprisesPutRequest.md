@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**AccountType** | Pointer to **string** |  | [optional] 
+**AccountType** | **string** |  (required) | 
 **AdminEmail** | Pointer to **string** |  | [optional] 
 **AdminFirstName** | Pointer to **string** |  | [optional] 
 **AdminLastName** | Pointer to **string** |  | [optional] 
 **AdminTimeZone** | Pointer to **string** |  | [optional] 
 **CloudProvider** | Pointer to **string** |  | [optional] 
-**CompanyName** | Pointer to **string** |  | [optional] 
+**CompanyName** | **string** |  (required) | 
 **CreditLimit** | Pointer to **int32** |  | [optional] 
 **Logo** | Pointer to **string** |  | [optional] 
 **SmallLogo** | Pointer to **string** |  | [optional] 
@@ -19,7 +19,7 @@ Name | Type | Description | Notes
 
 ### NewV1EnterprisesPutRequest
 
-`func NewV1EnterprisesPutRequest() *V1EnterprisesPutRequest`
+`func NewV1EnterprisesPutRequest(accountType string, companyName string, ) *V1EnterprisesPutRequest`
 
 NewV1EnterprisesPutRequest instantiates a new V1EnterprisesPutRequest object
 This constructor will assign default values to properties that have it defined,
@@ -53,11 +53,6 @@ and a boolean to check if the value has been set.
 
 SetAccountType sets AccountType field to given value.
 
-### HasAccountType
-
-`func (o *V1EnterprisesPutRequest) HasAccountType() bool`
-
-HasAccountType returns a boolean if a field has been set.
 
 ### GetAdminEmail
 
@@ -203,11 +198,6 @@ and a boolean to check if the value has been set.
 
 SetCompanyName sets CompanyName field to given value.
 
-### HasCompanyName
-
-`func (o *V1EnterprisesPutRequest) HasCompanyName() bool`
-
-HasCompanyName returns a boolean if a field has been set.
 
 ### GetCreditLimit
 

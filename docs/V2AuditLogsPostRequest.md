@@ -6,9 +6,9 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **CursorRef** | Pointer to **string** |  | [optional] 
 **NumLogs** | Pointer to **int32** |  | [optional] 
-**OldTs** | Pointer to [**V1AlarmHistoryGet200ResponseHistoryInnerTime**](V1AlarmHistoryGet200ResponseHistoryInnerTime.md) |  | [optional] 
-**RecentTs** | Pointer to [**V1AlarmHistoryGet200ResponseHistoryInnerTime**](V1AlarmHistoryGet200ResponseHistoryInnerTime.md) |  | [optional] 
-**Selector** | Pointer to [**V2AuditLogsPostRequestSelector**](V2AuditLogsPostRequestSelector.md) |  | [optional] 
+**OldTs** | Pointer to [**GoogleProtobufTimestamp**](GoogleProtobufTimestamp.md) |  | [optional] 
+**RecentTs** | Pointer to [**GoogleProtobufTimestamp**](GoogleProtobufTimestamp.md) |  | [optional] 
+**Selector** | Pointer to [**AuditmonAuditLogsV2Selector**](AuditmonAuditLogsV2Selector.md) |  | [optional] 
 
 ## Methods
 
@@ -81,20 +81,20 @@ HasNumLogs returns a boolean if a field has been set.
 
 ### GetOldTs
 
-`func (o *V2AuditLogsPostRequest) GetOldTs() V1AlarmHistoryGet200ResponseHistoryInnerTime`
+`func (o *V2AuditLogsPostRequest) GetOldTs() GoogleProtobufTimestamp`
 
 GetOldTs returns the OldTs field if non-nil, zero value otherwise.
 
 ### GetOldTsOk
 
-`func (o *V2AuditLogsPostRequest) GetOldTsOk() (*V1AlarmHistoryGet200ResponseHistoryInnerTime, bool)`
+`func (o *V2AuditLogsPostRequest) GetOldTsOk() (*GoogleProtobufTimestamp, bool)`
 
 GetOldTsOk returns a tuple with the OldTs field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetOldTs
 
-`func (o *V2AuditLogsPostRequest) SetOldTs(v V1AlarmHistoryGet200ResponseHistoryInnerTime)`
+`func (o *V2AuditLogsPostRequest) SetOldTs(v GoogleProtobufTimestamp)`
 
 SetOldTs sets OldTs field to given value.
 
@@ -106,20 +106,20 @@ HasOldTs returns a boolean if a field has been set.
 
 ### GetRecentTs
 
-`func (o *V2AuditLogsPostRequest) GetRecentTs() V1AlarmHistoryGet200ResponseHistoryInnerTime`
+`func (o *V2AuditLogsPostRequest) GetRecentTs() GoogleProtobufTimestamp`
 
 GetRecentTs returns the RecentTs field if non-nil, zero value otherwise.
 
 ### GetRecentTsOk
 
-`func (o *V2AuditLogsPostRequest) GetRecentTsOk() (*V1AlarmHistoryGet200ResponseHistoryInnerTime, bool)`
+`func (o *V2AuditLogsPostRequest) GetRecentTsOk() (*GoogleProtobufTimestamp, bool)`
 
 GetRecentTsOk returns a tuple with the RecentTs field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetRecentTs
 
-`func (o *V2AuditLogsPostRequest) SetRecentTs(v V1AlarmHistoryGet200ResponseHistoryInnerTime)`
+`func (o *V2AuditLogsPostRequest) SetRecentTs(v GoogleProtobufTimestamp)`
 
 SetRecentTs sets RecentTs field to given value.
 
@@ -131,20 +131,20 @@ HasRecentTs returns a boolean if a field has been set.
 
 ### GetSelector
 
-`func (o *V2AuditLogsPostRequest) GetSelector() V2AuditLogsPostRequestSelector`
+`func (o *V2AuditLogsPostRequest) GetSelector() AuditmonAuditLogsV2Selector`
 
 GetSelector returns the Selector field if non-nil, zero value otherwise.
 
 ### GetSelectorOk
 
-`func (o *V2AuditLogsPostRequest) GetSelectorOk() (*V2AuditLogsPostRequestSelector, bool)`
+`func (o *V2AuditLogsPostRequest) GetSelectorOk() (*AuditmonAuditLogsV2Selector, bool)`
 
 GetSelectorOk returns a tuple with the Selector field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetSelector
 
-`func (o *V2AuditLogsPostRequest) SetSelector(v V2AuditLogsPostRequestSelector)`
+`func (o *V2AuditLogsPostRequest) SetSelector(v AuditmonAuditLogsV2Selector)`
 
 SetSelector sets Selector field to given value.
 

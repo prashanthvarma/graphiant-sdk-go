@@ -4,12 +4,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Description** | Pointer to **string** |  | [optional] 
-**GroupId** | Pointer to **string** |  | [optional] 
+**Description** | **string** |  (required) | 
+**GroupId** | Pointer to **string** | Only supply if enterprise uses an idp | [optional] 
 **GroupType** | Pointer to **string** |  | [optional] 
 **ManagesEnterprises** | Pointer to **bool** |  | [optional] 
-**Name** | Pointer to **string** |  | [optional] 
-**Permissions** | Pointer to [**V1GroupsGet200ResponseGroupsInnerPermissions**](V1GroupsGet200ResponseGroupsInnerPermissions.md) |  | [optional] 
+**Name** | **string** |  (required) | 
+**Permissions** | Pointer to [**CommonPermissions**](CommonPermissions.md) |  | [optional] 
 **TimeWindowEnd** | Pointer to **int64** |  | [optional] 
 **TimeWindowStart** | Pointer to **int64** |  | [optional] 
 
@@ -17,7 +17,7 @@ Name | Type | Description | Notes
 
 ### NewV1GroupsPutRequest
 
-`func NewV1GroupsPutRequest() *V1GroupsPutRequest`
+`func NewV1GroupsPutRequest(description string, name string, ) *V1GroupsPutRequest`
 
 NewV1GroupsPutRequest instantiates a new V1GroupsPutRequest object
 This constructor will assign default values to properties that have it defined,
@@ -51,11 +51,6 @@ and a boolean to check if the value has been set.
 
 SetDescription sets Description field to given value.
 
-### HasDescription
-
-`func (o *V1GroupsPutRequest) HasDescription() bool`
-
-HasDescription returns a boolean if a field has been set.
 
 ### GetGroupId
 
@@ -151,28 +146,23 @@ and a boolean to check if the value has been set.
 
 SetName sets Name field to given value.
 
-### HasName
-
-`func (o *V1GroupsPutRequest) HasName() bool`
-
-HasName returns a boolean if a field has been set.
 
 ### GetPermissions
 
-`func (o *V1GroupsPutRequest) GetPermissions() V1GroupsGet200ResponseGroupsInnerPermissions`
+`func (o *V1GroupsPutRequest) GetPermissions() CommonPermissions`
 
 GetPermissions returns the Permissions field if non-nil, zero value otherwise.
 
 ### GetPermissionsOk
 
-`func (o *V1GroupsPutRequest) GetPermissionsOk() (*V1GroupsGet200ResponseGroupsInnerPermissions, bool)`
+`func (o *V1GroupsPutRequest) GetPermissionsOk() (*CommonPermissions, bool)`
 
 GetPermissionsOk returns a tuple with the Permissions field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetPermissions
 
-`func (o *V1GroupsPutRequest) SetPermissions(v V1GroupsGet200ResponseGroupsInnerPermissions)`
+`func (o *V1GroupsPutRequest) SetPermissions(v CommonPermissions)`
 
 SetPermissions sets Permissions field to given value.
 

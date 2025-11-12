@@ -23,17 +23,24 @@ Method | HTTP request | Description
 [**V1AppsVisualizationPost**](DefaultAPI.md#V1AppsVisualizationPost) | **Post** /v1/apps/visualization | 
 [**V1AuditLogsPost**](DefaultAPI.md#V1AuditLogsPost) | **Post** /v1/audit/logs | 
 [**V1AuthDelete**](DefaultAPI.md#V1AuthDelete) | **Delete** /v1/auth | 
+[**V1AuthGcsPost**](DefaultAPI.md#V1AuthGcsPost) | **Post** /v1/auth/gcs | 
 [**V1AuthGet**](DefaultAPI.md#V1AuthGet) | **Get** /v1/auth | 
-[**V1AuthLoginPost**](DefaultAPI.md#V1AuthLoginPost) | **Post** /v1/auth/login | Authenticate user and return token
-[**V1AuthLoginPreGet**](DefaultAPI.md#V1AuthLoginPreGet) | **Get** /v1/auth/login/pre | Pre-login endpoint
-[**V1AuthLoginTempPost**](DefaultAPI.md#V1AuthLoginTempPost) | **Post** /v1/auth/login/temp | Authenticate user with temporary password
+[**V1AuthLoginCallbackPost**](DefaultAPI.md#V1AuthLoginCallbackPost) | **Post** /v1/auth/login/callback | 
+[**V1AuthLoginPost**](DefaultAPI.md#V1AuthLoginPost) | **Post** /v1/auth/login | 
+[**V1AuthLoginPreGet**](DefaultAPI.md#V1AuthLoginPreGet) | **Get** /v1/auth/login/pre | 
+[**V1AuthLoginSamlGet**](DefaultAPI.md#V1AuthLoginSamlGet) | **Get** /v1/auth/login/saml | 
+[**V1AuthLoginTempPost**](DefaultAPI.md#V1AuthLoginTempPost) | **Post** /v1/auth/login/temp | 
 [**V1AuthMfaDelete**](DefaultAPI.md#V1AuthMfaDelete) | **Delete** /v1/auth/mfa | 
 [**V1AuthMfaPatch**](DefaultAPI.md#V1AuthMfaPatch) | **Patch** /v1/auth/mfa | 
+[**V1AuthMfaPost**](DefaultAPI.md#V1AuthMfaPost) | **Post** /v1/auth/mfa | 
 [**V1AuthMfaTypesGet**](DefaultAPI.md#V1AuthMfaTypesGet) | **Get** /v1/auth/mfa/types | 
 [**V1AuthMfaTypesPut**](DefaultAPI.md#V1AuthMfaTypesPut) | **Put** /v1/auth/mfa/types | 
 [**V1AuthPatch**](DefaultAPI.md#V1AuthPatch) | **Patch** /v1/auth | 
 [**V1AuthPut**](DefaultAPI.md#V1AuthPut) | **Put** /v1/auth | 
-[**V1AuthUserGet**](DefaultAPI.md#V1AuthUserGet) | **Get** /v1/auth/user | Get authenticated user information
+[**V1AuthRefreshGet**](DefaultAPI.md#V1AuthRefreshGet) | **Get** /v1/auth/refresh | 
+[**V1AuthSessionGet**](DefaultAPI.md#V1AuthSessionGet) | **Get** /v1/auth/session | 
+[**V1AuthSessionRootGet**](DefaultAPI.md#V1AuthSessionRootGet) | **Get** /v1/auth/session/root | 
+[**V1AuthUserGet**](DefaultAPI.md#V1AuthUserGet) | **Get** /v1/auth/user | 
 [**V1B2bExtranetMonitoringFilterPost**](DefaultAPI.md#V1B2bExtranetMonitoringFilterPost) | **Post** /v1/b2b-extranet-monitoring/filter | 
 [**V1BackboneHealthDeviceDeviceIdPost**](DefaultAPI.md#V1BackboneHealthDeviceDeviceIdPost) | **Post** /v1/backbone-health/device/{deviceId} | 
 [**V1BackboneHealthEtWanMatrixGet**](DefaultAPI.md#V1BackboneHealthEtWanMatrixGet) | **Get** /v1/backbone-health/et-wan-matrix | 
@@ -147,6 +154,9 @@ Method | HTTP request | Description
 [**V1DevicesInventoryRequestReturnPost**](DefaultAPI.md#V1DevicesInventoryRequestReturnPost) | **Post** /v1/devices/inventory/request-return | 
 [**V1DevicesInventorySerialNumDelete**](DefaultAPI.md#V1DevicesInventorySerialNumDelete) | **Delete** /v1/devices/inventory/serial-num | 
 [**V1DevicesInventorySerialNumPost**](DefaultAPI.md#V1DevicesInventorySerialNumPost) | **Post** /v1/devices/inventory/serial-num | 
+[**V1DevicesOauthAuthorizationGet**](DefaultAPI.md#V1DevicesOauthAuthorizationGet) | **Get** /v1/devices/oauth/authorization | 
+[**V1DevicesOauthGet**](DefaultAPI.md#V1DevicesOauthGet) | **Get** /v1/devices/oauth | 
+[**V1DevicesOauthPost**](DefaultAPI.md#V1DevicesOauthPost) | **Post** /v1/devices/oauth | 
 [**V1DevicesOauthRedirectGet**](DefaultAPI.md#V1DevicesOauthRedirectGet) | **Get** //v1/devices/oauth/redirect | 
 [**V1DevicesRmaPost**](DefaultAPI.md#V1DevicesRmaPost) | **Post** /v1/devices/rma | 
 [**V1DevicesRoutingVrfProtocolRouteCountGet**](DefaultAPI.md#V1DevicesRoutingVrfProtocolRouteCountGet) | **Get** /v1/devices/routing/vrf/protocol-route-count | 
@@ -226,8 +236,10 @@ Method | HTTP request | Description
 [**V1ExtranetsB2bPeeringCustomerIdDelete**](DefaultAPI.md#V1ExtranetsB2bPeeringCustomerIdDelete) | **Delete** /v1/extranets-b2b-peering/customer/{id} | 
 [**V1ExtranetsB2bPeeringCustomerIdGet**](DefaultAPI.md#V1ExtranetsB2bPeeringCustomerIdGet) | **Get** /v1/extranets-b2b-peering/customer/{id} | 
 [**V1ExtranetsB2bPeeringCustomerPost**](DefaultAPI.md#V1ExtranetsB2bPeeringCustomerPost) | **Post** /v1/extranets-b2b-peering/customer | 
+[**V1ExtranetsB2bPeeringMatchServiceToCustomerIdDelete**](DefaultAPI.md#V1ExtranetsB2bPeeringMatchServiceToCustomerIdDelete) | **Delete** /v1/extranets-b2b-peering/match/service-to-customer/{id} | 
+[**V1ExtranetsB2bPeeringMatchServiceToCustomerIdGet**](DefaultAPI.md#V1ExtranetsB2bPeeringMatchServiceToCustomerIdGet) | **Get** /v1/extranets-b2b-peering/match/service-to-customer/{id} | 
 [**V1ExtranetsB2bPeeringMatchServiceToCustomerPost**](DefaultAPI.md#V1ExtranetsB2bPeeringMatchServiceToCustomerPost) | **Post** /v1/extranets-b2b-peering/match/service-to-customer | 
-[**V1ExtranetsB2bPeeringMatchServicesSummaryGet**](DefaultAPI.md#V1ExtranetsB2bPeeringMatchServicesSummaryGet) | **Get** /v1/extranets-b2b-peering/match/services/summary | 
+[**V1ExtranetsB2bPeeringMatchServicesSummaryIdGet**](DefaultAPI.md#V1ExtranetsB2bPeeringMatchServicesSummaryIdGet) | **Get** /v1/extranets-b2b-peering/match/services/summary/{id} | 
 [**V1ExtranetsB2bPeeringProducerIdGet**](DefaultAPI.md#V1ExtranetsB2bPeeringProducerIdGet) | **Get** /v1/extranets-b2b-peering/producer/{id} | 
 [**V1ExtranetsB2bPeeringProducerIdMatchingCustomersSummaryGet**](DefaultAPI.md#V1ExtranetsB2bPeeringProducerIdMatchingCustomersSummaryGet) | **Get** /v1/extranets-b2b-peering/producer/{id}/matching-customers-summary | 
 [**V1ExtranetsB2bPeeringProducerPost**](DefaultAPI.md#V1ExtranetsB2bPeeringProducerPost) | **Post** /v1/extranets-b2b-peering/producer | 
@@ -254,6 +266,7 @@ Method | HTTP request | Description
 [**V1GatewaysIpsecRegionsRegionIdVrfsVrfIdInsideSubnetGet**](DefaultAPI.md#V1GatewaysIpsecRegionsRegionIdVrfsVrfIdInsideSubnetGet) | **Get** /v1/gateways/ipsec/regions/{regionId}/vrfs/{vrfId}/inside-subnet | 
 [**V1GatewaysPost**](DefaultAPI.md#V1GatewaysPost) | **Post** /v1/gateways | 
 [**V1GatewaysPut**](DefaultAPI.md#V1GatewaysPut) | **Put** /v1/gateways | 
+[**V1GatewaysReferenceConsumerGet**](DefaultAPI.md#V1GatewaysReferenceConsumerGet) | **Get** /v1/gateways/reference-consumer | 
 [**V1GatewaysRegionsGet**](DefaultAPI.md#V1GatewaysRegionsGet) | **Get** /v1/gateways/regions | 
 [**V1GatewaysStatusPost**](DefaultAPI.md#V1GatewaysStatusPost) | **Post** /v1/gateways/status | 
 [**V1GatewaysSummaryGet**](DefaultAPI.md#V1GatewaysSummaryGet) | **Get** /v1/gateways/summary | 
@@ -389,6 +402,9 @@ Method | HTTP request | Description
 [**V1TroubleshootingSiteSiteIdGet**](DefaultAPI.md#V1TroubleshootingSiteSiteIdGet) | **Get** /v1/troubleshooting/site/{siteId} | 
 [**V1TroubleshootingTopSitesByAlertsPost**](DefaultAPI.md#V1TroubleshootingTopSitesByAlertsPost) | **Post** /v1/troubleshooting/top-sites-by-alerts | 
 [**V1TtTtIdentityDeviceStatusGet**](DefaultAPI.md#V1TtTtIdentityDeviceStatusGet) | **Get** /v1/tt/{ttIdentity}/device-status | 
+[**V1UsersEmailPasswordPatch**](DefaultAPI.md#V1UsersEmailPasswordPatch) | **Patch** /v1/users/{email}/password | 
+[**V1UsersEmailRecoveryGet**](DefaultAPI.md#V1UsersEmailRecoveryGet) | **Get** /v1/users/{email}/recovery | 
+[**V1UsersEmailVerifiedPatch**](DefaultAPI.md#V1UsersEmailVerifiedPatch) | **Patch** /v1/users/{email}/verified | 
 [**V1UsersGet**](DefaultAPI.md#V1UsersGet) | **Get** /v1/users | 
 [**V1UsersIdDelete**](DefaultAPI.md#V1UsersIdDelete) | **Delete** /v1/users/{id} | 
 [**V1UsersIdEnterprisesGet**](DefaultAPI.md#V1UsersIdEnterprisesGet) | **Get** /v1/users/{id}/enterprises | 
@@ -514,6 +530,8 @@ Method | HTTP request | Description
 
 
 
+
+
 ### Example
 
 ```go
@@ -528,7 +546,7 @@ import (
 
 func main() {
 	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
-	v1AccountEmailPatchRequest := *openapiclient.NewV1AccountEmailPatchRequest() // V1AccountEmailPatchRequest | 
+	v1AccountEmailPatchRequest := *openapiclient.NewV1AccountEmailPatchRequest("example string") // V1AccountEmailPatchRequest | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -577,6 +595,8 @@ Name | Type | Description  | Notes
 ## V1AccountInfoPatch
 
 > map[string]interface{} V1AccountInfoPatch(ctx).Authorization(authorization).V1AccountInfoPatchRequest(v1AccountInfoPatchRequest).Execute()
+
+
 
 
 
@@ -642,7 +662,9 @@ Name | Type | Description  | Notes
 
 ## V1AccountMfaConfirmationPost
 
-> V1AccountMfaConfirmationPost200Response V1AccountMfaConfirmationPost(ctx).Authorization(authorization).V1AccountMfaConfirmationPostRequest(v1AccountMfaConfirmationPostRequest).Execute()
+> V1AccountMfaConfirmationPostResponse V1AccountMfaConfirmationPost(ctx).Authorization(authorization).V1AccountMfaConfirmationPostRequest(v1AccountMfaConfirmationPostRequest).Execute()
+
+
 
 
 
@@ -660,7 +682,7 @@ import (
 
 func main() {
 	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
-	v1AccountMfaConfirmationPostRequest := *openapiclient.NewV1AccountMfaConfirmationPostRequest() // V1AccountMfaConfirmationPostRequest | 
+	v1AccountMfaConfirmationPostRequest := *openapiclient.NewV1AccountMfaConfirmationPostRequest("example string", true, "example string", "ENUM_VALUE") // V1AccountMfaConfirmationPostRequest | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -669,7 +691,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1AccountMfaConfirmationPost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1AccountMfaConfirmationPost`: V1AccountMfaConfirmationPost200Response
+	// response from `V1AccountMfaConfirmationPost`: V1AccountMfaConfirmationPostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1AccountMfaConfirmationPost`: %v\n", resp)
 }
 ```
@@ -690,7 +712,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1AccountMfaConfirmationPost200Response**](V1AccountMfaConfirmationPost200Response.md)
+[**V1AccountMfaConfirmationPostResponse**](V1AccountMfaConfirmationPostResponse.md)
 
 ### Authorization
 
@@ -709,6 +731,8 @@ Name | Type | Description  | Notes
 ## V1AccountMfaDelete
 
 > map[string]interface{} V1AccountMfaDelete(ctx).Authorization(authorization).Execute()
+
+
 
 
 
@@ -772,7 +796,9 @@ Name | Type | Description  | Notes
 
 ## V1AccountMfaGet
 
-> V1AccountMfaGet200Response V1AccountMfaGet(ctx).Authorization(authorization).Execute()
+> V1AccountMfaGetResponse V1AccountMfaGet(ctx).Authorization(authorization).Execute()
+
+
 
 
 
@@ -798,7 +824,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1AccountMfaGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1AccountMfaGet`: V1AccountMfaGet200Response
+	// response from `V1AccountMfaGet`: V1AccountMfaGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1AccountMfaGet`: %v\n", resp)
 }
 ```
@@ -818,7 +844,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1AccountMfaGet200Response**](V1AccountMfaGet200Response.md)
+[**V1AccountMfaGetResponse**](V1AccountMfaGetResponse.md)
 
 ### Authorization
 
@@ -836,7 +862,9 @@ Name | Type | Description  | Notes
 
 ## V1AccountMfaPut
 
-> V1AccountMfaPut200Response V1AccountMfaPut(ctx).Authorization(authorization).V1AccountMfaPutRequest(v1AccountMfaPutRequest).Execute()
+> V1AccountMfaPutResponse V1AccountMfaPut(ctx).Authorization(authorization).V1AccountMfaPutRequest(v1AccountMfaPutRequest).Execute()
+
+
 
 
 
@@ -854,7 +882,7 @@ import (
 
 func main() {
 	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
-	v1AccountMfaPutRequest := *openapiclient.NewV1AccountMfaPutRequest() // V1AccountMfaPutRequest | 
+	v1AccountMfaPutRequest := *openapiclient.NewV1AccountMfaPutRequest("ENUM_VALUE") // V1AccountMfaPutRequest | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -863,7 +891,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1AccountMfaPut``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1AccountMfaPut`: V1AccountMfaPut200Response
+	// response from `V1AccountMfaPut`: V1AccountMfaPutResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1AccountMfaPut`: %v\n", resp)
 }
 ```
@@ -884,7 +912,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1AccountMfaPut200Response**](V1AccountMfaPut200Response.md)
+[**V1AccountMfaPutResponse**](V1AccountMfaPutResponse.md)
 
 ### Authorization
 
@@ -906,6 +934,8 @@ Name | Type | Description  | Notes
 
 
 
+
+
 ### Example
 
 ```go
@@ -920,7 +950,7 @@ import (
 
 func main() {
 	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
-	v1AccountPasswordPatchRequest := *openapiclient.NewV1AccountPasswordPatchRequest() // V1AccountPasswordPatchRequest | 
+	v1AccountPasswordPatchRequest := *openapiclient.NewV1AccountPasswordPatchRequest("example string", "example string") // V1AccountPasswordPatchRequest | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -968,7 +998,7 @@ Name | Type | Description  | Notes
 
 ## V1ActivityLogsPost
 
-> V1ActivityLogsPost200Response V1ActivityLogsPost(ctx).Authorization(authorization).V1ActivityLogsPostRequest(v1ActivityLogsPostRequest).Execute()
+> V1ActivityLogsPostResponse V1ActivityLogsPost(ctx).Authorization(authorization).V1ActivityLogsPostRequest(v1ActivityLogsPostRequest).Execute()
 
 
 
@@ -995,7 +1025,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1ActivityLogsPost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1ActivityLogsPost`: V1ActivityLogsPost200Response
+	// response from `V1ActivityLogsPost`: V1ActivityLogsPostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1ActivityLogsPost`: %v\n", resp)
 }
 ```
@@ -1016,7 +1046,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1ActivityLogsPost200Response**](V1ActivityLogsPost200Response.md)
+[**V1ActivityLogsPostResponse**](V1ActivityLogsPostResponse.md)
 
 ### Authorization
 
@@ -1034,7 +1064,7 @@ Name | Type | Description  | Notes
 
 ## V1AlarmHistoryGet
 
-> V1AlarmHistoryGet200Response V1AlarmHistoryGet(ctx).Authorization(authorization).Execute()
+> V1AlarmHistoryGetResponse V1AlarmHistoryGet(ctx).Authorization(authorization).Execute()
 
 
 
@@ -1060,7 +1090,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1AlarmHistoryGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1AlarmHistoryGet`: V1AlarmHistoryGet200Response
+	// response from `V1AlarmHistoryGet`: V1AlarmHistoryGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1AlarmHistoryGet`: %v\n", resp)
 }
 ```
@@ -1080,7 +1110,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1AlarmHistoryGet200Response**](V1AlarmHistoryGet200Response.md)
+[**V1AlarmHistoryGetResponse**](V1AlarmHistoryGetResponse.md)
 
 ### Authorization
 
@@ -1170,7 +1200,7 @@ Name | Type | Description  | Notes
 
 ## V1AlarmsEventsGet
 
-> V1AlarmsEventsGet200Response V1AlarmsEventsGet(ctx).Authorization(authorization).Execute()
+> V1AlarmsEventsGetResponse V1AlarmsEventsGet(ctx).Authorization(authorization).Execute()
 
 
 
@@ -1196,7 +1226,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1AlarmsEventsGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1AlarmsEventsGet`: V1AlarmsEventsGet200Response
+	// response from `V1AlarmsEventsGet`: V1AlarmsEventsGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1AlarmsEventsGet`: %v\n", resp)
 }
 ```
@@ -1216,7 +1246,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1AlarmsEventsGet200Response**](V1AlarmsEventsGet200Response.md)
+[**V1AlarmsEventsGetResponse**](V1AlarmsEventsGetResponse.md)
 
 ### Authorization
 
@@ -1234,7 +1264,7 @@ Name | Type | Description  | Notes
 
 ## V1AlarmsListGet
 
-> V1AlarmsListGet200Response V1AlarmsListGet(ctx).Authorization(authorization).Execute()
+> V1AlarmsListGetResponse V1AlarmsListGet(ctx).Authorization(authorization).Execute()
 
 
 
@@ -1260,7 +1290,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1AlarmsListGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1AlarmsListGet`: V1AlarmsListGet200Response
+	// response from `V1AlarmsListGet`: V1AlarmsListGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1AlarmsListGet`: %v\n", resp)
 }
 ```
@@ -1280,7 +1310,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1AlarmsListGet200Response**](V1AlarmsListGet200Response.md)
+[**V1AlarmsListGetResponse**](V1AlarmsListGetResponse.md)
 
 ### Authorization
 
@@ -1298,7 +1328,9 @@ Name | Type | Description  | Notes
 
 ## V1AppsAppSummaryPost
 
-> V1AppsAppSummaryPost200Response V1AppsAppSummaryPost(ctx).Authorization(authorization).V1AppsAppSummaryPostRequest(v1AppsAppSummaryPostRequest).Execute()
+> V1AppsAppSummaryPostResponse V1AppsAppSummaryPost(ctx).Authorization(authorization).V1AppsAppSummaryPostRequest(v1AppsAppSummaryPostRequest).Execute()
+
+
 
 
 
@@ -1325,7 +1357,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1AppsAppSummaryPost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1AppsAppSummaryPost`: V1AppsAppSummaryPost200Response
+	// response from `V1AppsAppSummaryPost`: V1AppsAppSummaryPostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1AppsAppSummaryPost`: %v\n", resp)
 }
 ```
@@ -1346,7 +1378,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1AppsAppSummaryPost200Response**](V1AppsAppSummaryPost200Response.md)
+[**V1AppsAppSummaryPostResponse**](V1AppsAppSummaryPostResponse.md)
 
 ### Authorization
 
@@ -1364,7 +1396,7 @@ Name | Type | Description  | Notes
 
 ## V1AppsBandwidthPost
 
-> V1AppsBandwidthPost200Response V1AppsBandwidthPost(ctx).Authorization(authorization).V1AppsBandwidthPostRequest(v1AppsBandwidthPostRequest).Execute()
+> V1AppsBandwidthPostResponse V1AppsBandwidthPost(ctx).Authorization(authorization).V1AppsBandwidthPostRequest(v1AppsBandwidthPostRequest).Execute()
 
 
 
@@ -1391,7 +1423,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1AppsBandwidthPost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1AppsBandwidthPost`: V1AppsBandwidthPost200Response
+	// response from `V1AppsBandwidthPost`: V1AppsBandwidthPostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1AppsBandwidthPost`: %v\n", resp)
 }
 ```
@@ -1412,7 +1444,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1AppsBandwidthPost200Response**](V1AppsBandwidthPost200Response.md)
+[**V1AppsBandwidthPostResponse**](V1AppsBandwidthPostResponse.md)
 
 ### Authorization
 
@@ -1430,7 +1462,9 @@ Name | Type | Description  | Notes
 
 ## V1AppsDeviceDeviceIdTopPost
 
-> V1AppsDeviceDeviceIdTopPost200Response V1AppsDeviceDeviceIdTopPost(ctx, deviceId).Authorization(authorization).V1AppsDeviceDeviceIdTopPostRequest(v1AppsDeviceDeviceIdTopPostRequest).Execute()
+> V1AppsDeviceDeviceIdTopPostResponse V1AppsDeviceDeviceIdTopPost(ctx, deviceId).Authorization(authorization).V1AppsDeviceDeviceIdTopPostRequest(v1AppsDeviceDeviceIdTopPostRequest).Execute()
+
+
 
 
 
@@ -1458,7 +1492,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1AppsDeviceDeviceIdTopPost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1AppsDeviceDeviceIdTopPost`: V1AppsDeviceDeviceIdTopPost200Response
+	// response from `V1AppsDeviceDeviceIdTopPost`: V1AppsDeviceDeviceIdTopPostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1AppsDeviceDeviceIdTopPost`: %v\n", resp)
 }
 ```
@@ -1484,7 +1518,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1AppsDeviceDeviceIdTopPost200Response**](V1AppsDeviceDeviceIdTopPost200Response.md)
+[**V1AppsDeviceDeviceIdTopPostResponse**](V1AppsDeviceDeviceIdTopPostResponse.md)
 
 ### Authorization
 
@@ -1502,7 +1536,9 @@ Name | Type | Description  | Notes
 
 ## V1AppsSiteSiteIdTopPost
 
-> V1AppsDeviceDeviceIdTopPost200Response V1AppsSiteSiteIdTopPost(ctx, siteId).Authorization(authorization).V1AppsDeviceDeviceIdTopPostRequest(v1AppsDeviceDeviceIdTopPostRequest).Execute()
+> V1AppsSiteSiteIdTopPostResponse V1AppsSiteSiteIdTopPost(ctx, siteId).Authorization(authorization).V1AppsSiteSiteIdTopPostRequest(v1AppsSiteSiteIdTopPostRequest).Execute()
+
+
 
 
 
@@ -1521,16 +1557,16 @@ import (
 func main() {
 	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
 	siteId := int64(1234567891011) // int64 | 
-	v1AppsDeviceDeviceIdTopPostRequest := *openapiclient.NewV1AppsDeviceDeviceIdTopPostRequest() // V1AppsDeviceDeviceIdTopPostRequest | 
+	v1AppsSiteSiteIdTopPostRequest := *openapiclient.NewV1AppsSiteSiteIdTopPostRequest() // V1AppsSiteSiteIdTopPostRequest | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.DefaultAPI.V1AppsSiteSiteIdTopPost(context.Background(), siteId).Authorization(authorization).V1AppsDeviceDeviceIdTopPostRequest(v1AppsDeviceDeviceIdTopPostRequest).Execute()
+	resp, r, err := apiClient.DefaultAPI.V1AppsSiteSiteIdTopPost(context.Background(), siteId).Authorization(authorization).V1AppsSiteSiteIdTopPostRequest(v1AppsSiteSiteIdTopPostRequest).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1AppsSiteSiteIdTopPost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1AppsSiteSiteIdTopPost`: V1AppsDeviceDeviceIdTopPost200Response
+	// response from `V1AppsSiteSiteIdTopPost`: V1AppsSiteSiteIdTopPostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1AppsSiteSiteIdTopPost`: %v\n", resp)
 }
 ```
@@ -1552,11 +1588,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **string** | Bearer token. Format: Bearer &lt;your_token_here&gt; | 
 
- **v1AppsDeviceDeviceIdTopPostRequest** | [**V1AppsDeviceDeviceIdTopPostRequest**](V1AppsDeviceDeviceIdTopPostRequest.md) |  | 
+ **v1AppsSiteSiteIdTopPostRequest** | [**V1AppsSiteSiteIdTopPostRequest**](V1AppsSiteSiteIdTopPostRequest.md) |  | 
 
 ### Return type
 
-[**V1AppsDeviceDeviceIdTopPost200Response**](V1AppsDeviceDeviceIdTopPost200Response.md)
+[**V1AppsSiteSiteIdTopPostResponse**](V1AppsSiteSiteIdTopPostResponse.md)
 
 ### Authorization
 
@@ -1574,7 +1610,9 @@ Name | Type | Description  | Notes
 
 ## V1AppsVisualizationPost
 
-> V1AppsVisualizationPost200Response V1AppsVisualizationPost(ctx).Authorization(authorization).V1AppsVisualizationPostRequest(v1AppsVisualizationPostRequest).Execute()
+> V1AppsVisualizationPostResponse V1AppsVisualizationPost(ctx).Authorization(authorization).V1AppsVisualizationPostRequest(v1AppsVisualizationPostRequest).Execute()
+
+
 
 
 
@@ -1601,7 +1639,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1AppsVisualizationPost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1AppsVisualizationPost`: V1AppsVisualizationPost200Response
+	// response from `V1AppsVisualizationPost`: V1AppsVisualizationPostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1AppsVisualizationPost`: %v\n", resp)
 }
 ```
@@ -1622,7 +1660,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1AppsVisualizationPost200Response**](V1AppsVisualizationPost200Response.md)
+[**V1AppsVisualizationPostResponse**](V1AppsVisualizationPostResponse.md)
 
 ### Authorization
 
@@ -1640,7 +1678,7 @@ Name | Type | Description  | Notes
 
 ## V1AuditLogsPost
 
-> V1AuditLogsPost200Response V1AuditLogsPost(ctx).Authorization(authorization).V1AuditLogsPostRequest(v1AuditLogsPostRequest).Execute()
+> V1AuditLogsPostResponse V1AuditLogsPost(ctx).Authorization(authorization).V1AuditLogsPostRequest(v1AuditLogsPostRequest).Execute()
 
 
 
@@ -1667,7 +1705,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1AuditLogsPost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1AuditLogsPost`: V1AuditLogsPost200Response
+	// response from `V1AuditLogsPost`: V1AuditLogsPostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1AuditLogsPost`: %v\n", resp)
 }
 ```
@@ -1688,7 +1726,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1AuditLogsPost200Response**](V1AuditLogsPost200Response.md)
+[**V1AuditLogsPostResponse**](V1AuditLogsPostResponse.md)
 
 ### Authorization
 
@@ -1706,7 +1744,9 @@ Name | Type | Description  | Notes
 
 ## V1AuthDelete
 
-> V1AuthPut204Response V1AuthDelete(ctx).Authorization(authorization).Execute()
+> V1AuthDeleteResponse V1AuthDelete(ctx).Authorization(authorization).Execute()
+
+
 
 
 
@@ -1732,7 +1772,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1AuthDelete``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1AuthDelete`: V1AuthPut204Response
+	// response from `V1AuthDelete`: V1AuthDeleteResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1AuthDelete`: %v\n", resp)
 }
 ```
@@ -1752,7 +1792,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1AuthPut204Response**](V1AuthPut204Response.md)
+[**V1AuthDeleteResponse**](V1AuthDeleteResponse.md)
 
 ### Authorization
 
@@ -1768,9 +1808,75 @@ Name | Type | Description  | Notes
 [[Back to README]](../README.md)
 
 
+## V1AuthGcsPost
+
+> V1AuthLoginPostResponse V1AuthGcsPost(ctx).V1AuthGcsPostRequest(v1AuthGcsPostRequest).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/Graphiant-Inc/graphiant-sdk-go"
+)
+
+func main() {
+	v1AuthGcsPostRequest := *openapiclient.NewV1AuthGcsPostRequest("my-gcs-instance", "api-key-12345") // V1AuthGcsPostRequest | 
+
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.DefaultAPI.V1AuthGcsPost(context.Background()).V1AuthGcsPostRequest(v1AuthGcsPostRequest).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1AuthGcsPost``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `V1AuthGcsPost`: V1AuthLoginPostResponse
+	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1AuthGcsPost`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiV1AuthGcsPostRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **v1AuthGcsPostRequest** | [**V1AuthGcsPostRequest**](V1AuthGcsPostRequest.md) |  | 
+
+### Return type
+
+[**V1AuthLoginPostResponse**](V1AuthLoginPostResponse.md)
+
+### Authorization
+
+[jwtAuth](../README.md#jwtAuth)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
 ## V1AuthGet
 
-> V1AuthGet200Response V1AuthGet(ctx).Authorization(authorization).Execute()
+> V1AuthGetResponse V1AuthGet(ctx).Authorization(authorization).Execute()
+
+
 
 
 
@@ -1796,7 +1902,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1AuthGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1AuthGet`: V1AuthGet200Response
+	// response from `V1AuthGet`: V1AuthGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1AuthGet`: %v\n", resp)
 }
 ```
@@ -1816,7 +1922,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1AuthGet200Response**](V1AuthGet200Response.md)
+[**V1AuthGetResponse**](V1AuthGetResponse.md)
 
 ### Authorization
 
@@ -1832,11 +1938,11 @@ Name | Type | Description  | Notes
 [[Back to README]](../README.md)
 
 
-## V1AuthLoginPost
+## V1AuthLoginCallbackPost
 
-> V1AuthLoginPost200Response V1AuthLoginPost(ctx).V1AuthLoginPostRequest(v1AuthLoginPostRequest).Execute()
+> V1AuthLoginCallbackPost(ctx).SAMLResponse(sAMLResponse).RelayState(relayState).Execute()
 
-Authenticate user and return token
+
 
 ### Example
 
@@ -1851,7 +1957,71 @@ import (
 )
 
 func main() {
-	v1AuthLoginPostRequest := *openapiclient.NewV1AuthLoginPostRequest() // V1AuthLoginPostRequest | 
+	sAMLResponse := "sAMLResponse_example" // string | 
+	relayState := "relayState_example" // string |  (optional)
+
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	r, err := apiClient.DefaultAPI.V1AuthLoginCallbackPost(context.Background()).SAMLResponse(sAMLResponse).RelayState(relayState).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1AuthLoginCallbackPost``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiV1AuthLoginCallbackPostRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **sAMLResponse** | **string** |  | 
+ **relayState** | **string** |  | 
+
+### Return type
+
+ (empty response body)
+
+### Authorization
+
+[jwtAuth](../README.md#jwtAuth)
+
+### HTTP request headers
+
+- **Content-Type**: application/x-www-form-urlencoded
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## V1AuthLoginPost
+
+> V1AuthLoginPostResponse V1AuthLoginPost(ctx).V1AuthLoginPostRequest(v1AuthLoginPostRequest).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/Graphiant-Inc/graphiant-sdk-go"
+)
+
+func main() {
+	v1AuthLoginPostRequest := *openapiclient.NewV1AuthLoginPostRequest("user@example.com", "password123") // V1AuthLoginPostRequest | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -1860,7 +2030,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1AuthLoginPost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1AuthLoginPost`: V1AuthLoginPost200Response
+	// response from `V1AuthLoginPost`: V1AuthLoginPostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1AuthLoginPost`: %v\n", resp)
 }
 ```
@@ -1880,7 +2050,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1AuthLoginPost200Response**](V1AuthLoginPost200Response.md)
+[**V1AuthLoginPostResponse**](V1AuthLoginPostResponse.md)
 
 ### Authorization
 
@@ -1898,9 +2068,9 @@ Name | Type | Description  | Notes
 
 ## V1AuthLoginPreGet
 
-> V1AuthLoginPreGet200Response V1AuthLoginPreGet(ctx).Execute()
+> V1AuthLoginPreGetResponse V1AuthLoginPreGet(ctx).Email(email).RelayState(relayState).Execute()
 
-Pre-login endpoint
+
 
 ### Example
 
@@ -1915,31 +2085,102 @@ import (
 )
 
 func main() {
+	email := "user@example.com" // string | User email address
+	relayState := "information-to-relay" // string | State to relay after authentication (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.DefaultAPI.V1AuthLoginPreGet(context.Background()).Execute()
+	resp, r, err := apiClient.DefaultAPI.V1AuthLoginPreGet(context.Background()).Email(email).RelayState(relayState).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1AuthLoginPreGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1AuthLoginPreGet`: V1AuthLoginPreGet200Response
+	// response from `V1AuthLoginPreGet`: V1AuthLoginPreGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1AuthLoginPreGet`: %v\n", resp)
 }
 ```
 
 ### Path Parameters
 
-This endpoint does not need any parameter.
+
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiV1AuthLoginPreGetRequest struct via the builder pattern
 
 
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **email** | **string** | User email address | 
+ **relayState** | **string** | State to relay after authentication | 
+
 ### Return type
 
-[**V1AuthLoginPreGet200Response**](V1AuthLoginPreGet200Response.md)
+[**V1AuthLoginPreGetResponse**](V1AuthLoginPreGetResponse.md)
+
+### Authorization
+
+[jwtAuth](../README.md#jwtAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## V1AuthLoginSamlGet
+
+> V1AuthLoginSamlGet(ctx).Email(email).RelayState(relayState).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/Graphiant-Inc/graphiant-sdk-go"
+)
+
+func main() {
+	email := "user@example.com" // string | User email address
+	relayState := "information-to-relay" // string | State to relay after authentication (optional)
+
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	r, err := apiClient.DefaultAPI.V1AuthLoginSamlGet(context.Background()).Email(email).RelayState(relayState).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1AuthLoginSamlGet``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiV1AuthLoginSamlGetRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **email** | **string** | User email address | 
+ **relayState** | **string** | State to relay after authentication | 
+
+### Return type
+
+ (empty response body)
 
 ### Authorization
 
@@ -1957,9 +2198,9 @@ Other parameters are passed through a pointer to a apiV1AuthLoginPreGetRequest s
 
 ## V1AuthLoginTempPost
 
-> V1AuthLoginTempPost200Response V1AuthLoginTempPost(ctx).V1AuthLoginTempPostRequest(v1AuthLoginTempPostRequest).Execute()
+> V1AuthLoginPostResponse V1AuthLoginTempPost(ctx).V1AuthLoginTempPostRequest(v1AuthLoginTempPostRequest).Execute()
 
-Authenticate user with temporary password
+
 
 ### Example
 
@@ -1974,7 +2215,7 @@ import (
 )
 
 func main() {
-	v1AuthLoginTempPostRequest := *openapiclient.NewV1AuthLoginTempPostRequest() // V1AuthLoginTempPostRequest | 
+	v1AuthLoginTempPostRequest := *openapiclient.NewV1AuthLoginTempPostRequest("user@example.com", "temp123456", float32(12345)) // V1AuthLoginTempPostRequest | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -1983,7 +2224,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1AuthLoginTempPost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1AuthLoginTempPost`: V1AuthLoginTempPost200Response
+	// response from `V1AuthLoginTempPost`: V1AuthLoginPostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1AuthLoginTempPost`: %v\n", resp)
 }
 ```
@@ -2003,7 +2244,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1AuthLoginTempPost200Response**](V1AuthLoginTempPost200Response.md)
+[**V1AuthLoginPostResponse**](V1AuthLoginPostResponse.md)
 
 ### Authorization
 
@@ -2022,6 +2263,8 @@ Name | Type | Description  | Notes
 ## V1AuthMfaDelete
 
 > map[string]interface{} V1AuthMfaDelete(ctx).Authorization(authorization).Execute()
+
+
 
 
 
@@ -2089,6 +2332,8 @@ Name | Type | Description  | Notes
 
 
 
+
+
 ### Example
 
 ```go
@@ -2103,7 +2348,7 @@ import (
 
 func main() {
 	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
-	v1AuthMfaPatchRequest := *openapiclient.NewV1AuthMfaPatchRequest() // V1AuthMfaPatchRequest | 
+	v1AuthMfaPatchRequest := *openapiclient.NewV1AuthMfaPatchRequest([]string{"ENUM_VALUE"}) // V1AuthMfaPatchRequest | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -2149,9 +2394,75 @@ Name | Type | Description  | Notes
 [[Back to README]](../README.md)
 
 
+## V1AuthMfaPost
+
+> V1AuthLoginPostResponse V1AuthMfaPost(ctx).V1AuthMfaPostRequest(v1AuthMfaPostRequest).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/Graphiant-Inc/graphiant-sdk-go"
+)
+
+func main() {
+	v1AuthMfaPostRequest := *openapiclient.NewV1AuthMfaPostRequest("user@example.com", "TOTP", "123456") // V1AuthMfaPostRequest | 
+
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.DefaultAPI.V1AuthMfaPost(context.Background()).V1AuthMfaPostRequest(v1AuthMfaPostRequest).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1AuthMfaPost``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `V1AuthMfaPost`: V1AuthLoginPostResponse
+	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1AuthMfaPost`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiV1AuthMfaPostRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **v1AuthMfaPostRequest** | [**V1AuthMfaPostRequest**](V1AuthMfaPostRequest.md) |  | 
+
+### Return type
+
+[**V1AuthLoginPostResponse**](V1AuthLoginPostResponse.md)
+
+### Authorization
+
+[jwtAuth](../README.md#jwtAuth)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
 ## V1AuthMfaTypesGet
 
-> V1AuthMfaPatchRequest V1AuthMfaTypesGet(ctx).Authorization(authorization).Execute()
+> V1AuthMfaTypesGetResponse V1AuthMfaTypesGet(ctx).Authorization(authorization).Execute()
+
+
 
 
 
@@ -2177,7 +2488,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1AuthMfaTypesGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1AuthMfaTypesGet`: V1AuthMfaPatchRequest
+	// response from `V1AuthMfaTypesGet`: V1AuthMfaTypesGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1AuthMfaTypesGet`: %v\n", resp)
 }
 ```
@@ -2197,7 +2508,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1AuthMfaPatchRequest**](V1AuthMfaPatchRequest.md)
+[**V1AuthMfaTypesGetResponse**](V1AuthMfaTypesGetResponse.md)
 
 ### Authorization
 
@@ -2215,7 +2526,9 @@ Name | Type | Description  | Notes
 
 ## V1AuthMfaTypesPut
 
-> map[string]interface{} V1AuthMfaTypesPut(ctx).Authorization(authorization).V1AuthMfaPatchRequest(v1AuthMfaPatchRequest).Execute()
+> map[string]interface{} V1AuthMfaTypesPut(ctx).Authorization(authorization).V1AuthMfaTypesPutRequest(v1AuthMfaTypesPutRequest).Execute()
+
+
 
 
 
@@ -2233,11 +2546,11 @@ import (
 
 func main() {
 	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
-	v1AuthMfaPatchRequest := *openapiclient.NewV1AuthMfaPatchRequest() // V1AuthMfaPatchRequest | 
+	v1AuthMfaTypesPutRequest := *openapiclient.NewV1AuthMfaTypesPutRequest([]string{"ENUM_VALUE"}) // V1AuthMfaTypesPutRequest | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.DefaultAPI.V1AuthMfaTypesPut(context.Background()).Authorization(authorization).V1AuthMfaPatchRequest(v1AuthMfaPatchRequest).Execute()
+	resp, r, err := apiClient.DefaultAPI.V1AuthMfaTypesPut(context.Background()).Authorization(authorization).V1AuthMfaTypesPutRequest(v1AuthMfaTypesPutRequest).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1AuthMfaTypesPut``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -2259,7 +2572,7 @@ Other parameters are passed through a pointer to a apiV1AuthMfaTypesPutRequest s
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **string** | Bearer token. Format: Bearer &lt;your_token_here&gt; | 
- **v1AuthMfaPatchRequest** | [**V1AuthMfaPatchRequest**](V1AuthMfaPatchRequest.md) |  | 
+ **v1AuthMfaTypesPutRequest** | [**V1AuthMfaTypesPutRequest**](V1AuthMfaTypesPutRequest.md) |  | 
 
 ### Return type
 
@@ -2281,7 +2594,9 @@ Name | Type | Description  | Notes
 
 ## V1AuthPatch
 
-> V1AuthPut204Response V1AuthPatch(ctx).Authorization(authorization).V1AuthGet200Response(v1AuthGet200Response).Execute()
+> V1AuthPatchResponse V1AuthPatch(ctx).Authorization(authorization).V1AuthPatchRequest(v1AuthPatchRequest).Execute()
+
+
 
 
 
@@ -2299,16 +2614,16 @@ import (
 
 func main() {
 	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
-	v1AuthGet200Response := *openapiclient.NewV1AuthGet200Response() // V1AuthGet200Response | 
+	v1AuthPatchRequest := *openapiclient.NewV1AuthPatchRequest("example string", "example string", "ENUM_VALUE", "example string") // V1AuthPatchRequest | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.DefaultAPI.V1AuthPatch(context.Background()).Authorization(authorization).V1AuthGet200Response(v1AuthGet200Response).Execute()
+	resp, r, err := apiClient.DefaultAPI.V1AuthPatch(context.Background()).Authorization(authorization).V1AuthPatchRequest(v1AuthPatchRequest).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1AuthPatch``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1AuthPatch`: V1AuthPut204Response
+	// response from `V1AuthPatch`: V1AuthPatchResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1AuthPatch`: %v\n", resp)
 }
 ```
@@ -2325,11 +2640,11 @@ Other parameters are passed through a pointer to a apiV1AuthPatchRequest struct 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **string** | Bearer token. Format: Bearer &lt;your_token_here&gt; | 
- **v1AuthGet200Response** | [**V1AuthGet200Response**](V1AuthGet200Response.md) |  | 
+ **v1AuthPatchRequest** | [**V1AuthPatchRequest**](V1AuthPatchRequest.md) |  | 
 
 ### Return type
 
-[**V1AuthPut204Response**](V1AuthPut204Response.md)
+[**V1AuthPatchResponse**](V1AuthPatchResponse.md)
 
 ### Authorization
 
@@ -2347,7 +2662,9 @@ Name | Type | Description  | Notes
 
 ## V1AuthPut
 
-> V1AuthPut204Response V1AuthPut(ctx).Authorization(authorization).V1AuthGet200Response(v1AuthGet200Response).Execute()
+> V1AuthPutResponse V1AuthPut(ctx).Authorization(authorization).V1AuthPutRequest(v1AuthPutRequest).Execute()
+
+
 
 
 
@@ -2365,16 +2682,16 @@ import (
 
 func main() {
 	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
-	v1AuthGet200Response := *openapiclient.NewV1AuthGet200Response() // V1AuthGet200Response | 
+	v1AuthPutRequest := *openapiclient.NewV1AuthPutRequest("example string", "example string", "ENUM_VALUE", "example string") // V1AuthPutRequest | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.DefaultAPI.V1AuthPut(context.Background()).Authorization(authorization).V1AuthGet200Response(v1AuthGet200Response).Execute()
+	resp, r, err := apiClient.DefaultAPI.V1AuthPut(context.Background()).Authorization(authorization).V1AuthPutRequest(v1AuthPutRequest).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1AuthPut``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1AuthPut`: V1AuthPut204Response
+	// response from `V1AuthPut`: V1AuthPutResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1AuthPut`: %v\n", resp)
 }
 ```
@@ -2391,11 +2708,11 @@ Other parameters are passed through a pointer to a apiV1AuthPutRequest struct vi
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **string** | Bearer token. Format: Bearer &lt;your_token_here&gt; | 
- **v1AuthGet200Response** | [**V1AuthGet200Response**](V1AuthGet200Response.md) |  | 
+ **v1AuthPutRequest** | [**V1AuthPutRequest**](V1AuthPutRequest.md) |  | 
 
 ### Return type
 
-[**V1AuthPut204Response**](V1AuthPut204Response.md)
+[**V1AuthPutResponse**](V1AuthPutResponse.md)
 
 ### Authorization
 
@@ -2411,11 +2728,207 @@ Name | Type | Description  | Notes
 [[Back to README]](../README.md)
 
 
+## V1AuthRefreshGet
+
+> V1AuthRefreshGet200Response V1AuthRefreshGet(ctx).Authorization(authorization).CurrentPath(currentPath).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/Graphiant-Inc/graphiant-sdk-go"
+)
+
+func main() {
+	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
+	currentPath := "/dashboard" // string | Current path to redirect to after refresh (optional)
+
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.DefaultAPI.V1AuthRefreshGet(context.Background()).Authorization(authorization).CurrentPath(currentPath).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1AuthRefreshGet``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `V1AuthRefreshGet`: V1AuthRefreshGet200Response
+	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1AuthRefreshGet`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiV1AuthRefreshGetRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **authorization** | **string** | Bearer token. Format: Bearer &lt;your_token_here&gt; | 
+ **currentPath** | **string** | Current path to redirect to after refresh | 
+
+### Return type
+
+[**V1AuthRefreshGet200Response**](V1AuthRefreshGet200Response.md)
+
+### Authorization
+
+[jwtAuth](../README.md#jwtAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## V1AuthSessionGet
+
+> map[string]interface{} V1AuthSessionGet(ctx).Authorization(authorization).EnterpriseId(enterpriseId).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/Graphiant-Inc/graphiant-sdk-go"
+)
+
+func main() {
+	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
+	enterpriseId := int64(1234567891011) // int64 | Enterprise ID to get permissions for
+
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.DefaultAPI.V1AuthSessionGet(context.Background()).Authorization(authorization).EnterpriseId(enterpriseId).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1AuthSessionGet``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `V1AuthSessionGet`: map[string]interface{}
+	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1AuthSessionGet`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiV1AuthSessionGetRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **authorization** | **string** | Bearer token. Format: Bearer &lt;your_token_here&gt; | 
+ **enterpriseId** | **int64** | Enterprise ID to get permissions for | 
+
+### Return type
+
+**map[string]interface{}**
+
+### Authorization
+
+[jwtAuth](../README.md#jwtAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## V1AuthSessionRootGet
+
+> map[string]interface{} V1AuthSessionRootGet(ctx).Authorization(authorization).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/Graphiant-Inc/graphiant-sdk-go"
+)
+
+func main() {
+	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
+
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.DefaultAPI.V1AuthSessionRootGet(context.Background()).Authorization(authorization).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1AuthSessionRootGet``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `V1AuthSessionRootGet`: map[string]interface{}
+	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1AuthSessionRootGet`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiV1AuthSessionRootGetRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **authorization** | **string** | Bearer token. Format: Bearer &lt;your_token_here&gt; | 
+
+### Return type
+
+**map[string]interface{}**
+
+### Authorization
+
+[jwtAuth](../README.md#jwtAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
 ## V1AuthUserGet
 
-> V1AuthUserGet200Response V1AuthUserGet(ctx).Authorization(authorization).Execute()
+> V1AuthUserGetResponse V1AuthUserGet(ctx).Authorization(authorization).Execute()
 
-Get authenticated user information
+
 
 ### Example
 
@@ -2439,7 +2952,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1AuthUserGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1AuthUserGet`: V1AuthUserGet200Response
+	// response from `V1AuthUserGet`: V1AuthUserGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1AuthUserGet`: %v\n", resp)
 }
 ```
@@ -2459,7 +2972,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1AuthUserGet200Response**](V1AuthUserGet200Response.md)
+[**V1AuthUserGetResponse**](V1AuthUserGetResponse.md)
 
 ### Authorization
 
@@ -2477,7 +2990,7 @@ Name | Type | Description  | Notes
 
 ## V1B2bExtranetMonitoringFilterPost
 
-> V1B2bExtranetMonitoringFilterPost200Response V1B2bExtranetMonitoringFilterPost(ctx).Authorization(authorization).V1B2bExtranetMonitoringFilterPostRequest(v1B2bExtranetMonitoringFilterPostRequest).Execute()
+> V1B2bExtranetMonitoringFilterPostResponse V1B2bExtranetMonitoringFilterPost(ctx).Authorization(authorization).V1B2bExtranetMonitoringFilterPostRequest(v1B2bExtranetMonitoringFilterPostRequest).Execute()
 
 
 
@@ -2504,7 +3017,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1B2bExtranetMonitoringFilterPost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1B2bExtranetMonitoringFilterPost`: V1B2bExtranetMonitoringFilterPost200Response
+	// response from `V1B2bExtranetMonitoringFilterPost`: V1B2bExtranetMonitoringFilterPostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1B2bExtranetMonitoringFilterPost`: %v\n", resp)
 }
 ```
@@ -2525,7 +3038,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1B2bExtranetMonitoringFilterPost200Response**](V1B2bExtranetMonitoringFilterPost200Response.md)
+[**V1B2bExtranetMonitoringFilterPostResponse**](V1B2bExtranetMonitoringFilterPostResponse.md)
 
 ### Authorization
 
@@ -2543,7 +3056,7 @@ Name | Type | Description  | Notes
 
 ## V1BackboneHealthDeviceDeviceIdPost
 
-> V1BackboneHealthDeviceDeviceIdPost200Response V1BackboneHealthDeviceDeviceIdPost(ctx, deviceId).Authorization(authorization).V2NotificationlistPostRequest(v2NotificationlistPostRequest).Execute()
+> V1BackboneHealthDeviceDeviceIdPostResponse V1BackboneHealthDeviceDeviceIdPost(ctx, deviceId).Authorization(authorization).V1BackboneHealthDeviceDeviceIdPostRequest(v1BackboneHealthDeviceDeviceIdPostRequest).Execute()
 
 
 
@@ -2562,16 +3075,16 @@ import (
 func main() {
 	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
 	deviceId := int64(1234567891011) // int64 | 
-	v2NotificationlistPostRequest := *openapiclient.NewV2NotificationlistPostRequest() // V2NotificationlistPostRequest | 
+	v1BackboneHealthDeviceDeviceIdPostRequest := *openapiclient.NewV1BackboneHealthDeviceDeviceIdPostRequest() // V1BackboneHealthDeviceDeviceIdPostRequest | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.DefaultAPI.V1BackboneHealthDeviceDeviceIdPost(context.Background(), deviceId).Authorization(authorization).V2NotificationlistPostRequest(v2NotificationlistPostRequest).Execute()
+	resp, r, err := apiClient.DefaultAPI.V1BackboneHealthDeviceDeviceIdPost(context.Background(), deviceId).Authorization(authorization).V1BackboneHealthDeviceDeviceIdPostRequest(v1BackboneHealthDeviceDeviceIdPostRequest).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1BackboneHealthDeviceDeviceIdPost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1BackboneHealthDeviceDeviceIdPost`: V1BackboneHealthDeviceDeviceIdPost200Response
+	// response from `V1BackboneHealthDeviceDeviceIdPost`: V1BackboneHealthDeviceDeviceIdPostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1BackboneHealthDeviceDeviceIdPost`: %v\n", resp)
 }
 ```
@@ -2593,11 +3106,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **string** | Bearer token. Format: Bearer &lt;your_token_here&gt; | 
 
- **v2NotificationlistPostRequest** | [**V2NotificationlistPostRequest**](V2NotificationlistPostRequest.md) |  | 
+ **v1BackboneHealthDeviceDeviceIdPostRequest** | [**V1BackboneHealthDeviceDeviceIdPostRequest**](V1BackboneHealthDeviceDeviceIdPostRequest.md) |  | 
 
 ### Return type
 
-[**V1BackboneHealthDeviceDeviceIdPost200Response**](V1BackboneHealthDeviceDeviceIdPost200Response.md)
+[**V1BackboneHealthDeviceDeviceIdPostResponse**](V1BackboneHealthDeviceDeviceIdPostResponse.md)
 
 ### Authorization
 
@@ -2615,7 +3128,7 @@ Name | Type | Description  | Notes
 
 ## V1BackboneHealthEtWanMatrixGet
 
-> V1BackboneHealthEtWanMatrixGet200Response V1BackboneHealthEtWanMatrixGet(ctx).Authorization(authorization).Execute()
+> V1BackboneHealthEtWanMatrixGetResponse V1BackboneHealthEtWanMatrixGet(ctx).Authorization(authorization).Execute()
 
 
 
@@ -2641,7 +3154,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1BackboneHealthEtWanMatrixGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1BackboneHealthEtWanMatrixGet`: V1BackboneHealthEtWanMatrixGet200Response
+	// response from `V1BackboneHealthEtWanMatrixGet`: V1BackboneHealthEtWanMatrixGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1BackboneHealthEtWanMatrixGet`: %v\n", resp)
 }
 ```
@@ -2661,7 +3174,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1BackboneHealthEtWanMatrixGet200Response**](V1BackboneHealthEtWanMatrixGet200Response.md)
+[**V1BackboneHealthEtWanMatrixGetResponse**](V1BackboneHealthEtWanMatrixGetResponse.md)
 
 ### Authorization
 
@@ -2679,7 +3192,7 @@ Name | Type | Description  | Notes
 
 ## V1BackboneHealthEtetSlaMatrixGet
 
-> V1BackboneHealthEtetSlaMatrixGet200Response V1BackboneHealthEtetSlaMatrixGet(ctx).Authorization(authorization).Execute()
+> V1BackboneHealthEtetSlaMatrixGetResponse V1BackboneHealthEtetSlaMatrixGet(ctx).Authorization(authorization).Execute()
 
 
 
@@ -2705,7 +3218,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1BackboneHealthEtetSlaMatrixGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1BackboneHealthEtetSlaMatrixGet`: V1BackboneHealthEtetSlaMatrixGet200Response
+	// response from `V1BackboneHealthEtetSlaMatrixGet`: V1BackboneHealthEtetSlaMatrixGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1BackboneHealthEtetSlaMatrixGet`: %v\n", resp)
 }
 ```
@@ -2725,7 +3238,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1BackboneHealthEtetSlaMatrixGet200Response**](V1BackboneHealthEtetSlaMatrixGet200Response.md)
+[**V1BackboneHealthEtetSlaMatrixGetResponse**](V1BackboneHealthEtetSlaMatrixGetResponse.md)
 
 ### Authorization
 
@@ -2743,7 +3256,7 @@ Name | Type | Description  | Notes
 
 ## V1BackboneHealthFilterGet
 
-> V1BackboneHealthFilterGet200Response V1BackboneHealthFilterGet(ctx).Authorization(authorization).Execute()
+> V1BackboneHealthFilterGetResponse V1BackboneHealthFilterGet(ctx).Authorization(authorization).Execute()
 
 
 
@@ -2769,7 +3282,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1BackboneHealthFilterGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1BackboneHealthFilterGet`: V1BackboneHealthFilterGet200Response
+	// response from `V1BackboneHealthFilterGet`: V1BackboneHealthFilterGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1BackboneHealthFilterGet`: %v\n", resp)
 }
 ```
@@ -2789,7 +3302,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1BackboneHealthFilterGet200Response**](V1BackboneHealthFilterGet200Response.md)
+[**V1BackboneHealthFilterGetResponse**](V1BackboneHealthFilterGetResponse.md)
 
 ### Authorization
 
@@ -2807,7 +3320,7 @@ Name | Type | Description  | Notes
 
 ## V1BackboneHealthOverviewPost
 
-> V1BackboneHealthOverviewPost200Response V1BackboneHealthOverviewPost(ctx).Authorization(authorization).V1BackboneHealthOverviewPostRequest(v1BackboneHealthOverviewPostRequest).Execute()
+> V1BackboneHealthOverviewPostResponse V1BackboneHealthOverviewPost(ctx).Authorization(authorization).V1BackboneHealthOverviewPostRequest(v1BackboneHealthOverviewPostRequest).Execute()
 
 
 
@@ -2834,7 +3347,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1BackboneHealthOverviewPost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1BackboneHealthOverviewPost`: V1BackboneHealthOverviewPost200Response
+	// response from `V1BackboneHealthOverviewPost`: V1BackboneHealthOverviewPostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1BackboneHealthOverviewPost`: %v\n", resp)
 }
 ```
@@ -2855,7 +3368,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1BackboneHealthOverviewPost200Response**](V1BackboneHealthOverviewPost200Response.md)
+[**V1BackboneHealthOverviewPostResponse**](V1BackboneHealthOverviewPostResponse.md)
 
 ### Authorization
 
@@ -2873,7 +3386,7 @@ Name | Type | Description  | Notes
 
 ## V1BackboneHealthTopDevicesByAlertsPost
 
-> V1BackboneHealthTopDevicesByAlertsPost200Response V1BackboneHealthTopDevicesByAlertsPost(ctx).Authorization(authorization).V1BackboneHealthTopDevicesByAlertsPostRequest(v1BackboneHealthTopDevicesByAlertsPostRequest).Execute()
+> V1BackboneHealthTopDevicesByAlertsPostResponse V1BackboneHealthTopDevicesByAlertsPost(ctx).Authorization(authorization).V1BackboneHealthTopDevicesByAlertsPostRequest(v1BackboneHealthTopDevicesByAlertsPostRequest).Execute()
 
 
 
@@ -2900,7 +3413,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1BackboneHealthTopDevicesByAlertsPost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1BackboneHealthTopDevicesByAlertsPost`: V1BackboneHealthTopDevicesByAlertsPost200Response
+	// response from `V1BackboneHealthTopDevicesByAlertsPost`: V1BackboneHealthTopDevicesByAlertsPostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1BackboneHealthTopDevicesByAlertsPost`: %v\n", resp)
 }
 ```
@@ -2921,7 +3434,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1BackboneHealthTopDevicesByAlertsPost200Response**](V1BackboneHealthTopDevicesByAlertsPost200Response.md)
+[**V1BackboneHealthTopDevicesByAlertsPostResponse**](V1BackboneHealthTopDevicesByAlertsPostResponse.md)
 
 ### Authorization
 
@@ -2939,7 +3452,7 @@ Name | Type | Description  | Notes
 
 ## V1BwtrackerEnterpriseCsvPost
 
-> V1BwtrackerEnterpriseCsvPost200Response V1BwtrackerEnterpriseCsvPost(ctx).Authorization(authorization).V2NotificationlistPostRequest(v2NotificationlistPostRequest).Execute()
+> V1BwtrackerEnterpriseCsvPostResponse V1BwtrackerEnterpriseCsvPost(ctx).Authorization(authorization).V1BwtrackerEnterpriseCsvPostRequest(v1BwtrackerEnterpriseCsvPostRequest).Execute()
 
 
 
@@ -2957,16 +3470,16 @@ import (
 
 func main() {
 	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
-	v2NotificationlistPostRequest := *openapiclient.NewV2NotificationlistPostRequest() // V2NotificationlistPostRequest | 
+	v1BwtrackerEnterpriseCsvPostRequest := *openapiclient.NewV1BwtrackerEnterpriseCsvPostRequest() // V1BwtrackerEnterpriseCsvPostRequest | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.DefaultAPI.V1BwtrackerEnterpriseCsvPost(context.Background()).Authorization(authorization).V2NotificationlistPostRequest(v2NotificationlistPostRequest).Execute()
+	resp, r, err := apiClient.DefaultAPI.V1BwtrackerEnterpriseCsvPost(context.Background()).Authorization(authorization).V1BwtrackerEnterpriseCsvPostRequest(v1BwtrackerEnterpriseCsvPostRequest).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1BwtrackerEnterpriseCsvPost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1BwtrackerEnterpriseCsvPost`: V1BwtrackerEnterpriseCsvPost200Response
+	// response from `V1BwtrackerEnterpriseCsvPost`: V1BwtrackerEnterpriseCsvPostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1BwtrackerEnterpriseCsvPost`: %v\n", resp)
 }
 ```
@@ -2983,11 +3496,11 @@ Other parameters are passed through a pointer to a apiV1BwtrackerEnterpriseCsvPo
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **string** | Bearer token. Format: Bearer &lt;your_token_here&gt; | 
- **v2NotificationlistPostRequest** | [**V2NotificationlistPostRequest**](V2NotificationlistPostRequest.md) |  | 
+ **v1BwtrackerEnterpriseCsvPostRequest** | [**V1BwtrackerEnterpriseCsvPostRequest**](V1BwtrackerEnterpriseCsvPostRequest.md) |  | 
 
 ### Return type
 
-[**V1BwtrackerEnterpriseCsvPost200Response**](V1BwtrackerEnterpriseCsvPost200Response.md)
+[**V1BwtrackerEnterpriseCsvPostResponse**](V1BwtrackerEnterpriseCsvPostResponse.md)
 
 ### Authorization
 
@@ -3005,7 +3518,7 @@ Name | Type | Description  | Notes
 
 ## V1BwtrackerEnterpriseDetailsPost
 
-> V1BwtrackerEnterpriseDetailsPost200Response V1BwtrackerEnterpriseDetailsPost(ctx).Authorization(authorization).V2NotificationlistPostRequest(v2NotificationlistPostRequest).Execute()
+> V1BwtrackerEnterpriseDetailsPostResponse V1BwtrackerEnterpriseDetailsPost(ctx).Authorization(authorization).V1BwtrackerEnterpriseDetailsPostRequest(v1BwtrackerEnterpriseDetailsPostRequest).Execute()
 
 
 
@@ -3023,16 +3536,16 @@ import (
 
 func main() {
 	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
-	v2NotificationlistPostRequest := *openapiclient.NewV2NotificationlistPostRequest() // V2NotificationlistPostRequest | 
+	v1BwtrackerEnterpriseDetailsPostRequest := *openapiclient.NewV1BwtrackerEnterpriseDetailsPostRequest() // V1BwtrackerEnterpriseDetailsPostRequest | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.DefaultAPI.V1BwtrackerEnterpriseDetailsPost(context.Background()).Authorization(authorization).V2NotificationlistPostRequest(v2NotificationlistPostRequest).Execute()
+	resp, r, err := apiClient.DefaultAPI.V1BwtrackerEnterpriseDetailsPost(context.Background()).Authorization(authorization).V1BwtrackerEnterpriseDetailsPostRequest(v1BwtrackerEnterpriseDetailsPostRequest).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1BwtrackerEnterpriseDetailsPost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1BwtrackerEnterpriseDetailsPost`: V1BwtrackerEnterpriseDetailsPost200Response
+	// response from `V1BwtrackerEnterpriseDetailsPost`: V1BwtrackerEnterpriseDetailsPostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1BwtrackerEnterpriseDetailsPost`: %v\n", resp)
 }
 ```
@@ -3049,11 +3562,11 @@ Other parameters are passed through a pointer to a apiV1BwtrackerEnterpriseDetai
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **string** | Bearer token. Format: Bearer &lt;your_token_here&gt; | 
- **v2NotificationlistPostRequest** | [**V2NotificationlistPostRequest**](V2NotificationlistPostRequest.md) |  | 
+ **v1BwtrackerEnterpriseDetailsPostRequest** | [**V1BwtrackerEnterpriseDetailsPostRequest**](V1BwtrackerEnterpriseDetailsPostRequest.md) |  | 
 
 ### Return type
 
-[**V1BwtrackerEnterpriseDetailsPost200Response**](V1BwtrackerEnterpriseDetailsPost200Response.md)
+[**V1BwtrackerEnterpriseDetailsPostResponse**](V1BwtrackerEnterpriseDetailsPostResponse.md)
 
 ### Authorization
 
@@ -3071,7 +3584,7 @@ Name | Type | Description  | Notes
 
 ## V1BwtrackerEnterpriseSummaryPost
 
-> V1BwtrackerEnterpriseSummaryPost200Response V1BwtrackerEnterpriseSummaryPost(ctx).Authorization(authorization).V2NotificationlistPostRequest(v2NotificationlistPostRequest).Execute()
+> V1BwtrackerEnterpriseSummaryPostResponse V1BwtrackerEnterpriseSummaryPost(ctx).Authorization(authorization).V1BwtrackerEnterpriseSummaryPostRequest(v1BwtrackerEnterpriseSummaryPostRequest).Execute()
 
 
 
@@ -3089,16 +3602,16 @@ import (
 
 func main() {
 	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
-	v2NotificationlistPostRequest := *openapiclient.NewV2NotificationlistPostRequest() // V2NotificationlistPostRequest | 
+	v1BwtrackerEnterpriseSummaryPostRequest := *openapiclient.NewV1BwtrackerEnterpriseSummaryPostRequest() // V1BwtrackerEnterpriseSummaryPostRequest | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.DefaultAPI.V1BwtrackerEnterpriseSummaryPost(context.Background()).Authorization(authorization).V2NotificationlistPostRequest(v2NotificationlistPostRequest).Execute()
+	resp, r, err := apiClient.DefaultAPI.V1BwtrackerEnterpriseSummaryPost(context.Background()).Authorization(authorization).V1BwtrackerEnterpriseSummaryPostRequest(v1BwtrackerEnterpriseSummaryPostRequest).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1BwtrackerEnterpriseSummaryPost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1BwtrackerEnterpriseSummaryPost`: V1BwtrackerEnterpriseSummaryPost200Response
+	// response from `V1BwtrackerEnterpriseSummaryPost`: V1BwtrackerEnterpriseSummaryPostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1BwtrackerEnterpriseSummaryPost`: %v\n", resp)
 }
 ```
@@ -3115,11 +3628,11 @@ Other parameters are passed through a pointer to a apiV1BwtrackerEnterpriseSumma
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **string** | Bearer token. Format: Bearer &lt;your_token_here&gt; | 
- **v2NotificationlistPostRequest** | [**V2NotificationlistPostRequest**](V2NotificationlistPostRequest.md) |  | 
+ **v1BwtrackerEnterpriseSummaryPostRequest** | [**V1BwtrackerEnterpriseSummaryPostRequest**](V1BwtrackerEnterpriseSummaryPostRequest.md) |  | 
 
 ### Return type
 
-[**V1BwtrackerEnterpriseSummaryPost200Response**](V1BwtrackerEnterpriseSummaryPost200Response.md)
+[**V1BwtrackerEnterpriseSummaryPostResponse**](V1BwtrackerEnterpriseSummaryPostResponse.md)
 
 ### Authorization
 
@@ -3137,7 +3650,7 @@ Name | Type | Description  | Notes
 
 ## V1BwtrackerRegionCloudChartPost
 
-> V1BwtrackerRegionCloudChartPost200Response V1BwtrackerRegionCloudChartPost(ctx).Authorization(authorization).V1BwtrackerRegionCloudChartPostRequest(v1BwtrackerRegionCloudChartPostRequest).Execute()
+> V1BwtrackerRegionCloudChartPostResponse V1BwtrackerRegionCloudChartPost(ctx).Authorization(authorization).V1BwtrackerRegionCloudChartPostRequest(v1BwtrackerRegionCloudChartPostRequest).Execute()
 
 
 
@@ -3164,7 +3677,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1BwtrackerRegionCloudChartPost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1BwtrackerRegionCloudChartPost`: V1BwtrackerRegionCloudChartPost200Response
+	// response from `V1BwtrackerRegionCloudChartPost`: V1BwtrackerRegionCloudChartPostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1BwtrackerRegionCloudChartPost`: %v\n", resp)
 }
 ```
@@ -3185,7 +3698,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1BwtrackerRegionCloudChartPost200Response**](V1BwtrackerRegionCloudChartPost200Response.md)
+[**V1BwtrackerRegionCloudChartPostResponse**](V1BwtrackerRegionCloudChartPostResponse.md)
 
 ### Authorization
 
@@ -3203,7 +3716,7 @@ Name | Type | Description  | Notes
 
 ## V1BwtrackerRegionCloudCsvPost
 
-> V1BwtrackerEnterpriseCsvPost200Response V1BwtrackerRegionCloudCsvPost(ctx).Authorization(authorization).V1BwtrackerRegionCloudChartPostRequest(v1BwtrackerRegionCloudChartPostRequest).Execute()
+> V1BwtrackerRegionCloudCsvPostResponse V1BwtrackerRegionCloudCsvPost(ctx).Authorization(authorization).V1BwtrackerRegionCloudCsvPostRequest(v1BwtrackerRegionCloudCsvPostRequest).Execute()
 
 
 
@@ -3221,16 +3734,16 @@ import (
 
 func main() {
 	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
-	v1BwtrackerRegionCloudChartPostRequest := *openapiclient.NewV1BwtrackerRegionCloudChartPostRequest() // V1BwtrackerRegionCloudChartPostRequest | 
+	v1BwtrackerRegionCloudCsvPostRequest := *openapiclient.NewV1BwtrackerRegionCloudCsvPostRequest() // V1BwtrackerRegionCloudCsvPostRequest | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.DefaultAPI.V1BwtrackerRegionCloudCsvPost(context.Background()).Authorization(authorization).V1BwtrackerRegionCloudChartPostRequest(v1BwtrackerRegionCloudChartPostRequest).Execute()
+	resp, r, err := apiClient.DefaultAPI.V1BwtrackerRegionCloudCsvPost(context.Background()).Authorization(authorization).V1BwtrackerRegionCloudCsvPostRequest(v1BwtrackerRegionCloudCsvPostRequest).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1BwtrackerRegionCloudCsvPost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1BwtrackerRegionCloudCsvPost`: V1BwtrackerEnterpriseCsvPost200Response
+	// response from `V1BwtrackerRegionCloudCsvPost`: V1BwtrackerRegionCloudCsvPostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1BwtrackerRegionCloudCsvPost`: %v\n", resp)
 }
 ```
@@ -3247,11 +3760,11 @@ Other parameters are passed through a pointer to a apiV1BwtrackerRegionCloudCsvP
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **string** | Bearer token. Format: Bearer &lt;your_token_here&gt; | 
- **v1BwtrackerRegionCloudChartPostRequest** | [**V1BwtrackerRegionCloudChartPostRequest**](V1BwtrackerRegionCloudChartPostRequest.md) |  | 
+ **v1BwtrackerRegionCloudCsvPostRequest** | [**V1BwtrackerRegionCloudCsvPostRequest**](V1BwtrackerRegionCloudCsvPostRequest.md) |  | 
 
 ### Return type
 
-[**V1BwtrackerEnterpriseCsvPost200Response**](V1BwtrackerEnterpriseCsvPost200Response.md)
+[**V1BwtrackerRegionCloudCsvPostResponse**](V1BwtrackerRegionCloudCsvPostResponse.md)
 
 ### Authorization
 
@@ -3269,7 +3782,7 @@ Name | Type | Description  | Notes
 
 ## V1BwtrackerRegionCloudSummaryPost
 
-> V1BwtrackerRegionCloudSummaryPost200Response V1BwtrackerRegionCloudSummaryPost(ctx).Authorization(authorization).V1BwtrackerRegionCloudChartPostRequest(v1BwtrackerRegionCloudChartPostRequest).Execute()
+> V1BwtrackerRegionCloudSummaryPostResponse V1BwtrackerRegionCloudSummaryPost(ctx).Authorization(authorization).V1BwtrackerRegionCloudSummaryPostRequest(v1BwtrackerRegionCloudSummaryPostRequest).Execute()
 
 
 
@@ -3287,16 +3800,16 @@ import (
 
 func main() {
 	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
-	v1BwtrackerRegionCloudChartPostRequest := *openapiclient.NewV1BwtrackerRegionCloudChartPostRequest() // V1BwtrackerRegionCloudChartPostRequest | 
+	v1BwtrackerRegionCloudSummaryPostRequest := *openapiclient.NewV1BwtrackerRegionCloudSummaryPostRequest() // V1BwtrackerRegionCloudSummaryPostRequest | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.DefaultAPI.V1BwtrackerRegionCloudSummaryPost(context.Background()).Authorization(authorization).V1BwtrackerRegionCloudChartPostRequest(v1BwtrackerRegionCloudChartPostRequest).Execute()
+	resp, r, err := apiClient.DefaultAPI.V1BwtrackerRegionCloudSummaryPost(context.Background()).Authorization(authorization).V1BwtrackerRegionCloudSummaryPostRequest(v1BwtrackerRegionCloudSummaryPostRequest).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1BwtrackerRegionCloudSummaryPost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1BwtrackerRegionCloudSummaryPost`: V1BwtrackerRegionCloudSummaryPost200Response
+	// response from `V1BwtrackerRegionCloudSummaryPost`: V1BwtrackerRegionCloudSummaryPostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1BwtrackerRegionCloudSummaryPost`: %v\n", resp)
 }
 ```
@@ -3313,11 +3826,11 @@ Other parameters are passed through a pointer to a apiV1BwtrackerRegionCloudSumm
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **string** | Bearer token. Format: Bearer &lt;your_token_here&gt; | 
- **v1BwtrackerRegionCloudChartPostRequest** | [**V1BwtrackerRegionCloudChartPostRequest**](V1BwtrackerRegionCloudChartPostRequest.md) |  | 
+ **v1BwtrackerRegionCloudSummaryPostRequest** | [**V1BwtrackerRegionCloudSummaryPostRequest**](V1BwtrackerRegionCloudSummaryPostRequest.md) |  | 
 
 ### Return type
 
-[**V1BwtrackerRegionCloudSummaryPost200Response**](V1BwtrackerRegionCloudSummaryPost200Response.md)
+[**V1BwtrackerRegionCloudSummaryPostResponse**](V1BwtrackerRegionCloudSummaryPostResponse.md)
 
 ### Authorization
 
@@ -3335,7 +3848,7 @@ Name | Type | Description  | Notes
 
 ## V1BwtrackerRegionEdgeChartPost
 
-> V1BwtrackerRegionCloudChartPost200Response V1BwtrackerRegionEdgeChartPost(ctx).Authorization(authorization).V1BwtrackerRegionCloudChartPostRequest(v1BwtrackerRegionCloudChartPostRequest).Execute()
+> V1BwtrackerRegionEdgeChartPostResponse V1BwtrackerRegionEdgeChartPost(ctx).Authorization(authorization).V1BwtrackerRegionEdgeChartPostRequest(v1BwtrackerRegionEdgeChartPostRequest).Execute()
 
 
 
@@ -3353,16 +3866,16 @@ import (
 
 func main() {
 	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
-	v1BwtrackerRegionCloudChartPostRequest := *openapiclient.NewV1BwtrackerRegionCloudChartPostRequest() // V1BwtrackerRegionCloudChartPostRequest | 
+	v1BwtrackerRegionEdgeChartPostRequest := *openapiclient.NewV1BwtrackerRegionEdgeChartPostRequest() // V1BwtrackerRegionEdgeChartPostRequest | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.DefaultAPI.V1BwtrackerRegionEdgeChartPost(context.Background()).Authorization(authorization).V1BwtrackerRegionCloudChartPostRequest(v1BwtrackerRegionCloudChartPostRequest).Execute()
+	resp, r, err := apiClient.DefaultAPI.V1BwtrackerRegionEdgeChartPost(context.Background()).Authorization(authorization).V1BwtrackerRegionEdgeChartPostRequest(v1BwtrackerRegionEdgeChartPostRequest).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1BwtrackerRegionEdgeChartPost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1BwtrackerRegionEdgeChartPost`: V1BwtrackerRegionCloudChartPost200Response
+	// response from `V1BwtrackerRegionEdgeChartPost`: V1BwtrackerRegionEdgeChartPostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1BwtrackerRegionEdgeChartPost`: %v\n", resp)
 }
 ```
@@ -3379,11 +3892,11 @@ Other parameters are passed through a pointer to a apiV1BwtrackerRegionEdgeChart
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **string** | Bearer token. Format: Bearer &lt;your_token_here&gt; | 
- **v1BwtrackerRegionCloudChartPostRequest** | [**V1BwtrackerRegionCloudChartPostRequest**](V1BwtrackerRegionCloudChartPostRequest.md) |  | 
+ **v1BwtrackerRegionEdgeChartPostRequest** | [**V1BwtrackerRegionEdgeChartPostRequest**](V1BwtrackerRegionEdgeChartPostRequest.md) |  | 
 
 ### Return type
 
-[**V1BwtrackerRegionCloudChartPost200Response**](V1BwtrackerRegionCloudChartPost200Response.md)
+[**V1BwtrackerRegionEdgeChartPostResponse**](V1BwtrackerRegionEdgeChartPostResponse.md)
 
 ### Authorization
 
@@ -3401,7 +3914,7 @@ Name | Type | Description  | Notes
 
 ## V1BwtrackerRegionEdgeCsvPost
 
-> V1BwtrackerEnterpriseCsvPost200Response V1BwtrackerRegionEdgeCsvPost(ctx).Authorization(authorization).V1BwtrackerRegionCloudChartPostRequest(v1BwtrackerRegionCloudChartPostRequest).Execute()
+> V1BwtrackerRegionEdgeCsvPostResponse V1BwtrackerRegionEdgeCsvPost(ctx).Authorization(authorization).V1BwtrackerRegionEdgeCsvPostRequest(v1BwtrackerRegionEdgeCsvPostRequest).Execute()
 
 
 
@@ -3419,16 +3932,16 @@ import (
 
 func main() {
 	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
-	v1BwtrackerRegionCloudChartPostRequest := *openapiclient.NewV1BwtrackerRegionCloudChartPostRequest() // V1BwtrackerRegionCloudChartPostRequest | 
+	v1BwtrackerRegionEdgeCsvPostRequest := *openapiclient.NewV1BwtrackerRegionEdgeCsvPostRequest() // V1BwtrackerRegionEdgeCsvPostRequest | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.DefaultAPI.V1BwtrackerRegionEdgeCsvPost(context.Background()).Authorization(authorization).V1BwtrackerRegionCloudChartPostRequest(v1BwtrackerRegionCloudChartPostRequest).Execute()
+	resp, r, err := apiClient.DefaultAPI.V1BwtrackerRegionEdgeCsvPost(context.Background()).Authorization(authorization).V1BwtrackerRegionEdgeCsvPostRequest(v1BwtrackerRegionEdgeCsvPostRequest).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1BwtrackerRegionEdgeCsvPost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1BwtrackerRegionEdgeCsvPost`: V1BwtrackerEnterpriseCsvPost200Response
+	// response from `V1BwtrackerRegionEdgeCsvPost`: V1BwtrackerRegionEdgeCsvPostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1BwtrackerRegionEdgeCsvPost`: %v\n", resp)
 }
 ```
@@ -3445,11 +3958,11 @@ Other parameters are passed through a pointer to a apiV1BwtrackerRegionEdgeCsvPo
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **string** | Bearer token. Format: Bearer &lt;your_token_here&gt; | 
- **v1BwtrackerRegionCloudChartPostRequest** | [**V1BwtrackerRegionCloudChartPostRequest**](V1BwtrackerRegionCloudChartPostRequest.md) |  | 
+ **v1BwtrackerRegionEdgeCsvPostRequest** | [**V1BwtrackerRegionEdgeCsvPostRequest**](V1BwtrackerRegionEdgeCsvPostRequest.md) |  | 
 
 ### Return type
 
-[**V1BwtrackerEnterpriseCsvPost200Response**](V1BwtrackerEnterpriseCsvPost200Response.md)
+[**V1BwtrackerRegionEdgeCsvPostResponse**](V1BwtrackerRegionEdgeCsvPostResponse.md)
 
 ### Authorization
 
@@ -3467,7 +3980,7 @@ Name | Type | Description  | Notes
 
 ## V1BwtrackerRegionEdgeDetailsPost
 
-> V1BwtrackerRegionEdgeDetailsPost200Response V1BwtrackerRegionEdgeDetailsPost(ctx).Authorization(authorization).V1BwtrackerRegionCloudChartPostRequest(v1BwtrackerRegionCloudChartPostRequest).Execute()
+> V1BwtrackerRegionEdgeDetailsPostResponse V1BwtrackerRegionEdgeDetailsPost(ctx).Authorization(authorization).V1BwtrackerRegionEdgeDetailsPostRequest(v1BwtrackerRegionEdgeDetailsPostRequest).Execute()
 
 
 
@@ -3485,16 +3998,16 @@ import (
 
 func main() {
 	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
-	v1BwtrackerRegionCloudChartPostRequest := *openapiclient.NewV1BwtrackerRegionCloudChartPostRequest() // V1BwtrackerRegionCloudChartPostRequest | 
+	v1BwtrackerRegionEdgeDetailsPostRequest := *openapiclient.NewV1BwtrackerRegionEdgeDetailsPostRequest() // V1BwtrackerRegionEdgeDetailsPostRequest | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.DefaultAPI.V1BwtrackerRegionEdgeDetailsPost(context.Background()).Authorization(authorization).V1BwtrackerRegionCloudChartPostRequest(v1BwtrackerRegionCloudChartPostRequest).Execute()
+	resp, r, err := apiClient.DefaultAPI.V1BwtrackerRegionEdgeDetailsPost(context.Background()).Authorization(authorization).V1BwtrackerRegionEdgeDetailsPostRequest(v1BwtrackerRegionEdgeDetailsPostRequest).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1BwtrackerRegionEdgeDetailsPost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1BwtrackerRegionEdgeDetailsPost`: V1BwtrackerRegionEdgeDetailsPost200Response
+	// response from `V1BwtrackerRegionEdgeDetailsPost`: V1BwtrackerRegionEdgeDetailsPostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1BwtrackerRegionEdgeDetailsPost`: %v\n", resp)
 }
 ```
@@ -3511,11 +4024,11 @@ Other parameters are passed through a pointer to a apiV1BwtrackerRegionEdgeDetai
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **string** | Bearer token. Format: Bearer &lt;your_token_here&gt; | 
- **v1BwtrackerRegionCloudChartPostRequest** | [**V1BwtrackerRegionCloudChartPostRequest**](V1BwtrackerRegionCloudChartPostRequest.md) |  | 
+ **v1BwtrackerRegionEdgeDetailsPostRequest** | [**V1BwtrackerRegionEdgeDetailsPostRequest**](V1BwtrackerRegionEdgeDetailsPostRequest.md) |  | 
 
 ### Return type
 
-[**V1BwtrackerRegionEdgeDetailsPost200Response**](V1BwtrackerRegionEdgeDetailsPost200Response.md)
+[**V1BwtrackerRegionEdgeDetailsPostResponse**](V1BwtrackerRegionEdgeDetailsPostResponse.md)
 
 ### Authorization
 
@@ -3533,7 +4046,7 @@ Name | Type | Description  | Notes
 
 ## V1BwtrackerRegionEdgeSummaryPost
 
-> V1BwtrackerRegionEdgeSummaryPost200Response V1BwtrackerRegionEdgeSummaryPost(ctx).Authorization(authorization).V1BwtrackerRegionCloudChartPostRequest(v1BwtrackerRegionCloudChartPostRequest).Execute()
+> V1BwtrackerRegionEdgeSummaryPostResponse V1BwtrackerRegionEdgeSummaryPost(ctx).Authorization(authorization).V1BwtrackerRegionEdgeSummaryPostRequest(v1BwtrackerRegionEdgeSummaryPostRequest).Execute()
 
 
 
@@ -3551,16 +4064,16 @@ import (
 
 func main() {
 	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
-	v1BwtrackerRegionCloudChartPostRequest := *openapiclient.NewV1BwtrackerRegionCloudChartPostRequest() // V1BwtrackerRegionCloudChartPostRequest | 
+	v1BwtrackerRegionEdgeSummaryPostRequest := *openapiclient.NewV1BwtrackerRegionEdgeSummaryPostRequest() // V1BwtrackerRegionEdgeSummaryPostRequest | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.DefaultAPI.V1BwtrackerRegionEdgeSummaryPost(context.Background()).Authorization(authorization).V1BwtrackerRegionCloudChartPostRequest(v1BwtrackerRegionCloudChartPostRequest).Execute()
+	resp, r, err := apiClient.DefaultAPI.V1BwtrackerRegionEdgeSummaryPost(context.Background()).Authorization(authorization).V1BwtrackerRegionEdgeSummaryPostRequest(v1BwtrackerRegionEdgeSummaryPostRequest).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1BwtrackerRegionEdgeSummaryPost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1BwtrackerRegionEdgeSummaryPost`: V1BwtrackerRegionEdgeSummaryPost200Response
+	// response from `V1BwtrackerRegionEdgeSummaryPost`: V1BwtrackerRegionEdgeSummaryPostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1BwtrackerRegionEdgeSummaryPost`: %v\n", resp)
 }
 ```
@@ -3577,11 +4090,11 @@ Other parameters are passed through a pointer to a apiV1BwtrackerRegionEdgeSumma
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **string** | Bearer token. Format: Bearer &lt;your_token_here&gt; | 
- **v1BwtrackerRegionCloudChartPostRequest** | [**V1BwtrackerRegionCloudChartPostRequest**](V1BwtrackerRegionCloudChartPostRequest.md) |  | 
+ **v1BwtrackerRegionEdgeSummaryPostRequest** | [**V1BwtrackerRegionEdgeSummaryPostRequest**](V1BwtrackerRegionEdgeSummaryPostRequest.md) |  | 
 
 ### Return type
 
-[**V1BwtrackerRegionEdgeSummaryPost200Response**](V1BwtrackerRegionEdgeSummaryPost200Response.md)
+[**V1BwtrackerRegionEdgeSummaryPostResponse**](V1BwtrackerRegionEdgeSummaryPostResponse.md)
 
 ### Authorization
 
@@ -3599,7 +4112,7 @@ Name | Type | Description  | Notes
 
 ## V1BwtrackerRegionGatewayChartPost
 
-> V1BwtrackerRegionCloudChartPost200Response V1BwtrackerRegionGatewayChartPost(ctx).Authorization(authorization).V1BwtrackerRegionCloudChartPostRequest(v1BwtrackerRegionCloudChartPostRequest).Execute()
+> V1BwtrackerRegionGatewayChartPostResponse V1BwtrackerRegionGatewayChartPost(ctx).Authorization(authorization).V1BwtrackerRegionGatewayChartPostRequest(v1BwtrackerRegionGatewayChartPostRequest).Execute()
 
 
 
@@ -3617,16 +4130,16 @@ import (
 
 func main() {
 	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
-	v1BwtrackerRegionCloudChartPostRequest := *openapiclient.NewV1BwtrackerRegionCloudChartPostRequest() // V1BwtrackerRegionCloudChartPostRequest | 
+	v1BwtrackerRegionGatewayChartPostRequest := *openapiclient.NewV1BwtrackerRegionGatewayChartPostRequest() // V1BwtrackerRegionGatewayChartPostRequest | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.DefaultAPI.V1BwtrackerRegionGatewayChartPost(context.Background()).Authorization(authorization).V1BwtrackerRegionCloudChartPostRequest(v1BwtrackerRegionCloudChartPostRequest).Execute()
+	resp, r, err := apiClient.DefaultAPI.V1BwtrackerRegionGatewayChartPost(context.Background()).Authorization(authorization).V1BwtrackerRegionGatewayChartPostRequest(v1BwtrackerRegionGatewayChartPostRequest).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1BwtrackerRegionGatewayChartPost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1BwtrackerRegionGatewayChartPost`: V1BwtrackerRegionCloudChartPost200Response
+	// response from `V1BwtrackerRegionGatewayChartPost`: V1BwtrackerRegionGatewayChartPostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1BwtrackerRegionGatewayChartPost`: %v\n", resp)
 }
 ```
@@ -3643,11 +4156,11 @@ Other parameters are passed through a pointer to a apiV1BwtrackerRegionGatewayCh
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **string** | Bearer token. Format: Bearer &lt;your_token_here&gt; | 
- **v1BwtrackerRegionCloudChartPostRequest** | [**V1BwtrackerRegionCloudChartPostRequest**](V1BwtrackerRegionCloudChartPostRequest.md) |  | 
+ **v1BwtrackerRegionGatewayChartPostRequest** | [**V1BwtrackerRegionGatewayChartPostRequest**](V1BwtrackerRegionGatewayChartPostRequest.md) |  | 
 
 ### Return type
 
-[**V1BwtrackerRegionCloudChartPost200Response**](V1BwtrackerRegionCloudChartPost200Response.md)
+[**V1BwtrackerRegionGatewayChartPostResponse**](V1BwtrackerRegionGatewayChartPostResponse.md)
 
 ### Authorization
 
@@ -3665,7 +4178,7 @@ Name | Type | Description  | Notes
 
 ## V1BwtrackerRegionGatewayCsvPost
 
-> V1BwtrackerEnterpriseCsvPost200Response V1BwtrackerRegionGatewayCsvPost(ctx).Authorization(authorization).V1BwtrackerRegionCloudChartPostRequest(v1BwtrackerRegionCloudChartPostRequest).Execute()
+> V1BwtrackerRegionGatewayCsvPostResponse V1BwtrackerRegionGatewayCsvPost(ctx).Authorization(authorization).V1BwtrackerRegionGatewayCsvPostRequest(v1BwtrackerRegionGatewayCsvPostRequest).Execute()
 
 
 
@@ -3683,16 +4196,16 @@ import (
 
 func main() {
 	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
-	v1BwtrackerRegionCloudChartPostRequest := *openapiclient.NewV1BwtrackerRegionCloudChartPostRequest() // V1BwtrackerRegionCloudChartPostRequest | 
+	v1BwtrackerRegionGatewayCsvPostRequest := *openapiclient.NewV1BwtrackerRegionGatewayCsvPostRequest() // V1BwtrackerRegionGatewayCsvPostRequest | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.DefaultAPI.V1BwtrackerRegionGatewayCsvPost(context.Background()).Authorization(authorization).V1BwtrackerRegionCloudChartPostRequest(v1BwtrackerRegionCloudChartPostRequest).Execute()
+	resp, r, err := apiClient.DefaultAPI.V1BwtrackerRegionGatewayCsvPost(context.Background()).Authorization(authorization).V1BwtrackerRegionGatewayCsvPostRequest(v1BwtrackerRegionGatewayCsvPostRequest).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1BwtrackerRegionGatewayCsvPost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1BwtrackerRegionGatewayCsvPost`: V1BwtrackerEnterpriseCsvPost200Response
+	// response from `V1BwtrackerRegionGatewayCsvPost`: V1BwtrackerRegionGatewayCsvPostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1BwtrackerRegionGatewayCsvPost`: %v\n", resp)
 }
 ```
@@ -3709,11 +4222,11 @@ Other parameters are passed through a pointer to a apiV1BwtrackerRegionGatewayCs
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **string** | Bearer token. Format: Bearer &lt;your_token_here&gt; | 
- **v1BwtrackerRegionCloudChartPostRequest** | [**V1BwtrackerRegionCloudChartPostRequest**](V1BwtrackerRegionCloudChartPostRequest.md) |  | 
+ **v1BwtrackerRegionGatewayCsvPostRequest** | [**V1BwtrackerRegionGatewayCsvPostRequest**](V1BwtrackerRegionGatewayCsvPostRequest.md) |  | 
 
 ### Return type
 
-[**V1BwtrackerEnterpriseCsvPost200Response**](V1BwtrackerEnterpriseCsvPost200Response.md)
+[**V1BwtrackerRegionGatewayCsvPostResponse**](V1BwtrackerRegionGatewayCsvPostResponse.md)
 
 ### Authorization
 
@@ -3731,7 +4244,7 @@ Name | Type | Description  | Notes
 
 ## V1BwtrackerRegionGatewayDetailsPost
 
-> V1BwtrackerRegionEdgeDetailsPost200Response V1BwtrackerRegionGatewayDetailsPost(ctx).Authorization(authorization).V1BwtrackerRegionCloudChartPostRequest(v1BwtrackerRegionCloudChartPostRequest).Execute()
+> V1BwtrackerRegionGatewayDetailsPostResponse V1BwtrackerRegionGatewayDetailsPost(ctx).Authorization(authorization).V1BwtrackerRegionGatewayDetailsPostRequest(v1BwtrackerRegionGatewayDetailsPostRequest).Execute()
 
 
 
@@ -3749,16 +4262,16 @@ import (
 
 func main() {
 	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
-	v1BwtrackerRegionCloudChartPostRequest := *openapiclient.NewV1BwtrackerRegionCloudChartPostRequest() // V1BwtrackerRegionCloudChartPostRequest | 
+	v1BwtrackerRegionGatewayDetailsPostRequest := *openapiclient.NewV1BwtrackerRegionGatewayDetailsPostRequest() // V1BwtrackerRegionGatewayDetailsPostRequest | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.DefaultAPI.V1BwtrackerRegionGatewayDetailsPost(context.Background()).Authorization(authorization).V1BwtrackerRegionCloudChartPostRequest(v1BwtrackerRegionCloudChartPostRequest).Execute()
+	resp, r, err := apiClient.DefaultAPI.V1BwtrackerRegionGatewayDetailsPost(context.Background()).Authorization(authorization).V1BwtrackerRegionGatewayDetailsPostRequest(v1BwtrackerRegionGatewayDetailsPostRequest).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1BwtrackerRegionGatewayDetailsPost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1BwtrackerRegionGatewayDetailsPost`: V1BwtrackerRegionEdgeDetailsPost200Response
+	// response from `V1BwtrackerRegionGatewayDetailsPost`: V1BwtrackerRegionGatewayDetailsPostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1BwtrackerRegionGatewayDetailsPost`: %v\n", resp)
 }
 ```
@@ -3775,11 +4288,11 @@ Other parameters are passed through a pointer to a apiV1BwtrackerRegionGatewayDe
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **string** | Bearer token. Format: Bearer &lt;your_token_here&gt; | 
- **v1BwtrackerRegionCloudChartPostRequest** | [**V1BwtrackerRegionCloudChartPostRequest**](V1BwtrackerRegionCloudChartPostRequest.md) |  | 
+ **v1BwtrackerRegionGatewayDetailsPostRequest** | [**V1BwtrackerRegionGatewayDetailsPostRequest**](V1BwtrackerRegionGatewayDetailsPostRequest.md) |  | 
 
 ### Return type
 
-[**V1BwtrackerRegionEdgeDetailsPost200Response**](V1BwtrackerRegionEdgeDetailsPost200Response.md)
+[**V1BwtrackerRegionGatewayDetailsPostResponse**](V1BwtrackerRegionGatewayDetailsPostResponse.md)
 
 ### Authorization
 
@@ -3797,7 +4310,7 @@ Name | Type | Description  | Notes
 
 ## V1BwtrackerRegionGatewaySummaryPost
 
-> V1BwtrackerRegionEdgeSummaryPost200Response V1BwtrackerRegionGatewaySummaryPost(ctx).Authorization(authorization).V1BwtrackerRegionCloudChartPostRequest(v1BwtrackerRegionCloudChartPostRequest).Execute()
+> V1BwtrackerRegionGatewaySummaryPostResponse V1BwtrackerRegionGatewaySummaryPost(ctx).Authorization(authorization).V1BwtrackerRegionGatewaySummaryPostRequest(v1BwtrackerRegionGatewaySummaryPostRequest).Execute()
 
 
 
@@ -3815,16 +4328,16 @@ import (
 
 func main() {
 	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
-	v1BwtrackerRegionCloudChartPostRequest := *openapiclient.NewV1BwtrackerRegionCloudChartPostRequest() // V1BwtrackerRegionCloudChartPostRequest | 
+	v1BwtrackerRegionGatewaySummaryPostRequest := *openapiclient.NewV1BwtrackerRegionGatewaySummaryPostRequest() // V1BwtrackerRegionGatewaySummaryPostRequest | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.DefaultAPI.V1BwtrackerRegionGatewaySummaryPost(context.Background()).Authorization(authorization).V1BwtrackerRegionCloudChartPostRequest(v1BwtrackerRegionCloudChartPostRequest).Execute()
+	resp, r, err := apiClient.DefaultAPI.V1BwtrackerRegionGatewaySummaryPost(context.Background()).Authorization(authorization).V1BwtrackerRegionGatewaySummaryPostRequest(v1BwtrackerRegionGatewaySummaryPostRequest).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1BwtrackerRegionGatewaySummaryPost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1BwtrackerRegionGatewaySummaryPost`: V1BwtrackerRegionEdgeSummaryPost200Response
+	// response from `V1BwtrackerRegionGatewaySummaryPost`: V1BwtrackerRegionGatewaySummaryPostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1BwtrackerRegionGatewaySummaryPost`: %v\n", resp)
 }
 ```
@@ -3841,11 +4354,11 @@ Other parameters are passed through a pointer to a apiV1BwtrackerRegionGatewaySu
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **string** | Bearer token. Format: Bearer &lt;your_token_here&gt; | 
- **v1BwtrackerRegionCloudChartPostRequest** | [**V1BwtrackerRegionCloudChartPostRequest**](V1BwtrackerRegionCloudChartPostRequest.md) |  | 
+ **v1BwtrackerRegionGatewaySummaryPostRequest** | [**V1BwtrackerRegionGatewaySummaryPostRequest**](V1BwtrackerRegionGatewaySummaryPostRequest.md) |  | 
 
 ### Return type
 
-[**V1BwtrackerRegionEdgeSummaryPost200Response**](V1BwtrackerRegionEdgeSummaryPost200Response.md)
+[**V1BwtrackerRegionGatewaySummaryPostResponse**](V1BwtrackerRegionGatewaySummaryPostResponse.md)
 
 ### Authorization
 
@@ -3863,7 +4376,7 @@ Name | Type | Description  | Notes
 
 ## V1BwtrackerRegionSiteChartPost
 
-> V1BwtrackerRegionCloudChartPost200Response V1BwtrackerRegionSiteChartPost(ctx).Authorization(authorization).V1BwtrackerRegionSiteChartPostRequest(v1BwtrackerRegionSiteChartPostRequest).Execute()
+> V1BwtrackerRegionSiteChartPostResponse V1BwtrackerRegionSiteChartPost(ctx).Authorization(authorization).V1BwtrackerRegionSiteChartPostRequest(v1BwtrackerRegionSiteChartPostRequest).Execute()
 
 
 
@@ -3890,7 +4403,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1BwtrackerRegionSiteChartPost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1BwtrackerRegionSiteChartPost`: V1BwtrackerRegionCloudChartPost200Response
+	// response from `V1BwtrackerRegionSiteChartPost`: V1BwtrackerRegionSiteChartPostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1BwtrackerRegionSiteChartPost`: %v\n", resp)
 }
 ```
@@ -3911,7 +4424,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1BwtrackerRegionCloudChartPost200Response**](V1BwtrackerRegionCloudChartPost200Response.md)
+[**V1BwtrackerRegionSiteChartPostResponse**](V1BwtrackerRegionSiteChartPostResponse.md)
 
 ### Authorization
 
@@ -3929,7 +4442,7 @@ Name | Type | Description  | Notes
 
 ## V1BwtrackerRegionSiteDetailsPost
 
-> V1BwtrackerRegionSiteDetailsPost200Response V1BwtrackerRegionSiteDetailsPost(ctx).Authorization(authorization).V1BwtrackerRegionSiteChartPostRequest(v1BwtrackerRegionSiteChartPostRequest).Execute()
+> V1BwtrackerRegionSiteDetailsPostResponse V1BwtrackerRegionSiteDetailsPost(ctx).Authorization(authorization).V1BwtrackerRegionSiteDetailsPostRequest(v1BwtrackerRegionSiteDetailsPostRequest).Execute()
 
 
 
@@ -3947,16 +4460,16 @@ import (
 
 func main() {
 	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
-	v1BwtrackerRegionSiteChartPostRequest := *openapiclient.NewV1BwtrackerRegionSiteChartPostRequest() // V1BwtrackerRegionSiteChartPostRequest | 
+	v1BwtrackerRegionSiteDetailsPostRequest := *openapiclient.NewV1BwtrackerRegionSiteDetailsPostRequest() // V1BwtrackerRegionSiteDetailsPostRequest | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.DefaultAPI.V1BwtrackerRegionSiteDetailsPost(context.Background()).Authorization(authorization).V1BwtrackerRegionSiteChartPostRequest(v1BwtrackerRegionSiteChartPostRequest).Execute()
+	resp, r, err := apiClient.DefaultAPI.V1BwtrackerRegionSiteDetailsPost(context.Background()).Authorization(authorization).V1BwtrackerRegionSiteDetailsPostRequest(v1BwtrackerRegionSiteDetailsPostRequest).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1BwtrackerRegionSiteDetailsPost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1BwtrackerRegionSiteDetailsPost`: V1BwtrackerRegionSiteDetailsPost200Response
+	// response from `V1BwtrackerRegionSiteDetailsPost`: V1BwtrackerRegionSiteDetailsPostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1BwtrackerRegionSiteDetailsPost`: %v\n", resp)
 }
 ```
@@ -3973,11 +4486,11 @@ Other parameters are passed through a pointer to a apiV1BwtrackerRegionSiteDetai
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **string** | Bearer token. Format: Bearer &lt;your_token_here&gt; | 
- **v1BwtrackerRegionSiteChartPostRequest** | [**V1BwtrackerRegionSiteChartPostRequest**](V1BwtrackerRegionSiteChartPostRequest.md) |  | 
+ **v1BwtrackerRegionSiteDetailsPostRequest** | [**V1BwtrackerRegionSiteDetailsPostRequest**](V1BwtrackerRegionSiteDetailsPostRequest.md) |  | 
 
 ### Return type
 
-[**V1BwtrackerRegionSiteDetailsPost200Response**](V1BwtrackerRegionSiteDetailsPost200Response.md)
+[**V1BwtrackerRegionSiteDetailsPostResponse**](V1BwtrackerRegionSiteDetailsPostResponse.md)
 
 ### Authorization
 
@@ -3995,7 +4508,7 @@ Name | Type | Description  | Notes
 
 ## V1BwtrackerRegionSiteGatewayChartPost
 
-> V1BwtrackerRegionCloudChartPost200Response V1BwtrackerRegionSiteGatewayChartPost(ctx).Authorization(authorization).V1BwtrackerRegionSiteChartPostRequest(v1BwtrackerRegionSiteChartPostRequest).Execute()
+> V1BwtrackerRegionSiteGatewayChartPostResponse V1BwtrackerRegionSiteGatewayChartPost(ctx).Authorization(authorization).V1BwtrackerRegionSiteGatewayChartPostRequest(v1BwtrackerRegionSiteGatewayChartPostRequest).Execute()
 
 
 
@@ -4013,16 +4526,16 @@ import (
 
 func main() {
 	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
-	v1BwtrackerRegionSiteChartPostRequest := *openapiclient.NewV1BwtrackerRegionSiteChartPostRequest() // V1BwtrackerRegionSiteChartPostRequest | 
+	v1BwtrackerRegionSiteGatewayChartPostRequest := *openapiclient.NewV1BwtrackerRegionSiteGatewayChartPostRequest() // V1BwtrackerRegionSiteGatewayChartPostRequest | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.DefaultAPI.V1BwtrackerRegionSiteGatewayChartPost(context.Background()).Authorization(authorization).V1BwtrackerRegionSiteChartPostRequest(v1BwtrackerRegionSiteChartPostRequest).Execute()
+	resp, r, err := apiClient.DefaultAPI.V1BwtrackerRegionSiteGatewayChartPost(context.Background()).Authorization(authorization).V1BwtrackerRegionSiteGatewayChartPostRequest(v1BwtrackerRegionSiteGatewayChartPostRequest).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1BwtrackerRegionSiteGatewayChartPost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1BwtrackerRegionSiteGatewayChartPost`: V1BwtrackerRegionCloudChartPost200Response
+	// response from `V1BwtrackerRegionSiteGatewayChartPost`: V1BwtrackerRegionSiteGatewayChartPostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1BwtrackerRegionSiteGatewayChartPost`: %v\n", resp)
 }
 ```
@@ -4039,11 +4552,11 @@ Other parameters are passed through a pointer to a apiV1BwtrackerRegionSiteGatew
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **string** | Bearer token. Format: Bearer &lt;your_token_here&gt; | 
- **v1BwtrackerRegionSiteChartPostRequest** | [**V1BwtrackerRegionSiteChartPostRequest**](V1BwtrackerRegionSiteChartPostRequest.md) |  | 
+ **v1BwtrackerRegionSiteGatewayChartPostRequest** | [**V1BwtrackerRegionSiteGatewayChartPostRequest**](V1BwtrackerRegionSiteGatewayChartPostRequest.md) |  | 
 
 ### Return type
 
-[**V1BwtrackerRegionCloudChartPost200Response**](V1BwtrackerRegionCloudChartPost200Response.md)
+[**V1BwtrackerRegionSiteGatewayChartPostResponse**](V1BwtrackerRegionSiteGatewayChartPostResponse.md)
 
 ### Authorization
 
@@ -4061,7 +4574,7 @@ Name | Type | Description  | Notes
 
 ## V1BwtrackerRegionSiteGatewayDetailsPost
 
-> V1BwtrackerRegionSiteDetailsPost200Response V1BwtrackerRegionSiteGatewayDetailsPost(ctx).Authorization(authorization).V1BwtrackerRegionSiteChartPostRequest(v1BwtrackerRegionSiteChartPostRequest).Execute()
+> V1BwtrackerRegionSiteGatewayDetailsPostResponse V1BwtrackerRegionSiteGatewayDetailsPost(ctx).Authorization(authorization).V1BwtrackerRegionSiteGatewayDetailsPostRequest(v1BwtrackerRegionSiteGatewayDetailsPostRequest).Execute()
 
 
 
@@ -4079,16 +4592,16 @@ import (
 
 func main() {
 	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
-	v1BwtrackerRegionSiteChartPostRequest := *openapiclient.NewV1BwtrackerRegionSiteChartPostRequest() // V1BwtrackerRegionSiteChartPostRequest | 
+	v1BwtrackerRegionSiteGatewayDetailsPostRequest := *openapiclient.NewV1BwtrackerRegionSiteGatewayDetailsPostRequest() // V1BwtrackerRegionSiteGatewayDetailsPostRequest | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.DefaultAPI.V1BwtrackerRegionSiteGatewayDetailsPost(context.Background()).Authorization(authorization).V1BwtrackerRegionSiteChartPostRequest(v1BwtrackerRegionSiteChartPostRequest).Execute()
+	resp, r, err := apiClient.DefaultAPI.V1BwtrackerRegionSiteGatewayDetailsPost(context.Background()).Authorization(authorization).V1BwtrackerRegionSiteGatewayDetailsPostRequest(v1BwtrackerRegionSiteGatewayDetailsPostRequest).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1BwtrackerRegionSiteGatewayDetailsPost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1BwtrackerRegionSiteGatewayDetailsPost`: V1BwtrackerRegionSiteDetailsPost200Response
+	// response from `V1BwtrackerRegionSiteGatewayDetailsPost`: V1BwtrackerRegionSiteGatewayDetailsPostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1BwtrackerRegionSiteGatewayDetailsPost`: %v\n", resp)
 }
 ```
@@ -4105,11 +4618,11 @@ Other parameters are passed through a pointer to a apiV1BwtrackerRegionSiteGatew
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **string** | Bearer token. Format: Bearer &lt;your_token_here&gt; | 
- **v1BwtrackerRegionSiteChartPostRequest** | [**V1BwtrackerRegionSiteChartPostRequest**](V1BwtrackerRegionSiteChartPostRequest.md) |  | 
+ **v1BwtrackerRegionSiteGatewayDetailsPostRequest** | [**V1BwtrackerRegionSiteGatewayDetailsPostRequest**](V1BwtrackerRegionSiteGatewayDetailsPostRequest.md) |  | 
 
 ### Return type
 
-[**V1BwtrackerRegionSiteDetailsPost200Response**](V1BwtrackerRegionSiteDetailsPost200Response.md)
+[**V1BwtrackerRegionSiteGatewayDetailsPostResponse**](V1BwtrackerRegionSiteGatewayDetailsPostResponse.md)
 
 ### Authorization
 
@@ -4127,7 +4640,7 @@ Name | Type | Description  | Notes
 
 ## V1BwtrackerRegionSiteGatewaySummaryPost
 
-> V1BwtrackerRegionSiteGatewaySummaryPost200Response V1BwtrackerRegionSiteGatewaySummaryPost(ctx).Authorization(authorization).V1BwtrackerRegionSiteChartPostRequest(v1BwtrackerRegionSiteChartPostRequest).Execute()
+> V1BwtrackerRegionSiteGatewaySummaryPostResponse V1BwtrackerRegionSiteGatewaySummaryPost(ctx).Authorization(authorization).V1BwtrackerRegionSiteGatewaySummaryPostRequest(v1BwtrackerRegionSiteGatewaySummaryPostRequest).Execute()
 
 
 
@@ -4145,16 +4658,16 @@ import (
 
 func main() {
 	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
-	v1BwtrackerRegionSiteChartPostRequest := *openapiclient.NewV1BwtrackerRegionSiteChartPostRequest() // V1BwtrackerRegionSiteChartPostRequest | 
+	v1BwtrackerRegionSiteGatewaySummaryPostRequest := *openapiclient.NewV1BwtrackerRegionSiteGatewaySummaryPostRequest() // V1BwtrackerRegionSiteGatewaySummaryPostRequest | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.DefaultAPI.V1BwtrackerRegionSiteGatewaySummaryPost(context.Background()).Authorization(authorization).V1BwtrackerRegionSiteChartPostRequest(v1BwtrackerRegionSiteChartPostRequest).Execute()
+	resp, r, err := apiClient.DefaultAPI.V1BwtrackerRegionSiteGatewaySummaryPost(context.Background()).Authorization(authorization).V1BwtrackerRegionSiteGatewaySummaryPostRequest(v1BwtrackerRegionSiteGatewaySummaryPostRequest).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1BwtrackerRegionSiteGatewaySummaryPost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1BwtrackerRegionSiteGatewaySummaryPost`: V1BwtrackerRegionSiteGatewaySummaryPost200Response
+	// response from `V1BwtrackerRegionSiteGatewaySummaryPost`: V1BwtrackerRegionSiteGatewaySummaryPostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1BwtrackerRegionSiteGatewaySummaryPost`: %v\n", resp)
 }
 ```
@@ -4171,11 +4684,11 @@ Other parameters are passed through a pointer to a apiV1BwtrackerRegionSiteGatew
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **string** | Bearer token. Format: Bearer &lt;your_token_here&gt; | 
- **v1BwtrackerRegionSiteChartPostRequest** | [**V1BwtrackerRegionSiteChartPostRequest**](V1BwtrackerRegionSiteChartPostRequest.md) |  | 
+ **v1BwtrackerRegionSiteGatewaySummaryPostRequest** | [**V1BwtrackerRegionSiteGatewaySummaryPostRequest**](V1BwtrackerRegionSiteGatewaySummaryPostRequest.md) |  | 
 
 ### Return type
 
-[**V1BwtrackerRegionSiteGatewaySummaryPost200Response**](V1BwtrackerRegionSiteGatewaySummaryPost200Response.md)
+[**V1BwtrackerRegionSiteGatewaySummaryPostResponse**](V1BwtrackerRegionSiteGatewaySummaryPostResponse.md)
 
 ### Authorization
 
@@ -4193,7 +4706,7 @@ Name | Type | Description  | Notes
 
 ## V1BwtrackerRegionSiteSummaryPost
 
-> V1BwtrackerRegionSiteGatewaySummaryPost200Response V1BwtrackerRegionSiteSummaryPost(ctx).Authorization(authorization).V1BwtrackerRegionSiteChartPostRequest(v1BwtrackerRegionSiteChartPostRequest).Execute()
+> V1BwtrackerRegionSiteSummaryPostResponse V1BwtrackerRegionSiteSummaryPost(ctx).Authorization(authorization).V1BwtrackerRegionSiteSummaryPostRequest(v1BwtrackerRegionSiteSummaryPostRequest).Execute()
 
 
 
@@ -4211,16 +4724,16 @@ import (
 
 func main() {
 	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
-	v1BwtrackerRegionSiteChartPostRequest := *openapiclient.NewV1BwtrackerRegionSiteChartPostRequest() // V1BwtrackerRegionSiteChartPostRequest | 
+	v1BwtrackerRegionSiteSummaryPostRequest := *openapiclient.NewV1BwtrackerRegionSiteSummaryPostRequest() // V1BwtrackerRegionSiteSummaryPostRequest | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.DefaultAPI.V1BwtrackerRegionSiteSummaryPost(context.Background()).Authorization(authorization).V1BwtrackerRegionSiteChartPostRequest(v1BwtrackerRegionSiteChartPostRequest).Execute()
+	resp, r, err := apiClient.DefaultAPI.V1BwtrackerRegionSiteSummaryPost(context.Background()).Authorization(authorization).V1BwtrackerRegionSiteSummaryPostRequest(v1BwtrackerRegionSiteSummaryPostRequest).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1BwtrackerRegionSiteSummaryPost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1BwtrackerRegionSiteSummaryPost`: V1BwtrackerRegionSiteGatewaySummaryPost200Response
+	// response from `V1BwtrackerRegionSiteSummaryPost`: V1BwtrackerRegionSiteSummaryPostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1BwtrackerRegionSiteSummaryPost`: %v\n", resp)
 }
 ```
@@ -4237,11 +4750,11 @@ Other parameters are passed through a pointer to a apiV1BwtrackerRegionSiteSumma
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **string** | Bearer token. Format: Bearer &lt;your_token_here&gt; | 
- **v1BwtrackerRegionSiteChartPostRequest** | [**V1BwtrackerRegionSiteChartPostRequest**](V1BwtrackerRegionSiteChartPostRequest.md) |  | 
+ **v1BwtrackerRegionSiteSummaryPostRequest** | [**V1BwtrackerRegionSiteSummaryPostRequest**](V1BwtrackerRegionSiteSummaryPostRequest.md) |  | 
 
 ### Return type
 
-[**V1BwtrackerRegionSiteGatewaySummaryPost200Response**](V1BwtrackerRegionSiteGatewaySummaryPost200Response.md)
+[**V1BwtrackerRegionSiteSummaryPostResponse**](V1BwtrackerRegionSiteSummaryPostResponse.md)
 
 ### Authorization
 
@@ -4259,7 +4772,7 @@ Name | Type | Description  | Notes
 
 ## V1BwtrackerSiteCsvPost
 
-> V1BwtrackerEnterpriseCsvPost200Response V1BwtrackerSiteCsvPost(ctx).Authorization(authorization).V1BwtrackerRegionSiteChartPostRequest(v1BwtrackerRegionSiteChartPostRequest).Execute()
+> V1BwtrackerSiteCsvPostResponse V1BwtrackerSiteCsvPost(ctx).Authorization(authorization).V1BwtrackerSiteCsvPostRequest(v1BwtrackerSiteCsvPostRequest).Execute()
 
 
 
@@ -4277,16 +4790,16 @@ import (
 
 func main() {
 	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
-	v1BwtrackerRegionSiteChartPostRequest := *openapiclient.NewV1BwtrackerRegionSiteChartPostRequest() // V1BwtrackerRegionSiteChartPostRequest | 
+	v1BwtrackerSiteCsvPostRequest := *openapiclient.NewV1BwtrackerSiteCsvPostRequest() // V1BwtrackerSiteCsvPostRequest | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.DefaultAPI.V1BwtrackerSiteCsvPost(context.Background()).Authorization(authorization).V1BwtrackerRegionSiteChartPostRequest(v1BwtrackerRegionSiteChartPostRequest).Execute()
+	resp, r, err := apiClient.DefaultAPI.V1BwtrackerSiteCsvPost(context.Background()).Authorization(authorization).V1BwtrackerSiteCsvPostRequest(v1BwtrackerSiteCsvPostRequest).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1BwtrackerSiteCsvPost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1BwtrackerSiteCsvPost`: V1BwtrackerEnterpriseCsvPost200Response
+	// response from `V1BwtrackerSiteCsvPost`: V1BwtrackerSiteCsvPostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1BwtrackerSiteCsvPost`: %v\n", resp)
 }
 ```
@@ -4303,11 +4816,11 @@ Other parameters are passed through a pointer to a apiV1BwtrackerSiteCsvPostRequ
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **string** | Bearer token. Format: Bearer &lt;your_token_here&gt; | 
- **v1BwtrackerRegionSiteChartPostRequest** | [**V1BwtrackerRegionSiteChartPostRequest**](V1BwtrackerRegionSiteChartPostRequest.md) |  | 
+ **v1BwtrackerSiteCsvPostRequest** | [**V1BwtrackerSiteCsvPostRequest**](V1BwtrackerSiteCsvPostRequest.md) |  | 
 
 ### Return type
 
-[**V1BwtrackerEnterpriseCsvPost200Response**](V1BwtrackerEnterpriseCsvPost200Response.md)
+[**V1BwtrackerSiteCsvPostResponse**](V1BwtrackerSiteCsvPostResponse.md)
 
 ### Authorization
 
@@ -4325,7 +4838,7 @@ Name | Type | Description  | Notes
 
 ## V1BwtrackerSiteGatewayCsvPost
 
-> V1BwtrackerEnterpriseCsvPost200Response V1BwtrackerSiteGatewayCsvPost(ctx).Authorization(authorization).V1BwtrackerRegionSiteChartPostRequest(v1BwtrackerRegionSiteChartPostRequest).Execute()
+> V1BwtrackerSiteGatewayCsvPostResponse V1BwtrackerSiteGatewayCsvPost(ctx).Authorization(authorization).V1BwtrackerSiteGatewayCsvPostRequest(v1BwtrackerSiteGatewayCsvPostRequest).Execute()
 
 
 
@@ -4343,16 +4856,16 @@ import (
 
 func main() {
 	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
-	v1BwtrackerRegionSiteChartPostRequest := *openapiclient.NewV1BwtrackerRegionSiteChartPostRequest() // V1BwtrackerRegionSiteChartPostRequest | 
+	v1BwtrackerSiteGatewayCsvPostRequest := *openapiclient.NewV1BwtrackerSiteGatewayCsvPostRequest() // V1BwtrackerSiteGatewayCsvPostRequest | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.DefaultAPI.V1BwtrackerSiteGatewayCsvPost(context.Background()).Authorization(authorization).V1BwtrackerRegionSiteChartPostRequest(v1BwtrackerRegionSiteChartPostRequest).Execute()
+	resp, r, err := apiClient.DefaultAPI.V1BwtrackerSiteGatewayCsvPost(context.Background()).Authorization(authorization).V1BwtrackerSiteGatewayCsvPostRequest(v1BwtrackerSiteGatewayCsvPostRequest).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1BwtrackerSiteGatewayCsvPost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1BwtrackerSiteGatewayCsvPost`: V1BwtrackerEnterpriseCsvPost200Response
+	// response from `V1BwtrackerSiteGatewayCsvPost`: V1BwtrackerSiteGatewayCsvPostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1BwtrackerSiteGatewayCsvPost`: %v\n", resp)
 }
 ```
@@ -4369,11 +4882,11 @@ Other parameters are passed through a pointer to a apiV1BwtrackerSiteGatewayCsvP
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **string** | Bearer token. Format: Bearer &lt;your_token_here&gt; | 
- **v1BwtrackerRegionSiteChartPostRequest** | [**V1BwtrackerRegionSiteChartPostRequest**](V1BwtrackerRegionSiteChartPostRequest.md) |  | 
+ **v1BwtrackerSiteGatewayCsvPostRequest** | [**V1BwtrackerSiteGatewayCsvPostRequest**](V1BwtrackerSiteGatewayCsvPostRequest.md) |  | 
 
 ### Return type
 
-[**V1BwtrackerEnterpriseCsvPost200Response**](V1BwtrackerEnterpriseCsvPost200Response.md)
+[**V1BwtrackerSiteGatewayCsvPostResponse**](V1BwtrackerSiteGatewayCsvPostResponse.md)
 
 ### Authorization
 
@@ -4391,7 +4904,9 @@ Name | Type | Description  | Notes
 
 ## V1DataAssuranceAssurancesApplicationsBucketAppNameGet
 
-> V1DataAssuranceAssurancesApplicationsBucketAppNameGet200Response V1DataAssuranceAssurancesApplicationsBucketAppNameGet(ctx, bucketAppName).Authorization(authorization).Execute()
+> V1DataAssuranceAssurancesApplicationsBucketAppNameGetResponse V1DataAssuranceAssurancesApplicationsBucketAppNameGet(ctx, bucketAppName).Authorization(authorization).Execute()
+
+
 
 
 
@@ -4418,7 +4933,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1DataAssuranceAssurancesApplicationsBucketAppNameGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1DataAssuranceAssurancesApplicationsBucketAppNameGet`: V1DataAssuranceAssurancesApplicationsBucketAppNameGet200Response
+	// response from `V1DataAssuranceAssurancesApplicationsBucketAppNameGet`: V1DataAssuranceAssurancesApplicationsBucketAppNameGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1DataAssuranceAssurancesApplicationsBucketAppNameGet`: %v\n", resp)
 }
 ```
@@ -4443,7 +4958,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1DataAssuranceAssurancesApplicationsBucketAppNameGet200Response**](V1DataAssuranceAssurancesApplicationsBucketAppNameGet200Response.md)
+[**V1DataAssuranceAssurancesApplicationsBucketAppNameGetResponse**](V1DataAssuranceAssurancesApplicationsBucketAppNameGetResponse.md)
 
 ### Authorization
 
@@ -4461,7 +4976,9 @@ Name | Type | Description  | Notes
 
 ## V1DataAssuranceAssurancesGlobalGet
 
-> V1DataAssuranceAssurancesGlobalGet200Response V1DataAssuranceAssurancesGlobalGet(ctx).Authorization(authorization).Execute()
+> V1DataAssuranceAssurancesGlobalGetResponse V1DataAssuranceAssurancesGlobalGet(ctx).Authorization(authorization).Execute()
+
+
 
 
 
@@ -4487,7 +5004,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1DataAssuranceAssurancesGlobalGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1DataAssuranceAssurancesGlobalGet`: V1DataAssuranceAssurancesGlobalGet200Response
+	// response from `V1DataAssuranceAssurancesGlobalGet`: V1DataAssuranceAssurancesGlobalGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1DataAssuranceAssurancesGlobalGet`: %v\n", resp)
 }
 ```
@@ -4507,7 +5024,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1DataAssuranceAssurancesGlobalGet200Response**](V1DataAssuranceAssurancesGlobalGet200Response.md)
+[**V1DataAssuranceAssurancesGlobalGetResponse**](V1DataAssuranceAssurancesGlobalGetResponse.md)
 
 ### Authorization
 
@@ -4526,6 +5043,8 @@ Name | Type | Description  | Notes
 ## V1DataAssuranceAssurancesGlobalIdDelete
 
 > map[string]interface{} V1DataAssuranceAssurancesGlobalIdDelete(ctx, id).Authorization(authorization).Execute()
+
+
 
 
 
@@ -4595,7 +5114,9 @@ Name | Type | Description  | Notes
 
 ## V1DataAssuranceAssurancesGlobalIdGet
 
-> V1DataAssuranceAssurancesGlobalPostRequest V1DataAssuranceAssurancesGlobalIdGet(ctx, id).Authorization(authorization).Execute()
+> V1DataAssuranceAssurancesGlobalIdGetResponse V1DataAssuranceAssurancesGlobalIdGet(ctx, id).Authorization(authorization).Execute()
+
+
 
 
 
@@ -4622,7 +5143,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1DataAssuranceAssurancesGlobalIdGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1DataAssuranceAssurancesGlobalIdGet`: V1DataAssuranceAssurancesGlobalPostRequest
+	// response from `V1DataAssuranceAssurancesGlobalIdGet`: V1DataAssuranceAssurancesGlobalIdGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1DataAssuranceAssurancesGlobalIdGet`: %v\n", resp)
 }
 ```
@@ -4647,7 +5168,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1DataAssuranceAssurancesGlobalPostRequest**](V1DataAssuranceAssurancesGlobalPostRequest.md)
+[**V1DataAssuranceAssurancesGlobalIdGetResponse**](V1DataAssuranceAssurancesGlobalIdGetResponse.md)
 
 ### Authorization
 
@@ -4665,7 +5186,9 @@ Name | Type | Description  | Notes
 
 ## V1DataAssuranceAssurancesGlobalIdPut
 
-> V1DataAssuranceAssurancesGlobalIdPut200Response V1DataAssuranceAssurancesGlobalIdPut(ctx, id).Authorization(authorization).V1DataAssuranceAssurancesGlobalIdPutRequest(v1DataAssuranceAssurancesGlobalIdPutRequest).Execute()
+> V1DataAssuranceAssurancesGlobalIdPutResponse V1DataAssuranceAssurancesGlobalIdPut(ctx, id).Authorization(authorization).V1DataAssuranceAssurancesGlobalIdPutRequest(v1DataAssuranceAssurancesGlobalIdPutRequest).Execute()
+
+
 
 
 
@@ -4693,7 +5216,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1DataAssuranceAssurancesGlobalIdPut``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1DataAssuranceAssurancesGlobalIdPut`: V1DataAssuranceAssurancesGlobalIdPut200Response
+	// response from `V1DataAssuranceAssurancesGlobalIdPut`: V1DataAssuranceAssurancesGlobalIdPutResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1DataAssuranceAssurancesGlobalIdPut`: %v\n", resp)
 }
 ```
@@ -4719,7 +5242,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1DataAssuranceAssurancesGlobalIdPut200Response**](V1DataAssuranceAssurancesGlobalIdPut200Response.md)
+[**V1DataAssuranceAssurancesGlobalIdPutResponse**](V1DataAssuranceAssurancesGlobalIdPutResponse.md)
 
 ### Authorization
 
@@ -4737,7 +5260,9 @@ Name | Type | Description  | Notes
 
 ## V1DataAssuranceAssurancesGlobalPost
 
-> V1DataAssuranceAssurancesGlobalPost200Response V1DataAssuranceAssurancesGlobalPost(ctx).Authorization(authorization).V1DataAssuranceAssurancesGlobalPostRequest(v1DataAssuranceAssurancesGlobalPostRequest).Execute()
+> V1DataAssuranceAssurancesGlobalPostResponse V1DataAssuranceAssurancesGlobalPost(ctx).Authorization(authorization).V1DataAssuranceAssurancesGlobalPostRequest(v1DataAssuranceAssurancesGlobalPostRequest).Execute()
+
+
 
 
 
@@ -4764,7 +5289,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1DataAssuranceAssurancesGlobalPost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1DataAssuranceAssurancesGlobalPost`: V1DataAssuranceAssurancesGlobalPost200Response
+	// response from `V1DataAssuranceAssurancesGlobalPost`: V1DataAssuranceAssurancesGlobalPostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1DataAssuranceAssurancesGlobalPost`: %v\n", resp)
 }
 ```
@@ -4785,7 +5310,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1DataAssuranceAssurancesGlobalPost200Response**](V1DataAssuranceAssurancesGlobalPost200Response.md)
+[**V1DataAssuranceAssurancesGlobalPostResponse**](V1DataAssuranceAssurancesGlobalPostResponse.md)
 
 ### Authorization
 
@@ -4803,7 +5328,9 @@ Name | Type | Description  | Notes
 
 ## V1DataAssuranceFlexAlgosGet
 
-> V1DataAssuranceFlexAlgosGet200Response V1DataAssuranceFlexAlgosGet(ctx).Authorization(authorization).Execute()
+> V1DataAssuranceFlexAlgosGetResponse V1DataAssuranceFlexAlgosGet(ctx).Authorization(authorization).Execute()
+
+
 
 
 
@@ -4829,7 +5356,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1DataAssuranceFlexAlgosGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1DataAssuranceFlexAlgosGet`: V1DataAssuranceFlexAlgosGet200Response
+	// response from `V1DataAssuranceFlexAlgosGet`: V1DataAssuranceFlexAlgosGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1DataAssuranceFlexAlgosGet`: %v\n", resp)
 }
 ```
@@ -4849,7 +5376,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1DataAssuranceFlexAlgosGet200Response**](V1DataAssuranceFlexAlgosGet200Response.md)
+[**V1DataAssuranceFlexAlgosGetResponse**](V1DataAssuranceFlexAlgosGetResponse.md)
 
 ### Authorization
 
@@ -4867,7 +5394,9 @@ Name | Type | Description  | Notes
 
 ## V1DeviceRoutingBgpNbrStatsGet
 
-> V1DeviceRoutingBgpNbrStatsGet200Response V1DeviceRoutingBgpNbrStatsGet(ctx).Authorization(authorization).AfiName(afiName).DeviceId(deviceId).InstanceName(instanceName).NbrAddress(nbrAddress).Last(last).VrfName(vrfName).Execute()
+> V1DeviceRoutingBgpNbrStatsGetResponse V1DeviceRoutingBgpNbrStatsGet(ctx).Authorization(authorization).AfiName(afiName).DeviceId(deviceId).NbrAddress(nbrAddress).VrfName(vrfName).InstanceName(instanceName).Execute()
+
+
 
 
 
@@ -4885,21 +5414,20 @@ import (
 
 func main() {
 	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
-	afiName := "ipv4-unicast" // string | Valid configured BGP AfiSafi (optional)
-	deviceId := int64(1000000) // int64 | Valid configured device ID > 0 (optional)
+	afiName := "ipv4-unicast" // string | Valid configured BGP AfiSafi
+	deviceId := int64(1000000) // int64 | Valid configured device ID > 0
+	nbrAddress := "1314:1:abcd::1dea" // string | Valid configured BGP Nbr address
+	vrfName := "default" // string | Valid configured VRF name
 	instanceName := "BGP-ODP" // string | Valid configured BGP Instance name (optional)
-	nbrAddress := "1314:1:abcd::1dea" // string | Valid configured BGP Nbr address (optional)
-	last := int32(123) // int32 |  (optional)
-	vrfName := "default" // string | Valid configured VRF name (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.DefaultAPI.V1DeviceRoutingBgpNbrStatsGet(context.Background()).Authorization(authorization).AfiName(afiName).DeviceId(deviceId).InstanceName(instanceName).NbrAddress(nbrAddress).Last(last).VrfName(vrfName).Execute()
+	resp, r, err := apiClient.DefaultAPI.V1DeviceRoutingBgpNbrStatsGet(context.Background()).Authorization(authorization).AfiName(afiName).DeviceId(deviceId).NbrAddress(nbrAddress).VrfName(vrfName).InstanceName(instanceName).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1DeviceRoutingBgpNbrStatsGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1DeviceRoutingBgpNbrStatsGet`: V1DeviceRoutingBgpNbrStatsGet200Response
+	// response from `V1DeviceRoutingBgpNbrStatsGet`: V1DeviceRoutingBgpNbrStatsGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1DeviceRoutingBgpNbrStatsGet`: %v\n", resp)
 }
 ```
@@ -4918,14 +5446,13 @@ Name | Type | Description  | Notes
  **authorization** | **string** | Bearer token. Format: Bearer &lt;your_token_here&gt; | 
  **afiName** | **string** | Valid configured BGP AfiSafi | 
  **deviceId** | **int64** | Valid configured device ID &gt; 0 | 
- **instanceName** | **string** | Valid configured BGP Instance name | 
  **nbrAddress** | **string** | Valid configured BGP Nbr address | 
- **last** | **int32** |  | 
  **vrfName** | **string** | Valid configured VRF name | 
+ **instanceName** | **string** | Valid configured BGP Instance name | 
 
 ### Return type
 
-[**V1DeviceRoutingBgpNbrStatsGet200Response**](V1DeviceRoutingBgpNbrStatsGet200Response.md)
+[**V1DeviceRoutingBgpNbrStatsGetResponse**](V1DeviceRoutingBgpNbrStatsGetResponse.md)
 
 ### Authorization
 
@@ -4943,7 +5470,9 @@ Name | Type | Description  | Notes
 
 ## V1DeviceRoutingBgpNbridGet
 
-> V1DeviceRoutingBgpNbridGet200Response V1DeviceRoutingBgpNbridGet(ctx).Authorization(authorization).DeviceId(deviceId).Last(last).VrfName(vrfName).Execute()
+> V1DeviceRoutingBgpNbridGetResponse V1DeviceRoutingBgpNbridGet(ctx).Authorization(authorization).DeviceId(deviceId).VrfName(vrfName).Execute()
+
+
 
 
 
@@ -4961,18 +5490,17 @@ import (
 
 func main() {
 	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
-	deviceId := int64(1000000) // int64 | Valid configured device ID > 0 (optional)
-	last := int32(123) // int32 |  (optional)
-	vrfName := "default" // string | Valid configured VRF name (optional)
+	deviceId := int64(1000000) // int64 | Valid configured device ID > 0
+	vrfName := "default" // string | Valid configured VRF name
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.DefaultAPI.V1DeviceRoutingBgpNbridGet(context.Background()).Authorization(authorization).DeviceId(deviceId).Last(last).VrfName(vrfName).Execute()
+	resp, r, err := apiClient.DefaultAPI.V1DeviceRoutingBgpNbridGet(context.Background()).Authorization(authorization).DeviceId(deviceId).VrfName(vrfName).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1DeviceRoutingBgpNbridGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1DeviceRoutingBgpNbridGet`: V1DeviceRoutingBgpNbridGet200Response
+	// response from `V1DeviceRoutingBgpNbridGet`: V1DeviceRoutingBgpNbridGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1DeviceRoutingBgpNbridGet`: %v\n", resp)
 }
 ```
@@ -4990,12 +5518,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **string** | Bearer token. Format: Bearer &lt;your_token_here&gt; | 
  **deviceId** | **int64** | Valid configured device ID &gt; 0 | 
- **last** | **int32** |  | 
  **vrfName** | **string** | Valid configured VRF name | 
 
 ### Return type
 
-[**V1DeviceRoutingBgpNbridGet200Response**](V1DeviceRoutingBgpNbridGet200Response.md)
+[**V1DeviceRoutingBgpNbridGetResponse**](V1DeviceRoutingBgpNbridGetResponse.md)
 
 ### Authorization
 
@@ -5013,7 +5540,9 @@ Name | Type | Description  | Notes
 
 ## V1DeviceRoutingBgpNbrsCountersGet
 
-> V1DeviceRoutingBgpNbrsCountersGet200Response V1DeviceRoutingBgpNbrsCountersGet(ctx).Authorization(authorization).Execute()
+> V1DeviceRoutingBgpNbrsCountersGetResponse V1DeviceRoutingBgpNbrsCountersGet(ctx).Authorization(authorization).Execute()
+
+
 
 
 
@@ -5039,7 +5568,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1DeviceRoutingBgpNbrsCountersGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1DeviceRoutingBgpNbrsCountersGet`: V1DeviceRoutingBgpNbrsCountersGet200Response
+	// response from `V1DeviceRoutingBgpNbrsCountersGet`: V1DeviceRoutingBgpNbrsCountersGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1DeviceRoutingBgpNbrsCountersGet`: %v\n", resp)
 }
 ```
@@ -5059,7 +5588,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1DeviceRoutingBgpNbrsCountersGet200Response**](V1DeviceRoutingBgpNbrsCountersGet200Response.md)
+[**V1DeviceRoutingBgpNbrsCountersGetResponse**](V1DeviceRoutingBgpNbrsCountersGetResponse.md)
 
 ### Authorization
 
@@ -5077,7 +5606,9 @@ Name | Type | Description  | Notes
 
 ## V1DeviceRoutingBgpNbrsDetailsGet
 
-> V1DeviceRoutingBgpNbrsDetailsGet200Response V1DeviceRoutingBgpNbrsDetailsGet(ctx).Authorization(authorization).Address(address).DeviceId(deviceId).Interface_(interface_).VrfName(vrfName).Execute()
+> V1DeviceRoutingBgpNbrsDetailsGetResponse V1DeviceRoutingBgpNbrsDetailsGet(ctx).Authorization(authorization).Address(address).DeviceId(deviceId).VrfName(vrfName).Interface_(interface_).Execute()
+
+
 
 
 
@@ -5095,19 +5626,19 @@ import (
 
 func main() {
 	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
-	address := "10.121.12.34" // string | BGP Nbr address (optional)
-	deviceId := int64(1000000) // int64 | Valid configured device ID > 0 (optional)
+	address := "10.121.12.34" // string | BGP Nbr address
+	deviceId := int64(1000000) // int64 | Valid configured device ID > 0
+	vrfName := "default" // string | Valid configured VRF name
 	interface_ := "Ethernet3/0" // string | Interface name. Used in case of link local address (optional)
-	vrfName := "default" // string | Valid configured VRF name (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.DefaultAPI.V1DeviceRoutingBgpNbrsDetailsGet(context.Background()).Authorization(authorization).Address(address).DeviceId(deviceId).Interface_(interface_).VrfName(vrfName).Execute()
+	resp, r, err := apiClient.DefaultAPI.V1DeviceRoutingBgpNbrsDetailsGet(context.Background()).Authorization(authorization).Address(address).DeviceId(deviceId).VrfName(vrfName).Interface_(interface_).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1DeviceRoutingBgpNbrsDetailsGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1DeviceRoutingBgpNbrsDetailsGet`: V1DeviceRoutingBgpNbrsDetailsGet200Response
+	// response from `V1DeviceRoutingBgpNbrsDetailsGet`: V1DeviceRoutingBgpNbrsDetailsGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1DeviceRoutingBgpNbrsDetailsGet`: %v\n", resp)
 }
 ```
@@ -5126,12 +5657,12 @@ Name | Type | Description  | Notes
  **authorization** | **string** | Bearer token. Format: Bearer &lt;your_token_here&gt; | 
  **address** | **string** | BGP Nbr address | 
  **deviceId** | **int64** | Valid configured device ID &gt; 0 | 
- **interface_** | **string** | Interface name. Used in case of link local address | 
  **vrfName** | **string** | Valid configured VRF name | 
+ **interface_** | **string** | Interface name. Used in case of link local address | 
 
 ### Return type
 
-[**V1DeviceRoutingBgpNbrsDetailsGet200Response**](V1DeviceRoutingBgpNbrsDetailsGet200Response.md)
+[**V1DeviceRoutingBgpNbrsDetailsGetResponse**](V1DeviceRoutingBgpNbrsDetailsGetResponse.md)
 
 ### Authorization
 
@@ -5149,7 +5680,9 @@ Name | Type | Description  | Notes
 
 ## V1DeviceRoutingBgpNbrsPerAfiPrefixGet
 
-> V1DeviceRoutingBgpNbrsPerAfiPrefixGet200Response V1DeviceRoutingBgpNbrsPerAfiPrefixGet(ctx).Authorization(authorization).Address(address).DeviceId(deviceId).Interface_(interface_).VrfName(vrfName).Execute()
+> V1DeviceRoutingBgpNbrsPerAfiPrefixGetResponse V1DeviceRoutingBgpNbrsPerAfiPrefixGet(ctx).Authorization(authorization).Address(address).DeviceId(deviceId).VrfName(vrfName).Interface_(interface_).Execute()
+
+
 
 
 
@@ -5167,19 +5700,19 @@ import (
 
 func main() {
 	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
-	address := "10.121.12.34" // string | BGP Nbr address (optional)
-	deviceId := int64(1000000) // int64 | Valid configured device ID > 0 (optional)
+	address := "10.121.12.34" // string | BGP Nbr address
+	deviceId := int64(1000000) // int64 | Valid configured device ID > 0
+	vrfName := "default" // string | Valid configured VRF name
 	interface_ := "Ethernet3/0" // string | Interface name. Used in case of link local address (optional)
-	vrfName := "default" // string | Valid configured VRF name (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.DefaultAPI.V1DeviceRoutingBgpNbrsPerAfiPrefixGet(context.Background()).Authorization(authorization).Address(address).DeviceId(deviceId).Interface_(interface_).VrfName(vrfName).Execute()
+	resp, r, err := apiClient.DefaultAPI.V1DeviceRoutingBgpNbrsPerAfiPrefixGet(context.Background()).Authorization(authorization).Address(address).DeviceId(deviceId).VrfName(vrfName).Interface_(interface_).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1DeviceRoutingBgpNbrsPerAfiPrefixGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1DeviceRoutingBgpNbrsPerAfiPrefixGet`: V1DeviceRoutingBgpNbrsPerAfiPrefixGet200Response
+	// response from `V1DeviceRoutingBgpNbrsPerAfiPrefixGet`: V1DeviceRoutingBgpNbrsPerAfiPrefixGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1DeviceRoutingBgpNbrsPerAfiPrefixGet`: %v\n", resp)
 }
 ```
@@ -5198,12 +5731,12 @@ Name | Type | Description  | Notes
  **authorization** | **string** | Bearer token. Format: Bearer &lt;your_token_here&gt; | 
  **address** | **string** | BGP Nbr address | 
  **deviceId** | **int64** | Valid configured device ID &gt; 0 | 
- **interface_** | **string** | Interface name. Used in case of link local address | 
  **vrfName** | **string** | Valid configured VRF name | 
+ **interface_** | **string** | Interface name. Used in case of link local address | 
 
 ### Return type
 
-[**V1DeviceRoutingBgpNbrsPerAfiPrefixGet200Response**](V1DeviceRoutingBgpNbrsPerAfiPrefixGet200Response.md)
+[**V1DeviceRoutingBgpNbrsPerAfiPrefixGetResponse**](V1DeviceRoutingBgpNbrsPerAfiPrefixGetResponse.md)
 
 ### Authorization
 
@@ -5221,7 +5754,9 @@ Name | Type | Description  | Notes
 
 ## V1DeviceRoutingOdpNbridGet
 
-> V1DeviceRoutingBgpNbridGet200Response V1DeviceRoutingOdpNbridGet(ctx).Authorization(authorization).DeviceId(deviceId).Last(last).VrfName(vrfName).Execute()
+> V1DeviceRoutingOdpNbridGetResponse V1DeviceRoutingOdpNbridGet(ctx).Authorization(authorization).DeviceId(deviceId).VrfName(vrfName).Execute()
+
+
 
 
 
@@ -5239,18 +5774,17 @@ import (
 
 func main() {
 	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
-	deviceId := int64(1000000) // int64 | Valid configured device ID > 0 (optional)
-	last := int32(123) // int32 |  (optional)
-	vrfName := "default" // string | Valid configured VRF name (optional)
+	deviceId := int64(1000000) // int64 | Valid configured device ID > 0
+	vrfName := "default" // string | Valid configured VRF name
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.DefaultAPI.V1DeviceRoutingOdpNbridGet(context.Background()).Authorization(authorization).DeviceId(deviceId).Last(last).VrfName(vrfName).Execute()
+	resp, r, err := apiClient.DefaultAPI.V1DeviceRoutingOdpNbridGet(context.Background()).Authorization(authorization).DeviceId(deviceId).VrfName(vrfName).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1DeviceRoutingOdpNbridGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1DeviceRoutingOdpNbridGet`: V1DeviceRoutingBgpNbridGet200Response
+	// response from `V1DeviceRoutingOdpNbridGet`: V1DeviceRoutingOdpNbridGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1DeviceRoutingOdpNbridGet`: %v\n", resp)
 }
 ```
@@ -5268,12 +5802,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **string** | Bearer token. Format: Bearer &lt;your_token_here&gt; | 
  **deviceId** | **int64** | Valid configured device ID &gt; 0 | 
- **last** | **int32** |  | 
  **vrfName** | **string** | Valid configured VRF name | 
 
 ### Return type
 
-[**V1DeviceRoutingBgpNbridGet200Response**](V1DeviceRoutingBgpNbridGet200Response.md)
+[**V1DeviceRoutingOdpNbridGetResponse**](V1DeviceRoutingOdpNbridGetResponse.md)
 
 ### Authorization
 
@@ -5291,7 +5824,9 @@ Name | Type | Description  | Notes
 
 ## V1DeviceRoutingOspfv2AreaInterfaceGet
 
-> V1DeviceRoutingOspfv2AreaInterfaceGet200Response V1DeviceRoutingOspfv2AreaInterfaceGet(ctx).Authorization(authorization).AreaId(areaId).DeviceId(deviceId).InstanceName(instanceName).Last(last).VrfName(vrfName).Execute()
+> V1DeviceRoutingOspfv2AreaInterfaceGetResponse V1DeviceRoutingOspfv2AreaInterfaceGet(ctx).Authorization(authorization).AreaId(areaId).DeviceId(deviceId).VrfName(vrfName).InstanceName(instanceName).Execute()
+
+
 
 
 
@@ -5309,20 +5844,19 @@ import (
 
 func main() {
 	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
-	areaId := "0.0.0.0" // string | Valid configured Area ID (optional)
-	deviceId := int64(1000000) // int64 | Valid configured device ID > 0 (optional)
+	areaId := "0.0.0.0" // string | Valid configured Area ID
+	deviceId := int64(1000000) // int64 | Valid configured device ID > 0
+	vrfName := "default" // string | Valid configured VRF name
 	instanceName := "OSPF1" // string | Valid configured OSPF Instance name (optional)
-	last := int32(123) // int32 |  (optional)
-	vrfName := "default" // string | Valid configured VRF name (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.DefaultAPI.V1DeviceRoutingOspfv2AreaInterfaceGet(context.Background()).Authorization(authorization).AreaId(areaId).DeviceId(deviceId).InstanceName(instanceName).Last(last).VrfName(vrfName).Execute()
+	resp, r, err := apiClient.DefaultAPI.V1DeviceRoutingOspfv2AreaInterfaceGet(context.Background()).Authorization(authorization).AreaId(areaId).DeviceId(deviceId).VrfName(vrfName).InstanceName(instanceName).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1DeviceRoutingOspfv2AreaInterfaceGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1DeviceRoutingOspfv2AreaInterfaceGet`: V1DeviceRoutingOspfv2AreaInterfaceGet200Response
+	// response from `V1DeviceRoutingOspfv2AreaInterfaceGet`: V1DeviceRoutingOspfv2AreaInterfaceGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1DeviceRoutingOspfv2AreaInterfaceGet`: %v\n", resp)
 }
 ```
@@ -5341,13 +5875,12 @@ Name | Type | Description  | Notes
  **authorization** | **string** | Bearer token. Format: Bearer &lt;your_token_here&gt; | 
  **areaId** | **string** | Valid configured Area ID | 
  **deviceId** | **int64** | Valid configured device ID &gt; 0 | 
- **instanceName** | **string** | Valid configured OSPF Instance name | 
- **last** | **int32** |  | 
  **vrfName** | **string** | Valid configured VRF name | 
+ **instanceName** | **string** | Valid configured OSPF Instance name | 
 
 ### Return type
 
-[**V1DeviceRoutingOspfv2AreaInterfaceGet200Response**](V1DeviceRoutingOspfv2AreaInterfaceGet200Response.md)
+[**V1DeviceRoutingOspfv2AreaInterfaceGetResponse**](V1DeviceRoutingOspfv2AreaInterfaceGetResponse.md)
 
 ### Authorization
 
@@ -5365,7 +5898,9 @@ Name | Type | Description  | Notes
 
 ## V1DeviceRoutingOspfv2AreaInterfaceNbridGet
 
-> V1DeviceRoutingOspfv2AreaInterfaceNbridGet200Response V1DeviceRoutingOspfv2AreaInterfaceNbridGet(ctx).Authorization(authorization).AreaId(areaId).DeviceId(deviceId).InstanceName(instanceName).InterfaceId(interfaceId).Last(last).VrfName(vrfName).Execute()
+> V1DeviceRoutingOspfv2AreaInterfaceNbridGetResponse V1DeviceRoutingOspfv2AreaInterfaceNbridGet(ctx).Authorization(authorization).AreaId(areaId).DeviceId(deviceId).InterfaceId(interfaceId).VrfName(vrfName).InstanceName(instanceName).Execute()
+
+
 
 
 
@@ -5383,21 +5918,20 @@ import (
 
 func main() {
 	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
-	areaId := "0.0.0.0" // string | Valid configured Area ID (optional)
-	deviceId := int64(1000000) // int64 | Valid configured device ID > 0 (optional)
+	areaId := "0.0.0.0" // string | Valid configured Area ID
+	deviceId := int64(1000000) // int64 | Valid configured device ID > 0
+	interfaceId := "ToATT, ISP2" // string | Valid configured Interface name
+	vrfName := "default" // string | Valid configured VRF name
 	instanceName := "OSPF1" // string | Valid configured OSPF Instance name (optional)
-	interfaceId := "ToATT, ISP2" // string | Valid configured Interface name (optional)
-	last := int32(123) // int32 |  (optional)
-	vrfName := "default" // string | Valid configured VRF name (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.DefaultAPI.V1DeviceRoutingOspfv2AreaInterfaceNbridGet(context.Background()).Authorization(authorization).AreaId(areaId).DeviceId(deviceId).InstanceName(instanceName).InterfaceId(interfaceId).Last(last).VrfName(vrfName).Execute()
+	resp, r, err := apiClient.DefaultAPI.V1DeviceRoutingOspfv2AreaInterfaceNbridGet(context.Background()).Authorization(authorization).AreaId(areaId).DeviceId(deviceId).InterfaceId(interfaceId).VrfName(vrfName).InstanceName(instanceName).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1DeviceRoutingOspfv2AreaInterfaceNbridGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1DeviceRoutingOspfv2AreaInterfaceNbridGet`: V1DeviceRoutingOspfv2AreaInterfaceNbridGet200Response
+	// response from `V1DeviceRoutingOspfv2AreaInterfaceNbridGet`: V1DeviceRoutingOspfv2AreaInterfaceNbridGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1DeviceRoutingOspfv2AreaInterfaceNbridGet`: %v\n", resp)
 }
 ```
@@ -5416,14 +5950,13 @@ Name | Type | Description  | Notes
  **authorization** | **string** | Bearer token. Format: Bearer &lt;your_token_here&gt; | 
  **areaId** | **string** | Valid configured Area ID | 
  **deviceId** | **int64** | Valid configured device ID &gt; 0 | 
- **instanceName** | **string** | Valid configured OSPF Instance name | 
  **interfaceId** | **string** | Valid configured Interface name | 
- **last** | **int32** |  | 
  **vrfName** | **string** | Valid configured VRF name | 
+ **instanceName** | **string** | Valid configured OSPF Instance name | 
 
 ### Return type
 
-[**V1DeviceRoutingOspfv2AreaInterfaceNbridGet200Response**](V1DeviceRoutingOspfv2AreaInterfaceNbridGet200Response.md)
+[**V1DeviceRoutingOspfv2AreaInterfaceNbridGetResponse**](V1DeviceRoutingOspfv2AreaInterfaceNbridGetResponse.md)
 
 ### Authorization
 
@@ -5441,7 +5974,9 @@ Name | Type | Description  | Notes
 
 ## V1DeviceRoutingOspfv2AreaInterfaceidGet
 
-> V1DeviceRoutingOspfv2AreaInterfaceidGet200Response V1DeviceRoutingOspfv2AreaInterfaceidGet(ctx).Authorization(authorization).AreaId(areaId).DeviceId(deviceId).InstanceName(instanceName).Last(last).VrfName(vrfName).Execute()
+> V1DeviceRoutingOspfv2AreaInterfaceidGetResponse V1DeviceRoutingOspfv2AreaInterfaceidGet(ctx).Authorization(authorization).AreaId(areaId).DeviceId(deviceId).VrfName(vrfName).InstanceName(instanceName).Execute()
+
+
 
 
 
@@ -5459,20 +5994,19 @@ import (
 
 func main() {
 	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
-	areaId := "0.0.0.0" // string | Valid configured Area ID (optional)
-	deviceId := int64(1000000) // int64 | Valid configured device ID > 0 (optional)
+	areaId := "0.0.0.0" // string | Valid configured Area ID
+	deviceId := int64(1000000) // int64 | Valid configured device ID > 0
+	vrfName := "default" // string | Valid configured VRF name
 	instanceName := "OSPF1" // string | Valid configured OSPF Instance name (optional)
-	last := int32(123) // int32 |  (optional)
-	vrfName := "default" // string | Valid configured VRF name (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.DefaultAPI.V1DeviceRoutingOspfv2AreaInterfaceidGet(context.Background()).Authorization(authorization).AreaId(areaId).DeviceId(deviceId).InstanceName(instanceName).Last(last).VrfName(vrfName).Execute()
+	resp, r, err := apiClient.DefaultAPI.V1DeviceRoutingOspfv2AreaInterfaceidGet(context.Background()).Authorization(authorization).AreaId(areaId).DeviceId(deviceId).VrfName(vrfName).InstanceName(instanceName).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1DeviceRoutingOspfv2AreaInterfaceidGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1DeviceRoutingOspfv2AreaInterfaceidGet`: V1DeviceRoutingOspfv2AreaInterfaceidGet200Response
+	// response from `V1DeviceRoutingOspfv2AreaInterfaceidGet`: V1DeviceRoutingOspfv2AreaInterfaceidGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1DeviceRoutingOspfv2AreaInterfaceidGet`: %v\n", resp)
 }
 ```
@@ -5491,13 +6025,12 @@ Name | Type | Description  | Notes
  **authorization** | **string** | Bearer token. Format: Bearer &lt;your_token_here&gt; | 
  **areaId** | **string** | Valid configured Area ID | 
  **deviceId** | **int64** | Valid configured device ID &gt; 0 | 
- **instanceName** | **string** | Valid configured OSPF Instance name | 
- **last** | **int32** |  | 
  **vrfName** | **string** | Valid configured VRF name | 
+ **instanceName** | **string** | Valid configured OSPF Instance name | 
 
 ### Return type
 
-[**V1DeviceRoutingOspfv2AreaInterfaceidGet200Response**](V1DeviceRoutingOspfv2AreaInterfaceidGet200Response.md)
+[**V1DeviceRoutingOspfv2AreaInterfaceidGetResponse**](V1DeviceRoutingOspfv2AreaInterfaceidGetResponse.md)
 
 ### Authorization
 
@@ -5515,7 +6048,9 @@ Name | Type | Description  | Notes
 
 ## V1DeviceRoutingOspfv2AreaLsdbGet
 
-> V1DeviceRoutingOspfv2AreaLsdbGet200Response V1DeviceRoutingOspfv2AreaLsdbGet(ctx).Authorization(authorization).AreaId(areaId).DeviceId(deviceId).InstanceName(instanceName).Last(last).VrfName(vrfName).Execute()
+> V1DeviceRoutingOspfv2AreaLsdbGetResponse V1DeviceRoutingOspfv2AreaLsdbGet(ctx).Authorization(authorization).AreaId(areaId).DeviceId(deviceId).InstanceName(instanceName).VrfName(vrfName).Execute()
+
+
 
 
 
@@ -5533,20 +6068,19 @@ import (
 
 func main() {
 	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
-	areaId := "0.0.0.0" // string | Valid configured Area ID (optional)
-	deviceId := int64(1000000) // int64 | Valid configured device ID > 0 (optional)
-	instanceName := "OSPF1" // string | Valid configured OSPF Instance name (optional)
-	last := int32(123) // int32 |  (optional)
-	vrfName := "default" // string | Valid configured VRF name (optional)
+	areaId := "0.0.0.0" // string | Valid configured Area ID
+	deviceId := int64(1000000) // int64 | Valid configured device ID > 0
+	instanceName := "OSPF1" // string | Valid configured OSPF Instance name
+	vrfName := "default" // string | Valid configured VRF name
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.DefaultAPI.V1DeviceRoutingOspfv2AreaLsdbGet(context.Background()).Authorization(authorization).AreaId(areaId).DeviceId(deviceId).InstanceName(instanceName).Last(last).VrfName(vrfName).Execute()
+	resp, r, err := apiClient.DefaultAPI.V1DeviceRoutingOspfv2AreaLsdbGet(context.Background()).Authorization(authorization).AreaId(areaId).DeviceId(deviceId).InstanceName(instanceName).VrfName(vrfName).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1DeviceRoutingOspfv2AreaLsdbGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1DeviceRoutingOspfv2AreaLsdbGet`: V1DeviceRoutingOspfv2AreaLsdbGet200Response
+	// response from `V1DeviceRoutingOspfv2AreaLsdbGet`: V1DeviceRoutingOspfv2AreaLsdbGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1DeviceRoutingOspfv2AreaLsdbGet`: %v\n", resp)
 }
 ```
@@ -5566,12 +6100,11 @@ Name | Type | Description  | Notes
  **areaId** | **string** | Valid configured Area ID | 
  **deviceId** | **int64** | Valid configured device ID &gt; 0 | 
  **instanceName** | **string** | Valid configured OSPF Instance name | 
- **last** | **int32** |  | 
  **vrfName** | **string** | Valid configured VRF name | 
 
 ### Return type
 
-[**V1DeviceRoutingOspfv2AreaLsdbGet200Response**](V1DeviceRoutingOspfv2AreaLsdbGet200Response.md)
+[**V1DeviceRoutingOspfv2AreaLsdbGetResponse**](V1DeviceRoutingOspfv2AreaLsdbGetResponse.md)
 
 ### Authorization
 
@@ -5589,7 +6122,9 @@ Name | Type | Description  | Notes
 
 ## V1DeviceRoutingOspfv2AreaNbrGet
 
-> V1DeviceRoutingOspfv2AreaNbrGet200Response V1DeviceRoutingOspfv2AreaNbrGet(ctx).Authorization(authorization).AreaId(areaId).DeviceId(deviceId).InstanceName(instanceName).Last(last).VrfName(vrfName).Execute()
+> V1DeviceRoutingOspfv2AreaNbrGetResponse V1DeviceRoutingOspfv2AreaNbrGet(ctx).Authorization(authorization).AreaId(areaId).DeviceId(deviceId).VrfName(vrfName).InstanceName(instanceName).Execute()
+
+
 
 
 
@@ -5607,20 +6142,19 @@ import (
 
 func main() {
 	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
-	areaId := "0.0.0.0" // string | Valid configured Area ID (optional)
-	deviceId := int64(1000000) // int64 | Valid configured device ID > 0 (optional)
+	areaId := "0.0.0.0" // string | Valid configured Area ID
+	deviceId := int64(1000000) // int64 | Valid configured device ID > 0
+	vrfName := "default" // string | Valid configured VRF name
 	instanceName := "OSPF1" // string | Valid configured OSPF Instance name (optional)
-	last := int32(123) // int32 |  (optional)
-	vrfName := "default" // string | Valid configured VRF name (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.DefaultAPI.V1DeviceRoutingOspfv2AreaNbrGet(context.Background()).Authorization(authorization).AreaId(areaId).DeviceId(deviceId).InstanceName(instanceName).Last(last).VrfName(vrfName).Execute()
+	resp, r, err := apiClient.DefaultAPI.V1DeviceRoutingOspfv2AreaNbrGet(context.Background()).Authorization(authorization).AreaId(areaId).DeviceId(deviceId).VrfName(vrfName).InstanceName(instanceName).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1DeviceRoutingOspfv2AreaNbrGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1DeviceRoutingOspfv2AreaNbrGet`: V1DeviceRoutingOspfv2AreaNbrGet200Response
+	// response from `V1DeviceRoutingOspfv2AreaNbrGet`: V1DeviceRoutingOspfv2AreaNbrGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1DeviceRoutingOspfv2AreaNbrGet`: %v\n", resp)
 }
 ```
@@ -5639,13 +6173,12 @@ Name | Type | Description  | Notes
  **authorization** | **string** | Bearer token. Format: Bearer &lt;your_token_here&gt; | 
  **areaId** | **string** | Valid configured Area ID | 
  **deviceId** | **int64** | Valid configured device ID &gt; 0 | 
- **instanceName** | **string** | Valid configured OSPF Instance name | 
- **last** | **int32** |  | 
  **vrfName** | **string** | Valid configured VRF name | 
+ **instanceName** | **string** | Valid configured OSPF Instance name | 
 
 ### Return type
 
-[**V1DeviceRoutingOspfv2AreaNbrGet200Response**](V1DeviceRoutingOspfv2AreaNbrGet200Response.md)
+[**V1DeviceRoutingOspfv2AreaNbrGetResponse**](V1DeviceRoutingOspfv2AreaNbrGetResponse.md)
 
 ### Authorization
 
@@ -5663,7 +6196,9 @@ Name | Type | Description  | Notes
 
 ## V1DeviceRoutingOspfv2AreaidGet
 
-> V1DeviceRoutingOspfv2AreaidGet200Response V1DeviceRoutingOspfv2AreaidGet(ctx).Authorization(authorization).DeviceId(deviceId).InstanceName(instanceName).Last(last).VrfName(vrfName).Execute()
+> V1DeviceRoutingOspfv2AreaidGetResponse V1DeviceRoutingOspfv2AreaidGet(ctx).Authorization(authorization).DeviceId(deviceId).VrfName(vrfName).InstanceName(instanceName).Execute()
+
+
 
 
 
@@ -5681,19 +6216,18 @@ import (
 
 func main() {
 	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
-	deviceId := int64(1000000) // int64 | Valid configured device ID > 0 (optional)
+	deviceId := int64(1000000) // int64 | Valid configured device ID > 0
+	vrfName := "default" // string | Valid configured VRF name
 	instanceName := "OSPF1" // string | Valid configured OSPF Instance name (optional)
-	last := int32(123) // int32 |  (optional)
-	vrfName := "default" // string | Valid configured VRF name (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.DefaultAPI.V1DeviceRoutingOspfv2AreaidGet(context.Background()).Authorization(authorization).DeviceId(deviceId).InstanceName(instanceName).Last(last).VrfName(vrfName).Execute()
+	resp, r, err := apiClient.DefaultAPI.V1DeviceRoutingOspfv2AreaidGet(context.Background()).Authorization(authorization).DeviceId(deviceId).VrfName(vrfName).InstanceName(instanceName).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1DeviceRoutingOspfv2AreaidGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1DeviceRoutingOspfv2AreaidGet`: V1DeviceRoutingOspfv2AreaidGet200Response
+	// response from `V1DeviceRoutingOspfv2AreaidGet`: V1DeviceRoutingOspfv2AreaidGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1DeviceRoutingOspfv2AreaidGet`: %v\n", resp)
 }
 ```
@@ -5711,13 +6245,12 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **string** | Bearer token. Format: Bearer &lt;your_token_here&gt; | 
  **deviceId** | **int64** | Valid configured device ID &gt; 0 | 
- **instanceName** | **string** | Valid configured OSPF Instance name | 
- **last** | **int32** |  | 
  **vrfName** | **string** | Valid configured VRF name | 
+ **instanceName** | **string** | Valid configured OSPF Instance name | 
 
 ### Return type
 
-[**V1DeviceRoutingOspfv2AreaidGet200Response**](V1DeviceRoutingOspfv2AreaidGet200Response.md)
+[**V1DeviceRoutingOspfv2AreaidGetResponse**](V1DeviceRoutingOspfv2AreaidGetResponse.md)
 
 ### Authorization
 
@@ -5735,7 +6268,9 @@ Name | Type | Description  | Notes
 
 ## V1DeviceRoutingOspfv2LsdbGet
 
-> V1DeviceRoutingOspfv2AreaLsdbGet200Response V1DeviceRoutingOspfv2LsdbGet(ctx).Authorization(authorization).DeviceId(deviceId).InstanceName(instanceName).Last(last).VrfName(vrfName).Execute()
+> V1DeviceRoutingOspfv2LsdbGetResponse V1DeviceRoutingOspfv2LsdbGet(ctx).Authorization(authorization).DeviceId(deviceId).VrfName(vrfName).InstanceName(instanceName).Execute()
+
+
 
 
 
@@ -5753,19 +6288,18 @@ import (
 
 func main() {
 	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
-	deviceId := int64(1000000) // int64 | Valid configured device ID > 0 (optional)
+	deviceId := int64(1000000) // int64 | Valid configured device ID > 0
+	vrfName := "management" // string | Valid configured VRF name
 	instanceName := "ospf-demo" // string | Valid configured OSPF Instance name (optional)
-	last := int32(123) // int32 |  (optional)
-	vrfName := "management" // string | Valid configured VRF name (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.DefaultAPI.V1DeviceRoutingOspfv2LsdbGet(context.Background()).Authorization(authorization).DeviceId(deviceId).InstanceName(instanceName).Last(last).VrfName(vrfName).Execute()
+	resp, r, err := apiClient.DefaultAPI.V1DeviceRoutingOspfv2LsdbGet(context.Background()).Authorization(authorization).DeviceId(deviceId).VrfName(vrfName).InstanceName(instanceName).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1DeviceRoutingOspfv2LsdbGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1DeviceRoutingOspfv2LsdbGet`: V1DeviceRoutingOspfv2AreaLsdbGet200Response
+	// response from `V1DeviceRoutingOspfv2LsdbGet`: V1DeviceRoutingOspfv2LsdbGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1DeviceRoutingOspfv2LsdbGet`: %v\n", resp)
 }
 ```
@@ -5783,13 +6317,12 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **string** | Bearer token. Format: Bearer &lt;your_token_here&gt; | 
  **deviceId** | **int64** | Valid configured device ID &gt; 0 | 
- **instanceName** | **string** | Valid configured OSPF Instance name | 
- **last** | **int32** |  | 
  **vrfName** | **string** | Valid configured VRF name | 
+ **instanceName** | **string** | Valid configured OSPF Instance name | 
 
 ### Return type
 
-[**V1DeviceRoutingOspfv2AreaLsdbGet200Response**](V1DeviceRoutingOspfv2AreaLsdbGet200Response.md)
+[**V1DeviceRoutingOspfv2LsdbGetResponse**](V1DeviceRoutingOspfv2LsdbGetResponse.md)
 
 ### Authorization
 
@@ -5807,7 +6340,9 @@ Name | Type | Description  | Notes
 
 ## V1DeviceRoutingOspfv2RibGet
 
-> V1DeviceRoutingOspfv2RibGet200Response V1DeviceRoutingOspfv2RibGet(ctx).Authorization(authorization).DeviceId(deviceId).InstanceName(instanceName).Before(before).Last(last).VrfName(vrfName).Execute()
+> V1DeviceRoutingOspfv2RibGetResponse V1DeviceRoutingOspfv2RibGet(ctx).Authorization(authorization).DeviceId(deviceId).VrfName(vrfName).InstanceName(instanceName).Before(before).Last(last).Execute()
+
+
 
 
 
@@ -5825,20 +6360,20 @@ import (
 
 func main() {
 	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
-	deviceId := int64(1000000) // int64 | Valid configured device ID > 0 (optional)
+	deviceId := int64(1000000) // int64 | Valid configured device ID > 0
+	vrfName := "management" // string | Valid configured VRF name
 	instanceName := "BGP-ODP" // string | Valid configured OSPF Instance name (optional)
 	before := "example string" // string |  (optional)
 	last := int32(123) // int32 |  (optional)
-	vrfName := "management" // string | Valid configured VRF name (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.DefaultAPI.V1DeviceRoutingOspfv2RibGet(context.Background()).Authorization(authorization).DeviceId(deviceId).InstanceName(instanceName).Before(before).Last(last).VrfName(vrfName).Execute()
+	resp, r, err := apiClient.DefaultAPI.V1DeviceRoutingOspfv2RibGet(context.Background()).Authorization(authorization).DeviceId(deviceId).VrfName(vrfName).InstanceName(instanceName).Before(before).Last(last).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1DeviceRoutingOspfv2RibGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1DeviceRoutingOspfv2RibGet`: V1DeviceRoutingOspfv2RibGet200Response
+	// response from `V1DeviceRoutingOspfv2RibGet`: V1DeviceRoutingOspfv2RibGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1DeviceRoutingOspfv2RibGet`: %v\n", resp)
 }
 ```
@@ -5856,14 +6391,14 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **string** | Bearer token. Format: Bearer &lt;your_token_here&gt; | 
  **deviceId** | **int64** | Valid configured device ID &gt; 0 | 
+ **vrfName** | **string** | Valid configured VRF name | 
  **instanceName** | **string** | Valid configured OSPF Instance name | 
  **before** | **string** |  | 
  **last** | **int32** |  | 
- **vrfName** | **string** | Valid configured VRF name | 
 
 ### Return type
 
-[**V1DeviceRoutingOspfv2RibGet200Response**](V1DeviceRoutingOspfv2RibGet200Response.md)
+[**V1DeviceRoutingOspfv2RibGetResponse**](V1DeviceRoutingOspfv2RibGetResponse.md)
 
 ### Authorization
 
@@ -5881,7 +6416,9 @@ Name | Type | Description  | Notes
 
 ## V1DeviceRoutingOspfv2StatisticsGet
 
-> V1DeviceRoutingOspfv2StatisticsGet200Response V1DeviceRoutingOspfv2StatisticsGet(ctx).Authorization(authorization).DeviceId(deviceId).VrfNames(vrfNames).Execute()
+> V1DeviceRoutingOspfv2StatisticsGetResponse V1DeviceRoutingOspfv2StatisticsGet(ctx).Authorization(authorization).DeviceId(deviceId).VrfNames(vrfNames).Execute()
+
+
 
 
 
@@ -5899,8 +6436,8 @@ import (
 
 func main() {
 	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
-	deviceId := int64(1000000) // int64 | Valid configured device ID > 0 (optional)
-	vrfNames := []string{"example string"} // []string | Valid configured VRF name (optional)
+	deviceId := int64(1000000) // int64 | Valid configured device ID > 0
+	vrfNames := []string{"management"} // []string | Valid configured VRF name
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -5909,7 +6446,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1DeviceRoutingOspfv2StatisticsGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1DeviceRoutingOspfv2StatisticsGet`: V1DeviceRoutingOspfv2StatisticsGet200Response
+	// response from `V1DeviceRoutingOspfv2StatisticsGet`: V1DeviceRoutingOspfv2StatisticsGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1DeviceRoutingOspfv2StatisticsGet`: %v\n", resp)
 }
 ```
@@ -5931,7 +6468,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1DeviceRoutingOspfv2StatisticsGet200Response**](V1DeviceRoutingOspfv2StatisticsGet200Response.md)
+[**V1DeviceRoutingOspfv2StatisticsGetResponse**](V1DeviceRoutingOspfv2StatisticsGetResponse.md)
 
 ### Authorization
 
@@ -5949,7 +6486,9 @@ Name | Type | Description  | Notes
 
 ## V1DeviceRoutingOspfv3AreaInterfaceGet
 
-> V1DeviceRoutingOspfv2AreaInterfaceGet200Response V1DeviceRoutingOspfv3AreaInterfaceGet(ctx).Authorization(authorization).AreaId(areaId).DeviceId(deviceId).InstanceName(instanceName).Last(last).VrfName(vrfName).Execute()
+> V1DeviceRoutingOspfv3AreaInterfaceGetResponse V1DeviceRoutingOspfv3AreaInterfaceGet(ctx).Authorization(authorization).AreaId(areaId).DeviceId(deviceId).VrfName(vrfName).InstanceName(instanceName).Execute()
+
+
 
 
 
@@ -5967,20 +6506,19 @@ import (
 
 func main() {
 	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
-	areaId := "0.0.0.0" // string | Valid configured Area ID (optional)
-	deviceId := int64(1000000) // int64 | Valid configured device ID > 0 (optional)
+	areaId := "0.0.0.0" // string | Valid configured Area ID
+	deviceId := int64(1000000) // int64 | Valid configured device ID > 0
+	vrfName := "default" // string | Valid configured VRF name
 	instanceName := "OSPF1" // string | Valid configured OSPF Instance name (optional)
-	last := int32(123) // int32 |  (optional)
-	vrfName := "default" // string | Valid configured VRF name (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.DefaultAPI.V1DeviceRoutingOspfv3AreaInterfaceGet(context.Background()).Authorization(authorization).AreaId(areaId).DeviceId(deviceId).InstanceName(instanceName).Last(last).VrfName(vrfName).Execute()
+	resp, r, err := apiClient.DefaultAPI.V1DeviceRoutingOspfv3AreaInterfaceGet(context.Background()).Authorization(authorization).AreaId(areaId).DeviceId(deviceId).VrfName(vrfName).InstanceName(instanceName).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1DeviceRoutingOspfv3AreaInterfaceGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1DeviceRoutingOspfv3AreaInterfaceGet`: V1DeviceRoutingOspfv2AreaInterfaceGet200Response
+	// response from `V1DeviceRoutingOspfv3AreaInterfaceGet`: V1DeviceRoutingOspfv3AreaInterfaceGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1DeviceRoutingOspfv3AreaInterfaceGet`: %v\n", resp)
 }
 ```
@@ -5999,13 +6537,12 @@ Name | Type | Description  | Notes
  **authorization** | **string** | Bearer token. Format: Bearer &lt;your_token_here&gt; | 
  **areaId** | **string** | Valid configured Area ID | 
  **deviceId** | **int64** | Valid configured device ID &gt; 0 | 
- **instanceName** | **string** | Valid configured OSPF Instance name | 
- **last** | **int32** |  | 
  **vrfName** | **string** | Valid configured VRF name | 
+ **instanceName** | **string** | Valid configured OSPF Instance name | 
 
 ### Return type
 
-[**V1DeviceRoutingOspfv2AreaInterfaceGet200Response**](V1DeviceRoutingOspfv2AreaInterfaceGet200Response.md)
+[**V1DeviceRoutingOspfv3AreaInterfaceGetResponse**](V1DeviceRoutingOspfv3AreaInterfaceGetResponse.md)
 
 ### Authorization
 
@@ -6023,7 +6560,9 @@ Name | Type | Description  | Notes
 
 ## V1DeviceRoutingOspfv3AreaInterfaceNbridGet
 
-> V1DeviceRoutingOspfv2AreaInterfaceNbridGet200Response V1DeviceRoutingOspfv3AreaInterfaceNbridGet(ctx).Authorization(authorization).AreaId(areaId).DeviceId(deviceId).InstanceName(instanceName).InterfaceId(interfaceId).Last(last).VrfName(vrfName).Execute()
+> V1DeviceRoutingOspfv3AreaInterfaceNbridGetResponse V1DeviceRoutingOspfv3AreaInterfaceNbridGet(ctx).Authorization(authorization).AreaId(areaId).DeviceId(deviceId).InterfaceId(interfaceId).VrfName(vrfName).InstanceName(instanceName).Execute()
+
+
 
 
 
@@ -6041,21 +6580,20 @@ import (
 
 func main() {
 	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
-	areaId := "0.0.0.0" // string | Valid configured Area ID (optional)
-	deviceId := int64(1000000) // int64 | Valid configured device ID > 0 (optional)
+	areaId := "0.0.0.0" // string | Valid configured Area ID
+	deviceId := int64(1000000) // int64 | Valid configured device ID > 0
+	interfaceId := "ToATT, ISP2" // string | Valid configured Interface name
+	vrfName := "default" // string | Valid configured VRF name
 	instanceName := "OSPF1" // string | Valid configured OSPF Instance name (optional)
-	interfaceId := "ToATT, ISP2" // string | Valid configured Interface name (optional)
-	last := int32(123) // int32 |  (optional)
-	vrfName := "default" // string | Valid configured VRF name (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.DefaultAPI.V1DeviceRoutingOspfv3AreaInterfaceNbridGet(context.Background()).Authorization(authorization).AreaId(areaId).DeviceId(deviceId).InstanceName(instanceName).InterfaceId(interfaceId).Last(last).VrfName(vrfName).Execute()
+	resp, r, err := apiClient.DefaultAPI.V1DeviceRoutingOspfv3AreaInterfaceNbridGet(context.Background()).Authorization(authorization).AreaId(areaId).DeviceId(deviceId).InterfaceId(interfaceId).VrfName(vrfName).InstanceName(instanceName).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1DeviceRoutingOspfv3AreaInterfaceNbridGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1DeviceRoutingOspfv3AreaInterfaceNbridGet`: V1DeviceRoutingOspfv2AreaInterfaceNbridGet200Response
+	// response from `V1DeviceRoutingOspfv3AreaInterfaceNbridGet`: V1DeviceRoutingOspfv3AreaInterfaceNbridGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1DeviceRoutingOspfv3AreaInterfaceNbridGet`: %v\n", resp)
 }
 ```
@@ -6074,14 +6612,13 @@ Name | Type | Description  | Notes
  **authorization** | **string** | Bearer token. Format: Bearer &lt;your_token_here&gt; | 
  **areaId** | **string** | Valid configured Area ID | 
  **deviceId** | **int64** | Valid configured device ID &gt; 0 | 
- **instanceName** | **string** | Valid configured OSPF Instance name | 
  **interfaceId** | **string** | Valid configured Interface name | 
- **last** | **int32** |  | 
  **vrfName** | **string** | Valid configured VRF name | 
+ **instanceName** | **string** | Valid configured OSPF Instance name | 
 
 ### Return type
 
-[**V1DeviceRoutingOspfv2AreaInterfaceNbridGet200Response**](V1DeviceRoutingOspfv2AreaInterfaceNbridGet200Response.md)
+[**V1DeviceRoutingOspfv3AreaInterfaceNbridGetResponse**](V1DeviceRoutingOspfv3AreaInterfaceNbridGetResponse.md)
 
 ### Authorization
 
@@ -6099,7 +6636,9 @@ Name | Type | Description  | Notes
 
 ## V1DeviceRoutingOspfv3AreaInterfaceidGet
 
-> V1DeviceRoutingOspfv2AreaInterfaceidGet200Response V1DeviceRoutingOspfv3AreaInterfaceidGet(ctx).Authorization(authorization).AreaId(areaId).DeviceId(deviceId).InstanceName(instanceName).Last(last).VrfName(vrfName).Execute()
+> V1DeviceRoutingOspfv3AreaInterfaceidGetResponse V1DeviceRoutingOspfv3AreaInterfaceidGet(ctx).Authorization(authorization).AreaId(areaId).DeviceId(deviceId).VrfName(vrfName).InstanceName(instanceName).Execute()
+
+
 
 
 
@@ -6117,20 +6656,19 @@ import (
 
 func main() {
 	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
-	areaId := "0.0.0.0" // string | Valid configured Area ID (optional)
-	deviceId := int64(1000000) // int64 | Valid configured device ID > 0 (optional)
+	areaId := "0.0.0.0" // string | Valid configured Area ID
+	deviceId := int64(1000000) // int64 | Valid configured device ID > 0
+	vrfName := "default" // string | Valid configured VRF name
 	instanceName := "OSPF1" // string | Valid configured OSPF Instance name (optional)
-	last := int32(123) // int32 |  (optional)
-	vrfName := "default" // string | Valid configured VRF name (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.DefaultAPI.V1DeviceRoutingOspfv3AreaInterfaceidGet(context.Background()).Authorization(authorization).AreaId(areaId).DeviceId(deviceId).InstanceName(instanceName).Last(last).VrfName(vrfName).Execute()
+	resp, r, err := apiClient.DefaultAPI.V1DeviceRoutingOspfv3AreaInterfaceidGet(context.Background()).Authorization(authorization).AreaId(areaId).DeviceId(deviceId).VrfName(vrfName).InstanceName(instanceName).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1DeviceRoutingOspfv3AreaInterfaceidGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1DeviceRoutingOspfv3AreaInterfaceidGet`: V1DeviceRoutingOspfv2AreaInterfaceidGet200Response
+	// response from `V1DeviceRoutingOspfv3AreaInterfaceidGet`: V1DeviceRoutingOspfv3AreaInterfaceidGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1DeviceRoutingOspfv3AreaInterfaceidGet`: %v\n", resp)
 }
 ```
@@ -6149,13 +6687,12 @@ Name | Type | Description  | Notes
  **authorization** | **string** | Bearer token. Format: Bearer &lt;your_token_here&gt; | 
  **areaId** | **string** | Valid configured Area ID | 
  **deviceId** | **int64** | Valid configured device ID &gt; 0 | 
- **instanceName** | **string** | Valid configured OSPF Instance name | 
- **last** | **int32** |  | 
  **vrfName** | **string** | Valid configured VRF name | 
+ **instanceName** | **string** | Valid configured OSPF Instance name | 
 
 ### Return type
 
-[**V1DeviceRoutingOspfv2AreaInterfaceidGet200Response**](V1DeviceRoutingOspfv2AreaInterfaceidGet200Response.md)
+[**V1DeviceRoutingOspfv3AreaInterfaceidGetResponse**](V1DeviceRoutingOspfv3AreaInterfaceidGetResponse.md)
 
 ### Authorization
 
@@ -6173,7 +6710,9 @@ Name | Type | Description  | Notes
 
 ## V1DeviceRoutingOspfv3AreaLsdbGet
 
-> V1DeviceRoutingOspfv2AreaLsdbGet200Response V1DeviceRoutingOspfv3AreaLsdbGet(ctx).Authorization(authorization).AreaId(areaId).DeviceId(deviceId).InstanceName(instanceName).Last(last).VrfName(vrfName).Execute()
+> V1DeviceRoutingOspfv3AreaLsdbGetResponse V1DeviceRoutingOspfv3AreaLsdbGet(ctx).Authorization(authorization).AreaId(areaId).DeviceId(deviceId).InstanceName(instanceName).VrfName(vrfName).Execute()
+
+
 
 
 
@@ -6191,20 +6730,19 @@ import (
 
 func main() {
 	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
-	areaId := "0.0.0.0" // string | Valid configured Area ID (optional)
-	deviceId := int64(1000000) // int64 | Valid configured device ID > 0 (optional)
-	instanceName := "OSPF1" // string | Valid configured OSPF Instance name (optional)
-	last := int32(123) // int32 |  (optional)
-	vrfName := "default" // string | Valid configured VRF name (optional)
+	areaId := "0.0.0.0" // string | Valid configured Area ID
+	deviceId := int64(1000000) // int64 | Valid configured device ID > 0
+	instanceName := "OSPF1" // string | Valid configured OSPF Instance name
+	vrfName := "default" // string | Valid configured VRF name
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.DefaultAPI.V1DeviceRoutingOspfv3AreaLsdbGet(context.Background()).Authorization(authorization).AreaId(areaId).DeviceId(deviceId).InstanceName(instanceName).Last(last).VrfName(vrfName).Execute()
+	resp, r, err := apiClient.DefaultAPI.V1DeviceRoutingOspfv3AreaLsdbGet(context.Background()).Authorization(authorization).AreaId(areaId).DeviceId(deviceId).InstanceName(instanceName).VrfName(vrfName).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1DeviceRoutingOspfv3AreaLsdbGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1DeviceRoutingOspfv3AreaLsdbGet`: V1DeviceRoutingOspfv2AreaLsdbGet200Response
+	// response from `V1DeviceRoutingOspfv3AreaLsdbGet`: V1DeviceRoutingOspfv3AreaLsdbGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1DeviceRoutingOspfv3AreaLsdbGet`: %v\n", resp)
 }
 ```
@@ -6224,12 +6762,11 @@ Name | Type | Description  | Notes
  **areaId** | **string** | Valid configured Area ID | 
  **deviceId** | **int64** | Valid configured device ID &gt; 0 | 
  **instanceName** | **string** | Valid configured OSPF Instance name | 
- **last** | **int32** |  | 
  **vrfName** | **string** | Valid configured VRF name | 
 
 ### Return type
 
-[**V1DeviceRoutingOspfv2AreaLsdbGet200Response**](V1DeviceRoutingOspfv2AreaLsdbGet200Response.md)
+[**V1DeviceRoutingOspfv3AreaLsdbGetResponse**](V1DeviceRoutingOspfv3AreaLsdbGetResponse.md)
 
 ### Authorization
 
@@ -6247,7 +6784,9 @@ Name | Type | Description  | Notes
 
 ## V1DeviceRoutingOspfv3AreaNbrGet
 
-> V1DeviceRoutingOspfv2AreaNbrGet200Response V1DeviceRoutingOspfv3AreaNbrGet(ctx).Authorization(authorization).AreaId(areaId).DeviceId(deviceId).InstanceName(instanceName).Last(last).VrfName(vrfName).Execute()
+> V1DeviceRoutingOspfv3AreaNbrGetResponse V1DeviceRoutingOspfv3AreaNbrGet(ctx).Authorization(authorization).AreaId(areaId).DeviceId(deviceId).VrfName(vrfName).InstanceName(instanceName).Execute()
+
+
 
 
 
@@ -6265,20 +6804,19 @@ import (
 
 func main() {
 	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
-	areaId := "0.0.0.0" // string | Valid configured Area ID (optional)
-	deviceId := int64(1000000) // int64 | Valid configured device ID > 0 (optional)
+	areaId := "0.0.0.0" // string | Valid configured Area ID
+	deviceId := int64(1000000) // int64 | Valid configured device ID > 0
+	vrfName := "default" // string | Valid configured VRF name
 	instanceName := "OSPF1" // string | Valid configured OSPF Instance name (optional)
-	last := int32(123) // int32 |  (optional)
-	vrfName := "default" // string | Valid configured VRF name (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.DefaultAPI.V1DeviceRoutingOspfv3AreaNbrGet(context.Background()).Authorization(authorization).AreaId(areaId).DeviceId(deviceId).InstanceName(instanceName).Last(last).VrfName(vrfName).Execute()
+	resp, r, err := apiClient.DefaultAPI.V1DeviceRoutingOspfv3AreaNbrGet(context.Background()).Authorization(authorization).AreaId(areaId).DeviceId(deviceId).VrfName(vrfName).InstanceName(instanceName).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1DeviceRoutingOspfv3AreaNbrGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1DeviceRoutingOspfv3AreaNbrGet`: V1DeviceRoutingOspfv2AreaNbrGet200Response
+	// response from `V1DeviceRoutingOspfv3AreaNbrGet`: V1DeviceRoutingOspfv3AreaNbrGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1DeviceRoutingOspfv3AreaNbrGet`: %v\n", resp)
 }
 ```
@@ -6297,13 +6835,12 @@ Name | Type | Description  | Notes
  **authorization** | **string** | Bearer token. Format: Bearer &lt;your_token_here&gt; | 
  **areaId** | **string** | Valid configured Area ID | 
  **deviceId** | **int64** | Valid configured device ID &gt; 0 | 
- **instanceName** | **string** | Valid configured OSPF Instance name | 
- **last** | **int32** |  | 
  **vrfName** | **string** | Valid configured VRF name | 
+ **instanceName** | **string** | Valid configured OSPF Instance name | 
 
 ### Return type
 
-[**V1DeviceRoutingOspfv2AreaNbrGet200Response**](V1DeviceRoutingOspfv2AreaNbrGet200Response.md)
+[**V1DeviceRoutingOspfv3AreaNbrGetResponse**](V1DeviceRoutingOspfv3AreaNbrGetResponse.md)
 
 ### Authorization
 
@@ -6321,7 +6858,9 @@ Name | Type | Description  | Notes
 
 ## V1DeviceRoutingOspfv3AreaidGet
 
-> V1DeviceRoutingOspfv2AreaidGet200Response V1DeviceRoutingOspfv3AreaidGet(ctx).Authorization(authorization).DeviceId(deviceId).InstanceName(instanceName).Last(last).VrfName(vrfName).Execute()
+> V1DeviceRoutingOspfv3AreaidGetResponse V1DeviceRoutingOspfv3AreaidGet(ctx).Authorization(authorization).DeviceId(deviceId).VrfName(vrfName).InstanceName(instanceName).Execute()
+
+
 
 
 
@@ -6339,19 +6878,18 @@ import (
 
 func main() {
 	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
-	deviceId := int64(1000000) // int64 | Valid configured device ID > 0 (optional)
+	deviceId := int64(1000000) // int64 | Valid configured device ID > 0
+	vrfName := "default" // string | Valid configured VRF name
 	instanceName := "OSPF1" // string | Valid configured OSPF Instance name (optional)
-	last := int32(123) // int32 |  (optional)
-	vrfName := "default" // string | Valid configured VRF name (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.DefaultAPI.V1DeviceRoutingOspfv3AreaidGet(context.Background()).Authorization(authorization).DeviceId(deviceId).InstanceName(instanceName).Last(last).VrfName(vrfName).Execute()
+	resp, r, err := apiClient.DefaultAPI.V1DeviceRoutingOspfv3AreaidGet(context.Background()).Authorization(authorization).DeviceId(deviceId).VrfName(vrfName).InstanceName(instanceName).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1DeviceRoutingOspfv3AreaidGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1DeviceRoutingOspfv3AreaidGet`: V1DeviceRoutingOspfv2AreaidGet200Response
+	// response from `V1DeviceRoutingOspfv3AreaidGet`: V1DeviceRoutingOspfv3AreaidGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1DeviceRoutingOspfv3AreaidGet`: %v\n", resp)
 }
 ```
@@ -6369,13 +6907,12 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **string** | Bearer token. Format: Bearer &lt;your_token_here&gt; | 
  **deviceId** | **int64** | Valid configured device ID &gt; 0 | 
- **instanceName** | **string** | Valid configured OSPF Instance name | 
- **last** | **int32** |  | 
  **vrfName** | **string** | Valid configured VRF name | 
+ **instanceName** | **string** | Valid configured OSPF Instance name | 
 
 ### Return type
 
-[**V1DeviceRoutingOspfv2AreaidGet200Response**](V1DeviceRoutingOspfv2AreaidGet200Response.md)
+[**V1DeviceRoutingOspfv3AreaidGetResponse**](V1DeviceRoutingOspfv3AreaidGetResponse.md)
 
 ### Authorization
 
@@ -6393,7 +6930,9 @@ Name | Type | Description  | Notes
 
 ## V1DeviceRoutingOspfv3LsdbGet
 
-> V1DeviceRoutingOspfv2AreaLsdbGet200Response V1DeviceRoutingOspfv3LsdbGet(ctx).Authorization(authorization).DeviceId(deviceId).InstanceName(instanceName).Last(last).VrfName(vrfName).Execute()
+> V1DeviceRoutingOspfv3LsdbGetResponse V1DeviceRoutingOspfv3LsdbGet(ctx).Authorization(authorization).DeviceId(deviceId).VrfName(vrfName).InstanceName(instanceName).Execute()
+
+
 
 
 
@@ -6411,19 +6950,18 @@ import (
 
 func main() {
 	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
-	deviceId := int64(1000000) // int64 | Valid configured device ID > 0 (optional)
+	deviceId := int64(1000000) // int64 | Valid configured device ID > 0
+	vrfName := "management" // string | Valid configured VRF name
 	instanceName := "ospf-demo" // string | Valid configured OSPF Instance name (optional)
-	last := int32(123) // int32 |  (optional)
-	vrfName := "management" // string | Valid configured VRF name (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.DefaultAPI.V1DeviceRoutingOspfv3LsdbGet(context.Background()).Authorization(authorization).DeviceId(deviceId).InstanceName(instanceName).Last(last).VrfName(vrfName).Execute()
+	resp, r, err := apiClient.DefaultAPI.V1DeviceRoutingOspfv3LsdbGet(context.Background()).Authorization(authorization).DeviceId(deviceId).VrfName(vrfName).InstanceName(instanceName).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1DeviceRoutingOspfv3LsdbGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1DeviceRoutingOspfv3LsdbGet`: V1DeviceRoutingOspfv2AreaLsdbGet200Response
+	// response from `V1DeviceRoutingOspfv3LsdbGet`: V1DeviceRoutingOspfv3LsdbGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1DeviceRoutingOspfv3LsdbGet`: %v\n", resp)
 }
 ```
@@ -6441,13 +6979,12 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **string** | Bearer token. Format: Bearer &lt;your_token_here&gt; | 
  **deviceId** | **int64** | Valid configured device ID &gt; 0 | 
- **instanceName** | **string** | Valid configured OSPF Instance name | 
- **last** | **int32** |  | 
  **vrfName** | **string** | Valid configured VRF name | 
+ **instanceName** | **string** | Valid configured OSPF Instance name | 
 
 ### Return type
 
-[**V1DeviceRoutingOspfv2AreaLsdbGet200Response**](V1DeviceRoutingOspfv2AreaLsdbGet200Response.md)
+[**V1DeviceRoutingOspfv3LsdbGetResponse**](V1DeviceRoutingOspfv3LsdbGetResponse.md)
 
 ### Authorization
 
@@ -6465,7 +7002,9 @@ Name | Type | Description  | Notes
 
 ## V1DeviceRoutingOspfv3RibGet
 
-> V1DeviceRoutingOspfv2RibGet200Response V1DeviceRoutingOspfv3RibGet(ctx).Authorization(authorization).DeviceId(deviceId).InstanceName(instanceName).Before(before).Last(last).VrfName(vrfName).Execute()
+> V1DeviceRoutingOspfv3RibGetResponse V1DeviceRoutingOspfv3RibGet(ctx).Authorization(authorization).DeviceId(deviceId).VrfName(vrfName).InstanceName(instanceName).Execute()
+
+
 
 
 
@@ -6483,20 +7022,18 @@ import (
 
 func main() {
 	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
-	deviceId := int64(1000000) // int64 | Valid configured device ID > 0 (optional)
+	deviceId := int64(1000000) // int64 | Valid configured device ID > 0
+	vrfName := "management" // string | Valid configured VRF name
 	instanceName := "BGP-ODP" // string | Valid configured OSPF Instance name (optional)
-	before := "example string" // string |  (optional)
-	last := int32(123) // int32 |  (optional)
-	vrfName := "management" // string | Valid configured VRF name (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.DefaultAPI.V1DeviceRoutingOspfv3RibGet(context.Background()).Authorization(authorization).DeviceId(deviceId).InstanceName(instanceName).Before(before).Last(last).VrfName(vrfName).Execute()
+	resp, r, err := apiClient.DefaultAPI.V1DeviceRoutingOspfv3RibGet(context.Background()).Authorization(authorization).DeviceId(deviceId).VrfName(vrfName).InstanceName(instanceName).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1DeviceRoutingOspfv3RibGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1DeviceRoutingOspfv3RibGet`: V1DeviceRoutingOspfv2RibGet200Response
+	// response from `V1DeviceRoutingOspfv3RibGet`: V1DeviceRoutingOspfv3RibGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1DeviceRoutingOspfv3RibGet`: %v\n", resp)
 }
 ```
@@ -6514,14 +7051,12 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **string** | Bearer token. Format: Bearer &lt;your_token_here&gt; | 
  **deviceId** | **int64** | Valid configured device ID &gt; 0 | 
- **instanceName** | **string** | Valid configured OSPF Instance name | 
- **before** | **string** |  | 
- **last** | **int32** |  | 
  **vrfName** | **string** | Valid configured VRF name | 
+ **instanceName** | **string** | Valid configured OSPF Instance name | 
 
 ### Return type
 
-[**V1DeviceRoutingOspfv2RibGet200Response**](V1DeviceRoutingOspfv2RibGet200Response.md)
+[**V1DeviceRoutingOspfv3RibGetResponse**](V1DeviceRoutingOspfv3RibGetResponse.md)
 
 ### Authorization
 
@@ -6539,7 +7074,9 @@ Name | Type | Description  | Notes
 
 ## V1DeviceRoutingOspfv3StatisticsGet
 
-> V1DeviceRoutingOspfv2StatisticsGet200Response V1DeviceRoutingOspfv3StatisticsGet(ctx).Authorization(authorization).DeviceId(deviceId).VrfNames(vrfNames).Execute()
+> V1DeviceRoutingOspfv3StatisticsGetResponse V1DeviceRoutingOspfv3StatisticsGet(ctx).Authorization(authorization).DeviceId(deviceId).VrfNames(vrfNames).Execute()
+
+
 
 
 
@@ -6557,8 +7094,8 @@ import (
 
 func main() {
 	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
-	deviceId := int64(1000000) // int64 | Valid configured device ID > 0 (optional)
-	vrfNames := []string{"example string"} // []string | Valid configured VRF name (optional)
+	deviceId := int64(1000000) // int64 | Valid configured device ID > 0
+	vrfNames := []string{"management"} // []string | Valid configured VRF name
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -6567,7 +7104,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1DeviceRoutingOspfv3StatisticsGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1DeviceRoutingOspfv3StatisticsGet`: V1DeviceRoutingOspfv2StatisticsGet200Response
+	// response from `V1DeviceRoutingOspfv3StatisticsGet`: V1DeviceRoutingOspfv3StatisticsGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1DeviceRoutingOspfv3StatisticsGet`: %v\n", resp)
 }
 ```
@@ -6589,7 +7126,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1DeviceRoutingOspfv2StatisticsGet200Response**](V1DeviceRoutingOspfv2StatisticsGet200Response.md)
+[**V1DeviceRoutingOspfv3StatisticsGetResponse**](V1DeviceRoutingOspfv3StatisticsGetResponse.md)
 
 ### Authorization
 
@@ -6607,7 +7144,9 @@ Name | Type | Description  | Notes
 
 ## V1DeviceRoutingRibRouteCountPost
 
-> V1DeviceRoutingVrfBgpRouteCountPost200Response V1DeviceRoutingRibRouteCountPost(ctx).Authorization(authorization).Body(body).DeviceId(deviceId).VrfName(vrfName).Execute()
+> V1DeviceRoutingRibRouteCountPostResponse V1DeviceRoutingRibRouteCountPost(ctx).Authorization(authorization).DeviceId(deviceId).VrfName(vrfName).Body(body).Execute()
+
+
 
 
 
@@ -6625,18 +7164,18 @@ import (
 
 func main() {
 	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
+	deviceId := int64(1000000) // int64 | Valid configured device ID > 0
+	vrfName := []string{"management"} // []string | Valid configured VRF names
 	body := map[string]interface{}{ ... } // map[string]interface{} | 
-	deviceId := int64(1000000) // int64 | Valid configured device ID > 0 (optional)
-	vrfName := []string{"example string"} // []string | Valid configured VRF names (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.DefaultAPI.V1DeviceRoutingRibRouteCountPost(context.Background()).Authorization(authorization).Body(body).DeviceId(deviceId).VrfName(vrfName).Execute()
+	resp, r, err := apiClient.DefaultAPI.V1DeviceRoutingRibRouteCountPost(context.Background()).Authorization(authorization).DeviceId(deviceId).VrfName(vrfName).Body(body).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1DeviceRoutingRibRouteCountPost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1DeviceRoutingRibRouteCountPost`: V1DeviceRoutingVrfBgpRouteCountPost200Response
+	// response from `V1DeviceRoutingRibRouteCountPost`: V1DeviceRoutingRibRouteCountPostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1DeviceRoutingRibRouteCountPost`: %v\n", resp)
 }
 ```
@@ -6653,13 +7192,13 @@ Other parameters are passed through a pointer to a apiV1DeviceRoutingRibRouteCou
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **string** | Bearer token. Format: Bearer &lt;your_token_here&gt; | 
- **body** | **map[string]interface{}** |  | 
  **deviceId** | **int64** | Valid configured device ID &gt; 0 | 
  **vrfName** | **[]string** | Valid configured VRF names | 
+ **body** | **map[string]interface{}** |  | 
 
 ### Return type
 
-[**V1DeviceRoutingVrfBgpRouteCountPost200Response**](V1DeviceRoutingVrfBgpRouteCountPost200Response.md)
+[**V1DeviceRoutingRibRouteCountPostResponse**](V1DeviceRoutingRibRouteCountPostResponse.md)
 
 ### Authorization
 
@@ -6677,7 +7216,9 @@ Name | Type | Description  | Notes
 
 ## V1DeviceRoutingVrfBgpEibgpRouteCountGet
 
-> V1DeviceRoutingVrfBgpEibgpRouteCountGet200Response V1DeviceRoutingVrfBgpEibgpRouteCountGet(ctx).Authorization(authorization).DeviceId(deviceId).VrfName(vrfName).Execute()
+> V1DeviceRoutingVrfBgpEibgpRouteCountGetResponse V1DeviceRoutingVrfBgpEibgpRouteCountGet(ctx).Authorization(authorization).DeviceId(deviceId).VrfName(vrfName).Execute()
+
+
 
 
 
@@ -6695,8 +7236,8 @@ import (
 
 func main() {
 	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
-	deviceId := int64(1000000) // int64 | Valid configured device ID > 0 (optional)
-	vrfName := "management" // string | Valid configured VRF names (optional)
+	deviceId := int64(1000000) // int64 | Valid configured device ID > 0
+	vrfName := "management" // string | Valid configured VRF names
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -6705,7 +7246,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1DeviceRoutingVrfBgpEibgpRouteCountGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1DeviceRoutingVrfBgpEibgpRouteCountGet`: V1DeviceRoutingVrfBgpEibgpRouteCountGet200Response
+	// response from `V1DeviceRoutingVrfBgpEibgpRouteCountGet`: V1DeviceRoutingVrfBgpEibgpRouteCountGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1DeviceRoutingVrfBgpEibgpRouteCountGet`: %v\n", resp)
 }
 ```
@@ -6727,7 +7268,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1DeviceRoutingVrfBgpEibgpRouteCountGet200Response**](V1DeviceRoutingVrfBgpEibgpRouteCountGet200Response.md)
+[**V1DeviceRoutingVrfBgpEibgpRouteCountGetResponse**](V1DeviceRoutingVrfBgpEibgpRouteCountGetResponse.md)
 
 ### Authorization
 
@@ -6745,7 +7286,9 @@ Name | Type | Description  | Notes
 
 ## V1DeviceRoutingVrfBgpGraphiantEirouteCountGet
 
-> V1DeviceRoutingVrfBgpGraphiantEirouteCountGet200Response V1DeviceRoutingVrfBgpGraphiantEirouteCountGet(ctx).Authorization(authorization).DeviceId(deviceId).VrfName(vrfName).Execute()
+> V1DeviceRoutingVrfBgpGraphiantEirouteCountGetResponse V1DeviceRoutingVrfBgpGraphiantEirouteCountGet(ctx).Authorization(authorization).DeviceId(deviceId).VrfName(vrfName).Execute()
+
+
 
 
 
@@ -6763,8 +7306,8 @@ import (
 
 func main() {
 	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
-	deviceId := int64(1000000) // int64 | Valid configured device ID > 0 (optional)
-	vrfName := "management" // string | Valid configured VRF names (optional)
+	deviceId := int64(1000000) // int64 | Valid configured device ID > 0
+	vrfName := "management" // string | Valid configured VRF names
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -6773,7 +7316,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1DeviceRoutingVrfBgpGraphiantEirouteCountGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1DeviceRoutingVrfBgpGraphiantEirouteCountGet`: V1DeviceRoutingVrfBgpGraphiantEirouteCountGet200Response
+	// response from `V1DeviceRoutingVrfBgpGraphiantEirouteCountGet`: V1DeviceRoutingVrfBgpGraphiantEirouteCountGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1DeviceRoutingVrfBgpGraphiantEirouteCountGet`: %v\n", resp)
 }
 ```
@@ -6795,7 +7338,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1DeviceRoutingVrfBgpGraphiantEirouteCountGet200Response**](V1DeviceRoutingVrfBgpGraphiantEirouteCountGet200Response.md)
+[**V1DeviceRoutingVrfBgpGraphiantEirouteCountGetResponse**](V1DeviceRoutingVrfBgpGraphiantEirouteCountGetResponse.md)
 
 ### Authorization
 
@@ -6813,7 +7356,9 @@ Name | Type | Description  | Notes
 
 ## V1DeviceRoutingVrfBgpRouteCountPost
 
-> V1DeviceRoutingVrfBgpRouteCountPost200Response V1DeviceRoutingVrfBgpRouteCountPost(ctx).Authorization(authorization).V1DeviceRoutingVrfBgpRouteCountPostRequest(v1DeviceRoutingVrfBgpRouteCountPostRequest).Execute()
+> V1DeviceRoutingVrfBgpRouteCountPostResponse V1DeviceRoutingVrfBgpRouteCountPost(ctx).Authorization(authorization).V1DeviceRoutingVrfBgpRouteCountPostRequest(v1DeviceRoutingVrfBgpRouteCountPostRequest).Execute()
+
+
 
 
 
@@ -6831,7 +7376,7 @@ import (
 
 func main() {
 	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
-	v1DeviceRoutingVrfBgpRouteCountPostRequest := *openapiclient.NewV1DeviceRoutingVrfBgpRouteCountPostRequest() // V1DeviceRoutingVrfBgpRouteCountPostRequest | 
+	v1DeviceRoutingVrfBgpRouteCountPostRequest := *openapiclient.NewV1DeviceRoutingVrfBgpRouteCountPostRequest(int64(1000000), []string{"management"}) // V1DeviceRoutingVrfBgpRouteCountPostRequest | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -6840,7 +7385,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1DeviceRoutingVrfBgpRouteCountPost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1DeviceRoutingVrfBgpRouteCountPost`: V1DeviceRoutingVrfBgpRouteCountPost200Response
+	// response from `V1DeviceRoutingVrfBgpRouteCountPost`: V1DeviceRoutingVrfBgpRouteCountPostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1DeviceRoutingVrfBgpRouteCountPost`: %v\n", resp)
 }
 ```
@@ -6861,7 +7406,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1DeviceRoutingVrfBgpRouteCountPost200Response**](V1DeviceRoutingVrfBgpRouteCountPost200Response.md)
+[**V1DeviceRoutingVrfBgpRouteCountPostResponse**](V1DeviceRoutingVrfBgpRouteCountPostResponse.md)
 
 ### Authorization
 
@@ -6879,7 +7424,9 @@ Name | Type | Description  | Notes
 
 ## V1DeviceSnapshotDeviceIdGet
 
-> V1DeviceSnapshotDeviceIdGet200Response V1DeviceSnapshotDeviceIdGet(ctx, deviceId).Authorization(authorization).Execute()
+> V1DeviceSnapshotDeviceIdGetResponse V1DeviceSnapshotDeviceIdGet(ctx, deviceId).Authorization(authorization).Execute()
+
+
 
 
 
@@ -6906,7 +7453,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1DeviceSnapshotDeviceIdGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1DeviceSnapshotDeviceIdGet`: V1DeviceSnapshotDeviceIdGet200Response
+	// response from `V1DeviceSnapshotDeviceIdGet`: V1DeviceSnapshotDeviceIdGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1DeviceSnapshotDeviceIdGet`: %v\n", resp)
 }
 ```
@@ -6931,7 +7478,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1DeviceSnapshotDeviceIdGet200Response**](V1DeviceSnapshotDeviceIdGet200Response.md)
+[**V1DeviceSnapshotDeviceIdGetResponse**](V1DeviceSnapshotDeviceIdGetResponse.md)
 
 ### Authorization
 
@@ -6949,7 +7496,9 @@ Name | Type | Description  | Notes
 
 ## V1DeviceSnapshotGet
 
-> V1DeviceSnapshotGet200Response V1DeviceSnapshotGet(ctx).Authorization(authorization).Execute()
+> V1DeviceSnapshotGetResponse V1DeviceSnapshotGet(ctx).Authorization(authorization).Execute()
+
+
 
 
 
@@ -6975,7 +7524,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1DeviceSnapshotGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1DeviceSnapshotGet`: V1DeviceSnapshotGet200Response
+	// response from `V1DeviceSnapshotGet`: V1DeviceSnapshotGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1DeviceSnapshotGet`: %v\n", resp)
 }
 ```
@@ -6995,7 +7544,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1DeviceSnapshotGet200Response**](V1DeviceSnapshotGet200Response.md)
+[**V1DeviceSnapshotGetResponse**](V1DeviceSnapshotGetResponse.md)
 
 ### Authorization
 
@@ -7014,6 +7563,8 @@ Name | Type | Description  | Notes
 ## V1DeviceSnapshotPost
 
 > map[string]interface{} V1DeviceSnapshotPost(ctx).Authorization(authorization).V1DeviceSnapshotPostRequest(v1DeviceSnapshotPostRequest).Execute()
+
+
 
 
 
@@ -7083,6 +7634,8 @@ Name | Type | Description  | Notes
 
 
 
+
+
 ### Example
 
 ```go
@@ -7146,6 +7699,8 @@ Name | Type | Description  | Notes
 ## V1DeviceSnapshotSnapshotIdDelete
 
 > map[string]interface{} V1DeviceSnapshotSnapshotIdDelete(ctx, snapshotId).Authorization(authorization).Execute()
+
+
 
 
 
@@ -7215,7 +7770,7 @@ Name | Type | Description  | Notes
 
 ## V1DeviceStatusHistoryPost
 
-> V1DeviceStatusHistoryPost200Response V1DeviceStatusHistoryPost(ctx).Authorization(authorization).V1DeviceStatusHistoryPostRequest(v1DeviceStatusHistoryPostRequest).Execute()
+> V1DeviceStatusHistoryPostResponse V1DeviceStatusHistoryPost(ctx).Authorization(authorization).V1DeviceStatusHistoryPostRequest(v1DeviceStatusHistoryPostRequest).Execute()
 
 
 
@@ -7242,7 +7797,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1DeviceStatusHistoryPost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1DeviceStatusHistoryPost`: V1DeviceStatusHistoryPost200Response
+	// response from `V1DeviceStatusHistoryPost`: V1DeviceStatusHistoryPostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1DeviceStatusHistoryPost`: %v\n", resp)
 }
 ```
@@ -7263,7 +7818,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1DeviceStatusHistoryPost200Response**](V1DeviceStatusHistoryPost200Response.md)
+[**V1DeviceStatusHistoryPostResponse**](V1DeviceStatusHistoryPostResponse.md)
 
 ### Authorization
 
@@ -7281,7 +7836,7 @@ Name | Type | Description  | Notes
 
 ## V1DeviceStatusPost
 
-> V1DeviceStatusPost200Response V1DeviceStatusPost(ctx).Authorization(authorization).V1DeviceStatusHistoryPostRequest(v1DeviceStatusHistoryPostRequest).Execute()
+> V1DeviceStatusPostResponse V1DeviceStatusPost(ctx).Authorization(authorization).V1DeviceStatusPostRequest(v1DeviceStatusPostRequest).Execute()
 
 
 
@@ -7299,16 +7854,16 @@ import (
 
 func main() {
 	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
-	v1DeviceStatusHistoryPostRequest := *openapiclient.NewV1DeviceStatusHistoryPostRequest() // V1DeviceStatusHistoryPostRequest | 
+	v1DeviceStatusPostRequest := *openapiclient.NewV1DeviceStatusPostRequest() // V1DeviceStatusPostRequest | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.DefaultAPI.V1DeviceStatusPost(context.Background()).Authorization(authorization).V1DeviceStatusHistoryPostRequest(v1DeviceStatusHistoryPostRequest).Execute()
+	resp, r, err := apiClient.DefaultAPI.V1DeviceStatusPost(context.Background()).Authorization(authorization).V1DeviceStatusPostRequest(v1DeviceStatusPostRequest).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1DeviceStatusPost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1DeviceStatusPost`: V1DeviceStatusPost200Response
+	// response from `V1DeviceStatusPost`: V1DeviceStatusPostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1DeviceStatusPost`: %v\n", resp)
 }
 ```
@@ -7325,11 +7880,11 @@ Other parameters are passed through a pointer to a apiV1DeviceStatusPostRequest 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **string** | Bearer token. Format: Bearer &lt;your_token_here&gt; | 
- **v1DeviceStatusHistoryPostRequest** | [**V1DeviceStatusHistoryPostRequest**](V1DeviceStatusHistoryPostRequest.md) |  | 
+ **v1DeviceStatusPostRequest** | [**V1DeviceStatusPostRequest**](V1DeviceStatusPostRequest.md) |  | 
 
 ### Return type
 
-[**V1DeviceStatusPost200Response**](V1DeviceStatusPost200Response.md)
+[**V1DeviceStatusPostResponse**](V1DeviceStatusPostResponse.md)
 
 ### Authorization
 
@@ -7347,7 +7902,7 @@ Name | Type | Description  | Notes
 
 ## V1DevicesBringupPost
 
-> V1DevicesBringupPost200Response V1DevicesBringupPost(ctx).Authorization(authorization).V1DevicesBringupPostRequest(v1DevicesBringupPostRequest).Execute()
+> V1DevicesBringupPostResponse V1DevicesBringupPost(ctx).Authorization(authorization).V1DevicesBringupPostRequest(v1DevicesBringupPostRequest).Execute()
 
 
 
@@ -7374,7 +7929,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1DevicesBringupPost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1DevicesBringupPost`: V1DevicesBringupPost200Response
+	// response from `V1DevicesBringupPost`: V1DevicesBringupPostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1DevicesBringupPost`: %v\n", resp)
 }
 ```
@@ -7395,7 +7950,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1DevicesBringupPost200Response**](V1DevicesBringupPost200Response.md)
+[**V1DevicesBringupPostResponse**](V1DevicesBringupPostResponse.md)
 
 ### Authorization
 
@@ -7479,7 +8034,9 @@ Name | Type | Description  | Notes
 
 ## V1DevicesBringupTokenPost
 
-> V1DevicesBringupTokenPost200Response V1DevicesBringupTokenPost(ctx).Authorization(authorization).V1DevicesBringupTokenPostRequest(v1DevicesBringupTokenPostRequest).Execute()
+> V1DevicesBringupTokenPostResponse V1DevicesBringupTokenPost(ctx).Authorization(authorization).V1DevicesBringupTokenPostRequest(v1DevicesBringupTokenPostRequest).Execute()
+
+
 
 
 
@@ -7506,7 +8063,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1DevicesBringupTokenPost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1DevicesBringupTokenPost`: V1DevicesBringupTokenPost200Response
+	// response from `V1DevicesBringupTokenPost`: V1DevicesBringupTokenPostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1DevicesBringupTokenPost`: %v\n", resp)
 }
 ```
@@ -7527,7 +8084,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1DevicesBringupTokenPost200Response**](V1DevicesBringupTokenPost200Response.md)
+[**V1DevicesBringupTokenPostResponse**](V1DevicesBringupTokenPostResponse.md)
 
 ### Authorization
 
@@ -7611,7 +8168,9 @@ Name | Type | Description  | Notes
 
 ## V1DevicesDeviceIdArpGet
 
-> V1DevicesDeviceIdArpGet200Response V1DevicesDeviceIdArpGet(ctx, deviceId).Authorization(authorization).Execute()
+> V1DevicesDeviceIdArpGetResponse V1DevicesDeviceIdArpGet(ctx, deviceId).Authorization(authorization).Execute()
+
+
 
 
 
@@ -7638,7 +8197,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1DevicesDeviceIdArpGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1DevicesDeviceIdArpGet`: V1DevicesDeviceIdArpGet200Response
+	// response from `V1DevicesDeviceIdArpGet`: V1DevicesDeviceIdArpGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1DevicesDeviceIdArpGet`: %v\n", resp)
 }
 ```
@@ -7663,7 +8222,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1DevicesDeviceIdArpGet200Response**](V1DevicesDeviceIdArpGet200Response.md)
+[**V1DevicesDeviceIdArpGetResponse**](V1DevicesDeviceIdArpGetResponse.md)
 
 ### Authorization
 
@@ -7681,7 +8240,9 @@ Name | Type | Description  | Notes
 
 ## V1DevicesDeviceIdCandidateCircuitsGet
 
-> V1DevicesDeviceIdCandidateCircuitsGet200Response V1DevicesDeviceIdCandidateCircuitsGet(ctx, deviceId).Authorization(authorization).Execute()
+> V1DevicesDeviceIdCandidateCircuitsGetResponse V1DevicesDeviceIdCandidateCircuitsGet(ctx, deviceId).Authorization(authorization).Execute()
+
+
 
 
 
@@ -7708,7 +8269,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1DevicesDeviceIdCandidateCircuitsGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1DevicesDeviceIdCandidateCircuitsGet`: V1DevicesDeviceIdCandidateCircuitsGet200Response
+	// response from `V1DevicesDeviceIdCandidateCircuitsGet`: V1DevicesDeviceIdCandidateCircuitsGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1DevicesDeviceIdCandidateCircuitsGet`: %v\n", resp)
 }
 ```
@@ -7733,7 +8294,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1DevicesDeviceIdCandidateCircuitsGet200Response**](V1DevicesDeviceIdCandidateCircuitsGet200Response.md)
+[**V1DevicesDeviceIdCandidateCircuitsGetResponse**](V1DevicesDeviceIdCandidateCircuitsGetResponse.md)
 
 ### Authorization
 
@@ -7751,7 +8312,9 @@ Name | Type | Description  | Notes
 
 ## V1DevicesDeviceIdCircuitsVrfAssociationsGet
 
-> V1DevicesDeviceIdCircuitsVrfAssociationsGet200Response V1DevicesDeviceIdCircuitsVrfAssociationsGet(ctx, deviceId).Authorization(authorization).Execute()
+> V1DevicesDeviceIdCircuitsVrfAssociationsGetResponse V1DevicesDeviceIdCircuitsVrfAssociationsGet(ctx, deviceId).Authorization(authorization).Execute()
+
+
 
 
 
@@ -7778,7 +8341,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1DevicesDeviceIdCircuitsVrfAssociationsGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1DevicesDeviceIdCircuitsVrfAssociationsGet`: V1DevicesDeviceIdCircuitsVrfAssociationsGet200Response
+	// response from `V1DevicesDeviceIdCircuitsVrfAssociationsGet`: V1DevicesDeviceIdCircuitsVrfAssociationsGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1DevicesDeviceIdCircuitsVrfAssociationsGet`: %v\n", resp)
 }
 ```
@@ -7803,7 +8366,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1DevicesDeviceIdCircuitsVrfAssociationsGet200Response**](V1DevicesDeviceIdCircuitsVrfAssociationsGet200Response.md)
+[**V1DevicesDeviceIdCircuitsVrfAssociationsGetResponse**](V1DevicesDeviceIdCircuitsVrfAssociationsGetResponse.md)
 
 ### Authorization
 
@@ -7821,7 +8384,9 @@ Name | Type | Description  | Notes
 
 ## V1DevicesDeviceIdConfigPut
 
-> V1DevicesDeviceIdConfigPut202Response V1DevicesDeviceIdConfigPut(ctx, deviceId).Authorization(authorization).V1DevicesDeviceIdConfigPutRequest(v1DevicesDeviceIdConfigPutRequest).Execute()
+> V1DevicesDeviceIdConfigPutResponse V1DevicesDeviceIdConfigPut(ctx, deviceId).Authorization(authorization).V1DevicesDeviceIdConfigPutRequest(v1DevicesDeviceIdConfigPutRequest).Execute()
+
+
 
 
 
@@ -7849,7 +8414,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1DevicesDeviceIdConfigPut``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1DevicesDeviceIdConfigPut`: V1DevicesDeviceIdConfigPut202Response
+	// response from `V1DevicesDeviceIdConfigPut`: V1DevicesDeviceIdConfigPutResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1DevicesDeviceIdConfigPut`: %v\n", resp)
 }
 ```
@@ -7875,7 +8440,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1DevicesDeviceIdConfigPut202Response**](V1DevicesDeviceIdConfigPut202Response.md)
+[**V1DevicesDeviceIdConfigPutResponse**](V1DevicesDeviceIdConfigPutResponse.md)
 
 ### Authorization
 
@@ -7893,7 +8458,9 @@ Name | Type | Description  | Notes
 
 ## V1DevicesDeviceIdConnectivityGet
 
-> V1DevicesDeviceIdConnectivityGet200Response V1DevicesDeviceIdConnectivityGet(ctx, deviceId).Authorization(authorization).Execute()
+> V1DevicesDeviceIdConnectivityGetResponse V1DevicesDeviceIdConnectivityGet(ctx, deviceId).Authorization(authorization).Execute()
+
+
 
 
 
@@ -7920,7 +8487,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1DevicesDeviceIdConnectivityGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1DevicesDeviceIdConnectivityGet`: V1DevicesDeviceIdConnectivityGet200Response
+	// response from `V1DevicesDeviceIdConnectivityGet`: V1DevicesDeviceIdConnectivityGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1DevicesDeviceIdConnectivityGet`: %v\n", resp)
 }
 ```
@@ -7945,7 +8512,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1DevicesDeviceIdConnectivityGet200Response**](V1DevicesDeviceIdConnectivityGet200Response.md)
+[**V1DevicesDeviceIdConnectivityGetResponse**](V1DevicesDeviceIdConnectivityGetResponse.md)
 
 ### Authorization
 
@@ -7964,6 +8531,8 @@ Name | Type | Description  | Notes
 ## V1DevicesDeviceIdControllerPeersPut
 
 > map[string]interface{} V1DevicesDeviceIdControllerPeersPut(ctx, deviceId).Authorization(authorization).V1DevicesDeviceIdControllerPeersPutRequest(v1DevicesDeviceIdControllerPeersPutRequest).Execute()
+
+
 
 
 
@@ -8035,7 +8604,9 @@ Name | Type | Description  | Notes
 
 ## V1DevicesDeviceIdDhcpServerLeasesGet
 
-> V1DevicesDeviceIdDhcpServerLeasesGet200Response V1DevicesDeviceIdDhcpServerLeasesGet(ctx, deviceId).Authorization(authorization).Execute()
+> V1DevicesDeviceIdDhcpServerLeasesGetResponse V1DevicesDeviceIdDhcpServerLeasesGet(ctx, deviceId).Authorization(authorization).Execute()
+
+
 
 
 
@@ -8062,7 +8633,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1DevicesDeviceIdDhcpServerLeasesGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1DevicesDeviceIdDhcpServerLeasesGet`: V1DevicesDeviceIdDhcpServerLeasesGet200Response
+	// response from `V1DevicesDeviceIdDhcpServerLeasesGet`: V1DevicesDeviceIdDhcpServerLeasesGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1DevicesDeviceIdDhcpServerLeasesGet`: %v\n", resp)
 }
 ```
@@ -8087,7 +8658,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1DevicesDeviceIdDhcpServerLeasesGet200Response**](V1DevicesDeviceIdDhcpServerLeasesGet200Response.md)
+[**V1DevicesDeviceIdDhcpServerLeasesGetResponse**](V1DevicesDeviceIdDhcpServerLeasesGetResponse.md)
 
 ### Authorization
 
@@ -8106,6 +8677,8 @@ Name | Type | Description  | Notes
 ## V1DevicesDeviceIdDraftDelete
 
 > map[string]interface{} V1DevicesDeviceIdDraftDelete(ctx, deviceId).Authorization(authorization).Execute()
+
+
 
 
 
@@ -8175,7 +8748,9 @@ Name | Type | Description  | Notes
 
 ## V1DevicesDeviceIdDraftGet
 
-> V1DevicesDeviceIdDraftGet200Response V1DevicesDeviceIdDraftGet(ctx, deviceId).Authorization(authorization).Execute()
+> V1DevicesDeviceIdDraftGetResponse V1DevicesDeviceIdDraftGet(ctx, deviceId).Authorization(authorization).Execute()
+
+
 
 
 
@@ -8202,7 +8777,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1DevicesDeviceIdDraftGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1DevicesDeviceIdDraftGet`: V1DevicesDeviceIdDraftGet200Response
+	// response from `V1DevicesDeviceIdDraftGet`: V1DevicesDeviceIdDraftGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1DevicesDeviceIdDraftGet`: %v\n", resp)
 }
 ```
@@ -8227,7 +8802,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1DevicesDeviceIdDraftGet200Response**](V1DevicesDeviceIdDraftGet200Response.md)
+[**V1DevicesDeviceIdDraftGetResponse**](V1DevicesDeviceIdDraftGetResponse.md)
 
 ### Authorization
 
@@ -8245,7 +8820,9 @@ Name | Type | Description  | Notes
 
 ## V1DevicesDeviceIdDraftPost
 
-> V1DevicesDeviceIdDraftPost201Response V1DevicesDeviceIdDraftPost(ctx, deviceId).Authorization(authorization).V1DevicesDeviceIdDraftPostRequest(v1DevicesDeviceIdDraftPostRequest).Execute()
+> V1DevicesDeviceIdDraftPostResponse V1DevicesDeviceIdDraftPost(ctx, deviceId).Authorization(authorization).V1DevicesDeviceIdDraftPostRequest(v1DevicesDeviceIdDraftPostRequest).Execute()
+
+
 
 
 
@@ -8273,7 +8850,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1DevicesDeviceIdDraftPost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1DevicesDeviceIdDraftPost`: V1DevicesDeviceIdDraftPost201Response
+	// response from `V1DevicesDeviceIdDraftPost`: V1DevicesDeviceIdDraftPostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1DevicesDeviceIdDraftPost`: %v\n", resp)
 }
 ```
@@ -8299,7 +8876,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1DevicesDeviceIdDraftPost201Response**](V1DevicesDeviceIdDraftPost201Response.md)
+[**V1DevicesDeviceIdDraftPostResponse**](V1DevicesDeviceIdDraftPostResponse.md)
 
 ### Authorization
 
@@ -8317,7 +8894,9 @@ Name | Type | Description  | Notes
 
 ## V1DevicesDeviceIdEdgesGet
 
-> V1DevicesDeviceIdEdgesGet200Response V1DevicesDeviceIdEdgesGet(ctx, deviceId).Authorization(authorization).Execute()
+> V1DevicesDeviceIdEdgesGetResponse V1DevicesDeviceIdEdgesGet(ctx, deviceId).Authorization(authorization).Execute()
+
+
 
 
 
@@ -8344,7 +8923,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1DevicesDeviceIdEdgesGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1DevicesDeviceIdEdgesGet`: V1DevicesDeviceIdEdgesGet200Response
+	// response from `V1DevicesDeviceIdEdgesGet`: V1DevicesDeviceIdEdgesGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1DevicesDeviceIdEdgesGet`: %v\n", resp)
 }
 ```
@@ -8369,7 +8948,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1DevicesDeviceIdEdgesGet200Response**](V1DevicesDeviceIdEdgesGet200Response.md)
+[**V1DevicesDeviceIdEdgesGetResponse**](V1DevicesDeviceIdEdgesGetResponse.md)
 
 ### Authorization
 
@@ -8387,7 +8966,9 @@ Name | Type | Description  | Notes
 
 ## V1DevicesDeviceIdGet
 
-> V1DevicesDeviceIdGet200Response V1DevicesDeviceIdGet(ctx, deviceId).Authorization(authorization).Execute()
+> V1DevicesDeviceIdGetResponse V1DevicesDeviceIdGet(ctx, deviceId).Authorization(authorization).Execute()
+
+
 
 
 
@@ -8414,7 +8995,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1DevicesDeviceIdGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1DevicesDeviceIdGet`: V1DevicesDeviceIdGet200Response
+	// response from `V1DevicesDeviceIdGet`: V1DevicesDeviceIdGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1DevicesDeviceIdGet`: %v\n", resp)
 }
 ```
@@ -8439,7 +9020,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1DevicesDeviceIdGet200Response**](V1DevicesDeviceIdGet200Response.md)
+[**V1DevicesDeviceIdGetResponse**](V1DevicesDeviceIdGetResponse.md)
 
 ### Authorization
 
@@ -8457,7 +9038,9 @@ Name | Type | Description  | Notes
 
 ## V1DevicesDeviceIdInterfacesGet
 
-> V1DevicesDeviceIdInterfacesGet200Response V1DevicesDeviceIdInterfacesGet(ctx, deviceId).Authorization(authorization).Execute()
+> V1DevicesDeviceIdInterfacesGetResponse V1DevicesDeviceIdInterfacesGet(ctx, deviceId).Authorization(authorization).Execute()
+
+
 
 
 
@@ -8484,7 +9067,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1DevicesDeviceIdInterfacesGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1DevicesDeviceIdInterfacesGet`: V1DevicesDeviceIdInterfacesGet200Response
+	// response from `V1DevicesDeviceIdInterfacesGet`: V1DevicesDeviceIdInterfacesGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1DevicesDeviceIdInterfacesGet`: %v\n", resp)
 }
 ```
@@ -8509,7 +9092,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1DevicesDeviceIdInterfacesGet200Response**](V1DevicesDeviceIdInterfacesGet200Response.md)
+[**V1DevicesDeviceIdInterfacesGetResponse**](V1DevicesDeviceIdInterfacesGetResponse.md)
 
 ### Authorization
 
@@ -8527,7 +9110,9 @@ Name | Type | Description  | Notes
 
 ## V1DevicesDeviceIdJobsJobIdGet
 
-> V1DevicesDeviceIdJobsJobIdGet200Response V1DevicesDeviceIdJobsJobIdGet(ctx, deviceId, jobId).Authorization(authorization).Execute()
+> V1DevicesDeviceIdJobsJobIdGetResponse V1DevicesDeviceIdJobsJobIdGet(ctx, deviceId, jobId).Authorization(authorization).Execute()
+
+
 
 
 
@@ -8555,7 +9140,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1DevicesDeviceIdJobsJobIdGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1DevicesDeviceIdJobsJobIdGet`: V1DevicesDeviceIdJobsJobIdGet200Response
+	// response from `V1DevicesDeviceIdJobsJobIdGet`: V1DevicesDeviceIdJobsJobIdGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1DevicesDeviceIdJobsJobIdGet`: %v\n", resp)
 }
 ```
@@ -8582,7 +9167,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1DevicesDeviceIdJobsJobIdGet200Response**](V1DevicesDeviceIdJobsJobIdGet200Response.md)
+[**V1DevicesDeviceIdJobsJobIdGetResponse**](V1DevicesDeviceIdJobsJobIdGetResponse.md)
 
 ### Authorization
 
@@ -8600,7 +9185,9 @@ Name | Type | Description  | Notes
 
 ## V1DevicesDeviceIdNdcacheGet
 
-> V1DevicesDeviceIdNdcacheGet200Response V1DevicesDeviceIdNdcacheGet(ctx, deviceId).Authorization(authorization).Execute()
+> V1DevicesDeviceIdNdcacheGetResponse V1DevicesDeviceIdNdcacheGet(ctx, deviceId).Authorization(authorization).Execute()
+
+
 
 
 
@@ -8627,7 +9214,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1DevicesDeviceIdNdcacheGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1DevicesDeviceIdNdcacheGet`: V1DevicesDeviceIdNdcacheGet200Response
+	// response from `V1DevicesDeviceIdNdcacheGet`: V1DevicesDeviceIdNdcacheGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1DevicesDeviceIdNdcacheGet`: %v\n", resp)
 }
 ```
@@ -8652,7 +9239,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1DevicesDeviceIdNdcacheGet200Response**](V1DevicesDeviceIdNdcacheGet200Response.md)
+[**V1DevicesDeviceIdNdcacheGetResponse**](V1DevicesDeviceIdNdcacheGetResponse.md)
 
 ### Authorization
 
@@ -8670,7 +9257,7 @@ Name | Type | Description  | Notes
 
 ## V1DevicesDeviceIdOspfv2DefaultOriginateGet
 
-> V1DevicesDeviceIdOspfv2DefaultOriginateGet200Response V1DevicesDeviceIdOspfv2DefaultOriginateGet(ctx, deviceId).Authorization(authorization).Execute()
+> V1DevicesDeviceIdOspfv2DefaultOriginateGetResponse V1DevicesDeviceIdOspfv2DefaultOriginateGet(ctx, deviceId).Authorization(authorization).Execute()
 
 
 
@@ -8697,7 +9284,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1DevicesDeviceIdOspfv2DefaultOriginateGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1DevicesDeviceIdOspfv2DefaultOriginateGet`: V1DevicesDeviceIdOspfv2DefaultOriginateGet200Response
+	// response from `V1DevicesDeviceIdOspfv2DefaultOriginateGet`: V1DevicesDeviceIdOspfv2DefaultOriginateGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1DevicesDeviceIdOspfv2DefaultOriginateGet`: %v\n", resp)
 }
 ```
@@ -8722,7 +9309,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1DevicesDeviceIdOspfv2DefaultOriginateGet200Response**](V1DevicesDeviceIdOspfv2DefaultOriginateGet200Response.md)
+[**V1DevicesDeviceIdOspfv2DefaultOriginateGetResponse**](V1DevicesDeviceIdOspfv2DefaultOriginateGetResponse.md)
 
 ### Authorization
 
@@ -8740,7 +9327,7 @@ Name | Type | Description  | Notes
 
 ## V1DevicesDeviceIdOspfv3DefaultOriginateGet
 
-> V1DevicesDeviceIdOspfv2DefaultOriginateGet200Response V1DevicesDeviceIdOspfv3DefaultOriginateGet(ctx, deviceId).Authorization(authorization).Execute()
+> V1DevicesDeviceIdOspfv3DefaultOriginateGetResponse V1DevicesDeviceIdOspfv3DefaultOriginateGet(ctx, deviceId).Authorization(authorization).Execute()
 
 
 
@@ -8767,7 +9354,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1DevicesDeviceIdOspfv3DefaultOriginateGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1DevicesDeviceIdOspfv3DefaultOriginateGet`: V1DevicesDeviceIdOspfv2DefaultOriginateGet200Response
+	// response from `V1DevicesDeviceIdOspfv3DefaultOriginateGet`: V1DevicesDeviceIdOspfv3DefaultOriginateGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1DevicesDeviceIdOspfv3DefaultOriginateGet`: %v\n", resp)
 }
 ```
@@ -8792,7 +9379,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1DevicesDeviceIdOspfv2DefaultOriginateGet200Response**](V1DevicesDeviceIdOspfv2DefaultOriginateGet200Response.md)
+[**V1DevicesDeviceIdOspfv3DefaultOriginateGetResponse**](V1DevicesDeviceIdOspfv3DefaultOriginateGetResponse.md)
 
 ### Authorization
 
@@ -8810,7 +9397,9 @@ Name | Type | Description  | Notes
 
 ## V1DevicesDeviceIdPolicyApplicationsGet
 
-> V1PolicyApplicationsGet200Response V1DevicesDeviceIdPolicyApplicationsGet(ctx, deviceId).Authorization(authorization).Execute()
+> V1DevicesDeviceIdPolicyApplicationsGetResponse V1DevicesDeviceIdPolicyApplicationsGet(ctx, deviceId).Authorization(authorization).Execute()
+
+
 
 
 
@@ -8837,7 +9426,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1DevicesDeviceIdPolicyApplicationsGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1DevicesDeviceIdPolicyApplicationsGet`: V1PolicyApplicationsGet200Response
+	// response from `V1DevicesDeviceIdPolicyApplicationsGet`: V1DevicesDeviceIdPolicyApplicationsGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1DevicesDeviceIdPolicyApplicationsGet`: %v\n", resp)
 }
 ```
@@ -8862,7 +9451,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1PolicyApplicationsGet200Response**](V1PolicyApplicationsGet200Response.md)
+[**V1DevicesDeviceIdPolicyApplicationsGetResponse**](V1DevicesDeviceIdPolicyApplicationsGetResponse.md)
 
 ### Authorization
 
@@ -8880,7 +9469,9 @@ Name | Type | Description  | Notes
 
 ## V1DevicesDeviceIdPolicyCustomapplicationsGet
 
-> V1PolicyApplicationsGet200Response V1DevicesDeviceIdPolicyCustomapplicationsGet(ctx, deviceId).Authorization(authorization).Execute()
+> V1DevicesDeviceIdPolicyCustomapplicationsGetResponse V1DevicesDeviceIdPolicyCustomapplicationsGet(ctx, deviceId).Authorization(authorization).Execute()
+
+
 
 
 
@@ -8907,7 +9498,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1DevicesDeviceIdPolicyCustomapplicationsGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1DevicesDeviceIdPolicyCustomapplicationsGet`: V1PolicyApplicationsGet200Response
+	// response from `V1DevicesDeviceIdPolicyCustomapplicationsGet`: V1DevicesDeviceIdPolicyCustomapplicationsGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1DevicesDeviceIdPolicyCustomapplicationsGet`: %v\n", resp)
 }
 ```
@@ -8932,7 +9523,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1PolicyApplicationsGet200Response**](V1PolicyApplicationsGet200Response.md)
+[**V1DevicesDeviceIdPolicyCustomapplicationsGetResponse**](V1DevicesDeviceIdPolicyCustomapplicationsGetResponse.md)
 
 ### Authorization
 
@@ -8950,7 +9541,9 @@ Name | Type | Description  | Notes
 
 ## V1DevicesDeviceIdPolicyZonepairsGet
 
-> V1DevicesDeviceIdPolicyZonepairsGet200Response V1DevicesDeviceIdPolicyZonepairsGet(ctx, deviceId).Authorization(authorization).Execute()
+> V1DevicesDeviceIdPolicyZonepairsGetResponse V1DevicesDeviceIdPolicyZonepairsGet(ctx, deviceId).Authorization(authorization).Execute()
+
+
 
 
 
@@ -8977,7 +9570,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1DevicesDeviceIdPolicyZonepairsGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1DevicesDeviceIdPolicyZonepairsGet`: V1DevicesDeviceIdPolicyZonepairsGet200Response
+	// response from `V1DevicesDeviceIdPolicyZonepairsGet`: V1DevicesDeviceIdPolicyZonepairsGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1DevicesDeviceIdPolicyZonepairsGet`: %v\n", resp)
 }
 ```
@@ -9002,7 +9595,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1DevicesDeviceIdPolicyZonepairsGet200Response**](V1DevicesDeviceIdPolicyZonepairsGet200Response.md)
+[**V1DevicesDeviceIdPolicyZonepairsGetResponse**](V1DevicesDeviceIdPolicyZonepairsGetResponse.md)
 
 ### Authorization
 
@@ -9020,7 +9613,7 @@ Name | Type | Description  | Notes
 
 ## V1DevicesDeviceIdSlicePeersGet
 
-> V1DevicesDeviceIdSlicePeersGet200Response V1DevicesDeviceIdSlicePeersGet(ctx, deviceId).Authorization(authorization).Execute()
+> V1DevicesDeviceIdSlicePeersGetResponse V1DevicesDeviceIdSlicePeersGet(ctx, deviceId).Authorization(authorization).Execute()
 
 
 
@@ -9047,7 +9640,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1DevicesDeviceIdSlicePeersGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1DevicesDeviceIdSlicePeersGet`: V1DevicesDeviceIdSlicePeersGet200Response
+	// response from `V1DevicesDeviceIdSlicePeersGet`: V1DevicesDeviceIdSlicePeersGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1DevicesDeviceIdSlicePeersGet`: %v\n", resp)
 }
 ```
@@ -9072,7 +9665,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1DevicesDeviceIdSlicePeersGet200Response**](V1DevicesDeviceIdSlicePeersGet200Response.md)
+[**V1DevicesDeviceIdSlicePeersGetResponse**](V1DevicesDeviceIdSlicePeersGetResponse.md)
 
 ### Authorization
 
@@ -9090,7 +9683,9 @@ Name | Type | Description  | Notes
 
 ## V1DevicesDeviceIdTwampCoreGet
 
-> V1DevicesDeviceIdTwampCoreGet200Response V1DevicesDeviceIdTwampCoreGet(ctx, deviceId).Authorization(authorization).Execute()
+> V1DevicesDeviceIdTwampCoreGetResponse V1DevicesDeviceIdTwampCoreGet(ctx, deviceId).Authorization(authorization).Execute()
+
+
 
 
 
@@ -9117,7 +9712,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1DevicesDeviceIdTwampCoreGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1DevicesDeviceIdTwampCoreGet`: V1DevicesDeviceIdTwampCoreGet200Response
+	// response from `V1DevicesDeviceIdTwampCoreGet`: V1DevicesDeviceIdTwampCoreGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1DevicesDeviceIdTwampCoreGet`: %v\n", resp)
 }
 ```
@@ -9142,7 +9737,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1DevicesDeviceIdTwampCoreGet200Response**](V1DevicesDeviceIdTwampCoreGet200Response.md)
+[**V1DevicesDeviceIdTwampCoreGetResponse**](V1DevicesDeviceIdTwampCoreGetResponse.md)
 
 ### Authorization
 
@@ -9160,7 +9755,9 @@ Name | Type | Description  | Notes
 
 ## V1DevicesDeviceIdVersionsCompareGet
 
-> V1DevicesDeviceIdVersionsCompareGet200Response V1DevicesDeviceIdVersionsCompareGet(ctx, deviceId).Authorization(authorization).Execute()
+> V1DevicesDeviceIdVersionsCompareGetResponse V1DevicesDeviceIdVersionsCompareGet(ctx, deviceId).Authorization(authorization).Execute()
+
+
 
 
 
@@ -9187,7 +9784,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1DevicesDeviceIdVersionsCompareGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1DevicesDeviceIdVersionsCompareGet`: V1DevicesDeviceIdVersionsCompareGet200Response
+	// response from `V1DevicesDeviceIdVersionsCompareGet`: V1DevicesDeviceIdVersionsCompareGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1DevicesDeviceIdVersionsCompareGet`: %v\n", resp)
 }
 ```
@@ -9212,7 +9809,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1DevicesDeviceIdVersionsCompareGet200Response**](V1DevicesDeviceIdVersionsCompareGet200Response.md)
+[**V1DevicesDeviceIdVersionsCompareGetResponse**](V1DevicesDeviceIdVersionsCompareGetResponse.md)
 
 ### Authorization
 
@@ -9230,7 +9827,9 @@ Name | Type | Description  | Notes
 
 ## V1DevicesDeviceIdVersionsGet
 
-> V1DevicesDeviceIdVersionsGet200Response V1DevicesDeviceIdVersionsGet(ctx, deviceId).Authorization(authorization).Execute()
+> V1DevicesDeviceIdVersionsGetResponse V1DevicesDeviceIdVersionsGet(ctx, deviceId).Authorization(authorization).Execute()
+
+
 
 
 
@@ -9257,7 +9856,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1DevicesDeviceIdVersionsGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1DevicesDeviceIdVersionsGet`: V1DevicesDeviceIdVersionsGet200Response
+	// response from `V1DevicesDeviceIdVersionsGet`: V1DevicesDeviceIdVersionsGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1DevicesDeviceIdVersionsGet`: %v\n", resp)
 }
 ```
@@ -9282,7 +9881,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1DevicesDeviceIdVersionsGet200Response**](V1DevicesDeviceIdVersionsGet200Response.md)
+[**V1DevicesDeviceIdVersionsGetResponse**](V1DevicesDeviceIdVersionsGetResponse.md)
 
 ### Authorization
 
@@ -9300,7 +9899,9 @@ Name | Type | Description  | Notes
 
 ## V1DevicesDeviceIdVersionsVersionGet
 
-> V1DevicesDeviceIdVersionsVersionGet200Response V1DevicesDeviceIdVersionsVersionGet(ctx, deviceId, version).Authorization(authorization).Execute()
+> V1DevicesDeviceIdVersionsVersionGetResponse V1DevicesDeviceIdVersionsVersionGet(ctx, deviceId, version).Authorization(authorization).Execute()
+
+
 
 
 
@@ -9328,7 +9929,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1DevicesDeviceIdVersionsVersionGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1DevicesDeviceIdVersionsVersionGet`: V1DevicesDeviceIdVersionsVersionGet200Response
+	// response from `V1DevicesDeviceIdVersionsVersionGet`: V1DevicesDeviceIdVersionsVersionGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1DevicesDeviceIdVersionsVersionGet`: %v\n", resp)
 }
 ```
@@ -9355,7 +9956,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1DevicesDeviceIdVersionsVersionGet200Response**](V1DevicesDeviceIdVersionsVersionGet200Response.md)
+[**V1DevicesDeviceIdVersionsVersionGetResponse**](V1DevicesDeviceIdVersionsVersionGetResponse.md)
 
 ### Authorization
 
@@ -9373,7 +9974,7 @@ Name | Type | Description  | Notes
 
 ## V1DevicesDeviceIdVrfBgpAsGet
 
-> V1DevicesDeviceIdVrfBgpAsGet200Response V1DevicesDeviceIdVrfBgpAsGet(ctx, deviceId).Authorization(authorization).Execute()
+> V1DevicesDeviceIdVrfBgpAsGetResponse V1DevicesDeviceIdVrfBgpAsGet(ctx, deviceId).Authorization(authorization).Execute()
 
 
 
@@ -9400,7 +10001,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1DevicesDeviceIdVrfBgpAsGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1DevicesDeviceIdVrfBgpAsGet`: V1DevicesDeviceIdVrfBgpAsGet200Response
+	// response from `V1DevicesDeviceIdVrfBgpAsGet`: V1DevicesDeviceIdVrfBgpAsGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1DevicesDeviceIdVrfBgpAsGet`: %v\n", resp)
 }
 ```
@@ -9425,7 +10026,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1DevicesDeviceIdVrfBgpAsGet200Response**](V1DevicesDeviceIdVrfBgpAsGet200Response.md)
+[**V1DevicesDeviceIdVrfBgpAsGetResponse**](V1DevicesDeviceIdVrfBgpAsGetResponse.md)
 
 ### Authorization
 
@@ -9443,7 +10044,7 @@ Name | Type | Description  | Notes
 
 ## V1DevicesDeviceIdVrfProtocolsGet
 
-> V1DevicesDeviceIdVrfProtocolsGet200Response V1DevicesDeviceIdVrfProtocolsGet(ctx, deviceId).Authorization(authorization).Execute()
+> V1DevicesDeviceIdVrfProtocolsGetResponse V1DevicesDeviceIdVrfProtocolsGet(ctx, deviceId).Authorization(authorization).Execute()
 
 
 
@@ -9470,7 +10071,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1DevicesDeviceIdVrfProtocolsGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1DevicesDeviceIdVrfProtocolsGet`: V1DevicesDeviceIdVrfProtocolsGet200Response
+	// response from `V1DevicesDeviceIdVrfProtocolsGet`: V1DevicesDeviceIdVrfProtocolsGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1DevicesDeviceIdVrfProtocolsGet`: %v\n", resp)
 }
 ```
@@ -9495,7 +10096,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1DevicesDeviceIdVrfProtocolsGet200Response**](V1DevicesDeviceIdVrfProtocolsGet200Response.md)
+[**V1DevicesDeviceIdVrfProtocolsGetResponse**](V1DevicesDeviceIdVrfProtocolsGetResponse.md)
 
 ### Authorization
 
@@ -9513,7 +10114,9 @@ Name | Type | Description  | Notes
 
 ## V1DevicesDeviceIdVrrpGet
 
-> V1DevicesDeviceIdVrrpGet200Response V1DevicesDeviceIdVrrpGet(ctx, deviceId).Authorization(authorization).Execute()
+> V1DevicesDeviceIdVrrpGetResponse V1DevicesDeviceIdVrrpGet(ctx, deviceId).Authorization(authorization).Execute()
+
+
 
 
 
@@ -9540,7 +10143,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1DevicesDeviceIdVrrpGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1DevicesDeviceIdVrrpGet`: V1DevicesDeviceIdVrrpGet200Response
+	// response from `V1DevicesDeviceIdVrrpGet`: V1DevicesDeviceIdVrrpGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1DevicesDeviceIdVrrpGet`: %v\n", resp)
 }
 ```
@@ -9565,7 +10168,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1DevicesDeviceIdVrrpGet200Response**](V1DevicesDeviceIdVrrpGet200Response.md)
+[**V1DevicesDeviceIdVrrpGetResponse**](V1DevicesDeviceIdVrrpGetResponse.md)
 
 ### Authorization
 
@@ -9583,7 +10186,9 @@ Name | Type | Description  | Notes
 
 ## V1DevicesGet
 
-> V1DevicesDeviceIdEdgesGet200Response V1DevicesGet(ctx).Authorization(authorization).Execute()
+> V1DevicesGetResponse V1DevicesGet(ctx).Authorization(authorization).Execute()
+
+
 
 
 
@@ -9609,7 +10214,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1DevicesGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1DevicesGet`: V1DevicesDeviceIdEdgesGet200Response
+	// response from `V1DevicesGet`: V1DevicesGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1DevicesGet`: %v\n", resp)
 }
 ```
@@ -9629,7 +10234,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1DevicesDeviceIdEdgesGet200Response**](V1DevicesDeviceIdEdgesGet200Response.md)
+[**V1DevicesGetResponse**](V1DevicesGetResponse.md)
 
 ### Authorization
 
@@ -9779,7 +10384,7 @@ Name | Type | Description  | Notes
 
 ## V1DevicesInventoryClearReturnPost
 
-> map[string]interface{} V1DevicesInventoryClearReturnPost(ctx).Authorization(authorization).V1DevicesInventoryApproveReturnPostRequest(v1DevicesInventoryApproveReturnPostRequest).Execute()
+> map[string]interface{} V1DevicesInventoryClearReturnPost(ctx).Authorization(authorization).V1DevicesInventoryClearReturnPostRequest(v1DevicesInventoryClearReturnPostRequest).Execute()
 
 
 
@@ -9797,11 +10402,11 @@ import (
 
 func main() {
 	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
-	v1DevicesInventoryApproveReturnPostRequest := *openapiclient.NewV1DevicesInventoryApproveReturnPostRequest() // V1DevicesInventoryApproveReturnPostRequest | 
+	v1DevicesInventoryClearReturnPostRequest := *openapiclient.NewV1DevicesInventoryClearReturnPostRequest() // V1DevicesInventoryClearReturnPostRequest | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.DefaultAPI.V1DevicesInventoryClearReturnPost(context.Background()).Authorization(authorization).V1DevicesInventoryApproveReturnPostRequest(v1DevicesInventoryApproveReturnPostRequest).Execute()
+	resp, r, err := apiClient.DefaultAPI.V1DevicesInventoryClearReturnPost(context.Background()).Authorization(authorization).V1DevicesInventoryClearReturnPostRequest(v1DevicesInventoryClearReturnPostRequest).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1DevicesInventoryClearReturnPost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -9823,7 +10428,7 @@ Other parameters are passed through a pointer to a apiV1DevicesInventoryClearRet
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **string** | Bearer token. Format: Bearer &lt;your_token_here&gt; | 
- **v1DevicesInventoryApproveReturnPostRequest** | [**V1DevicesInventoryApproveReturnPostRequest**](V1DevicesInventoryApproveReturnPostRequest.md) |  | 
+ **v1DevicesInventoryClearReturnPostRequest** | [**V1DevicesInventoryClearReturnPostRequest**](V1DevicesInventoryClearReturnPostRequest.md) |  | 
 
 ### Return type
 
@@ -9911,7 +10516,7 @@ Name | Type | Description  | Notes
 
 ## V1DevicesInventoryGet
 
-> V1DevicesInventoryGet200Response V1DevicesInventoryGet(ctx).Authorization(authorization).Execute()
+> V1DevicesInventoryGetResponse V1DevicesInventoryGet(ctx).Authorization(authorization).Execute()
 
 
 
@@ -9937,7 +10542,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1DevicesInventoryGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1DevicesInventoryGet`: V1DevicesInventoryGet200Response
+	// response from `V1DevicesInventoryGet`: V1DevicesInventoryGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1DevicesInventoryGet`: %v\n", resp)
 }
 ```
@@ -9957,7 +10562,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1DevicesInventoryGet200Response**](V1DevicesInventoryGet200Response.md)
+[**V1DevicesInventoryGetResponse**](V1DevicesInventoryGetResponse.md)
 
 ### Authorization
 
@@ -9975,7 +10580,7 @@ Name | Type | Description  | Notes
 
 ## V1DevicesInventoryPost
 
-> V1DevicesInventoryPost200Response V1DevicesInventoryPost(ctx).Authorization(authorization).V1DevicesInventoryPostRequest(v1DevicesInventoryPostRequest).Execute()
+> V1DevicesInventoryPostResponse V1DevicesInventoryPost(ctx).Authorization(authorization).V1DevicesInventoryPostRequest(v1DevicesInventoryPostRequest).Execute()
 
 
 
@@ -10002,7 +10607,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1DevicesInventoryPost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1DevicesInventoryPost`: V1DevicesInventoryPost200Response
+	// response from `V1DevicesInventoryPost`: V1DevicesInventoryPostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1DevicesInventoryPost`: %v\n", resp)
 }
 ```
@@ -10023,7 +10628,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1DevicesInventoryPost200Response**](V1DevicesInventoryPost200Response.md)
+[**V1DevicesInventoryPostResponse**](V1DevicesInventoryPostResponse.md)
 
 ### Authorization
 
@@ -10041,7 +10646,7 @@ Name | Type | Description  | Notes
 
 ## V1DevicesInventoryRequestReturnPost
 
-> map[string]interface{} V1DevicesInventoryRequestReturnPost(ctx).Authorization(authorization).V1DevicesInventoryApproveReturnPostRequest(v1DevicesInventoryApproveReturnPostRequest).Execute()
+> map[string]interface{} V1DevicesInventoryRequestReturnPost(ctx).Authorization(authorization).V1DevicesInventoryRequestReturnPostRequest(v1DevicesInventoryRequestReturnPostRequest).Execute()
 
 
 
@@ -10059,11 +10664,11 @@ import (
 
 func main() {
 	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
-	v1DevicesInventoryApproveReturnPostRequest := *openapiclient.NewV1DevicesInventoryApproveReturnPostRequest() // V1DevicesInventoryApproveReturnPostRequest | 
+	v1DevicesInventoryRequestReturnPostRequest := *openapiclient.NewV1DevicesInventoryRequestReturnPostRequest() // V1DevicesInventoryRequestReturnPostRequest | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.DefaultAPI.V1DevicesInventoryRequestReturnPost(context.Background()).Authorization(authorization).V1DevicesInventoryApproveReturnPostRequest(v1DevicesInventoryApproveReturnPostRequest).Execute()
+	resp, r, err := apiClient.DefaultAPI.V1DevicesInventoryRequestReturnPost(context.Background()).Authorization(authorization).V1DevicesInventoryRequestReturnPostRequest(v1DevicesInventoryRequestReturnPostRequest).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1DevicesInventoryRequestReturnPost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -10085,7 +10690,7 @@ Other parameters are passed through a pointer to a apiV1DevicesInventoryRequestR
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **string** | Bearer token. Format: Bearer &lt;your_token_here&gt; | 
- **v1DevicesInventoryApproveReturnPostRequest** | [**V1DevicesInventoryApproveReturnPostRequest**](V1DevicesInventoryApproveReturnPostRequest.md) |  | 
+ **v1DevicesInventoryRequestReturnPostRequest** | [**V1DevicesInventoryRequestReturnPostRequest**](V1DevicesInventoryRequestReturnPostRequest.md) |  | 
 
 ### Return type
 
@@ -10173,7 +10778,7 @@ Name | Type | Description  | Notes
 
 ## V1DevicesInventorySerialNumPost
 
-> V1DevicesInventorySerialNumPost200Response V1DevicesInventorySerialNumPost(ctx).Authorization(authorization).V1DevicesInventoryApproveReturnPostRequest(v1DevicesInventoryApproveReturnPostRequest).Execute()
+> V1DevicesInventorySerialNumPostResponse V1DevicesInventorySerialNumPost(ctx).Authorization(authorization).V1DevicesInventorySerialNumPostRequest(v1DevicesInventorySerialNumPostRequest).Execute()
 
 
 
@@ -10191,16 +10796,16 @@ import (
 
 func main() {
 	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
-	v1DevicesInventoryApproveReturnPostRequest := *openapiclient.NewV1DevicesInventoryApproveReturnPostRequest() // V1DevicesInventoryApproveReturnPostRequest | 
+	v1DevicesInventorySerialNumPostRequest := *openapiclient.NewV1DevicesInventorySerialNumPostRequest() // V1DevicesInventorySerialNumPostRequest | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.DefaultAPI.V1DevicesInventorySerialNumPost(context.Background()).Authorization(authorization).V1DevicesInventoryApproveReturnPostRequest(v1DevicesInventoryApproveReturnPostRequest).Execute()
+	resp, r, err := apiClient.DefaultAPI.V1DevicesInventorySerialNumPost(context.Background()).Authorization(authorization).V1DevicesInventorySerialNumPostRequest(v1DevicesInventorySerialNumPostRequest).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1DevicesInventorySerialNumPost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1DevicesInventorySerialNumPost`: V1DevicesInventorySerialNumPost200Response
+	// response from `V1DevicesInventorySerialNumPost`: V1DevicesInventorySerialNumPostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1DevicesInventorySerialNumPost`: %v\n", resp)
 }
 ```
@@ -10217,11 +10822,217 @@ Other parameters are passed through a pointer to a apiV1DevicesInventorySerialNu
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **string** | Bearer token. Format: Bearer &lt;your_token_here&gt; | 
- **v1DevicesInventoryApproveReturnPostRequest** | [**V1DevicesInventoryApproveReturnPostRequest**](V1DevicesInventoryApproveReturnPostRequest.md) |  | 
+ **v1DevicesInventorySerialNumPostRequest** | [**V1DevicesInventorySerialNumPostRequest**](V1DevicesInventorySerialNumPostRequest.md) |  | 
 
 ### Return type
 
-[**V1DevicesInventorySerialNumPost200Response**](V1DevicesInventorySerialNumPost200Response.md)
+[**V1DevicesInventorySerialNumPostResponse**](V1DevicesInventorySerialNumPostResponse.md)
+
+### Authorization
+
+[jwtAuth](../README.md#jwtAuth)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## V1DevicesOauthAuthorizationGet
+
+> V1DevicesOauthAuthorizationGetResponse V1DevicesOauthAuthorizationGet(ctx).RelayState(relayState).Execute()
+
+
+
+
+
+### Example
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/Graphiant-Inc/graphiant-sdk-go"
+)
+
+func main() {
+	relayState := "eyJzY29wZSI6InR5cGU9enQtY3BlIHV1aWQ9ZGV2aWNlLXV1aWQtMTIzIGhvc3RuYW1lPWRldmljZS5leGFtcGxlLmNvbSIsInN0YXRlIjoic3RhdGUtMTIzNDUiLCJjb2RlX2NoYWxsZW5nZSI6ImNvZGUtY2hhbGxlbmdlLTEyMzQ1IiwiY29kZV9jaGFsbGVuZ2VfbWV0aG9kIjoiUzI1NiIsInB0IjoiaGFyZHdhcmUiLCJibSI6InAifQ==" // string | Base64 encoded relay state containing OAuth parameters
+
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.DefaultAPI.V1DevicesOauthAuthorizationGet(context.Background()).RelayState(relayState).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1DevicesOauthAuthorizationGet``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `V1DevicesOauthAuthorizationGet`: V1DevicesOauthAuthorizationGetResponse
+	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1DevicesOauthAuthorizationGet`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiV1DevicesOauthAuthorizationGetRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **relayState** | **string** | Base64 encoded relay state containing OAuth parameters | 
+
+### Return type
+
+[**V1DevicesOauthAuthorizationGetResponse**](V1DevicesOauthAuthorizationGetResponse.md)
+
+### Authorization
+
+[jwtAuth](../README.md#jwtAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## V1DevicesOauthGet
+
+> V1DevicesOauthGet(ctx).Scope(scope).State(state).CodeChallenge(codeChallenge).CodeChallengeMethod(codeChallengeMethod).Pt(pt).Bm(bm).Execute()
+
+
+
+
+
+### Example
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/Graphiant-Inc/graphiant-sdk-go"
+)
+
+func main() {
+	scope := "type=zt-cpe uuid=device-uuid-123 hostname=device.example.com" // string | OAuth scope containing device type, UUID, and hostname
+	state := "state-12345" // string | OAuth state parameter (optional)
+	codeChallenge := "code-challenge-12345" // string | PKCE code challenge (optional)
+	codeChallengeMethod := "S256" // string | PKCE code challenge method (optional)
+	pt := "hardware" // string | Platform type (optional)
+	bm := "p" // string | Boot mode (optional)
+
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	r, err := apiClient.DefaultAPI.V1DevicesOauthGet(context.Background()).Scope(scope).State(state).CodeChallenge(codeChallenge).CodeChallengeMethod(codeChallengeMethod).Pt(pt).Bm(bm).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1DevicesOauthGet``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiV1DevicesOauthGetRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **scope** | **string** | OAuth scope containing device type, UUID, and hostname | 
+ **state** | **string** | OAuth state parameter | 
+ **codeChallenge** | **string** | PKCE code challenge | 
+ **codeChallengeMethod** | **string** | PKCE code challenge method | 
+ **pt** | **string** | Platform type | 
+ **bm** | **string** | Boot mode | 
+
+### Return type
+
+ (empty response body)
+
+### Authorization
+
+[jwtAuth](../README.md#jwtAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## V1DevicesOauthPost
+
+> V1DevicesOauthPostResponse V1DevicesOauthPost(ctx).V1DevicesOauthPostRequest(v1DevicesOauthPostRequest).Execute()
+
+
+
+
+
+### Example
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/Graphiant-Inc/graphiant-sdk-go"
+)
+
+func main() {
+	v1DevicesOauthPostRequest := *openapiclient.NewV1DevicesOauthPostRequest("client_credentials", "type=zt-cpe uuid=device-uuid-123 hostname=device.example.com") // V1DevicesOauthPostRequest | 
+
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.DefaultAPI.V1DevicesOauthPost(context.Background()).V1DevicesOauthPostRequest(v1DevicesOauthPostRequest).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1DevicesOauthPost``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `V1DevicesOauthPost`: V1DevicesOauthPostResponse
+	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1DevicesOauthPost`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiV1DevicesOauthPostRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **v1DevicesOauthPostRequest** | [**V1DevicesOauthPostRequest**](V1DevicesOauthPostRequest.md) |  | 
+
+### Return type
+
+[**V1DevicesOauthPostResponse**](V1DevicesOauthPostResponse.md)
 
 ### Authorization
 
@@ -10239,7 +11050,7 @@ Name | Type | Description  | Notes
 
 ## V1DevicesOauthRedirectGet
 
-> V1DevicesOauthRedirectGet200Response V1DevicesOauthRedirectGet(ctx).Authorization(authorization).Execute()
+> V1DevicesOauthRedirectGetResponse V1DevicesOauthRedirectGet(ctx).Authorization(authorization).Execute()
 
 
 
@@ -10265,7 +11076,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1DevicesOauthRedirectGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1DevicesOauthRedirectGet`: V1DevicesOauthRedirectGet200Response
+	// response from `V1DevicesOauthRedirectGet`: V1DevicesOauthRedirectGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1DevicesOauthRedirectGet`: %v\n", resp)
 }
 ```
@@ -10285,7 +11096,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1DevicesOauthRedirectGet200Response**](V1DevicesOauthRedirectGet200Response.md)
+[**V1DevicesOauthRedirectGetResponse**](V1DevicesOauthRedirectGetResponse.md)
 
 ### Authorization
 
@@ -10369,7 +11180,9 @@ Name | Type | Description  | Notes
 
 ## V1DevicesRoutingVrfProtocolRouteCountGet
 
-> V1DevicesRoutingVrfProtocolRouteCountGet200Response V1DevicesRoutingVrfProtocolRouteCountGet(ctx).Authorization(authorization).DeviceId(deviceId).Protocols(protocols).VrfName(vrfName).Execute()
+> V1DevicesRoutingVrfProtocolRouteCountGetResponse V1DevicesRoutingVrfProtocolRouteCountGet(ctx).Authorization(authorization).DeviceId(deviceId).Protocols(protocols).VrfName(vrfName).Execute()
+
+
 
 
 
@@ -10387,9 +11200,9 @@ import (
 
 func main() {
 	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
-	deviceId := int64(1000000) // int64 | Valid configured device ID > 0 (optional)
-	protocols := []string{"example string"} // []string | List of protocols names for which route count is needed (optional)
-	vrfName := "management" // string | Valid configured VRF names (optional)
+	deviceId := int64(1000000) // int64 | Valid configured device ID > 0
+	protocols := []string{"[OSPF,BGP,connected]"} // []string | List of protocols names for which route count is needed
+	vrfName := "management" // string | Valid configured VRF names
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -10398,7 +11211,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1DevicesRoutingVrfProtocolRouteCountGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1DevicesRoutingVrfProtocolRouteCountGet`: V1DevicesRoutingVrfProtocolRouteCountGet200Response
+	// response from `V1DevicesRoutingVrfProtocolRouteCountGet`: V1DevicesRoutingVrfProtocolRouteCountGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1DevicesRoutingVrfProtocolRouteCountGet`: %v\n", resp)
 }
 ```
@@ -10421,7 +11234,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1DevicesRoutingVrfProtocolRouteCountGet200Response**](V1DevicesRoutingVrfProtocolRouteCountGet200Response.md)
+[**V1DevicesRoutingVrfProtocolRouteCountGetResponse**](V1DevicesRoutingVrfProtocolRouteCountGetResponse.md)
 
 ### Authorization
 
@@ -10439,7 +11252,7 @@ Name | Type | Description  | Notes
 
 ## V1DevicesRunningVersionPost
 
-> V1DevicesRunningVersionPost200Response V1DevicesRunningVersionPost(ctx).Authorization(authorization).V1DevicesSessionStatusPostRequest(v1DevicesSessionStatusPostRequest).Execute()
+> V1DevicesRunningVersionPostResponse V1DevicesRunningVersionPost(ctx).Authorization(authorization).V1DevicesRunningVersionPostRequest(v1DevicesRunningVersionPostRequest).Execute()
 
 
 
@@ -10457,16 +11270,16 @@ import (
 
 func main() {
 	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
-	v1DevicesSessionStatusPostRequest := *openapiclient.NewV1DevicesSessionStatusPostRequest() // V1DevicesSessionStatusPostRequest | 
+	v1DevicesRunningVersionPostRequest := *openapiclient.NewV1DevicesRunningVersionPostRequest() // V1DevicesRunningVersionPostRequest | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.DefaultAPI.V1DevicesRunningVersionPost(context.Background()).Authorization(authorization).V1DevicesSessionStatusPostRequest(v1DevicesSessionStatusPostRequest).Execute()
+	resp, r, err := apiClient.DefaultAPI.V1DevicesRunningVersionPost(context.Background()).Authorization(authorization).V1DevicesRunningVersionPostRequest(v1DevicesRunningVersionPostRequest).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1DevicesRunningVersionPost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1DevicesRunningVersionPost`: V1DevicesRunningVersionPost200Response
+	// response from `V1DevicesRunningVersionPost`: V1DevicesRunningVersionPostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1DevicesRunningVersionPost`: %v\n", resp)
 }
 ```
@@ -10483,11 +11296,11 @@ Other parameters are passed through a pointer to a apiV1DevicesRunningVersionPos
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **string** | Bearer token. Format: Bearer &lt;your_token_here&gt; | 
- **v1DevicesSessionStatusPostRequest** | [**V1DevicesSessionStatusPostRequest**](V1DevicesSessionStatusPostRequest.md) |  | 
+ **v1DevicesRunningVersionPostRequest** | [**V1DevicesRunningVersionPostRequest**](V1DevicesRunningVersionPostRequest.md) |  | 
 
 ### Return type
 
-[**V1DevicesRunningVersionPost200Response**](V1DevicesRunningVersionPost200Response.md)
+[**V1DevicesRunningVersionPostResponse**](V1DevicesRunningVersionPostResponse.md)
 
 ### Authorization
 
@@ -10505,7 +11318,9 @@ Name | Type | Description  | Notes
 
 ## V1DevicesSessionStatusPost
 
-> V1DevicesSessionStatusPost200Response V1DevicesSessionStatusPost(ctx).Authorization(authorization).V1DevicesSessionStatusPostRequest(v1DevicesSessionStatusPostRequest).Execute()
+> V1DevicesSessionStatusPostResponse V1DevicesSessionStatusPost(ctx).Authorization(authorization).V1DevicesSessionStatusPostRequest(v1DevicesSessionStatusPostRequest).Execute()
+
+
 
 
 
@@ -10532,7 +11347,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1DevicesSessionStatusPost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1DevicesSessionStatusPost`: V1DevicesSessionStatusPost200Response
+	// response from `V1DevicesSessionStatusPost`: V1DevicesSessionStatusPostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1DevicesSessionStatusPost`: %v\n", resp)
 }
 ```
@@ -10553,7 +11368,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1DevicesSessionStatusPost200Response**](V1DevicesSessionStatusPost200Response.md)
+[**V1DevicesSessionStatusPostResponse**](V1DevicesSessionStatusPostResponse.md)
 
 ### Authorization
 
@@ -10571,7 +11386,9 @@ Name | Type | Description  | Notes
 
 ## V1DevicesSummaryGet
 
-> V1DevicesSummaryGet200Response V1DevicesSummaryGet(ctx).Authorization(authorization).Execute()
+> V1DevicesSummaryGetResponse V1DevicesSummaryGet(ctx).Authorization(authorization).Execute()
+
+
 
 
 
@@ -10597,7 +11414,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1DevicesSummaryGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1DevicesSummaryGet`: V1DevicesSummaryGet200Response
+	// response from `V1DevicesSummaryGet`: V1DevicesSummaryGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1DevicesSummaryGet`: %v\n", resp)
 }
 ```
@@ -10617,7 +11434,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1DevicesSummaryGet200Response**](V1DevicesSummaryGet200Response.md)
+[**V1DevicesSummaryGetResponse**](V1DevicesSummaryGetResponse.md)
 
 ### Authorization
 
@@ -10635,7 +11452,7 @@ Name | Type | Description  | Notes
 
 ## V1DevicesUpgradeCancelPut
 
-> map[string]interface{} V1DevicesUpgradeCancelPut(ctx).Authorization(authorization).V1DevicesSessionStatusPostRequest(v1DevicesSessionStatusPostRequest).Execute()
+> map[string]interface{} V1DevicesUpgradeCancelPut(ctx).Authorization(authorization).V1DevicesUpgradeCancelPutRequest(v1DevicesUpgradeCancelPutRequest).Execute()
 
 
 
@@ -10653,11 +11470,11 @@ import (
 
 func main() {
 	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
-	v1DevicesSessionStatusPostRequest := *openapiclient.NewV1DevicesSessionStatusPostRequest() // V1DevicesSessionStatusPostRequest | 
+	v1DevicesUpgradeCancelPutRequest := *openapiclient.NewV1DevicesUpgradeCancelPutRequest() // V1DevicesUpgradeCancelPutRequest | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.DefaultAPI.V1DevicesUpgradeCancelPut(context.Background()).Authorization(authorization).V1DevicesSessionStatusPostRequest(v1DevicesSessionStatusPostRequest).Execute()
+	resp, r, err := apiClient.DefaultAPI.V1DevicesUpgradeCancelPut(context.Background()).Authorization(authorization).V1DevicesUpgradeCancelPutRequest(v1DevicesUpgradeCancelPutRequest).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1DevicesUpgradeCancelPut``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -10679,7 +11496,7 @@ Other parameters are passed through a pointer to a apiV1DevicesUpgradeCancelPutR
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **string** | Bearer token. Format: Bearer &lt;your_token_here&gt; | 
- **v1DevicesSessionStatusPostRequest** | [**V1DevicesSessionStatusPostRequest**](V1DevicesSessionStatusPostRequest.md) |  | 
+ **v1DevicesUpgradeCancelPutRequest** | [**V1DevicesUpgradeCancelPutRequest**](V1DevicesUpgradeCancelPutRequest.md) |  | 
 
 ### Return type
 
@@ -10767,7 +11584,9 @@ Name | Type | Description  | Notes
 
 ## V1DiagnosticArchiveCreateDeviceIdPost
 
-> V1DiagnosticArchiveCreateDeviceIdPost201Response V1DiagnosticArchiveCreateDeviceIdPost(ctx, deviceId).Authorization(authorization).V1DiagnosticArchiveCreateDeviceIdPostRequest(v1DiagnosticArchiveCreateDeviceIdPostRequest).Execute()
+> V1DiagnosticArchiveCreateDeviceIdPostResponse V1DiagnosticArchiveCreateDeviceIdPost(ctx, deviceId).Authorization(authorization).V1DiagnosticArchiveCreateDeviceIdPostRequest(v1DiagnosticArchiveCreateDeviceIdPostRequest).Execute()
+
+
 
 
 
@@ -10795,7 +11614,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1DiagnosticArchiveCreateDeviceIdPost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1DiagnosticArchiveCreateDeviceIdPost`: V1DiagnosticArchiveCreateDeviceIdPost201Response
+	// response from `V1DiagnosticArchiveCreateDeviceIdPost`: V1DiagnosticArchiveCreateDeviceIdPostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1DiagnosticArchiveCreateDeviceIdPost`: %v\n", resp)
 }
 ```
@@ -10821,7 +11640,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1DiagnosticArchiveCreateDeviceIdPost201Response**](V1DiagnosticArchiveCreateDeviceIdPost201Response.md)
+[**V1DiagnosticArchiveCreateDeviceIdPostResponse**](V1DiagnosticArchiveCreateDeviceIdPostResponse.md)
 
 ### Authorization
 
@@ -10840,6 +11659,8 @@ Name | Type | Description  | Notes
 ## V1DiagnosticArchiveDeleteArchiveIdDelete
 
 > map[string]interface{} V1DiagnosticArchiveDeleteArchiveIdDelete(ctx, archiveId).Authorization(authorization).Execute()
+
+
 
 
 
@@ -10909,7 +11730,9 @@ Name | Type | Description  | Notes
 
 ## V1DiagnosticArchiveEditArchiveIdPut
 
-> map[string]interface{} V1DiagnosticArchiveEditArchiveIdPut(ctx, archiveId).Authorization(authorization).V1DiagnosticArchiveCreateDeviceIdPostRequest(v1DiagnosticArchiveCreateDeviceIdPostRequest).Execute()
+> map[string]interface{} V1DiagnosticArchiveEditArchiveIdPut(ctx, archiveId).Authorization(authorization).V1DiagnosticArchiveEditArchiveIdPutRequest(v1DiagnosticArchiveEditArchiveIdPutRequest).Execute()
+
+
 
 
 
@@ -10928,11 +11751,11 @@ import (
 func main() {
 	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
 	archiveId := int64(1000000) // int64 | Unique identifier for a specific archive
-	v1DiagnosticArchiveCreateDeviceIdPostRequest := *openapiclient.NewV1DiagnosticArchiveCreateDeviceIdPostRequest() // V1DiagnosticArchiveCreateDeviceIdPostRequest | 
+	v1DiagnosticArchiveEditArchiveIdPutRequest := *openapiclient.NewV1DiagnosticArchiveEditArchiveIdPutRequest() // V1DiagnosticArchiveEditArchiveIdPutRequest | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.DefaultAPI.V1DiagnosticArchiveEditArchiveIdPut(context.Background(), archiveId).Authorization(authorization).V1DiagnosticArchiveCreateDeviceIdPostRequest(v1DiagnosticArchiveCreateDeviceIdPostRequest).Execute()
+	resp, r, err := apiClient.DefaultAPI.V1DiagnosticArchiveEditArchiveIdPut(context.Background(), archiveId).Authorization(authorization).V1DiagnosticArchiveEditArchiveIdPutRequest(v1DiagnosticArchiveEditArchiveIdPutRequest).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1DiagnosticArchiveEditArchiveIdPut``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -10959,7 +11782,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **string** | Bearer token. Format: Bearer &lt;your_token_here&gt; | 
 
- **v1DiagnosticArchiveCreateDeviceIdPostRequest** | [**V1DiagnosticArchiveCreateDeviceIdPostRequest**](V1DiagnosticArchiveCreateDeviceIdPostRequest.md) |  | 
+ **v1DiagnosticArchiveEditArchiveIdPutRequest** | [**V1DiagnosticArchiveEditArchiveIdPutRequest**](V1DiagnosticArchiveEditArchiveIdPutRequest.md) |  | 
 
 ### Return type
 
@@ -10981,7 +11804,9 @@ Name | Type | Description  | Notes
 
 ## V1DiagnosticArchivesDeviceIdGet
 
-> V1DiagnosticArchivesDeviceIdGet200Response V1DiagnosticArchivesDeviceIdGet(ctx, deviceId).Authorization(authorization).Execute()
+> V1DiagnosticArchivesDeviceIdGetResponse V1DiagnosticArchivesDeviceIdGet(ctx, deviceId).Authorization(authorization).Execute()
+
+
 
 
 
@@ -11008,7 +11833,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1DiagnosticArchivesDeviceIdGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1DiagnosticArchivesDeviceIdGet`: V1DiagnosticArchivesDeviceIdGet200Response
+	// response from `V1DiagnosticArchivesDeviceIdGet`: V1DiagnosticArchivesDeviceIdGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1DiagnosticArchivesDeviceIdGet`: %v\n", resp)
 }
 ```
@@ -11033,7 +11858,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1DiagnosticArchivesDeviceIdGet200Response**](V1DiagnosticArchivesDeviceIdGet200Response.md)
+[**V1DiagnosticArchivesDeviceIdGetResponse**](V1DiagnosticArchivesDeviceIdGetResponse.md)
 
 ### Authorization
 
@@ -11052,6 +11877,8 @@ Name | Type | Description  | Notes
 ## V1DiagnosticBgpResetDeviceIdPut
 
 > map[string]interface{} V1DiagnosticBgpResetDeviceIdPut(ctx, deviceId).Authorization(authorization).V1DiagnosticBgpResetDeviceIdPutRequest(v1DiagnosticBgpResetDeviceIdPutRequest).Execute()
+
+
 
 
 
@@ -11127,6 +11954,8 @@ Name | Type | Description  | Notes
 
 
 
+
+
 ### Example
 
 ```go
@@ -11195,7 +12024,9 @@ Name | Type | Description  | Notes
 
 ## V1DiagnosticGnmiPingGet
 
-> V1DiagnosticGnmiPingGet200Response V1DiagnosticGnmiPingGet(ctx).Authorization(authorization).Execute()
+> V1DiagnosticGnmiPingGetResponse V1DiagnosticGnmiPingGet(ctx).Authorization(authorization).Execute()
+
+
 
 
 
@@ -11221,7 +12052,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1DiagnosticGnmiPingGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1DiagnosticGnmiPingGet`: V1DiagnosticGnmiPingGet200Response
+	// response from `V1DiagnosticGnmiPingGet`: V1DiagnosticGnmiPingGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1DiagnosticGnmiPingGet`: %v\n", resp)
 }
 ```
@@ -11241,7 +12072,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1DiagnosticGnmiPingGet200Response**](V1DiagnosticGnmiPingGet200Response.md)
+[**V1DiagnosticGnmiPingGetResponse**](V1DiagnosticGnmiPingGetResponse.md)
 
 ### Authorization
 
@@ -11260,6 +12091,8 @@ Name | Type | Description  | Notes
 ## V1DiagnosticInterfaceResetDeviceIdPut
 
 > map[string]interface{} V1DiagnosticInterfaceResetDeviceIdPut(ctx, deviceId).Authorization(authorization).V1DiagnosticInterfaceResetDeviceIdPutRequest(v1DiagnosticInterfaceResetDeviceIdPutRequest).Execute()
+
+
 
 
 
@@ -11331,7 +12164,9 @@ Name | Type | Description  | Notes
 
 ## V1DiagnosticOtpDeviceIdGet
 
-> V1DiagnosticOtpDeviceIdGet200Response V1DiagnosticOtpDeviceIdGet(ctx, deviceId).Authorization(authorization).Execute()
+> V1DiagnosticOtpDeviceIdGetResponse V1DiagnosticOtpDeviceIdGet(ctx, deviceId).Authorization(authorization).Execute()
+
+
 
 
 
@@ -11358,7 +12193,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1DiagnosticOtpDeviceIdGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1DiagnosticOtpDeviceIdGet`: V1DiagnosticOtpDeviceIdGet200Response
+	// response from `V1DiagnosticOtpDeviceIdGet`: V1DiagnosticOtpDeviceIdGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1DiagnosticOtpDeviceIdGet`: %v\n", resp)
 }
 ```
@@ -11383,7 +12218,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1DiagnosticOtpDeviceIdGet200Response**](V1DiagnosticOtpDeviceIdGet200Response.md)
+[**V1DiagnosticOtpDeviceIdGetResponse**](V1DiagnosticOtpDeviceIdGetResponse.md)
 
 ### Authorization
 
@@ -11401,7 +12236,9 @@ Name | Type | Description  | Notes
 
 ## V1DiagnosticPacketcapturePcapIdGet
 
-> V1DiagnosticPacketcapturePcapIdGet200Response V1DiagnosticPacketcapturePcapIdGet(ctx, pcapId).Authorization(authorization).Execute()
+> V1DiagnosticPacketcapturePcapIdGetResponse V1DiagnosticPacketcapturePcapIdGet(ctx, pcapId).Authorization(authorization).Execute()
+
+
 
 
 
@@ -11428,7 +12265,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1DiagnosticPacketcapturePcapIdGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1DiagnosticPacketcapturePcapIdGet`: V1DiagnosticPacketcapturePcapIdGet200Response
+	// response from `V1DiagnosticPacketcapturePcapIdGet`: V1DiagnosticPacketcapturePcapIdGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1DiagnosticPacketcapturePcapIdGet`: %v\n", resp)
 }
 ```
@@ -11453,7 +12290,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1DiagnosticPacketcapturePcapIdGet200Response**](V1DiagnosticPacketcapturePcapIdGet200Response.md)
+[**V1DiagnosticPacketcapturePcapIdGetResponse**](V1DiagnosticPacketcapturePcapIdGetResponse.md)
 
 ### Authorization
 
@@ -11471,7 +12308,9 @@ Name | Type | Description  | Notes
 
 ## V1DiagnosticPacketcaptureStartPost
 
-> V1DiagnosticPacketcaptureStartPost201Response V1DiagnosticPacketcaptureStartPost(ctx).Authorization(authorization).V1DiagnosticPacketcaptureStartPostRequest(v1DiagnosticPacketcaptureStartPostRequest).Execute()
+> V1DiagnosticPacketcaptureStartPostResponse V1DiagnosticPacketcaptureStartPost(ctx).Authorization(authorization).V1DiagnosticPacketcaptureStartPostRequest(v1DiagnosticPacketcaptureStartPostRequest).Execute()
+
+
 
 
 
@@ -11489,7 +12328,7 @@ import (
 
 func main() {
 	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
-	v1DiagnosticPacketcaptureStartPostRequest := *openapiclient.NewV1DiagnosticPacketcaptureStartPostRequest() // V1DiagnosticPacketcaptureStartPostRequest | 
+	v1DiagnosticPacketcaptureStartPostRequest := *openapiclient.NewV1DiagnosticPacketcaptureStartPostRequest(int64(30000000555), int32(30), *openapiclient.NewDiagnosticToolsTargetType()) // V1DiagnosticPacketcaptureStartPostRequest | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -11498,7 +12337,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1DiagnosticPacketcaptureStartPost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1DiagnosticPacketcaptureStartPost`: V1DiagnosticPacketcaptureStartPost201Response
+	// response from `V1DiagnosticPacketcaptureStartPost`: V1DiagnosticPacketcaptureStartPostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1DiagnosticPacketcaptureStartPost`: %v\n", resp)
 }
 ```
@@ -11519,7 +12358,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1DiagnosticPacketcaptureStartPost201Response**](V1DiagnosticPacketcaptureStartPost201Response.md)
+[**V1DiagnosticPacketcaptureStartPostResponse**](V1DiagnosticPacketcaptureStartPostResponse.md)
 
 ### Authorization
 
@@ -11537,7 +12376,9 @@ Name | Type | Description  | Notes
 
 ## V1DiagnosticPacketcaptureStopPost
 
-> map[string]interface{} V1DiagnosticPacketcaptureStopPost(ctx).Authorization(authorization).V1DiagnosticPacketcaptureStartPost201Response(v1DiagnosticPacketcaptureStartPost201Response).Execute()
+> map[string]interface{} V1DiagnosticPacketcaptureStopPost(ctx).Authorization(authorization).V1DiagnosticPacketcaptureStopPostRequest(v1DiagnosticPacketcaptureStopPostRequest).Execute()
+
+
 
 
 
@@ -11555,11 +12396,11 @@ import (
 
 func main() {
 	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
-	v1DiagnosticPacketcaptureStartPost201Response := *openapiclient.NewV1DiagnosticPacketcaptureStartPost201Response() // V1DiagnosticPacketcaptureStartPost201Response | 
+	v1DiagnosticPacketcaptureStopPostRequest := *openapiclient.NewV1DiagnosticPacketcaptureStopPostRequest() // V1DiagnosticPacketcaptureStopPostRequest | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.DefaultAPI.V1DiagnosticPacketcaptureStopPost(context.Background()).Authorization(authorization).V1DiagnosticPacketcaptureStartPost201Response(v1DiagnosticPacketcaptureStartPost201Response).Execute()
+	resp, r, err := apiClient.DefaultAPI.V1DiagnosticPacketcaptureStopPost(context.Background()).Authorization(authorization).V1DiagnosticPacketcaptureStopPostRequest(v1DiagnosticPacketcaptureStopPostRequest).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1DiagnosticPacketcaptureStopPost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -11581,7 +12422,7 @@ Other parameters are passed through a pointer to a apiV1DiagnosticPacketcaptureS
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **string** | Bearer token. Format: Bearer &lt;your_token_here&gt; | 
- **v1DiagnosticPacketcaptureStartPost201Response** | [**V1DiagnosticPacketcaptureStartPost201Response**](V1DiagnosticPacketcaptureStartPost201Response.md) |  | 
+ **v1DiagnosticPacketcaptureStopPostRequest** | [**V1DiagnosticPacketcaptureStopPostRequest**](V1DiagnosticPacketcaptureStopPostRequest.md) |  | 
 
 ### Return type
 
@@ -11603,7 +12444,9 @@ Name | Type | Description  | Notes
 
 ## V1DiagnosticPingPauseResumePost
 
-> V1DiagnosticPingPauseResumePost204Response V1DiagnosticPingPauseResumePost(ctx).Authorization(authorization).V1DiagnosticPingPauseResumePostRequest(v1DiagnosticPingPauseResumePostRequest).Execute()
+> V1DiagnosticPingPauseResumePostResponse V1DiagnosticPingPauseResumePost(ctx).Authorization(authorization).V1DiagnosticPingPauseResumePostRequest(v1DiagnosticPingPauseResumePostRequest).Execute()
+
+
 
 
 
@@ -11621,7 +12464,7 @@ import (
 
 func main() {
 	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
-	v1DiagnosticPingPauseResumePostRequest := *openapiclient.NewV1DiagnosticPingPauseResumePostRequest() // V1DiagnosticPingPauseResumePostRequest | 
+	v1DiagnosticPingPauseResumePostRequest := *openapiclient.NewV1DiagnosticPingPauseResumePostRequest(int64(10000000), "ENUM_VALUE") // V1DiagnosticPingPauseResumePostRequest | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -11630,7 +12473,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1DiagnosticPingPauseResumePost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1DiagnosticPingPauseResumePost`: V1DiagnosticPingPauseResumePost204Response
+	// response from `V1DiagnosticPingPauseResumePost`: V1DiagnosticPingPauseResumePostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1DiagnosticPingPauseResumePost`: %v\n", resp)
 }
 ```
@@ -11651,7 +12494,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1DiagnosticPingPauseResumePost204Response**](V1DiagnosticPingPauseResumePost204Response.md)
+[**V1DiagnosticPingPauseResumePostResponse**](V1DiagnosticPingPauseResumePostResponse.md)
 
 ### Authorization
 
@@ -11669,7 +12512,9 @@ Name | Type | Description  | Notes
 
 ## V1DiagnosticPingPost
 
-> V1DiagnosticPingPauseResumePost204Response V1DiagnosticPingPost(ctx).Authorization(authorization).V1DiagnosticPingPauseResumePostRequest(v1DiagnosticPingPauseResumePostRequest).Execute()
+> V1DiagnosticPingPostResponse V1DiagnosticPingPost(ctx).Authorization(authorization).V1DiagnosticPingPostRequest(v1DiagnosticPingPostRequest).Execute()
+
+
 
 
 
@@ -11687,16 +12532,16 @@ import (
 
 func main() {
 	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
-	v1DiagnosticPingPauseResumePostRequest := *openapiclient.NewV1DiagnosticPingPauseResumePostRequest() // V1DiagnosticPingPauseResumePostRequest | 
+	v1DiagnosticPingPostRequest := *openapiclient.NewV1DiagnosticPingPostRequest(int64(10000000), "ENUM_VALUE") // V1DiagnosticPingPostRequest | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.DefaultAPI.V1DiagnosticPingPost(context.Background()).Authorization(authorization).V1DiagnosticPingPauseResumePostRequest(v1DiagnosticPingPauseResumePostRequest).Execute()
+	resp, r, err := apiClient.DefaultAPI.V1DiagnosticPingPost(context.Background()).Authorization(authorization).V1DiagnosticPingPostRequest(v1DiagnosticPingPostRequest).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1DiagnosticPingPost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1DiagnosticPingPost`: V1DiagnosticPingPauseResumePost204Response
+	// response from `V1DiagnosticPingPost`: V1DiagnosticPingPostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1DiagnosticPingPost`: %v\n", resp)
 }
 ```
@@ -11713,11 +12558,11 @@ Other parameters are passed through a pointer to a apiV1DiagnosticPingPostReques
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **string** | Bearer token. Format: Bearer &lt;your_token_here&gt; | 
- **v1DiagnosticPingPauseResumePostRequest** | [**V1DiagnosticPingPauseResumePostRequest**](V1DiagnosticPingPauseResumePostRequest.md) |  | 
+ **v1DiagnosticPingPostRequest** | [**V1DiagnosticPingPostRequest**](V1DiagnosticPingPostRequest.md) |  | 
 
 ### Return type
 
-[**V1DiagnosticPingPauseResumePost204Response**](V1DiagnosticPingPauseResumePost204Response.md)
+[**V1DiagnosticPingPostResponse**](V1DiagnosticPingPostResponse.md)
 
 ### Authorization
 
@@ -11736,6 +12581,8 @@ Name | Type | Description  | Notes
 ## V1DiagnosticPingStopTokenPost
 
 > map[string]interface{} V1DiagnosticPingStopTokenPost(ctx, token).Authorization(authorization).Body(body).Execute()
+
+
 
 
 
@@ -11811,6 +12658,8 @@ Name | Type | Description  | Notes
 
 
 
+
+
 ### Example
 
 ```go
@@ -11826,7 +12675,7 @@ import (
 func main() {
 	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
 	deviceId := int64(1000000) // int64 | Valid Provisioned device ID
-	v1DiagnosticRebootDeviceIdPutRequest := *openapiclient.NewV1DiagnosticRebootDeviceIdPutRequest() // V1DiagnosticRebootDeviceIdPutRequest | 
+	v1DiagnosticRebootDeviceIdPutRequest := *openapiclient.NewV1DiagnosticRebootDeviceIdPutRequest("User requested reboot") // V1DiagnosticRebootDeviceIdPutRequest | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -11880,6 +12729,8 @@ Name | Type | Description  | Notes
 ## V1DiagnosticResetIpsecSessionDeviceIdPut
 
 > map[string]interface{} V1DiagnosticResetIpsecSessionDeviceIdPut(ctx, deviceId).Authorization(authorization).V1DiagnosticResetIpsecSessionDeviceIdPutRequest(v1DiagnosticResetIpsecSessionDeviceIdPutRequest).Execute()
+
+
 
 
 
@@ -11951,7 +12802,9 @@ Name | Type | Description  | Notes
 
 ## V1DiagnosticSpeedtestPost
 
-> V1DiagnosticSpeedtestPost200Response V1DiagnosticSpeedtestPost(ctx).Authorization(authorization).V1DiagnosticSpeedtestPostRequest(v1DiagnosticSpeedtestPostRequest).Execute()
+> V1DiagnosticSpeedtestPostResponse V1DiagnosticSpeedtestPost(ctx).Authorization(authorization).V1DiagnosticSpeedtestPostRequest(v1DiagnosticSpeedtestPostRequest).Execute()
+
+
 
 
 
@@ -11969,7 +12822,7 @@ import (
 
 func main() {
 	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
-	v1DiagnosticSpeedtestPostRequest := *openapiclient.NewV1DiagnosticSpeedtestPostRequest() // V1DiagnosticSpeedtestPostRequest | 
+	v1DiagnosticSpeedtestPostRequest := *openapiclient.NewV1DiagnosticSpeedtestPostRequest(int64(30000000555)) // V1DiagnosticSpeedtestPostRequest | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -11978,7 +12831,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1DiagnosticSpeedtestPost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1DiagnosticSpeedtestPost`: V1DiagnosticSpeedtestPost200Response
+	// response from `V1DiagnosticSpeedtestPost`: V1DiagnosticSpeedtestPostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1DiagnosticSpeedtestPost`: %v\n", resp)
 }
 ```
@@ -11999,7 +12852,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1DiagnosticSpeedtestPost200Response**](V1DiagnosticSpeedtestPost200Response.md)
+[**V1DiagnosticSpeedtestPostResponse**](V1DiagnosticSpeedtestPostResponse.md)
 
 ### Authorization
 
@@ -12017,7 +12870,9 @@ Name | Type | Description  | Notes
 
 ## V1DiagnosticSpeedtestProvidersGet
 
-> V1DiagnosticSpeedtestProvidersGet200Response V1DiagnosticSpeedtestProvidersGet(ctx).Authorization(authorization).Execute()
+> V1DiagnosticSpeedtestProvidersGetResponse V1DiagnosticSpeedtestProvidersGet(ctx).Authorization(authorization).Execute()
+
+
 
 
 
@@ -12043,7 +12898,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1DiagnosticSpeedtestProvidersGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1DiagnosticSpeedtestProvidersGet`: V1DiagnosticSpeedtestProvidersGet200Response
+	// response from `V1DiagnosticSpeedtestProvidersGet`: V1DiagnosticSpeedtestProvidersGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1DiagnosticSpeedtestProvidersGet`: %v\n", resp)
 }
 ```
@@ -12063,7 +12918,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1DiagnosticSpeedtestProvidersGet200Response**](V1DiagnosticSpeedtestProvidersGet200Response.md)
+[**V1DiagnosticSpeedtestProvidersGetResponse**](V1DiagnosticSpeedtestProvidersGetResponse.md)
 
 ### Authorization
 
@@ -12081,7 +12936,9 @@ Name | Type | Description  | Notes
 
 ## V1DiagnosticSpeedtestReportPut
 
-> V1DiagnosticSpeedtestReportPut200Response V1DiagnosticSpeedtestReportPut(ctx).Authorization(authorization).V1DiagnosticSpeedtestReportPutRequest(v1DiagnosticSpeedtestReportPutRequest).Execute()
+> V1DiagnosticSpeedtestReportPutResponse V1DiagnosticSpeedtestReportPut(ctx).Authorization(authorization).V1DiagnosticSpeedtestReportPutRequest(v1DiagnosticSpeedtestReportPutRequest).Execute()
+
+
 
 
 
@@ -12099,7 +12956,7 @@ import (
 
 func main() {
 	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
-	v1DiagnosticSpeedtestReportPutRequest := *openapiclient.NewV1DiagnosticSpeedtestReportPutRequest() // V1DiagnosticSpeedtestReportPutRequest | 
+	v1DiagnosticSpeedtestReportPutRequest := *openapiclient.NewV1DiagnosticSpeedtestReportPutRequest(int64(30000000555), int64(5)) // V1DiagnosticSpeedtestReportPutRequest | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -12108,7 +12965,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1DiagnosticSpeedtestReportPut``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1DiagnosticSpeedtestReportPut`: V1DiagnosticSpeedtestReportPut200Response
+	// response from `V1DiagnosticSpeedtestReportPut`: V1DiagnosticSpeedtestReportPutResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1DiagnosticSpeedtestReportPut`: %v\n", resp)
 }
 ```
@@ -12129,7 +12986,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1DiagnosticSpeedtestReportPut200Response**](V1DiagnosticSpeedtestReportPut200Response.md)
+[**V1DiagnosticSpeedtestReportPutResponse**](V1DiagnosticSpeedtestReportPutResponse.md)
 
 ### Authorization
 
@@ -12147,7 +13004,9 @@ Name | Type | Description  | Notes
 
 ## V1DiagnosticSpeedtestServersGet
 
-> V1DiagnosticSpeedtestServersGet200Response V1DiagnosticSpeedtestServersGet(ctx).Authorization(authorization).Execute()
+> V1DiagnosticSpeedtestServersGetResponse V1DiagnosticSpeedtestServersGet(ctx).Authorization(authorization).Execute()
+
+
 
 
 
@@ -12173,7 +13032,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1DiagnosticSpeedtestServersGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1DiagnosticSpeedtestServersGet`: V1DiagnosticSpeedtestServersGet200Response
+	// response from `V1DiagnosticSpeedtestServersGet`: V1DiagnosticSpeedtestServersGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1DiagnosticSpeedtestServersGet`: %v\n", resp)
 }
 ```
@@ -12193,7 +13052,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1DiagnosticSpeedtestServersGet200Response**](V1DiagnosticSpeedtestServersGet200Response.md)
+[**V1DiagnosticSpeedtestServersGetResponse**](V1DiagnosticSpeedtestServersGetResponse.md)
 
 ### Authorization
 
@@ -12211,7 +13070,9 @@ Name | Type | Description  | Notes
 
 ## V1DiagnosticTraceroutePost
 
-> V1DiagnosticPingPauseResumePost204Response V1DiagnosticTraceroutePost(ctx).Authorization(authorization).V1DiagnosticPingPauseResumePostRequest(v1DiagnosticPingPauseResumePostRequest).Execute()
+> V1DiagnosticTraceroutePostResponse V1DiagnosticTraceroutePost(ctx).Authorization(authorization).V1DiagnosticTraceroutePostRequest(v1DiagnosticTraceroutePostRequest).Execute()
+
+
 
 
 
@@ -12229,16 +13090,16 @@ import (
 
 func main() {
 	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
-	v1DiagnosticPingPauseResumePostRequest := *openapiclient.NewV1DiagnosticPingPauseResumePostRequest() // V1DiagnosticPingPauseResumePostRequest | 
+	v1DiagnosticTraceroutePostRequest := *openapiclient.NewV1DiagnosticTraceroutePostRequest(int64(10000000), "ENUM_VALUE") // V1DiagnosticTraceroutePostRequest | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.DefaultAPI.V1DiagnosticTraceroutePost(context.Background()).Authorization(authorization).V1DiagnosticPingPauseResumePostRequest(v1DiagnosticPingPauseResumePostRequest).Execute()
+	resp, r, err := apiClient.DefaultAPI.V1DiagnosticTraceroutePost(context.Background()).Authorization(authorization).V1DiagnosticTraceroutePostRequest(v1DiagnosticTraceroutePostRequest).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1DiagnosticTraceroutePost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1DiagnosticTraceroutePost`: V1DiagnosticPingPauseResumePost204Response
+	// response from `V1DiagnosticTraceroutePost`: V1DiagnosticTraceroutePostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1DiagnosticTraceroutePost`: %v\n", resp)
 }
 ```
@@ -12255,11 +13116,11 @@ Other parameters are passed through a pointer to a apiV1DiagnosticTraceroutePost
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **string** | Bearer token. Format: Bearer &lt;your_token_here&gt; | 
- **v1DiagnosticPingPauseResumePostRequest** | [**V1DiagnosticPingPauseResumePostRequest**](V1DiagnosticPingPauseResumePostRequest.md) |  | 
+ **v1DiagnosticTraceroutePostRequest** | [**V1DiagnosticTraceroutePostRequest**](V1DiagnosticTraceroutePostRequest.md) |  | 
 
 ### Return type
 
-[**V1DiagnosticPingPauseResumePost204Response**](V1DiagnosticPingPauseResumePost204Response.md)
+[**V1DiagnosticTraceroutePostResponse**](V1DiagnosticTraceroutePostResponse.md)
 
 ### Authorization
 
@@ -12277,7 +13138,7 @@ Name | Type | Description  | Notes
 
 ## V1EdgesHardwareAssignedGet
 
-> V1EdgesHardwareAssignedGet200Response V1EdgesHardwareAssignedGet(ctx).Authorization(authorization).Execute()
+> V1EdgesHardwareAssignedGetResponse V1EdgesHardwareAssignedGet(ctx).Authorization(authorization).Execute()
 
 
 
@@ -12303,7 +13164,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1EdgesHardwareAssignedGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1EdgesHardwareAssignedGet`: V1EdgesHardwareAssignedGet200Response
+	// response from `V1EdgesHardwareAssignedGet`: V1EdgesHardwareAssignedGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1EdgesHardwareAssignedGet`: %v\n", resp)
 }
 ```
@@ -12323,7 +13184,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1EdgesHardwareAssignedGet200Response**](V1EdgesHardwareAssignedGet200Response.md)
+[**V1EdgesHardwareAssignedGetResponse**](V1EdgesHardwareAssignedGetResponse.md)
 
 ### Authorization
 
@@ -12341,7 +13202,7 @@ Name | Type | Description  | Notes
 
 ## V1EdgesHardwareUnassignedGet
 
-> V1EdgesHardwareUnassignedGet200Response V1EdgesHardwareUnassignedGet(ctx).Authorization(authorization).Execute()
+> V1EdgesHardwareUnassignedGetResponse V1EdgesHardwareUnassignedGet(ctx).Authorization(authorization).Execute()
 
 
 
@@ -12367,7 +13228,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1EdgesHardwareUnassignedGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1EdgesHardwareUnassignedGet`: V1EdgesHardwareUnassignedGet200Response
+	// response from `V1EdgesHardwareUnassignedGet`: V1EdgesHardwareUnassignedGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1EdgesHardwareUnassignedGet`: %v\n", resp)
 }
 ```
@@ -12387,7 +13248,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1EdgesHardwareUnassignedGet200Response**](V1EdgesHardwareUnassignedGet200Response.md)
+[**V1EdgesHardwareUnassignedGetResponse**](V1EdgesHardwareUnassignedGetResponse.md)
 
 ### Authorization
 
@@ -12405,7 +13266,7 @@ Name | Type | Description  | Notes
 
 ## V1EdgesSummaryGet
 
-> V1EdgesSummaryGet200Response V1EdgesSummaryGet(ctx).Authorization(authorization).Execute()
+> V1EdgesSummaryGetResponse V1EdgesSummaryGet(ctx).Authorization(authorization).Execute()
 
 
 
@@ -12431,7 +13292,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1EdgesSummaryGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1EdgesSummaryGet`: V1EdgesSummaryGet200Response
+	// response from `V1EdgesSummaryGet`: V1EdgesSummaryGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1EdgesSummaryGet`: %v\n", resp)
 }
 ```
@@ -12451,7 +13312,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1EdgesSummaryGet200Response**](V1EdgesSummaryGet200Response.md)
+[**V1EdgesSummaryGetResponse**](V1EdgesSummaryGetResponse.md)
 
 ### Authorization
 
@@ -12469,7 +13330,9 @@ Name | Type | Description  | Notes
 
 ## V1EnterpriseAllocationGet
 
-> V1EnterpriseAllocationGet200Response V1EnterpriseAllocationGet(ctx).Authorization(authorization).Execute()
+> V1EnterpriseAllocationGetResponse V1EnterpriseAllocationGet(ctx).Authorization(authorization).Execute()
+
+
 
 
 
@@ -12495,7 +13358,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1EnterpriseAllocationGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1EnterpriseAllocationGet`: V1EnterpriseAllocationGet200Response
+	// response from `V1EnterpriseAllocationGet`: V1EnterpriseAllocationGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1EnterpriseAllocationGet`: %v\n", resp)
 }
 ```
@@ -12515,7 +13378,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1EnterpriseAllocationGet200Response**](V1EnterpriseAllocationGet200Response.md)
+[**V1EnterpriseAllocationGetResponse**](V1EnterpriseAllocationGetResponse.md)
 
 ### Authorization
 
@@ -12533,7 +13396,9 @@ Name | Type | Description  | Notes
 
 ## V1EnterpriseConfigurationGet
 
-> V1EnterpriseConfigurationGet200Response V1EnterpriseConfigurationGet(ctx).Authorization(authorization).Execute()
+> V1EnterpriseConfigurationGetResponse V1EnterpriseConfigurationGet(ctx).Authorization(authorization).Execute()
+
+
 
 
 
@@ -12559,7 +13424,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1EnterpriseConfigurationGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1EnterpriseConfigurationGet`: V1EnterpriseConfigurationGet200Response
+	// response from `V1EnterpriseConfigurationGet`: V1EnterpriseConfigurationGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1EnterpriseConfigurationGet`: %v\n", resp)
 }
 ```
@@ -12579,7 +13444,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1EnterpriseConfigurationGet200Response**](V1EnterpriseConfigurationGet200Response.md)
+[**V1EnterpriseConfigurationGetResponse**](V1EnterpriseConfigurationGetResponse.md)
 
 ### Authorization
 
@@ -12597,7 +13462,9 @@ Name | Type | Description  | Notes
 
 ## V1EnterpriseConfigurationPut
 
-> map[string]interface{} V1EnterpriseConfigurationPut(ctx).Authorization(authorization).V1EnterpriseConfigurationGet200Response(v1EnterpriseConfigurationGet200Response).Execute()
+> map[string]interface{} V1EnterpriseConfigurationPut(ctx).Authorization(authorization).V1EnterpriseConfigurationPutRequest(v1EnterpriseConfigurationPutRequest).Execute()
+
+
 
 
 
@@ -12615,11 +13482,11 @@ import (
 
 func main() {
 	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
-	v1EnterpriseConfigurationGet200Response := *openapiclient.NewV1EnterpriseConfigurationGet200Response() // V1EnterpriseConfigurationGet200Response | 
+	v1EnterpriseConfigurationPutRequest := *openapiclient.NewV1EnterpriseConfigurationPutRequest() // V1EnterpriseConfigurationPutRequest | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.DefaultAPI.V1EnterpriseConfigurationPut(context.Background()).Authorization(authorization).V1EnterpriseConfigurationGet200Response(v1EnterpriseConfigurationGet200Response).Execute()
+	resp, r, err := apiClient.DefaultAPI.V1EnterpriseConfigurationPut(context.Background()).Authorization(authorization).V1EnterpriseConfigurationPutRequest(v1EnterpriseConfigurationPutRequest).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1EnterpriseConfigurationPut``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -12641,7 +13508,7 @@ Other parameters are passed through a pointer to a apiV1EnterpriseConfigurationP
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **string** | Bearer token. Format: Bearer &lt;your_token_here&gt; | 
- **v1EnterpriseConfigurationGet200Response** | [**V1EnterpriseConfigurationGet200Response**](V1EnterpriseConfigurationGet200Response.md) |  | 
+ **v1EnterpriseConfigurationPutRequest** | [**V1EnterpriseConfigurationPutRequest**](V1EnterpriseConfigurationPutRequest.md) |  | 
 
 ### Return type
 
@@ -12664,6 +13531,8 @@ Name | Type | Description  | Notes
 ## V1EnterpriseContractPut
 
 > map[string]interface{} V1EnterpriseContractPut(ctx).Authorization(authorization).V1EnterpriseContractPutRequest(v1EnterpriseContractPutRequest).Execute()
+
+
 
 
 
@@ -12729,7 +13598,9 @@ Name | Type | Description  | Notes
 
 ## V1EnterpriseSnapshotGet
 
-> V1EnterpriseSnapshotGet200Response V1EnterpriseSnapshotGet(ctx).Authorization(authorization).Execute()
+> V1EnterpriseSnapshotGetResponse V1EnterpriseSnapshotGet(ctx).Authorization(authorization).Execute()
+
+
 
 
 
@@ -12755,7 +13626,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1EnterpriseSnapshotGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1EnterpriseSnapshotGet`: V1EnterpriseSnapshotGet200Response
+	// response from `V1EnterpriseSnapshotGet`: V1EnterpriseSnapshotGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1EnterpriseSnapshotGet`: %v\n", resp)
 }
 ```
@@ -12775,7 +13646,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1EnterpriseSnapshotGet200Response**](V1EnterpriseSnapshotGet200Response.md)
+[**V1EnterpriseSnapshotGetResponse**](V1EnterpriseSnapshotGetResponse.md)
 
 ### Authorization
 
@@ -12793,7 +13664,9 @@ Name | Type | Description  | Notes
 
 ## V1EnterprisesEnterpriseIdAdminGet
 
-> V1EnterprisesEnterpriseIdAdminGet200Response V1EnterprisesEnterpriseIdAdminGet(ctx, enterpriseId).Authorization(authorization).Execute()
+> V1EnterprisesEnterpriseIdAdminGetResponse V1EnterprisesEnterpriseIdAdminGet(ctx, enterpriseId).Authorization(authorization).Execute()
+
+
 
 
 
@@ -12820,7 +13693,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1EnterprisesEnterpriseIdAdminGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1EnterprisesEnterpriseIdAdminGet`: V1EnterprisesEnterpriseIdAdminGet200Response
+	// response from `V1EnterprisesEnterpriseIdAdminGet`: V1EnterprisesEnterpriseIdAdminGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1EnterprisesEnterpriseIdAdminGet`: %v\n", resp)
 }
 ```
@@ -12845,7 +13718,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1EnterprisesEnterpriseIdAdminGet200Response**](V1EnterprisesEnterpriseIdAdminGet200Response.md)
+[**V1EnterprisesEnterpriseIdAdminGetResponse**](V1EnterprisesEnterpriseIdAdminGetResponse.md)
 
 ### Authorization
 
@@ -12863,7 +13736,9 @@ Name | Type | Description  | Notes
 
 ## V1EnterprisesEnterpriseIdDelete
 
-> V1AuthPut204Response V1EnterprisesEnterpriseIdDelete(ctx, enterpriseId).Authorization(authorization).Execute()
+> V1EnterprisesEnterpriseIdDeleteResponse V1EnterprisesEnterpriseIdDelete(ctx, enterpriseId).Authorization(authorization).Execute()
+
+
 
 
 
@@ -12890,7 +13765,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1EnterprisesEnterpriseIdDelete``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1EnterprisesEnterpriseIdDelete`: V1AuthPut204Response
+	// response from `V1EnterprisesEnterpriseIdDelete`: V1EnterprisesEnterpriseIdDeleteResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1EnterprisesEnterpriseIdDelete`: %v\n", resp)
 }
 ```
@@ -12915,7 +13790,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1AuthPut204Response**](V1AuthPut204Response.md)
+[**V1EnterprisesEnterpriseIdDeleteResponse**](V1EnterprisesEnterpriseIdDeleteResponse.md)
 
 ### Authorization
 
@@ -12933,7 +13808,7 @@ Name | Type | Description  | Notes
 
 ## V1EnterprisesEnterpriseIdDeviceStatusGet
 
-> V1DeviceStatusPost200Response V1EnterprisesEnterpriseIdDeviceStatusGet(ctx, enterpriseId).Authorization(authorization).Execute()
+> V1EnterprisesEnterpriseIdDeviceStatusGetResponse V1EnterprisesEnterpriseIdDeviceStatusGet(ctx, enterpriseId).Authorization(authorization).Execute()
 
 
 
@@ -12960,7 +13835,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1EnterprisesEnterpriseIdDeviceStatusGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1EnterprisesEnterpriseIdDeviceStatusGet`: V1DeviceStatusPost200Response
+	// response from `V1EnterprisesEnterpriseIdDeviceStatusGet`: V1EnterprisesEnterpriseIdDeviceStatusGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1EnterprisesEnterpriseIdDeviceStatusGet`: %v\n", resp)
 }
 ```
@@ -12985,7 +13860,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1DeviceStatusPost200Response**](V1DeviceStatusPost200Response.md)
+[**V1EnterprisesEnterpriseIdDeviceStatusGetResponse**](V1EnterprisesEnterpriseIdDeviceStatusGetResponse.md)
 
 ### Authorization
 
@@ -13004,6 +13879,8 @@ Name | Type | Description  | Notes
 ## V1EnterprisesEulaPost
 
 > map[string]interface{} V1EnterprisesEulaPost(ctx).Authorization(authorization).Body(body).Execute()
+
+
 
 
 
@@ -13069,7 +13946,9 @@ Name | Type | Description  | Notes
 
 ## V1EnterprisesGet
 
-> V1EnterprisesGet200Response V1EnterprisesGet(ctx).Authorization(authorization).EnterpriseIds(enterpriseIds).Execute()
+> V1EnterprisesGetResponse V1EnterprisesGet(ctx).Authorization(authorization).EnterpriseIds(enterpriseIds).Execute()
+
+
 
 
 
@@ -13096,7 +13975,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1EnterprisesGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1EnterprisesGet`: V1EnterprisesGet200Response
+	// response from `V1EnterprisesGet`: V1EnterprisesGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1EnterprisesGet`: %v\n", resp)
 }
 ```
@@ -13117,7 +13996,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1EnterprisesGet200Response**](V1EnterprisesGet200Response.md)
+[**V1EnterprisesGetResponse**](V1EnterprisesGetResponse.md)
 
 ### Authorization
 
@@ -13135,7 +14014,9 @@ Name | Type | Description  | Notes
 
 ## V1EnterprisesManagedGet
 
-> V1EnterprisesManagedGet200Response V1EnterprisesManagedGet(ctx).Authorization(authorization).Type_(type_).Execute()
+> V1EnterprisesManagedGetResponse V1EnterprisesManagedGet(ctx).Authorization(authorization).Type_(type_).Execute()
+
+
 
 
 
@@ -13153,7 +14034,7 @@ import (
 
 func main() {
 	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
-	type_ := "ENUM_VALUE" // string |  (optional)
+	type_ := "ENUM_VALUE" // string | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -13162,7 +14043,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1EnterprisesManagedGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1EnterprisesManagedGet`: V1EnterprisesManagedGet200Response
+	// response from `V1EnterprisesManagedGet`: V1EnterprisesManagedGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1EnterprisesManagedGet`: %v\n", resp)
 }
 ```
@@ -13183,7 +14064,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1EnterprisesManagedGet200Response**](V1EnterprisesManagedGet200Response.md)
+[**V1EnterprisesManagedGetResponse**](V1EnterprisesManagedGetResponse.md)
 
 ### Authorization
 
@@ -13205,6 +14086,8 @@ Name | Type | Description  | Notes
 
 
 
+
+
 ### Example
 
 ```go
@@ -13219,7 +14102,7 @@ import (
 
 func main() {
 	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
-	v1EnterprisesPatchRequest := *openapiclient.NewV1EnterprisesPatchRequest() // V1EnterprisesPatchRequest | 
+	v1EnterprisesPatchRequest := *openapiclient.NewV1EnterprisesPatchRequest(int64(1234567891011)) // V1EnterprisesPatchRequest | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -13271,6 +14154,8 @@ Name | Type | Description  | Notes
 
 
 
+
+
 ### Example
 
 ```go
@@ -13285,7 +14170,7 @@ import (
 
 func main() {
 	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
-	v1EnterprisesPutRequest := *openapiclient.NewV1EnterprisesPutRequest() // V1EnterprisesPutRequest | 
+	v1EnterprisesPutRequest := *openapiclient.NewV1EnterprisesPutRequest("ENUM_VALUE", "example string") // V1EnterprisesPutRequest | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -13333,7 +14218,9 @@ Name | Type | Description  | Notes
 
 ## V1EnterprisesSelfDelete
 
-> V1AuthPut204Response V1EnterprisesSelfDelete(ctx).Authorization(authorization).Execute()
+> V1EnterprisesSelfDeleteResponse V1EnterprisesSelfDelete(ctx).Authorization(authorization).Execute()
+
+
 
 
 
@@ -13359,7 +14246,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1EnterprisesSelfDelete``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1EnterprisesSelfDelete`: V1AuthPut204Response
+	// response from `V1EnterprisesSelfDelete`: V1EnterprisesSelfDeleteResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1EnterprisesSelfDelete`: %v\n", resp)
 }
 ```
@@ -13379,7 +14266,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1AuthPut204Response**](V1AuthPut204Response.md)
+[**V1EnterprisesSelfDeleteResponse**](V1EnterprisesSelfDeleteResponse.md)
 
 ### Authorization
 
@@ -13397,7 +14284,9 @@ Name | Type | Description  | Notes
 
 ## V1EventDeviceGet
 
-> V1EventDeviceGet200Response V1EventDeviceGet(ctx).Authorization(authorization).Execute()
+> V1EventDeviceGetResponse V1EventDeviceGet(ctx).Authorization(authorization).Execute()
+
+
 
 
 
@@ -13423,7 +14312,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1EventDeviceGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1EventDeviceGet`: V1EventDeviceGet200Response
+	// response from `V1EventDeviceGet`: V1EventDeviceGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1EventDeviceGet`: %v\n", resp)
 }
 ```
@@ -13443,7 +14332,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1EventDeviceGet200Response**](V1EventDeviceGet200Response.md)
+[**V1EventDeviceGetResponse**](V1EventDeviceGetResponse.md)
 
 ### Authorization
 
@@ -13461,7 +14350,9 @@ Name | Type | Description  | Notes
 
 ## V1EventEnterpriseGet
 
-> V1EventDeviceGet200Response V1EventEnterpriseGet(ctx).Authorization(authorization).Execute()
+> V1EventEnterpriseGetResponse V1EventEnterpriseGet(ctx).Authorization(authorization).Execute()
+
+
 
 
 
@@ -13487,7 +14378,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1EventEnterpriseGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1EventEnterpriseGet`: V1EventDeviceGet200Response
+	// response from `V1EventEnterpriseGet`: V1EventEnterpriseGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1EventEnterpriseGet`: %v\n", resp)
 }
 ```
@@ -13507,7 +14398,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1EventDeviceGet200Response**](V1EventDeviceGet200Response.md)
+[**V1EventEnterpriseGetResponse**](V1EventEnterpriseGetResponse.md)
 
 ### Authorization
 
@@ -13526,6 +14417,8 @@ Name | Type | Description  | Notes
 ## V1EventSystemAckPost
 
 > map[string]interface{} V1EventSystemAckPost(ctx).Authorization(authorization).V1EventSystemAckPostRequest(v1EventSystemAckPostRequest).Execute()
+
+
 
 
 
@@ -13591,7 +14484,9 @@ Name | Type | Description  | Notes
 
 ## V1EventSystemGet
 
-> V1EventDeviceGet200Response V1EventSystemGet(ctx).Authorization(authorization).Execute()
+> V1EventSystemGetResponse V1EventSystemGet(ctx).Authorization(authorization).Execute()
+
+
 
 
 
@@ -13617,7 +14512,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1EventSystemGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1EventSystemGet`: V1EventDeviceGet200Response
+	// response from `V1EventSystemGet`: V1EventSystemGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1EventSystemGet`: %v\n", resp)
 }
 ```
@@ -13637,7 +14532,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1EventDeviceGet200Response**](V1EventDeviceGet200Response.md)
+[**V1EventSystemGetResponse**](V1EventSystemGetResponse.md)
 
 ### Authorization
 
@@ -13655,7 +14550,9 @@ Name | Type | Description  | Notes
 
 ## V1ExtranetB2bMonitoringPeeringServiceBandwidthUsagePost
 
-> V1ExtranetB2bMonitoringPeeringServiceBandwidthUsagePost200Response V1ExtranetB2bMonitoringPeeringServiceBandwidthUsagePost(ctx).Authorization(authorization).V1ExtranetB2bMonitoringPeeringServiceBandwidthUsagePostRequest(v1ExtranetB2bMonitoringPeeringServiceBandwidthUsagePostRequest).Execute()
+> V1ExtranetB2bMonitoringPeeringServiceBandwidthUsagePostResponse V1ExtranetB2bMonitoringPeeringServiceBandwidthUsagePost(ctx).Authorization(authorization).V1ExtranetB2bMonitoringPeeringServiceBandwidthUsagePostRequest(v1ExtranetB2bMonitoringPeeringServiceBandwidthUsagePostRequest).Execute()
+
+
 
 
 
@@ -13682,7 +14579,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1ExtranetB2bMonitoringPeeringServiceBandwidthUsagePost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1ExtranetB2bMonitoringPeeringServiceBandwidthUsagePost`: V1ExtranetB2bMonitoringPeeringServiceBandwidthUsagePost200Response
+	// response from `V1ExtranetB2bMonitoringPeeringServiceBandwidthUsagePost`: V1ExtranetB2bMonitoringPeeringServiceBandwidthUsagePostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1ExtranetB2bMonitoringPeeringServiceBandwidthUsagePost`: %v\n", resp)
 }
 ```
@@ -13703,7 +14600,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1ExtranetB2bMonitoringPeeringServiceBandwidthUsagePost200Response**](V1ExtranetB2bMonitoringPeeringServiceBandwidthUsagePost200Response.md)
+[**V1ExtranetB2bMonitoringPeeringServiceBandwidthUsagePostResponse**](V1ExtranetB2bMonitoringPeeringServiceBandwidthUsagePostResponse.md)
 
 ### Authorization
 
@@ -13721,7 +14618,9 @@ Name | Type | Description  | Notes
 
 ## V1ExtranetB2bMonitoringPeeringServiceConsumersUsageTopPost
 
-> V1ExtranetB2bMonitoringPeeringServiceConsumersUsageTopPost200Response V1ExtranetB2bMonitoringPeeringServiceConsumersUsageTopPost(ctx).Authorization(authorization).V1ExtranetB2bMonitoringPeeringServiceConsumersUsageTopPostRequest(v1ExtranetB2bMonitoringPeeringServiceConsumersUsageTopPostRequest).Execute()
+> V1ExtranetB2bMonitoringPeeringServiceConsumersUsageTopPostResponse V1ExtranetB2bMonitoringPeeringServiceConsumersUsageTopPost(ctx).Authorization(authorization).V1ExtranetB2bMonitoringPeeringServiceConsumersUsageTopPostRequest(v1ExtranetB2bMonitoringPeeringServiceConsumersUsageTopPostRequest).Execute()
+
+
 
 
 
@@ -13748,7 +14647,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1ExtranetB2bMonitoringPeeringServiceConsumersUsageTopPost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1ExtranetB2bMonitoringPeeringServiceConsumersUsageTopPost`: V1ExtranetB2bMonitoringPeeringServiceConsumersUsageTopPost200Response
+	// response from `V1ExtranetB2bMonitoringPeeringServiceConsumersUsageTopPost`: V1ExtranetB2bMonitoringPeeringServiceConsumersUsageTopPostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1ExtranetB2bMonitoringPeeringServiceConsumersUsageTopPost`: %v\n", resp)
 }
 ```
@@ -13769,7 +14668,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1ExtranetB2bMonitoringPeeringServiceConsumersUsageTopPost200Response**](V1ExtranetB2bMonitoringPeeringServiceConsumersUsageTopPost200Response.md)
+[**V1ExtranetB2bMonitoringPeeringServiceConsumersUsageTopPostResponse**](V1ExtranetB2bMonitoringPeeringServiceConsumersUsageTopPostResponse.md)
 
 ### Authorization
 
@@ -13787,7 +14686,9 @@ Name | Type | Description  | Notes
 
 ## V1ExtranetB2bMonitoringPeeringServiceConsumptionOverviewPost
 
-> V1ExtranetB2bMonitoringPeeringServiceConsumptionOverviewPost200Response V1ExtranetB2bMonitoringPeeringServiceConsumptionOverviewPost(ctx).Authorization(authorization).V1ExtranetB2bMonitoringPeeringServiceConsumptionOverviewPostRequest(v1ExtranetB2bMonitoringPeeringServiceConsumptionOverviewPostRequest).Execute()
+> V1ExtranetB2bMonitoringPeeringServiceConsumptionOverviewPostResponse V1ExtranetB2bMonitoringPeeringServiceConsumptionOverviewPost(ctx).Authorization(authorization).V1ExtranetB2bMonitoringPeeringServiceConsumptionOverviewPostRequest(v1ExtranetB2bMonitoringPeeringServiceConsumptionOverviewPostRequest).Execute()
+
+
 
 
 
@@ -13814,7 +14715,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1ExtranetB2bMonitoringPeeringServiceConsumptionOverviewPost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1ExtranetB2bMonitoringPeeringServiceConsumptionOverviewPost`: V1ExtranetB2bMonitoringPeeringServiceConsumptionOverviewPost200Response
+	// response from `V1ExtranetB2bMonitoringPeeringServiceConsumptionOverviewPost`: V1ExtranetB2bMonitoringPeeringServiceConsumptionOverviewPostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1ExtranetB2bMonitoringPeeringServiceConsumptionOverviewPost`: %v\n", resp)
 }
 ```
@@ -13835,7 +14736,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1ExtranetB2bMonitoringPeeringServiceConsumptionOverviewPost200Response**](V1ExtranetB2bMonitoringPeeringServiceConsumptionOverviewPost200Response.md)
+[**V1ExtranetB2bMonitoringPeeringServiceConsumptionOverviewPostResponse**](V1ExtranetB2bMonitoringPeeringServiceConsumptionOverviewPostResponse.md)
 
 ### Authorization
 
@@ -13853,7 +14754,9 @@ Name | Type | Description  | Notes
 
 ## V1ExtranetB2bMonitoringPeeringServiceServiceCustomerListPost
 
-> V1ExtranetB2bMonitoringPeeringServiceServiceCustomerListPost200Response V1ExtranetB2bMonitoringPeeringServiceServiceCustomerListPost(ctx).Authorization(authorization).V1ExtranetB2bMonitoringPeeringServiceServiceCustomerListPostRequest(v1ExtranetB2bMonitoringPeeringServiceServiceCustomerListPostRequest).Execute()
+> V1ExtranetB2bMonitoringPeeringServiceServiceCustomerListPostResponse V1ExtranetB2bMonitoringPeeringServiceServiceCustomerListPost(ctx).Authorization(authorization).V1ExtranetB2bMonitoringPeeringServiceServiceCustomerListPostRequest(v1ExtranetB2bMonitoringPeeringServiceServiceCustomerListPostRequest).Execute()
+
+
 
 
 
@@ -13880,7 +14783,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1ExtranetB2bMonitoringPeeringServiceServiceCustomerListPost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1ExtranetB2bMonitoringPeeringServiceServiceCustomerListPost`: V1ExtranetB2bMonitoringPeeringServiceServiceCustomerListPost200Response
+	// response from `V1ExtranetB2bMonitoringPeeringServiceServiceCustomerListPost`: V1ExtranetB2bMonitoringPeeringServiceServiceCustomerListPostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1ExtranetB2bMonitoringPeeringServiceServiceCustomerListPost`: %v\n", resp)
 }
 ```
@@ -13901,7 +14804,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1ExtranetB2bMonitoringPeeringServiceServiceCustomerListPost200Response**](V1ExtranetB2bMonitoringPeeringServiceServiceCustomerListPost200Response.md)
+[**V1ExtranetB2bMonitoringPeeringServiceServiceCustomerListPostResponse**](V1ExtranetB2bMonitoringPeeringServiceServiceCustomerListPostResponse.md)
 
 ### Authorization
 
@@ -13919,7 +14822,7 @@ Name | Type | Description  | Notes
 
 ## V1ExtranetB2bMonitoringPeeringServiceServiceHealthPost
 
-> V1ExtranetB2bMonitoringPeeringServiceServiceHealthPost200Response V1ExtranetB2bMonitoringPeeringServiceServiceHealthPost(ctx).Authorization(authorization).V1ExtranetsMonitoringTrafficSecurityPolicyPostRequest(v1ExtranetsMonitoringTrafficSecurityPolicyPostRequest).Execute()
+> V1ExtranetB2bMonitoringPeeringServiceServiceHealthPostResponse V1ExtranetB2bMonitoringPeeringServiceServiceHealthPost(ctx).Authorization(authorization).V1ExtranetB2bMonitoringPeeringServiceServiceHealthPostRequest(v1ExtranetB2bMonitoringPeeringServiceServiceHealthPostRequest).Execute()
 
 
 
@@ -13937,16 +14840,16 @@ import (
 
 func main() {
 	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
-	v1ExtranetsMonitoringTrafficSecurityPolicyPostRequest := *openapiclient.NewV1ExtranetsMonitoringTrafficSecurityPolicyPostRequest() // V1ExtranetsMonitoringTrafficSecurityPolicyPostRequest | 
+	v1ExtranetB2bMonitoringPeeringServiceServiceHealthPostRequest := *openapiclient.NewV1ExtranetB2bMonitoringPeeringServiceServiceHealthPostRequest() // V1ExtranetB2bMonitoringPeeringServiceServiceHealthPostRequest | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.DefaultAPI.V1ExtranetB2bMonitoringPeeringServiceServiceHealthPost(context.Background()).Authorization(authorization).V1ExtranetsMonitoringTrafficSecurityPolicyPostRequest(v1ExtranetsMonitoringTrafficSecurityPolicyPostRequest).Execute()
+	resp, r, err := apiClient.DefaultAPI.V1ExtranetB2bMonitoringPeeringServiceServiceHealthPost(context.Background()).Authorization(authorization).V1ExtranetB2bMonitoringPeeringServiceServiceHealthPostRequest(v1ExtranetB2bMonitoringPeeringServiceServiceHealthPostRequest).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1ExtranetB2bMonitoringPeeringServiceServiceHealthPost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1ExtranetB2bMonitoringPeeringServiceServiceHealthPost`: V1ExtranetB2bMonitoringPeeringServiceServiceHealthPost200Response
+	// response from `V1ExtranetB2bMonitoringPeeringServiceServiceHealthPost`: V1ExtranetB2bMonitoringPeeringServiceServiceHealthPostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1ExtranetB2bMonitoringPeeringServiceServiceHealthPost`: %v\n", resp)
 }
 ```
@@ -13963,11 +14866,11 @@ Other parameters are passed through a pointer to a apiV1ExtranetB2bMonitoringPee
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **string** | Bearer token. Format: Bearer &lt;your_token_here&gt; | 
- **v1ExtranetsMonitoringTrafficSecurityPolicyPostRequest** | [**V1ExtranetsMonitoringTrafficSecurityPolicyPostRequest**](V1ExtranetsMonitoringTrafficSecurityPolicyPostRequest.md) |  | 
+ **v1ExtranetB2bMonitoringPeeringServiceServiceHealthPostRequest** | [**V1ExtranetB2bMonitoringPeeringServiceServiceHealthPostRequest**](V1ExtranetB2bMonitoringPeeringServiceServiceHealthPostRequest.md) |  | 
 
 ### Return type
 
-[**V1ExtranetB2bMonitoringPeeringServiceServiceHealthPost200Response**](V1ExtranetB2bMonitoringPeeringServiceServiceHealthPost200Response.md)
+[**V1ExtranetB2bMonitoringPeeringServiceServiceHealthPostResponse**](V1ExtranetB2bMonitoringPeeringServiceServiceHealthPostResponse.md)
 
 ### Authorization
 
@@ -13985,7 +14888,9 @@ Name | Type | Description  | Notes
 
 ## V1ExtranetB2bMonitoringPeeringServiceServiceOvertimeConsumptionPost
 
-> V1ExtranetB2bMonitoringPeeringServiceServiceOvertimeConsumptionPost200Response V1ExtranetB2bMonitoringPeeringServiceServiceOvertimeConsumptionPost(ctx).Authorization(authorization).V1ExtranetB2bMonitoringPeeringServiceServiceOvertimeConsumptionPostRequest(v1ExtranetB2bMonitoringPeeringServiceServiceOvertimeConsumptionPostRequest).Execute()
+> V1ExtranetB2bMonitoringPeeringServiceServiceOvertimeConsumptionPostResponse V1ExtranetB2bMonitoringPeeringServiceServiceOvertimeConsumptionPost(ctx).Authorization(authorization).V1ExtranetB2bMonitoringPeeringServiceServiceOvertimeConsumptionPostRequest(v1ExtranetB2bMonitoringPeeringServiceServiceOvertimeConsumptionPostRequest).Execute()
+
+
 
 
 
@@ -14012,7 +14917,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1ExtranetB2bMonitoringPeeringServiceServiceOvertimeConsumptionPost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1ExtranetB2bMonitoringPeeringServiceServiceOvertimeConsumptionPost`: V1ExtranetB2bMonitoringPeeringServiceServiceOvertimeConsumptionPost200Response
+	// response from `V1ExtranetB2bMonitoringPeeringServiceServiceOvertimeConsumptionPost`: V1ExtranetB2bMonitoringPeeringServiceServiceOvertimeConsumptionPostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1ExtranetB2bMonitoringPeeringServiceServiceOvertimeConsumptionPost`: %v\n", resp)
 }
 ```
@@ -14033,7 +14938,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1ExtranetB2bMonitoringPeeringServiceServiceOvertimeConsumptionPost200Response**](V1ExtranetB2bMonitoringPeeringServiceServiceOvertimeConsumptionPost200Response.md)
+[**V1ExtranetB2bMonitoringPeeringServiceServiceOvertimeConsumptionPostResponse**](V1ExtranetB2bMonitoringPeeringServiceServiceOvertimeConsumptionPostResponse.md)
 
 ### Authorization
 
@@ -14051,7 +14956,9 @@ Name | Type | Description  | Notes
 
 ## V1ExtranetSitesUsagePost
 
-> V1ExtranetB2bMonitoringPeeringServiceBandwidthUsagePost200Response V1ExtranetSitesUsagePost(ctx).Authorization(authorization).V1ExtranetB2bMonitoringPeeringServiceBandwidthUsagePostRequest(v1ExtranetB2bMonitoringPeeringServiceBandwidthUsagePostRequest).Execute()
+> V1ExtranetSitesUsagePostResponse V1ExtranetSitesUsagePost(ctx).Authorization(authorization).V1ExtranetSitesUsagePostRequest(v1ExtranetSitesUsagePostRequest).Execute()
+
+
 
 
 
@@ -14069,16 +14976,16 @@ import (
 
 func main() {
 	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
-	v1ExtranetB2bMonitoringPeeringServiceBandwidthUsagePostRequest := *openapiclient.NewV1ExtranetB2bMonitoringPeeringServiceBandwidthUsagePostRequest() // V1ExtranetB2bMonitoringPeeringServiceBandwidthUsagePostRequest | 
+	v1ExtranetSitesUsagePostRequest := *openapiclient.NewV1ExtranetSitesUsagePostRequest() // V1ExtranetSitesUsagePostRequest | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.DefaultAPI.V1ExtranetSitesUsagePost(context.Background()).Authorization(authorization).V1ExtranetB2bMonitoringPeeringServiceBandwidthUsagePostRequest(v1ExtranetB2bMonitoringPeeringServiceBandwidthUsagePostRequest).Execute()
+	resp, r, err := apiClient.DefaultAPI.V1ExtranetSitesUsagePost(context.Background()).Authorization(authorization).V1ExtranetSitesUsagePostRequest(v1ExtranetSitesUsagePostRequest).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1ExtranetSitesUsagePost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1ExtranetSitesUsagePost`: V1ExtranetB2bMonitoringPeeringServiceBandwidthUsagePost200Response
+	// response from `V1ExtranetSitesUsagePost`: V1ExtranetSitesUsagePostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1ExtranetSitesUsagePost`: %v\n", resp)
 }
 ```
@@ -14095,11 +15002,11 @@ Other parameters are passed through a pointer to a apiV1ExtranetSitesUsagePostRe
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **string** | Bearer token. Format: Bearer &lt;your_token_here&gt; | 
- **v1ExtranetB2bMonitoringPeeringServiceBandwidthUsagePostRequest** | [**V1ExtranetB2bMonitoringPeeringServiceBandwidthUsagePostRequest**](V1ExtranetB2bMonitoringPeeringServiceBandwidthUsagePostRequest.md) |  | 
+ **v1ExtranetSitesUsagePostRequest** | [**V1ExtranetSitesUsagePostRequest**](V1ExtranetSitesUsagePostRequest.md) |  | 
 
 ### Return type
 
-[**V1ExtranetB2bMonitoringPeeringServiceBandwidthUsagePost200Response**](V1ExtranetB2bMonitoringPeeringServiceBandwidthUsagePost200Response.md)
+[**V1ExtranetSitesUsagePostResponse**](V1ExtranetSitesUsagePostResponse.md)
 
 ### Authorization
 
@@ -14117,7 +15024,9 @@ Name | Type | Description  | Notes
 
 ## V1ExtranetSitesUsageTopPost
 
-> V1ExtranetSitesUsageTopPost200Response V1ExtranetSitesUsageTopPost(ctx).Authorization(authorization).V1ExtranetSitesUsageTopPostRequest(v1ExtranetSitesUsageTopPostRequest).Execute()
+> V1ExtranetSitesUsageTopPostResponse V1ExtranetSitesUsageTopPost(ctx).Authorization(authorization).V1ExtranetSitesUsageTopPostRequest(v1ExtranetSitesUsageTopPostRequest).Execute()
+
+
 
 
 
@@ -14144,7 +15053,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1ExtranetSitesUsageTopPost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1ExtranetSitesUsageTopPost`: V1ExtranetSitesUsageTopPost200Response
+	// response from `V1ExtranetSitesUsageTopPost`: V1ExtranetSitesUsageTopPostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1ExtranetSitesUsageTopPost`: %v\n", resp)
 }
 ```
@@ -14165,7 +15074,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1ExtranetSitesUsageTopPost200Response**](V1ExtranetSitesUsageTopPost200Response.md)
+[**V1ExtranetSitesUsageTopPostResponse**](V1ExtranetSitesUsageTopPostResponse.md)
 
 ### Authorization
 
@@ -14183,7 +15092,7 @@ Name | Type | Description  | Notes
 
 ## V1ExtranetsB2bConsumerDeviceStatusIdGet
 
-> V1ExtranetsB2bConsumerDeviceStatusIdGet200Response V1ExtranetsB2bConsumerDeviceStatusIdGet(ctx, id).Authorization(authorization).Execute()
+> V1ExtranetsB2bConsumerDeviceStatusIdGetResponse V1ExtranetsB2bConsumerDeviceStatusIdGet(ctx, id).Authorization(authorization).Execute()
 
 
 
@@ -14210,7 +15119,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1ExtranetsB2bConsumerDeviceStatusIdGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1ExtranetsB2bConsumerDeviceStatusIdGet`: V1ExtranetsB2bConsumerDeviceStatusIdGet200Response
+	// response from `V1ExtranetsB2bConsumerDeviceStatusIdGet`: V1ExtranetsB2bConsumerDeviceStatusIdGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1ExtranetsB2bConsumerDeviceStatusIdGet`: %v\n", resp)
 }
 ```
@@ -14235,7 +15144,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1ExtranetsB2bConsumerDeviceStatusIdGet200Response**](V1ExtranetsB2bConsumerDeviceStatusIdGet200Response.md)
+[**V1ExtranetsB2bConsumerDeviceStatusIdGetResponse**](V1ExtranetsB2bConsumerDeviceStatusIdGetResponse.md)
 
 ### Authorization
 
@@ -14323,7 +15232,7 @@ Name | Type | Description  | Notes
 
 ## V1ExtranetsB2bConsumerIdGet
 
-> V1ExtranetsB2bConsumerIdGet200Response V1ExtranetsB2bConsumerIdGet(ctx, id).Authorization(authorization).Execute()
+> V1ExtranetsB2bConsumerIdGetResponse V1ExtranetsB2bConsumerIdGet(ctx, id).Authorization(authorization).Execute()
 
 
 
@@ -14350,7 +15259,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1ExtranetsB2bConsumerIdGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1ExtranetsB2bConsumerIdGet`: V1ExtranetsB2bConsumerIdGet200Response
+	// response from `V1ExtranetsB2bConsumerIdGet`: V1ExtranetsB2bConsumerIdGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1ExtranetsB2bConsumerIdGet`: %v\n", resp)
 }
 ```
@@ -14375,7 +15284,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1ExtranetsB2bConsumerIdGet200Response**](V1ExtranetsB2bConsumerIdGet200Response.md)
+[**V1ExtranetsB2bConsumerIdGetResponse**](V1ExtranetsB2bConsumerIdGetResponse.md)
 
 ### Authorization
 
@@ -14393,7 +15302,7 @@ Name | Type | Description  | Notes
 
 ## V1ExtranetsB2bConsumerPost
 
-> V1ExtranetsB2bConsumerPost200Response V1ExtranetsB2bConsumerPost(ctx).Authorization(authorization).V1ExtranetsB2bConsumerPostRequest(v1ExtranetsB2bConsumerPostRequest).Execute()
+> V1ExtranetsB2bConsumerPostResponse V1ExtranetsB2bConsumerPost(ctx).Authorization(authorization).V1ExtranetsB2bConsumerPostRequest(v1ExtranetsB2bConsumerPostRequest).Execute()
 
 
 
@@ -14420,7 +15329,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1ExtranetsB2bConsumerPost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1ExtranetsB2bConsumerPost`: V1ExtranetsB2bConsumerPost200Response
+	// response from `V1ExtranetsB2bConsumerPost`: V1ExtranetsB2bConsumerPostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1ExtranetsB2bConsumerPost`: %v\n", resp)
 }
 ```
@@ -14441,7 +15350,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1ExtranetsB2bConsumerPost200Response**](V1ExtranetsB2bConsumerPost200Response.md)
+[**V1ExtranetsB2bConsumerPostResponse**](V1ExtranetsB2bConsumerPostResponse.md)
 
 ### Authorization
 
@@ -14459,7 +15368,7 @@ Name | Type | Description  | Notes
 
 ## V1ExtranetsB2bConsumerSummaryGet
 
-> V1ExtranetsB2bConsumerSummaryGet200Response V1ExtranetsB2bConsumerSummaryGet(ctx).Authorization(authorization).Execute()
+> V1ExtranetsB2bConsumerSummaryGetResponse V1ExtranetsB2bConsumerSummaryGet(ctx).Authorization(authorization).Execute()
 
 
 
@@ -14485,7 +15394,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1ExtranetsB2bConsumerSummaryGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1ExtranetsB2bConsumerSummaryGet`: V1ExtranetsB2bConsumerSummaryGet200Response
+	// response from `V1ExtranetsB2bConsumerSummaryGet`: V1ExtranetsB2bConsumerSummaryGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1ExtranetsB2bConsumerSummaryGet`: %v\n", resp)
 }
 ```
@@ -14505,7 +15414,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1ExtranetsB2bConsumerSummaryGet200Response**](V1ExtranetsB2bConsumerSummaryGet200Response.md)
+[**V1ExtranetsB2bConsumerSummaryGetResponse**](V1ExtranetsB2bConsumerSummaryGetResponse.md)
 
 ### Authorization
 
@@ -14593,7 +15502,7 @@ Name | Type | Description  | Notes
 
 ## V1ExtranetsB2bCustomerInfoIdGet
 
-> V1ExtranetsB2bCustomerInfoIdGet200Response V1ExtranetsB2bCustomerInfoIdGet(ctx, id).Authorization(authorization).Execute()
+> V1ExtranetsB2bCustomerInfoIdGetResponse V1ExtranetsB2bCustomerInfoIdGet(ctx, id).Authorization(authorization).Execute()
 
 
 
@@ -14620,7 +15529,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1ExtranetsB2bCustomerInfoIdGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1ExtranetsB2bCustomerInfoIdGet`: V1ExtranetsB2bCustomerInfoIdGet200Response
+	// response from `V1ExtranetsB2bCustomerInfoIdGet`: V1ExtranetsB2bCustomerInfoIdGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1ExtranetsB2bCustomerInfoIdGet`: %v\n", resp)
 }
 ```
@@ -14645,7 +15554,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1ExtranetsB2bCustomerInfoIdGet200Response**](V1ExtranetsB2bCustomerInfoIdGet200Response.md)
+[**V1ExtranetsB2bCustomerInfoIdGetResponse**](V1ExtranetsB2bCustomerInfoIdGetResponse.md)
 
 ### Authorization
 
@@ -14663,7 +15572,7 @@ Name | Type | Description  | Notes
 
 ## V1ExtranetsB2bGeneralCustomersSummaryGet
 
-> V1ExtranetsB2bGeneralCustomersSummaryGet200Response V1ExtranetsB2bGeneralCustomersSummaryGet(ctx).Authorization(authorization).Execute()
+> V1ExtranetsB2bGeneralCustomersSummaryGetResponse V1ExtranetsB2bGeneralCustomersSummaryGet(ctx).Authorization(authorization).Execute()
 
 
 
@@ -14689,7 +15598,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1ExtranetsB2bGeneralCustomersSummaryGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1ExtranetsB2bGeneralCustomersSummaryGet`: V1ExtranetsB2bGeneralCustomersSummaryGet200Response
+	// response from `V1ExtranetsB2bGeneralCustomersSummaryGet`: V1ExtranetsB2bGeneralCustomersSummaryGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1ExtranetsB2bGeneralCustomersSummaryGet`: %v\n", resp)
 }
 ```
@@ -14709,7 +15618,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1ExtranetsB2bGeneralCustomersSummaryGet200Response**](V1ExtranetsB2bGeneralCustomersSummaryGet200Response.md)
+[**V1ExtranetsB2bGeneralCustomersSummaryGetResponse**](V1ExtranetsB2bGeneralCustomersSummaryGetResponse.md)
 
 ### Authorization
 
@@ -14727,7 +15636,7 @@ Name | Type | Description  | Notes
 
 ## V1ExtranetsB2bGeneralServicesSummaryGet
 
-> V1ExtranetsB2bProducersSummaryGet200Response V1ExtranetsB2bGeneralServicesSummaryGet(ctx).Authorization(authorization).Execute()
+> V1ExtranetsB2bGeneralServicesSummaryGetResponse V1ExtranetsB2bGeneralServicesSummaryGet(ctx).Authorization(authorization).Execute()
 
 
 
@@ -14753,7 +15662,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1ExtranetsB2bGeneralServicesSummaryGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1ExtranetsB2bGeneralServicesSummaryGet`: V1ExtranetsB2bProducersSummaryGet200Response
+	// response from `V1ExtranetsB2bGeneralServicesSummaryGet`: V1ExtranetsB2bGeneralServicesSummaryGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1ExtranetsB2bGeneralServicesSummaryGet`: %v\n", resp)
 }
 ```
@@ -14773,7 +15682,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1ExtranetsB2bProducersSummaryGet200Response**](V1ExtranetsB2bProducersSummaryGet200Response.md)
+[**V1ExtranetsB2bGeneralServicesSummaryGetResponse**](V1ExtranetsB2bGeneralServicesSummaryGetResponse.md)
 
 ### Authorization
 
@@ -14791,7 +15700,7 @@ Name | Type | Description  | Notes
 
 ## V1ExtranetsB2bIdCustomerPost
 
-> V1ExtranetsB2bIdCustomerPost200Response V1ExtranetsB2bIdCustomerPost(ctx, id).Authorization(authorization).V1ExtranetsB2bIdCustomerPostRequest(v1ExtranetsB2bIdCustomerPostRequest).Execute()
+> V1ExtranetsB2bIdCustomerPostResponse V1ExtranetsB2bIdCustomerPost(ctx, id).Authorization(authorization).V1ExtranetsB2bIdCustomerPostRequest(v1ExtranetsB2bIdCustomerPostRequest).Execute()
 
 
 
@@ -14819,7 +15728,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1ExtranetsB2bIdCustomerPost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1ExtranetsB2bIdCustomerPost`: V1ExtranetsB2bIdCustomerPost200Response
+	// response from `V1ExtranetsB2bIdCustomerPost`: V1ExtranetsB2bIdCustomerPostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1ExtranetsB2bIdCustomerPost`: %v\n", resp)
 }
 ```
@@ -14845,7 +15754,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1ExtranetsB2bIdCustomerPost200Response**](V1ExtranetsB2bIdCustomerPost200Response.md)
+[**V1ExtranetsB2bIdCustomerPostResponse**](V1ExtranetsB2bIdCustomerPostResponse.md)
 
 ### Authorization
 
@@ -14863,7 +15772,7 @@ Name | Type | Description  | Notes
 
 ## V1ExtranetsB2bIdCustomerSummaryGet
 
-> V1ExtranetsB2bIdCustomerSummaryGet200Response V1ExtranetsB2bIdCustomerSummaryGet(ctx, id).Authorization(authorization).Execute()
+> V1ExtranetsB2bIdCustomerSummaryGetResponse V1ExtranetsB2bIdCustomerSummaryGet(ctx, id).Authorization(authorization).Execute()
 
 
 
@@ -14890,7 +15799,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1ExtranetsB2bIdCustomerSummaryGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1ExtranetsB2bIdCustomerSummaryGet`: V1ExtranetsB2bIdCustomerSummaryGet200Response
+	// response from `V1ExtranetsB2bIdCustomerSummaryGet`: V1ExtranetsB2bIdCustomerSummaryGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1ExtranetsB2bIdCustomerSummaryGet`: %v\n", resp)
 }
 ```
@@ -14915,7 +15824,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1ExtranetsB2bIdCustomerSummaryGet200Response**](V1ExtranetsB2bIdCustomerSummaryGet200Response.md)
+[**V1ExtranetsB2bIdCustomerSummaryGetResponse**](V1ExtranetsB2bIdCustomerSummaryGetResponse.md)
 
 ### Authorization
 
@@ -15003,7 +15912,7 @@ Name | Type | Description  | Notes
 
 ## V1ExtranetsB2bIdProducerGet
 
-> V1ExtranetsB2bPost200Response V1ExtranetsB2bIdProducerGet(ctx, id).Authorization(authorization).Type_(type_).Execute()
+> V1ExtranetsB2bIdProducerGetResponse V1ExtranetsB2bIdProducerGet(ctx, id).Authorization(authorization).Type_(type_).Execute()
 
 
 
@@ -15031,7 +15940,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1ExtranetsB2bIdProducerGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1ExtranetsB2bIdProducerGet`: V1ExtranetsB2bPost200Response
+	// response from `V1ExtranetsB2bIdProducerGet`: V1ExtranetsB2bIdProducerGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1ExtranetsB2bIdProducerGet`: %v\n", resp)
 }
 ```
@@ -15057,7 +15966,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1ExtranetsB2bPost200Response**](V1ExtranetsB2bPost200Response.md)
+[**V1ExtranetsB2bIdProducerGetResponse**](V1ExtranetsB2bIdProducerGetResponse.md)
 
 ### Authorization
 
@@ -15075,7 +15984,7 @@ Name | Type | Description  | Notes
 
 ## V1ExtranetsB2bIdPut
 
-> V1ExtranetsB2bPost200Response V1ExtranetsB2bIdPut(ctx, id).Authorization(authorization).V1ExtranetsB2bIdPutRequest(v1ExtranetsB2bIdPutRequest).Execute()
+> V1ExtranetsB2bIdPutResponse V1ExtranetsB2bIdPut(ctx, id).Authorization(authorization).V1ExtranetsB2bIdPutRequest(v1ExtranetsB2bIdPutRequest).Execute()
 
 
 
@@ -15103,7 +16012,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1ExtranetsB2bIdPut``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1ExtranetsB2bIdPut`: V1ExtranetsB2bPost200Response
+	// response from `V1ExtranetsB2bIdPut`: V1ExtranetsB2bIdPutResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1ExtranetsB2bIdPut`: %v\n", resp)
 }
 ```
@@ -15129,7 +16038,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1ExtranetsB2bPost200Response**](V1ExtranetsB2bPost200Response.md)
+[**V1ExtranetsB2bIdPutResponse**](V1ExtranetsB2bIdPutResponse.md)
 
 ### Authorization
 
@@ -15147,7 +16056,7 @@ Name | Type | Description  | Notes
 
 ## V1ExtranetsB2bPeeringConsumerCustomerIdConsumerDetailsGet
 
-> V1ExtranetsB2bPeeringConsumerCustomerIdConsumerDetailsGet200Response V1ExtranetsB2bPeeringConsumerCustomerIdConsumerDetailsGet(ctx, customerId).Authorization(authorization).Execute()
+> V1ExtranetsB2bPeeringConsumerCustomerIdConsumerDetailsGetResponse V1ExtranetsB2bPeeringConsumerCustomerIdConsumerDetailsGet(ctx, customerId).Authorization(authorization).Execute()
 
 
 
@@ -15174,7 +16083,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1ExtranetsB2bPeeringConsumerCustomerIdConsumerDetailsGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1ExtranetsB2bPeeringConsumerCustomerIdConsumerDetailsGet`: V1ExtranetsB2bPeeringConsumerCustomerIdConsumerDetailsGet200Response
+	// response from `V1ExtranetsB2bPeeringConsumerCustomerIdConsumerDetailsGet`: V1ExtranetsB2bPeeringConsumerCustomerIdConsumerDetailsGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1ExtranetsB2bPeeringConsumerCustomerIdConsumerDetailsGet`: %v\n", resp)
 }
 ```
@@ -15199,7 +16108,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1ExtranetsB2bPeeringConsumerCustomerIdConsumerDetailsGet200Response**](V1ExtranetsB2bPeeringConsumerCustomerIdConsumerDetailsGet200Response.md)
+[**V1ExtranetsB2bPeeringConsumerCustomerIdConsumerDetailsGetResponse**](V1ExtranetsB2bPeeringConsumerCustomerIdConsumerDetailsGetResponse.md)
 
 ### Authorization
 
@@ -15217,7 +16126,7 @@ Name | Type | Description  | Notes
 
 ## V1ExtranetsB2bPeeringConsumerMatchIdMatchDetailsGet
 
-> V1ExtranetsB2bPeeringConsumerMatchIdMatchDetailsGet200Response V1ExtranetsB2bPeeringConsumerMatchIdMatchDetailsGet(ctx, matchId).Authorization(authorization).Execute()
+> V1ExtranetsB2bPeeringConsumerMatchIdMatchDetailsGetResponse V1ExtranetsB2bPeeringConsumerMatchIdMatchDetailsGet(ctx, matchId).Authorization(authorization).Execute()
 
 
 
@@ -15244,7 +16153,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1ExtranetsB2bPeeringConsumerMatchIdMatchDetailsGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1ExtranetsB2bPeeringConsumerMatchIdMatchDetailsGet`: V1ExtranetsB2bPeeringConsumerMatchIdMatchDetailsGet200Response
+	// response from `V1ExtranetsB2bPeeringConsumerMatchIdMatchDetailsGet`: V1ExtranetsB2bPeeringConsumerMatchIdMatchDetailsGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1ExtranetsB2bPeeringConsumerMatchIdMatchDetailsGet`: %v\n", resp)
 }
 ```
@@ -15269,7 +16178,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1ExtranetsB2bPeeringConsumerMatchIdMatchDetailsGet200Response**](V1ExtranetsB2bPeeringConsumerMatchIdMatchDetailsGet200Response.md)
+[**V1ExtranetsB2bPeeringConsumerMatchIdMatchDetailsGetResponse**](V1ExtranetsB2bPeeringConsumerMatchIdMatchDetailsGetResponse.md)
 
 ### Authorization
 
@@ -15287,7 +16196,7 @@ Name | Type | Description  | Notes
 
 ## V1ExtranetsB2bPeeringConsumerMatchIdPost
 
-> V1ExtranetsB2bPeeringConsumerMatchIdPost200Response V1ExtranetsB2bPeeringConsumerMatchIdPost(ctx, matchId).Authorization(authorization).V1ExtranetsB2bPeeringConsumerMatchIdPostRequest(v1ExtranetsB2bPeeringConsumerMatchIdPostRequest).Execute()
+> V1ExtranetsB2bPeeringConsumerMatchIdPostResponse V1ExtranetsB2bPeeringConsumerMatchIdPost(ctx, matchId).Authorization(authorization).V1ExtranetsB2bPeeringConsumerMatchIdPostRequest(v1ExtranetsB2bPeeringConsumerMatchIdPostRequest).Execute()
 
 
 
@@ -15315,7 +16224,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1ExtranetsB2bPeeringConsumerMatchIdPost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1ExtranetsB2bPeeringConsumerMatchIdPost`: V1ExtranetsB2bPeeringConsumerMatchIdPost200Response
+	// response from `V1ExtranetsB2bPeeringConsumerMatchIdPost`: V1ExtranetsB2bPeeringConsumerMatchIdPostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1ExtranetsB2bPeeringConsumerMatchIdPost`: %v\n", resp)
 }
 ```
@@ -15341,7 +16250,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1ExtranetsB2bPeeringConsumerMatchIdPost200Response**](V1ExtranetsB2bPeeringConsumerMatchIdPost200Response.md)
+[**V1ExtranetsB2bPeeringConsumerMatchIdPostResponse**](V1ExtranetsB2bPeeringConsumerMatchIdPostResponse.md)
 
 ### Authorization
 
@@ -15359,7 +16268,7 @@ Name | Type | Description  | Notes
 
 ## V1ExtranetsB2bPeeringCustomerIdDelete
 
-> map[string]interface{} V1ExtranetsB2bPeeringCustomerIdDelete(ctx, id).Authorization(authorization).Execute()
+> V1ExtranetsB2bPeeringCustomerIdDeleteResponse V1ExtranetsB2bPeeringCustomerIdDelete(ctx, id).Authorization(authorization).Execute()
 
 
 
@@ -15386,7 +16295,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1ExtranetsB2bPeeringCustomerIdDelete``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1ExtranetsB2bPeeringCustomerIdDelete`: map[string]interface{}
+	// response from `V1ExtranetsB2bPeeringCustomerIdDelete`: V1ExtranetsB2bPeeringCustomerIdDeleteResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1ExtranetsB2bPeeringCustomerIdDelete`: %v\n", resp)
 }
 ```
@@ -15411,7 +16320,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**map[string]interface{}**
+[**V1ExtranetsB2bPeeringCustomerIdDeleteResponse**](V1ExtranetsB2bPeeringCustomerIdDeleteResponse.md)
 
 ### Authorization
 
@@ -15429,7 +16338,7 @@ Name | Type | Description  | Notes
 
 ## V1ExtranetsB2bPeeringCustomerIdGet
 
-> V1ExtranetsB2bPeeringCustomerIdGet200Response V1ExtranetsB2bPeeringCustomerIdGet(ctx, id).Authorization(authorization).Execute()
+> V1ExtranetsB2bPeeringCustomerIdGetResponse V1ExtranetsB2bPeeringCustomerIdGet(ctx, id).Authorization(authorization).Execute()
 
 
 
@@ -15456,7 +16365,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1ExtranetsB2bPeeringCustomerIdGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1ExtranetsB2bPeeringCustomerIdGet`: V1ExtranetsB2bPeeringCustomerIdGet200Response
+	// response from `V1ExtranetsB2bPeeringCustomerIdGet`: V1ExtranetsB2bPeeringCustomerIdGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1ExtranetsB2bPeeringCustomerIdGet`: %v\n", resp)
 }
 ```
@@ -15481,7 +16390,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1ExtranetsB2bPeeringCustomerIdGet200Response**](V1ExtranetsB2bPeeringCustomerIdGet200Response.md)
+[**V1ExtranetsB2bPeeringCustomerIdGetResponse**](V1ExtranetsB2bPeeringCustomerIdGetResponse.md)
 
 ### Authorization
 
@@ -15499,7 +16408,7 @@ Name | Type | Description  | Notes
 
 ## V1ExtranetsB2bPeeringCustomerPost
 
-> V1ExtranetsB2bPeeringCustomerPost200Response V1ExtranetsB2bPeeringCustomerPost(ctx).Authorization(authorization).V1ExtranetsB2bPeeringCustomerPostRequest(v1ExtranetsB2bPeeringCustomerPostRequest).Execute()
+> V1ExtranetsB2bPeeringCustomerPostResponse V1ExtranetsB2bPeeringCustomerPost(ctx).Authorization(authorization).V1ExtranetsB2bPeeringCustomerPostRequest(v1ExtranetsB2bPeeringCustomerPostRequest).Execute()
 
 
 
@@ -15526,7 +16435,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1ExtranetsB2bPeeringCustomerPost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1ExtranetsB2bPeeringCustomerPost`: V1ExtranetsB2bPeeringCustomerPost200Response
+	// response from `V1ExtranetsB2bPeeringCustomerPost`: V1ExtranetsB2bPeeringCustomerPostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1ExtranetsB2bPeeringCustomerPost`: %v\n", resp)
 }
 ```
@@ -15547,7 +16456,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1ExtranetsB2bPeeringCustomerPost200Response**](V1ExtranetsB2bPeeringCustomerPost200Response.md)
+[**V1ExtranetsB2bPeeringCustomerPostResponse**](V1ExtranetsB2bPeeringCustomerPostResponse.md)
 
 ### Authorization
 
@@ -15563,9 +16472,153 @@ Name | Type | Description  | Notes
 [[Back to README]](../README.md)
 
 
+## V1ExtranetsB2bPeeringMatchServiceToCustomerIdDelete
+
+> map[string]interface{} V1ExtranetsB2bPeeringMatchServiceToCustomerIdDelete(ctx, id).Authorization(authorization).Execute()
+
+
+
+
+
+### Example
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/Graphiant-Inc/graphiant-sdk-go"
+)
+
+func main() {
+	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
+	id := int64(1234567891011) // int64 | id for service to customer match
+
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.DefaultAPI.V1ExtranetsB2bPeeringMatchServiceToCustomerIdDelete(context.Background(), id).Authorization(authorization).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1ExtranetsB2bPeeringMatchServiceToCustomerIdDelete``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `V1ExtranetsB2bPeeringMatchServiceToCustomerIdDelete`: map[string]interface{}
+	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1ExtranetsB2bPeeringMatchServiceToCustomerIdDelete`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**id** | **int64** | id for service to customer match | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiV1ExtranetsB2bPeeringMatchServiceToCustomerIdDeleteRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **authorization** | **string** | Bearer token. Format: Bearer &lt;your_token_here&gt; | 
+
+
+### Return type
+
+**map[string]interface{}**
+
+### Authorization
+
+[jwtAuth](../README.md#jwtAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## V1ExtranetsB2bPeeringMatchServiceToCustomerIdGet
+
+> V1ExtranetsB2bPeeringMatchServiceToCustomerIdGetResponse V1ExtranetsB2bPeeringMatchServiceToCustomerIdGet(ctx, id).Authorization(authorization).Execute()
+
+
+
+
+
+### Example
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/Graphiant-Inc/graphiant-sdk-go"
+)
+
+func main() {
+	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
+	id := int64(1234567891011) // int64 | service id
+
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.DefaultAPI.V1ExtranetsB2bPeeringMatchServiceToCustomerIdGet(context.Background(), id).Authorization(authorization).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1ExtranetsB2bPeeringMatchServiceToCustomerIdGet``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `V1ExtranetsB2bPeeringMatchServiceToCustomerIdGet`: V1ExtranetsB2bPeeringMatchServiceToCustomerIdGetResponse
+	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1ExtranetsB2bPeeringMatchServiceToCustomerIdGet`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**id** | **int64** | service id | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiV1ExtranetsB2bPeeringMatchServiceToCustomerIdGetRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **authorization** | **string** | Bearer token. Format: Bearer &lt;your_token_here&gt; | 
+
+
+### Return type
+
+[**V1ExtranetsB2bPeeringMatchServiceToCustomerIdGetResponse**](V1ExtranetsB2bPeeringMatchServiceToCustomerIdGetResponse.md)
+
+### Authorization
+
+[jwtAuth](../README.md#jwtAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
 ## V1ExtranetsB2bPeeringMatchServiceToCustomerPost
 
-> V1ExtranetsB2bPeeringMatchServiceToCustomerPost200Response V1ExtranetsB2bPeeringMatchServiceToCustomerPost(ctx).Authorization(authorization).V1ExtranetsB2bPeeringMatchServiceToCustomerPostRequest(v1ExtranetsB2bPeeringMatchServiceToCustomerPostRequest).Execute()
+> V1ExtranetsB2bPeeringMatchServiceToCustomerPostResponse V1ExtranetsB2bPeeringMatchServiceToCustomerPost(ctx).Authorization(authorization).V1ExtranetsB2bPeeringMatchServiceToCustomerPostRequest(v1ExtranetsB2bPeeringMatchServiceToCustomerPostRequest).Execute()
 
 
 
@@ -15592,7 +16645,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1ExtranetsB2bPeeringMatchServiceToCustomerPost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1ExtranetsB2bPeeringMatchServiceToCustomerPost`: V1ExtranetsB2bPeeringMatchServiceToCustomerPost200Response
+	// response from `V1ExtranetsB2bPeeringMatchServiceToCustomerPost`: V1ExtranetsB2bPeeringMatchServiceToCustomerPostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1ExtranetsB2bPeeringMatchServiceToCustomerPost`: %v\n", resp)
 }
 ```
@@ -15613,7 +16666,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1ExtranetsB2bPeeringMatchServiceToCustomerPost200Response**](V1ExtranetsB2bPeeringMatchServiceToCustomerPost200Response.md)
+[**V1ExtranetsB2bPeeringMatchServiceToCustomerPostResponse**](V1ExtranetsB2bPeeringMatchServiceToCustomerPostResponse.md)
 
 ### Authorization
 
@@ -15629,9 +16682,9 @@ Name | Type | Description  | Notes
 [[Back to README]](../README.md)
 
 
-## V1ExtranetsB2bPeeringMatchServicesSummaryGet
+## V1ExtranetsB2bPeeringMatchServicesSummaryIdGet
 
-> V1ExtranetsB2bPeeringMatchServicesSummaryGet200Response V1ExtranetsB2bPeeringMatchServicesSummaryGet(ctx).Authorization(authorization).Execute()
+> V1ExtranetsB2bPeeringMatchServicesSummaryIdGetResponse V1ExtranetsB2bPeeringMatchServicesSummaryIdGet(ctx, id).Authorization(authorization).Execute()
 
 
 
@@ -15649,35 +16702,41 @@ import (
 
 func main() {
 	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
+	id := int64(1234567891011) // int64 | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.DefaultAPI.V1ExtranetsB2bPeeringMatchServicesSummaryGet(context.Background()).Authorization(authorization).Execute()
+	resp, r, err := apiClient.DefaultAPI.V1ExtranetsB2bPeeringMatchServicesSummaryIdGet(context.Background(), id).Authorization(authorization).Execute()
 	if err != nil {
-		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1ExtranetsB2bPeeringMatchServicesSummaryGet``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1ExtranetsB2bPeeringMatchServicesSummaryIdGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1ExtranetsB2bPeeringMatchServicesSummaryGet`: V1ExtranetsB2bPeeringMatchServicesSummaryGet200Response
-	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1ExtranetsB2bPeeringMatchServicesSummaryGet`: %v\n", resp)
+	// response from `V1ExtranetsB2bPeeringMatchServicesSummaryIdGet`: V1ExtranetsB2bPeeringMatchServicesSummaryIdGetResponse
+	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1ExtranetsB2bPeeringMatchServicesSummaryIdGet`: %v\n", resp)
 }
 ```
 
 ### Path Parameters
 
 
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**id** | **int64** |  | 
 
 ### Other Parameters
 
-Other parameters are passed through a pointer to a apiV1ExtranetsB2bPeeringMatchServicesSummaryGetRequest struct via the builder pattern
+Other parameters are passed through a pointer to a apiV1ExtranetsB2bPeeringMatchServicesSummaryIdGetRequest struct via the builder pattern
 
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **string** | Bearer token. Format: Bearer &lt;your_token_here&gt; | 
 
+
 ### Return type
 
-[**V1ExtranetsB2bPeeringMatchServicesSummaryGet200Response**](V1ExtranetsB2bPeeringMatchServicesSummaryGet200Response.md)
+[**V1ExtranetsB2bPeeringMatchServicesSummaryIdGetResponse**](V1ExtranetsB2bPeeringMatchServicesSummaryIdGetResponse.md)
 
 ### Authorization
 
@@ -15695,7 +16754,7 @@ Name | Type | Description  | Notes
 
 ## V1ExtranetsB2bPeeringProducerIdGet
 
-> V1ExtranetsB2bPeeringProducerIdGet200Response V1ExtranetsB2bPeeringProducerIdGet(ctx, id).Authorization(authorization).Execute()
+> V1ExtranetsB2bPeeringProducerIdGetResponse V1ExtranetsB2bPeeringProducerIdGet(ctx, id).Authorization(authorization).Execute()
 
 
 
@@ -15722,7 +16781,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1ExtranetsB2bPeeringProducerIdGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1ExtranetsB2bPeeringProducerIdGet`: V1ExtranetsB2bPeeringProducerIdGet200Response
+	// response from `V1ExtranetsB2bPeeringProducerIdGet`: V1ExtranetsB2bPeeringProducerIdGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1ExtranetsB2bPeeringProducerIdGet`: %v\n", resp)
 }
 ```
@@ -15747,7 +16806,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1ExtranetsB2bPeeringProducerIdGet200Response**](V1ExtranetsB2bPeeringProducerIdGet200Response.md)
+[**V1ExtranetsB2bPeeringProducerIdGetResponse**](V1ExtranetsB2bPeeringProducerIdGetResponse.md)
 
 ### Authorization
 
@@ -15765,7 +16824,7 @@ Name | Type | Description  | Notes
 
 ## V1ExtranetsB2bPeeringProducerIdMatchingCustomersSummaryGet
 
-> V1ExtranetsB2bPeeringProducerIdMatchingCustomersSummaryGet200Response V1ExtranetsB2bPeeringProducerIdMatchingCustomersSummaryGet(ctx, id).Authorization(authorization).Execute()
+> V1ExtranetsB2bPeeringProducerIdMatchingCustomersSummaryGetResponse V1ExtranetsB2bPeeringProducerIdMatchingCustomersSummaryGet(ctx, id).Authorization(authorization).Execute()
 
 
 
@@ -15792,7 +16851,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1ExtranetsB2bPeeringProducerIdMatchingCustomersSummaryGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1ExtranetsB2bPeeringProducerIdMatchingCustomersSummaryGet`: V1ExtranetsB2bPeeringProducerIdMatchingCustomersSummaryGet200Response
+	// response from `V1ExtranetsB2bPeeringProducerIdMatchingCustomersSummaryGet`: V1ExtranetsB2bPeeringProducerIdMatchingCustomersSummaryGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1ExtranetsB2bPeeringProducerIdMatchingCustomersSummaryGet`: %v\n", resp)
 }
 ```
@@ -15817,7 +16876,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1ExtranetsB2bPeeringProducerIdMatchingCustomersSummaryGet200Response**](V1ExtranetsB2bPeeringProducerIdMatchingCustomersSummaryGet200Response.md)
+[**V1ExtranetsB2bPeeringProducerIdMatchingCustomersSummaryGetResponse**](V1ExtranetsB2bPeeringProducerIdMatchingCustomersSummaryGetResponse.md)
 
 ### Authorization
 
@@ -15835,7 +16894,7 @@ Name | Type | Description  | Notes
 
 ## V1ExtranetsB2bPeeringProducerPost
 
-> V1ExtranetsB2bPeeringProducerPost200Response V1ExtranetsB2bPeeringProducerPost(ctx).Authorization(authorization).V1ExtranetsB2bPeeringProducerPostRequest(v1ExtranetsB2bPeeringProducerPostRequest).Execute()
+> V1ExtranetsB2bPeeringProducerPostResponse V1ExtranetsB2bPeeringProducerPost(ctx).Authorization(authorization).V1ExtranetsB2bPeeringProducerPostRequest(v1ExtranetsB2bPeeringProducerPostRequest).Execute()
 
 
 
@@ -15862,7 +16921,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1ExtranetsB2bPeeringProducerPost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1ExtranetsB2bPeeringProducerPost`: V1ExtranetsB2bPeeringProducerPost200Response
+	// response from `V1ExtranetsB2bPeeringProducerPost`: V1ExtranetsB2bPeeringProducerPostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1ExtranetsB2bPeeringProducerPost`: %v\n", resp)
 }
 ```
@@ -15883,7 +16942,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1ExtranetsB2bPeeringProducerPost200Response**](V1ExtranetsB2bPeeringProducerPost200Response.md)
+[**V1ExtranetsB2bPeeringProducerPostResponse**](V1ExtranetsB2bPeeringProducerPostResponse.md)
 
 ### Authorization
 
@@ -15901,7 +16960,7 @@ Name | Type | Description  | Notes
 
 ## V1ExtranetsB2bPost
 
-> V1ExtranetsB2bPost200Response V1ExtranetsB2bPost(ctx).Authorization(authorization).V1ExtranetsB2bPostRequest(v1ExtranetsB2bPostRequest).Execute()
+> V1ExtranetsB2bPostResponse V1ExtranetsB2bPost(ctx).Authorization(authorization).V1ExtranetsB2bPostRequest(v1ExtranetsB2bPostRequest).Execute()
 
 
 
@@ -15928,7 +16987,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1ExtranetsB2bPost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1ExtranetsB2bPost`: V1ExtranetsB2bPost200Response
+	// response from `V1ExtranetsB2bPost`: V1ExtranetsB2bPostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1ExtranetsB2bPost`: %v\n", resp)
 }
 ```
@@ -15949,7 +17008,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1ExtranetsB2bPost200Response**](V1ExtranetsB2bPost200Response.md)
+[**V1ExtranetsB2bPostResponse**](V1ExtranetsB2bPostResponse.md)
 
 ### Authorization
 
@@ -15967,7 +17026,7 @@ Name | Type | Description  | Notes
 
 ## V1ExtranetsB2bProducerDeviceStatusIdGet
 
-> V1ExtranetsB2bProducerDeviceStatusIdGet200Response V1ExtranetsB2bProducerDeviceStatusIdGet(ctx, id).Authorization(authorization).Execute()
+> V1ExtranetsB2bProducerDeviceStatusIdGetResponse V1ExtranetsB2bProducerDeviceStatusIdGet(ctx, id).Authorization(authorization).Execute()
 
 
 
@@ -15994,7 +17053,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1ExtranetsB2bProducerDeviceStatusIdGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1ExtranetsB2bProducerDeviceStatusIdGet`: V1ExtranetsB2bProducerDeviceStatusIdGet200Response
+	// response from `V1ExtranetsB2bProducerDeviceStatusIdGet`: V1ExtranetsB2bProducerDeviceStatusIdGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1ExtranetsB2bProducerDeviceStatusIdGet`: %v\n", resp)
 }
 ```
@@ -16019,7 +17078,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1ExtranetsB2bProducerDeviceStatusIdGet200Response**](V1ExtranetsB2bProducerDeviceStatusIdGet200Response.md)
+[**V1ExtranetsB2bProducerDeviceStatusIdGetResponse**](V1ExtranetsB2bProducerDeviceStatusIdGetResponse.md)
 
 ### Authorization
 
@@ -16037,7 +17096,7 @@ Name | Type | Description  | Notes
 
 ## V1ExtranetsB2bProducersSummaryGet
 
-> V1ExtranetsB2bProducersSummaryGet200Response V1ExtranetsB2bProducersSummaryGet(ctx).Authorization(authorization).Execute()
+> V1ExtranetsB2bProducersSummaryGetResponse V1ExtranetsB2bProducersSummaryGet(ctx).Authorization(authorization).Execute()
 
 
 
@@ -16063,7 +17122,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1ExtranetsB2bProducersSummaryGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1ExtranetsB2bProducersSummaryGet`: V1ExtranetsB2bProducersSummaryGet200Response
+	// response from `V1ExtranetsB2bProducersSummaryGet`: V1ExtranetsB2bProducersSummaryGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1ExtranetsB2bProducersSummaryGet`: %v\n", resp)
 }
 ```
@@ -16083,7 +17142,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1ExtranetsB2bProducersSummaryGet200Response**](V1ExtranetsB2bProducersSummaryGet200Response.md)
+[**V1ExtranetsB2bProducersSummaryGetResponse**](V1ExtranetsB2bProducersSummaryGetResponse.md)
 
 ### Authorization
 
@@ -16101,7 +17160,7 @@ Name | Type | Description  | Notes
 
 ## V1ExtranetsGet
 
-> V1ExtranetsGet200Response V1ExtranetsGet(ctx).Authorization(authorization).Execute()
+> V1ExtranetsGetResponse V1ExtranetsGet(ctx).Authorization(authorization).Execute()
 
 
 
@@ -16127,7 +17186,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1ExtranetsGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1ExtranetsGet`: V1ExtranetsGet200Response
+	// response from `V1ExtranetsGet`: V1ExtranetsGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1ExtranetsGet`: %v\n", resp)
 }
 ```
@@ -16147,7 +17206,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1ExtranetsGet200Response**](V1ExtranetsGet200Response.md)
+[**V1ExtranetsGetResponse**](V1ExtranetsGetResponse.md)
 
 ### Authorization
 
@@ -16165,7 +17224,7 @@ Name | Type | Description  | Notes
 
 ## V1ExtranetsIdApplyPost
 
-> V1ExtranetsIdApplyPost202Response V1ExtranetsIdApplyPost(ctx, id).Authorization(authorization).V1ExtranetsIdApplyPostRequest(v1ExtranetsIdApplyPostRequest).Execute()
+> V1ExtranetsIdApplyPostResponse V1ExtranetsIdApplyPost(ctx, id).Authorization(authorization).V1ExtranetsIdApplyPostRequest(v1ExtranetsIdApplyPostRequest).Execute()
 
 
 
@@ -16193,7 +17252,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1ExtranetsIdApplyPost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1ExtranetsIdApplyPost`: V1ExtranetsIdApplyPost202Response
+	// response from `V1ExtranetsIdApplyPost`: V1ExtranetsIdApplyPostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1ExtranetsIdApplyPost`: %v\n", resp)
 }
 ```
@@ -16219,7 +17278,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1ExtranetsIdApplyPost202Response**](V1ExtranetsIdApplyPost202Response.md)
+[**V1ExtranetsIdApplyPostResponse**](V1ExtranetsIdApplyPostResponse.md)
 
 ### Authorization
 
@@ -16237,7 +17296,7 @@ Name | Type | Description  | Notes
 
 ## V1ExtranetsIdDelete
 
-> V1ExtranetsIdDelete200Response V1ExtranetsIdDelete(ctx, id).Authorization(authorization).Execute()
+> V1ExtranetsIdDeleteResponse V1ExtranetsIdDelete(ctx, id).Authorization(authorization).Execute()
 
 
 
@@ -16264,7 +17323,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1ExtranetsIdDelete``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1ExtranetsIdDelete`: V1ExtranetsIdDelete200Response
+	// response from `V1ExtranetsIdDelete`: V1ExtranetsIdDeleteResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1ExtranetsIdDelete`: %v\n", resp)
 }
 ```
@@ -16289,7 +17348,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1ExtranetsIdDelete200Response**](V1ExtranetsIdDelete200Response.md)
+[**V1ExtranetsIdDeleteResponse**](V1ExtranetsIdDeleteResponse.md)
 
 ### Authorization
 
@@ -16307,7 +17366,7 @@ Name | Type | Description  | Notes
 
 ## V1ExtranetsIdGet
 
-> V1ExtranetsPost200Response V1ExtranetsIdGet(ctx, id).Authorization(authorization).Execute()
+> V1ExtranetsIdGetResponse V1ExtranetsIdGet(ctx, id).Authorization(authorization).Execute()
 
 
 
@@ -16334,7 +17393,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1ExtranetsIdGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1ExtranetsIdGet`: V1ExtranetsPost200Response
+	// response from `V1ExtranetsIdGet`: V1ExtranetsIdGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1ExtranetsIdGet`: %v\n", resp)
 }
 ```
@@ -16359,7 +17418,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1ExtranetsPost200Response**](V1ExtranetsPost200Response.md)
+[**V1ExtranetsIdGetResponse**](V1ExtranetsIdGetResponse.md)
 
 ### Authorization
 
@@ -16377,7 +17436,7 @@ Name | Type | Description  | Notes
 
 ## V1ExtranetsIdPut
 
-> V1ExtranetsPost200Response V1ExtranetsIdPut(ctx, id).Authorization(authorization).V1ExtranetsPostRequest(v1ExtranetsPostRequest).Execute()
+> V1ExtranetsIdPutResponse V1ExtranetsIdPut(ctx, id).Authorization(authorization).V1ExtranetsIdPutRequest(v1ExtranetsIdPutRequest).Execute()
 
 
 
@@ -16396,16 +17455,16 @@ import (
 func main() {
 	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
 	id := int64(1234567891011) // int64 | 
-	v1ExtranetsPostRequest := *openapiclient.NewV1ExtranetsPostRequest() // V1ExtranetsPostRequest | 
+	v1ExtranetsIdPutRequest := *openapiclient.NewV1ExtranetsIdPutRequest() // V1ExtranetsIdPutRequest | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.DefaultAPI.V1ExtranetsIdPut(context.Background(), id).Authorization(authorization).V1ExtranetsPostRequest(v1ExtranetsPostRequest).Execute()
+	resp, r, err := apiClient.DefaultAPI.V1ExtranetsIdPut(context.Background(), id).Authorization(authorization).V1ExtranetsIdPutRequest(v1ExtranetsIdPutRequest).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1ExtranetsIdPut``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1ExtranetsIdPut`: V1ExtranetsPost200Response
+	// response from `V1ExtranetsIdPut`: V1ExtranetsIdPutResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1ExtranetsIdPut`: %v\n", resp)
 }
 ```
@@ -16427,11 +17486,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **string** | Bearer token. Format: Bearer &lt;your_token_here&gt; | 
 
- **v1ExtranetsPostRequest** | [**V1ExtranetsPostRequest**](V1ExtranetsPostRequest.md) |  | 
+ **v1ExtranetsIdPutRequest** | [**V1ExtranetsIdPutRequest**](V1ExtranetsIdPutRequest.md) |  | 
 
 ### Return type
 
-[**V1ExtranetsPost200Response**](V1ExtranetsPost200Response.md)
+[**V1ExtranetsIdPutResponse**](V1ExtranetsIdPutResponse.md)
 
 ### Authorization
 
@@ -16449,7 +17508,7 @@ Name | Type | Description  | Notes
 
 ## V1ExtranetsIdStatusGet
 
-> V1ExtranetsIdDelete200Response V1ExtranetsIdStatusGet(ctx, id).Authorization(authorization).Execute()
+> V1ExtranetsIdStatusGetResponse V1ExtranetsIdStatusGet(ctx, id).Authorization(authorization).Execute()
 
 
 
@@ -16476,7 +17535,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1ExtranetsIdStatusGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1ExtranetsIdStatusGet`: V1ExtranetsIdDelete200Response
+	// response from `V1ExtranetsIdStatusGet`: V1ExtranetsIdStatusGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1ExtranetsIdStatusGet`: %v\n", resp)
 }
 ```
@@ -16501,7 +17560,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1ExtranetsIdDelete200Response**](V1ExtranetsIdDelete200Response.md)
+[**V1ExtranetsIdStatusGetResponse**](V1ExtranetsIdStatusGetResponse.md)
 
 ### Authorization
 
@@ -16519,7 +17578,7 @@ Name | Type | Description  | Notes
 
 ## V1ExtranetsMonitoringLanSegmentsGet
 
-> V1ExtranetsMonitoringLanSegmentsGet200Response V1ExtranetsMonitoringLanSegmentsGet(ctx).Authorization(authorization).Execute()
+> V1ExtranetsMonitoringLanSegmentsGetResponse V1ExtranetsMonitoringLanSegmentsGet(ctx).Authorization(authorization).Execute()
 
 
 
@@ -16545,7 +17604,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1ExtranetsMonitoringLanSegmentsGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1ExtranetsMonitoringLanSegmentsGet`: V1ExtranetsMonitoringLanSegmentsGet200Response
+	// response from `V1ExtranetsMonitoringLanSegmentsGet`: V1ExtranetsMonitoringLanSegmentsGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1ExtranetsMonitoringLanSegmentsGet`: %v\n", resp)
 }
 ```
@@ -16565,7 +17624,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1ExtranetsMonitoringLanSegmentsGet200Response**](V1ExtranetsMonitoringLanSegmentsGet200Response.md)
+[**V1ExtranetsMonitoringLanSegmentsGetResponse**](V1ExtranetsMonitoringLanSegmentsGetResponse.md)
 
 ### Authorization
 
@@ -16583,7 +17642,7 @@ Name | Type | Description  | Notes
 
 ## V1ExtranetsMonitoringNatUsageGet
 
-> V1ExtranetsMonitoringNatUsageGet200Response V1ExtranetsMonitoringNatUsageGet(ctx).Authorization(authorization).Execute()
+> V1ExtranetsMonitoringNatUsageGetResponse V1ExtranetsMonitoringNatUsageGet(ctx).Authorization(authorization).Execute()
 
 
 
@@ -16609,7 +17668,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1ExtranetsMonitoringNatUsageGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1ExtranetsMonitoringNatUsageGet`: V1ExtranetsMonitoringNatUsageGet200Response
+	// response from `V1ExtranetsMonitoringNatUsageGet`: V1ExtranetsMonitoringNatUsageGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1ExtranetsMonitoringNatUsageGet`: %v\n", resp)
 }
 ```
@@ -16629,7 +17688,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1ExtranetsMonitoringNatUsageGet200Response**](V1ExtranetsMonitoringNatUsageGet200Response.md)
+[**V1ExtranetsMonitoringNatUsageGetResponse**](V1ExtranetsMonitoringNatUsageGetResponse.md)
 
 ### Authorization
 
@@ -16647,7 +17706,9 @@ Name | Type | Description  | Notes
 
 ## V1ExtranetsMonitoringTrafficSecurityPolicyPost
 
-> V1ExtranetsMonitoringTrafficSecurityPolicyPost200Response V1ExtranetsMonitoringTrafficSecurityPolicyPost(ctx).Authorization(authorization).V1ExtranetsMonitoringTrafficSecurityPolicyPostRequest(v1ExtranetsMonitoringTrafficSecurityPolicyPostRequest).Execute()
+> V1ExtranetsMonitoringTrafficSecurityPolicyPostResponse V1ExtranetsMonitoringTrafficSecurityPolicyPost(ctx).Authorization(authorization).V1ExtranetsMonitoringTrafficSecurityPolicyPostRequest(v1ExtranetsMonitoringTrafficSecurityPolicyPostRequest).Execute()
+
+
 
 
 
@@ -16674,7 +17735,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1ExtranetsMonitoringTrafficSecurityPolicyPost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1ExtranetsMonitoringTrafficSecurityPolicyPost`: V1ExtranetsMonitoringTrafficSecurityPolicyPost200Response
+	// response from `V1ExtranetsMonitoringTrafficSecurityPolicyPost`: V1ExtranetsMonitoringTrafficSecurityPolicyPostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1ExtranetsMonitoringTrafficSecurityPolicyPost`: %v\n", resp)
 }
 ```
@@ -16695,7 +17756,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1ExtranetsMonitoringTrafficSecurityPolicyPost200Response**](V1ExtranetsMonitoringTrafficSecurityPolicyPost200Response.md)
+[**V1ExtranetsMonitoringTrafficSecurityPolicyPostResponse**](V1ExtranetsMonitoringTrafficSecurityPolicyPostResponse.md)
 
 ### Authorization
 
@@ -16713,7 +17774,7 @@ Name | Type | Description  | Notes
 
 ## V1ExtranetsPost
 
-> V1ExtranetsPost200Response V1ExtranetsPost(ctx).Authorization(authorization).V1ExtranetsPostRequest(v1ExtranetsPostRequest).Execute()
+> V1ExtranetsPostResponse V1ExtranetsPost(ctx).Authorization(authorization).V1ExtranetsPostRequest(v1ExtranetsPostRequest).Execute()
 
 
 
@@ -16740,7 +17801,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1ExtranetsPost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1ExtranetsPost`: V1ExtranetsPost200Response
+	// response from `V1ExtranetsPost`: V1ExtranetsPostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1ExtranetsPost`: %v\n", resp)
 }
 ```
@@ -16761,7 +17822,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1ExtranetsPost200Response**](V1ExtranetsPost200Response.md)
+[**V1ExtranetsPostResponse**](V1ExtranetsPostResponse.md)
 
 ### Authorization
 
@@ -16779,7 +17840,7 @@ Name | Type | Description  | Notes
 
 ## V1ExtranetsResolvePolicyTargetPost
 
-> V1ExtranetsResolvePolicyTargetPost200Response V1ExtranetsResolvePolicyTargetPost(ctx).Authorization(authorization).V1ExtranetsResolvePolicyTargetPostRequest(v1ExtranetsResolvePolicyTargetPostRequest).Execute()
+> V1ExtranetsResolvePolicyTargetPostResponse V1ExtranetsResolvePolicyTargetPost(ctx).Authorization(authorization).V1ExtranetsResolvePolicyTargetPostRequest(v1ExtranetsResolvePolicyTargetPostRequest).Execute()
 
 
 
@@ -16806,7 +17867,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1ExtranetsResolvePolicyTargetPost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1ExtranetsResolvePolicyTargetPost`: V1ExtranetsResolvePolicyTargetPost200Response
+	// response from `V1ExtranetsResolvePolicyTargetPost`: V1ExtranetsResolvePolicyTargetPostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1ExtranetsResolvePolicyTargetPost`: %v\n", resp)
 }
 ```
@@ -16827,7 +17888,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1ExtranetsResolvePolicyTargetPost200Response**](V1ExtranetsResolvePolicyTargetPost200Response.md)
+[**V1ExtranetsResolvePolicyTargetPostResponse**](V1ExtranetsResolvePolicyTargetPostResponse.md)
 
 ### Authorization
 
@@ -16845,7 +17906,7 @@ Name | Type | Description  | Notes
 
 ## V1ExtranetsSourceSegmentsPost
 
-> V1ExtranetsSourceSegmentsPost200Response V1ExtranetsSourceSegmentsPost(ctx).Authorization(authorization).V1ExtranetsSourceSegmentsPostRequest(v1ExtranetsSourceSegmentsPostRequest).Execute()
+> V1ExtranetsSourceSegmentsPostResponse V1ExtranetsSourceSegmentsPost(ctx).Authorization(authorization).V1ExtranetsSourceSegmentsPostRequest(v1ExtranetsSourceSegmentsPostRequest).Execute()
 
 
 
@@ -16872,7 +17933,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1ExtranetsSourceSegmentsPost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1ExtranetsSourceSegmentsPost`: V1ExtranetsSourceSegmentsPost200Response
+	// response from `V1ExtranetsSourceSegmentsPost`: V1ExtranetsSourceSegmentsPostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1ExtranetsSourceSegmentsPost`: %v\n", resp)
 }
 ```
@@ -16893,7 +17954,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1ExtranetsSourceSegmentsPost200Response**](V1ExtranetsSourceSegmentsPost200Response.md)
+[**V1ExtranetsSourceSegmentsPostResponse**](V1ExtranetsSourceSegmentsPostResponse.md)
 
 ### Authorization
 
@@ -16911,7 +17972,9 @@ Name | Type | Description  | Notes
 
 ## V1FlowsFlowTablePost
 
-> V1FlowsFlowTablePost200Response V1FlowsFlowTablePost(ctx).Authorization(authorization).V1FlowsFlowTablePostRequest(v1FlowsFlowTablePostRequest).Execute()
+> V1FlowsFlowTablePostResponse V1FlowsFlowTablePost(ctx).Authorization(authorization).V1FlowsFlowTablePostRequest(v1FlowsFlowTablePostRequest).Execute()
+
+
 
 
 
@@ -16938,7 +18001,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1FlowsFlowTablePost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1FlowsFlowTablePost`: V1FlowsFlowTablePost200Response
+	// response from `V1FlowsFlowTablePost`: V1FlowsFlowTablePostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1FlowsFlowTablePost`: %v\n", resp)
 }
 ```
@@ -16959,7 +18022,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1FlowsFlowTablePost200Response**](V1FlowsFlowTablePost200Response.md)
+[**V1FlowsFlowTablePostResponse**](V1FlowsFlowTablePostResponse.md)
 
 ### Authorization
 
@@ -16977,7 +18040,9 @@ Name | Type | Description  | Notes
 
 ## V1FlowsTopologyPost
 
-> V1FlowsTopologyPost200Response V1FlowsTopologyPost(ctx).Authorization(authorization).V1FlowsTopologyPostRequest(v1FlowsTopologyPostRequest).Execute()
+> V1FlowsTopologyPostResponse V1FlowsTopologyPost(ctx).Authorization(authorization).V1FlowsTopologyPostRequest(v1FlowsTopologyPostRequest).Execute()
+
+
 
 
 
@@ -17004,7 +18069,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1FlowsTopologyPost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1FlowsTopologyPost`: V1FlowsTopologyPost200Response
+	// response from `V1FlowsTopologyPost`: V1FlowsTopologyPostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1FlowsTopologyPost`: %v\n", resp)
 }
 ```
@@ -17025,7 +18090,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1FlowsTopologyPost200Response**](V1FlowsTopologyPost200Response.md)
+[**V1FlowsTopologyPostResponse**](V1FlowsTopologyPostResponse.md)
 
 ### Authorization
 
@@ -17109,7 +18174,9 @@ Name | Type | Description  | Notes
 
 ## V1GatewaysGuestConsumerMatchIdGet
 
-> V1GatewaysGuestConsumerMatchIdGet200Response V1GatewaysGuestConsumerMatchIdGet(ctx, matchId).Authorization(authorization).Email(email).Execute()
+> V1GatewaysGuestConsumerMatchIdGetResponse V1GatewaysGuestConsumerMatchIdGet(ctx, matchId).Authorization(authorization).Email(email).Execute()
+
+
 
 
 
@@ -17137,7 +18204,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1GatewaysGuestConsumerMatchIdGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1GatewaysGuestConsumerMatchIdGet`: V1GatewaysGuestConsumerMatchIdGet200Response
+	// response from `V1GatewaysGuestConsumerMatchIdGet`: V1GatewaysGuestConsumerMatchIdGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1GatewaysGuestConsumerMatchIdGet`: %v\n", resp)
 }
 ```
@@ -17163,7 +18230,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1GatewaysGuestConsumerMatchIdGet200Response**](V1GatewaysGuestConsumerMatchIdGet200Response.md)
+[**V1GatewaysGuestConsumerMatchIdGetResponse**](V1GatewaysGuestConsumerMatchIdGetResponse.md)
 
 ### Authorization
 
@@ -17181,7 +18248,7 @@ Name | Type | Description  | Notes
 
 ## V1GatewaysIdDetailsGet
 
-> V1GatewaysPostRequest V1GatewaysIdDetailsGet(ctx, id).Authorization(authorization).Execute()
+> V1GatewaysIdDetailsGetResponse V1GatewaysIdDetailsGet(ctx, id).Authorization(authorization).Execute()
 
 
 
@@ -17208,7 +18275,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1GatewaysIdDetailsGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1GatewaysIdDetailsGet`: V1GatewaysPostRequest
+	// response from `V1GatewaysIdDetailsGet`: V1GatewaysIdDetailsGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1GatewaysIdDetailsGet`: %v\n", resp)
 }
 ```
@@ -17233,7 +18300,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1GatewaysPostRequest**](V1GatewaysPostRequest.md)
+[**V1GatewaysIdDetailsGetResponse**](V1GatewaysIdDetailsGetResponse.md)
 
 ### Authorization
 
@@ -17251,7 +18318,9 @@ Name | Type | Description  | Notes
 
 ## V1GatewaysIpsecRegionsRegionIdVrfsVrfIdInsideSubnetGet
 
-> V1GatewaysIpsecRegionsRegionIdVrfsVrfIdInsideSubnetGet200Response V1GatewaysIpsecRegionsRegionIdVrfsVrfIdInsideSubnetGet(ctx, regionId, vrfId).Authorization(authorization).AddressFamily(addressFamily).Execute()
+> V1GatewaysIpsecRegionsRegionIdVrfsVrfIdInsideSubnetGetResponse V1GatewaysIpsecRegionsRegionIdVrfsVrfIdInsideSubnetGet(ctx, regionId, vrfId).Authorization(authorization).AddressFamily(addressFamily).Execute()
+
+
 
 
 
@@ -17280,7 +18349,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1GatewaysIpsecRegionsRegionIdVrfsVrfIdInsideSubnetGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1GatewaysIpsecRegionsRegionIdVrfsVrfIdInsideSubnetGet`: V1GatewaysIpsecRegionsRegionIdVrfsVrfIdInsideSubnetGet200Response
+	// response from `V1GatewaysIpsecRegionsRegionIdVrfsVrfIdInsideSubnetGet`: V1GatewaysIpsecRegionsRegionIdVrfsVrfIdInsideSubnetGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1GatewaysIpsecRegionsRegionIdVrfsVrfIdInsideSubnetGet`: %v\n", resp)
 }
 ```
@@ -17308,7 +18377,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1GatewaysIpsecRegionsRegionIdVrfsVrfIdInsideSubnetGet200Response**](V1GatewaysIpsecRegionsRegionIdVrfsVrfIdInsideSubnetGet200Response.md)
+[**V1GatewaysIpsecRegionsRegionIdVrfsVrfIdInsideSubnetGetResponse**](V1GatewaysIpsecRegionsRegionIdVrfsVrfIdInsideSubnetGetResponse.md)
 
 ### Authorization
 
@@ -17326,7 +18395,7 @@ Name | Type | Description  | Notes
 
 ## V1GatewaysPost
 
-> V1GatewaysPost200Response V1GatewaysPost(ctx).Authorization(authorization).V1GatewaysPostRequest(v1GatewaysPostRequest).Execute()
+> V1GatewaysPostResponse V1GatewaysPost(ctx).Authorization(authorization).V1GatewaysPostRequest(v1GatewaysPostRequest).Execute()
 
 
 
@@ -17353,7 +18422,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1GatewaysPost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1GatewaysPost`: V1GatewaysPost200Response
+	// response from `V1GatewaysPost`: V1GatewaysPostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1GatewaysPost`: %v\n", resp)
 }
 ```
@@ -17374,7 +18443,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1GatewaysPost200Response**](V1GatewaysPost200Response.md)
+[**V1GatewaysPostResponse**](V1GatewaysPostResponse.md)
 
 ### Authorization
 
@@ -17456,9 +18525,75 @@ Name | Type | Description  | Notes
 [[Back to README]](../README.md)
 
 
+## V1GatewaysReferenceConsumerGet
+
+> V1GatewaysReferenceConsumerGetResponse V1GatewaysReferenceConsumerGet(ctx).Authorization(authorization).Execute()
+
+
+
+
+
+### Example
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/Graphiant-Inc/graphiant-sdk-go"
+)
+
+func main() {
+	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
+
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.DefaultAPI.V1GatewaysReferenceConsumerGet(context.Background()).Authorization(authorization).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1GatewaysReferenceConsumerGet``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `V1GatewaysReferenceConsumerGet`: V1GatewaysReferenceConsumerGetResponse
+	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1GatewaysReferenceConsumerGet`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiV1GatewaysReferenceConsumerGetRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **authorization** | **string** | Bearer token. Format: Bearer &lt;your_token_here&gt; | 
+
+### Return type
+
+[**V1GatewaysReferenceConsumerGetResponse**](V1GatewaysReferenceConsumerGetResponse.md)
+
+### Authorization
+
+[jwtAuth](../README.md#jwtAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
 ## V1GatewaysRegionsGet
 
-> V1GatewaysRegionsGet200Response V1GatewaysRegionsGet(ctx).Authorization(authorization).Execute()
+> V1GatewaysRegionsGetResponse V1GatewaysRegionsGet(ctx).Authorization(authorization).Execute()
 
 
 
@@ -17484,7 +18619,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1GatewaysRegionsGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1GatewaysRegionsGet`: V1GatewaysRegionsGet200Response
+	// response from `V1GatewaysRegionsGet`: V1GatewaysRegionsGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1GatewaysRegionsGet`: %v\n", resp)
 }
 ```
@@ -17504,7 +18639,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1GatewaysRegionsGet200Response**](V1GatewaysRegionsGet200Response.md)
+[**V1GatewaysRegionsGetResponse**](V1GatewaysRegionsGetResponse.md)
 
 ### Authorization
 
@@ -17588,7 +18723,7 @@ Name | Type | Description  | Notes
 
 ## V1GatewaysSummaryGet
 
-> V1GatewaysSummaryGet200Response V1GatewaysSummaryGet(ctx).Authorization(authorization).Execute()
+> V1GatewaysSummaryGetResponse V1GatewaysSummaryGet(ctx).Authorization(authorization).Execute()
 
 
 
@@ -17614,7 +18749,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1GatewaysSummaryGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1GatewaysSummaryGet`: V1GatewaysSummaryGet200Response
+	// response from `V1GatewaysSummaryGet`: V1GatewaysSummaryGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1GatewaysSummaryGet`: %v\n", resp)
 }
 ```
@@ -17634,7 +18769,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1GatewaysSummaryGet200Response**](V1GatewaysSummaryGet200Response.md)
+[**V1GatewaysSummaryGetResponse**](V1GatewaysSummaryGetResponse.md)
 
 ### Authorization
 
@@ -17652,7 +18787,9 @@ Name | Type | Description  | Notes
 
 ## V1GlobalAppsAppListOptionsGet
 
-> V1GlobalAppsAppListOptionsGet200Response V1GlobalAppsAppListOptionsGet(ctx).Authorization(authorization).Execute()
+> V1GlobalAppsAppListOptionsGetResponse V1GlobalAppsAppListOptionsGet(ctx).Authorization(authorization).Execute()
+
+
 
 
 
@@ -17678,7 +18815,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1GlobalAppsAppListOptionsGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1GlobalAppsAppListOptionsGet`: V1GlobalAppsAppListOptionsGet200Response
+	// response from `V1GlobalAppsAppListOptionsGet`: V1GlobalAppsAppListOptionsGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1GlobalAppsAppListOptionsGet`: %v\n", resp)
 }
 ```
@@ -17698,7 +18835,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1GlobalAppsAppListOptionsGet200Response**](V1GlobalAppsAppListOptionsGet200Response.md)
+[**V1GlobalAppsAppListOptionsGetResponse**](V1GlobalAppsAppListOptionsGetResponse.md)
 
 ### Authorization
 
@@ -17717,6 +18854,8 @@ Name | Type | Description  | Notes
 ## V1GlobalAppsAppListsAppListIdDelete
 
 > map[string]interface{} V1GlobalAppsAppListsAppListIdDelete(ctx, appListId).Authorization(authorization).Execute()
+
+
 
 
 
@@ -17786,7 +18925,9 @@ Name | Type | Description  | Notes
 
 ## V1GlobalAppsAppListsAppListIdDetailsAppsGet
 
-> V1GlobalAppsAppListOptionsGet200Response V1GlobalAppsAppListsAppListIdDetailsAppsGet(ctx, appListId).Authorization(authorization).Execute()
+> V1GlobalAppsAppListsAppListIdDetailsAppsGetResponse V1GlobalAppsAppListsAppListIdDetailsAppsGet(ctx, appListId).Authorization(authorization).Execute()
+
+
 
 
 
@@ -17813,7 +18954,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1GlobalAppsAppListsAppListIdDetailsAppsGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1GlobalAppsAppListsAppListIdDetailsAppsGet`: V1GlobalAppsAppListOptionsGet200Response
+	// response from `V1GlobalAppsAppListsAppListIdDetailsAppsGet`: V1GlobalAppsAppListsAppListIdDetailsAppsGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1GlobalAppsAppListsAppListIdDetailsAppsGet`: %v\n", resp)
 }
 ```
@@ -17838,7 +18979,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1GlobalAppsAppListOptionsGet200Response**](V1GlobalAppsAppListOptionsGet200Response.md)
+[**V1GlobalAppsAppListsAppListIdDetailsAppsGetResponse**](V1GlobalAppsAppListsAppListIdDetailsAppsGetResponse.md)
 
 ### Authorization
 
@@ -17856,7 +18997,9 @@ Name | Type | Description  | Notes
 
 ## V1GlobalAppsAppListsAppListIdGet
 
-> V1GlobalAppsAppListsPostRequest V1GlobalAppsAppListsAppListIdGet(ctx, appListId).Authorization(authorization).Execute()
+> V1GlobalAppsAppListsAppListIdGetResponse V1GlobalAppsAppListsAppListIdGet(ctx, appListId).Authorization(authorization).Execute()
+
+
 
 
 
@@ -17883,7 +19026,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1GlobalAppsAppListsAppListIdGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1GlobalAppsAppListsAppListIdGet`: V1GlobalAppsAppListsPostRequest
+	// response from `V1GlobalAppsAppListsAppListIdGet`: V1GlobalAppsAppListsAppListIdGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1GlobalAppsAppListsAppListIdGet`: %v\n", resp)
 }
 ```
@@ -17908,7 +19051,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1GlobalAppsAppListsPostRequest**](V1GlobalAppsAppListsPostRequest.md)
+[**V1GlobalAppsAppListsAppListIdGetResponse**](V1GlobalAppsAppListsAppListIdGetResponse.md)
 
 ### Authorization
 
@@ -17926,7 +19069,9 @@ Name | Type | Description  | Notes
 
 ## V1GlobalAppsAppListsAppListIdPut
 
-> map[string]interface{} V1GlobalAppsAppListsAppListIdPut(ctx, appListId).Authorization(authorization).V1GlobalAppsAppListsPostRequest(v1GlobalAppsAppListsPostRequest).Execute()
+> map[string]interface{} V1GlobalAppsAppListsAppListIdPut(ctx, appListId).Authorization(authorization).V1GlobalAppsAppListsAppListIdPutRequest(v1GlobalAppsAppListsAppListIdPutRequest).Execute()
+
+
 
 
 
@@ -17945,11 +19090,11 @@ import (
 func main() {
 	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
 	appListId := int64(1234567891011) // int64 | 
-	v1GlobalAppsAppListsPostRequest := *openapiclient.NewV1GlobalAppsAppListsPostRequest() // V1GlobalAppsAppListsPostRequest | 
+	v1GlobalAppsAppListsAppListIdPutRequest := *openapiclient.NewV1GlobalAppsAppListsAppListIdPutRequest() // V1GlobalAppsAppListsAppListIdPutRequest | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.DefaultAPI.V1GlobalAppsAppListsAppListIdPut(context.Background(), appListId).Authorization(authorization).V1GlobalAppsAppListsPostRequest(v1GlobalAppsAppListsPostRequest).Execute()
+	resp, r, err := apiClient.DefaultAPI.V1GlobalAppsAppListsAppListIdPut(context.Background(), appListId).Authorization(authorization).V1GlobalAppsAppListsAppListIdPutRequest(v1GlobalAppsAppListsAppListIdPutRequest).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1GlobalAppsAppListsAppListIdPut``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -17976,7 +19121,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **string** | Bearer token. Format: Bearer &lt;your_token_here&gt; | 
 
- **v1GlobalAppsAppListsPostRequest** | [**V1GlobalAppsAppListsPostRequest**](V1GlobalAppsAppListsPostRequest.md) |  | 
+ **v1GlobalAppsAppListsAppListIdPutRequest** | [**V1GlobalAppsAppListsAppListIdPutRequest**](V1GlobalAppsAppListsAppListIdPutRequest.md) |  | 
 
 ### Return type
 
@@ -17998,7 +19143,9 @@ Name | Type | Description  | Notes
 
 ## V1GlobalAppsAppListsGet
 
-> V1GlobalAppsAppListsGet200Response V1GlobalAppsAppListsGet(ctx).Authorization(authorization).Execute()
+> V1GlobalAppsAppListsGetResponse V1GlobalAppsAppListsGet(ctx).Authorization(authorization).Execute()
+
+
 
 
 
@@ -18024,7 +19171,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1GlobalAppsAppListsGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1GlobalAppsAppListsGet`: V1GlobalAppsAppListsGet200Response
+	// response from `V1GlobalAppsAppListsGet`: V1GlobalAppsAppListsGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1GlobalAppsAppListsGet`: %v\n", resp)
 }
 ```
@@ -18044,7 +19191,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1GlobalAppsAppListsGet200Response**](V1GlobalAppsAppListsGet200Response.md)
+[**V1GlobalAppsAppListsGetResponse**](V1GlobalAppsAppListsGetResponse.md)
 
 ### Authorization
 
@@ -18062,7 +19209,9 @@ Name | Type | Description  | Notes
 
 ## V1GlobalAppsAppListsPost
 
-> V1GlobalAppsAppListsPost200Response V1GlobalAppsAppListsPost(ctx).Authorization(authorization).V1GlobalAppsAppListsPostRequest(v1GlobalAppsAppListsPostRequest).Execute()
+> V1GlobalAppsAppListsPostResponse V1GlobalAppsAppListsPost(ctx).Authorization(authorization).V1GlobalAppsAppListsPostRequest(v1GlobalAppsAppListsPostRequest).Execute()
+
+
 
 
 
@@ -18089,7 +19238,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1GlobalAppsAppListsPost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1GlobalAppsAppListsPost`: V1GlobalAppsAppListsPost200Response
+	// response from `V1GlobalAppsAppListsPost`: V1GlobalAppsAppListsPostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1GlobalAppsAppListsPost`: %v\n", resp)
 }
 ```
@@ -18110,7 +19259,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1GlobalAppsAppListsPost200Response**](V1GlobalAppsAppListsPost200Response.md)
+[**V1GlobalAppsAppListsPostResponse**](V1GlobalAppsAppListsPostResponse.md)
 
 ### Authorization
 
@@ -18128,7 +19277,9 @@ Name | Type | Description  | Notes
 
 ## V1GlobalAppsCategoriesCategoryIdAppsGet
 
-> V1GlobalAppsAppListOptionsGet200Response V1GlobalAppsCategoriesCategoryIdAppsGet(ctx, categoryId).Authorization(authorization).Execute()
+> V1GlobalAppsCategoriesCategoryIdAppsGetResponse V1GlobalAppsCategoriesCategoryIdAppsGet(ctx, categoryId).Authorization(authorization).Execute()
+
+
 
 
 
@@ -18155,7 +19306,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1GlobalAppsCategoriesCategoryIdAppsGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1GlobalAppsCategoriesCategoryIdAppsGet`: V1GlobalAppsAppListOptionsGet200Response
+	// response from `V1GlobalAppsCategoriesCategoryIdAppsGet`: V1GlobalAppsCategoriesCategoryIdAppsGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1GlobalAppsCategoriesCategoryIdAppsGet`: %v\n", resp)
 }
 ```
@@ -18180,7 +19331,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1GlobalAppsAppListOptionsGet200Response**](V1GlobalAppsAppListOptionsGet200Response.md)
+[**V1GlobalAppsCategoriesCategoryIdAppsGetResponse**](V1GlobalAppsCategoriesCategoryIdAppsGetResponse.md)
 
 ### Authorization
 
@@ -18198,7 +19349,9 @@ Name | Type | Description  | Notes
 
 ## V1GlobalAppsCategoriesGet
 
-> V1GlobalAppsCategoriesGet200Response V1GlobalAppsCategoriesGet(ctx).Authorization(authorization).Execute()
+> V1GlobalAppsCategoriesGetResponse V1GlobalAppsCategoriesGet(ctx).Authorization(authorization).Execute()
+
+
 
 
 
@@ -18224,7 +19377,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1GlobalAppsCategoriesGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1GlobalAppsCategoriesGet`: V1GlobalAppsCategoriesGet200Response
+	// response from `V1GlobalAppsCategoriesGet`: V1GlobalAppsCategoriesGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1GlobalAppsCategoriesGet`: %v\n", resp)
 }
 ```
@@ -18244,7 +19397,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1GlobalAppsCategoriesGet200Response**](V1GlobalAppsCategoriesGet200Response.md)
+[**V1GlobalAppsCategoriesGetResponse**](V1GlobalAppsCategoriesGetResponse.md)
 
 ### Authorization
 
@@ -18263,6 +19416,8 @@ Name | Type | Description  | Notes
 ## V1GlobalAppsCustomAppIdDelete
 
 > map[string]interface{} V1GlobalAppsCustomAppIdDelete(ctx, appId).Authorization(authorization).Execute()
+
+
 
 
 
@@ -18332,7 +19487,9 @@ Name | Type | Description  | Notes
 
 ## V1GlobalAppsCustomAppIdDetailsAppListsGet
 
-> V1GlobalAppsCustomAppIdDetailsAppListsGet200Response V1GlobalAppsCustomAppIdDetailsAppListsGet(ctx, appId).Authorization(authorization).Execute()
+> V1GlobalAppsCustomAppIdDetailsAppListsGetResponse V1GlobalAppsCustomAppIdDetailsAppListsGet(ctx, appId).Authorization(authorization).Execute()
+
+
 
 
 
@@ -18359,7 +19516,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1GlobalAppsCustomAppIdDetailsAppListsGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1GlobalAppsCustomAppIdDetailsAppListsGet`: V1GlobalAppsCustomAppIdDetailsAppListsGet200Response
+	// response from `V1GlobalAppsCustomAppIdDetailsAppListsGet`: V1GlobalAppsCustomAppIdDetailsAppListsGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1GlobalAppsCustomAppIdDetailsAppListsGet`: %v\n", resp)
 }
 ```
@@ -18384,7 +19541,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1GlobalAppsCustomAppIdDetailsAppListsGet200Response**](V1GlobalAppsCustomAppIdDetailsAppListsGet200Response.md)
+[**V1GlobalAppsCustomAppIdDetailsAppListsGetResponse**](V1GlobalAppsCustomAppIdDetailsAppListsGetResponse.md)
 
 ### Authorization
 
@@ -18402,7 +19559,9 @@ Name | Type | Description  | Notes
 
 ## V1GlobalAppsCustomAppIdGet
 
-> V1GlobalAppsCustomPostRequest V1GlobalAppsCustomAppIdGet(ctx, appId).Authorization(authorization).Execute()
+> V1GlobalAppsCustomAppIdGetResponse V1GlobalAppsCustomAppIdGet(ctx, appId).Authorization(authorization).Execute()
+
+
 
 
 
@@ -18429,7 +19588,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1GlobalAppsCustomAppIdGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1GlobalAppsCustomAppIdGet`: V1GlobalAppsCustomPostRequest
+	// response from `V1GlobalAppsCustomAppIdGet`: V1GlobalAppsCustomAppIdGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1GlobalAppsCustomAppIdGet`: %v\n", resp)
 }
 ```
@@ -18454,7 +19613,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1GlobalAppsCustomPostRequest**](V1GlobalAppsCustomPostRequest.md)
+[**V1GlobalAppsCustomAppIdGetResponse**](V1GlobalAppsCustomAppIdGetResponse.md)
 
 ### Authorization
 
@@ -18472,7 +19631,9 @@ Name | Type | Description  | Notes
 
 ## V1GlobalAppsCustomAppIdPut
 
-> map[string]interface{} V1GlobalAppsCustomAppIdPut(ctx, appId).Authorization(authorization).V1GlobalAppsCustomPostRequest(v1GlobalAppsCustomPostRequest).Execute()
+> map[string]interface{} V1GlobalAppsCustomAppIdPut(ctx, appId).Authorization(authorization).V1GlobalAppsCustomAppIdPutRequest(v1GlobalAppsCustomAppIdPutRequest).Execute()
+
+
 
 
 
@@ -18491,11 +19652,11 @@ import (
 func main() {
 	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
 	appId := int64(1234567891011) // int64 | 
-	v1GlobalAppsCustomPostRequest := *openapiclient.NewV1GlobalAppsCustomPostRequest() // V1GlobalAppsCustomPostRequest | 
+	v1GlobalAppsCustomAppIdPutRequest := *openapiclient.NewV1GlobalAppsCustomAppIdPutRequest() // V1GlobalAppsCustomAppIdPutRequest | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.DefaultAPI.V1GlobalAppsCustomAppIdPut(context.Background(), appId).Authorization(authorization).V1GlobalAppsCustomPostRequest(v1GlobalAppsCustomPostRequest).Execute()
+	resp, r, err := apiClient.DefaultAPI.V1GlobalAppsCustomAppIdPut(context.Background(), appId).Authorization(authorization).V1GlobalAppsCustomAppIdPutRequest(v1GlobalAppsCustomAppIdPutRequest).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1GlobalAppsCustomAppIdPut``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -18522,7 +19683,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **string** | Bearer token. Format: Bearer &lt;your_token_here&gt; | 
 
- **v1GlobalAppsCustomPostRequest** | [**V1GlobalAppsCustomPostRequest**](V1GlobalAppsCustomPostRequest.md) |  | 
+ **v1GlobalAppsCustomAppIdPutRequest** | [**V1GlobalAppsCustomAppIdPutRequest**](V1GlobalAppsCustomAppIdPutRequest.md) |  | 
 
 ### Return type
 
@@ -18544,7 +19705,9 @@ Name | Type | Description  | Notes
 
 ## V1GlobalAppsCustomGet
 
-> V1GlobalAppsCustomGet200Response V1GlobalAppsCustomGet(ctx).Authorization(authorization).Execute()
+> V1GlobalAppsCustomGetResponse V1GlobalAppsCustomGet(ctx).Authorization(authorization).Execute()
+
+
 
 
 
@@ -18570,7 +19733,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1GlobalAppsCustomGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1GlobalAppsCustomGet`: V1GlobalAppsCustomGet200Response
+	// response from `V1GlobalAppsCustomGet`: V1GlobalAppsCustomGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1GlobalAppsCustomGet`: %v\n", resp)
 }
 ```
@@ -18590,7 +19753,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1GlobalAppsCustomGet200Response**](V1GlobalAppsCustomGet200Response.md)
+[**V1GlobalAppsCustomGetResponse**](V1GlobalAppsCustomGetResponse.md)
 
 ### Authorization
 
@@ -18608,7 +19771,9 @@ Name | Type | Description  | Notes
 
 ## V1GlobalAppsCustomPost
 
-> V1GlobalAppsAppListsPost200Response V1GlobalAppsCustomPost(ctx).Authorization(authorization).V1GlobalAppsCustomPostRequest(v1GlobalAppsCustomPostRequest).Execute()
+> V1GlobalAppsCustomPostResponse V1GlobalAppsCustomPost(ctx).Authorization(authorization).V1GlobalAppsCustomPostRequest(v1GlobalAppsCustomPostRequest).Execute()
+
+
 
 
 
@@ -18635,7 +19800,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1GlobalAppsCustomPost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1GlobalAppsCustomPost`: V1GlobalAppsAppListsPost200Response
+	// response from `V1GlobalAppsCustomPost`: V1GlobalAppsCustomPostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1GlobalAppsCustomPost`: %v\n", resp)
 }
 ```
@@ -18656,7 +19821,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1GlobalAppsAppListsPost200Response**](V1GlobalAppsAppListsPost200Response.md)
+[**V1GlobalAppsCustomPostResponse**](V1GlobalAppsCustomPostResponse.md)
 
 ### Authorization
 
@@ -18674,7 +19839,9 @@ Name | Type | Description  | Notes
 
 ## V1GlobalAppsGraphiantGet
 
-> V1GlobalAppsGraphiantGet200Response V1GlobalAppsGraphiantGet(ctx).Authorization(authorization).Execute()
+> V1GlobalAppsGraphiantGetResponse V1GlobalAppsGraphiantGet(ctx).Authorization(authorization).Execute()
+
+
 
 
 
@@ -18700,7 +19867,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1GlobalAppsGraphiantGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1GlobalAppsGraphiantGet`: V1GlobalAppsGraphiantGet200Response
+	// response from `V1GlobalAppsGraphiantGet`: V1GlobalAppsGraphiantGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1GlobalAppsGraphiantGet`: %v\n", resp)
 }
 ```
@@ -18720,7 +19887,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1GlobalAppsGraphiantGet200Response**](V1GlobalAppsGraphiantGet200Response.md)
+[**V1GlobalAppsGraphiantGetResponse**](V1GlobalAppsGraphiantGetResponse.md)
 
 ### Authorization
 
@@ -18738,7 +19905,9 @@ Name | Type | Description  | Notes
 
 ## V1GlobalAttachedEdgesPost
 
-> V1GlobalAttachedEdgesPost200Response V1GlobalAttachedEdgesPost(ctx).Authorization(authorization).V1GlobalAttachedEdgesPostRequest(v1GlobalAttachedEdgesPostRequest).Execute()
+> V1GlobalAttachedEdgesPostResponse V1GlobalAttachedEdgesPost(ctx).Authorization(authorization).V1GlobalAttachedEdgesPostRequest(v1GlobalAttachedEdgesPostRequest).Execute()
+
+
 
 
 
@@ -18765,7 +19934,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1GlobalAttachedEdgesPost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1GlobalAttachedEdgesPost`: V1GlobalAttachedEdgesPost200Response
+	// response from `V1GlobalAttachedEdgesPost`: V1GlobalAttachedEdgesPostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1GlobalAttachedEdgesPost`: %v\n", resp)
 }
 ```
@@ -18786,7 +19955,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1GlobalAttachedEdgesPost200Response**](V1GlobalAttachedEdgesPost200Response.md)
+[**V1GlobalAttachedEdgesPostResponse**](V1GlobalAttachedEdgesPostResponse.md)
 
 ### Authorization
 
@@ -18804,7 +19973,9 @@ Name | Type | Description  | Notes
 
 ## V1GlobalConfigPatch
 
-> V1GlobalConfigPatch200Response V1GlobalConfigPatch(ctx).Authorization(authorization).V1GlobalConfigPatchRequest(v1GlobalConfigPatchRequest).Execute()
+> V1GlobalConfigPatchResponse V1GlobalConfigPatch(ctx).Authorization(authorization).V1GlobalConfigPatchRequest(v1GlobalConfigPatchRequest).Execute()
+
+
 
 
 
@@ -18831,7 +20002,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1GlobalConfigPatch``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1GlobalConfigPatch`: V1GlobalConfigPatch200Response
+	// response from `V1GlobalConfigPatch`: V1GlobalConfigPatchResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1GlobalConfigPatch`: %v\n", resp)
 }
 ```
@@ -18852,7 +20023,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1GlobalConfigPatch200Response**](V1GlobalConfigPatch200Response.md)
+[**V1GlobalConfigPatchResponse**](V1GlobalConfigPatchResponse.md)
 
 ### Authorization
 
@@ -18871,6 +20042,8 @@ Name | Type | Description  | Notes
 ## V1GlobalConfigSitePost
 
 > map[string]interface{} V1GlobalConfigSitePost(ctx).Authorization(authorization).V1GlobalConfigSitePostRequest(v1GlobalConfigSitePostRequest).Execute()
+
+
 
 
 
@@ -18936,7 +20109,9 @@ Name | Type | Description  | Notes
 
 ## V1GlobalDeviceStatusGet
 
-> V1GlobalAttachedEdgesPost200Response V1GlobalDeviceStatusGet(ctx).Authorization(authorization).Execute()
+> V1GlobalDeviceStatusGetResponse V1GlobalDeviceStatusGet(ctx).Authorization(authorization).Execute()
+
+
 
 
 
@@ -18962,7 +20137,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1GlobalDeviceStatusGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1GlobalDeviceStatusGet`: V1GlobalAttachedEdgesPost200Response
+	// response from `V1GlobalDeviceStatusGet`: V1GlobalDeviceStatusGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1GlobalDeviceStatusGet`: %v\n", resp)
 }
 ```
@@ -18982,7 +20157,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1GlobalAttachedEdgesPost200Response**](V1GlobalAttachedEdgesPost200Response.md)
+[**V1GlobalDeviceStatusGetResponse**](V1GlobalDeviceStatusGetResponse.md)
 
 ### Authorization
 
@@ -19000,7 +20175,9 @@ Name | Type | Description  | Notes
 
 ## V1GlobalIpfixDeviceGet
 
-> V1GlobalIpfixDeviceGet200Response V1GlobalIpfixDeviceGet(ctx).Authorization(authorization).Execute()
+> V1GlobalIpfixDeviceGetResponse V1GlobalIpfixDeviceGet(ctx).Authorization(authorization).Execute()
+
+
 
 
 
@@ -19026,7 +20203,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1GlobalIpfixDeviceGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1GlobalIpfixDeviceGet`: V1GlobalIpfixDeviceGet200Response
+	// response from `V1GlobalIpfixDeviceGet`: V1GlobalIpfixDeviceGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1GlobalIpfixDeviceGet`: %v\n", resp)
 }
 ```
@@ -19046,7 +20223,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1GlobalIpfixDeviceGet200Response**](V1GlobalIpfixDeviceGet200Response.md)
+[**V1GlobalIpfixDeviceGetResponse**](V1GlobalIpfixDeviceGetResponse.md)
 
 ### Authorization
 
@@ -19064,7 +20241,9 @@ Name | Type | Description  | Notes
 
 ## V1GlobalIpfixPost
 
-> V1GlobalIpfixDeviceGet200Response V1GlobalIpfixPost(ctx).Authorization(authorization).V1GlobalIpfixPostRequest(v1GlobalIpfixPostRequest).Execute()
+> V1GlobalIpfixPostResponse V1GlobalIpfixPost(ctx).Authorization(authorization).V1GlobalIpfixPostRequest(v1GlobalIpfixPostRequest).Execute()
+
+
 
 
 
@@ -19091,7 +20270,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1GlobalIpfixPost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1GlobalIpfixPost`: V1GlobalIpfixDeviceGet200Response
+	// response from `V1GlobalIpfixPost`: V1GlobalIpfixPostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1GlobalIpfixPost`: %v\n", resp)
 }
 ```
@@ -19112,7 +20291,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1GlobalIpfixDeviceGet200Response**](V1GlobalIpfixDeviceGet200Response.md)
+[**V1GlobalIpfixPostResponse**](V1GlobalIpfixPostResponse.md)
 
 ### Authorization
 
@@ -19130,7 +20309,9 @@ Name | Type | Description  | Notes
 
 ## V1GlobalIpfixSiteGet
 
-> V1GlobalIpfixDeviceGet200Response V1GlobalIpfixSiteGet(ctx).Authorization(authorization).Execute()
+> V1GlobalIpfixSiteGetResponse V1GlobalIpfixSiteGet(ctx).Authorization(authorization).Execute()
+
+
 
 
 
@@ -19156,7 +20337,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1GlobalIpfixSiteGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1GlobalIpfixSiteGet`: V1GlobalIpfixDeviceGet200Response
+	// response from `V1GlobalIpfixSiteGet`: V1GlobalIpfixSiteGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1GlobalIpfixSiteGet`: %v\n", resp)
 }
 ```
@@ -19176,7 +20357,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1GlobalIpfixDeviceGet200Response**](V1GlobalIpfixDeviceGet200Response.md)
+[**V1GlobalIpfixSiteGetResponse**](V1GlobalIpfixSiteGetResponse.md)
 
 ### Authorization
 
@@ -19194,7 +20375,9 @@ Name | Type | Description  | Notes
 
 ## V1GlobalIpsecProfileGet
 
-> V1GlobalIpsecProfileGet200Response V1GlobalIpsecProfileGet(ctx).Authorization(authorization).Execute()
+> V1GlobalIpsecProfileGetResponse V1GlobalIpsecProfileGet(ctx).Authorization(authorization).Execute()
+
+
 
 
 
@@ -19220,7 +20403,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1GlobalIpsecProfileGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1GlobalIpsecProfileGet`: V1GlobalIpsecProfileGet200Response
+	// response from `V1GlobalIpsecProfileGet`: V1GlobalIpsecProfileGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1GlobalIpsecProfileGet`: %v\n", resp)
 }
 ```
@@ -19240,7 +20423,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1GlobalIpsecProfileGet200Response**](V1GlobalIpsecProfileGet200Response.md)
+[**V1GlobalIpsecProfileGetResponse**](V1GlobalIpsecProfileGetResponse.md)
 
 ### Authorization
 
@@ -19258,7 +20441,9 @@ Name | Type | Description  | Notes
 
 ## V1GlobalIpsecProfileIdGet
 
-> V1GlobalIpsecProfileIdGet200Response V1GlobalIpsecProfileIdGet(ctx, id).Authorization(authorization).Execute()
+> V1GlobalIpsecProfileIdGetResponse V1GlobalIpsecProfileIdGet(ctx, id).Authorization(authorization).Execute()
+
+
 
 
 
@@ -19285,7 +20470,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1GlobalIpsecProfileIdGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1GlobalIpsecProfileIdGet`: V1GlobalIpsecProfileIdGet200Response
+	// response from `V1GlobalIpsecProfileIdGet`: V1GlobalIpsecProfileIdGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1GlobalIpsecProfileIdGet`: %v\n", resp)
 }
 ```
@@ -19310,7 +20495,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1GlobalIpsecProfileIdGet200Response**](V1GlobalIpsecProfileIdGet200Response.md)
+[**V1GlobalIpsecProfileIdGetResponse**](V1GlobalIpsecProfileIdGetResponse.md)
 
 ### Authorization
 
@@ -19328,7 +20513,9 @@ Name | Type | Description  | Notes
 
 ## V1GlobalIpsecProfileVpnProfileIdSiteToSiteGet
 
-> V1GlobalIpsecProfileVpnProfileIdSiteToSiteGet200Response V1GlobalIpsecProfileVpnProfileIdSiteToSiteGet(ctx, vpnProfileId).Authorization(authorization).Execute()
+> V1GlobalIpsecProfileVpnProfileIdSiteToSiteGetResponse V1GlobalIpsecProfileVpnProfileIdSiteToSiteGet(ctx, vpnProfileId).Authorization(authorization).Execute()
+
+
 
 
 
@@ -19355,7 +20542,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1GlobalIpsecProfileVpnProfileIdSiteToSiteGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1GlobalIpsecProfileVpnProfileIdSiteToSiteGet`: V1GlobalIpsecProfileVpnProfileIdSiteToSiteGet200Response
+	// response from `V1GlobalIpsecProfileVpnProfileIdSiteToSiteGet`: V1GlobalIpsecProfileVpnProfileIdSiteToSiteGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1GlobalIpsecProfileVpnProfileIdSiteToSiteGet`: %v\n", resp)
 }
 ```
@@ -19380,7 +20567,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1GlobalIpsecProfileVpnProfileIdSiteToSiteGet200Response**](V1GlobalIpsecProfileVpnProfileIdSiteToSiteGet200Response.md)
+[**V1GlobalIpsecProfileVpnProfileIdSiteToSiteGetResponse**](V1GlobalIpsecProfileVpnProfileIdSiteToSiteGetResponse.md)
 
 ### Authorization
 
@@ -19398,7 +20585,9 @@ Name | Type | Description  | Notes
 
 ## V1GlobalLanSegmentsGet
 
-> V1GlobalLanSegmentsGet200Response V1GlobalLanSegmentsGet(ctx).Authorization(authorization).Execute()
+> V1GlobalLanSegmentsGetResponse V1GlobalLanSegmentsGet(ctx).Authorization(authorization).Execute()
+
+
 
 
 
@@ -19424,7 +20613,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1GlobalLanSegmentsGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1GlobalLanSegmentsGet`: V1GlobalLanSegmentsGet200Response
+	// response from `V1GlobalLanSegmentsGet`: V1GlobalLanSegmentsGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1GlobalLanSegmentsGet`: %v\n", resp)
 }
 ```
@@ -19444,7 +20633,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1GlobalLanSegmentsGet200Response**](V1GlobalLanSegmentsGet200Response.md)
+[**V1GlobalLanSegmentsGetResponse**](V1GlobalLanSegmentsGetResponse.md)
 
 ### Authorization
 
@@ -19462,7 +20651,9 @@ Name | Type | Description  | Notes
 
 ## V1GlobalLanSegmentsIdDelete
 
-> V1GlobalLanSegmentsPost200Response V1GlobalLanSegmentsIdDelete(ctx, id).Authorization(authorization).Execute()
+> V1GlobalLanSegmentsIdDeleteResponse V1GlobalLanSegmentsIdDelete(ctx, id).Authorization(authorization).Execute()
+
+
 
 
 
@@ -19489,7 +20680,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1GlobalLanSegmentsIdDelete``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1GlobalLanSegmentsIdDelete`: V1GlobalLanSegmentsPost200Response
+	// response from `V1GlobalLanSegmentsIdDelete`: V1GlobalLanSegmentsIdDeleteResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1GlobalLanSegmentsIdDelete`: %v\n", resp)
 }
 ```
@@ -19514,7 +20705,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1GlobalLanSegmentsPost200Response**](V1GlobalLanSegmentsPost200Response.md)
+[**V1GlobalLanSegmentsIdDeleteResponse**](V1GlobalLanSegmentsIdDeleteResponse.md)
 
 ### Authorization
 
@@ -19532,7 +20723,9 @@ Name | Type | Description  | Notes
 
 ## V1GlobalLanSegmentsPost
 
-> V1GlobalLanSegmentsPost200Response V1GlobalLanSegmentsPost(ctx).Authorization(authorization).V1GlobalLanSegmentsPostRequest(v1GlobalLanSegmentsPostRequest).Execute()
+> V1GlobalLanSegmentsPostResponse V1GlobalLanSegmentsPost(ctx).Authorization(authorization).V1GlobalLanSegmentsPostRequest(v1GlobalLanSegmentsPostRequest).Execute()
+
+
 
 
 
@@ -19559,7 +20752,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1GlobalLanSegmentsPost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1GlobalLanSegmentsPost`: V1GlobalLanSegmentsPost200Response
+	// response from `V1GlobalLanSegmentsPost`: V1GlobalLanSegmentsPostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1GlobalLanSegmentsPost`: %v\n", resp)
 }
 ```
@@ -19580,7 +20773,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1GlobalLanSegmentsPost200Response**](V1GlobalLanSegmentsPost200Response.md)
+[**V1GlobalLanSegmentsPostResponse**](V1GlobalLanSegmentsPostResponse.md)
 
 ### Authorization
 
@@ -19598,7 +20791,9 @@ Name | Type | Description  | Notes
 
 ## V1GlobalLanSegmentsVrfIdDevicesGet
 
-> V1GlobalLanSegmentsVrfIdDevicesGet200Response V1GlobalLanSegmentsVrfIdDevicesGet(ctx, vrfId).Authorization(authorization).Execute()
+> V1GlobalLanSegmentsVrfIdDevicesGetResponse V1GlobalLanSegmentsVrfIdDevicesGet(ctx, vrfId).Authorization(authorization).Execute()
+
+
 
 
 
@@ -19625,7 +20820,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1GlobalLanSegmentsVrfIdDevicesGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1GlobalLanSegmentsVrfIdDevicesGet`: V1GlobalLanSegmentsVrfIdDevicesGet200Response
+	// response from `V1GlobalLanSegmentsVrfIdDevicesGet`: V1GlobalLanSegmentsVrfIdDevicesGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1GlobalLanSegmentsVrfIdDevicesGet`: %v\n", resp)
 }
 ```
@@ -19650,7 +20845,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1GlobalLanSegmentsVrfIdDevicesGet200Response**](V1GlobalLanSegmentsVrfIdDevicesGet200Response.md)
+[**V1GlobalLanSegmentsVrfIdDevicesGetResponse**](V1GlobalLanSegmentsVrfIdDevicesGetResponse.md)
 
 ### Authorization
 
@@ -19668,7 +20863,9 @@ Name | Type | Description  | Notes
 
 ## V1GlobalPrefixSetsDeviceGet
 
-> V1GlobalPrefixSetsDeviceGet200Response V1GlobalPrefixSetsDeviceGet(ctx).Authorization(authorization).Execute()
+> V1GlobalPrefixSetsDeviceGetResponse V1GlobalPrefixSetsDeviceGet(ctx).Authorization(authorization).Execute()
+
+
 
 
 
@@ -19694,7 +20891,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1GlobalPrefixSetsDeviceGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1GlobalPrefixSetsDeviceGet`: V1GlobalPrefixSetsDeviceGet200Response
+	// response from `V1GlobalPrefixSetsDeviceGet`: V1GlobalPrefixSetsDeviceGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1GlobalPrefixSetsDeviceGet`: %v\n", resp)
 }
 ```
@@ -19714,7 +20911,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1GlobalPrefixSetsDeviceGet200Response**](V1GlobalPrefixSetsDeviceGet200Response.md)
+[**V1GlobalPrefixSetsDeviceGetResponse**](V1GlobalPrefixSetsDeviceGetResponse.md)
 
 ### Authorization
 
@@ -19732,7 +20929,9 @@ Name | Type | Description  | Notes
 
 ## V1GlobalPrefixSetsPost
 
-> V1GlobalPrefixSetsDeviceGet200Response V1GlobalPrefixSetsPost(ctx).Authorization(authorization).V1GlobalIpfixPostRequest(v1GlobalIpfixPostRequest).Execute()
+> V1GlobalPrefixSetsPostResponse V1GlobalPrefixSetsPost(ctx).Authorization(authorization).V1GlobalPrefixSetsPostRequest(v1GlobalPrefixSetsPostRequest).Execute()
+
+
 
 
 
@@ -19750,16 +20949,16 @@ import (
 
 func main() {
 	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
-	v1GlobalIpfixPostRequest := *openapiclient.NewV1GlobalIpfixPostRequest() // V1GlobalIpfixPostRequest | 
+	v1GlobalPrefixSetsPostRequest := *openapiclient.NewV1GlobalPrefixSetsPostRequest() // V1GlobalPrefixSetsPostRequest | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.DefaultAPI.V1GlobalPrefixSetsPost(context.Background()).Authorization(authorization).V1GlobalIpfixPostRequest(v1GlobalIpfixPostRequest).Execute()
+	resp, r, err := apiClient.DefaultAPI.V1GlobalPrefixSetsPost(context.Background()).Authorization(authorization).V1GlobalPrefixSetsPostRequest(v1GlobalPrefixSetsPostRequest).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1GlobalPrefixSetsPost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1GlobalPrefixSetsPost`: V1GlobalPrefixSetsDeviceGet200Response
+	// response from `V1GlobalPrefixSetsPost`: V1GlobalPrefixSetsPostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1GlobalPrefixSetsPost`: %v\n", resp)
 }
 ```
@@ -19776,11 +20975,11 @@ Other parameters are passed through a pointer to a apiV1GlobalPrefixSetsPostRequ
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **string** | Bearer token. Format: Bearer &lt;your_token_here&gt; | 
- **v1GlobalIpfixPostRequest** | [**V1GlobalIpfixPostRequest**](V1GlobalIpfixPostRequest.md) |  | 
+ **v1GlobalPrefixSetsPostRequest** | [**V1GlobalPrefixSetsPostRequest**](V1GlobalPrefixSetsPostRequest.md) |  | 
 
 ### Return type
 
-[**V1GlobalPrefixSetsDeviceGet200Response**](V1GlobalPrefixSetsDeviceGet200Response.md)
+[**V1GlobalPrefixSetsPostResponse**](V1GlobalPrefixSetsPostResponse.md)
 
 ### Authorization
 
@@ -19798,7 +20997,9 @@ Name | Type | Description  | Notes
 
 ## V1GlobalPrefixSetsSiteGet
 
-> V1GlobalPrefixSetsDeviceGet200Response V1GlobalPrefixSetsSiteGet(ctx).Authorization(authorization).Execute()
+> V1GlobalPrefixSetsSiteGetResponse V1GlobalPrefixSetsSiteGet(ctx).Authorization(authorization).Execute()
+
+
 
 
 
@@ -19824,7 +21025,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1GlobalPrefixSetsSiteGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1GlobalPrefixSetsSiteGet`: V1GlobalPrefixSetsDeviceGet200Response
+	// response from `V1GlobalPrefixSetsSiteGet`: V1GlobalPrefixSetsSiteGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1GlobalPrefixSetsSiteGet`: %v\n", resp)
 }
 ```
@@ -19844,7 +21045,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1GlobalPrefixSetsDeviceGet200Response**](V1GlobalPrefixSetsDeviceGet200Response.md)
+[**V1GlobalPrefixSetsSiteGetResponse**](V1GlobalPrefixSetsSiteGetResponse.md)
 
 ### Authorization
 
@@ -19862,7 +21063,9 @@ Name | Type | Description  | Notes
 
 ## V1GlobalRoutingPoliciesDeviceGet
 
-> V1GlobalRoutingPoliciesDeviceGet200Response V1GlobalRoutingPoliciesDeviceGet(ctx).Authorization(authorization).Execute()
+> V1GlobalRoutingPoliciesDeviceGetResponse V1GlobalRoutingPoliciesDeviceGet(ctx).Authorization(authorization).Execute()
+
+
 
 
 
@@ -19888,7 +21091,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1GlobalRoutingPoliciesDeviceGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1GlobalRoutingPoliciesDeviceGet`: V1GlobalRoutingPoliciesDeviceGet200Response
+	// response from `V1GlobalRoutingPoliciesDeviceGet`: V1GlobalRoutingPoliciesDeviceGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1GlobalRoutingPoliciesDeviceGet`: %v\n", resp)
 }
 ```
@@ -19908,7 +21111,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1GlobalRoutingPoliciesDeviceGet200Response**](V1GlobalRoutingPoliciesDeviceGet200Response.md)
+[**V1GlobalRoutingPoliciesDeviceGetResponse**](V1GlobalRoutingPoliciesDeviceGetResponse.md)
 
 ### Authorization
 
@@ -19926,7 +21129,9 @@ Name | Type | Description  | Notes
 
 ## V1GlobalRoutingPoliciesPost
 
-> V1GlobalRoutingPoliciesDeviceGet200Response V1GlobalRoutingPoliciesPost(ctx).Authorization(authorization).V1GlobalIpfixPostRequest(v1GlobalIpfixPostRequest).Execute()
+> V1GlobalRoutingPoliciesPostResponse V1GlobalRoutingPoliciesPost(ctx).Authorization(authorization).V1GlobalRoutingPoliciesPostRequest(v1GlobalRoutingPoliciesPostRequest).Execute()
+
+
 
 
 
@@ -19944,16 +21149,16 @@ import (
 
 func main() {
 	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
-	v1GlobalIpfixPostRequest := *openapiclient.NewV1GlobalIpfixPostRequest() // V1GlobalIpfixPostRequest | 
+	v1GlobalRoutingPoliciesPostRequest := *openapiclient.NewV1GlobalRoutingPoliciesPostRequest() // V1GlobalRoutingPoliciesPostRequest | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.DefaultAPI.V1GlobalRoutingPoliciesPost(context.Background()).Authorization(authorization).V1GlobalIpfixPostRequest(v1GlobalIpfixPostRequest).Execute()
+	resp, r, err := apiClient.DefaultAPI.V1GlobalRoutingPoliciesPost(context.Background()).Authorization(authorization).V1GlobalRoutingPoliciesPostRequest(v1GlobalRoutingPoliciesPostRequest).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1GlobalRoutingPoliciesPost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1GlobalRoutingPoliciesPost`: V1GlobalRoutingPoliciesDeviceGet200Response
+	// response from `V1GlobalRoutingPoliciesPost`: V1GlobalRoutingPoliciesPostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1GlobalRoutingPoliciesPost`: %v\n", resp)
 }
 ```
@@ -19970,11 +21175,11 @@ Other parameters are passed through a pointer to a apiV1GlobalRoutingPoliciesPos
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **string** | Bearer token. Format: Bearer &lt;your_token_here&gt; | 
- **v1GlobalIpfixPostRequest** | [**V1GlobalIpfixPostRequest**](V1GlobalIpfixPostRequest.md) |  | 
+ **v1GlobalRoutingPoliciesPostRequest** | [**V1GlobalRoutingPoliciesPostRequest**](V1GlobalRoutingPoliciesPostRequest.md) |  | 
 
 ### Return type
 
-[**V1GlobalRoutingPoliciesDeviceGet200Response**](V1GlobalRoutingPoliciesDeviceGet200Response.md)
+[**V1GlobalRoutingPoliciesPostResponse**](V1GlobalRoutingPoliciesPostResponse.md)
 
 ### Authorization
 
@@ -19992,7 +21197,9 @@ Name | Type | Description  | Notes
 
 ## V1GlobalRoutingPoliciesSiteGet
 
-> V1GlobalRoutingPoliciesDeviceGet200Response V1GlobalRoutingPoliciesSiteGet(ctx).Authorization(authorization).Execute()
+> V1GlobalRoutingPoliciesSiteGetResponse V1GlobalRoutingPoliciesSiteGet(ctx).Authorization(authorization).Execute()
+
+
 
 
 
@@ -20018,7 +21225,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1GlobalRoutingPoliciesSiteGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1GlobalRoutingPoliciesSiteGet`: V1GlobalRoutingPoliciesDeviceGet200Response
+	// response from `V1GlobalRoutingPoliciesSiteGet`: V1GlobalRoutingPoliciesSiteGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1GlobalRoutingPoliciesSiteGet`: %v\n", resp)
 }
 ```
@@ -20038,7 +21245,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1GlobalRoutingPoliciesDeviceGet200Response**](V1GlobalRoutingPoliciesDeviceGet200Response.md)
+[**V1GlobalRoutingPoliciesSiteGetResponse**](V1GlobalRoutingPoliciesSiteGetResponse.md)
 
 ### Authorization
 
@@ -20056,7 +21263,9 @@ Name | Type | Description  | Notes
 
 ## V1GlobalSiteListsGet
 
-> V1GlobalSiteListsGet200Response V1GlobalSiteListsGet(ctx).Authorization(authorization).Execute()
+> V1GlobalSiteListsGetResponse V1GlobalSiteListsGet(ctx).Authorization(authorization).Execute()
+
+
 
 
 
@@ -20082,7 +21291,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1GlobalSiteListsGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1GlobalSiteListsGet`: V1GlobalSiteListsGet200Response
+	// response from `V1GlobalSiteListsGet`: V1GlobalSiteListsGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1GlobalSiteListsGet`: %v\n", resp)
 }
 ```
@@ -20102,7 +21311,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1GlobalSiteListsGet200Response**](V1GlobalSiteListsGet200Response.md)
+[**V1GlobalSiteListsGetResponse**](V1GlobalSiteListsGetResponse.md)
 
 ### Authorization
 
@@ -20120,7 +21329,9 @@ Name | Type | Description  | Notes
 
 ## V1GlobalSiteListsIdDelete
 
-> V1GlobalLanSegmentsPost200Response V1GlobalSiteListsIdDelete(ctx, id).Authorization(authorization).Execute()
+> V1GlobalSiteListsIdDeleteResponse V1GlobalSiteListsIdDelete(ctx, id).Authorization(authorization).Execute()
+
+
 
 
 
@@ -20147,7 +21358,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1GlobalSiteListsIdDelete``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1GlobalSiteListsIdDelete`: V1GlobalLanSegmentsPost200Response
+	// response from `V1GlobalSiteListsIdDelete`: V1GlobalSiteListsIdDeleteResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1GlobalSiteListsIdDelete`: %v\n", resp)
 }
 ```
@@ -20172,7 +21383,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1GlobalLanSegmentsPost200Response**](V1GlobalLanSegmentsPost200Response.md)
+[**V1GlobalSiteListsIdDeleteResponse**](V1GlobalSiteListsIdDeleteResponse.md)
 
 ### Authorization
 
@@ -20190,7 +21401,9 @@ Name | Type | Description  | Notes
 
 ## V1GlobalSiteListsIdGet
 
-> V1GlobalSiteListsIdGet200Response V1GlobalSiteListsIdGet(ctx, id).Authorization(authorization).Execute()
+> V1GlobalSiteListsIdGetResponse V1GlobalSiteListsIdGet(ctx, id).Authorization(authorization).Execute()
+
+
 
 
 
@@ -20217,7 +21430,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1GlobalSiteListsIdGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1GlobalSiteListsIdGet`: V1GlobalSiteListsIdGet200Response
+	// response from `V1GlobalSiteListsIdGet`: V1GlobalSiteListsIdGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1GlobalSiteListsIdGet`: %v\n", resp)
 }
 ```
@@ -20242,7 +21455,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1GlobalSiteListsIdGet200Response**](V1GlobalSiteListsIdGet200Response.md)
+[**V1GlobalSiteListsIdGetResponse**](V1GlobalSiteListsIdGetResponse.md)
 
 ### Authorization
 
@@ -20260,7 +21473,9 @@ Name | Type | Description  | Notes
 
 ## V1GlobalSiteListsIdPut
 
-> V1GlobalLanSegmentsPost200Response V1GlobalSiteListsIdPut(ctx, id).Authorization(authorization).V1GlobalSiteListsIdGet200Response(v1GlobalSiteListsIdGet200Response).Execute()
+> V1GlobalSiteListsIdPutResponse V1GlobalSiteListsIdPut(ctx, id).Authorization(authorization).V1GlobalSiteListsIdPutRequest(v1GlobalSiteListsIdPutRequest).Execute()
+
+
 
 
 
@@ -20279,16 +21494,16 @@ import (
 func main() {
 	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
 	id := int64(1234567891011) // int64 | 
-	v1GlobalSiteListsIdGet200Response := *openapiclient.NewV1GlobalSiteListsIdGet200Response() // V1GlobalSiteListsIdGet200Response | 
+	v1GlobalSiteListsIdPutRequest := *openapiclient.NewV1GlobalSiteListsIdPutRequest() // V1GlobalSiteListsIdPutRequest | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.DefaultAPI.V1GlobalSiteListsIdPut(context.Background(), id).Authorization(authorization).V1GlobalSiteListsIdGet200Response(v1GlobalSiteListsIdGet200Response).Execute()
+	resp, r, err := apiClient.DefaultAPI.V1GlobalSiteListsIdPut(context.Background(), id).Authorization(authorization).V1GlobalSiteListsIdPutRequest(v1GlobalSiteListsIdPutRequest).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1GlobalSiteListsIdPut``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1GlobalSiteListsIdPut`: V1GlobalLanSegmentsPost200Response
+	// response from `V1GlobalSiteListsIdPut`: V1GlobalSiteListsIdPutResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1GlobalSiteListsIdPut`: %v\n", resp)
 }
 ```
@@ -20310,11 +21525,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **string** | Bearer token. Format: Bearer &lt;your_token_here&gt; | 
 
- **v1GlobalSiteListsIdGet200Response** | [**V1GlobalSiteListsIdGet200Response**](V1GlobalSiteListsIdGet200Response.md) |  | 
+ **v1GlobalSiteListsIdPutRequest** | [**V1GlobalSiteListsIdPutRequest**](V1GlobalSiteListsIdPutRequest.md) |  | 
 
 ### Return type
 
-[**V1GlobalLanSegmentsPost200Response**](V1GlobalLanSegmentsPost200Response.md)
+[**V1GlobalSiteListsIdPutResponse**](V1GlobalSiteListsIdPutResponse.md)
 
 ### Authorization
 
@@ -20332,7 +21547,9 @@ Name | Type | Description  | Notes
 
 ## V1GlobalSiteListsIdSitesGet
 
-> V1GlobalSiteListsIdSitesGet200Response V1GlobalSiteListsIdSitesGet(ctx, id).Authorization(authorization).Execute()
+> V1GlobalSiteListsIdSitesGetResponse V1GlobalSiteListsIdSitesGet(ctx, id).Authorization(authorization).Execute()
+
+
 
 
 
@@ -20359,7 +21576,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1GlobalSiteListsIdSitesGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1GlobalSiteListsIdSitesGet`: V1GlobalSiteListsIdSitesGet200Response
+	// response from `V1GlobalSiteListsIdSitesGet`: V1GlobalSiteListsIdSitesGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1GlobalSiteListsIdSitesGet`: %v\n", resp)
 }
 ```
@@ -20384,7 +21601,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1GlobalSiteListsIdSitesGet200Response**](V1GlobalSiteListsIdSitesGet200Response.md)
+[**V1GlobalSiteListsIdSitesGetResponse**](V1GlobalSiteListsIdSitesGetResponse.md)
 
 ### Authorization
 
@@ -20402,7 +21619,9 @@ Name | Type | Description  | Notes
 
 ## V1GlobalSiteListsPost
 
-> V1GlobalLanSegmentsPost200Response V1GlobalSiteListsPost(ctx).Authorization(authorization).V1GlobalSiteListsPostRequest(v1GlobalSiteListsPostRequest).Execute()
+> V1GlobalSiteListsPostResponse V1GlobalSiteListsPost(ctx).Authorization(authorization).V1GlobalSiteListsPostRequest(v1GlobalSiteListsPostRequest).Execute()
+
+
 
 
 
@@ -20429,7 +21648,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1GlobalSiteListsPost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1GlobalSiteListsPost`: V1GlobalLanSegmentsPost200Response
+	// response from `V1GlobalSiteListsPost`: V1GlobalSiteListsPostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1GlobalSiteListsPost`: %v\n", resp)
 }
 ```
@@ -20450,7 +21669,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1GlobalLanSegmentsPost200Response**](V1GlobalLanSegmentsPost200Response.md)
+[**V1GlobalSiteListsPostResponse**](V1GlobalSiteListsPostResponse.md)
 
 ### Authorization
 
@@ -20468,7 +21687,9 @@ Name | Type | Description  | Notes
 
 ## V1GlobalSiteStatusGet
 
-> V1GlobalAttachedEdgesPost200Response V1GlobalSiteStatusGet(ctx).Authorization(authorization).Execute()
+> V1GlobalSiteStatusGetResponse V1GlobalSiteStatusGet(ctx).Authorization(authorization).Execute()
+
+
 
 
 
@@ -20494,7 +21715,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1GlobalSiteStatusGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1GlobalSiteStatusGet`: V1GlobalAttachedEdgesPost200Response
+	// response from `V1GlobalSiteStatusGet`: V1GlobalSiteStatusGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1GlobalSiteStatusGet`: %v\n", resp)
 }
 ```
@@ -20514,7 +21735,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1GlobalAttachedEdgesPost200Response**](V1GlobalAttachedEdgesPost200Response.md)
+[**V1GlobalSiteStatusGetResponse**](V1GlobalSiteStatusGetResponse.md)
 
 ### Authorization
 
@@ -20532,7 +21753,9 @@ Name | Type | Description  | Notes
 
 ## V1GlobalSnmpsDeviceGet
 
-> V1GlobalSnmpsDeviceGet200Response V1GlobalSnmpsDeviceGet(ctx).Authorization(authorization).Execute()
+> V1GlobalSnmpsDeviceGetResponse V1GlobalSnmpsDeviceGet(ctx).Authorization(authorization).Execute()
+
+
 
 
 
@@ -20558,7 +21781,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1GlobalSnmpsDeviceGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1GlobalSnmpsDeviceGet`: V1GlobalSnmpsDeviceGet200Response
+	// response from `V1GlobalSnmpsDeviceGet`: V1GlobalSnmpsDeviceGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1GlobalSnmpsDeviceGet`: %v\n", resp)
 }
 ```
@@ -20578,7 +21801,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1GlobalSnmpsDeviceGet200Response**](V1GlobalSnmpsDeviceGet200Response.md)
+[**V1GlobalSnmpsDeviceGetResponse**](V1GlobalSnmpsDeviceGetResponse.md)
 
 ### Authorization
 
@@ -20596,7 +21819,9 @@ Name | Type | Description  | Notes
 
 ## V1GlobalSnmpsPost
 
-> V1GlobalSnmpsDeviceGet200Response V1GlobalSnmpsPost(ctx).Authorization(authorization).V1GlobalIpfixPostRequest(v1GlobalIpfixPostRequest).Execute()
+> V1GlobalSnmpsPostResponse V1GlobalSnmpsPost(ctx).Authorization(authorization).V1GlobalSnmpsPostRequest(v1GlobalSnmpsPostRequest).Execute()
+
+
 
 
 
@@ -20614,16 +21839,16 @@ import (
 
 func main() {
 	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
-	v1GlobalIpfixPostRequest := *openapiclient.NewV1GlobalIpfixPostRequest() // V1GlobalIpfixPostRequest | 
+	v1GlobalSnmpsPostRequest := *openapiclient.NewV1GlobalSnmpsPostRequest() // V1GlobalSnmpsPostRequest | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.DefaultAPI.V1GlobalSnmpsPost(context.Background()).Authorization(authorization).V1GlobalIpfixPostRequest(v1GlobalIpfixPostRequest).Execute()
+	resp, r, err := apiClient.DefaultAPI.V1GlobalSnmpsPost(context.Background()).Authorization(authorization).V1GlobalSnmpsPostRequest(v1GlobalSnmpsPostRequest).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1GlobalSnmpsPost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1GlobalSnmpsPost`: V1GlobalSnmpsDeviceGet200Response
+	// response from `V1GlobalSnmpsPost`: V1GlobalSnmpsPostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1GlobalSnmpsPost`: %v\n", resp)
 }
 ```
@@ -20640,11 +21865,11 @@ Other parameters are passed through a pointer to a apiV1GlobalSnmpsPostRequest s
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **string** | Bearer token. Format: Bearer &lt;your_token_here&gt; | 
- **v1GlobalIpfixPostRequest** | [**V1GlobalIpfixPostRequest**](V1GlobalIpfixPostRequest.md) |  | 
+ **v1GlobalSnmpsPostRequest** | [**V1GlobalSnmpsPostRequest**](V1GlobalSnmpsPostRequest.md) |  | 
 
 ### Return type
 
-[**V1GlobalSnmpsDeviceGet200Response**](V1GlobalSnmpsDeviceGet200Response.md)
+[**V1GlobalSnmpsPostResponse**](V1GlobalSnmpsPostResponse.md)
 
 ### Authorization
 
@@ -20662,7 +21887,9 @@ Name | Type | Description  | Notes
 
 ## V1GlobalSnmpsSiteGet
 
-> V1GlobalSnmpsDeviceGet200Response V1GlobalSnmpsSiteGet(ctx).Authorization(authorization).Execute()
+> V1GlobalSnmpsSiteGetResponse V1GlobalSnmpsSiteGet(ctx).Authorization(authorization).Execute()
+
+
 
 
 
@@ -20688,7 +21915,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1GlobalSnmpsSiteGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1GlobalSnmpsSiteGet`: V1GlobalSnmpsDeviceGet200Response
+	// response from `V1GlobalSnmpsSiteGet`: V1GlobalSnmpsSiteGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1GlobalSnmpsSiteGet`: %v\n", resp)
 }
 ```
@@ -20708,7 +21935,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1GlobalSnmpsDeviceGet200Response**](V1GlobalSnmpsDeviceGet200Response.md)
+[**V1GlobalSnmpsSiteGetResponse**](V1GlobalSnmpsSiteGetResponse.md)
 
 ### Authorization
 
@@ -20726,7 +21953,9 @@ Name | Type | Description  | Notes
 
 ## V1GlobalSummaryPost
 
-> V1GlobalSummaryPost200Response V1GlobalSummaryPost(ctx).Authorization(authorization).V1GlobalSummaryPostRequest(v1GlobalSummaryPostRequest).Execute()
+> V1GlobalSummaryPostResponse V1GlobalSummaryPost(ctx).Authorization(authorization).V1GlobalSummaryPostRequest(v1GlobalSummaryPostRequest).Execute()
+
+
 
 
 
@@ -20753,7 +21982,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1GlobalSummaryPost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1GlobalSummaryPost`: V1GlobalSummaryPost200Response
+	// response from `V1GlobalSummaryPost`: V1GlobalSummaryPostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1GlobalSummaryPost`: %v\n", resp)
 }
 ```
@@ -20774,7 +22003,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1GlobalSummaryPost200Response**](V1GlobalSummaryPost200Response.md)
+[**V1GlobalSummaryPostResponse**](V1GlobalSummaryPostResponse.md)
 
 ### Authorization
 
@@ -20793,6 +22022,8 @@ Name | Type | Description  | Notes
 ## V1GlobalSyncPost
 
 > map[string]interface{} V1GlobalSyncPost(ctx).Authorization(authorization).V1GlobalSyncPostRequest(v1GlobalSyncPostRequest).Execute()
+
+
 
 
 
@@ -20858,7 +22089,9 @@ Name | Type | Description  | Notes
 
 ## V1GlobalSyslogsDeviceGet
 
-> V1GlobalSyslogsDeviceGet200Response V1GlobalSyslogsDeviceGet(ctx).Authorization(authorization).Execute()
+> V1GlobalSyslogsDeviceGetResponse V1GlobalSyslogsDeviceGet(ctx).Authorization(authorization).Execute()
+
+
 
 
 
@@ -20884,7 +22117,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1GlobalSyslogsDeviceGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1GlobalSyslogsDeviceGet`: V1GlobalSyslogsDeviceGet200Response
+	// response from `V1GlobalSyslogsDeviceGet`: V1GlobalSyslogsDeviceGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1GlobalSyslogsDeviceGet`: %v\n", resp)
 }
 ```
@@ -20904,7 +22137,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1GlobalSyslogsDeviceGet200Response**](V1GlobalSyslogsDeviceGet200Response.md)
+[**V1GlobalSyslogsDeviceGetResponse**](V1GlobalSyslogsDeviceGetResponse.md)
 
 ### Authorization
 
@@ -20922,7 +22155,9 @@ Name | Type | Description  | Notes
 
 ## V1GlobalSyslogsPost
 
-> V1GlobalSyslogsDeviceGet200Response V1GlobalSyslogsPost(ctx).Authorization(authorization).V1GlobalIpfixPostRequest(v1GlobalIpfixPostRequest).Execute()
+> V1GlobalSyslogsPostResponse V1GlobalSyslogsPost(ctx).Authorization(authorization).V1GlobalSyslogsPostRequest(v1GlobalSyslogsPostRequest).Execute()
+
+
 
 
 
@@ -20940,16 +22175,16 @@ import (
 
 func main() {
 	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
-	v1GlobalIpfixPostRequest := *openapiclient.NewV1GlobalIpfixPostRequest() // V1GlobalIpfixPostRequest | 
+	v1GlobalSyslogsPostRequest := *openapiclient.NewV1GlobalSyslogsPostRequest() // V1GlobalSyslogsPostRequest | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.DefaultAPI.V1GlobalSyslogsPost(context.Background()).Authorization(authorization).V1GlobalIpfixPostRequest(v1GlobalIpfixPostRequest).Execute()
+	resp, r, err := apiClient.DefaultAPI.V1GlobalSyslogsPost(context.Background()).Authorization(authorization).V1GlobalSyslogsPostRequest(v1GlobalSyslogsPostRequest).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1GlobalSyslogsPost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1GlobalSyslogsPost`: V1GlobalSyslogsDeviceGet200Response
+	// response from `V1GlobalSyslogsPost`: V1GlobalSyslogsPostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1GlobalSyslogsPost`: %v\n", resp)
 }
 ```
@@ -20966,11 +22201,11 @@ Other parameters are passed through a pointer to a apiV1GlobalSyslogsPostRequest
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **string** | Bearer token. Format: Bearer &lt;your_token_here&gt; | 
- **v1GlobalIpfixPostRequest** | [**V1GlobalIpfixPostRequest**](V1GlobalIpfixPostRequest.md) |  | 
+ **v1GlobalSyslogsPostRequest** | [**V1GlobalSyslogsPostRequest**](V1GlobalSyslogsPostRequest.md) |  | 
 
 ### Return type
 
-[**V1GlobalSyslogsDeviceGet200Response**](V1GlobalSyslogsDeviceGet200Response.md)
+[**V1GlobalSyslogsPostResponse**](V1GlobalSyslogsPostResponse.md)
 
 ### Authorization
 
@@ -20988,7 +22223,9 @@ Name | Type | Description  | Notes
 
 ## V1GlobalSyslogsSiteGet
 
-> V1GlobalSyslogsDeviceGet200Response V1GlobalSyslogsSiteGet(ctx).Authorization(authorization).Execute()
+> V1GlobalSyslogsSiteGetResponse V1GlobalSyslogsSiteGet(ctx).Authorization(authorization).Execute()
+
+
 
 
 
@@ -21014,7 +22251,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1GlobalSyslogsSiteGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1GlobalSyslogsSiteGet`: V1GlobalSyslogsDeviceGet200Response
+	// response from `V1GlobalSyslogsSiteGet`: V1GlobalSyslogsSiteGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1GlobalSyslogsSiteGet`: %v\n", resp)
 }
 ```
@@ -21034,7 +22271,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1GlobalSyslogsDeviceGet200Response**](V1GlobalSyslogsDeviceGet200Response.md)
+[**V1GlobalSyslogsSiteGetResponse**](V1GlobalSyslogsSiteGetResponse.md)
 
 ### Authorization
 
@@ -21052,7 +22289,9 @@ Name | Type | Description  | Notes
 
 ## V1GlobalTrafficPoliciesDeviceGet
 
-> V1GlobalTrafficPoliciesDeviceGet200Response V1GlobalTrafficPoliciesDeviceGet(ctx).Authorization(authorization).Execute()
+> V1GlobalTrafficPoliciesDeviceGetResponse V1GlobalTrafficPoliciesDeviceGet(ctx).Authorization(authorization).Execute()
+
+
 
 
 
@@ -21078,7 +22317,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1GlobalTrafficPoliciesDeviceGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1GlobalTrafficPoliciesDeviceGet`: V1GlobalTrafficPoliciesDeviceGet200Response
+	// response from `V1GlobalTrafficPoliciesDeviceGet`: V1GlobalTrafficPoliciesDeviceGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1GlobalTrafficPoliciesDeviceGet`: %v\n", resp)
 }
 ```
@@ -21098,7 +22337,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1GlobalTrafficPoliciesDeviceGet200Response**](V1GlobalTrafficPoliciesDeviceGet200Response.md)
+[**V1GlobalTrafficPoliciesDeviceGetResponse**](V1GlobalTrafficPoliciesDeviceGetResponse.md)
 
 ### Authorization
 
@@ -21116,7 +22355,9 @@ Name | Type | Description  | Notes
 
 ## V1GlobalTrafficPoliciesPost
 
-> V1GlobalTrafficPoliciesDeviceGet200Response V1GlobalTrafficPoliciesPost(ctx).Authorization(authorization).V1GlobalIpfixPostRequest(v1GlobalIpfixPostRequest).Execute()
+> V1GlobalTrafficPoliciesPostResponse V1GlobalTrafficPoliciesPost(ctx).Authorization(authorization).V1GlobalTrafficPoliciesPostRequest(v1GlobalTrafficPoliciesPostRequest).Execute()
+
+
 
 
 
@@ -21134,16 +22375,16 @@ import (
 
 func main() {
 	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
-	v1GlobalIpfixPostRequest := *openapiclient.NewV1GlobalIpfixPostRequest() // V1GlobalIpfixPostRequest | 
+	v1GlobalTrafficPoliciesPostRequest := *openapiclient.NewV1GlobalTrafficPoliciesPostRequest() // V1GlobalTrafficPoliciesPostRequest | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.DefaultAPI.V1GlobalTrafficPoliciesPost(context.Background()).Authorization(authorization).V1GlobalIpfixPostRequest(v1GlobalIpfixPostRequest).Execute()
+	resp, r, err := apiClient.DefaultAPI.V1GlobalTrafficPoliciesPost(context.Background()).Authorization(authorization).V1GlobalTrafficPoliciesPostRequest(v1GlobalTrafficPoliciesPostRequest).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1GlobalTrafficPoliciesPost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1GlobalTrafficPoliciesPost`: V1GlobalTrafficPoliciesDeviceGet200Response
+	// response from `V1GlobalTrafficPoliciesPost`: V1GlobalTrafficPoliciesPostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1GlobalTrafficPoliciesPost`: %v\n", resp)
 }
 ```
@@ -21160,11 +22401,11 @@ Other parameters are passed through a pointer to a apiV1GlobalTrafficPoliciesPos
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **string** | Bearer token. Format: Bearer &lt;your_token_here&gt; | 
- **v1GlobalIpfixPostRequest** | [**V1GlobalIpfixPostRequest**](V1GlobalIpfixPostRequest.md) |  | 
+ **v1GlobalTrafficPoliciesPostRequest** | [**V1GlobalTrafficPoliciesPostRequest**](V1GlobalTrafficPoliciesPostRequest.md) |  | 
 
 ### Return type
 
-[**V1GlobalTrafficPoliciesDeviceGet200Response**](V1GlobalTrafficPoliciesDeviceGet200Response.md)
+[**V1GlobalTrafficPoliciesPostResponse**](V1GlobalTrafficPoliciesPostResponse.md)
 
 ### Authorization
 
@@ -21182,7 +22423,9 @@ Name | Type | Description  | Notes
 
 ## V1GlobalTrafficPoliciesSiteGet
 
-> V1GlobalTrafficPoliciesDeviceGet200Response V1GlobalTrafficPoliciesSiteGet(ctx).Authorization(authorization).Execute()
+> V1GlobalTrafficPoliciesSiteGetResponse V1GlobalTrafficPoliciesSiteGet(ctx).Authorization(authorization).Execute()
+
+
 
 
 
@@ -21208,7 +22451,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1GlobalTrafficPoliciesSiteGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1GlobalTrafficPoliciesSiteGet`: V1GlobalTrafficPoliciesDeviceGet200Response
+	// response from `V1GlobalTrafficPoliciesSiteGet`: V1GlobalTrafficPoliciesSiteGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1GlobalTrafficPoliciesSiteGet`: %v\n", resp)
 }
 ```
@@ -21228,7 +22471,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1GlobalTrafficPoliciesDeviceGet200Response**](V1GlobalTrafficPoliciesDeviceGet200Response.md)
+[**V1GlobalTrafficPoliciesSiteGetResponse**](V1GlobalTrafficPoliciesSiteGetResponse.md)
 
 ### Authorization
 
@@ -21246,7 +22489,9 @@ Name | Type | Description  | Notes
 
 ## V1GroupsEnterprisesGet
 
-> V1GroupsGet200Response V1GroupsEnterprisesGet(ctx).Authorization(authorization).Execute()
+> V1GroupsEnterprisesGetResponse V1GroupsEnterprisesGet(ctx).Authorization(authorization).Execute()
+
+
 
 
 
@@ -21272,7 +22517,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1GroupsEnterprisesGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1GroupsEnterprisesGet`: V1GroupsGet200Response
+	// response from `V1GroupsEnterprisesGet`: V1GroupsEnterprisesGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1GroupsEnterprisesGet`: %v\n", resp)
 }
 ```
@@ -21292,7 +22537,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1GroupsGet200Response**](V1GroupsGet200Response.md)
+[**V1GroupsEnterprisesGetResponse**](V1GroupsEnterprisesGetResponse.md)
 
 ### Authorization
 
@@ -21310,7 +22555,9 @@ Name | Type | Description  | Notes
 
 ## V1GroupsGet
 
-> V1GroupsGet200Response V1GroupsGet(ctx).Authorization(authorization).Execute()
+> V1GroupsGetResponse V1GroupsGet(ctx).Authorization(authorization).Execute()
+
+
 
 
 
@@ -21336,7 +22583,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1GroupsGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1GroupsGet`: V1GroupsGet200Response
+	// response from `V1GroupsGet`: V1GroupsGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1GroupsGet`: %v\n", resp)
 }
 ```
@@ -21356,7 +22603,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1GroupsGet200Response**](V1GroupsGet200Response.md)
+[**V1GroupsGetResponse**](V1GroupsGetResponse.md)
 
 ### Authorization
 
@@ -21374,7 +22621,9 @@ Name | Type | Description  | Notes
 
 ## V1GroupsIdDelete
 
-> V1GroupsIdMembersPost204Response V1GroupsIdDelete(ctx, id).Authorization(authorization).Execute()
+> V1GroupsIdDeleteResponse V1GroupsIdDelete(ctx, id).Authorization(authorization).Execute()
+
+
 
 
 
@@ -21401,7 +22650,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1GroupsIdDelete``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1GroupsIdDelete`: V1GroupsIdMembersPost204Response
+	// response from `V1GroupsIdDelete`: V1GroupsIdDeleteResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1GroupsIdDelete`: %v\n", resp)
 }
 ```
@@ -21426,7 +22675,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1GroupsIdMembersPost204Response**](V1GroupsIdMembersPost204Response.md)
+[**V1GroupsIdDeleteResponse**](V1GroupsIdDeleteResponse.md)
 
 ### Authorization
 
@@ -21444,7 +22693,9 @@ Name | Type | Description  | Notes
 
 ## V1GroupsIdEnterprisesEnterpriseIdDelete
 
-> V1GroupsIdMembersPost204Response V1GroupsIdEnterprisesEnterpriseIdDelete(ctx, enterpriseId, id).Authorization(authorization).Execute()
+> V1GroupsIdEnterprisesEnterpriseIdDeleteResponse V1GroupsIdEnterprisesEnterpriseIdDelete(ctx, enterpriseId, id).Authorization(authorization).Execute()
+
+
 
 
 
@@ -21472,7 +22723,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1GroupsIdEnterprisesEnterpriseIdDelete``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1GroupsIdEnterprisesEnterpriseIdDelete`: V1GroupsIdMembersPost204Response
+	// response from `V1GroupsIdEnterprisesEnterpriseIdDelete`: V1GroupsIdEnterprisesEnterpriseIdDeleteResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1GroupsIdEnterprisesEnterpriseIdDelete`: %v\n", resp)
 }
 ```
@@ -21499,7 +22750,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1GroupsIdMembersPost204Response**](V1GroupsIdMembersPost204Response.md)
+[**V1GroupsIdEnterprisesEnterpriseIdDeleteResponse**](V1GroupsIdEnterprisesEnterpriseIdDeleteResponse.md)
 
 ### Authorization
 
@@ -21521,6 +22772,8 @@ Name | Type | Description  | Notes
 
 
 
+
+
 ### Example
 
 ```go
@@ -21536,7 +22789,7 @@ import (
 func main() {
 	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
 	id := "example string" // string | 
-	v1GroupsIdEnterprisesPostRequest := *openapiclient.NewV1GroupsIdEnterprisesPostRequest() // V1GroupsIdEnterprisesPostRequest | 
+	v1GroupsIdEnterprisesPostRequest := *openapiclient.NewV1GroupsIdEnterprisesPostRequest([]int64{int64(1234567891011)}) // V1GroupsIdEnterprisesPostRequest | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -21589,7 +22842,9 @@ Name | Type | Description  | Notes
 
 ## V1GroupsIdGet
 
-> V1GroupsIdGet200Response V1GroupsIdGet(ctx, id).Authorization(authorization).Execute()
+> V1GroupsIdGetResponse V1GroupsIdGet(ctx, id).Authorization(authorization).Execute()
+
+
 
 
 
@@ -21616,7 +22871,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1GroupsIdGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1GroupsIdGet`: V1GroupsIdGet200Response
+	// response from `V1GroupsIdGet`: V1GroupsIdGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1GroupsIdGet`: %v\n", resp)
 }
 ```
@@ -21641,7 +22896,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1GroupsIdGet200Response**](V1GroupsIdGet200Response.md)
+[**V1GroupsIdGetResponse**](V1GroupsIdGetResponse.md)
 
 ### Authorization
 
@@ -21659,7 +22914,9 @@ Name | Type | Description  | Notes
 
 ## V1GroupsIdMembersDeletePost
 
-> V1GroupsIdMembersPost204Response V1GroupsIdMembersDeletePost(ctx, id).Authorization(authorization).V1GroupsIdMembersDeletePostRequest(v1GroupsIdMembersDeletePostRequest).Execute()
+> V1GroupsIdMembersDeletePostResponse V1GroupsIdMembersDeletePost(ctx, id).Authorization(authorization).V1GroupsIdMembersDeletePostRequest(v1GroupsIdMembersDeletePostRequest).Execute()
+
+
 
 
 
@@ -21678,7 +22935,7 @@ import (
 func main() {
 	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
 	id := "example string" // string | 
-	v1GroupsIdMembersDeletePostRequest := *openapiclient.NewV1GroupsIdMembersDeletePostRequest() // V1GroupsIdMembersDeletePostRequest | 
+	v1GroupsIdMembersDeletePostRequest := *openapiclient.NewV1GroupsIdMembersDeletePostRequest([]string{"example string"}) // V1GroupsIdMembersDeletePostRequest | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -21687,7 +22944,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1GroupsIdMembersDeletePost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1GroupsIdMembersDeletePost`: V1GroupsIdMembersPost204Response
+	// response from `V1GroupsIdMembersDeletePost`: V1GroupsIdMembersDeletePostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1GroupsIdMembersDeletePost`: %v\n", resp)
 }
 ```
@@ -21713,7 +22970,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1GroupsIdMembersPost204Response**](V1GroupsIdMembersPost204Response.md)
+[**V1GroupsIdMembersDeletePostResponse**](V1GroupsIdMembersDeletePostResponse.md)
 
 ### Authorization
 
@@ -21731,7 +22988,9 @@ Name | Type | Description  | Notes
 
 ## V1GroupsIdMembersGet
 
-> V1GroupsIdMembersGet200Response V1GroupsIdMembersGet(ctx, id).Authorization(authorization).Execute()
+> V1GroupsIdMembersGetResponse V1GroupsIdMembersGet(ctx, id).Authorization(authorization).Execute()
+
+
 
 
 
@@ -21758,7 +23017,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1GroupsIdMembersGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1GroupsIdMembersGet`: V1GroupsIdMembersGet200Response
+	// response from `V1GroupsIdMembersGet`: V1GroupsIdMembersGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1GroupsIdMembersGet`: %v\n", resp)
 }
 ```
@@ -21783,7 +23042,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1GroupsIdMembersGet200Response**](V1GroupsIdMembersGet200Response.md)
+[**V1GroupsIdMembersGetResponse**](V1GroupsIdMembersGetResponse.md)
 
 ### Authorization
 
@@ -21801,7 +23060,9 @@ Name | Type | Description  | Notes
 
 ## V1GroupsIdMembersMemberIdDelete
 
-> V1GroupsIdMembersPost204Response V1GroupsIdMembersMemberIdDelete(ctx, id, memberId).Authorization(authorization).Execute()
+> V1GroupsIdMembersMemberIdDeleteResponse V1GroupsIdMembersMemberIdDelete(ctx, id, memberId).Authorization(authorization).Execute()
+
+
 
 
 
@@ -21829,7 +23090,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1GroupsIdMembersMemberIdDelete``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1GroupsIdMembersMemberIdDelete`: V1GroupsIdMembersPost204Response
+	// response from `V1GroupsIdMembersMemberIdDelete`: V1GroupsIdMembersMemberIdDeleteResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1GroupsIdMembersMemberIdDelete`: %v\n", resp)
 }
 ```
@@ -21856,7 +23117,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1GroupsIdMembersPost204Response**](V1GroupsIdMembersPost204Response.md)
+[**V1GroupsIdMembersMemberIdDeleteResponse**](V1GroupsIdMembersMemberIdDeleteResponse.md)
 
 ### Authorization
 
@@ -21874,7 +23135,9 @@ Name | Type | Description  | Notes
 
 ## V1GroupsIdMembersPost
 
-> V1GroupsIdMembersPost204Response V1GroupsIdMembersPost(ctx, id).Authorization(authorization).V1GroupsIdMembersPostRequest(v1GroupsIdMembersPostRequest).Execute()
+> V1GroupsIdMembersPostResponse V1GroupsIdMembersPost(ctx, id).Authorization(authorization).V1GroupsIdMembersPostRequest(v1GroupsIdMembersPostRequest).Execute()
+
+
 
 
 
@@ -21893,7 +23156,7 @@ import (
 func main() {
 	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
 	id := "example string" // string | 
-	v1GroupsIdMembersPostRequest := *openapiclient.NewV1GroupsIdMembersPostRequest() // V1GroupsIdMembersPostRequest | 
+	v1GroupsIdMembersPostRequest := *openapiclient.NewV1GroupsIdMembersPostRequest([]string{"example string"}) // V1GroupsIdMembersPostRequest | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -21902,7 +23165,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1GroupsIdMembersPost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1GroupsIdMembersPost`: V1GroupsIdMembersPost204Response
+	// response from `V1GroupsIdMembersPost`: V1GroupsIdMembersPostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1GroupsIdMembersPost`: %v\n", resp)
 }
 ```
@@ -21928,7 +23191,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1GroupsIdMembersPost204Response**](V1GroupsIdMembersPost204Response.md)
+[**V1GroupsIdMembersPostResponse**](V1GroupsIdMembersPostResponse.md)
 
 ### Authorization
 
@@ -21946,7 +23209,9 @@ Name | Type | Description  | Notes
 
 ## V1GroupsIdPatch
 
-> V1GroupsIdMembersPost204Response V1GroupsIdPatch(ctx, id).Authorization(authorization).V1GroupsIdPatchRequest(v1GroupsIdPatchRequest).Execute()
+> V1GroupsIdPatchResponse V1GroupsIdPatch(ctx, id).Authorization(authorization).V1GroupsIdPatchRequest(v1GroupsIdPatchRequest).Execute()
+
+
 
 
 
@@ -21974,7 +23239,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1GroupsIdPatch``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1GroupsIdPatch`: V1GroupsIdMembersPost204Response
+	// response from `V1GroupsIdPatch`: V1GroupsIdPatchResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1GroupsIdPatch`: %v\n", resp)
 }
 ```
@@ -22000,7 +23265,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1GroupsIdMembersPost204Response**](V1GroupsIdMembersPost204Response.md)
+[**V1GroupsIdPatchResponse**](V1GroupsIdPatchResponse.md)
 
 ### Authorization
 
@@ -22022,6 +23287,8 @@ Name | Type | Description  | Notes
 
 
 
+
+
 ### Example
 
 ```go
@@ -22036,7 +23303,7 @@ import (
 
 func main() {
 	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
-	v1GroupsPutRequest := *openapiclient.NewV1GroupsPutRequest() // V1GroupsPutRequest | 
+	v1GroupsPutRequest := *openapiclient.NewV1GroupsPutRequest("example string", "example string") // V1GroupsPutRequest | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -22084,7 +23351,9 @@ Name | Type | Description  | Notes
 
 ## V1GroupsRootGet
 
-> V1GroupsGet200Response V1GroupsRootGet(ctx).Authorization(authorization).Execute()
+> V1GroupsRootGetResponse V1GroupsRootGet(ctx).Authorization(authorization).Execute()
+
+
 
 
 
@@ -22110,7 +23379,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1GroupsRootGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1GroupsRootGet`: V1GroupsGet200Response
+	// response from `V1GroupsRootGet`: V1GroupsRootGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1GroupsRootGet`: %v\n", resp)
 }
 ```
@@ -22130,7 +23399,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1GroupsGet200Response**](V1GroupsGet200Response.md)
+[**V1GroupsRootGetResponse**](V1GroupsRootGetResponse.md)
 
 ### Authorization
 
@@ -22149,6 +23418,8 @@ Name | Type | Description  | Notes
 ## V1IdPasswordRecoverPatch
 
 > map[string]interface{} V1IdPasswordRecoverPatch(ctx, id).Authorization(authorization).Body(body).Execute()
+
+
 
 
 
@@ -22224,6 +23495,8 @@ Name | Type | Description  | Notes
 
 
 
+
+
 ### Example
 
 ```go
@@ -22238,7 +23511,7 @@ import (
 
 func main() {
 	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
-	v1InvitationEmailPostRequest := *openapiclient.NewV1InvitationEmailPostRequest() // V1InvitationEmailPostRequest | 
+	v1InvitationEmailPostRequest := *openapiclient.NewV1InvitationEmailPostRequest("example string", int64(1234567891011), int64(1234567891011), "example string") // V1InvitationEmailPostRequest | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -22286,7 +23559,9 @@ Name | Type | Description  | Notes
 
 ## V1LanSegmentsGet
 
-> V1LanSegmentsGet200Response V1LanSegmentsGet(ctx).Authorization(authorization).Execute()
+> V1LanSegmentsGetResponse V1LanSegmentsGet(ctx).Authorization(authorization).Execute()
+
+
 
 
 
@@ -22312,7 +23587,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1LanSegmentsGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1LanSegmentsGet`: V1LanSegmentsGet200Response
+	// response from `V1LanSegmentsGet`: V1LanSegmentsGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1LanSegmentsGet`: %v\n", resp)
 }
 ```
@@ -22332,7 +23607,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1LanSegmentsGet200Response**](V1LanSegmentsGet200Response.md)
+[**V1LanSegmentsGetResponse**](V1LanSegmentsGetResponse.md)
 
 ### Authorization
 
@@ -22350,7 +23625,9 @@ Name | Type | Description  | Notes
 
 ## V1LldpInterfaceIdNeighborsGet
 
-> V1LldpInterfaceIdNeighborsGet200Response V1LldpInterfaceIdNeighborsGet(ctx, interfaceId).Authorization(authorization).Execute()
+> V1LldpInterfaceIdNeighborsGetResponse V1LldpInterfaceIdNeighborsGet(ctx, interfaceId).Authorization(authorization).Execute()
+
+
 
 
 
@@ -22377,7 +23654,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1LldpInterfaceIdNeighborsGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1LldpInterfaceIdNeighborsGet`: V1LldpInterfaceIdNeighborsGet200Response
+	// response from `V1LldpInterfaceIdNeighborsGet`: V1LldpInterfaceIdNeighborsGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1LldpInterfaceIdNeighborsGet`: %v\n", resp)
 }
 ```
@@ -22402,7 +23679,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1LldpInterfaceIdNeighborsGet200Response**](V1LldpInterfaceIdNeighborsGet200Response.md)
+[**V1LldpInterfaceIdNeighborsGetResponse**](V1LldpInterfaceIdNeighborsGetResponse.md)
 
 ### Authorization
 
@@ -22420,7 +23697,9 @@ Name | Type | Description  | Notes
 
 ## V1LldpInterfaceIdSummaryGet
 
-> V1LldpInterfaceIdSummaryGet200Response V1LldpInterfaceIdSummaryGet(ctx, interfaceId).Authorization(authorization).Execute()
+> V1LldpInterfaceIdSummaryGetResponse V1LldpInterfaceIdSummaryGet(ctx, interfaceId).Authorization(authorization).Execute()
+
+
 
 
 
@@ -22447,7 +23726,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1LldpInterfaceIdSummaryGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1LldpInterfaceIdSummaryGet`: V1LldpInterfaceIdSummaryGet200Response
+	// response from `V1LldpInterfaceIdSummaryGet`: V1LldpInterfaceIdSummaryGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1LldpInterfaceIdSummaryGet`: %v\n", resp)
 }
 ```
@@ -22472,7 +23751,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1LldpInterfaceIdSummaryGet200Response**](V1LldpInterfaceIdSummaryGet200Response.md)
+[**V1LldpInterfaceIdSummaryGetResponse**](V1LldpInterfaceIdSummaryGetResponse.md)
 
 ### Authorization
 
@@ -22490,7 +23769,9 @@ Name | Type | Description  | Notes
 
 ## V1LldpInterfaceIdVendorsGet
 
-> V1LldpInterfaceIdVendorsGet200Response V1LldpInterfaceIdVendorsGet(ctx, interfaceId).Authorization(authorization).Execute()
+> V1LldpInterfaceIdVendorsGetResponse V1LldpInterfaceIdVendorsGet(ctx, interfaceId).Authorization(authorization).Execute()
+
+
 
 
 
@@ -22517,7 +23798,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1LldpInterfaceIdVendorsGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1LldpInterfaceIdVendorsGet`: V1LldpInterfaceIdVendorsGet200Response
+	// response from `V1LldpInterfaceIdVendorsGet`: V1LldpInterfaceIdVendorsGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1LldpInterfaceIdVendorsGet`: %v\n", resp)
 }
 ```
@@ -22542,7 +23823,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1LldpInterfaceIdVendorsGet200Response**](V1LldpInterfaceIdVendorsGet200Response.md)
+[**V1LldpInterfaceIdVendorsGetResponse**](V1LldpInterfaceIdVendorsGetResponse.md)
 
 ### Authorization
 
@@ -22560,7 +23841,7 @@ Name | Type | Description  | Notes
 
 ## V1LogsPost
 
-> V1LogsPost200Response V1LogsPost(ctx).Authorization(authorization).V1LogsPostRequest(v1LogsPostRequest).Execute()
+> V1LogsPostResponse V1LogsPost(ctx).Authorization(authorization).V1LogsPostRequest(v1LogsPostRequest).Execute()
 
 
 
@@ -22587,7 +23868,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1LogsPost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1LogsPost`: V1LogsPost200Response
+	// response from `V1LogsPost`: V1LogsPostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1LogsPost`: %v\n", resp)
 }
 ```
@@ -22608,7 +23889,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1LogsPost200Response**](V1LogsPost200Response.md)
+[**V1LogsPostResponse**](V1LogsPostResponse.md)
 
 ### Authorization
 
@@ -22626,7 +23907,7 @@ Name | Type | Description  | Notes
 
 ## V1MonitoringCircuitsBandwidthPost
 
-> V1MonitoringCircuitsBandwidthPost200Response V1MonitoringCircuitsBandwidthPost(ctx).Authorization(authorization).V1MonitoringCircuitsBandwidthPostRequest(v1MonitoringCircuitsBandwidthPostRequest).Execute()
+> V1MonitoringCircuitsBandwidthPostResponse V1MonitoringCircuitsBandwidthPost(ctx).Authorization(authorization).V1MonitoringCircuitsBandwidthPostRequest(v1MonitoringCircuitsBandwidthPostRequest).Execute()
 
 
 
@@ -22653,7 +23934,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1MonitoringCircuitsBandwidthPost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1MonitoringCircuitsBandwidthPost`: V1MonitoringCircuitsBandwidthPost200Response
+	// response from `V1MonitoringCircuitsBandwidthPost`: V1MonitoringCircuitsBandwidthPostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1MonitoringCircuitsBandwidthPost`: %v\n", resp)
 }
 ```
@@ -22674,7 +23955,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1MonitoringCircuitsBandwidthPost200Response**](V1MonitoringCircuitsBandwidthPost200Response.md)
+[**V1MonitoringCircuitsBandwidthPostResponse**](V1MonitoringCircuitsBandwidthPostResponse.md)
 
 ### Authorization
 
@@ -22692,7 +23973,7 @@ Name | Type | Description  | Notes
 
 ## V1MonitoringCircuitsIncidentsPost
 
-> V1MonitoringCircuitsIncidentsPost200Response V1MonitoringCircuitsIncidentsPost(ctx).Authorization(authorization).V2MonitoringCircuitsUtilizationPostRequest(v2MonitoringCircuitsUtilizationPostRequest).Execute()
+> V1MonitoringCircuitsIncidentsPostResponse V1MonitoringCircuitsIncidentsPost(ctx).Authorization(authorization).V1MonitoringCircuitsIncidentsPostRequest(v1MonitoringCircuitsIncidentsPostRequest).Execute()
 
 
 
@@ -22710,16 +23991,16 @@ import (
 
 func main() {
 	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
-	v2MonitoringCircuitsUtilizationPostRequest := *openapiclient.NewV2MonitoringCircuitsUtilizationPostRequest() // V2MonitoringCircuitsUtilizationPostRequest | 
+	v1MonitoringCircuitsIncidentsPostRequest := *openapiclient.NewV1MonitoringCircuitsIncidentsPostRequest() // V1MonitoringCircuitsIncidentsPostRequest | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.DefaultAPI.V1MonitoringCircuitsIncidentsPost(context.Background()).Authorization(authorization).V2MonitoringCircuitsUtilizationPostRequest(v2MonitoringCircuitsUtilizationPostRequest).Execute()
+	resp, r, err := apiClient.DefaultAPI.V1MonitoringCircuitsIncidentsPost(context.Background()).Authorization(authorization).V1MonitoringCircuitsIncidentsPostRequest(v1MonitoringCircuitsIncidentsPostRequest).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1MonitoringCircuitsIncidentsPost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1MonitoringCircuitsIncidentsPost`: V1MonitoringCircuitsIncidentsPost200Response
+	// response from `V1MonitoringCircuitsIncidentsPost`: V1MonitoringCircuitsIncidentsPostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1MonitoringCircuitsIncidentsPost`: %v\n", resp)
 }
 ```
@@ -22736,11 +24017,11 @@ Other parameters are passed through a pointer to a apiV1MonitoringCircuitsIncide
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **string** | Bearer token. Format: Bearer &lt;your_token_here&gt; | 
- **v2MonitoringCircuitsUtilizationPostRequest** | [**V2MonitoringCircuitsUtilizationPostRequest**](V2MonitoringCircuitsUtilizationPostRequest.md) |  | 
+ **v1MonitoringCircuitsIncidentsPostRequest** | [**V1MonitoringCircuitsIncidentsPostRequest**](V1MonitoringCircuitsIncidentsPostRequest.md) |  | 
 
 ### Return type
 
-[**V1MonitoringCircuitsIncidentsPost200Response**](V1MonitoringCircuitsIncidentsPost200Response.md)
+[**V1MonitoringCircuitsIncidentsPostResponse**](V1MonitoringCircuitsIncidentsPostResponse.md)
 
 ### Authorization
 
@@ -22758,7 +24039,7 @@ Name | Type | Description  | Notes
 
 ## V1MonitoringCircuitsSummaryPost
 
-> V1MonitoringCircuitsSummaryPost200Response V1MonitoringCircuitsSummaryPost(ctx).Authorization(authorization).V2MonitoringCircuitsSummaryPostRequest(v2MonitoringCircuitsSummaryPostRequest).Execute()
+> V1MonitoringCircuitsSummaryPostResponse V1MonitoringCircuitsSummaryPost(ctx).Authorization(authorization).V1MonitoringCircuitsSummaryPostRequest(v1MonitoringCircuitsSummaryPostRequest).Execute()
 
 
 
@@ -22776,16 +24057,16 @@ import (
 
 func main() {
 	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
-	v2MonitoringCircuitsSummaryPostRequest := *openapiclient.NewV2MonitoringCircuitsSummaryPostRequest() // V2MonitoringCircuitsSummaryPostRequest | 
+	v1MonitoringCircuitsSummaryPostRequest := *openapiclient.NewV1MonitoringCircuitsSummaryPostRequest() // V1MonitoringCircuitsSummaryPostRequest | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.DefaultAPI.V1MonitoringCircuitsSummaryPost(context.Background()).Authorization(authorization).V2MonitoringCircuitsSummaryPostRequest(v2MonitoringCircuitsSummaryPostRequest).Execute()
+	resp, r, err := apiClient.DefaultAPI.V1MonitoringCircuitsSummaryPost(context.Background()).Authorization(authorization).V1MonitoringCircuitsSummaryPostRequest(v1MonitoringCircuitsSummaryPostRequest).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1MonitoringCircuitsSummaryPost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1MonitoringCircuitsSummaryPost`: V1MonitoringCircuitsSummaryPost200Response
+	// response from `V1MonitoringCircuitsSummaryPost`: V1MonitoringCircuitsSummaryPostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1MonitoringCircuitsSummaryPost`: %v\n", resp)
 }
 ```
@@ -22802,11 +24083,11 @@ Other parameters are passed through a pointer to a apiV1MonitoringCircuitsSummar
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **string** | Bearer token. Format: Bearer &lt;your_token_here&gt; | 
- **v2MonitoringCircuitsSummaryPostRequest** | [**V2MonitoringCircuitsSummaryPostRequest**](V2MonitoringCircuitsSummaryPostRequest.md) |  | 
+ **v1MonitoringCircuitsSummaryPostRequest** | [**V1MonitoringCircuitsSummaryPostRequest**](V1MonitoringCircuitsSummaryPostRequest.md) |  | 
 
 ### Return type
 
-[**V1MonitoringCircuitsSummaryPost200Response**](V1MonitoringCircuitsSummaryPost200Response.md)
+[**V1MonitoringCircuitsSummaryPostResponse**](V1MonitoringCircuitsSummaryPostResponse.md)
 
 ### Authorization
 
@@ -22824,7 +24105,7 @@ Name | Type | Description  | Notes
 
 ## V1MonitoringCircuitsUtilizationPost
 
-> V1MonitoringCircuitsUtilizationPost200Response V1MonitoringCircuitsUtilizationPost(ctx).Authorization(authorization).V2MonitoringCircuitsUtilizationPostRequest(v2MonitoringCircuitsUtilizationPostRequest).Execute()
+> V1MonitoringCircuitsUtilizationPostResponse V1MonitoringCircuitsUtilizationPost(ctx).Authorization(authorization).V1MonitoringCircuitsUtilizationPostRequest(v1MonitoringCircuitsUtilizationPostRequest).Execute()
 
 
 
@@ -22842,16 +24123,16 @@ import (
 
 func main() {
 	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
-	v2MonitoringCircuitsUtilizationPostRequest := *openapiclient.NewV2MonitoringCircuitsUtilizationPostRequest() // V2MonitoringCircuitsUtilizationPostRequest | 
+	v1MonitoringCircuitsUtilizationPostRequest := *openapiclient.NewV1MonitoringCircuitsUtilizationPostRequest() // V1MonitoringCircuitsUtilizationPostRequest | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.DefaultAPI.V1MonitoringCircuitsUtilizationPost(context.Background()).Authorization(authorization).V2MonitoringCircuitsUtilizationPostRequest(v2MonitoringCircuitsUtilizationPostRequest).Execute()
+	resp, r, err := apiClient.DefaultAPI.V1MonitoringCircuitsUtilizationPost(context.Background()).Authorization(authorization).V1MonitoringCircuitsUtilizationPostRequest(v1MonitoringCircuitsUtilizationPostRequest).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1MonitoringCircuitsUtilizationPost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1MonitoringCircuitsUtilizationPost`: V1MonitoringCircuitsUtilizationPost200Response
+	// response from `V1MonitoringCircuitsUtilizationPost`: V1MonitoringCircuitsUtilizationPostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1MonitoringCircuitsUtilizationPost`: %v\n", resp)
 }
 ```
@@ -22868,11 +24149,11 @@ Other parameters are passed through a pointer to a apiV1MonitoringCircuitsUtiliz
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **string** | Bearer token. Format: Bearer &lt;your_token_here&gt; | 
- **v2MonitoringCircuitsUtilizationPostRequest** | [**V2MonitoringCircuitsUtilizationPostRequest**](V2MonitoringCircuitsUtilizationPostRequest.md) |  | 
+ **v1MonitoringCircuitsUtilizationPostRequest** | [**V1MonitoringCircuitsUtilizationPostRequest**](V1MonitoringCircuitsUtilizationPostRequest.md) |  | 
 
 ### Return type
 
-[**V1MonitoringCircuitsUtilizationPost200Response**](V1MonitoringCircuitsUtilizationPost200Response.md)
+[**V1MonitoringCircuitsUtilizationPostResponse**](V1MonitoringCircuitsUtilizationPostResponse.md)
 
 ### Authorization
 
@@ -22890,7 +24171,7 @@ Name | Type | Description  | Notes
 
 ## V1MonitoringCircuitsVisualizationPost
 
-> V1MonitoringCircuitsVisualizationPost200Response V1MonitoringCircuitsVisualizationPost(ctx).Authorization(authorization).V1MonitoringCircuitsVisualizationPostRequest(v1MonitoringCircuitsVisualizationPostRequest).Execute()
+> V1MonitoringCircuitsVisualizationPostResponse V1MonitoringCircuitsVisualizationPost(ctx).Authorization(authorization).V1MonitoringCircuitsVisualizationPostRequest(v1MonitoringCircuitsVisualizationPostRequest).Execute()
 
 
 
@@ -22917,7 +24198,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1MonitoringCircuitsVisualizationPost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1MonitoringCircuitsVisualizationPost`: V1MonitoringCircuitsVisualizationPost200Response
+	// response from `V1MonitoringCircuitsVisualizationPost`: V1MonitoringCircuitsVisualizationPostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1MonitoringCircuitsVisualizationPost`: %v\n", resp)
 }
 ```
@@ -22938,7 +24219,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1MonitoringCircuitsVisualizationPost200Response**](V1MonitoringCircuitsVisualizationPost200Response.md)
+[**V1MonitoringCircuitsVisualizationPostResponse**](V1MonitoringCircuitsVisualizationPostResponse.md)
 
 ### Authorization
 
@@ -22956,7 +24237,9 @@ Name | Type | Description  | Notes
 
 ## V1NatEntriesDeviceIdGet
 
-> V1NatEntriesDeviceIdGet200Response V1NatEntriesDeviceIdGet(ctx, deviceId).Authorization(authorization).Execute()
+> V1NatEntriesDeviceIdGetResponse V1NatEntriesDeviceIdGet(ctx, deviceId).Authorization(authorization).Execute()
+
+
 
 
 
@@ -22983,7 +24266,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1NatEntriesDeviceIdGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1NatEntriesDeviceIdGet`: V1NatEntriesDeviceIdGet200Response
+	// response from `V1NatEntriesDeviceIdGet`: V1NatEntriesDeviceIdGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1NatEntriesDeviceIdGet`: %v\n", resp)
 }
 ```
@@ -23008,7 +24291,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1NatEntriesDeviceIdGet200Response**](V1NatEntriesDeviceIdGet200Response.md)
+[**V1NatEntriesDeviceIdGetResponse**](V1NatEntriesDeviceIdGetResponse.md)
 
 ### Authorization
 
@@ -23026,7 +24309,9 @@ Name | Type | Description  | Notes
 
 ## V1NatUtilizationDeviceIdGet
 
-> V1NatUtilizationDeviceIdGet200Response V1NatUtilizationDeviceIdGet(ctx, deviceId).Authorization(authorization).Execute()
+> V1NatUtilizationDeviceIdGetResponse V1NatUtilizationDeviceIdGet(ctx, deviceId).Authorization(authorization).Execute()
+
+
 
 
 
@@ -23053,7 +24338,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1NatUtilizationDeviceIdGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1NatUtilizationDeviceIdGet`: V1NatUtilizationDeviceIdGet200Response
+	// response from `V1NatUtilizationDeviceIdGet`: V1NatUtilizationDeviceIdGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1NatUtilizationDeviceIdGet`: %v\n", resp)
 }
 ```
@@ -23078,7 +24363,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1NatUtilizationDeviceIdGet200Response**](V1NatUtilizationDeviceIdGet200Response.md)
+[**V1NatUtilizationDeviceIdGetResponse**](V1NatUtilizationDeviceIdGetResponse.md)
 
 ### Authorization
 
@@ -23097,6 +24382,8 @@ Name | Type | Description  | Notes
 ## V1OnboardingCloudinitDelete
 
 > map[string]interface{} V1OnboardingCloudinitDelete(ctx).Authorization(authorization).Execute()
+
+
 
 
 
@@ -23160,7 +24447,9 @@ Name | Type | Description  | Notes
 
 ## V1OnboardingCloudinitGet
 
-> V1OnboardingCloudinitGet200Response V1OnboardingCloudinitGet(ctx).Authorization(authorization).Execute()
+> V1OnboardingCloudinitGetResponse V1OnboardingCloudinitGet(ctx).Authorization(authorization).Execute()
+
+
 
 
 
@@ -23186,7 +24475,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1OnboardingCloudinitGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1OnboardingCloudinitGet`: V1OnboardingCloudinitGet200Response
+	// response from `V1OnboardingCloudinitGet`: V1OnboardingCloudinitGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1OnboardingCloudinitGet`: %v\n", resp)
 }
 ```
@@ -23206,7 +24495,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1OnboardingCloudinitGet200Response**](V1OnboardingCloudinitGet200Response.md)
+[**V1OnboardingCloudinitGetResponse**](V1OnboardingCloudinitGetResponse.md)
 
 ### Authorization
 
@@ -23224,7 +24513,9 @@ Name | Type | Description  | Notes
 
 ## V1OnboardingCloudinitPost
 
-> map[string]interface{} V1OnboardingCloudinitPost(ctx).Authorization(authorization).V1OnboardingCloudinitGet200Response(v1OnboardingCloudinitGet200Response).Execute()
+> map[string]interface{} V1OnboardingCloudinitPost(ctx).Authorization(authorization).V1OnboardingCloudinitPostRequest(v1OnboardingCloudinitPostRequest).Execute()
+
+
 
 
 
@@ -23242,11 +24533,11 @@ import (
 
 func main() {
 	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
-	v1OnboardingCloudinitGet200Response := *openapiclient.NewV1OnboardingCloudinitGet200Response() // V1OnboardingCloudinitGet200Response | 
+	v1OnboardingCloudinitPostRequest := *openapiclient.NewV1OnboardingCloudinitPostRequest() // V1OnboardingCloudinitPostRequest | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.DefaultAPI.V1OnboardingCloudinitPost(context.Background()).Authorization(authorization).V1OnboardingCloudinitGet200Response(v1OnboardingCloudinitGet200Response).Execute()
+	resp, r, err := apiClient.DefaultAPI.V1OnboardingCloudinitPost(context.Background()).Authorization(authorization).V1OnboardingCloudinitPostRequest(v1OnboardingCloudinitPostRequest).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1OnboardingCloudinitPost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -23268,7 +24559,7 @@ Other parameters are passed through a pointer to a apiV1OnboardingCloudinitPostR
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **string** | Bearer token. Format: Bearer &lt;your_token_here&gt; | 
- **v1OnboardingCloudinitGet200Response** | [**V1OnboardingCloudinitGet200Response**](V1OnboardingCloudinitGet200Response.md) |  | 
+ **v1OnboardingCloudinitPostRequest** | [**V1OnboardingCloudinitPostRequest**](V1OnboardingCloudinitPostRequest.md) |  | 
 
 ### Return type
 
@@ -23290,7 +24581,9 @@ Name | Type | Description  | Notes
 
 ## V1PolicyApplicationsGet
 
-> V1PolicyApplicationsGet200Response V1PolicyApplicationsGet(ctx).Authorization(authorization).Execute()
+> V1PolicyApplicationsGetResponse V1PolicyApplicationsGet(ctx).Authorization(authorization).Execute()
+
+
 
 
 
@@ -23316,7 +24609,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1PolicyApplicationsGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1PolicyApplicationsGet`: V1PolicyApplicationsGet200Response
+	// response from `V1PolicyApplicationsGet`: V1PolicyApplicationsGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1PolicyApplicationsGet`: %v\n", resp)
 }
 ```
@@ -23336,7 +24629,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1PolicyApplicationsGet200Response**](V1PolicyApplicationsGet200Response.md)
+[**V1PolicyApplicationsGetResponse**](V1PolicyApplicationsGetResponse.md)
 
 ### Authorization
 
@@ -23355,6 +24648,8 @@ Name | Type | Description  | Notes
 ## V1PolicyPrefixSetsIdDelete
 
 > map[string]interface{} V1PolicyPrefixSetsIdDelete(ctx, id).Authorization(authorization).Execute()
+
+
 
 
 
@@ -23424,7 +24719,9 @@ Name | Type | Description  | Notes
 
 ## V1PolicyPrefixSetsIdPut
 
-> V1PolicyPrefixSetsPost200Response V1PolicyPrefixSetsIdPut(ctx, id).Authorization(authorization).V1PolicyPrefixSetsIdPutRequest(v1PolicyPrefixSetsIdPutRequest).Execute()
+> V1PolicyPrefixSetsIdPutResponse V1PolicyPrefixSetsIdPut(ctx, id).Authorization(authorization).V1PolicyPrefixSetsIdPutRequest(v1PolicyPrefixSetsIdPutRequest).Execute()
+
+
 
 
 
@@ -23452,7 +24749,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1PolicyPrefixSetsIdPut``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1PolicyPrefixSetsIdPut`: V1PolicyPrefixSetsPost200Response
+	// response from `V1PolicyPrefixSetsIdPut`: V1PolicyPrefixSetsIdPutResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1PolicyPrefixSetsIdPut`: %v\n", resp)
 }
 ```
@@ -23478,7 +24775,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1PolicyPrefixSetsPost200Response**](V1PolicyPrefixSetsPost200Response.md)
+[**V1PolicyPrefixSetsIdPutResponse**](V1PolicyPrefixSetsIdPutResponse.md)
 
 ### Authorization
 
@@ -23496,7 +24793,9 @@ Name | Type | Description  | Notes
 
 ## V1PolicyPrefixSetsPost
 
-> V1PolicyPrefixSetsPost200Response V1PolicyPrefixSetsPost(ctx).Authorization(authorization).V1PolicyPrefixSetsPostRequest(v1PolicyPrefixSetsPostRequest).Execute()
+> V1PolicyPrefixSetsPostResponse V1PolicyPrefixSetsPost(ctx).Authorization(authorization).V1PolicyPrefixSetsPostRequest(v1PolicyPrefixSetsPostRequest).Execute()
+
+
 
 
 
@@ -23523,7 +24822,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1PolicyPrefixSetsPost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1PolicyPrefixSetsPost`: V1PolicyPrefixSetsPost200Response
+	// response from `V1PolicyPrefixSetsPost`: V1PolicyPrefixSetsPostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1PolicyPrefixSetsPost`: %v\n", resp)
 }
 ```
@@ -23544,7 +24843,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1PolicyPrefixSetsPost200Response**](V1PolicyPrefixSetsPost200Response.md)
+[**V1PolicyPrefixSetsPostResponse**](V1PolicyPrefixSetsPostResponse.md)
 
 ### Authorization
 
@@ -23562,7 +24861,9 @@ Name | Type | Description  | Notes
 
 ## V1PolicyRouteTagSetsIdDelete
 
-> V1PolicyRouteTagSetsPost200Response V1PolicyRouteTagSetsIdDelete(ctx, id).Authorization(authorization).Level(level).Execute()
+> V1PolicyRouteTagSetsIdDeleteResponse V1PolicyRouteTagSetsIdDelete(ctx, id).Authorization(authorization).Level(level).Execute()
+
+
 
 
 
@@ -23590,7 +24891,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1PolicyRouteTagSetsIdDelete``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1PolicyRouteTagSetsIdDelete`: V1PolicyRouteTagSetsPost200Response
+	// response from `V1PolicyRouteTagSetsIdDelete`: V1PolicyRouteTagSetsIdDeleteResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1PolicyRouteTagSetsIdDelete`: %v\n", resp)
 }
 ```
@@ -23616,7 +24917,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1PolicyRouteTagSetsPost200Response**](V1PolicyRouteTagSetsPost200Response.md)
+[**V1PolicyRouteTagSetsIdDeleteResponse**](V1PolicyRouteTagSetsIdDeleteResponse.md)
 
 ### Authorization
 
@@ -23634,7 +24935,9 @@ Name | Type | Description  | Notes
 
 ## V1PolicyRouteTagSetsPost
 
-> V1PolicyRouteTagSetsPost200Response V1PolicyRouteTagSetsPost(ctx).Authorization(authorization).V1PolicyRouteTagSetsPostRequest(v1PolicyRouteTagSetsPostRequest).Execute()
+> V1PolicyRouteTagSetsPostResponse V1PolicyRouteTagSetsPost(ctx).Authorization(authorization).V1PolicyRouteTagSetsPostRequest(v1PolicyRouteTagSetsPostRequest).Execute()
+
+
 
 
 
@@ -23661,7 +24964,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1PolicyRouteTagSetsPost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1PolicyRouteTagSetsPost`: V1PolicyRouteTagSetsPost200Response
+	// response from `V1PolicyRouteTagSetsPost`: V1PolicyRouteTagSetsPostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1PolicyRouteTagSetsPost`: %v\n", resp)
 }
 ```
@@ -23682,7 +24985,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1PolicyRouteTagSetsPost200Response**](V1PolicyRouteTagSetsPost200Response.md)
+[**V1PolicyRouteTagSetsPostResponse**](V1PolicyRouteTagSetsPostResponse.md)
 
 ### Authorization
 
@@ -23700,7 +25003,9 @@ Name | Type | Description  | Notes
 
 ## V1PolicyRouteTagSetsTagDetailGet
 
-> V1PolicyRouteTagSetsTagDetailGet200Response V1PolicyRouteTagSetsTagDetailGet(ctx).Authorization(authorization).Execute()
+> V1PolicyRouteTagSetsTagDetailGetResponse V1PolicyRouteTagSetsTagDetailGet(ctx).Authorization(authorization).Execute()
+
+
 
 
 
@@ -23726,7 +25031,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1PolicyRouteTagSetsTagDetailGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1PolicyRouteTagSetsTagDetailGet`: V1PolicyRouteTagSetsTagDetailGet200Response
+	// response from `V1PolicyRouteTagSetsTagDetailGet`: V1PolicyRouteTagSetsTagDetailGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1PolicyRouteTagSetsTagDetailGet`: %v\n", resp)
 }
 ```
@@ -23746,7 +25051,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1PolicyRouteTagSetsTagDetailGet200Response**](V1PolicyRouteTagSetsTagDetailGet200Response.md)
+[**V1PolicyRouteTagSetsTagDetailGetResponse**](V1PolicyRouteTagSetsTagDetailGetResponse.md)
 
 ### Authorization
 
@@ -23764,7 +25069,9 @@ Name | Type | Description  | Notes
 
 ## V1PolicyRouteTagSetsTagsGet
 
-> V1PolicyRouteTagSetsTagsGet200Response V1PolicyRouteTagSetsTagsGet(ctx).Authorization(authorization).Execute()
+> V1PolicyRouteTagSetsTagsGetResponse V1PolicyRouteTagSetsTagsGet(ctx).Authorization(authorization).Execute()
+
+
 
 
 
@@ -23790,7 +25097,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1PolicyRouteTagSetsTagsGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1PolicyRouteTagSetsTagsGet`: V1PolicyRouteTagSetsTagsGet200Response
+	// response from `V1PolicyRouteTagSetsTagsGet`: V1PolicyRouteTagSetsTagsGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1PolicyRouteTagSetsTagsGet`: %v\n", resp)
 }
 ```
@@ -23810,7 +25117,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1PolicyRouteTagSetsTagsGet200Response**](V1PolicyRouteTagSetsTagsGet200Response.md)
+[**V1PolicyRouteTagSetsTagsGetResponse**](V1PolicyRouteTagSetsTagsGetResponse.md)
 
 ### Authorization
 
@@ -23828,7 +25135,9 @@ Name | Type | Description  | Notes
 
 ## V1PolicyRouteTagSetsTagsSummaryGet
 
-> V1PolicyRouteTagSetsTagsSummaryGet200Response V1PolicyRouteTagSetsTagsSummaryGet(ctx).Authorization(authorization).Execute()
+> V1PolicyRouteTagSetsTagsSummaryGetResponse V1PolicyRouteTagSetsTagsSummaryGet(ctx).Authorization(authorization).Execute()
+
+
 
 
 
@@ -23854,7 +25163,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1PolicyRouteTagSetsTagsSummaryGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1PolicyRouteTagSetsTagsSummaryGet`: V1PolicyRouteTagSetsTagsSummaryGet200Response
+	// response from `V1PolicyRouteTagSetsTagsSummaryGet`: V1PolicyRouteTagSetsTagsSummaryGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1PolicyRouteTagSetsTagsSummaryGet`: %v\n", resp)
 }
 ```
@@ -23874,7 +25183,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1PolicyRouteTagSetsTagsSummaryGet200Response**](V1PolicyRouteTagSetsTagsSummaryGet200Response.md)
+[**V1PolicyRouteTagSetsTagsSummaryGetResponse**](V1PolicyRouteTagSetsTagsSummaryGetResponse.md)
 
 ### Authorization
 
@@ -23896,6 +25205,8 @@ Name | Type | Description  | Notes
 
 
 
+
+
 ### Example
 
 ```go
@@ -23910,7 +25221,7 @@ import (
 
 func main() {
 	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
-	gcsName := "example string" // string |  (optional)
+	gcsName := "example string" // string | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -23958,7 +25269,9 @@ Name | Type | Description  | Notes
 
 ## V1PortalApikeysGet
 
-> V1PortalApikeysGet200Response V1PortalApikeysGet(ctx).Authorization(authorization).Execute()
+> V1PortalApikeysGetResponse V1PortalApikeysGet(ctx).Authorization(authorization).Execute()
+
+
 
 
 
@@ -23984,7 +25297,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1PortalApikeysGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1PortalApikeysGet`: V1PortalApikeysGet200Response
+	// response from `V1PortalApikeysGet`: V1PortalApikeysGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1PortalApikeysGet`: %v\n", resp)
 }
 ```
@@ -24004,7 +25317,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1PortalApikeysGet200Response**](V1PortalApikeysGet200Response.md)
+[**V1PortalApikeysGetResponse**](V1PortalApikeysGetResponse.md)
 
 ### Authorization
 
@@ -24022,7 +25335,9 @@ Name | Type | Description  | Notes
 
 ## V1PortalApikeysPost
 
-> V1PortalApikeysPost200Response V1PortalApikeysPost(ctx).Authorization(authorization).V1PortalApikeysPostRequest(v1PortalApikeysPostRequest).Execute()
+> V1PortalApikeysPostResponse V1PortalApikeysPost(ctx).Authorization(authorization).V1PortalApikeysPostRequest(v1PortalApikeysPostRequest).Execute()
+
+
 
 
 
@@ -24040,7 +25355,7 @@ import (
 
 func main() {
 	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
-	v1PortalApikeysPostRequest := *openapiclient.NewV1PortalApikeysPostRequest() // V1PortalApikeysPostRequest | 
+	v1PortalApikeysPostRequest := *openapiclient.NewV1PortalApikeysPostRequest("example string") // V1PortalApikeysPostRequest | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -24049,7 +25364,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1PortalApikeysPost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1PortalApikeysPost`: V1PortalApikeysPost200Response
+	// response from `V1PortalApikeysPost`: V1PortalApikeysPostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1PortalApikeysPost`: %v\n", resp)
 }
 ```
@@ -24070,7 +25385,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1PortalApikeysPost200Response**](V1PortalApikeysPost200Response.md)
+[**V1PortalApikeysPostResponse**](V1PortalApikeysPostResponse.md)
 
 ### Authorization
 
@@ -24088,7 +25403,7 @@ Name | Type | Description  | Notes
 
 ## V1PortalPrivateDetailsGet
 
-> V1PortalPrivateDetailsGet200Response V1PortalPrivateDetailsGet(ctx).Authorization(authorization).Execute()
+> V1PortalPrivateDetailsGetResponse V1PortalPrivateDetailsGet(ctx).Authorization(authorization).Execute()
 
 
 
@@ -24114,7 +25429,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1PortalPrivateDetailsGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1PortalPrivateDetailsGet`: V1PortalPrivateDetailsGet200Response
+	// response from `V1PortalPrivateDetailsGet`: V1PortalPrivateDetailsGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1PortalPrivateDetailsGet`: %v\n", resp)
 }
 ```
@@ -24134,7 +25449,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1PortalPrivateDetailsGet200Response**](V1PortalPrivateDetailsGet200Response.md)
+[**V1PortalPrivateDetailsGetResponse**](V1PortalPrivateDetailsGetResponse.md)
 
 ### Authorization
 
@@ -24152,7 +25467,7 @@ Name | Type | Description  | Notes
 
 ## V1PortalPrivateInventoryDetailsGet
 
-> V1PortalPrivateInventoryDetailsGet200Response V1PortalPrivateInventoryDetailsGet(ctx).Authorization(authorization).Execute()
+> V1PortalPrivateInventoryDetailsGetResponse V1PortalPrivateInventoryDetailsGet(ctx).Authorization(authorization).Execute()
 
 
 
@@ -24178,7 +25493,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1PortalPrivateInventoryDetailsGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1PortalPrivateInventoryDetailsGet`: V1PortalPrivateInventoryDetailsGet200Response
+	// response from `V1PortalPrivateInventoryDetailsGet`: V1PortalPrivateInventoryDetailsGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1PortalPrivateInventoryDetailsGet`: %v\n", resp)
 }
 ```
@@ -24198,7 +25513,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1PortalPrivateInventoryDetailsGet200Response**](V1PortalPrivateInventoryDetailsGet200Response.md)
+[**V1PortalPrivateInventoryDetailsGetResponse**](V1PortalPrivateInventoryDetailsGetResponse.md)
 
 ### Authorization
 
@@ -24282,7 +25597,7 @@ Name | Type | Description  | Notes
 
 ## V1PortalPrivateRegisterPost
 
-> map[string]interface{} V1PortalPrivateRegisterPost(ctx).Authorization(authorization).V1PortalPrivatePostRequest(v1PortalPrivatePostRequest).Execute()
+> map[string]interface{} V1PortalPrivateRegisterPost(ctx).Authorization(authorization).V1PortalPrivateRegisterPostRequest(v1PortalPrivateRegisterPostRequest).Execute()
 
 
 
@@ -24300,11 +25615,11 @@ import (
 
 func main() {
 	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
-	v1PortalPrivatePostRequest := *openapiclient.NewV1PortalPrivatePostRequest() // V1PortalPrivatePostRequest | 
+	v1PortalPrivateRegisterPostRequest := *openapiclient.NewV1PortalPrivateRegisterPostRequest() // V1PortalPrivateRegisterPostRequest | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.DefaultAPI.V1PortalPrivateRegisterPost(context.Background()).Authorization(authorization).V1PortalPrivatePostRequest(v1PortalPrivatePostRequest).Execute()
+	resp, r, err := apiClient.DefaultAPI.V1PortalPrivateRegisterPost(context.Background()).Authorization(authorization).V1PortalPrivateRegisterPostRequest(v1PortalPrivateRegisterPostRequest).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1PortalPrivateRegisterPost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -24326,7 +25641,7 @@ Other parameters are passed through a pointer to a apiV1PortalPrivateRegisterPos
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **string** | Bearer token. Format: Bearer &lt;your_token_here&gt; | 
- **v1PortalPrivatePostRequest** | [**V1PortalPrivatePostRequest**](V1PortalPrivatePostRequest.md) |  | 
+ **v1PortalPrivateRegisterPostRequest** | [**V1PortalPrivateRegisterPostRequest**](V1PortalPrivateRegisterPostRequest.md) |  | 
 
 ### Return type
 
@@ -24414,7 +25729,9 @@ Name | Type | Description  | Notes
 
 ## V1PresharedkeyGet
 
-> V1PresharedkeyGet200Response V1PresharedkeyGet(ctx).Authorization(authorization).Execute()
+> V1PresharedkeyGetResponse V1PresharedkeyGet(ctx).Authorization(authorization).Execute()
+
+
 
 
 
@@ -24440,7 +25757,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1PresharedkeyGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1PresharedkeyGet`: V1PresharedkeyGet200Response
+	// response from `V1PresharedkeyGet`: V1PresharedkeyGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1PresharedkeyGet`: %v\n", resp)
 }
 ```
@@ -24460,7 +25777,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1PresharedkeyGet200Response**](V1PresharedkeyGet200Response.md)
+[**V1PresharedkeyGetResponse**](V1PresharedkeyGetResponse.md)
 
 ### Authorization
 
@@ -24478,7 +25795,9 @@ Name | Type | Description  | Notes
 
 ## V1QosCircuitProfilesGet
 
-> V1QosCircuitProfilesGet200Response V1QosCircuitProfilesGet(ctx).Authorization(authorization).Execute()
+> V1QosCircuitProfilesGetResponse V1QosCircuitProfilesGet(ctx).Authorization(authorization).Execute()
+
+
 
 
 
@@ -24504,7 +25823,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1QosCircuitProfilesGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1QosCircuitProfilesGet`: V1QosCircuitProfilesGet200Response
+	// response from `V1QosCircuitProfilesGet`: V1QosCircuitProfilesGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1QosCircuitProfilesGet`: %v\n", resp)
 }
 ```
@@ -24524,7 +25843,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1QosCircuitProfilesGet200Response**](V1QosCircuitProfilesGet200Response.md)
+[**V1QosCircuitProfilesGetResponse**](V1QosCircuitProfilesGetResponse.md)
 
 ### Authorization
 
@@ -24542,7 +25861,9 @@ Name | Type | Description  | Notes
 
 ## V1RegionsGet
 
-> V1GatewaysRegionsGet200Response V1RegionsGet(ctx).Authorization(authorization).Execute()
+> V1RegionsGetResponse V1RegionsGet(ctx).Authorization(authorization).Execute()
+
+
 
 
 
@@ -24568,7 +25889,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1RegionsGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1RegionsGet`: V1GatewaysRegionsGet200Response
+	// response from `V1RegionsGet`: V1RegionsGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1RegionsGet`: %v\n", resp)
 }
 ```
@@ -24588,7 +25909,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1GatewaysRegionsGet200Response**](V1GatewaysRegionsGet200Response.md)
+[**V1RegionsGetResponse**](V1RegionsGetResponse.md)
 
 ### Authorization
 
@@ -24606,7 +25927,7 @@ Name | Type | Description  | Notes
 
 ## V1SearchGet
 
-> V1SearchGet200Response V1SearchGet(ctx).Authorization(authorization).MaxResults(maxResults).Search(search).Execute()
+> V1SearchGetResponse V1SearchGet(ctx).Authorization(authorization).MaxResults(maxResults).Search(search).Execute()
 
 
 
@@ -24634,7 +25955,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1SearchGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1SearchGet`: V1SearchGet200Response
+	// response from `V1SearchGet`: V1SearchGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1SearchGet`: %v\n", resp)
 }
 ```
@@ -24656,7 +25977,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1SearchGet200Response**](V1SearchGet200Response.md)
+[**V1SearchGetResponse**](V1SearchGetResponse.md)
 
 ### Authorization
 
@@ -24674,7 +25995,9 @@ Name | Type | Description  | Notes
 
 ## V1SiteDetailsSitelistsPost
 
-> V1SiteDetailsSitelistsPost200Response V1SiteDetailsSitelistsPost(ctx).Authorization(authorization).V1SiteDetailsSitelistsPostRequest(v1SiteDetailsSitelistsPostRequest).Execute()
+> V1SiteDetailsSitelistsPostResponse V1SiteDetailsSitelistsPost(ctx).Authorization(authorization).V1SiteDetailsSitelistsPostRequest(v1SiteDetailsSitelistsPostRequest).Execute()
+
+
 
 
 
@@ -24701,7 +26024,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1SiteDetailsSitelistsPost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1SiteDetailsSitelistsPost`: V1SiteDetailsSitelistsPost200Response
+	// response from `V1SiteDetailsSitelistsPost`: V1SiteDetailsSitelistsPostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1SiteDetailsSitelistsPost`: %v\n", resp)
 }
 ```
@@ -24722,7 +26045,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1SiteDetailsSitelistsPost200Response**](V1SiteDetailsSitelistsPost200Response.md)
+[**V1SiteDetailsSitelistsPostResponse**](V1SiteDetailsSitelistsPostResponse.md)
 
 ### Authorization
 
@@ -24740,7 +26063,9 @@ Name | Type | Description  | Notes
 
 ## V1SiteIdDetailsInterfacesGet
 
-> V1SiteIdDetailsInterfacesGet200Response V1SiteIdDetailsInterfacesGet(ctx, id).Authorization(authorization).Execute()
+> V1SiteIdDetailsInterfacesGetResponse V1SiteIdDetailsInterfacesGet(ctx, id).Authorization(authorization).Execute()
+
+
 
 
 
@@ -24767,7 +26092,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1SiteIdDetailsInterfacesGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1SiteIdDetailsInterfacesGet`: V1SiteIdDetailsInterfacesGet200Response
+	// response from `V1SiteIdDetailsInterfacesGet`: V1SiteIdDetailsInterfacesGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1SiteIdDetailsInterfacesGet`: %v\n", resp)
 }
 ```
@@ -24792,7 +26117,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1SiteIdDetailsInterfacesGet200Response**](V1SiteIdDetailsInterfacesGet200Response.md)
+[**V1SiteIdDetailsInterfacesGetResponse**](V1SiteIdDetailsInterfacesGetResponse.md)
 
 ### Authorization
 
@@ -24810,7 +26135,9 @@ Name | Type | Description  | Notes
 
 ## V1SitesDetailsGet
 
-> V1SitesDetailsGet200Response V1SitesDetailsGet(ctx).Authorization(authorization).Execute()
+> V1SitesDetailsGetResponse V1SitesDetailsGet(ctx).Authorization(authorization).Execute()
+
+
 
 
 
@@ -24836,7 +26163,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1SitesDetailsGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1SitesDetailsGet`: V1SitesDetailsGet200Response
+	// response from `V1SitesDetailsGet`: V1SitesDetailsGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1SitesDetailsGet`: %v\n", resp)
 }
 ```
@@ -24856,7 +26183,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1SitesDetailsGet200Response**](V1SitesDetailsGet200Response.md)
+[**V1SitesDetailsGetResponse**](V1SitesDetailsGetResponse.md)
 
 ### Authorization
 
@@ -24874,7 +26201,9 @@ Name | Type | Description  | Notes
 
 ## V1SitesGet
 
-> V1SitesGet200Response V1SitesGet(ctx).Authorization(authorization).Execute()
+> V1SitesGetResponse V1SitesGet(ctx).Authorization(authorization).Execute()
+
+
 
 
 
@@ -24900,7 +26229,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1SitesGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1SitesGet`: V1SitesGet200Response
+	// response from `V1SitesGet`: V1SitesGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1SitesGet`: %v\n", resp)
 }
 ```
@@ -24920,7 +26249,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1SitesGet200Response**](V1SitesGet200Response.md)
+[**V1SitesGetResponse**](V1SitesGetResponse.md)
 
 ### Authorization
 
@@ -24938,7 +26267,9 @@ Name | Type | Description  | Notes
 
 ## V1SitesPost
 
-> V1SitesPost200Response V1SitesPost(ctx).Authorization(authorization).V1SitesPostRequest(v1SitesPostRequest).Execute()
+> V1SitesPostResponse V1SitesPost(ctx).Authorization(authorization).V1SitesPostRequest(v1SitesPostRequest).Execute()
+
+
 
 
 
@@ -24965,7 +26296,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1SitesPost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1SitesPost`: V1SitesPost200Response
+	// response from `V1SitesPost`: V1SitesPostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1SitesPost`: %v\n", resp)
 }
 ```
@@ -24986,7 +26317,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1SitesPost200Response**](V1SitesPost200Response.md)
+[**V1SitesPostResponse**](V1SitesPostResponse.md)
 
 ### Authorization
 
@@ -25004,7 +26335,9 @@ Name | Type | Description  | Notes
 
 ## V1SitesSiteIdCircuitsGet
 
-> V1SitesSiteIdCircuitsGet200Response V1SitesSiteIdCircuitsGet(ctx, siteId).Authorization(authorization).Execute()
+> V1SitesSiteIdCircuitsGetResponse V1SitesSiteIdCircuitsGet(ctx, siteId).Authorization(authorization).Execute()
+
+
 
 
 
@@ -25031,7 +26364,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1SitesSiteIdCircuitsGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1SitesSiteIdCircuitsGet`: V1SitesSiteIdCircuitsGet200Response
+	// response from `V1SitesSiteIdCircuitsGet`: V1SitesSiteIdCircuitsGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1SitesSiteIdCircuitsGet`: %v\n", resp)
 }
 ```
@@ -25056,7 +26389,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1SitesSiteIdCircuitsGet200Response**](V1SitesSiteIdCircuitsGet200Response.md)
+[**V1SitesSiteIdCircuitsGetResponse**](V1SitesSiteIdCircuitsGetResponse.md)
 
 ### Authorization
 
@@ -25075,6 +26408,8 @@ Name | Type | Description  | Notes
 ## V1SitesSiteIdDelete
 
 > map[string]interface{} V1SitesSiteIdDelete(ctx, siteId).Authorization(authorization).Execute()
+
+
 
 
 
@@ -25144,7 +26479,9 @@ Name | Type | Description  | Notes
 
 ## V1SitesSiteIdDevicesGet
 
-> V1SitesSiteIdDevicesGet200Response V1SitesSiteIdDevicesGet(ctx, siteId).Authorization(authorization).Execute()
+> V1SitesSiteIdDevicesGetResponse V1SitesSiteIdDevicesGet(ctx, siteId).Authorization(authorization).Execute()
+
+
 
 
 
@@ -25171,7 +26508,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1SitesSiteIdDevicesGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1SitesSiteIdDevicesGet`: V1SitesSiteIdDevicesGet200Response
+	// response from `V1SitesSiteIdDevicesGet`: V1SitesSiteIdDevicesGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1SitesSiteIdDevicesGet`: %v\n", resp)
 }
 ```
@@ -25196,7 +26533,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1SitesSiteIdDevicesGet200Response**](V1SitesSiteIdDevicesGet200Response.md)
+[**V1SitesSiteIdDevicesGetResponse**](V1SitesSiteIdDevicesGetResponse.md)
 
 ### Authorization
 
@@ -25214,7 +26551,9 @@ Name | Type | Description  | Notes
 
 ## V1SitesSiteIdPost
 
-> V1SitesPost200Response V1SitesSiteIdPost(ctx, siteId).Authorization(authorization).V1SitesSiteIdPostRequest(v1SitesSiteIdPostRequest).Execute()
+> V1SitesSiteIdPostResponse V1SitesSiteIdPost(ctx, siteId).Authorization(authorization).V1SitesSiteIdPostRequest(v1SitesSiteIdPostRequest).Execute()
+
+
 
 
 
@@ -25242,7 +26581,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1SitesSiteIdPost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1SitesSiteIdPost`: V1SitesPost200Response
+	// response from `V1SitesSiteIdPost`: V1SitesSiteIdPostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1SitesSiteIdPost`: %v\n", resp)
 }
 ```
@@ -25268,7 +26607,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1SitesPost200Response**](V1SitesPost200Response.md)
+[**V1SitesSiteIdPostResponse**](V1SitesSiteIdPostResponse.md)
 
 ### Authorization
 
@@ -25286,7 +26625,7 @@ Name | Type | Description  | Notes
 
 ## V1SoftwareAutoUpgradeDefaultGet
 
-> V1SoftwareAutoUpgradeDefaultGet200Response V1SoftwareAutoUpgradeDefaultGet(ctx).Authorization(authorization).Execute()
+> V1SoftwareAutoUpgradeDefaultGetResponse V1SoftwareAutoUpgradeDefaultGet(ctx).Authorization(authorization).Execute()
 
 
 
@@ -25312,7 +26651,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1SoftwareAutoUpgradeDefaultGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1SoftwareAutoUpgradeDefaultGet`: V1SoftwareAutoUpgradeDefaultGet200Response
+	// response from `V1SoftwareAutoUpgradeDefaultGet`: V1SoftwareAutoUpgradeDefaultGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1SoftwareAutoUpgradeDefaultGet`: %v\n", resp)
 }
 ```
@@ -25332,7 +26671,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1SoftwareAutoUpgradeDefaultGet200Response**](V1SoftwareAutoUpgradeDefaultGet200Response.md)
+[**V1SoftwareAutoUpgradeDefaultGetResponse**](V1SoftwareAutoUpgradeDefaultGetResponse.md)
 
 ### Authorization
 
@@ -25350,7 +26689,7 @@ Name | Type | Description  | Notes
 
 ## V1SoftwareAutoUpgradeDefaultPut
 
-> map[string]interface{} V1SoftwareAutoUpgradeDefaultPut(ctx).Authorization(authorization).V1SoftwareAutoUpgradeDefaultGet200Response(v1SoftwareAutoUpgradeDefaultGet200Response).Execute()
+> map[string]interface{} V1SoftwareAutoUpgradeDefaultPut(ctx).Authorization(authorization).V1SoftwareAutoUpgradeDefaultPutRequest(v1SoftwareAutoUpgradeDefaultPutRequest).Execute()
 
 
 
@@ -25368,11 +26707,11 @@ import (
 
 func main() {
 	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
-	v1SoftwareAutoUpgradeDefaultGet200Response := *openapiclient.NewV1SoftwareAutoUpgradeDefaultGet200Response() // V1SoftwareAutoUpgradeDefaultGet200Response | 
+	v1SoftwareAutoUpgradeDefaultPutRequest := *openapiclient.NewV1SoftwareAutoUpgradeDefaultPutRequest() // V1SoftwareAutoUpgradeDefaultPutRequest | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.DefaultAPI.V1SoftwareAutoUpgradeDefaultPut(context.Background()).Authorization(authorization).V1SoftwareAutoUpgradeDefaultGet200Response(v1SoftwareAutoUpgradeDefaultGet200Response).Execute()
+	resp, r, err := apiClient.DefaultAPI.V1SoftwareAutoUpgradeDefaultPut(context.Background()).Authorization(authorization).V1SoftwareAutoUpgradeDefaultPutRequest(v1SoftwareAutoUpgradeDefaultPutRequest).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1SoftwareAutoUpgradeDefaultPut``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -25394,7 +26733,7 @@ Other parameters are passed through a pointer to a apiV1SoftwareAutoUpgradeDefau
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **string** | Bearer token. Format: Bearer &lt;your_token_here&gt; | 
- **v1SoftwareAutoUpgradeDefaultGet200Response** | [**V1SoftwareAutoUpgradeDefaultGet200Response**](V1SoftwareAutoUpgradeDefaultGet200Response.md) |  | 
+ **v1SoftwareAutoUpgradeDefaultPutRequest** | [**V1SoftwareAutoUpgradeDefaultPutRequest**](V1SoftwareAutoUpgradeDefaultPutRequest.md) |  | 
 
 ### Return type
 
@@ -25482,7 +26821,7 @@ Name | Type | Description  | Notes
 
 ## V1SoftwareReleaseNotesGet
 
-> V1SoftwareReleaseNotesGet200Response V1SoftwareReleaseNotesGet(ctx).Authorization(authorization).Execute()
+> V1SoftwareReleaseNotesGetResponse V1SoftwareReleaseNotesGet(ctx).Authorization(authorization).Execute()
 
 
 
@@ -25508,7 +26847,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1SoftwareReleaseNotesGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1SoftwareReleaseNotesGet`: V1SoftwareReleaseNotesGet200Response
+	// response from `V1SoftwareReleaseNotesGet`: V1SoftwareReleaseNotesGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1SoftwareReleaseNotesGet`: %v\n", resp)
 }
 ```
@@ -25528,7 +26867,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1SoftwareReleaseNotesGet200Response**](V1SoftwareReleaseNotesGet200Response.md)
+[**V1SoftwareReleaseNotesGetResponse**](V1SoftwareReleaseNotesGetResponse.md)
 
 ### Authorization
 
@@ -25546,7 +26885,7 @@ Name | Type | Description  | Notes
 
 ## V1SoftwareReleasesDownloadGet
 
-> V1SoftwareReleasesDownloadGet200Response V1SoftwareReleasesDownloadGet(ctx).Authorization(authorization).Execute()
+> V1SoftwareReleasesDownloadGetResponse V1SoftwareReleasesDownloadGet(ctx).Authorization(authorization).Execute()
 
 
 
@@ -25572,7 +26911,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1SoftwareReleasesDownloadGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1SoftwareReleasesDownloadGet`: V1SoftwareReleasesDownloadGet200Response
+	// response from `V1SoftwareReleasesDownloadGet`: V1SoftwareReleasesDownloadGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1SoftwareReleasesDownloadGet`: %v\n", resp)
 }
 ```
@@ -25592,7 +26931,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1SoftwareReleasesDownloadGet200Response**](V1SoftwareReleasesDownloadGet200Response.md)
+[**V1SoftwareReleasesDownloadGetResponse**](V1SoftwareReleasesDownloadGetResponse.md)
 
 ### Authorization
 
@@ -25610,7 +26949,7 @@ Name | Type | Description  | Notes
 
 ## V1SoftwareReleasesSummaryGet
 
-> V1SoftwareReleasesSummaryGet200Response V1SoftwareReleasesSummaryGet(ctx).Authorization(authorization).Execute()
+> V1SoftwareReleasesSummaryGetResponse V1SoftwareReleasesSummaryGet(ctx).Authorization(authorization).Execute()
 
 
 
@@ -25636,7 +26975,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1SoftwareReleasesSummaryGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1SoftwareReleasesSummaryGet`: V1SoftwareReleasesSummaryGet200Response
+	// response from `V1SoftwareReleasesSummaryGet`: V1SoftwareReleasesSummaryGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1SoftwareReleasesSummaryGet`: %v\n", resp)
 }
 ```
@@ -25656,7 +26995,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1SoftwareReleasesSummaryGet200Response**](V1SoftwareReleasesSummaryGet200Response.md)
+[**V1SoftwareReleasesSummaryGetResponse**](V1SoftwareReleasesSummaryGetResponse.md)
 
 ### Authorization
 
@@ -25674,7 +27013,7 @@ Name | Type | Description  | Notes
 
 ## V1SoftwareRunningDetailsGet
 
-> V1SoftwareRunningDetailsGet200Response V1SoftwareRunningDetailsGet(ctx).Authorization(authorization).Execute()
+> V1SoftwareRunningDetailsGetResponse V1SoftwareRunningDetailsGet(ctx).Authorization(authorization).Execute()
 
 
 
@@ -25700,7 +27039,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1SoftwareRunningDetailsGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1SoftwareRunningDetailsGet`: V1SoftwareRunningDetailsGet200Response
+	// response from `V1SoftwareRunningDetailsGet`: V1SoftwareRunningDetailsGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1SoftwareRunningDetailsGet`: %v\n", resp)
 }
 ```
@@ -25720,7 +27059,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1SoftwareRunningDetailsGet200Response**](V1SoftwareRunningDetailsGet200Response.md)
+[**V1SoftwareRunningDetailsGetResponse**](V1SoftwareRunningDetailsGetResponse.md)
 
 ### Authorization
 
@@ -25738,7 +27077,7 @@ Name | Type | Description  | Notes
 
 ## V1SoftwareRunningSummaryGet
 
-> V1SoftwareRunningSummaryGet200Response V1SoftwareRunningSummaryGet(ctx).Authorization(authorization).Execute()
+> V1SoftwareRunningSummaryGetResponse V1SoftwareRunningSummaryGet(ctx).Authorization(authorization).Execute()
 
 
 
@@ -25764,7 +27103,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1SoftwareRunningSummaryGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1SoftwareRunningSummaryGet`: V1SoftwareRunningSummaryGet200Response
+	// response from `V1SoftwareRunningSummaryGet`: V1SoftwareRunningSummaryGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1SoftwareRunningSummaryGet`: %v\n", resp)
 }
 ```
@@ -25784,7 +27123,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1SoftwareRunningSummaryGet200Response**](V1SoftwareRunningSummaryGet200Response.md)
+[**V1SoftwareRunningSummaryGetResponse**](V1SoftwareRunningSummaryGetResponse.md)
 
 ### Authorization
 
@@ -25802,7 +27141,9 @@ Name | Type | Description  | Notes
 
 ## V1TalkersDeviceDeviceIdTopPost
 
-> V1TalkersDeviceDeviceIdTopPost200Response V1TalkersDeviceDeviceIdTopPost(ctx, deviceId).Authorization(authorization).V1TalkersDeviceDeviceIdTopPostRequest(v1TalkersDeviceDeviceIdTopPostRequest).Execute()
+> V1TalkersDeviceDeviceIdTopPostResponse V1TalkersDeviceDeviceIdTopPost(ctx, deviceId).Authorization(authorization).V1TalkersDeviceDeviceIdTopPostRequest(v1TalkersDeviceDeviceIdTopPostRequest).Execute()
+
+
 
 
 
@@ -25830,7 +27171,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1TalkersDeviceDeviceIdTopPost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1TalkersDeviceDeviceIdTopPost`: V1TalkersDeviceDeviceIdTopPost200Response
+	// response from `V1TalkersDeviceDeviceIdTopPost`: V1TalkersDeviceDeviceIdTopPostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1TalkersDeviceDeviceIdTopPost`: %v\n", resp)
 }
 ```
@@ -25856,7 +27197,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1TalkersDeviceDeviceIdTopPost200Response**](V1TalkersDeviceDeviceIdTopPost200Response.md)
+[**V1TalkersDeviceDeviceIdTopPostResponse**](V1TalkersDeviceDeviceIdTopPostResponse.md)
 
 ### Authorization
 
@@ -25874,7 +27215,9 @@ Name | Type | Description  | Notes
 
 ## V1TalkersSiteSiteIdTopPost
 
-> V1TalkersDeviceDeviceIdTopPost200Response V1TalkersSiteSiteIdTopPost(ctx, siteId).Authorization(authorization).V1TalkersDeviceDeviceIdTopPostRequest(v1TalkersDeviceDeviceIdTopPostRequest).Execute()
+> V1TalkersSiteSiteIdTopPostResponse V1TalkersSiteSiteIdTopPost(ctx, siteId).Authorization(authorization).V1TalkersSiteSiteIdTopPostRequest(v1TalkersSiteSiteIdTopPostRequest).Execute()
+
+
 
 
 
@@ -25893,16 +27236,16 @@ import (
 func main() {
 	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
 	siteId := int64(1234567891011) // int64 | 
-	v1TalkersDeviceDeviceIdTopPostRequest := *openapiclient.NewV1TalkersDeviceDeviceIdTopPostRequest() // V1TalkersDeviceDeviceIdTopPostRequest | 
+	v1TalkersSiteSiteIdTopPostRequest := *openapiclient.NewV1TalkersSiteSiteIdTopPostRequest() // V1TalkersSiteSiteIdTopPostRequest | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.DefaultAPI.V1TalkersSiteSiteIdTopPost(context.Background(), siteId).Authorization(authorization).V1TalkersDeviceDeviceIdTopPostRequest(v1TalkersDeviceDeviceIdTopPostRequest).Execute()
+	resp, r, err := apiClient.DefaultAPI.V1TalkersSiteSiteIdTopPost(context.Background(), siteId).Authorization(authorization).V1TalkersSiteSiteIdTopPostRequest(v1TalkersSiteSiteIdTopPostRequest).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1TalkersSiteSiteIdTopPost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1TalkersSiteSiteIdTopPost`: V1TalkersDeviceDeviceIdTopPost200Response
+	// response from `V1TalkersSiteSiteIdTopPost`: V1TalkersSiteSiteIdTopPostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1TalkersSiteSiteIdTopPost`: %v\n", resp)
 }
 ```
@@ -25924,11 +27267,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **string** | Bearer token. Format: Bearer &lt;your_token_here&gt; | 
 
- **v1TalkersDeviceDeviceIdTopPostRequest** | [**V1TalkersDeviceDeviceIdTopPostRequest**](V1TalkersDeviceDeviceIdTopPostRequest.md) |  | 
+ **v1TalkersSiteSiteIdTopPostRequest** | [**V1TalkersSiteSiteIdTopPostRequest**](V1TalkersSiteSiteIdTopPostRequest.md) |  | 
 
 ### Return type
 
-[**V1TalkersDeviceDeviceIdTopPost200Response**](V1TalkersDeviceDeviceIdTopPost200Response.md)
+[**V1TalkersSiteSiteIdTopPostResponse**](V1TalkersSiteSiteIdTopPostResponse.md)
 
 ### Authorization
 
@@ -25950,6 +27293,8 @@ Name | Type | Description  | Notes
 
 
 
+
+
 ### Example
 
 ```go
@@ -25964,7 +27309,7 @@ import (
 
 func main() {
 	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
-	v1TempPasswordPutRequest := *openapiclient.NewV1TempPasswordPutRequest() // V1TempPasswordPutRequest | 
+	v1TempPasswordPutRequest := *openapiclient.NewV1TempPasswordPutRequest([]string{"example string"}) // V1TempPasswordPutRequest | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -26012,7 +27357,7 @@ Name | Type | Description  | Notes
 
 ## V1TroubleshootingDeviceDeviceIdPost
 
-> V1TroubleshootingDeviceDeviceIdPost200Response V1TroubleshootingDeviceDeviceIdPost(ctx, deviceId).Authorization(authorization).V2NotificationlistPostRequest(v2NotificationlistPostRequest).Execute()
+> V1TroubleshootingDeviceDeviceIdPostResponse V1TroubleshootingDeviceDeviceIdPost(ctx, deviceId).Authorization(authorization).V1TroubleshootingDeviceDeviceIdPostRequest(v1TroubleshootingDeviceDeviceIdPostRequest).Execute()
 
 
 
@@ -26031,16 +27376,16 @@ import (
 func main() {
 	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
 	deviceId := int64(1234567891011) // int64 | 
-	v2NotificationlistPostRequest := *openapiclient.NewV2NotificationlistPostRequest() // V2NotificationlistPostRequest | 
+	v1TroubleshootingDeviceDeviceIdPostRequest := *openapiclient.NewV1TroubleshootingDeviceDeviceIdPostRequest() // V1TroubleshootingDeviceDeviceIdPostRequest | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.DefaultAPI.V1TroubleshootingDeviceDeviceIdPost(context.Background(), deviceId).Authorization(authorization).V2NotificationlistPostRequest(v2NotificationlistPostRequest).Execute()
+	resp, r, err := apiClient.DefaultAPI.V1TroubleshootingDeviceDeviceIdPost(context.Background(), deviceId).Authorization(authorization).V1TroubleshootingDeviceDeviceIdPostRequest(v1TroubleshootingDeviceDeviceIdPostRequest).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1TroubleshootingDeviceDeviceIdPost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1TroubleshootingDeviceDeviceIdPost`: V1TroubleshootingDeviceDeviceIdPost200Response
+	// response from `V1TroubleshootingDeviceDeviceIdPost`: V1TroubleshootingDeviceDeviceIdPostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1TroubleshootingDeviceDeviceIdPost`: %v\n", resp)
 }
 ```
@@ -26062,11 +27407,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **string** | Bearer token. Format: Bearer &lt;your_token_here&gt; | 
 
- **v2NotificationlistPostRequest** | [**V2NotificationlistPostRequest**](V2NotificationlistPostRequest.md) |  | 
+ **v1TroubleshootingDeviceDeviceIdPostRequest** | [**V1TroubleshootingDeviceDeviceIdPostRequest**](V1TroubleshootingDeviceDeviceIdPostRequest.md) |  | 
 
 ### Return type
 
-[**V1TroubleshootingDeviceDeviceIdPost200Response**](V1TroubleshootingDeviceDeviceIdPost200Response.md)
+[**V1TroubleshootingDeviceDeviceIdPostResponse**](V1TroubleshootingDeviceDeviceIdPostResponse.md)
 
 ### Authorization
 
@@ -26084,7 +27429,7 @@ Name | Type | Description  | Notes
 
 ## V1TroubleshootingEnterprisePost
 
-> V1TroubleshootingEnterprisePost200Response V1TroubleshootingEnterprisePost(ctx).Authorization(authorization).V1TroubleshootingEnterprisePostRequest(v1TroubleshootingEnterprisePostRequest).Execute()
+> V1TroubleshootingEnterprisePostResponse V1TroubleshootingEnterprisePost(ctx).Authorization(authorization).V1TroubleshootingEnterprisePostRequest(v1TroubleshootingEnterprisePostRequest).Execute()
 
 
 
@@ -26111,7 +27456,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1TroubleshootingEnterprisePost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1TroubleshootingEnterprisePost`: V1TroubleshootingEnterprisePost200Response
+	// response from `V1TroubleshootingEnterprisePost`: V1TroubleshootingEnterprisePostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1TroubleshootingEnterprisePost`: %v\n", resp)
 }
 ```
@@ -26132,7 +27477,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1TroubleshootingEnterprisePost200Response**](V1TroubleshootingEnterprisePost200Response.md)
+[**V1TroubleshootingEnterprisePostResponse**](V1TroubleshootingEnterprisePostResponse.md)
 
 ### Authorization
 
@@ -26150,7 +27495,7 @@ Name | Type | Description  | Notes
 
 ## V1TroubleshootingFilterGet
 
-> V1BackboneHealthFilterGet200Response V1TroubleshootingFilterGet(ctx).Authorization(authorization).Execute()
+> V1TroubleshootingFilterGetResponse V1TroubleshootingFilterGet(ctx).Authorization(authorization).Execute()
 
 
 
@@ -26176,7 +27521,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1TroubleshootingFilterGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1TroubleshootingFilterGet`: V1BackboneHealthFilterGet200Response
+	// response from `V1TroubleshootingFilterGet`: V1TroubleshootingFilterGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1TroubleshootingFilterGet`: %v\n", resp)
 }
 ```
@@ -26196,7 +27541,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1BackboneHealthFilterGet200Response**](V1BackboneHealthFilterGet200Response.md)
+[**V1TroubleshootingFilterGetResponse**](V1TroubleshootingFilterGetResponse.md)
 
 ### Authorization
 
@@ -26214,7 +27559,7 @@ Name | Type | Description  | Notes
 
 ## V1TroubleshootingSiteConnectivityStatusGet
 
-> V1TroubleshootingSiteConnectivityStatusGet200Response V1TroubleshootingSiteConnectivityStatusGet(ctx).Authorization(authorization).Execute()
+> V1TroubleshootingSiteConnectivityStatusGetResponse V1TroubleshootingSiteConnectivityStatusGet(ctx).Authorization(authorization).Execute()
 
 
 
@@ -26240,7 +27585,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1TroubleshootingSiteConnectivityStatusGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1TroubleshootingSiteConnectivityStatusGet`: V1TroubleshootingSiteConnectivityStatusGet200Response
+	// response from `V1TroubleshootingSiteConnectivityStatusGet`: V1TroubleshootingSiteConnectivityStatusGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1TroubleshootingSiteConnectivityStatusGet`: %v\n", resp)
 }
 ```
@@ -26260,7 +27605,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1TroubleshootingSiteConnectivityStatusGet200Response**](V1TroubleshootingSiteConnectivityStatusGet200Response.md)
+[**V1TroubleshootingSiteConnectivityStatusGetResponse**](V1TroubleshootingSiteConnectivityStatusGetResponse.md)
 
 ### Authorization
 
@@ -26278,7 +27623,7 @@ Name | Type | Description  | Notes
 
 ## V1TroubleshootingSiteSiteIdGet
 
-> V1TroubleshootingSiteSiteIdGet200Response V1TroubleshootingSiteSiteIdGet(ctx, siteId).Authorization(authorization).Execute()
+> V1TroubleshootingSiteSiteIdGetResponse V1TroubleshootingSiteSiteIdGet(ctx, siteId).Authorization(authorization).Execute()
 
 
 
@@ -26305,7 +27650,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1TroubleshootingSiteSiteIdGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1TroubleshootingSiteSiteIdGet`: V1TroubleshootingSiteSiteIdGet200Response
+	// response from `V1TroubleshootingSiteSiteIdGet`: V1TroubleshootingSiteSiteIdGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1TroubleshootingSiteSiteIdGet`: %v\n", resp)
 }
 ```
@@ -26330,7 +27675,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1TroubleshootingSiteSiteIdGet200Response**](V1TroubleshootingSiteSiteIdGet200Response.md)
+[**V1TroubleshootingSiteSiteIdGetResponse**](V1TroubleshootingSiteSiteIdGetResponse.md)
 
 ### Authorization
 
@@ -26348,7 +27693,7 @@ Name | Type | Description  | Notes
 
 ## V1TroubleshootingTopSitesByAlertsPost
 
-> V1TroubleshootingTopSitesByAlertsPost200Response V1TroubleshootingTopSitesByAlertsPost(ctx).Authorization(authorization).V1BackboneHealthTopDevicesByAlertsPostRequest(v1BackboneHealthTopDevicesByAlertsPostRequest).Execute()
+> V1TroubleshootingTopSitesByAlertsPostResponse V1TroubleshootingTopSitesByAlertsPost(ctx).Authorization(authorization).V1TroubleshootingTopSitesByAlertsPostRequest(v1TroubleshootingTopSitesByAlertsPostRequest).Execute()
 
 
 
@@ -26366,16 +27711,16 @@ import (
 
 func main() {
 	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
-	v1BackboneHealthTopDevicesByAlertsPostRequest := *openapiclient.NewV1BackboneHealthTopDevicesByAlertsPostRequest() // V1BackboneHealthTopDevicesByAlertsPostRequest | 
+	v1TroubleshootingTopSitesByAlertsPostRequest := *openapiclient.NewV1TroubleshootingTopSitesByAlertsPostRequest() // V1TroubleshootingTopSitesByAlertsPostRequest | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.DefaultAPI.V1TroubleshootingTopSitesByAlertsPost(context.Background()).Authorization(authorization).V1BackboneHealthTopDevicesByAlertsPostRequest(v1BackboneHealthTopDevicesByAlertsPostRequest).Execute()
+	resp, r, err := apiClient.DefaultAPI.V1TroubleshootingTopSitesByAlertsPost(context.Background()).Authorization(authorization).V1TroubleshootingTopSitesByAlertsPostRequest(v1TroubleshootingTopSitesByAlertsPostRequest).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1TroubleshootingTopSitesByAlertsPost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1TroubleshootingTopSitesByAlertsPost`: V1TroubleshootingTopSitesByAlertsPost200Response
+	// response from `V1TroubleshootingTopSitesByAlertsPost`: V1TroubleshootingTopSitesByAlertsPostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1TroubleshootingTopSitesByAlertsPost`: %v\n", resp)
 }
 ```
@@ -26392,11 +27737,11 @@ Other parameters are passed through a pointer to a apiV1TroubleshootingTopSitesB
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **string** | Bearer token. Format: Bearer &lt;your_token_here&gt; | 
- **v1BackboneHealthTopDevicesByAlertsPostRequest** | [**V1BackboneHealthTopDevicesByAlertsPostRequest**](V1BackboneHealthTopDevicesByAlertsPostRequest.md) |  | 
+ **v1TroubleshootingTopSitesByAlertsPostRequest** | [**V1TroubleshootingTopSitesByAlertsPostRequest**](V1TroubleshootingTopSitesByAlertsPostRequest.md) |  | 
 
 ### Return type
 
-[**V1TroubleshootingTopSitesByAlertsPost200Response**](V1TroubleshootingTopSitesByAlertsPost200Response.md)
+[**V1TroubleshootingTopSitesByAlertsPostResponse**](V1TroubleshootingTopSitesByAlertsPostResponse.md)
 
 ### Authorization
 
@@ -26414,7 +27759,7 @@ Name | Type | Description  | Notes
 
 ## V1TtTtIdentityDeviceStatusGet
 
-> V1DeviceStatusPost200Response V1TtTtIdentityDeviceStatusGet(ctx, ttIdentity).Authorization(authorization).Execute()
+> V1TtTtIdentityDeviceStatusGetResponse V1TtTtIdentityDeviceStatusGet(ctx, ttIdentity).Authorization(authorization).Execute()
 
 
 
@@ -26441,7 +27786,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1TtTtIdentityDeviceStatusGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1TtTtIdentityDeviceStatusGet`: V1DeviceStatusPost200Response
+	// response from `V1TtTtIdentityDeviceStatusGet`: V1TtTtIdentityDeviceStatusGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1TtTtIdentityDeviceStatusGet`: %v\n", resp)
 }
 ```
@@ -26466,7 +27811,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1DeviceStatusPost200Response**](V1DeviceStatusPost200Response.md)
+[**V1TtTtIdentityDeviceStatusGetResponse**](V1TtTtIdentityDeviceStatusGetResponse.md)
 
 ### Authorization
 
@@ -26482,9 +27827,221 @@ Name | Type | Description  | Notes
 [[Back to README]](../README.md)
 
 
+## V1UsersEmailPasswordPatch
+
+> V1UsersEmailPasswordPatch(ctx, email).Token(token).V1UsersEmailPasswordPatchRequest(v1UsersEmailPasswordPatchRequest).Execute()
+
+
+
+
+
+### Example
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/Graphiant-Inc/graphiant-sdk-go"
+)
+
+func main() {
+	email := "user@example.com" // string | User email address
+	token := "verification-token-12345" // string | Password reset token
+	v1UsersEmailPasswordPatchRequest := *openapiclient.NewV1UsersEmailPasswordPatchRequest("newPassword123") // V1UsersEmailPasswordPatchRequest | 
+
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	r, err := apiClient.DefaultAPI.V1UsersEmailPasswordPatch(context.Background(), email).Token(token).V1UsersEmailPasswordPatchRequest(v1UsersEmailPasswordPatchRequest).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1UsersEmailPasswordPatch``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+}
+```
+
+### Path Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**email** | **string** | User email address | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiV1UsersEmailPasswordPatchRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+ **token** | **string** | Password reset token | 
+ **v1UsersEmailPasswordPatchRequest** | [**V1UsersEmailPasswordPatchRequest**](V1UsersEmailPasswordPatchRequest.md) |  | 
+
+### Return type
+
+ (empty response body)
+
+### Authorization
+
+[jwtAuth](../README.md#jwtAuth)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## V1UsersEmailRecoveryGet
+
+> V1UsersEmailRecoveryGet(ctx, email).Execute()
+
+
+
+
+
+### Example
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/Graphiant-Inc/graphiant-sdk-go"
+)
+
+func main() {
+	email := "user@example.com" // string | User email address
+
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	r, err := apiClient.DefaultAPI.V1UsersEmailRecoveryGet(context.Background(), email).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1UsersEmailRecoveryGet``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+}
+```
+
+### Path Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**email** | **string** | User email address | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiV1UsersEmailRecoveryGetRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+
+### Return type
+
+ (empty response body)
+
+### Authorization
+
+[jwtAuth](../README.md#jwtAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## V1UsersEmailVerifiedPatch
+
+> V1UsersEmailVerifiedPatch(ctx, email).Token(token).Execute()
+
+
+
+
+
+### Example
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/Graphiant-Inc/graphiant-sdk-go"
+)
+
+func main() {
+	email := "user@example.com" // string | User email address
+	token := "verification-token-12345" // string | Email verification token
+
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	r, err := apiClient.DefaultAPI.V1UsersEmailVerifiedPatch(context.Background(), email).Token(token).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1UsersEmailVerifiedPatch``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+}
+```
+
+### Path Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**email** | **string** | User email address | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiV1UsersEmailVerifiedPatchRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+ **token** | **string** | Email verification token | 
+
+### Return type
+
+ (empty response body)
+
+### Authorization
+
+[jwtAuth](../README.md#jwtAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
 ## V1UsersGet
 
-> V1GroupsIdMembersGet200Response V1UsersGet(ctx).Authorization(authorization).Id(id).Execute()
+> V1UsersGetResponse V1UsersGet(ctx).Authorization(authorization).Id(id).Execute()
+
+
 
 
 
@@ -26511,7 +28068,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1UsersGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1UsersGet`: V1GroupsIdMembersGet200Response
+	// response from `V1UsersGet`: V1UsersGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1UsersGet`: %v\n", resp)
 }
 ```
@@ -26532,7 +28089,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1GroupsIdMembersGet200Response**](V1GroupsIdMembersGet200Response.md)
+[**V1UsersGetResponse**](V1UsersGetResponse.md)
 
 ### Authorization
 
@@ -26551,6 +28108,8 @@ Name | Type | Description  | Notes
 ## V1UsersIdDelete
 
 > map[string]interface{} V1UsersIdDelete(ctx, id).Authorization(authorization).Execute()
+
+
 
 
 
@@ -26620,7 +28179,9 @@ Name | Type | Description  | Notes
 
 ## V1UsersIdEnterprisesGet
 
-> V1EnterprisesGet200Response V1UsersIdEnterprisesGet(ctx, id).Authorization(authorization).Execute()
+> V1UsersIdEnterprisesGetResponse V1UsersIdEnterprisesGet(ctx, id).Authorization(authorization).Execute()
+
+
 
 
 
@@ -26647,7 +28208,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1UsersIdEnterprisesGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1UsersIdEnterprisesGet`: V1EnterprisesGet200Response
+	// response from `V1UsersIdEnterprisesGet`: V1UsersIdEnterprisesGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1UsersIdEnterprisesGet`: %v\n", resp)
 }
 ```
@@ -26672,7 +28233,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1EnterprisesGet200Response**](V1EnterprisesGet200Response.md)
+[**V1UsersIdEnterprisesGetResponse**](V1UsersIdEnterprisesGetResponse.md)
 
 ### Authorization
 
@@ -26690,7 +28251,9 @@ Name | Type | Description  | Notes
 
 ## V1UsersIdGroupsEnterprisesGet
 
-> V1GroupsGet200Response V1UsersIdGroupsEnterprisesGet(ctx, id).Authorization(authorization).Execute()
+> V1UsersIdGroupsEnterprisesGetResponse V1UsersIdGroupsEnterprisesGet(ctx, id).Authorization(authorization).Execute()
+
+
 
 
 
@@ -26717,7 +28280,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1UsersIdGroupsEnterprisesGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1UsersIdGroupsEnterprisesGet`: V1GroupsGet200Response
+	// response from `V1UsersIdGroupsEnterprisesGet`: V1UsersIdGroupsEnterprisesGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1UsersIdGroupsEnterprisesGet`: %v\n", resp)
 }
 ```
@@ -26742,7 +28305,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1GroupsGet200Response**](V1GroupsGet200Response.md)
+[**V1UsersIdGroupsEnterprisesGetResponse**](V1UsersIdGroupsEnterprisesGetResponse.md)
 
 ### Authorization
 
@@ -26760,7 +28323,9 @@ Name | Type | Description  | Notes
 
 ## V1UsersIdGroupsGet
 
-> V1GroupsGet200Response V1UsersIdGroupsGet(ctx, id).Authorization(authorization).Execute()
+> V1UsersIdGroupsGetResponse V1UsersIdGroupsGet(ctx, id).Authorization(authorization).Execute()
+
+
 
 
 
@@ -26787,7 +28352,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1UsersIdGroupsGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1UsersIdGroupsGet`: V1GroupsGet200Response
+	// response from `V1UsersIdGroupsGet`: V1UsersIdGroupsGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1UsersIdGroupsGet`: %v\n", resp)
 }
 ```
@@ -26812,7 +28377,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1GroupsGet200Response**](V1GroupsGet200Response.md)
+[**V1UsersIdGroupsGetResponse**](V1UsersIdGroupsGetResponse.md)
 
 ### Authorization
 
@@ -26830,7 +28395,9 @@ Name | Type | Description  | Notes
 
 ## V1UsersIdGroupsRootGet
 
-> V1GroupsGet200Response V1UsersIdGroupsRootGet(ctx, id).Authorization(authorization).Execute()
+> V1UsersIdGroupsRootGetResponse V1UsersIdGroupsRootGet(ctx, id).Authorization(authorization).Execute()
+
+
 
 
 
@@ -26857,7 +28424,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1UsersIdGroupsRootGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1UsersIdGroupsRootGet`: V1GroupsGet200Response
+	// response from `V1UsersIdGroupsRootGet`: V1UsersIdGroupsRootGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1UsersIdGroupsRootGet`: %v\n", resp)
 }
 ```
@@ -26882,7 +28449,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1GroupsGet200Response**](V1GroupsGet200Response.md)
+[**V1UsersIdGroupsRootGetResponse**](V1UsersIdGroupsRootGetResponse.md)
 
 ### Authorization
 
@@ -26901,6 +28468,8 @@ Name | Type | Description  | Notes
 ## V1UsersIdVerifyPatch
 
 > map[string]interface{} V1UsersIdVerifyPatch(ctx, id).Authorization(authorization).Body(body).Execute()
+
+
 
 
 
@@ -26976,6 +28545,8 @@ Name | Type | Description  | Notes
 
 
 
+
+
 ### Example
 
 ```go
@@ -26990,7 +28561,7 @@ import (
 
 func main() {
 	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
-	v1UsersPutRequest := *openapiclient.NewV1UsersPutRequest() // V1UsersPutRequest | 
+	v1UsersPutRequest := *openapiclient.NewV1UsersPutRequest("example string", "example string", "example string") // V1UsersPutRequest | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -27038,7 +28609,9 @@ Name | Type | Description  | Notes
 
 ## V1VersionPost
 
-> V1VersionPost200Response V1VersionPost(ctx).Authorization(authorization).V1VersionPostRequest(v1VersionPostRequest).Execute()
+> V1VersionPostResponse V1VersionPost(ctx).Authorization(authorization).V1VersionPostRequest(v1VersionPostRequest).Execute()
+
+
 
 
 
@@ -27065,7 +28638,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1VersionPost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1VersionPost`: V1VersionPost200Response
+	// response from `V1VersionPost`: V1VersionPostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1VersionPost`: %v\n", resp)
 }
 ```
@@ -27086,7 +28659,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1VersionPost200Response**](V1VersionPost200Response.md)
+[**V1VersionPostResponse**](V1VersionPostResponse.md)
 
 ### Authorization
 
@@ -27104,7 +28677,9 @@ Name | Type | Description  | Notes
 
 ## V1ZonesGet
 
-> V1ZonesGet200Response V1ZonesGet(ctx).Authorization(authorization).Execute()
+> V1ZonesGetResponse V1ZonesGet(ctx).Authorization(authorization).Execute()
+
+
 
 
 
@@ -27130,7 +28705,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V1ZonesGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V1ZonesGet`: V1ZonesGet200Response
+	// response from `V1ZonesGet`: V1ZonesGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V1ZonesGet`: %v\n", resp)
 }
 ```
@@ -27150,7 +28725,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1ZonesGet200Response**](V1ZonesGet200Response.md)
+[**V1ZonesGetResponse**](V1ZonesGetResponse.md)
 
 ### Authorization
 
@@ -27186,7 +28761,7 @@ import (
 
 func main() {
 	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
-	v2AckCreateupdatePostRequest := *openapiclient.NewV2AckCreateupdatePostRequest() // V2AckCreateupdatePostRequest | 
+	v2AckCreateupdatePostRequest := *openapiclient.NewV2AckCreateupdatePostRequest([]string{"example string"}) // V2AckCreateupdatePostRequest | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -27252,7 +28827,7 @@ import (
 
 func main() {
 	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
-	v2AggregatedNotificationEnableDisablePostRequest := *openapiclient.NewV2AggregatedNotificationEnableDisablePostRequest() // V2AggregatedNotificationEnableDisablePostRequest | 
+	v2AggregatedNotificationEnableDisablePostRequest := *openapiclient.NewV2AggregatedNotificationEnableDisablePostRequest(true) // V2AggregatedNotificationEnableDisablePostRequest | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -27300,7 +28875,7 @@ Name | Type | Description  | Notes
 
 ## V2AggregatedNotificationGetStateGet
 
-> V2AggregatedNotificationGetStateGet200Response V2AggregatedNotificationGetStateGet(ctx).Authorization(authorization).Execute()
+> V2AggregatedNotificationGetStateGetResponse V2AggregatedNotificationGetStateGet(ctx).Authorization(authorization).Execute()
 
 
 
@@ -27326,7 +28901,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V2AggregatedNotificationGetStateGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V2AggregatedNotificationGetStateGet`: V2AggregatedNotificationGetStateGet200Response
+	// response from `V2AggregatedNotificationGetStateGet`: V2AggregatedNotificationGetStateGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V2AggregatedNotificationGetStateGet`: %v\n", resp)
 }
 ```
@@ -27346,7 +28921,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V2AggregatedNotificationGetStateGet200Response**](V2AggregatedNotificationGetStateGet200Response.md)
+[**V2AggregatedNotificationGetStateGetResponse**](V2AggregatedNotificationGetStateGetResponse.md)
 
 ### Authorization
 
@@ -27364,7 +28939,7 @@ Name | Type | Description  | Notes
 
 ## V2AllowlistByEnterpriseGet
 
-> V2AllowlistRuleIdGet200Response V2AllowlistByEnterpriseGet(ctx).Authorization(authorization).Execute()
+> V2AllowlistByEnterpriseGetResponse V2AllowlistByEnterpriseGet(ctx).Authorization(authorization).Execute()
 
 
 
@@ -27390,7 +28965,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V2AllowlistByEnterpriseGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V2AllowlistByEnterpriseGet`: V2AllowlistRuleIdGet200Response
+	// response from `V2AllowlistByEnterpriseGet`: V2AllowlistByEnterpriseGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V2AllowlistByEnterpriseGet`: %v\n", resp)
 }
 ```
@@ -27410,7 +28985,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V2AllowlistRuleIdGet200Response**](V2AllowlistRuleIdGet200Response.md)
+[**V2AllowlistByEnterpriseGetResponse**](V2AllowlistByEnterpriseGetResponse.md)
 
 ### Authorization
 
@@ -27446,7 +29021,7 @@ import (
 
 func main() {
 	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
-	v2AllowlistCreatePostRequest := *openapiclient.NewV2AllowlistCreatePostRequest() // V2AllowlistCreatePostRequest | 
+	v2AllowlistCreatePostRequest := *openapiclient.NewV2AllowlistCreatePostRequest("example string") // V2AllowlistCreatePostRequest | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -27634,7 +29209,7 @@ Name | Type | Description  | Notes
 
 ## V2AllowlistRuleIdGet
 
-> V2AllowlistRuleIdGet200Response V2AllowlistRuleIdGet(ctx, ruleId).Authorization(authorization).Execute()
+> V2AllowlistRuleIdGetResponse V2AllowlistRuleIdGet(ctx, ruleId).Authorization(authorization).Execute()
 
 
 
@@ -27661,7 +29236,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V2AllowlistRuleIdGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V2AllowlistRuleIdGet`: V2AllowlistRuleIdGet200Response
+	// response from `V2AllowlistRuleIdGet`: V2AllowlistRuleIdGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V2AllowlistRuleIdGet`: %v\n", resp)
 }
 ```
@@ -27686,7 +29261,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V2AllowlistRuleIdGet200Response**](V2AllowlistRuleIdGet200Response.md)
+[**V2AllowlistRuleIdGetResponse**](V2AllowlistRuleIdGetResponse.md)
 
 ### Authorization
 
@@ -27704,7 +29279,7 @@ Name | Type | Description  | Notes
 
 ## V2AssistantAddToConversationPost
 
-> V2AssistantAddToConversationPost200Response V2AssistantAddToConversationPost(ctx).Authorization(authorization).V2AssistantAddToConversationPostRequest(v2AssistantAddToConversationPostRequest).Execute()
+> V2AssistantAddToConversationPostResponse V2AssistantAddToConversationPost(ctx).Authorization(authorization).V2AssistantAddToConversationPostRequest(v2AssistantAddToConversationPostRequest).Execute()
 
 
 
@@ -27731,7 +29306,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V2AssistantAddToConversationPost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V2AssistantAddToConversationPost`: V2AssistantAddToConversationPost200Response
+	// response from `V2AssistantAddToConversationPost`: V2AssistantAddToConversationPostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V2AssistantAddToConversationPost`: %v\n", resp)
 }
 ```
@@ -27752,7 +29327,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V2AssistantAddToConversationPost200Response**](V2AssistantAddToConversationPost200Response.md)
+[**V2AssistantAddToConversationPostResponse**](V2AssistantAddToConversationPostResponse.md)
 
 ### Authorization
 
@@ -27770,7 +29345,7 @@ Name | Type | Description  | Notes
 
 ## V2AssistantConversationContextHistoryPost
 
-> map[string]interface{} V2AssistantConversationContextHistoryPost(ctx).Authorization(authorization).V2AggregatedNotificationEnableDisablePostRequest(v2AggregatedNotificationEnableDisablePostRequest).Execute()
+> map[string]interface{} V2AssistantConversationContextHistoryPost(ctx).Authorization(authorization).V2AssistantConversationContextHistoryPostRequest(v2AssistantConversationContextHistoryPostRequest).Execute()
 
 
 
@@ -27788,11 +29363,11 @@ import (
 
 func main() {
 	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
-	v2AggregatedNotificationEnableDisablePostRequest := *openapiclient.NewV2AggregatedNotificationEnableDisablePostRequest() // V2AggregatedNotificationEnableDisablePostRequest | 
+	v2AssistantConversationContextHistoryPostRequest := *openapiclient.NewV2AssistantConversationContextHistoryPostRequest() // V2AssistantConversationContextHistoryPostRequest | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.DefaultAPI.V2AssistantConversationContextHistoryPost(context.Background()).Authorization(authorization).V2AggregatedNotificationEnableDisablePostRequest(v2AggregatedNotificationEnableDisablePostRequest).Execute()
+	resp, r, err := apiClient.DefaultAPI.V2AssistantConversationContextHistoryPost(context.Background()).Authorization(authorization).V2AssistantConversationContextHistoryPostRequest(v2AssistantConversationContextHistoryPostRequest).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V2AssistantConversationContextHistoryPost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -27814,7 +29389,7 @@ Other parameters are passed through a pointer to a apiV2AssistantConversationCon
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **string** | Bearer token. Format: Bearer &lt;your_token_here&gt; | 
- **v2AggregatedNotificationEnableDisablePostRequest** | [**V2AggregatedNotificationEnableDisablePostRequest**](V2AggregatedNotificationEnableDisablePostRequest.md) |  | 
+ **v2AssistantConversationContextHistoryPostRequest** | [**V2AssistantConversationContextHistoryPostRequest**](V2AssistantConversationContextHistoryPostRequest.md) |  | 
 
 ### Return type
 
@@ -27906,7 +29481,7 @@ Name | Type | Description  | Notes
 
 ## V2AssistantConversationInterfaceEnableDisablePost
 
-> map[string]interface{} V2AssistantConversationInterfaceEnableDisablePost(ctx).Authorization(authorization).V2AggregatedNotificationEnableDisablePostRequest(v2AggregatedNotificationEnableDisablePostRequest).Execute()
+> map[string]interface{} V2AssistantConversationInterfaceEnableDisablePost(ctx).Authorization(authorization).V2AssistantConversationInterfaceEnableDisablePostRequest(v2AssistantConversationInterfaceEnableDisablePostRequest).Execute()
 
 
 
@@ -27924,11 +29499,11 @@ import (
 
 func main() {
 	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
-	v2AggregatedNotificationEnableDisablePostRequest := *openapiclient.NewV2AggregatedNotificationEnableDisablePostRequest() // V2AggregatedNotificationEnableDisablePostRequest | 
+	v2AssistantConversationInterfaceEnableDisablePostRequest := *openapiclient.NewV2AssistantConversationInterfaceEnableDisablePostRequest() // V2AssistantConversationInterfaceEnableDisablePostRequest | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.DefaultAPI.V2AssistantConversationInterfaceEnableDisablePost(context.Background()).Authorization(authorization).V2AggregatedNotificationEnableDisablePostRequest(v2AggregatedNotificationEnableDisablePostRequest).Execute()
+	resp, r, err := apiClient.DefaultAPI.V2AssistantConversationInterfaceEnableDisablePost(context.Background()).Authorization(authorization).V2AssistantConversationInterfaceEnableDisablePostRequest(v2AssistantConversationInterfaceEnableDisablePostRequest).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V2AssistantConversationInterfaceEnableDisablePost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -27950,7 +29525,7 @@ Other parameters are passed through a pointer to a apiV2AssistantConversationInt
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **string** | Bearer token. Format: Bearer &lt;your_token_here&gt; | 
- **v2AggregatedNotificationEnableDisablePostRequest** | [**V2AggregatedNotificationEnableDisablePostRequest**](V2AggregatedNotificationEnableDisablePostRequest.md) |  | 
+ **v2AssistantConversationInterfaceEnableDisablePostRequest** | [**V2AssistantConversationInterfaceEnableDisablePostRequest**](V2AssistantConversationInterfaceEnableDisablePostRequest.md) |  | 
 
 ### Return type
 
@@ -27972,7 +29547,7 @@ Name | Type | Description  | Notes
 
 ## V2AssistantConversationInterfaceStateGet
 
-> V2AssistantConversationInterfaceStateGet200Response V2AssistantConversationInterfaceStateGet(ctx).Authorization(authorization).Execute()
+> V2AssistantConversationInterfaceStateGetResponse V2AssistantConversationInterfaceStateGet(ctx).Authorization(authorization).Execute()
 
 
 
@@ -27998,7 +29573,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V2AssistantConversationInterfaceStateGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V2AssistantConversationInterfaceStateGet`: V2AssistantConversationInterfaceStateGet200Response
+	// response from `V2AssistantConversationInterfaceStateGet`: V2AssistantConversationInterfaceStateGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V2AssistantConversationInterfaceStateGet`: %v\n", resp)
 }
 ```
@@ -28018,7 +29593,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V2AssistantConversationInterfaceStateGet200Response**](V2AssistantConversationInterfaceStateGet200Response.md)
+[**V2AssistantConversationInterfaceStateGetResponse**](V2AssistantConversationInterfaceStateGetResponse.md)
 
 ### Authorization
 
@@ -28176,7 +29751,7 @@ Name | Type | Description  | Notes
 
 ## V2AssistantGetConversationDetailsPost
 
-> V2AssistantGetConversationDetailsPost200Response V2AssistantGetConversationDetailsPost(ctx).Authorization(authorization).V2AssistantGetConversationDetailsPostRequest(v2AssistantGetConversationDetailsPostRequest).Execute()
+> V2AssistantGetConversationDetailsPostResponse V2AssistantGetConversationDetailsPost(ctx).Authorization(authorization).V2AssistantGetConversationDetailsPostRequest(v2AssistantGetConversationDetailsPostRequest).Execute()
 
 
 
@@ -28203,7 +29778,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V2AssistantGetConversationDetailsPost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V2AssistantGetConversationDetailsPost`: V2AssistantGetConversationDetailsPost200Response
+	// response from `V2AssistantGetConversationDetailsPost`: V2AssistantGetConversationDetailsPostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V2AssistantGetConversationDetailsPost`: %v\n", resp)
 }
 ```
@@ -28224,7 +29799,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V2AssistantGetConversationDetailsPost200Response**](V2AssistantGetConversationDetailsPost200Response.md)
+[**V2AssistantGetConversationDetailsPostResponse**](V2AssistantGetConversationDetailsPostResponse.md)
 
 ### Authorization
 
@@ -28242,7 +29817,7 @@ Name | Type | Description  | Notes
 
 ## V2AssistantGetConversationsPost
 
-> V2AssistantGetConversationsPost200Response V2AssistantGetConversationsPost(ctx).Authorization(authorization).V2AssistantGetConversationsPostRequest(v2AssistantGetConversationsPostRequest).Execute()
+> V2AssistantGetConversationsPostResponse V2AssistantGetConversationsPost(ctx).Authorization(authorization).V2AssistantGetConversationsPostRequest(v2AssistantGetConversationsPostRequest).Execute()
 
 
 
@@ -28269,7 +29844,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V2AssistantGetConversationsPost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V2AssistantGetConversationsPost`: V2AssistantGetConversationsPost200Response
+	// response from `V2AssistantGetConversationsPost`: V2AssistantGetConversationsPostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V2AssistantGetConversationsPost`: %v\n", resp)
 }
 ```
@@ -28290,7 +29865,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V2AssistantGetConversationsPost200Response**](V2AssistantGetConversationsPost200Response.md)
+[**V2AssistantGetConversationsPostResponse**](V2AssistantGetConversationsPostResponse.md)
 
 ### Authorization
 
@@ -28374,7 +29949,7 @@ Name | Type | Description  | Notes
 
 ## V2AssistantVersionPost
 
-> V2VersionPost200Response V2AssistantVersionPost(ctx).Authorization(authorization).Body(body).Execute()
+> V2AssistantVersionPostResponse V2AssistantVersionPost(ctx).Authorization(authorization).Body(body).Execute()
 
 
 
@@ -28401,7 +29976,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V2AssistantVersionPost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V2AssistantVersionPost`: V2VersionPost200Response
+	// response from `V2AssistantVersionPost`: V2AssistantVersionPostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V2AssistantVersionPost`: %v\n", resp)
 }
 ```
@@ -28422,7 +29997,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V2VersionPost200Response**](V2VersionPost200Response.md)
+[**V2AssistantVersionPostResponse**](V2AssistantVersionPostResponse.md)
 
 ### Authorization
 
@@ -28440,7 +30015,7 @@ Name | Type | Description  | Notes
 
 ## V2AssuranceApplicationdetailsbynamePost
 
-> V2AssuranceApplicationdetailsbynamePost200Response V2AssuranceApplicationdetailsbynamePost(ctx).Authorization(authorization).V2AssuranceApplicationdetailsbynamePostRequest(v2AssuranceApplicationdetailsbynamePostRequest).Execute()
+> V2AssuranceApplicationdetailsbynamePostResponse V2AssuranceApplicationdetailsbynamePost(ctx).Authorization(authorization).V2AssuranceApplicationdetailsbynamePostRequest(v2AssuranceApplicationdetailsbynamePostRequest).Execute()
 
 
 
@@ -28467,7 +30042,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V2AssuranceApplicationdetailsbynamePost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V2AssuranceApplicationdetailsbynamePost`: V2AssuranceApplicationdetailsbynamePost200Response
+	// response from `V2AssuranceApplicationdetailsbynamePost`: V2AssuranceApplicationdetailsbynamePostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V2AssuranceApplicationdetailsbynamePost`: %v\n", resp)
 }
 ```
@@ -28488,7 +30063,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V2AssuranceApplicationdetailsbynamePost200Response**](V2AssuranceApplicationdetailsbynamePost200Response.md)
+[**V2AssuranceApplicationdetailsbynamePostResponse**](V2AssuranceApplicationdetailsbynamePostResponse.md)
 
 ### Authorization
 
@@ -28506,7 +30081,7 @@ Name | Type | Description  | Notes
 
 ## V2AssuranceApplicationprofilesummaryPost
 
-> V2AssuranceApplicationprofilesummaryPost200Response V2AssuranceApplicationprofilesummaryPost(ctx).Authorization(authorization).V2NotificationlistPostRequest(v2NotificationlistPostRequest).Execute()
+> V2AssuranceApplicationprofilesummaryPostResponse V2AssuranceApplicationprofilesummaryPost(ctx).Authorization(authorization).V2AssuranceApplicationprofilesummaryPostRequest(v2AssuranceApplicationprofilesummaryPostRequest).Execute()
 
 
 
@@ -28524,16 +30099,16 @@ import (
 
 func main() {
 	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
-	v2NotificationlistPostRequest := *openapiclient.NewV2NotificationlistPostRequest() // V2NotificationlistPostRequest | 
+	v2AssuranceApplicationprofilesummaryPostRequest := *openapiclient.NewV2AssuranceApplicationprofilesummaryPostRequest() // V2AssuranceApplicationprofilesummaryPostRequest | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.DefaultAPI.V2AssuranceApplicationprofilesummaryPost(context.Background()).Authorization(authorization).V2NotificationlistPostRequest(v2NotificationlistPostRequest).Execute()
+	resp, r, err := apiClient.DefaultAPI.V2AssuranceApplicationprofilesummaryPost(context.Background()).Authorization(authorization).V2AssuranceApplicationprofilesummaryPostRequest(v2AssuranceApplicationprofilesummaryPostRequest).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V2AssuranceApplicationprofilesummaryPost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V2AssuranceApplicationprofilesummaryPost`: V2AssuranceApplicationprofilesummaryPost200Response
+	// response from `V2AssuranceApplicationprofilesummaryPost`: V2AssuranceApplicationprofilesummaryPostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V2AssuranceApplicationprofilesummaryPost`: %v\n", resp)
 }
 ```
@@ -28550,11 +30125,11 @@ Other parameters are passed through a pointer to a apiV2AssuranceApplicationprof
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **string** | Bearer token. Format: Bearer &lt;your_token_here&gt; | 
- **v2NotificationlistPostRequest** | [**V2NotificationlistPostRequest**](V2NotificationlistPostRequest.md) |  | 
+ **v2AssuranceApplicationprofilesummaryPostRequest** | [**V2AssuranceApplicationprofilesummaryPostRequest**](V2AssuranceApplicationprofilesummaryPostRequest.md) |  | 
 
 ### Return type
 
-[**V2AssuranceApplicationprofilesummaryPost200Response**](V2AssuranceApplicationprofilesummaryPost200Response.md)
+[**V2AssuranceApplicationprofilesummaryPostResponse**](V2AssuranceApplicationprofilesummaryPostResponse.md)
 
 ### Authorization
 
@@ -28572,7 +30147,9 @@ Name | Type | Description  | Notes
 
 ## V2AssuranceBucketAppServersAllGet
 
-> V2AssuranceBucketAppServersAllGet200Response V2AssuranceBucketAppServersAllGet(ctx).Authorization(authorization).Execute()
+> V2AssuranceBucketAppServersAllGetResponse V2AssuranceBucketAppServersAllGet(ctx).Authorization(authorization).Execute()
+
+
 
 
 
@@ -28598,7 +30175,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V2AssuranceBucketAppServersAllGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V2AssuranceBucketAppServersAllGet`: V2AssuranceBucketAppServersAllGet200Response
+	// response from `V2AssuranceBucketAppServersAllGet`: V2AssuranceBucketAppServersAllGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V2AssuranceBucketAppServersAllGet`: %v\n", resp)
 }
 ```
@@ -28618,7 +30195,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V2AssuranceBucketAppServersAllGet200Response**](V2AssuranceBucketAppServersAllGet200Response.md)
+[**V2AssuranceBucketAppServersAllGetResponse**](V2AssuranceBucketAppServersAllGetResponse.md)
 
 ### Authorization
 
@@ -28636,7 +30213,7 @@ Name | Type | Description  | Notes
 
 ## V2AssuranceBucketAppServersPost
 
-> V2AssuranceBucketAppServersPost200Response V2AssuranceBucketAppServersPost(ctx).Authorization(authorization).V2AssuranceBucketAppServersPostRequest(v2AssuranceBucketAppServersPostRequest).Execute()
+> V2AssuranceBucketAppServersPostResponse V2AssuranceBucketAppServersPost(ctx).Authorization(authorization).V2AssuranceBucketAppServersPostRequest(v2AssuranceBucketAppServersPostRequest).Execute()
 
 
 
@@ -28663,7 +30240,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V2AssuranceBucketAppServersPost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V2AssuranceBucketAppServersPost`: V2AssuranceBucketAppServersPost200Response
+	// response from `V2AssuranceBucketAppServersPost`: V2AssuranceBucketAppServersPostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V2AssuranceBucketAppServersPost`: %v\n", resp)
 }
 ```
@@ -28684,7 +30261,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V2AssuranceBucketAppServersPost200Response**](V2AssuranceBucketAppServersPost200Response.md)
+[**V2AssuranceBucketAppServersPostResponse**](V2AssuranceBucketAppServersPostResponse.md)
 
 ### Authorization
 
@@ -28702,7 +30279,7 @@ Name | Type | Description  | Notes
 
 ## V2AssuranceBucketAppsPost
 
-> V2AssuranceBucketAppsPost200Response V2AssuranceBucketAppsPost(ctx).Authorization(authorization).V2AssuranceBucketAppsPostRequest(v2AssuranceBucketAppsPostRequest).Execute()
+> V2AssuranceBucketAppsPostResponse V2AssuranceBucketAppsPost(ctx).Authorization(authorization).V2AssuranceBucketAppsPostRequest(v2AssuranceBucketAppsPostRequest).Execute()
 
 
 
@@ -28729,7 +30306,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V2AssuranceBucketAppsPost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V2AssuranceBucketAppsPost`: V2AssuranceBucketAppsPost200Response
+	// response from `V2AssuranceBucketAppsPost`: V2AssuranceBucketAppsPostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V2AssuranceBucketAppsPost`: %v\n", resp)
 }
 ```
@@ -28750,7 +30327,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V2AssuranceBucketAppsPost200Response**](V2AssuranceBucketAppsPost200Response.md)
+[**V2AssuranceBucketAppsPostResponse**](V2AssuranceBucketAppsPostResponse.md)
 
 ### Authorization
 
@@ -28768,7 +30345,7 @@ Name | Type | Description  | Notes
 
 ## V2AssuranceBucketServicesPost
 
-> V2AssuranceBucketServicesPost200Response V2AssuranceBucketServicesPost(ctx).Authorization(authorization).V2AssuranceBucketServicesPostRequest(v2AssuranceBucketServicesPostRequest).Execute()
+> V2AssuranceBucketServicesPostResponse V2AssuranceBucketServicesPost(ctx).Authorization(authorization).V2AssuranceBucketServicesPostRequest(v2AssuranceBucketServicesPostRequest).Execute()
 
 
 
@@ -28795,7 +30372,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V2AssuranceBucketServicesPost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V2AssuranceBucketServicesPost`: V2AssuranceBucketServicesPost200Response
+	// response from `V2AssuranceBucketServicesPost`: V2AssuranceBucketServicesPostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V2AssuranceBucketServicesPost`: %v\n", resp)
 }
 ```
@@ -28816,7 +30393,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V2AssuranceBucketServicesPost200Response**](V2AssuranceBucketServicesPost200Response.md)
+[**V2AssuranceBucketServicesPostResponse**](V2AssuranceBucketServicesPostResponse.md)
 
 ### Authorization
 
@@ -28834,7 +30411,7 @@ Name | Type | Description  | Notes
 
 ## V2AssuranceBucketTopologiesPost
 
-> V2AssuranceBucketTopologiesPost200Response V2AssuranceBucketTopologiesPost(ctx).Authorization(authorization).V2AssuranceBucketServicesPostRequest(v2AssuranceBucketServicesPostRequest).Execute()
+> V2AssuranceBucketTopologiesPostResponse V2AssuranceBucketTopologiesPost(ctx).Authorization(authorization).V2AssuranceBucketTopologiesPostRequest(v2AssuranceBucketTopologiesPostRequest).Execute()
 
 
 
@@ -28852,16 +30429,16 @@ import (
 
 func main() {
 	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
-	v2AssuranceBucketServicesPostRequest := *openapiclient.NewV2AssuranceBucketServicesPostRequest() // V2AssuranceBucketServicesPostRequest | 
+	v2AssuranceBucketTopologiesPostRequest := *openapiclient.NewV2AssuranceBucketTopologiesPostRequest() // V2AssuranceBucketTopologiesPostRequest | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.DefaultAPI.V2AssuranceBucketTopologiesPost(context.Background()).Authorization(authorization).V2AssuranceBucketServicesPostRequest(v2AssuranceBucketServicesPostRequest).Execute()
+	resp, r, err := apiClient.DefaultAPI.V2AssuranceBucketTopologiesPost(context.Background()).Authorization(authorization).V2AssuranceBucketTopologiesPostRequest(v2AssuranceBucketTopologiesPostRequest).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V2AssuranceBucketTopologiesPost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V2AssuranceBucketTopologiesPost`: V2AssuranceBucketTopologiesPost200Response
+	// response from `V2AssuranceBucketTopologiesPost`: V2AssuranceBucketTopologiesPostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V2AssuranceBucketTopologiesPost`: %v\n", resp)
 }
 ```
@@ -28878,11 +30455,11 @@ Other parameters are passed through a pointer to a apiV2AssuranceBucketTopologie
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **string** | Bearer token. Format: Bearer &lt;your_token_here&gt; | 
- **v2AssuranceBucketServicesPostRequest** | [**V2AssuranceBucketServicesPostRequest**](V2AssuranceBucketServicesPostRequest.md) |  | 
+ **v2AssuranceBucketTopologiesPostRequest** | [**V2AssuranceBucketTopologiesPostRequest**](V2AssuranceBucketTopologiesPostRequest.md) |  | 
 
 ### Return type
 
-[**V2AssuranceBucketTopologiesPost200Response**](V2AssuranceBucketTopologiesPost200Response.md)
+[**V2AssuranceBucketTopologiesPostResponse**](V2AssuranceBucketTopologiesPostResponse.md)
 
 ### Authorization
 
@@ -28900,7 +30477,7 @@ Name | Type | Description  | Notes
 
 ## V2AssuranceBucketdetailsPost
 
-> V2AssuranceBucketdetailsPost200Response V2AssuranceBucketdetailsPost(ctx).Authorization(authorization).V2AssuranceBucketdetailsPostRequest(v2AssuranceBucketdetailsPostRequest).Execute()
+> V2AssuranceBucketdetailsPostResponse V2AssuranceBucketdetailsPost(ctx).Authorization(authorization).V2AssuranceBucketdetailsPostRequest(v2AssuranceBucketdetailsPostRequest).Execute()
 
 
 
@@ -28927,7 +30504,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V2AssuranceBucketdetailsPost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V2AssuranceBucketdetailsPost`: V2AssuranceBucketdetailsPost200Response
+	// response from `V2AssuranceBucketdetailsPost`: V2AssuranceBucketdetailsPostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V2AssuranceBucketdetailsPost`: %v\n", resp)
 }
 ```
@@ -28948,7 +30525,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V2AssuranceBucketdetailsPost200Response**](V2AssuranceBucketdetailsPost200Response.md)
+[**V2AssuranceBucketdetailsPostResponse**](V2AssuranceBucketdetailsPostResponse.md)
 
 ### Authorization
 
@@ -28966,7 +30543,7 @@ Name | Type | Description  | Notes
 
 ## V2AssuranceCreateUserReportPost
 
-> V2AssuranceCreateUserReportPost200Response V2AssuranceCreateUserReportPost(ctx).Authorization(authorization).V2AssuranceCreateUserReportPostRequest(v2AssuranceCreateUserReportPostRequest).Execute()
+> V2AssuranceCreateUserReportPostResponse V2AssuranceCreateUserReportPost(ctx).Authorization(authorization).V2AssuranceCreateUserReportPostRequest(v2AssuranceCreateUserReportPostRequest).Execute()
 
 
 
@@ -28993,7 +30570,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V2AssuranceCreateUserReportPost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V2AssuranceCreateUserReportPost`: V2AssuranceCreateUserReportPost200Response
+	// response from `V2AssuranceCreateUserReportPost`: V2AssuranceCreateUserReportPostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V2AssuranceCreateUserReportPost`: %v\n", resp)
 }
 ```
@@ -29014,7 +30591,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V2AssuranceCreateUserReportPost200Response**](V2AssuranceCreateUserReportPost200Response.md)
+[**V2AssuranceCreateUserReportPostResponse**](V2AssuranceCreateUserReportPostResponse.md)
 
 ### Authorization
 
@@ -29032,7 +30609,7 @@ Name | Type | Description  | Notes
 
 ## V2AssuranceCreateclassifiedapplicationPost
 
-> V2AssuranceCreateclassifiedapplicationPost200Response V2AssuranceCreateclassifiedapplicationPost(ctx).Authorization(authorization).V2AssuranceCreateclassifiedapplicationPostRequest(v2AssuranceCreateclassifiedapplicationPostRequest).Execute()
+> V2AssuranceCreateclassifiedapplicationPostResponse V2AssuranceCreateclassifiedapplicationPost(ctx).Authorization(authorization).V2AssuranceCreateclassifiedapplicationPostRequest(v2AssuranceCreateclassifiedapplicationPostRequest).Execute()
 
 
 
@@ -29059,7 +30636,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V2AssuranceCreateclassifiedapplicationPost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V2AssuranceCreateclassifiedapplicationPost`: V2AssuranceCreateclassifiedapplicationPost200Response
+	// response from `V2AssuranceCreateclassifiedapplicationPost`: V2AssuranceCreateclassifiedapplicationPostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V2AssuranceCreateclassifiedapplicationPost`: %v\n", resp)
 }
 ```
@@ -29080,7 +30657,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V2AssuranceCreateclassifiedapplicationPost200Response**](V2AssuranceCreateclassifiedapplicationPost200Response.md)
+[**V2AssuranceCreateclassifiedapplicationPostResponse**](V2AssuranceCreateclassifiedapplicationPostResponse.md)
 
 ### Authorization
 
@@ -29230,7 +30807,7 @@ Name | Type | Description  | Notes
 
 ## V2AssuranceDownloadUserReportGet
 
-> V2AssuranceDownloadUserReportGet200Response V2AssuranceDownloadUserReportGet(ctx).Authorization(authorization).Execute()
+> V2AssuranceDownloadUserReportGetResponse V2AssuranceDownloadUserReportGet(ctx).Authorization(authorization).Execute()
 
 
 
@@ -29256,7 +30833,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V2AssuranceDownloadUserReportGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V2AssuranceDownloadUserReportGet`: V2AssuranceDownloadUserReportGet200Response
+	// response from `V2AssuranceDownloadUserReportGet`: V2AssuranceDownloadUserReportGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V2AssuranceDownloadUserReportGet`: %v\n", resp)
 }
 ```
@@ -29276,7 +30853,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V2AssuranceDownloadUserReportGet200Response**](V2AssuranceDownloadUserReportGet200Response.md)
+[**V2AssuranceDownloadUserReportGetResponse**](V2AssuranceDownloadUserReportGetResponse.md)
 
 ### Authorization
 
@@ -29294,7 +30871,7 @@ Name | Type | Description  | Notes
 
 ## V2AssuranceEndpointIntelPost
 
-> V2AssuranceEndpointIntelPost200Response V2AssuranceEndpointIntelPost(ctx).Authorization(authorization).V2AssuranceEndpointIntelPostRequest(v2AssuranceEndpointIntelPostRequest).Execute()
+> V2AssuranceEndpointIntelPostResponse V2AssuranceEndpointIntelPost(ctx).Authorization(authorization).V2AssuranceEndpointIntelPostRequest(v2AssuranceEndpointIntelPostRequest).Execute()
 
 
 
@@ -29321,7 +30898,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V2AssuranceEndpointIntelPost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V2AssuranceEndpointIntelPost`: V2AssuranceEndpointIntelPost200Response
+	// response from `V2AssuranceEndpointIntelPost`: V2AssuranceEndpointIntelPostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V2AssuranceEndpointIntelPost`: %v\n", resp)
 }
 ```
@@ -29342,7 +30919,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V2AssuranceEndpointIntelPost200Response**](V2AssuranceEndpointIntelPost200Response.md)
+[**V2AssuranceEndpointIntelPostResponse**](V2AssuranceEndpointIntelPostResponse.md)
 
 ### Authorization
 
@@ -29360,7 +30937,7 @@ Name | Type | Description  | Notes
 
 ## V2AssuranceEnterprisesummaryPost
 
-> V2AssuranceEnterprisesummaryPost200Response V2AssuranceEnterprisesummaryPost(ctx).Authorization(authorization).V2NotificationlistPostRequest(v2NotificationlistPostRequest).Execute()
+> V2AssuranceEnterprisesummaryPostResponse V2AssuranceEnterprisesummaryPost(ctx).Authorization(authorization).V2AssuranceEnterprisesummaryPostRequest(v2AssuranceEnterprisesummaryPostRequest).Execute()
 
 
 
@@ -29378,16 +30955,16 @@ import (
 
 func main() {
 	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
-	v2NotificationlistPostRequest := *openapiclient.NewV2NotificationlistPostRequest() // V2NotificationlistPostRequest | 
+	v2AssuranceEnterprisesummaryPostRequest := *openapiclient.NewV2AssuranceEnterprisesummaryPostRequest() // V2AssuranceEnterprisesummaryPostRequest | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.DefaultAPI.V2AssuranceEnterprisesummaryPost(context.Background()).Authorization(authorization).V2NotificationlistPostRequest(v2NotificationlistPostRequest).Execute()
+	resp, r, err := apiClient.DefaultAPI.V2AssuranceEnterprisesummaryPost(context.Background()).Authorization(authorization).V2AssuranceEnterprisesummaryPostRequest(v2AssuranceEnterprisesummaryPostRequest).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V2AssuranceEnterprisesummaryPost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V2AssuranceEnterprisesummaryPost`: V2AssuranceEnterprisesummaryPost200Response
+	// response from `V2AssuranceEnterprisesummaryPost`: V2AssuranceEnterprisesummaryPostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V2AssuranceEnterprisesummaryPost`: %v\n", resp)
 }
 ```
@@ -29404,11 +30981,11 @@ Other parameters are passed through a pointer to a apiV2AssuranceEnterprisesumma
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **string** | Bearer token. Format: Bearer &lt;your_token_here&gt; | 
- **v2NotificationlistPostRequest** | [**V2NotificationlistPostRequest**](V2NotificationlistPostRequest.md) |  | 
+ **v2AssuranceEnterprisesummaryPostRequest** | [**V2AssuranceEnterprisesummaryPostRequest**](V2AssuranceEnterprisesummaryPostRequest.md) |  | 
 
 ### Return type
 
-[**V2AssuranceEnterprisesummaryPost200Response**](V2AssuranceEnterprisesummaryPost200Response.md)
+[**V2AssuranceEnterprisesummaryPostResponse**](V2AssuranceEnterprisesummaryPostResponse.md)
 
 ### Authorization
 
@@ -29426,7 +31003,7 @@ Name | Type | Description  | Notes
 
 ## V2AssuranceFlowSummaryPost
 
-> V2AssuranceFlowSummaryPost200Response V2AssuranceFlowSummaryPost(ctx).Authorization(authorization).V2AssuranceFlowSummaryPostRequest(v2AssuranceFlowSummaryPostRequest).Execute()
+> V2AssuranceFlowSummaryPostResponse V2AssuranceFlowSummaryPost(ctx).Authorization(authorization).V2AssuranceFlowSummaryPostRequest(v2AssuranceFlowSummaryPostRequest).Execute()
 
 
 
@@ -29453,7 +31030,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V2AssuranceFlowSummaryPost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V2AssuranceFlowSummaryPost`: V2AssuranceFlowSummaryPost200Response
+	// response from `V2AssuranceFlowSummaryPost`: V2AssuranceFlowSummaryPostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V2AssuranceFlowSummaryPost`: %v\n", resp)
 }
 ```
@@ -29474,7 +31051,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V2AssuranceFlowSummaryPost200Response**](V2AssuranceFlowSummaryPost200Response.md)
+[**V2AssuranceFlowSummaryPostResponse**](V2AssuranceFlowSummaryPostResponse.md)
 
 ### Authorization
 
@@ -29492,7 +31069,7 @@ Name | Type | Description  | Notes
 
 ## V2AssuranceGetclassifiedapplicationlistGet
 
-> V2AssuranceGetclassifiedapplicationlistGet200Response V2AssuranceGetclassifiedapplicationlistGet(ctx).Authorization(authorization).Execute()
+> V2AssuranceGetclassifiedapplicationlistGetResponse V2AssuranceGetclassifiedapplicationlistGet(ctx).Authorization(authorization).Execute()
 
 
 
@@ -29518,7 +31095,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V2AssuranceGetclassifiedapplicationlistGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V2AssuranceGetclassifiedapplicationlistGet`: V2AssuranceGetclassifiedapplicationlistGet200Response
+	// response from `V2AssuranceGetclassifiedapplicationlistGet`: V2AssuranceGetclassifiedapplicationlistGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V2AssuranceGetclassifiedapplicationlistGet`: %v\n", resp)
 }
 ```
@@ -29538,7 +31115,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V2AssuranceGetclassifiedapplicationlistGet200Response**](V2AssuranceGetclassifiedapplicationlistGet200Response.md)
+[**V2AssuranceGetclassifiedapplicationlistGetResponse**](V2AssuranceGetclassifiedapplicationlistGetResponse.md)
 
 ### Authorization
 
@@ -29556,7 +31133,7 @@ Name | Type | Description  | Notes
 
 ## V2AssuranceReadUserReportListGet
 
-> V2AssuranceReadUserReportListGet200Response V2AssuranceReadUserReportListGet(ctx).Authorization(authorization).Execute()
+> V2AssuranceReadUserReportListGetResponse V2AssuranceReadUserReportListGet(ctx).Authorization(authorization).Execute()
 
 
 
@@ -29582,7 +31159,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V2AssuranceReadUserReportListGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V2AssuranceReadUserReportListGet`: V2AssuranceReadUserReportListGet200Response
+	// response from `V2AssuranceReadUserReportListGet`: V2AssuranceReadUserReportListGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V2AssuranceReadUserReportListGet`: %v\n", resp)
 }
 ```
@@ -29602,7 +31179,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V2AssuranceReadUserReportListGet200Response**](V2AssuranceReadUserReportListGet200Response.md)
+[**V2AssuranceReadUserReportListGetResponse**](V2AssuranceReadUserReportListGetResponse.md)
 
 ### Authorization
 
@@ -29620,7 +31197,7 @@ Name | Type | Description  | Notes
 
 ## V2AssuranceScoredetailsPost
 
-> V2AssuranceScoredetailsPost200Response V2AssuranceScoredetailsPost(ctx).Authorization(authorization).V2NotificationlistPostRequest(v2NotificationlistPostRequest).Execute()
+> V2AssuranceScoredetailsPostResponse V2AssuranceScoredetailsPost(ctx).Authorization(authorization).V2AssuranceScoredetailsPostRequest(v2AssuranceScoredetailsPostRequest).Execute()
 
 
 
@@ -29638,16 +31215,16 @@ import (
 
 func main() {
 	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
-	v2NotificationlistPostRequest := *openapiclient.NewV2NotificationlistPostRequest() // V2NotificationlistPostRequest | 
+	v2AssuranceScoredetailsPostRequest := *openapiclient.NewV2AssuranceScoredetailsPostRequest() // V2AssuranceScoredetailsPostRequest | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.DefaultAPI.V2AssuranceScoredetailsPost(context.Background()).Authorization(authorization).V2NotificationlistPostRequest(v2NotificationlistPostRequest).Execute()
+	resp, r, err := apiClient.DefaultAPI.V2AssuranceScoredetailsPost(context.Background()).Authorization(authorization).V2AssuranceScoredetailsPostRequest(v2AssuranceScoredetailsPostRequest).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V2AssuranceScoredetailsPost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V2AssuranceScoredetailsPost`: V2AssuranceScoredetailsPost200Response
+	// response from `V2AssuranceScoredetailsPost`: V2AssuranceScoredetailsPostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V2AssuranceScoredetailsPost`: %v\n", resp)
 }
 ```
@@ -29664,11 +31241,11 @@ Other parameters are passed through a pointer to a apiV2AssuranceScoredetailsPos
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **string** | Bearer token. Format: Bearer &lt;your_token_here&gt; | 
- **v2NotificationlistPostRequest** | [**V2NotificationlistPostRequest**](V2NotificationlistPostRequest.md) |  | 
+ **v2AssuranceScoredetailsPostRequest** | [**V2AssuranceScoredetailsPostRequest**](V2AssuranceScoredetailsPostRequest.md) |  | 
 
 ### Return type
 
-[**V2AssuranceScoredetailsPost200Response**](V2AssuranceScoredetailsPost200Response.md)
+[**V2AssuranceScoredetailsPostResponse**](V2AssuranceScoredetailsPostResponse.md)
 
 ### Authorization
 
@@ -29686,7 +31263,7 @@ Name | Type | Description  | Notes
 
 ## V2AssuranceTopologyClientSessionDetailsPost
 
-> V2AssuranceTopologyClientSessionDetailsPost200Response V2AssuranceTopologyClientSessionDetailsPost(ctx).Authorization(authorization).V2AssuranceTopologyClientSessionDetailsPostRequest(v2AssuranceTopologyClientSessionDetailsPostRequest).Execute()
+> V2AssuranceTopologyClientSessionDetailsPostResponse V2AssuranceTopologyClientSessionDetailsPost(ctx).Authorization(authorization).V2AssuranceTopologyClientSessionDetailsPostRequest(v2AssuranceTopologyClientSessionDetailsPostRequest).Execute()
 
 
 
@@ -29713,7 +31290,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V2AssuranceTopologyClientSessionDetailsPost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V2AssuranceTopologyClientSessionDetailsPost`: V2AssuranceTopologyClientSessionDetailsPost200Response
+	// response from `V2AssuranceTopologyClientSessionDetailsPost`: V2AssuranceTopologyClientSessionDetailsPostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V2AssuranceTopologyClientSessionDetailsPost`: %v\n", resp)
 }
 ```
@@ -29734,7 +31311,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V2AssuranceTopologyClientSessionDetailsPost200Response**](V2AssuranceTopologyClientSessionDetailsPost200Response.md)
+[**V2AssuranceTopologyClientSessionDetailsPostResponse**](V2AssuranceTopologyClientSessionDetailsPostResponse.md)
 
 ### Authorization
 
@@ -29752,7 +31329,7 @@ Name | Type | Description  | Notes
 
 ## V2AssuranceTopologyClientSessionsPost
 
-> V2AssuranceTopologyClientSessionsPost200Response V2AssuranceTopologyClientSessionsPost(ctx).Authorization(authorization).V2AssuranceTopologyClientSessionsPostRequest(v2AssuranceTopologyClientSessionsPostRequest).Execute()
+> V2AssuranceTopologyClientSessionsPostResponse V2AssuranceTopologyClientSessionsPost(ctx).Authorization(authorization).V2AssuranceTopologyClientSessionsPostRequest(v2AssuranceTopologyClientSessionsPostRequest).Execute()
 
 
 
@@ -29779,7 +31356,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V2AssuranceTopologyClientSessionsPost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V2AssuranceTopologyClientSessionsPost`: V2AssuranceTopologyClientSessionsPost200Response
+	// response from `V2AssuranceTopologyClientSessionsPost`: V2AssuranceTopologyClientSessionsPostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V2AssuranceTopologyClientSessionsPost`: %v\n", resp)
 }
 ```
@@ -29800,7 +31377,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V2AssuranceTopologyClientSessionsPost200Response**](V2AssuranceTopologyClientSessionsPost200Response.md)
+[**V2AssuranceTopologyClientSessionsPostResponse**](V2AssuranceTopologyClientSessionsPostResponse.md)
 
 ### Authorization
 
@@ -29818,7 +31395,7 @@ Name | Type | Description  | Notes
 
 ## V2AssuranceTopologyClientSummariesPost
 
-> V2AssuranceTopologyClientSummariesPost200Response V2AssuranceTopologyClientSummariesPost(ctx).Authorization(authorization).V2AssuranceTopologyClientSummariesPostRequest(v2AssuranceTopologyClientSummariesPostRequest).Execute()
+> V2AssuranceTopologyClientSummariesPostResponse V2AssuranceTopologyClientSummariesPost(ctx).Authorization(authorization).V2AssuranceTopologyClientSummariesPostRequest(v2AssuranceTopologyClientSummariesPostRequest).Execute()
 
 
 
@@ -29845,7 +31422,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V2AssuranceTopologyClientSummariesPost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V2AssuranceTopologyClientSummariesPost`: V2AssuranceTopologyClientSummariesPost200Response
+	// response from `V2AssuranceTopologyClientSummariesPost`: V2AssuranceTopologyClientSummariesPostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V2AssuranceTopologyClientSummariesPost`: %v\n", resp)
 }
 ```
@@ -29866,7 +31443,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V2AssuranceTopologyClientSummariesPost200Response**](V2AssuranceTopologyClientSummariesPost200Response.md)
+[**V2AssuranceTopologyClientSummariesPostResponse**](V2AssuranceTopologyClientSummariesPostResponse.md)
 
 ### Authorization
 
@@ -29884,7 +31461,7 @@ Name | Type | Description  | Notes
 
 ## V2AssuranceTopologyFlowsPost
 
-> V2AssuranceTopologyFlowsPost200Response V2AssuranceTopologyFlowsPost(ctx).Authorization(authorization).V2AssuranceTopologyFlowsPostRequest(v2AssuranceTopologyFlowsPostRequest).Execute()
+> V2AssuranceTopologyFlowsPostResponse V2AssuranceTopologyFlowsPost(ctx).Authorization(authorization).V2AssuranceTopologyFlowsPostRequest(v2AssuranceTopologyFlowsPostRequest).Execute()
 
 
 
@@ -29911,7 +31488,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V2AssuranceTopologyFlowsPost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V2AssuranceTopologyFlowsPost`: V2AssuranceTopologyFlowsPost200Response
+	// response from `V2AssuranceTopologyFlowsPost`: V2AssuranceTopologyFlowsPostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V2AssuranceTopologyFlowsPost`: %v\n", resp)
 }
 ```
@@ -29932,7 +31509,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V2AssuranceTopologyFlowsPost200Response**](V2AssuranceTopologyFlowsPost200Response.md)
+[**V2AssuranceTopologyFlowsPostResponse**](V2AssuranceTopologyFlowsPostResponse.md)
 
 ### Authorization
 
@@ -29950,7 +31527,7 @@ Name | Type | Description  | Notes
 
 ## V2AssuranceTopologyInventoryPost
 
-> V2AssuranceTopologyInventoryPost200Response V2AssuranceTopologyInventoryPost(ctx).Authorization(authorization).V2AssuranceTopologyInventoryPostRequest(v2AssuranceTopologyInventoryPostRequest).Execute()
+> V2AssuranceTopologyInventoryPostResponse V2AssuranceTopologyInventoryPost(ctx).Authorization(authorization).V2AssuranceTopologyInventoryPostRequest(v2AssuranceTopologyInventoryPostRequest).Execute()
 
 
 
@@ -29977,7 +31554,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V2AssuranceTopologyInventoryPost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V2AssuranceTopologyInventoryPost`: V2AssuranceTopologyInventoryPost200Response
+	// response from `V2AssuranceTopologyInventoryPost`: V2AssuranceTopologyInventoryPostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V2AssuranceTopologyInventoryPost`: %v\n", resp)
 }
 ```
@@ -29998,7 +31575,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V2AssuranceTopologyInventoryPost200Response**](V2AssuranceTopologyInventoryPost200Response.md)
+[**V2AssuranceTopologyInventoryPostResponse**](V2AssuranceTopologyInventoryPostResponse.md)
 
 ### Authorization
 
@@ -30016,7 +31593,7 @@ Name | Type | Description  | Notes
 
 ## V2AssuranceTopologyOverviewPost
 
-> V2AssuranceTopologyOverviewPost200Response V2AssuranceTopologyOverviewPost(ctx).Authorization(authorization).V2AssuranceTopologyOverviewPostRequest(v2AssuranceTopologyOverviewPostRequest).Execute()
+> V2AssuranceTopologyOverviewPostResponse V2AssuranceTopologyOverviewPost(ctx).Authorization(authorization).V2AssuranceTopologyOverviewPostRequest(v2AssuranceTopologyOverviewPostRequest).Execute()
 
 
 
@@ -30043,7 +31620,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V2AssuranceTopologyOverviewPost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V2AssuranceTopologyOverviewPost`: V2AssuranceTopologyOverviewPost200Response
+	// response from `V2AssuranceTopologyOverviewPost`: V2AssuranceTopologyOverviewPostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V2AssuranceTopologyOverviewPost`: %v\n", resp)
 }
 ```
@@ -30064,7 +31641,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V2AssuranceTopologyOverviewPost200Response**](V2AssuranceTopologyOverviewPost200Response.md)
+[**V2AssuranceTopologyOverviewPostResponse**](V2AssuranceTopologyOverviewPostResponse.md)
 
 ### Authorization
 
@@ -30082,7 +31659,7 @@ Name | Type | Description  | Notes
 
 ## V2AssuranceTopologyRegionSummaryPost
 
-> V2AssuranceTopologyRegionSummaryPost200Response V2AssuranceTopologyRegionSummaryPost(ctx).Authorization(authorization).V2AssuranceTopologyRegionSummaryPostRequest(v2AssuranceTopologyRegionSummaryPostRequest).Execute()
+> V2AssuranceTopologyRegionSummaryPostResponse V2AssuranceTopologyRegionSummaryPost(ctx).Authorization(authorization).V2AssuranceTopologyRegionSummaryPostRequest(v2AssuranceTopologyRegionSummaryPostRequest).Execute()
 
 
 
@@ -30109,7 +31686,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V2AssuranceTopologyRegionSummaryPost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V2AssuranceTopologyRegionSummaryPost`: V2AssuranceTopologyRegionSummaryPost200Response
+	// response from `V2AssuranceTopologyRegionSummaryPost`: V2AssuranceTopologyRegionSummaryPostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V2AssuranceTopologyRegionSummaryPost`: %v\n", resp)
 }
 ```
@@ -30130,7 +31707,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V2AssuranceTopologyRegionSummaryPost200Response**](V2AssuranceTopologyRegionSummaryPost200Response.md)
+[**V2AssuranceTopologyRegionSummaryPostResponse**](V2AssuranceTopologyRegionSummaryPostResponse.md)
 
 ### Authorization
 
@@ -30148,7 +31725,7 @@ Name | Type | Description  | Notes
 
 ## V2AssuranceTopologySiteSummariesPost
 
-> V2AssuranceTopologySiteSummariesPost200Response V2AssuranceTopologySiteSummariesPost(ctx).Authorization(authorization).V2AssuranceTopologySiteSummariesPostRequest(v2AssuranceTopologySiteSummariesPostRequest).Execute()
+> V2AssuranceTopologySiteSummariesPostResponse V2AssuranceTopologySiteSummariesPost(ctx).Authorization(authorization).V2AssuranceTopologySiteSummariesPostRequest(v2AssuranceTopologySiteSummariesPostRequest).Execute()
 
 
 
@@ -30175,7 +31752,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V2AssuranceTopologySiteSummariesPost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V2AssuranceTopologySiteSummariesPost`: V2AssuranceTopologySiteSummariesPost200Response
+	// response from `V2AssuranceTopologySiteSummariesPost`: V2AssuranceTopologySiteSummariesPostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V2AssuranceTopologySiteSummariesPost`: %v\n", resp)
 }
 ```
@@ -30196,7 +31773,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V2AssuranceTopologySiteSummariesPost200Response**](V2AssuranceTopologySiteSummariesPost200Response.md)
+[**V2AssuranceTopologySiteSummariesPostResponse**](V2AssuranceTopologySiteSummariesPostResponse.md)
 
 ### Authorization
 
@@ -30214,7 +31791,7 @@ Name | Type | Description  | Notes
 
 ## V2AssuranceUnclassifiedapplicationprofilesummaryPost
 
-> V2AssuranceApplicationprofilesummaryPost200Response V2AssuranceUnclassifiedapplicationprofilesummaryPost(ctx).Authorization(authorization).V2NotificationlistPostRequest(v2NotificationlistPostRequest).Execute()
+> V2AssuranceUnclassifiedapplicationprofilesummaryPostResponse V2AssuranceUnclassifiedapplicationprofilesummaryPost(ctx).Authorization(authorization).V2AssuranceUnclassifiedapplicationprofilesummaryPostRequest(v2AssuranceUnclassifiedapplicationprofilesummaryPostRequest).Execute()
 
 
 
@@ -30232,16 +31809,16 @@ import (
 
 func main() {
 	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
-	v2NotificationlistPostRequest := *openapiclient.NewV2NotificationlistPostRequest() // V2NotificationlistPostRequest | 
+	v2AssuranceUnclassifiedapplicationprofilesummaryPostRequest := *openapiclient.NewV2AssuranceUnclassifiedapplicationprofilesummaryPostRequest() // V2AssuranceUnclassifiedapplicationprofilesummaryPostRequest | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.DefaultAPI.V2AssuranceUnclassifiedapplicationprofilesummaryPost(context.Background()).Authorization(authorization).V2NotificationlistPostRequest(v2NotificationlistPostRequest).Execute()
+	resp, r, err := apiClient.DefaultAPI.V2AssuranceUnclassifiedapplicationprofilesummaryPost(context.Background()).Authorization(authorization).V2AssuranceUnclassifiedapplicationprofilesummaryPostRequest(v2AssuranceUnclassifiedapplicationprofilesummaryPostRequest).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V2AssuranceUnclassifiedapplicationprofilesummaryPost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V2AssuranceUnclassifiedapplicationprofilesummaryPost`: V2AssuranceApplicationprofilesummaryPost200Response
+	// response from `V2AssuranceUnclassifiedapplicationprofilesummaryPost`: V2AssuranceUnclassifiedapplicationprofilesummaryPostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V2AssuranceUnclassifiedapplicationprofilesummaryPost`: %v\n", resp)
 }
 ```
@@ -30258,11 +31835,11 @@ Other parameters are passed through a pointer to a apiV2AssuranceUnclassifiedapp
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **string** | Bearer token. Format: Bearer &lt;your_token_here&gt; | 
- **v2NotificationlistPostRequest** | [**V2NotificationlistPostRequest**](V2NotificationlistPostRequest.md) |  | 
+ **v2AssuranceUnclassifiedapplicationprofilesummaryPostRequest** | [**V2AssuranceUnclassifiedapplicationprofilesummaryPostRequest**](V2AssuranceUnclassifiedapplicationprofilesummaryPostRequest.md) |  | 
 
 ### Return type
 
-[**V2AssuranceApplicationprofilesummaryPost200Response**](V2AssuranceApplicationprofilesummaryPost200Response.md)
+[**V2AssuranceUnclassifiedapplicationprofilesummaryPostResponse**](V2AssuranceUnclassifiedapplicationprofilesummaryPostResponse.md)
 
 ### Authorization
 
@@ -30280,7 +31857,7 @@ Name | Type | Description  | Notes
 
 ## V2AssuranceUpdateclassifiedapplicationPost
 
-> map[string]interface{} V2AssuranceUpdateclassifiedapplicationPost(ctx).Authorization(authorization).V2AssuranceGetclassifiedapplicationlistGet200Response(v2AssuranceGetclassifiedapplicationlistGet200Response).Execute()
+> map[string]interface{} V2AssuranceUpdateclassifiedapplicationPost(ctx).Authorization(authorization).V2AssuranceUpdateclassifiedapplicationPostRequest(v2AssuranceUpdateclassifiedapplicationPostRequest).Execute()
 
 
 
@@ -30298,11 +31875,11 @@ import (
 
 func main() {
 	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
-	v2AssuranceGetclassifiedapplicationlistGet200Response := *openapiclient.NewV2AssuranceGetclassifiedapplicationlistGet200Response() // V2AssuranceGetclassifiedapplicationlistGet200Response | 
+	v2AssuranceUpdateclassifiedapplicationPostRequest := *openapiclient.NewV2AssuranceUpdateclassifiedapplicationPostRequest() // V2AssuranceUpdateclassifiedapplicationPostRequest | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.DefaultAPI.V2AssuranceUpdateclassifiedapplicationPost(context.Background()).Authorization(authorization).V2AssuranceGetclassifiedapplicationlistGet200Response(v2AssuranceGetclassifiedapplicationlistGet200Response).Execute()
+	resp, r, err := apiClient.DefaultAPI.V2AssuranceUpdateclassifiedapplicationPost(context.Background()).Authorization(authorization).V2AssuranceUpdateclassifiedapplicationPostRequest(v2AssuranceUpdateclassifiedapplicationPostRequest).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V2AssuranceUpdateclassifiedapplicationPost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -30324,7 +31901,7 @@ Other parameters are passed through a pointer to a apiV2AssuranceUpdateclassifie
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **string** | Bearer token. Format: Bearer &lt;your_token_here&gt; | 
- **v2AssuranceGetclassifiedapplicationlistGet200Response** | [**V2AssuranceGetclassifiedapplicationlistGet200Response**](V2AssuranceGetclassifiedapplicationlistGet200Response.md) |  | 
+ **v2AssuranceUpdateclassifiedapplicationPostRequest** | [**V2AssuranceUpdateclassifiedapplicationPostRequest**](V2AssuranceUpdateclassifiedapplicationPostRequest.md) |  | 
 
 ### Return type
 
@@ -30346,7 +31923,7 @@ Name | Type | Description  | Notes
 
 ## V2AssuranceVersionPost
 
-> V2VersionPost200Response V2AssuranceVersionPost(ctx).Authorization(authorization).Body(body).Execute()
+> V2AssuranceVersionPostResponse V2AssuranceVersionPost(ctx).Authorization(authorization).Body(body).Execute()
 
 
 
@@ -30373,7 +31950,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V2AssuranceVersionPost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V2AssuranceVersionPost`: V2VersionPost200Response
+	// response from `V2AssuranceVersionPost`: V2AssuranceVersionPostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V2AssuranceVersionPost`: %v\n", resp)
 }
 ```
@@ -30394,7 +31971,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V2VersionPost200Response**](V2VersionPost200Response.md)
+[**V2AssuranceVersionPostResponse**](V2AssuranceVersionPostResponse.md)
 
 ### Authorization
 
@@ -30412,7 +31989,7 @@ Name | Type | Description  | Notes
 
 ## V2AuditLogsPost
 
-> V2AuditLogsPost200Response V2AuditLogsPost(ctx).Authorization(authorization).V2AuditLogsPostRequest(v2AuditLogsPostRequest).Execute()
+> V2AuditLogsPostResponse V2AuditLogsPost(ctx).Authorization(authorization).V2AuditLogsPostRequest(v2AuditLogsPostRequest).Execute()
 
 
 
@@ -30439,7 +32016,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V2AuditLogsPost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V2AuditLogsPost`: V2AuditLogsPost200Response
+	// response from `V2AuditLogsPost`: V2AuditLogsPostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V2AuditLogsPost`: %v\n", resp)
 }
 ```
@@ -30460,7 +32037,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V2AuditLogsPost200Response**](V2AuditLogsPost200Response.md)
+[**V2AuditLogsPostResponse**](V2AuditLogsPostResponse.md)
 
 ### Authorization
 
@@ -30478,7 +32055,7 @@ Name | Type | Description  | Notes
 
 ## V2ChildalertlistPost
 
-> V2ChildalertlistPost200Response V2ChildalertlistPost(ctx).Authorization(authorization).V2ChildalertlistPostRequest(v2ChildalertlistPostRequest).Execute()
+> V2ChildalertlistPostResponse V2ChildalertlistPost(ctx).Authorization(authorization).V2ChildalertlistPostRequest(v2ChildalertlistPostRequest).Execute()
 
 
 
@@ -30496,7 +32073,7 @@ import (
 
 func main() {
 	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
-	v2ChildalertlistPostRequest := *openapiclient.NewV2ChildalertlistPostRequest() // V2ChildalertlistPostRequest | 
+	v2ChildalertlistPostRequest := *openapiclient.NewV2ChildalertlistPostRequest("example string") // V2ChildalertlistPostRequest | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -30505,7 +32082,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V2ChildalertlistPost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V2ChildalertlistPost`: V2ChildalertlistPost200Response
+	// response from `V2ChildalertlistPost`: V2ChildalertlistPostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V2ChildalertlistPost`: %v\n", resp)
 }
 ```
@@ -30526,7 +32103,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V2ChildalertlistPost200Response**](V2ChildalertlistPost200Response.md)
+[**V2ChildalertlistPostResponse**](V2ChildalertlistPostResponse.md)
 
 ### Authorization
 
@@ -30544,7 +32121,9 @@ Name | Type | Description  | Notes
 
 ## V2DeviceDeviceIdLanSegmentsPost
 
-> V2DeviceDeviceIdLanSegmentsPost200Response V2DeviceDeviceIdLanSegmentsPost(ctx, deviceId).Authorization(authorization).V2NotificationlistPostRequest(v2NotificationlistPostRequest).Execute()
+> V2DeviceDeviceIdLanSegmentsPostResponse V2DeviceDeviceIdLanSegmentsPost(ctx, deviceId).Authorization(authorization).V2DeviceDeviceIdLanSegmentsPostRequest(v2DeviceDeviceIdLanSegmentsPostRequest).Execute()
+
+
 
 
 
@@ -30563,16 +32142,16 @@ import (
 func main() {
 	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
 	deviceId := int64(1234567891011) // int64 | 
-	v2NotificationlistPostRequest := *openapiclient.NewV2NotificationlistPostRequest() // V2NotificationlistPostRequest | 
+	v2DeviceDeviceIdLanSegmentsPostRequest := *openapiclient.NewV2DeviceDeviceIdLanSegmentsPostRequest() // V2DeviceDeviceIdLanSegmentsPostRequest | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.DefaultAPI.V2DeviceDeviceIdLanSegmentsPost(context.Background(), deviceId).Authorization(authorization).V2NotificationlistPostRequest(v2NotificationlistPostRequest).Execute()
+	resp, r, err := apiClient.DefaultAPI.V2DeviceDeviceIdLanSegmentsPost(context.Background(), deviceId).Authorization(authorization).V2DeviceDeviceIdLanSegmentsPostRequest(v2DeviceDeviceIdLanSegmentsPostRequest).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V2DeviceDeviceIdLanSegmentsPost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V2DeviceDeviceIdLanSegmentsPost`: V2DeviceDeviceIdLanSegmentsPost200Response
+	// response from `V2DeviceDeviceIdLanSegmentsPost`: V2DeviceDeviceIdLanSegmentsPostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V2DeviceDeviceIdLanSegmentsPost`: %v\n", resp)
 }
 ```
@@ -30594,11 +32173,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **string** | Bearer token. Format: Bearer &lt;your_token_here&gt; | 
 
- **v2NotificationlistPostRequest** | [**V2NotificationlistPostRequest**](V2NotificationlistPostRequest.md) |  | 
+ **v2DeviceDeviceIdLanSegmentsPostRequest** | [**V2DeviceDeviceIdLanSegmentsPostRequest**](V2DeviceDeviceIdLanSegmentsPostRequest.md) |  | 
 
 ### Return type
 
-[**V2DeviceDeviceIdLanSegmentsPost200Response**](V2DeviceDeviceIdLanSegmentsPost200Response.md)
+[**V2DeviceDeviceIdLanSegmentsPostResponse**](V2DeviceDeviceIdLanSegmentsPostResponse.md)
 
 ### Authorization
 
@@ -30616,7 +32195,9 @@ Name | Type | Description  | Notes
 
 ## V2DeviceDeviceIdTopologyPost
 
-> V2DeviceDeviceIdTopologyPost200Response V2DeviceDeviceIdTopologyPost(ctx, deviceId).Authorization(authorization).V2DeviceDeviceIdTopologyPostRequest(v2DeviceDeviceIdTopologyPostRequest).Execute()
+> V2DeviceDeviceIdTopologyPostResponse V2DeviceDeviceIdTopologyPost(ctx, deviceId).Authorization(authorization).V2DeviceDeviceIdTopologyPostRequest(v2DeviceDeviceIdTopologyPostRequest).Execute()
+
+
 
 
 
@@ -30644,7 +32225,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V2DeviceDeviceIdTopologyPost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V2DeviceDeviceIdTopologyPost`: V2DeviceDeviceIdTopologyPost200Response
+	// response from `V2DeviceDeviceIdTopologyPost`: V2DeviceDeviceIdTopologyPostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V2DeviceDeviceIdTopologyPost`: %v\n", resp)
 }
 ```
@@ -30670,7 +32251,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V2DeviceDeviceIdTopologyPost200Response**](V2DeviceDeviceIdTopologyPost200Response.md)
+[**V2DeviceDeviceIdTopologyPostResponse**](V2DeviceDeviceIdTopologyPostResponse.md)
 
 ### Authorization
 
@@ -30688,7 +32269,9 @@ Name | Type | Description  | Notes
 
 ## V2ExtranetConsumersUsageTopPost
 
-> V1ExtranetB2bMonitoringPeeringServiceConsumersUsageTopPost200Response V2ExtranetConsumersUsageTopPost(ctx).Authorization(authorization).V1ExtranetB2bMonitoringPeeringServiceConsumersUsageTopPostRequest(v1ExtranetB2bMonitoringPeeringServiceConsumersUsageTopPostRequest).Execute()
+> V2ExtranetConsumersUsageTopPostResponse V2ExtranetConsumersUsageTopPost(ctx).Authorization(authorization).V2ExtranetConsumersUsageTopPostRequest(v2ExtranetConsumersUsageTopPostRequest).Execute()
+
+
 
 
 
@@ -30706,16 +32289,16 @@ import (
 
 func main() {
 	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
-	v1ExtranetB2bMonitoringPeeringServiceConsumersUsageTopPostRequest := *openapiclient.NewV1ExtranetB2bMonitoringPeeringServiceConsumersUsageTopPostRequest() // V1ExtranetB2bMonitoringPeeringServiceConsumersUsageTopPostRequest | 
+	v2ExtranetConsumersUsageTopPostRequest := *openapiclient.NewV2ExtranetConsumersUsageTopPostRequest() // V2ExtranetConsumersUsageTopPostRequest | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.DefaultAPI.V2ExtranetConsumersUsageTopPost(context.Background()).Authorization(authorization).V1ExtranetB2bMonitoringPeeringServiceConsumersUsageTopPostRequest(v1ExtranetB2bMonitoringPeeringServiceConsumersUsageTopPostRequest).Execute()
+	resp, r, err := apiClient.DefaultAPI.V2ExtranetConsumersUsageTopPost(context.Background()).Authorization(authorization).V2ExtranetConsumersUsageTopPostRequest(v2ExtranetConsumersUsageTopPostRequest).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V2ExtranetConsumersUsageTopPost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V2ExtranetConsumersUsageTopPost`: V1ExtranetB2bMonitoringPeeringServiceConsumersUsageTopPost200Response
+	// response from `V2ExtranetConsumersUsageTopPost`: V2ExtranetConsumersUsageTopPostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V2ExtranetConsumersUsageTopPost`: %v\n", resp)
 }
 ```
@@ -30732,11 +32315,11 @@ Other parameters are passed through a pointer to a apiV2ExtranetConsumersUsageTo
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **string** | Bearer token. Format: Bearer &lt;your_token_here&gt; | 
- **v1ExtranetB2bMonitoringPeeringServiceConsumersUsageTopPostRequest** | [**V1ExtranetB2bMonitoringPeeringServiceConsumersUsageTopPostRequest**](V1ExtranetB2bMonitoringPeeringServiceConsumersUsageTopPostRequest.md) |  | 
+ **v2ExtranetConsumersUsageTopPostRequest** | [**V2ExtranetConsumersUsageTopPostRequest**](V2ExtranetConsumersUsageTopPostRequest.md) |  | 
 
 ### Return type
 
-[**V1ExtranetB2bMonitoringPeeringServiceConsumersUsageTopPost200Response**](V1ExtranetB2bMonitoringPeeringServiceConsumersUsageTopPost200Response.md)
+[**V2ExtranetConsumersUsageTopPostResponse**](V2ExtranetConsumersUsageTopPostResponse.md)
 
 ### Authorization
 
@@ -30754,7 +32337,9 @@ Name | Type | Description  | Notes
 
 ## V2ExtranetLanSegmentsUsageTopPost
 
-> V2ExtranetLanSegmentsUsageTopPost200Response V2ExtranetLanSegmentsUsageTopPost(ctx).Authorization(authorization).V1ExtranetB2bMonitoringPeeringServiceConsumersUsageTopPostRequest(v1ExtranetB2bMonitoringPeeringServiceConsumersUsageTopPostRequest).Execute()
+> V2ExtranetLanSegmentsUsageTopPostResponse V2ExtranetLanSegmentsUsageTopPost(ctx).Authorization(authorization).V2ExtranetLanSegmentsUsageTopPostRequest(v2ExtranetLanSegmentsUsageTopPostRequest).Execute()
+
+
 
 
 
@@ -30772,16 +32357,16 @@ import (
 
 func main() {
 	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
-	v1ExtranetB2bMonitoringPeeringServiceConsumersUsageTopPostRequest := *openapiclient.NewV1ExtranetB2bMonitoringPeeringServiceConsumersUsageTopPostRequest() // V1ExtranetB2bMonitoringPeeringServiceConsumersUsageTopPostRequest | 
+	v2ExtranetLanSegmentsUsageTopPostRequest := *openapiclient.NewV2ExtranetLanSegmentsUsageTopPostRequest() // V2ExtranetLanSegmentsUsageTopPostRequest | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.DefaultAPI.V2ExtranetLanSegmentsUsageTopPost(context.Background()).Authorization(authorization).V1ExtranetB2bMonitoringPeeringServiceConsumersUsageTopPostRequest(v1ExtranetB2bMonitoringPeeringServiceConsumersUsageTopPostRequest).Execute()
+	resp, r, err := apiClient.DefaultAPI.V2ExtranetLanSegmentsUsageTopPost(context.Background()).Authorization(authorization).V2ExtranetLanSegmentsUsageTopPostRequest(v2ExtranetLanSegmentsUsageTopPostRequest).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V2ExtranetLanSegmentsUsageTopPost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V2ExtranetLanSegmentsUsageTopPost`: V2ExtranetLanSegmentsUsageTopPost200Response
+	// response from `V2ExtranetLanSegmentsUsageTopPost`: V2ExtranetLanSegmentsUsageTopPostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V2ExtranetLanSegmentsUsageTopPost`: %v\n", resp)
 }
 ```
@@ -30798,11 +32383,11 @@ Other parameters are passed through a pointer to a apiV2ExtranetLanSegmentsUsage
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **string** | Bearer token. Format: Bearer &lt;your_token_here&gt; | 
- **v1ExtranetB2bMonitoringPeeringServiceConsumersUsageTopPostRequest** | [**V1ExtranetB2bMonitoringPeeringServiceConsumersUsageTopPostRequest**](V1ExtranetB2bMonitoringPeeringServiceConsumersUsageTopPostRequest.md) |  | 
+ **v2ExtranetLanSegmentsUsageTopPostRequest** | [**V2ExtranetLanSegmentsUsageTopPostRequest**](V2ExtranetLanSegmentsUsageTopPostRequest.md) |  | 
 
 ### Return type
 
-[**V2ExtranetLanSegmentsUsageTopPost200Response**](V2ExtranetLanSegmentsUsageTopPost200Response.md)
+[**V2ExtranetLanSegmentsUsageTopPostResponse**](V2ExtranetLanSegmentsUsageTopPostResponse.md)
 
 ### Authorization
 
@@ -30820,7 +32405,9 @@ Name | Type | Description  | Notes
 
 ## V2ExtranetServiceOvertimeConsumptionPost
 
-> V1ExtranetB2bMonitoringPeeringServiceServiceOvertimeConsumptionPost200Response V2ExtranetServiceOvertimeConsumptionPost(ctx).Authorization(authorization).V1ExtranetB2bMonitoringPeeringServiceServiceOvertimeConsumptionPostRequest(v1ExtranetB2bMonitoringPeeringServiceServiceOvertimeConsumptionPostRequest).Execute()
+> V2ExtranetServiceOvertimeConsumptionPostResponse V2ExtranetServiceOvertimeConsumptionPost(ctx).Authorization(authorization).V2ExtranetServiceOvertimeConsumptionPostRequest(v2ExtranetServiceOvertimeConsumptionPostRequest).Execute()
+
+
 
 
 
@@ -30838,16 +32425,16 @@ import (
 
 func main() {
 	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
-	v1ExtranetB2bMonitoringPeeringServiceServiceOvertimeConsumptionPostRequest := *openapiclient.NewV1ExtranetB2bMonitoringPeeringServiceServiceOvertimeConsumptionPostRequest() // V1ExtranetB2bMonitoringPeeringServiceServiceOvertimeConsumptionPostRequest | 
+	v2ExtranetServiceOvertimeConsumptionPostRequest := *openapiclient.NewV2ExtranetServiceOvertimeConsumptionPostRequest() // V2ExtranetServiceOvertimeConsumptionPostRequest | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.DefaultAPI.V2ExtranetServiceOvertimeConsumptionPost(context.Background()).Authorization(authorization).V1ExtranetB2bMonitoringPeeringServiceServiceOvertimeConsumptionPostRequest(v1ExtranetB2bMonitoringPeeringServiceServiceOvertimeConsumptionPostRequest).Execute()
+	resp, r, err := apiClient.DefaultAPI.V2ExtranetServiceOvertimeConsumptionPost(context.Background()).Authorization(authorization).V2ExtranetServiceOvertimeConsumptionPostRequest(v2ExtranetServiceOvertimeConsumptionPostRequest).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V2ExtranetServiceOvertimeConsumptionPost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V2ExtranetServiceOvertimeConsumptionPost`: V1ExtranetB2bMonitoringPeeringServiceServiceOvertimeConsumptionPost200Response
+	// response from `V2ExtranetServiceOvertimeConsumptionPost`: V2ExtranetServiceOvertimeConsumptionPostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V2ExtranetServiceOvertimeConsumptionPost`: %v\n", resp)
 }
 ```
@@ -30864,11 +32451,11 @@ Other parameters are passed through a pointer to a apiV2ExtranetServiceOvertimeC
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **string** | Bearer token. Format: Bearer &lt;your_token_here&gt; | 
- **v1ExtranetB2bMonitoringPeeringServiceServiceOvertimeConsumptionPostRequest** | [**V1ExtranetB2bMonitoringPeeringServiceServiceOvertimeConsumptionPostRequest**](V1ExtranetB2bMonitoringPeeringServiceServiceOvertimeConsumptionPostRequest.md) |  | 
+ **v2ExtranetServiceOvertimeConsumptionPostRequest** | [**V2ExtranetServiceOvertimeConsumptionPostRequest**](V2ExtranetServiceOvertimeConsumptionPostRequest.md) |  | 
 
 ### Return type
 
-[**V1ExtranetB2bMonitoringPeeringServiceServiceOvertimeConsumptionPost200Response**](V1ExtranetB2bMonitoringPeeringServiceServiceOvertimeConsumptionPost200Response.md)
+[**V2ExtranetServiceOvertimeConsumptionPostResponse**](V2ExtranetServiceOvertimeConsumptionPostResponse.md)
 
 ### Authorization
 
@@ -30886,7 +32473,9 @@ Name | Type | Description  | Notes
 
 ## V2ExtranetSitesConsumptionOverviewPost
 
-> V2ExtranetSitesConsumptionOverviewPost200Response V2ExtranetSitesConsumptionOverviewPost(ctx).Authorization(authorization).V1ExtranetB2bMonitoringPeeringServiceConsumptionOverviewPostRequest(v1ExtranetB2bMonitoringPeeringServiceConsumptionOverviewPostRequest).Execute()
+> V2ExtranetSitesConsumptionOverviewPostResponse V2ExtranetSitesConsumptionOverviewPost(ctx).Authorization(authorization).V2ExtranetSitesConsumptionOverviewPostRequest(v2ExtranetSitesConsumptionOverviewPostRequest).Execute()
+
+
 
 
 
@@ -30904,16 +32493,16 @@ import (
 
 func main() {
 	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
-	v1ExtranetB2bMonitoringPeeringServiceConsumptionOverviewPostRequest := *openapiclient.NewV1ExtranetB2bMonitoringPeeringServiceConsumptionOverviewPostRequest() // V1ExtranetB2bMonitoringPeeringServiceConsumptionOverviewPostRequest | 
+	v2ExtranetSitesConsumptionOverviewPostRequest := *openapiclient.NewV2ExtranetSitesConsumptionOverviewPostRequest() // V2ExtranetSitesConsumptionOverviewPostRequest | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.DefaultAPI.V2ExtranetSitesConsumptionOverviewPost(context.Background()).Authorization(authorization).V1ExtranetB2bMonitoringPeeringServiceConsumptionOverviewPostRequest(v1ExtranetB2bMonitoringPeeringServiceConsumptionOverviewPostRequest).Execute()
+	resp, r, err := apiClient.DefaultAPI.V2ExtranetSitesConsumptionOverviewPost(context.Background()).Authorization(authorization).V2ExtranetSitesConsumptionOverviewPostRequest(v2ExtranetSitesConsumptionOverviewPostRequest).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V2ExtranetSitesConsumptionOverviewPost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V2ExtranetSitesConsumptionOverviewPost`: V2ExtranetSitesConsumptionOverviewPost200Response
+	// response from `V2ExtranetSitesConsumptionOverviewPost`: V2ExtranetSitesConsumptionOverviewPostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V2ExtranetSitesConsumptionOverviewPost`: %v\n", resp)
 }
 ```
@@ -30930,11 +32519,11 @@ Other parameters are passed through a pointer to a apiV2ExtranetSitesConsumption
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **string** | Bearer token. Format: Bearer &lt;your_token_here&gt; | 
- **v1ExtranetB2bMonitoringPeeringServiceConsumptionOverviewPostRequest** | [**V1ExtranetB2bMonitoringPeeringServiceConsumptionOverviewPostRequest**](V1ExtranetB2bMonitoringPeeringServiceConsumptionOverviewPostRequest.md) |  | 
+ **v2ExtranetSitesConsumptionOverviewPostRequest** | [**V2ExtranetSitesConsumptionOverviewPostRequest**](V2ExtranetSitesConsumptionOverviewPostRequest.md) |  | 
 
 ### Return type
 
-[**V2ExtranetSitesConsumptionOverviewPost200Response**](V2ExtranetSitesConsumptionOverviewPost200Response.md)
+[**V2ExtranetSitesConsumptionOverviewPostResponse**](V2ExtranetSitesConsumptionOverviewPostResponse.md)
 
 ### Authorization
 
@@ -30952,7 +32541,9 @@ Name | Type | Description  | Notes
 
 ## V2ExtranetSitesUsagePost
 
-> V1ExtranetB2bMonitoringPeeringServiceBandwidthUsagePost200Response V2ExtranetSitesUsagePost(ctx).Authorization(authorization).V1ExtranetB2bMonitoringPeeringServiceBandwidthUsagePostRequest(v1ExtranetB2bMonitoringPeeringServiceBandwidthUsagePostRequest).Execute()
+> V2ExtranetSitesUsagePostResponse V2ExtranetSitesUsagePost(ctx).Authorization(authorization).V2ExtranetSitesUsagePostRequest(v2ExtranetSitesUsagePostRequest).Execute()
+
+
 
 
 
@@ -30970,16 +32561,16 @@ import (
 
 func main() {
 	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
-	v1ExtranetB2bMonitoringPeeringServiceBandwidthUsagePostRequest := *openapiclient.NewV1ExtranetB2bMonitoringPeeringServiceBandwidthUsagePostRequest() // V1ExtranetB2bMonitoringPeeringServiceBandwidthUsagePostRequest | 
+	v2ExtranetSitesUsagePostRequest := *openapiclient.NewV2ExtranetSitesUsagePostRequest() // V2ExtranetSitesUsagePostRequest | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.DefaultAPI.V2ExtranetSitesUsagePost(context.Background()).Authorization(authorization).V1ExtranetB2bMonitoringPeeringServiceBandwidthUsagePostRequest(v1ExtranetB2bMonitoringPeeringServiceBandwidthUsagePostRequest).Execute()
+	resp, r, err := apiClient.DefaultAPI.V2ExtranetSitesUsagePost(context.Background()).Authorization(authorization).V2ExtranetSitesUsagePostRequest(v2ExtranetSitesUsagePostRequest).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V2ExtranetSitesUsagePost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V2ExtranetSitesUsagePost`: V1ExtranetB2bMonitoringPeeringServiceBandwidthUsagePost200Response
+	// response from `V2ExtranetSitesUsagePost`: V2ExtranetSitesUsagePostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V2ExtranetSitesUsagePost`: %v\n", resp)
 }
 ```
@@ -30996,11 +32587,11 @@ Other parameters are passed through a pointer to a apiV2ExtranetSitesUsagePostRe
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **string** | Bearer token. Format: Bearer &lt;your_token_here&gt; | 
- **v1ExtranetB2bMonitoringPeeringServiceBandwidthUsagePostRequest** | [**V1ExtranetB2bMonitoringPeeringServiceBandwidthUsagePostRequest**](V1ExtranetB2bMonitoringPeeringServiceBandwidthUsagePostRequest.md) |  | 
+ **v2ExtranetSitesUsagePostRequest** | [**V2ExtranetSitesUsagePostRequest**](V2ExtranetSitesUsagePostRequest.md) |  | 
 
 ### Return type
 
-[**V1ExtranetB2bMonitoringPeeringServiceBandwidthUsagePost200Response**](V1ExtranetB2bMonitoringPeeringServiceBandwidthUsagePost200Response.md)
+[**V2ExtranetSitesUsagePostResponse**](V2ExtranetSitesUsagePostResponse.md)
 
 ### Authorization
 
@@ -31018,7 +32609,9 @@ Name | Type | Description  | Notes
 
 ## V2ExtranetTotalUsagePost
 
-> V2ExtranetTotalUsagePost200Response V2ExtranetTotalUsagePost(ctx).Authorization(authorization).V1ExtranetB2bMonitoringPeeringServiceConsumersUsageTopPostRequest(v1ExtranetB2bMonitoringPeeringServiceConsumersUsageTopPostRequest).Execute()
+> V2ExtranetTotalUsagePostResponse V2ExtranetTotalUsagePost(ctx).Authorization(authorization).V2ExtranetTotalUsagePostRequest(v2ExtranetTotalUsagePostRequest).Execute()
+
+
 
 
 
@@ -31036,16 +32629,16 @@ import (
 
 func main() {
 	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
-	v1ExtranetB2bMonitoringPeeringServiceConsumersUsageTopPostRequest := *openapiclient.NewV1ExtranetB2bMonitoringPeeringServiceConsumersUsageTopPostRequest() // V1ExtranetB2bMonitoringPeeringServiceConsumersUsageTopPostRequest | 
+	v2ExtranetTotalUsagePostRequest := *openapiclient.NewV2ExtranetTotalUsagePostRequest() // V2ExtranetTotalUsagePostRequest | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.DefaultAPI.V2ExtranetTotalUsagePost(context.Background()).Authorization(authorization).V1ExtranetB2bMonitoringPeeringServiceConsumersUsageTopPostRequest(v1ExtranetB2bMonitoringPeeringServiceConsumersUsageTopPostRequest).Execute()
+	resp, r, err := apiClient.DefaultAPI.V2ExtranetTotalUsagePost(context.Background()).Authorization(authorization).V2ExtranetTotalUsagePostRequest(v2ExtranetTotalUsagePostRequest).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V2ExtranetTotalUsagePost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V2ExtranetTotalUsagePost`: V2ExtranetTotalUsagePost200Response
+	// response from `V2ExtranetTotalUsagePost`: V2ExtranetTotalUsagePostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V2ExtranetTotalUsagePost`: %v\n", resp)
 }
 ```
@@ -31062,11 +32655,11 @@ Other parameters are passed through a pointer to a apiV2ExtranetTotalUsagePostRe
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **string** | Bearer token. Format: Bearer &lt;your_token_here&gt; | 
- **v1ExtranetB2bMonitoringPeeringServiceConsumersUsageTopPostRequest** | [**V1ExtranetB2bMonitoringPeeringServiceConsumersUsageTopPostRequest**](V1ExtranetB2bMonitoringPeeringServiceConsumersUsageTopPostRequest.md) |  | 
+ **v2ExtranetTotalUsagePostRequest** | [**V2ExtranetTotalUsagePostRequest**](V2ExtranetTotalUsagePostRequest.md) |  | 
 
 ### Return type
 
-[**V2ExtranetTotalUsagePost200Response**](V2ExtranetTotalUsagePost200Response.md)
+[**V2ExtranetTotalUsagePostResponse**](V2ExtranetTotalUsagePostResponse.md)
 
 ### Authorization
 
@@ -31084,7 +32677,9 @@ Name | Type | Description  | Notes
 
 ## V2ExtranetsMonitoringConsumersPost
 
-> V2ExtranetsMonitoringConsumersPost200Response V2ExtranetsMonitoringConsumersPost(ctx).Authorization(authorization).V1PolicyRouteTagSetsPost200Response(v1PolicyRouteTagSetsPost200Response).Execute()
+> V2ExtranetsMonitoringConsumersPostResponse V2ExtranetsMonitoringConsumersPost(ctx).Authorization(authorization).V2ExtranetsMonitoringConsumersPostRequest(v2ExtranetsMonitoringConsumersPostRequest).Execute()
+
+
 
 
 
@@ -31102,16 +32697,16 @@ import (
 
 func main() {
 	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
-	v1PolicyRouteTagSetsPost200Response := *openapiclient.NewV1PolicyRouteTagSetsPost200Response() // V1PolicyRouteTagSetsPost200Response | 
+	v2ExtranetsMonitoringConsumersPostRequest := *openapiclient.NewV2ExtranetsMonitoringConsumersPostRequest() // V2ExtranetsMonitoringConsumersPostRequest | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.DefaultAPI.V2ExtranetsMonitoringConsumersPost(context.Background()).Authorization(authorization).V1PolicyRouteTagSetsPost200Response(v1PolicyRouteTagSetsPost200Response).Execute()
+	resp, r, err := apiClient.DefaultAPI.V2ExtranetsMonitoringConsumersPost(context.Background()).Authorization(authorization).V2ExtranetsMonitoringConsumersPostRequest(v2ExtranetsMonitoringConsumersPostRequest).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V2ExtranetsMonitoringConsumersPost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V2ExtranetsMonitoringConsumersPost`: V2ExtranetsMonitoringConsumersPost200Response
+	// response from `V2ExtranetsMonitoringConsumersPost`: V2ExtranetsMonitoringConsumersPostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V2ExtranetsMonitoringConsumersPost`: %v\n", resp)
 }
 ```
@@ -31128,11 +32723,11 @@ Other parameters are passed through a pointer to a apiV2ExtranetsMonitoringConsu
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **string** | Bearer token. Format: Bearer &lt;your_token_here&gt; | 
- **v1PolicyRouteTagSetsPost200Response** | [**V1PolicyRouteTagSetsPost200Response**](V1PolicyRouteTagSetsPost200Response.md) |  | 
+ **v2ExtranetsMonitoringConsumersPostRequest** | [**V2ExtranetsMonitoringConsumersPostRequest**](V2ExtranetsMonitoringConsumersPostRequest.md) |  | 
 
 ### Return type
 
-[**V2ExtranetsMonitoringConsumersPost200Response**](V2ExtranetsMonitoringConsumersPost200Response.md)
+[**V2ExtranetsMonitoringConsumersPostResponse**](V2ExtranetsMonitoringConsumersPostResponse.md)
 
 ### Authorization
 
@@ -31150,7 +32745,7 @@ Name | Type | Description  | Notes
 
 ## V2IntegrationGetallEnterpriseIdGet
 
-> V2IntegrationGetallEnterpriseIdGet200Response V2IntegrationGetallEnterpriseIdGet(ctx, enterpriseId).Authorization(authorization).Execute()
+> V2IntegrationGetallEnterpriseIdGetResponse V2IntegrationGetallEnterpriseIdGet(ctx, enterpriseId).Authorization(authorization).Execute()
 
 
 
@@ -31177,7 +32772,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V2IntegrationGetallEnterpriseIdGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V2IntegrationGetallEnterpriseIdGet`: V2IntegrationGetallEnterpriseIdGet200Response
+	// response from `V2IntegrationGetallEnterpriseIdGet`: V2IntegrationGetallEnterpriseIdGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V2IntegrationGetallEnterpriseIdGet`: %v\n", resp)
 }
 ```
@@ -31202,7 +32797,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V2IntegrationGetallEnterpriseIdGet200Response**](V2IntegrationGetallEnterpriseIdGet200Response.md)
+[**V2IntegrationGetallEnterpriseIdGetResponse**](V2IntegrationGetallEnterpriseIdGetResponse.md)
 
 ### Authorization
 
@@ -31309,7 +32904,7 @@ import (
 func main() {
 	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
 	integrationId := int64(1234567891011) // int64 | integration id
-	v2IntegrationIntegrationIdPutRequest := *openapiclient.NewV2IntegrationIntegrationIdPutRequest() // V2IntegrationIntegrationIdPutRequest | 
+	v2IntegrationIntegrationIdPutRequest := *openapiclient.NewV2IntegrationIntegrationIdPutRequest(*openapiclient.NewAlertserviceUpdateIntegrationBody(int64(1234567891011), "ENUM_VALUE", "example string")) // V2IntegrationIntegrationIdPutRequest | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -31362,7 +32957,7 @@ Name | Type | Description  | Notes
 
 ## V2IntegrationPost
 
-> V2IntegrationPost200Response V2IntegrationPost(ctx).Authorization(authorization).V2IntegrationPostRequest(v2IntegrationPostRequest).Execute()
+> V2IntegrationPostResponse V2IntegrationPost(ctx).Authorization(authorization).V2IntegrationPostRequest(v2IntegrationPostRequest).Execute()
 
 
 
@@ -31380,7 +32975,7 @@ import (
 
 func main() {
 	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
-	v2IntegrationPostRequest := *openapiclient.NewV2IntegrationPostRequest() // V2IntegrationPostRequest | 
+	v2IntegrationPostRequest := *openapiclient.NewV2IntegrationPostRequest(*openapiclient.NewAlertserviceCreateIntegrationBody(int64(1234567891011), "ENUM_VALUE", "example string")) // V2IntegrationPostRequest | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -31389,7 +32984,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V2IntegrationPost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V2IntegrationPost`: V2IntegrationPost200Response
+	// response from `V2IntegrationPost`: V2IntegrationPostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V2IntegrationPost`: %v\n", resp)
 }
 ```
@@ -31410,7 +33005,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V2IntegrationPost200Response**](V2IntegrationPost200Response.md)
+[**V2IntegrationPostResponse**](V2IntegrationPostResponse.md)
 
 ### Authorization
 
@@ -31501,7 +33096,7 @@ Name | Type | Description  | Notes
 
 ## V2MonitoringBfdPost
 
-> V2MonitoringBfdPost200Response V2MonitoringBfdPost(ctx).Authorization(authorization).V2MonitoringBfdPostRequest(v2MonitoringBfdPostRequest).Execute()
+> V2MonitoringBfdPostResponse V2MonitoringBfdPost(ctx).Authorization(authorization).V2MonitoringBfdPostRequest(v2MonitoringBfdPostRequest).Execute()
 
 
 
@@ -31528,7 +33123,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V2MonitoringBfdPost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V2MonitoringBfdPost`: V2MonitoringBfdPost200Response
+	// response from `V2MonitoringBfdPost`: V2MonitoringBfdPostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V2MonitoringBfdPost`: %v\n", resp)
 }
 ```
@@ -31549,7 +33144,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V2MonitoringBfdPost200Response**](V2MonitoringBfdPost200Response.md)
+[**V2MonitoringBfdPostResponse**](V2MonitoringBfdPostResponse.md)
 
 ### Authorization
 
@@ -31567,7 +33162,7 @@ Name | Type | Description  | Notes
 
 ## V2MonitoringBgpPost
 
-> V2MonitoringBgpPost200Response V2MonitoringBgpPost(ctx).Authorization(authorization).V2MonitoringBgpPostRequest(v2MonitoringBgpPostRequest).Execute()
+> V2MonitoringBgpPostResponse V2MonitoringBgpPost(ctx).Authorization(authorization).V2MonitoringBgpPostRequest(v2MonitoringBgpPostRequest).Execute()
 
 
 
@@ -31594,7 +33189,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V2MonitoringBgpPost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V2MonitoringBgpPost`: V2MonitoringBgpPost200Response
+	// response from `V2MonitoringBgpPost`: V2MonitoringBgpPostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V2MonitoringBgpPost`: %v\n", resp)
 }
 ```
@@ -31615,7 +33210,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V2MonitoringBgpPost200Response**](V2MonitoringBgpPost200Response.md)
+[**V2MonitoringBgpPostResponse**](V2MonitoringBgpPostResponse.md)
 
 ### Authorization
 
@@ -31633,7 +33228,7 @@ Name | Type | Description  | Notes
 
 ## V2MonitoringCircuitsBandwidthPost
 
-> V1MonitoringCircuitsBandwidthPost200Response V2MonitoringCircuitsBandwidthPost(ctx).Authorization(authorization).V1MonitoringCircuitsBandwidthPostRequest(v1MonitoringCircuitsBandwidthPostRequest).Execute()
+> V2MonitoringCircuitsBandwidthPostResponse V2MonitoringCircuitsBandwidthPost(ctx).Authorization(authorization).V2MonitoringCircuitsBandwidthPostRequest(v2MonitoringCircuitsBandwidthPostRequest).Execute()
 
 
 
@@ -31651,16 +33246,16 @@ import (
 
 func main() {
 	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
-	v1MonitoringCircuitsBandwidthPostRequest := *openapiclient.NewV1MonitoringCircuitsBandwidthPostRequest() // V1MonitoringCircuitsBandwidthPostRequest | 
+	v2MonitoringCircuitsBandwidthPostRequest := *openapiclient.NewV2MonitoringCircuitsBandwidthPostRequest() // V2MonitoringCircuitsBandwidthPostRequest | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.DefaultAPI.V2MonitoringCircuitsBandwidthPost(context.Background()).Authorization(authorization).V1MonitoringCircuitsBandwidthPostRequest(v1MonitoringCircuitsBandwidthPostRequest).Execute()
+	resp, r, err := apiClient.DefaultAPI.V2MonitoringCircuitsBandwidthPost(context.Background()).Authorization(authorization).V2MonitoringCircuitsBandwidthPostRequest(v2MonitoringCircuitsBandwidthPostRequest).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V2MonitoringCircuitsBandwidthPost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V2MonitoringCircuitsBandwidthPost`: V1MonitoringCircuitsBandwidthPost200Response
+	// response from `V2MonitoringCircuitsBandwidthPost`: V2MonitoringCircuitsBandwidthPostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V2MonitoringCircuitsBandwidthPost`: %v\n", resp)
 }
 ```
@@ -31677,11 +33272,11 @@ Other parameters are passed through a pointer to a apiV2MonitoringCircuitsBandwi
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **string** | Bearer token. Format: Bearer &lt;your_token_here&gt; | 
- **v1MonitoringCircuitsBandwidthPostRequest** | [**V1MonitoringCircuitsBandwidthPostRequest**](V1MonitoringCircuitsBandwidthPostRequest.md) |  | 
+ **v2MonitoringCircuitsBandwidthPostRequest** | [**V2MonitoringCircuitsBandwidthPostRequest**](V2MonitoringCircuitsBandwidthPostRequest.md) |  | 
 
 ### Return type
 
-[**V1MonitoringCircuitsBandwidthPost200Response**](V1MonitoringCircuitsBandwidthPost200Response.md)
+[**V2MonitoringCircuitsBandwidthPostResponse**](V2MonitoringCircuitsBandwidthPostResponse.md)
 
 ### Authorization
 
@@ -31699,7 +33294,7 @@ Name | Type | Description  | Notes
 
 ## V2MonitoringCircuitsSummaryPost
 
-> V2MonitoringCircuitsSummaryPost200Response V2MonitoringCircuitsSummaryPost(ctx).Authorization(authorization).V2MonitoringCircuitsSummaryPostRequest(v2MonitoringCircuitsSummaryPostRequest).Execute()
+> V2MonitoringCircuitsSummaryPostResponse V2MonitoringCircuitsSummaryPost(ctx).Authorization(authorization).V2MonitoringCircuitsSummaryPostRequest(v2MonitoringCircuitsSummaryPostRequest).Execute()
 
 
 
@@ -31726,7 +33321,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V2MonitoringCircuitsSummaryPost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V2MonitoringCircuitsSummaryPost`: V2MonitoringCircuitsSummaryPost200Response
+	// response from `V2MonitoringCircuitsSummaryPost`: V2MonitoringCircuitsSummaryPostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V2MonitoringCircuitsSummaryPost`: %v\n", resp)
 }
 ```
@@ -31747,7 +33342,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V2MonitoringCircuitsSummaryPost200Response**](V2MonitoringCircuitsSummaryPost200Response.md)
+[**V2MonitoringCircuitsSummaryPostResponse**](V2MonitoringCircuitsSummaryPostResponse.md)
 
 ### Authorization
 
@@ -31765,7 +33360,7 @@ Name | Type | Description  | Notes
 
 ## V2MonitoringCircuitsUtilizationPost
 
-> V2MonitoringCircuitsUtilizationPost200Response V2MonitoringCircuitsUtilizationPost(ctx).Authorization(authorization).V2MonitoringCircuitsUtilizationPostRequest(v2MonitoringCircuitsUtilizationPostRequest).Execute()
+> V2MonitoringCircuitsUtilizationPostResponse V2MonitoringCircuitsUtilizationPost(ctx).Authorization(authorization).V2MonitoringCircuitsUtilizationPostRequest(v2MonitoringCircuitsUtilizationPostRequest).Execute()
 
 
 
@@ -31792,7 +33387,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V2MonitoringCircuitsUtilizationPost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V2MonitoringCircuitsUtilizationPost`: V2MonitoringCircuitsUtilizationPost200Response
+	// response from `V2MonitoringCircuitsUtilizationPost`: V2MonitoringCircuitsUtilizationPostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V2MonitoringCircuitsUtilizationPost`: %v\n", resp)
 }
 ```
@@ -31813,7 +33408,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V2MonitoringCircuitsUtilizationPost200Response**](V2MonitoringCircuitsUtilizationPost200Response.md)
+[**V2MonitoringCircuitsUtilizationPostResponse**](V2MonitoringCircuitsUtilizationPostResponse.md)
 
 ### Authorization
 
@@ -31831,7 +33426,7 @@ Name | Type | Description  | Notes
 
 ## V2MonitoringCircuitsVisualizationPost
 
-> V1MonitoringCircuitsVisualizationPost200Response V2MonitoringCircuitsVisualizationPost(ctx).Authorization(authorization).V1MonitoringCircuitsVisualizationPostRequest(v1MonitoringCircuitsVisualizationPostRequest).Execute()
+> V2MonitoringCircuitsVisualizationPostResponse V2MonitoringCircuitsVisualizationPost(ctx).Authorization(authorization).V2MonitoringCircuitsVisualizationPostRequest(v2MonitoringCircuitsVisualizationPostRequest).Execute()
 
 
 
@@ -31849,16 +33444,16 @@ import (
 
 func main() {
 	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
-	v1MonitoringCircuitsVisualizationPostRequest := *openapiclient.NewV1MonitoringCircuitsVisualizationPostRequest() // V1MonitoringCircuitsVisualizationPostRequest | 
+	v2MonitoringCircuitsVisualizationPostRequest := *openapiclient.NewV2MonitoringCircuitsVisualizationPostRequest() // V2MonitoringCircuitsVisualizationPostRequest | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.DefaultAPI.V2MonitoringCircuitsVisualizationPost(context.Background()).Authorization(authorization).V1MonitoringCircuitsVisualizationPostRequest(v1MonitoringCircuitsVisualizationPostRequest).Execute()
+	resp, r, err := apiClient.DefaultAPI.V2MonitoringCircuitsVisualizationPost(context.Background()).Authorization(authorization).V2MonitoringCircuitsVisualizationPostRequest(v2MonitoringCircuitsVisualizationPostRequest).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V2MonitoringCircuitsVisualizationPost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V2MonitoringCircuitsVisualizationPost`: V1MonitoringCircuitsVisualizationPost200Response
+	// response from `V2MonitoringCircuitsVisualizationPost`: V2MonitoringCircuitsVisualizationPostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V2MonitoringCircuitsVisualizationPost`: %v\n", resp)
 }
 ```
@@ -31875,11 +33470,11 @@ Other parameters are passed through a pointer to a apiV2MonitoringCircuitsVisual
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **string** | Bearer token. Format: Bearer &lt;your_token_here&gt; | 
- **v1MonitoringCircuitsVisualizationPostRequest** | [**V1MonitoringCircuitsVisualizationPostRequest**](V1MonitoringCircuitsVisualizationPostRequest.md) |  | 
+ **v2MonitoringCircuitsVisualizationPostRequest** | [**V2MonitoringCircuitsVisualizationPostRequest**](V2MonitoringCircuitsVisualizationPostRequest.md) |  | 
 
 ### Return type
 
-[**V1MonitoringCircuitsVisualizationPost200Response**](V1MonitoringCircuitsVisualizationPost200Response.md)
+[**V2MonitoringCircuitsVisualizationPostResponse**](V2MonitoringCircuitsVisualizationPostResponse.md)
 
 ### Authorization
 
@@ -31897,7 +33492,7 @@ Name | Type | Description  | Notes
 
 ## V2MonitoringExtranetEdgeStatusGet
 
-> V2MonitoringExtranetEdgeStatusGet200Response V2MonitoringExtranetEdgeStatusGet(ctx).Authorization(authorization).Execute()
+> V2MonitoringExtranetEdgeStatusGetResponse V2MonitoringExtranetEdgeStatusGet(ctx).Authorization(authorization).Execute()
 
 
 
@@ -31923,7 +33518,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V2MonitoringExtranetEdgeStatusGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V2MonitoringExtranetEdgeStatusGet`: V2MonitoringExtranetEdgeStatusGet200Response
+	// response from `V2MonitoringExtranetEdgeStatusGet`: V2MonitoringExtranetEdgeStatusGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V2MonitoringExtranetEdgeStatusGet`: %v\n", resp)
 }
 ```
@@ -31943,7 +33538,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V2MonitoringExtranetEdgeStatusGet200Response**](V2MonitoringExtranetEdgeStatusGet200Response.md)
+[**V2MonitoringExtranetEdgeStatusGetResponse**](V2MonitoringExtranetEdgeStatusGetResponse.md)
 
 ### Authorization
 
@@ -31961,7 +33556,7 @@ Name | Type | Description  | Notes
 
 ## V2MonitoringExtranetLogDetailsPost
 
-> V2MonitoringExtranetLogDetailsPost200Response V2MonitoringExtranetLogDetailsPost(ctx).Authorization(authorization).V1B2bExtranetMonitoringFilterPostRequest(v1B2bExtranetMonitoringFilterPostRequest).Execute()
+> V2MonitoringExtranetLogDetailsPostResponse V2MonitoringExtranetLogDetailsPost(ctx).Authorization(authorization).V2MonitoringExtranetLogDetailsPostRequest(v2MonitoringExtranetLogDetailsPostRequest).Execute()
 
 
 
@@ -31979,16 +33574,16 @@ import (
 
 func main() {
 	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
-	v1B2bExtranetMonitoringFilterPostRequest := *openapiclient.NewV1B2bExtranetMonitoringFilterPostRequest() // V1B2bExtranetMonitoringFilterPostRequest | 
+	v2MonitoringExtranetLogDetailsPostRequest := *openapiclient.NewV2MonitoringExtranetLogDetailsPostRequest() // V2MonitoringExtranetLogDetailsPostRequest | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.DefaultAPI.V2MonitoringExtranetLogDetailsPost(context.Background()).Authorization(authorization).V1B2bExtranetMonitoringFilterPostRequest(v1B2bExtranetMonitoringFilterPostRequest).Execute()
+	resp, r, err := apiClient.DefaultAPI.V2MonitoringExtranetLogDetailsPost(context.Background()).Authorization(authorization).V2MonitoringExtranetLogDetailsPostRequest(v2MonitoringExtranetLogDetailsPostRequest).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V2MonitoringExtranetLogDetailsPost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V2MonitoringExtranetLogDetailsPost`: V2MonitoringExtranetLogDetailsPost200Response
+	// response from `V2MonitoringExtranetLogDetailsPost`: V2MonitoringExtranetLogDetailsPostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V2MonitoringExtranetLogDetailsPost`: %v\n", resp)
 }
 ```
@@ -32005,11 +33600,11 @@ Other parameters are passed through a pointer to a apiV2MonitoringExtranetLogDet
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **string** | Bearer token. Format: Bearer &lt;your_token_here&gt; | 
- **v1B2bExtranetMonitoringFilterPostRequest** | [**V1B2bExtranetMonitoringFilterPostRequest**](V1B2bExtranetMonitoringFilterPostRequest.md) |  | 
+ **v2MonitoringExtranetLogDetailsPostRequest** | [**V2MonitoringExtranetLogDetailsPostRequest**](V2MonitoringExtranetLogDetailsPostRequest.md) |  | 
 
 ### Return type
 
-[**V2MonitoringExtranetLogDetailsPost200Response**](V2MonitoringExtranetLogDetailsPost200Response.md)
+[**V2MonitoringExtranetLogDetailsPostResponse**](V2MonitoringExtranetLogDetailsPostResponse.md)
 
 ### Authorization
 
@@ -32027,7 +33622,7 @@ Name | Type | Description  | Notes
 
 ## V2MonitoringExtranetServiceStatusDetailsGet
 
-> V2MonitoringExtranetServiceStatusDetailsGet200Response V2MonitoringExtranetServiceStatusDetailsGet(ctx).Authorization(authorization).Execute()
+> V2MonitoringExtranetServiceStatusDetailsGetResponse V2MonitoringExtranetServiceStatusDetailsGet(ctx).Authorization(authorization).Execute()
 
 
 
@@ -32053,7 +33648,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V2MonitoringExtranetServiceStatusDetailsGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V2MonitoringExtranetServiceStatusDetailsGet`: V2MonitoringExtranetServiceStatusDetailsGet200Response
+	// response from `V2MonitoringExtranetServiceStatusDetailsGet`: V2MonitoringExtranetServiceStatusDetailsGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V2MonitoringExtranetServiceStatusDetailsGet`: %v\n", resp)
 }
 ```
@@ -32073,7 +33668,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V2MonitoringExtranetServiceStatusDetailsGet200Response**](V2MonitoringExtranetServiceStatusDetailsGet200Response.md)
+[**V2MonitoringExtranetServiceStatusDetailsGetResponse**](V2MonitoringExtranetServiceStatusDetailsGetResponse.md)
 
 ### Authorization
 
@@ -32091,7 +33686,7 @@ Name | Type | Description  | Notes
 
 ## V2MonitoringExtranetServiceStatusGet
 
-> V2MonitoringExtranetServiceStatusGet200Response V2MonitoringExtranetServiceStatusGet(ctx).Authorization(authorization).Execute()
+> V2MonitoringExtranetServiceStatusGetResponse V2MonitoringExtranetServiceStatusGet(ctx).Authorization(authorization).Execute()
 
 
 
@@ -32117,7 +33712,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V2MonitoringExtranetServiceStatusGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V2MonitoringExtranetServiceStatusGet`: V2MonitoringExtranetServiceStatusGet200Response
+	// response from `V2MonitoringExtranetServiceStatusGet`: V2MonitoringExtranetServiceStatusGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V2MonitoringExtranetServiceStatusGet`: %v\n", resp)
 }
 ```
@@ -32137,7 +33732,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V2MonitoringExtranetServiceStatusGet200Response**](V2MonitoringExtranetServiceStatusGet200Response.md)
+[**V2MonitoringExtranetServiceStatusGetResponse**](V2MonitoringExtranetServiceStatusGetResponse.md)
 
 ### Authorization
 
@@ -32155,7 +33750,7 @@ Name | Type | Description  | Notes
 
 ## V2MonitoringExtranetSiteStatusGet
 
-> V2MonitoringExtranetServiceStatusDetailsGet200Response V2MonitoringExtranetSiteStatusGet(ctx).Authorization(authorization).Execute()
+> V2MonitoringExtranetSiteStatusGetResponse V2MonitoringExtranetSiteStatusGet(ctx).Authorization(authorization).Execute()
 
 
 
@@ -32181,7 +33776,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V2MonitoringExtranetSiteStatusGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V2MonitoringExtranetSiteStatusGet`: V2MonitoringExtranetServiceStatusDetailsGet200Response
+	// response from `V2MonitoringExtranetSiteStatusGet`: V2MonitoringExtranetSiteStatusGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V2MonitoringExtranetSiteStatusGet`: %v\n", resp)
 }
 ```
@@ -32201,7 +33796,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V2MonitoringExtranetServiceStatusDetailsGet200Response**](V2MonitoringExtranetServiceStatusDetailsGet200Response.md)
+[**V2MonitoringExtranetSiteStatusGetResponse**](V2MonitoringExtranetSiteStatusGetResponse.md)
 
 ### Authorization
 
@@ -32219,7 +33814,7 @@ Name | Type | Description  | Notes
 
 ## V2MonitoringExtranetStatusDetailsGet
 
-> V2MonitoringExtranetStatusDetailsGet200Response V2MonitoringExtranetStatusDetailsGet(ctx).Authorization(authorization).Execute()
+> V2MonitoringExtranetStatusDetailsGetResponse V2MonitoringExtranetStatusDetailsGet(ctx).Authorization(authorization).Execute()
 
 
 
@@ -32245,7 +33840,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V2MonitoringExtranetStatusDetailsGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V2MonitoringExtranetStatusDetailsGet`: V2MonitoringExtranetStatusDetailsGet200Response
+	// response from `V2MonitoringExtranetStatusDetailsGet`: V2MonitoringExtranetStatusDetailsGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V2MonitoringExtranetStatusDetailsGet`: %v\n", resp)
 }
 ```
@@ -32265,7 +33860,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V2MonitoringExtranetStatusDetailsGet200Response**](V2MonitoringExtranetStatusDetailsGet200Response.md)
+[**V2MonitoringExtranetStatusDetailsGetResponse**](V2MonitoringExtranetStatusDetailsGetResponse.md)
 
 ### Authorization
 
@@ -32283,7 +33878,7 @@ Name | Type | Description  | Notes
 
 ## V2MonitoringIkeErrorHistoryPost
 
-> V2MonitoringIkeErrorHistoryPost200Response V2MonitoringIkeErrorHistoryPost(ctx).Authorization(authorization).V2MonitoringIkeErrorHistoryPostRequest(v2MonitoringIkeErrorHistoryPostRequest).Execute()
+> V2MonitoringIkeErrorHistoryPostResponse V2MonitoringIkeErrorHistoryPost(ctx).Authorization(authorization).V2MonitoringIkeErrorHistoryPostRequest(v2MonitoringIkeErrorHistoryPostRequest).Execute()
 
 
 
@@ -32310,7 +33905,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V2MonitoringIkeErrorHistoryPost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V2MonitoringIkeErrorHistoryPost`: V2MonitoringIkeErrorHistoryPost200Response
+	// response from `V2MonitoringIkeErrorHistoryPost`: V2MonitoringIkeErrorHistoryPostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V2MonitoringIkeErrorHistoryPost`: %v\n", resp)
 }
 ```
@@ -32331,7 +33926,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V2MonitoringIkeErrorHistoryPost200Response**](V2MonitoringIkeErrorHistoryPost200Response.md)
+[**V2MonitoringIkeErrorHistoryPostResponse**](V2MonitoringIkeErrorHistoryPostResponse.md)
 
 ### Authorization
 
@@ -32349,7 +33944,7 @@ Name | Type | Description  | Notes
 
 ## V2MonitoringInterfacePost
 
-> V2MonitoringInterfacePost200Response V2MonitoringInterfacePost(ctx).Authorization(authorization).V2MonitoringInterfacePostRequest(v2MonitoringInterfacePostRequest).Execute()
+> V2MonitoringInterfacePostResponse V2MonitoringInterfacePost(ctx).Authorization(authorization).V2MonitoringInterfacePostRequest(v2MonitoringInterfacePostRequest).Execute()
 
 
 
@@ -32376,7 +33971,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V2MonitoringInterfacePost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V2MonitoringInterfacePost`: V2MonitoringInterfacePost200Response
+	// response from `V2MonitoringInterfacePost`: V2MonitoringInterfacePostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V2MonitoringInterfacePost`: %v\n", resp)
 }
 ```
@@ -32397,7 +33992,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V2MonitoringInterfacePost200Response**](V2MonitoringInterfacePost200Response.md)
+[**V2MonitoringInterfacePostResponse**](V2MonitoringInterfacePostResponse.md)
 
 ### Authorization
 
@@ -32415,7 +34010,7 @@ Name | Type | Description  | Notes
 
 ## V2MonitoringIpsecPost
 
-> V2MonitoringIpsecPost200Response V2MonitoringIpsecPost(ctx).Authorization(authorization).V2MonitoringIpsecPostRequest(v2MonitoringIpsecPostRequest).Execute()
+> V2MonitoringIpsecPostResponse V2MonitoringIpsecPost(ctx).Authorization(authorization).V2MonitoringIpsecPostRequest(v2MonitoringIpsecPostRequest).Execute()
 
 
 
@@ -32442,7 +34037,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V2MonitoringIpsecPost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V2MonitoringIpsecPost`: V2MonitoringIpsecPost200Response
+	// response from `V2MonitoringIpsecPost`: V2MonitoringIpsecPostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V2MonitoringIpsecPost`: %v\n", resp)
 }
 ```
@@ -32463,7 +34058,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V2MonitoringIpsecPost200Response**](V2MonitoringIpsecPost200Response.md)
+[**V2MonitoringIpsecPostResponse**](V2MonitoringIpsecPostResponse.md)
 
 ### Authorization
 
@@ -32481,7 +34076,7 @@ Name | Type | Description  | Notes
 
 ## V2MonitoringOspfPost
 
-> V2MonitoringOspfPost200Response V2MonitoringOspfPost(ctx).Authorization(authorization).V2MonitoringOspfPostRequest(v2MonitoringOspfPostRequest).Execute()
+> V2MonitoringOspfPostResponse V2MonitoringOspfPost(ctx).Authorization(authorization).V2MonitoringOspfPostRequest(v2MonitoringOspfPostRequest).Execute()
 
 
 
@@ -32508,7 +34103,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V2MonitoringOspfPost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V2MonitoringOspfPost`: V2MonitoringOspfPost200Response
+	// response from `V2MonitoringOspfPost`: V2MonitoringOspfPostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V2MonitoringOspfPost`: %v\n", resp)
 }
 ```
@@ -32529,7 +34124,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V2MonitoringOspfPost200Response**](V2MonitoringOspfPost200Response.md)
+[**V2MonitoringOspfPostResponse**](V2MonitoringOspfPostResponse.md)
 
 ### Authorization
 
@@ -32547,7 +34142,7 @@ Name | Type | Description  | Notes
 
 ## V2MonitoringPolicyPost
 
-> V2MonitoringPolicyPost200Response V2MonitoringPolicyPost(ctx).Authorization(authorization).V2MonitoringPolicyPostRequest(v2MonitoringPolicyPostRequest).Execute()
+> V2MonitoringPolicyPostResponse V2MonitoringPolicyPost(ctx).Authorization(authorization).V2MonitoringPolicyPostRequest(v2MonitoringPolicyPostRequest).Execute()
 
 
 
@@ -32574,7 +34169,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V2MonitoringPolicyPost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V2MonitoringPolicyPost`: V2MonitoringPolicyPost200Response
+	// response from `V2MonitoringPolicyPost`: V2MonitoringPolicyPostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V2MonitoringPolicyPost`: %v\n", resp)
 }
 ```
@@ -32595,7 +34190,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V2MonitoringPolicyPost200Response**](V2MonitoringPolicyPost200Response.md)
+[**V2MonitoringPolicyPostResponse**](V2MonitoringPolicyPostResponse.md)
 
 ### Authorization
 
@@ -32613,7 +34208,7 @@ Name | Type | Description  | Notes
 
 ## V2MonitoringQueueInstantPost
 
-> V2MonitoringQueueInstantPost200Response V2MonitoringQueueInstantPost(ctx).Authorization(authorization).V2MonitoringQueueInstantPostRequest(v2MonitoringQueueInstantPostRequest).Execute()
+> V2MonitoringQueueInstantPostResponse V2MonitoringQueueInstantPost(ctx).Authorization(authorization).V2MonitoringQueueInstantPostRequest(v2MonitoringQueueInstantPostRequest).Execute()
 
 
 
@@ -32640,7 +34235,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V2MonitoringQueueInstantPost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V2MonitoringQueueInstantPost`: V2MonitoringQueueInstantPost200Response
+	// response from `V2MonitoringQueueInstantPost`: V2MonitoringQueueInstantPostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V2MonitoringQueueInstantPost`: %v\n", resp)
 }
 ```
@@ -32661,7 +34256,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V2MonitoringQueueInstantPost200Response**](V2MonitoringQueueInstantPost200Response.md)
+[**V2MonitoringQueueInstantPostResponse**](V2MonitoringQueueInstantPostResponse.md)
 
 ### Authorization
 
@@ -32679,7 +34274,7 @@ Name | Type | Description  | Notes
 
 ## V2MonitoringQueuePost
 
-> V2MonitoringQueuePost200Response V2MonitoringQueuePost(ctx).Authorization(authorization).V2MonitoringQueuePostRequest(v2MonitoringQueuePostRequest).Execute()
+> V2MonitoringQueuePostResponse V2MonitoringQueuePost(ctx).Authorization(authorization).V2MonitoringQueuePostRequest(v2MonitoringQueuePostRequest).Execute()
 
 
 
@@ -32706,7 +34301,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V2MonitoringQueuePost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V2MonitoringQueuePost`: V2MonitoringQueuePost200Response
+	// response from `V2MonitoringQueuePost`: V2MonitoringQueuePostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V2MonitoringQueuePost`: %v\n", resp)
 }
 ```
@@ -32727,7 +34322,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V2MonitoringQueuePost200Response**](V2MonitoringQueuePost200Response.md)
+[**V2MonitoringQueuePostResponse**](V2MonitoringQueuePostResponse.md)
 
 ### Authorization
 
@@ -32745,7 +34340,7 @@ Name | Type | Description  | Notes
 
 ## V2MonitoringSegmentRouteCountsPost
 
-> V2MonitoringSegmentRouteCountsPost200Response V2MonitoringSegmentRouteCountsPost(ctx).Authorization(authorization).V1DevicesBringupPostRequest(v1DevicesBringupPostRequest).Execute()
+> V2MonitoringSegmentRouteCountsPostResponse V2MonitoringSegmentRouteCountsPost(ctx).Authorization(authorization).V2MonitoringSegmentRouteCountsPostRequest(v2MonitoringSegmentRouteCountsPostRequest).Execute()
 
 
 
@@ -32763,16 +34358,16 @@ import (
 
 func main() {
 	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
-	v1DevicesBringupPostRequest := *openapiclient.NewV1DevicesBringupPostRequest() // V1DevicesBringupPostRequest | 
+	v2MonitoringSegmentRouteCountsPostRequest := *openapiclient.NewV2MonitoringSegmentRouteCountsPostRequest() // V2MonitoringSegmentRouteCountsPostRequest | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.DefaultAPI.V2MonitoringSegmentRouteCountsPost(context.Background()).Authorization(authorization).V1DevicesBringupPostRequest(v1DevicesBringupPostRequest).Execute()
+	resp, r, err := apiClient.DefaultAPI.V2MonitoringSegmentRouteCountsPost(context.Background()).Authorization(authorization).V2MonitoringSegmentRouteCountsPostRequest(v2MonitoringSegmentRouteCountsPostRequest).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V2MonitoringSegmentRouteCountsPost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V2MonitoringSegmentRouteCountsPost`: V2MonitoringSegmentRouteCountsPost200Response
+	// response from `V2MonitoringSegmentRouteCountsPost`: V2MonitoringSegmentRouteCountsPostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V2MonitoringSegmentRouteCountsPost`: %v\n", resp)
 }
 ```
@@ -32789,11 +34384,11 @@ Other parameters are passed through a pointer to a apiV2MonitoringSegmentRouteCo
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **string** | Bearer token. Format: Bearer &lt;your_token_here&gt; | 
- **v1DevicesBringupPostRequest** | [**V1DevicesBringupPostRequest**](V1DevicesBringupPostRequest.md) |  | 
+ **v2MonitoringSegmentRouteCountsPostRequest** | [**V2MonitoringSegmentRouteCountsPostRequest**](V2MonitoringSegmentRouteCountsPostRequest.md) |  | 
 
 ### Return type
 
-[**V2MonitoringSegmentRouteCountsPost200Response**](V2MonitoringSegmentRouteCountsPost200Response.md)
+[**V2MonitoringSegmentRouteCountsPostResponse**](V2MonitoringSegmentRouteCountsPostResponse.md)
 
 ### Authorization
 
@@ -32811,7 +34406,7 @@ Name | Type | Description  | Notes
 
 ## V2MonitoringSiteCircuitsBandwidthSiteIdPost
 
-> V2MonitoringSiteCircuitsBandwidthSiteIdPost200Response V2MonitoringSiteCircuitsBandwidthSiteIdPost(ctx, siteId).Authorization(authorization).V2MonitoringSiteCircuitsBandwidthSiteIdPostRequest(v2MonitoringSiteCircuitsBandwidthSiteIdPostRequest).Execute()
+> V2MonitoringSiteCircuitsBandwidthSiteIdPostResponse V2MonitoringSiteCircuitsBandwidthSiteIdPost(ctx, siteId).Authorization(authorization).V2MonitoringSiteCircuitsBandwidthSiteIdPostRequest(v2MonitoringSiteCircuitsBandwidthSiteIdPostRequest).Execute()
 
 
 
@@ -32839,7 +34434,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V2MonitoringSiteCircuitsBandwidthSiteIdPost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V2MonitoringSiteCircuitsBandwidthSiteIdPost`: V2MonitoringSiteCircuitsBandwidthSiteIdPost200Response
+	// response from `V2MonitoringSiteCircuitsBandwidthSiteIdPost`: V2MonitoringSiteCircuitsBandwidthSiteIdPostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V2MonitoringSiteCircuitsBandwidthSiteIdPost`: %v\n", resp)
 }
 ```
@@ -32865,7 +34460,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V2MonitoringSiteCircuitsBandwidthSiteIdPost200Response**](V2MonitoringSiteCircuitsBandwidthSiteIdPost200Response.md)
+[**V2MonitoringSiteCircuitsBandwidthSiteIdPostResponse**](V2MonitoringSiteCircuitsBandwidthSiteIdPostResponse.md)
 
 ### Authorization
 
@@ -32883,7 +34478,7 @@ Name | Type | Description  | Notes
 
 ## V2MonitoringSiteTwampSiteIdPost
 
-> V2MonitoringSiteTwampSiteIdPost200Response V2MonitoringSiteTwampSiteIdPost(ctx, siteId).Authorization(authorization).V2MonitoringSiteTwampSiteIdPostRequest(v2MonitoringSiteTwampSiteIdPostRequest).Execute()
+> V2MonitoringSiteTwampSiteIdPostResponse V2MonitoringSiteTwampSiteIdPost(ctx, siteId).Authorization(authorization).V2MonitoringSiteTwampSiteIdPostRequest(v2MonitoringSiteTwampSiteIdPostRequest).Execute()
 
 
 
@@ -32911,7 +34506,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V2MonitoringSiteTwampSiteIdPost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V2MonitoringSiteTwampSiteIdPost`: V2MonitoringSiteTwampSiteIdPost200Response
+	// response from `V2MonitoringSiteTwampSiteIdPost`: V2MonitoringSiteTwampSiteIdPostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V2MonitoringSiteTwampSiteIdPost`: %v\n", resp)
 }
 ```
@@ -32937,7 +34532,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V2MonitoringSiteTwampSiteIdPost200Response**](V2MonitoringSiteTwampSiteIdPost200Response.md)
+[**V2MonitoringSiteTwampSiteIdPostResponse**](V2MonitoringSiteTwampSiteIdPostResponse.md)
 
 ### Authorization
 
@@ -32955,7 +34550,7 @@ Name | Type | Description  | Notes
 
 ## V2MonitoringSystemGenericPost
 
-> V2MonitoringSystemGenericPost200Response V2MonitoringSystemGenericPost(ctx).Authorization(authorization).V2MonitoringSystemGenericPostRequest(v2MonitoringSystemGenericPostRequest).Execute()
+> V2MonitoringSystemGenericPostResponse V2MonitoringSystemGenericPost(ctx).Authorization(authorization).V2MonitoringSystemGenericPostRequest(v2MonitoringSystemGenericPostRequest).Execute()
 
 
 
@@ -32982,7 +34577,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V2MonitoringSystemGenericPost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V2MonitoringSystemGenericPost`: V2MonitoringSystemGenericPost200Response
+	// response from `V2MonitoringSystemGenericPost`: V2MonitoringSystemGenericPostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V2MonitoringSystemGenericPost`: %v\n", resp)
 }
 ```
@@ -33003,7 +34598,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V2MonitoringSystemGenericPost200Response**](V2MonitoringSystemGenericPost200Response.md)
+[**V2MonitoringSystemGenericPostResponse**](V2MonitoringSystemGenericPostResponse.md)
 
 ### Authorization
 
@@ -33021,7 +34616,7 @@ Name | Type | Description  | Notes
 
 ## V2MonitoringSystemPost
 
-> V2MonitoringSystemGenericPost200Response V2MonitoringSystemPost(ctx).Authorization(authorization).V2MonitoringSystemGenericPostRequest(v2MonitoringSystemGenericPostRequest).Execute()
+> V2MonitoringSystemPostResponse V2MonitoringSystemPost(ctx).Authorization(authorization).V2MonitoringSystemPostRequest(v2MonitoringSystemPostRequest).Execute()
 
 
 
@@ -33039,16 +34634,16 @@ import (
 
 func main() {
 	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
-	v2MonitoringSystemGenericPostRequest := *openapiclient.NewV2MonitoringSystemGenericPostRequest() // V2MonitoringSystemGenericPostRequest | 
+	v2MonitoringSystemPostRequest := *openapiclient.NewV2MonitoringSystemPostRequest() // V2MonitoringSystemPostRequest | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.DefaultAPI.V2MonitoringSystemPost(context.Background()).Authorization(authorization).V2MonitoringSystemGenericPostRequest(v2MonitoringSystemGenericPostRequest).Execute()
+	resp, r, err := apiClient.DefaultAPI.V2MonitoringSystemPost(context.Background()).Authorization(authorization).V2MonitoringSystemPostRequest(v2MonitoringSystemPostRequest).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V2MonitoringSystemPost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V2MonitoringSystemPost`: V2MonitoringSystemGenericPost200Response
+	// response from `V2MonitoringSystemPost`: V2MonitoringSystemPostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V2MonitoringSystemPost`: %v\n", resp)
 }
 ```
@@ -33065,11 +34660,11 @@ Other parameters are passed through a pointer to a apiV2MonitoringSystemPostRequ
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **string** | Bearer token. Format: Bearer &lt;your_token_here&gt; | 
- **v2MonitoringSystemGenericPostRequest** | [**V2MonitoringSystemGenericPostRequest**](V2MonitoringSystemGenericPostRequest.md) |  | 
+ **v2MonitoringSystemPostRequest** | [**V2MonitoringSystemPostRequest**](V2MonitoringSystemPostRequest.md) |  | 
 
 ### Return type
 
-[**V2MonitoringSystemGenericPost200Response**](V2MonitoringSystemGenericPost200Response.md)
+[**V2MonitoringSystemPostResponse**](V2MonitoringSystemPostResponse.md)
 
 ### Authorization
 
@@ -33087,7 +34682,7 @@ Name | Type | Description  | Notes
 
 ## V2MonitoringTwampPost
 
-> V2MonitoringTwampPost200Response V2MonitoringTwampPost(ctx).Authorization(authorization).V2MonitoringTwampPostRequest(v2MonitoringTwampPostRequest).Execute()
+> V2MonitoringTwampPostResponse V2MonitoringTwampPost(ctx).Authorization(authorization).V2MonitoringTwampPostRequest(v2MonitoringTwampPostRequest).Execute()
 
 
 
@@ -33114,7 +34709,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V2MonitoringTwampPost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V2MonitoringTwampPost`: V2MonitoringTwampPost200Response
+	// response from `V2MonitoringTwampPost`: V2MonitoringTwampPostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V2MonitoringTwampPost`: %v\n", resp)
 }
 ```
@@ -33135,7 +34730,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V2MonitoringTwampPost200Response**](V2MonitoringTwampPost200Response.md)
+[**V2MonitoringTwampPostResponse**](V2MonitoringTwampPostResponse.md)
 
 ### Authorization
 
@@ -33171,7 +34766,7 @@ import (
 
 func main() {
 	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
-	v2NotificationCreatePostRequest := *openapiclient.NewV2NotificationCreatePostRequest() // V2NotificationCreatePostRequest | 
+	v2NotificationCreatePostRequest := *openapiclient.NewV2NotificationCreatePostRequest(*openapiclient.NewAlertserviceNotificationBody(), []string{"example string"}) // V2NotificationCreatePostRequest | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -33237,7 +34832,7 @@ import (
 
 func main() {
 	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
-	v2NotificationDeletePostRequest := *openapiclient.NewV2NotificationDeletePostRequest() // V2NotificationDeletePostRequest | 
+	v2NotificationDeletePostRequest := *openapiclient.NewV2NotificationDeletePostRequest([]string{"example string"}) // V2NotificationDeletePostRequest | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -33303,7 +34898,7 @@ import (
 
 func main() {
 	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
-	v2NotificationEnabledisablePostRequest := *openapiclient.NewV2NotificationEnabledisablePostRequest() // V2NotificationEnabledisablePostRequest | 
+	v2NotificationEnabledisablePostRequest := *openapiclient.NewV2NotificationEnabledisablePostRequest(true, []string{"example string"}) // V2NotificationEnabledisablePostRequest | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -33369,7 +34964,7 @@ import (
 
 func main() {
 	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
-	v2NotificationUpdatePostRequest := *openapiclient.NewV2NotificationUpdatePostRequest() // V2NotificationUpdatePostRequest | 
+	v2NotificationUpdatePostRequest := *openapiclient.NewV2NotificationUpdatePostRequest(*openapiclient.NewAlertserviceNotificationBody(), []string{"example string"}) // V2NotificationUpdatePostRequest | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -33417,7 +35012,7 @@ Name | Type | Description  | Notes
 
 ## V2NotificationlistPost
 
-> V2NotificationlistPost200Response V2NotificationlistPost(ctx).Authorization(authorization).V2NotificationlistPostRequest(v2NotificationlistPostRequest).Execute()
+> V2NotificationlistPostResponse V2NotificationlistPost(ctx).Authorization(authorization).V2NotificationlistPostRequest(v2NotificationlistPostRequest).Execute()
 
 
 
@@ -33444,7 +35039,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V2NotificationlistPost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V2NotificationlistPost`: V2NotificationlistPost200Response
+	// response from `V2NotificationlistPost`: V2NotificationlistPostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V2NotificationlistPost`: %v\n", resp)
 }
 ```
@@ -33465,7 +35060,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V2NotificationlistPost200Response**](V2NotificationlistPost200Response.md)
+[**V2NotificationlistPostResponse**](V2NotificationlistPostResponse.md)
 
 ### Authorization
 
@@ -33483,7 +35078,7 @@ Name | Type | Description  | Notes
 
 ## V2NotificationmutelistCreatePost
 
-> map[string]interface{} V2NotificationmutelistCreatePost(ctx).Authorization(authorization).V2AllowlistCreatePostRequest(v2AllowlistCreatePostRequest).Execute()
+> map[string]interface{} V2NotificationmutelistCreatePost(ctx).Authorization(authorization).V2NotificationmutelistCreatePostRequest(v2NotificationmutelistCreatePostRequest).Execute()
 
 
 
@@ -33501,11 +35096,11 @@ import (
 
 func main() {
 	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
-	v2AllowlistCreatePostRequest := *openapiclient.NewV2AllowlistCreatePostRequest() // V2AllowlistCreatePostRequest | 
+	v2NotificationmutelistCreatePostRequest := *openapiclient.NewV2NotificationmutelistCreatePostRequest("example string") // V2NotificationmutelistCreatePostRequest | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.DefaultAPI.V2NotificationmutelistCreatePost(context.Background()).Authorization(authorization).V2AllowlistCreatePostRequest(v2AllowlistCreatePostRequest).Execute()
+	resp, r, err := apiClient.DefaultAPI.V2NotificationmutelistCreatePost(context.Background()).Authorization(authorization).V2NotificationmutelistCreatePostRequest(v2NotificationmutelistCreatePostRequest).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V2NotificationmutelistCreatePost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -33527,7 +35122,7 @@ Other parameters are passed through a pointer to a apiV2NotificationmutelistCrea
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **string** | Bearer token. Format: Bearer &lt;your_token_here&gt; | 
- **v2AllowlistCreatePostRequest** | [**V2AllowlistCreatePostRequest**](V2AllowlistCreatePostRequest.md) |  | 
+ **v2NotificationmutelistCreatePostRequest** | [**V2NotificationmutelistCreatePostRequest**](V2NotificationmutelistCreatePostRequest.md) |  | 
 
 ### Return type
 
@@ -33689,7 +35284,7 @@ Name | Type | Description  | Notes
 
 ## V2NotificationmutelistRuleIdGet
 
-> V2AllowlistRuleIdGet200Response V2NotificationmutelistRuleIdGet(ctx, ruleId).Authorization(authorization).Execute()
+> V2NotificationmutelistRuleIdGetResponse V2NotificationmutelistRuleIdGet(ctx, ruleId).Authorization(authorization).Execute()
 
 
 
@@ -33716,7 +35311,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V2NotificationmutelistRuleIdGet``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V2NotificationmutelistRuleIdGet`: V2AllowlistRuleIdGet200Response
+	// response from `V2NotificationmutelistRuleIdGet`: V2NotificationmutelistRuleIdGetResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V2NotificationmutelistRuleIdGet`: %v\n", resp)
 }
 ```
@@ -33741,7 +35336,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V2AllowlistRuleIdGet200Response**](V2AllowlistRuleIdGet200Response.md)
+[**V2NotificationmutelistRuleIdGetResponse**](V2NotificationmutelistRuleIdGetResponse.md)
 
 ### Authorization
 
@@ -33759,7 +35354,7 @@ Name | Type | Description  | Notes
 
 ## V2ParentalertlistPost
 
-> V2ChildalertlistPost200Response V2ParentalertlistPost(ctx).Authorization(authorization).V2NotificationlistPostRequest(v2NotificationlistPostRequest).Execute()
+> V2ParentalertlistPostResponse V2ParentalertlistPost(ctx).Authorization(authorization).V2ParentalertlistPostRequest(v2ParentalertlistPostRequest).Execute()
 
 
 
@@ -33777,16 +35372,16 @@ import (
 
 func main() {
 	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
-	v2NotificationlistPostRequest := *openapiclient.NewV2NotificationlistPostRequest() // V2NotificationlistPostRequest | 
+	v2ParentalertlistPostRequest := *openapiclient.NewV2ParentalertlistPostRequest() // V2ParentalertlistPostRequest | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.DefaultAPI.V2ParentalertlistPost(context.Background()).Authorization(authorization).V2NotificationlistPostRequest(v2NotificationlistPostRequest).Execute()
+	resp, r, err := apiClient.DefaultAPI.V2ParentalertlistPost(context.Background()).Authorization(authorization).V2ParentalertlistPostRequest(v2ParentalertlistPostRequest).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V2ParentalertlistPost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V2ParentalertlistPost`: V2ChildalertlistPost200Response
+	// response from `V2ParentalertlistPost`: V2ParentalertlistPostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V2ParentalertlistPost`: %v\n", resp)
 }
 ```
@@ -33803,11 +35398,11 @@ Other parameters are passed through a pointer to a apiV2ParentalertlistPostReque
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **string** | Bearer token. Format: Bearer &lt;your_token_here&gt; | 
- **v2NotificationlistPostRequest** | [**V2NotificationlistPostRequest**](V2NotificationlistPostRequest.md) |  | 
+ **v2ParentalertlistPostRequest** | [**V2ParentalertlistPostRequest**](V2ParentalertlistPostRequest.md) |  | 
 
 ### Return type
 
-[**V2ChildalertlistPost200Response**](V2ChildalertlistPost200Response.md)
+[**V2ParentalertlistPostResponse**](V2ParentalertlistPostResponse.md)
 
 ### Authorization
 
@@ -33843,7 +35438,7 @@ import (
 
 func main() {
 	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
-	v2RuleEnabledisablePostRequest := *openapiclient.NewV2RuleEnabledisablePostRequest() // V2RuleEnabledisablePostRequest | 
+	v2RuleEnabledisablePostRequest := *openapiclient.NewV2RuleEnabledisablePostRequest(true, []string{"example string"}) // V2RuleEnabledisablePostRequest | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -33891,7 +35486,7 @@ Name | Type | Description  | Notes
 
 ## V2RulelistPost
 
-> V2RulelistPost200Response V2RulelistPost(ctx).Authorization(authorization).Body(body).Execute()
+> V2RulelistPostResponse V2RulelistPost(ctx).Authorization(authorization).Body(body).Execute()
 
 
 
@@ -33918,7 +35513,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V2RulelistPost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V2RulelistPost`: V2RulelistPost200Response
+	// response from `V2RulelistPost`: V2RulelistPostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V2RulelistPost`: %v\n", resp)
 }
 ```
@@ -33939,7 +35534,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V2RulelistPost200Response**](V2RulelistPost200Response.md)
+[**V2RulelistPostResponse**](V2RulelistPostResponse.md)
 
 ### Authorization
 
@@ -33957,7 +35552,9 @@ Name | Type | Description  | Notes
 
 ## V2SiteSiteIdDetailPost
 
-> V2SiteSiteIdDetailPost200Response V2SiteSiteIdDetailPost(ctx, siteId).Authorization(authorization).V2DeviceDeviceIdTopologyPostRequest(v2DeviceDeviceIdTopologyPostRequest).Execute()
+> V2SiteSiteIdDetailPostResponse V2SiteSiteIdDetailPost(ctx, siteId).Authorization(authorization).V2SiteSiteIdDetailPostRequest(v2SiteSiteIdDetailPostRequest).Execute()
+
+
 
 
 
@@ -33976,16 +35573,16 @@ import (
 func main() {
 	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
 	siteId := int64(1234567891011) // int64 | 
-	v2DeviceDeviceIdTopologyPostRequest := *openapiclient.NewV2DeviceDeviceIdTopologyPostRequest() // V2DeviceDeviceIdTopologyPostRequest | 
+	v2SiteSiteIdDetailPostRequest := *openapiclient.NewV2SiteSiteIdDetailPostRequest() // V2SiteSiteIdDetailPostRequest | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.DefaultAPI.V2SiteSiteIdDetailPost(context.Background(), siteId).Authorization(authorization).V2DeviceDeviceIdTopologyPostRequest(v2DeviceDeviceIdTopologyPostRequest).Execute()
+	resp, r, err := apiClient.DefaultAPI.V2SiteSiteIdDetailPost(context.Background(), siteId).Authorization(authorization).V2SiteSiteIdDetailPostRequest(v2SiteSiteIdDetailPostRequest).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V2SiteSiteIdDetailPost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V2SiteSiteIdDetailPost`: V2SiteSiteIdDetailPost200Response
+	// response from `V2SiteSiteIdDetailPost`: V2SiteSiteIdDetailPostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V2SiteSiteIdDetailPost`: %v\n", resp)
 }
 ```
@@ -34007,11 +35604,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **string** | Bearer token. Format: Bearer &lt;your_token_here&gt; | 
 
- **v2DeviceDeviceIdTopologyPostRequest** | [**V2DeviceDeviceIdTopologyPostRequest**](V2DeviceDeviceIdTopologyPostRequest.md) |  | 
+ **v2SiteSiteIdDetailPostRequest** | [**V2SiteSiteIdDetailPostRequest**](V2SiteSiteIdDetailPostRequest.md) |  | 
 
 ### Return type
 
-[**V2SiteSiteIdDetailPost200Response**](V2SiteSiteIdDetailPost200Response.md)
+[**V2SiteSiteIdDetailPostResponse**](V2SiteSiteIdDetailPostResponse.md)
 
 ### Authorization
 
@@ -34029,7 +35626,9 @@ Name | Type | Description  | Notes
 
 ## V2SiteSiteIdLanSegmentsPost
 
-> V2DeviceDeviceIdLanSegmentsPost200Response V2SiteSiteIdLanSegmentsPost(ctx, siteId).Authorization(authorization).V2NotificationlistPostRequest(v2NotificationlistPostRequest).Execute()
+> V2SiteSiteIdLanSegmentsPostResponse V2SiteSiteIdLanSegmentsPost(ctx, siteId).Authorization(authorization).V2SiteSiteIdLanSegmentsPostRequest(v2SiteSiteIdLanSegmentsPostRequest).Execute()
+
+
 
 
 
@@ -34048,16 +35647,16 @@ import (
 func main() {
 	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
 	siteId := int64(1234567891011) // int64 | 
-	v2NotificationlistPostRequest := *openapiclient.NewV2NotificationlistPostRequest() // V2NotificationlistPostRequest | 
+	v2SiteSiteIdLanSegmentsPostRequest := *openapiclient.NewV2SiteSiteIdLanSegmentsPostRequest() // V2SiteSiteIdLanSegmentsPostRequest | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.DefaultAPI.V2SiteSiteIdLanSegmentsPost(context.Background(), siteId).Authorization(authorization).V2NotificationlistPostRequest(v2NotificationlistPostRequest).Execute()
+	resp, r, err := apiClient.DefaultAPI.V2SiteSiteIdLanSegmentsPost(context.Background(), siteId).Authorization(authorization).V2SiteSiteIdLanSegmentsPostRequest(v2SiteSiteIdLanSegmentsPostRequest).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V2SiteSiteIdLanSegmentsPost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V2SiteSiteIdLanSegmentsPost`: V2DeviceDeviceIdLanSegmentsPost200Response
+	// response from `V2SiteSiteIdLanSegmentsPost`: V2SiteSiteIdLanSegmentsPostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V2SiteSiteIdLanSegmentsPost`: %v\n", resp)
 }
 ```
@@ -34079,11 +35678,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **string** | Bearer token. Format: Bearer &lt;your_token_here&gt; | 
 
- **v2NotificationlistPostRequest** | [**V2NotificationlistPostRequest**](V2NotificationlistPostRequest.md) |  | 
+ **v2SiteSiteIdLanSegmentsPostRequest** | [**V2SiteSiteIdLanSegmentsPostRequest**](V2SiteSiteIdLanSegmentsPostRequest.md) |  | 
 
 ### Return type
 
-[**V2DeviceDeviceIdLanSegmentsPost200Response**](V2DeviceDeviceIdLanSegmentsPost200Response.md)
+[**V2SiteSiteIdLanSegmentsPostResponse**](V2SiteSiteIdLanSegmentsPostResponse.md)
 
 ### Authorization
 
@@ -34101,7 +35700,9 @@ Name | Type | Description  | Notes
 
 ## V2SiteSiteIdTopologyPost
 
-> V2DeviceDeviceIdTopologyPost200Response V2SiteSiteIdTopologyPost(ctx, siteId).Authorization(authorization).V2DeviceDeviceIdTopologyPostRequest(v2DeviceDeviceIdTopologyPostRequest).Execute()
+> V2SiteSiteIdTopologyPostResponse V2SiteSiteIdTopologyPost(ctx, siteId).Authorization(authorization).V2SiteSiteIdTopologyPostRequest(v2SiteSiteIdTopologyPostRequest).Execute()
+
+
 
 
 
@@ -34120,16 +35721,16 @@ import (
 func main() {
 	authorization := "authorization_example" // string | Bearer token. Format: Bearer <your_token_here>
 	siteId := int64(1234567891011) // int64 | 
-	v2DeviceDeviceIdTopologyPostRequest := *openapiclient.NewV2DeviceDeviceIdTopologyPostRequest() // V2DeviceDeviceIdTopologyPostRequest | 
+	v2SiteSiteIdTopologyPostRequest := *openapiclient.NewV2SiteSiteIdTopologyPostRequest() // V2SiteSiteIdTopologyPostRequest | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.DefaultAPI.V2SiteSiteIdTopologyPost(context.Background(), siteId).Authorization(authorization).V2DeviceDeviceIdTopologyPostRequest(v2DeviceDeviceIdTopologyPostRequest).Execute()
+	resp, r, err := apiClient.DefaultAPI.V2SiteSiteIdTopologyPost(context.Background(), siteId).Authorization(authorization).V2SiteSiteIdTopologyPostRequest(v2SiteSiteIdTopologyPostRequest).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V2SiteSiteIdTopologyPost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V2SiteSiteIdTopologyPost`: V2DeviceDeviceIdTopologyPost200Response
+	// response from `V2SiteSiteIdTopologyPost`: V2SiteSiteIdTopologyPostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V2SiteSiteIdTopologyPost`: %v\n", resp)
 }
 ```
@@ -34151,11 +35752,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **string** | Bearer token. Format: Bearer &lt;your_token_here&gt; | 
 
- **v2DeviceDeviceIdTopologyPostRequest** | [**V2DeviceDeviceIdTopologyPostRequest**](V2DeviceDeviceIdTopologyPostRequest.md) |  | 
+ **v2SiteSiteIdTopologyPostRequest** | [**V2SiteSiteIdTopologyPostRequest**](V2SiteSiteIdTopologyPostRequest.md) |  | 
 
 ### Return type
 
-[**V2DeviceDeviceIdTopologyPost200Response**](V2DeviceDeviceIdTopologyPost200Response.md)
+[**V2SiteSiteIdTopologyPostResponse**](V2SiteSiteIdTopologyPostResponse.md)
 
 ### Authorization
 
@@ -34173,7 +35774,7 @@ Name | Type | Description  | Notes
 
 ## V2VersionPost
 
-> V2VersionPost200Response V2VersionPost(ctx).Authorization(authorization).Body(body).Execute()
+> V2VersionPostResponse V2VersionPost(ctx).Authorization(authorization).Body(body).Execute()
 
 
 
@@ -34200,7 +35801,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.V2VersionPost``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `V2VersionPost`: V2VersionPost200Response
+	// response from `V2VersionPost`: V2VersionPostResponse
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.V2VersionPost`: %v\n", resp)
 }
 ```
@@ -34221,7 +35822,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V2VersionPost200Response**](V2VersionPost200Response.md)
+[**V2VersionPostResponse**](V2VersionPostResponse.md)
 
 ### Authorization
 

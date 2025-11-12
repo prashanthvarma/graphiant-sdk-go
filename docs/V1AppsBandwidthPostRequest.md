@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **DlCircuitName** | Pointer to **string** |  | [optional] 
 **IsDia** | Pointer to **bool** |  | [optional] 
 **SlaClass** | Pointer to **string** |  | [optional] 
-**TimeWindow** | Pointer to [**V2NotificationlistPostRequestTimeWindow**](V2NotificationlistPostRequestTimeWindow.md) |  | [optional] 
+**TimeWindow** | Pointer to [**StatsmonTimeWindow**](StatsmonTimeWindow.md) |  | [optional] 
 **UlCircuitName** | Pointer to **string** |  | [optional] 
 
 ## Methods
@@ -158,20 +158,20 @@ HasSlaClass returns a boolean if a field has been set.
 
 ### GetTimeWindow
 
-`func (o *V1AppsBandwidthPostRequest) GetTimeWindow() V2NotificationlistPostRequestTimeWindow`
+`func (o *V1AppsBandwidthPostRequest) GetTimeWindow() StatsmonTimeWindow`
 
 GetTimeWindow returns the TimeWindow field if non-nil, zero value otherwise.
 
 ### GetTimeWindowOk
 
-`func (o *V1AppsBandwidthPostRequest) GetTimeWindowOk() (*V2NotificationlistPostRequestTimeWindow, bool)`
+`func (o *V1AppsBandwidthPostRequest) GetTimeWindowOk() (*StatsmonTimeWindow, bool)`
 
 GetTimeWindowOk returns a tuple with the TimeWindow field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetTimeWindow
 
-`func (o *V1AppsBandwidthPostRequest) SetTimeWindow(v V2NotificationlistPostRequestTimeWindow)`
+`func (o *V1AppsBandwidthPostRequest) SetTimeWindow(v StatsmonTimeWindow)`
 
 SetTimeWindow sets TimeWindow field to given value.
 

@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**AllowedMfaTypes** | Pointer to **[]string** |  | [optional] 
+**AllowedMfaTypes** | **[]string** |  | 
 
 ## Methods
 
 ### NewV1AuthMfaPatchRequest
 
-`func NewV1AuthMfaPatchRequest() *V1AuthMfaPatchRequest`
+`func NewV1AuthMfaPatchRequest(allowedMfaTypes []string, ) *V1AuthMfaPatchRequest`
 
 NewV1AuthMfaPatchRequest instantiates a new V1AuthMfaPatchRequest object
 This constructor will assign default values to properties that have it defined,
@@ -44,11 +44,6 @@ and a boolean to check if the value has been set.
 
 SetAllowedMfaTypes sets AllowedMfaTypes field to given value.
 
-### HasAllowedMfaTypes
-
-`func (o *V1AuthMfaPatchRequest) HasAllowedMfaTypes() bool`
-
-HasAllowedMfaTypes returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

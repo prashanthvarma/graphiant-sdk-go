@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**NotificationIdList** | Pointer to **[]string** |  | [optional] 
+**NotificationIdList** | **[]string** |  | 
 
 ## Methods
 
 ### NewV2NotificationDeletePostRequest
 
-`func NewV2NotificationDeletePostRequest() *V2NotificationDeletePostRequest`
+`func NewV2NotificationDeletePostRequest(notificationIdList []string, ) *V2NotificationDeletePostRequest`
 
 NewV2NotificationDeletePostRequest instantiates a new V2NotificationDeletePostRequest object
 This constructor will assign default values to properties that have it defined,
@@ -44,11 +44,6 @@ and a boolean to check if the value has been set.
 
 SetNotificationIdList sets NotificationIdList field to given value.
 
-### HasNotificationIdList
-
-`func (o *V2NotificationDeletePostRequest) HasNotificationIdList() bool`
-
-HasNotificationIdList returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

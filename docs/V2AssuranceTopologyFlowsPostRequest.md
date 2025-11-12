@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **AppName** | Pointer to **string** |  | [optional] 
-**TimeWindow** | Pointer to [**V2NotificationlistPostRequestTimeWindow**](V2NotificationlistPostRequestTimeWindow.md) |  | [optional] 
+**TimeWindow** | Pointer to [**AssuranceTimeWindow**](AssuranceTimeWindow.md) |  | [optional] 
 **TopologyId** | Pointer to **int32** |  | [optional] 
 **TopologyType** | Pointer to **string** |  | [optional] 
 
@@ -55,20 +55,20 @@ HasAppName returns a boolean if a field has been set.
 
 ### GetTimeWindow
 
-`func (o *V2AssuranceTopologyFlowsPostRequest) GetTimeWindow() V2NotificationlistPostRequestTimeWindow`
+`func (o *V2AssuranceTopologyFlowsPostRequest) GetTimeWindow() AssuranceTimeWindow`
 
 GetTimeWindow returns the TimeWindow field if non-nil, zero value otherwise.
 
 ### GetTimeWindowOk
 
-`func (o *V2AssuranceTopologyFlowsPostRequest) GetTimeWindowOk() (*V2NotificationlistPostRequestTimeWindow, bool)`
+`func (o *V2AssuranceTopologyFlowsPostRequest) GetTimeWindowOk() (*AssuranceTimeWindow, bool)`
 
 GetTimeWindowOk returns a tuple with the TimeWindow field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetTimeWindow
 
-`func (o *V2AssuranceTopologyFlowsPostRequest) SetTimeWindow(v V2NotificationlistPostRequestTimeWindow)`
+`func (o *V2AssuranceTopologyFlowsPostRequest) SetTimeWindow(v AssuranceTimeWindow)`
 
 SetTimeWindow sets TimeWindow field to given value.
 

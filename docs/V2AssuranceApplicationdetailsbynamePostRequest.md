@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **AppName** | Pointer to **string** |  | [optional] 
 **BucketId** | Pointer to **string** |  | [optional] 
 **FlexAlgoId** | Pointer to **int64** |  | [optional] 
-**TimeWindow** | Pointer to [**V2NotificationlistPostRequestTimeWindow**](V2NotificationlistPostRequestTimeWindow.md) |  | [optional] 
+**TimeWindow** | Pointer to [**AssuranceTimeWindow**](AssuranceTimeWindow.md) |  | [optional] 
 
 ## Methods
 
@@ -131,20 +131,20 @@ HasFlexAlgoId returns a boolean if a field has been set.
 
 ### GetTimeWindow
 
-`func (o *V2AssuranceApplicationdetailsbynamePostRequest) GetTimeWindow() V2NotificationlistPostRequestTimeWindow`
+`func (o *V2AssuranceApplicationdetailsbynamePostRequest) GetTimeWindow() AssuranceTimeWindow`
 
 GetTimeWindow returns the TimeWindow field if non-nil, zero value otherwise.
 
 ### GetTimeWindowOk
 
-`func (o *V2AssuranceApplicationdetailsbynamePostRequest) GetTimeWindowOk() (*V2NotificationlistPostRequestTimeWindow, bool)`
+`func (o *V2AssuranceApplicationdetailsbynamePostRequest) GetTimeWindowOk() (*AssuranceTimeWindow, bool)`
 
 GetTimeWindowOk returns a tuple with the TimeWindow field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetTimeWindow
 
-`func (o *V2AssuranceApplicationdetailsbynamePostRequest) SetTimeWindow(v V2NotificationlistPostRequestTimeWindow)`
+`func (o *V2AssuranceApplicationdetailsbynamePostRequest) SetTimeWindow(v AssuranceTimeWindow)`
 
 SetTimeWindow sets TimeWindow field to given value.
 

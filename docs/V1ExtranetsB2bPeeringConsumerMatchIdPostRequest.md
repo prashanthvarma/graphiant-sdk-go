@@ -5,12 +5,12 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **CustomerId** | Pointer to **int64** |  | [optional] 
-**GlobalObjectOps** | Pointer to [**map[string]V1ExtranetsB2bPeeringConsumerMatchIdPostRequestGlobalObjectOpsValue**](V1ExtranetsB2bPeeringConsumerMatchIdPostRequestGlobalObjectOpsValue.md) |  | [optional] 
-**Id** | Pointer to **int64** |  | [optional] 
-**Nat** | Pointer to [**[]V1ExtranetsB2bPeeringMatchServiceToCustomerPostRequestServiceNatInner**](V1ExtranetsB2bPeeringMatchServiceToCustomerPostRequestServiceNatInner.md) |  | [optional] 
-**Policy** | Pointer to [**[]V1ExtranetsB2bPeeringConsumerMatchIdPostRequestPolicyInner**](V1ExtranetsB2bPeeringConsumerMatchIdPostRequestPolicyInner.md) |  | [optional] 
-**SiteInformation** | Pointer to [**[]V1ExtranetsB2bConsumerPostRequestSiteInformationInner**](V1ExtranetsB2bConsumerPostRequestSiteInformationInner.md) |  | [optional] 
-**SiteToSiteVpn** | Pointer to [**V1ExtranetsB2bPeeringConsumerMatchIdPostRequestSiteToSiteVpn**](V1ExtranetsB2bPeeringConsumerMatchIdPostRequestSiteToSiteVpn.md) |  | [optional] 
+**GlobalObjectOps** | Pointer to [**map[string]ManaV2GlobalObjectServiceOps**](ManaV2GlobalObjectServiceOps.md) |  | [optional] 
+**Id** | Pointer to **int64** | ID of the service. | [optional] 
+**Nat** | Pointer to [**[]ManaV2B2bNat**](ManaV2B2bNat.md) |  | [optional] 
+**Policy** | Pointer to [**[]ManaV2B2bExtranetPeeringServiceConsumerLanSegmentPolicy**](ManaV2B2bExtranetPeeringServiceConsumerLanSegmentPolicy.md) |  | [optional] 
+**SiteInformation** | Pointer to [**[]ManaV2B2bSiteInformation**](ManaV2B2bSiteInformation.md) |  | [optional] 
+**SiteToSiteVpn** | Pointer to [**ManaV2GuestConsumerSiteToSiteVpnConfig**](ManaV2GuestConsumerSiteToSiteVpnConfig.md) |  | [optional] 
 
 ## Methods
 
@@ -58,20 +58,20 @@ HasCustomerId returns a boolean if a field has been set.
 
 ### GetGlobalObjectOps
 
-`func (o *V1ExtranetsB2bPeeringConsumerMatchIdPostRequest) GetGlobalObjectOps() map[string]V1ExtranetsB2bPeeringConsumerMatchIdPostRequestGlobalObjectOpsValue`
+`func (o *V1ExtranetsB2bPeeringConsumerMatchIdPostRequest) GetGlobalObjectOps() map[string]ManaV2GlobalObjectServiceOps`
 
 GetGlobalObjectOps returns the GlobalObjectOps field if non-nil, zero value otherwise.
 
 ### GetGlobalObjectOpsOk
 
-`func (o *V1ExtranetsB2bPeeringConsumerMatchIdPostRequest) GetGlobalObjectOpsOk() (*map[string]V1ExtranetsB2bPeeringConsumerMatchIdPostRequestGlobalObjectOpsValue, bool)`
+`func (o *V1ExtranetsB2bPeeringConsumerMatchIdPostRequest) GetGlobalObjectOpsOk() (*map[string]ManaV2GlobalObjectServiceOps, bool)`
 
 GetGlobalObjectOpsOk returns a tuple with the GlobalObjectOps field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetGlobalObjectOps
 
-`func (o *V1ExtranetsB2bPeeringConsumerMatchIdPostRequest) SetGlobalObjectOps(v map[string]V1ExtranetsB2bPeeringConsumerMatchIdPostRequestGlobalObjectOpsValue)`
+`func (o *V1ExtranetsB2bPeeringConsumerMatchIdPostRequest) SetGlobalObjectOps(v map[string]ManaV2GlobalObjectServiceOps)`
 
 SetGlobalObjectOps sets GlobalObjectOps field to given value.
 
@@ -108,20 +108,20 @@ HasId returns a boolean if a field has been set.
 
 ### GetNat
 
-`func (o *V1ExtranetsB2bPeeringConsumerMatchIdPostRequest) GetNat() []V1ExtranetsB2bPeeringMatchServiceToCustomerPostRequestServiceNatInner`
+`func (o *V1ExtranetsB2bPeeringConsumerMatchIdPostRequest) GetNat() []ManaV2B2bNat`
 
 GetNat returns the Nat field if non-nil, zero value otherwise.
 
 ### GetNatOk
 
-`func (o *V1ExtranetsB2bPeeringConsumerMatchIdPostRequest) GetNatOk() (*[]V1ExtranetsB2bPeeringMatchServiceToCustomerPostRequestServiceNatInner, bool)`
+`func (o *V1ExtranetsB2bPeeringConsumerMatchIdPostRequest) GetNatOk() (*[]ManaV2B2bNat, bool)`
 
 GetNatOk returns a tuple with the Nat field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetNat
 
-`func (o *V1ExtranetsB2bPeeringConsumerMatchIdPostRequest) SetNat(v []V1ExtranetsB2bPeeringMatchServiceToCustomerPostRequestServiceNatInner)`
+`func (o *V1ExtranetsB2bPeeringConsumerMatchIdPostRequest) SetNat(v []ManaV2B2bNat)`
 
 SetNat sets Nat field to given value.
 
@@ -133,20 +133,20 @@ HasNat returns a boolean if a field has been set.
 
 ### GetPolicy
 
-`func (o *V1ExtranetsB2bPeeringConsumerMatchIdPostRequest) GetPolicy() []V1ExtranetsB2bPeeringConsumerMatchIdPostRequestPolicyInner`
+`func (o *V1ExtranetsB2bPeeringConsumerMatchIdPostRequest) GetPolicy() []ManaV2B2bExtranetPeeringServiceConsumerLanSegmentPolicy`
 
 GetPolicy returns the Policy field if non-nil, zero value otherwise.
 
 ### GetPolicyOk
 
-`func (o *V1ExtranetsB2bPeeringConsumerMatchIdPostRequest) GetPolicyOk() (*[]V1ExtranetsB2bPeeringConsumerMatchIdPostRequestPolicyInner, bool)`
+`func (o *V1ExtranetsB2bPeeringConsumerMatchIdPostRequest) GetPolicyOk() (*[]ManaV2B2bExtranetPeeringServiceConsumerLanSegmentPolicy, bool)`
 
 GetPolicyOk returns a tuple with the Policy field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetPolicy
 
-`func (o *V1ExtranetsB2bPeeringConsumerMatchIdPostRequest) SetPolicy(v []V1ExtranetsB2bPeeringConsumerMatchIdPostRequestPolicyInner)`
+`func (o *V1ExtranetsB2bPeeringConsumerMatchIdPostRequest) SetPolicy(v []ManaV2B2bExtranetPeeringServiceConsumerLanSegmentPolicy)`
 
 SetPolicy sets Policy field to given value.
 
@@ -158,20 +158,20 @@ HasPolicy returns a boolean if a field has been set.
 
 ### GetSiteInformation
 
-`func (o *V1ExtranetsB2bPeeringConsumerMatchIdPostRequest) GetSiteInformation() []V1ExtranetsB2bConsumerPostRequestSiteInformationInner`
+`func (o *V1ExtranetsB2bPeeringConsumerMatchIdPostRequest) GetSiteInformation() []ManaV2B2bSiteInformation`
 
 GetSiteInformation returns the SiteInformation field if non-nil, zero value otherwise.
 
 ### GetSiteInformationOk
 
-`func (o *V1ExtranetsB2bPeeringConsumerMatchIdPostRequest) GetSiteInformationOk() (*[]V1ExtranetsB2bConsumerPostRequestSiteInformationInner, bool)`
+`func (o *V1ExtranetsB2bPeeringConsumerMatchIdPostRequest) GetSiteInformationOk() (*[]ManaV2B2bSiteInformation, bool)`
 
 GetSiteInformationOk returns a tuple with the SiteInformation field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetSiteInformation
 
-`func (o *V1ExtranetsB2bPeeringConsumerMatchIdPostRequest) SetSiteInformation(v []V1ExtranetsB2bConsumerPostRequestSiteInformationInner)`
+`func (o *V1ExtranetsB2bPeeringConsumerMatchIdPostRequest) SetSiteInformation(v []ManaV2B2bSiteInformation)`
 
 SetSiteInformation sets SiteInformation field to given value.
 
@@ -183,20 +183,20 @@ HasSiteInformation returns a boolean if a field has been set.
 
 ### GetSiteToSiteVpn
 
-`func (o *V1ExtranetsB2bPeeringConsumerMatchIdPostRequest) GetSiteToSiteVpn() V1ExtranetsB2bPeeringConsumerMatchIdPostRequestSiteToSiteVpn`
+`func (o *V1ExtranetsB2bPeeringConsumerMatchIdPostRequest) GetSiteToSiteVpn() ManaV2GuestConsumerSiteToSiteVpnConfig`
 
 GetSiteToSiteVpn returns the SiteToSiteVpn field if non-nil, zero value otherwise.
 
 ### GetSiteToSiteVpnOk
 
-`func (o *V1ExtranetsB2bPeeringConsumerMatchIdPostRequest) GetSiteToSiteVpnOk() (*V1ExtranetsB2bPeeringConsumerMatchIdPostRequestSiteToSiteVpn, bool)`
+`func (o *V1ExtranetsB2bPeeringConsumerMatchIdPostRequest) GetSiteToSiteVpnOk() (*ManaV2GuestConsumerSiteToSiteVpnConfig, bool)`
 
 GetSiteToSiteVpnOk returns a tuple with the SiteToSiteVpn field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetSiteToSiteVpn
 
-`func (o *V1ExtranetsB2bPeeringConsumerMatchIdPostRequest) SetSiteToSiteVpn(v V1ExtranetsB2bPeeringConsumerMatchIdPostRequestSiteToSiteVpn)`
+`func (o *V1ExtranetsB2bPeeringConsumerMatchIdPostRequest) SetSiteToSiteVpn(v ManaV2GuestConsumerSiteToSiteVpnConfig)`
 
 SetSiteToSiteVpn sets SiteToSiteVpn field to given value.
 

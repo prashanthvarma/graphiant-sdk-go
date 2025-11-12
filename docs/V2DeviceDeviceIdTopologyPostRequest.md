@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**SnapshotTime** | Pointer to [**V1AlarmHistoryGet200ResponseHistoryInnerTime**](V1AlarmHistoryGet200ResponseHistoryInnerTime.md) |  | [optional] 
-**TimeWindow** | Pointer to [**V2NotificationlistPostRequestTimeWindow**](V2NotificationlistPostRequestTimeWindow.md) |  | [optional] 
+**SnapshotTime** | Pointer to [**GoogleProtobufTimestamp**](GoogleProtobufTimestamp.md) |  | [optional] 
+**TimeWindow** | Pointer to [**StatsmonV2TimeWindow**](StatsmonV2TimeWindow.md) |  | [optional] 
 
 ## Methods
 
@@ -28,20 +28,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetSnapshotTime
 
-`func (o *V2DeviceDeviceIdTopologyPostRequest) GetSnapshotTime() V1AlarmHistoryGet200ResponseHistoryInnerTime`
+`func (o *V2DeviceDeviceIdTopologyPostRequest) GetSnapshotTime() GoogleProtobufTimestamp`
 
 GetSnapshotTime returns the SnapshotTime field if non-nil, zero value otherwise.
 
 ### GetSnapshotTimeOk
 
-`func (o *V2DeviceDeviceIdTopologyPostRequest) GetSnapshotTimeOk() (*V1AlarmHistoryGet200ResponseHistoryInnerTime, bool)`
+`func (o *V2DeviceDeviceIdTopologyPostRequest) GetSnapshotTimeOk() (*GoogleProtobufTimestamp, bool)`
 
 GetSnapshotTimeOk returns a tuple with the SnapshotTime field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetSnapshotTime
 
-`func (o *V2DeviceDeviceIdTopologyPostRequest) SetSnapshotTime(v V1AlarmHistoryGet200ResponseHistoryInnerTime)`
+`func (o *V2DeviceDeviceIdTopologyPostRequest) SetSnapshotTime(v GoogleProtobufTimestamp)`
 
 SetSnapshotTime sets SnapshotTime field to given value.
 
@@ -53,20 +53,20 @@ HasSnapshotTime returns a boolean if a field has been set.
 
 ### GetTimeWindow
 
-`func (o *V2DeviceDeviceIdTopologyPostRequest) GetTimeWindow() V2NotificationlistPostRequestTimeWindow`
+`func (o *V2DeviceDeviceIdTopologyPostRequest) GetTimeWindow() StatsmonV2TimeWindow`
 
 GetTimeWindow returns the TimeWindow field if non-nil, zero value otherwise.
 
 ### GetTimeWindowOk
 
-`func (o *V2DeviceDeviceIdTopologyPostRequest) GetTimeWindowOk() (*V2NotificationlistPostRequestTimeWindow, bool)`
+`func (o *V2DeviceDeviceIdTopologyPostRequest) GetTimeWindowOk() (*StatsmonV2TimeWindow, bool)`
 
 GetTimeWindowOk returns a tuple with the TimeWindow field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetTimeWindow
 
-`func (o *V2DeviceDeviceIdTopologyPostRequest) SetTimeWindow(v V2NotificationlistPostRequestTimeWindow)`
+`func (o *V2DeviceDeviceIdTopologyPostRequest) SetTimeWindow(v StatsmonV2TimeWindow)`
 
 SetTimeWindow sets TimeWindow field to given value.
 

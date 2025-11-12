@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **GcsName** | Pointer to **string** |  | [optional] 
-**Inventory** | Pointer to [**[]V1PortalPrivateSyncPostRequestInventoryInner**](V1PortalPrivateSyncPostRequestInventoryInner.md) |  | [optional] 
+**Inventory** | Pointer to [**[]OnboardingInventory**](OnboardingInventory.md) |  | [optional] 
 **IsFullSync** | Pointer to **bool** |  | [optional] 
 
 ## Methods
@@ -54,20 +54,20 @@ HasGcsName returns a boolean if a field has been set.
 
 ### GetInventory
 
-`func (o *V1PortalPrivateSyncPostRequest) GetInventory() []V1PortalPrivateSyncPostRequestInventoryInner`
+`func (o *V1PortalPrivateSyncPostRequest) GetInventory() []OnboardingInventory`
 
 GetInventory returns the Inventory field if non-nil, zero value otherwise.
 
 ### GetInventoryOk
 
-`func (o *V1PortalPrivateSyncPostRequest) GetInventoryOk() (*[]V1PortalPrivateSyncPostRequestInventoryInner, bool)`
+`func (o *V1PortalPrivateSyncPostRequest) GetInventoryOk() (*[]OnboardingInventory, bool)`
 
 GetInventoryOk returns a tuple with the Inventory field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetInventory
 
-`func (o *V1PortalPrivateSyncPostRequest) SetInventory(v []V1PortalPrivateSyncPostRequestInventoryInner)`
+`func (o *V1PortalPrivateSyncPostRequest) SetInventory(v []OnboardingInventory)`
 
 SetInventory sets Inventory field to given value.
 

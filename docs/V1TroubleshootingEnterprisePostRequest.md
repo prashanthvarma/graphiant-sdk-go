@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Dimensions** | Pointer to [**V1TroubleshootingEnterprisePostRequestDimensions**](V1TroubleshootingEnterprisePostRequestDimensions.md) |  | [optional] 
-**Filter** | Pointer to [**V1BackboneHealthOverviewPostRequestFilter**](V1BackboneHealthOverviewPostRequestFilter.md) |  | [optional] 
+**Filter** | Pointer to [**StatsmonTroubleshootingFilter**](StatsmonTroubleshootingFilter.md) |  | [optional] 
 
 ## Methods
 
@@ -53,20 +53,20 @@ HasDimensions returns a boolean if a field has been set.
 
 ### GetFilter
 
-`func (o *V1TroubleshootingEnterprisePostRequest) GetFilter() V1BackboneHealthOverviewPostRequestFilter`
+`func (o *V1TroubleshootingEnterprisePostRequest) GetFilter() StatsmonTroubleshootingFilter`
 
 GetFilter returns the Filter field if non-nil, zero value otherwise.
 
 ### GetFilterOk
 
-`func (o *V1TroubleshootingEnterprisePostRequest) GetFilterOk() (*V1BackboneHealthOverviewPostRequestFilter, bool)`
+`func (o *V1TroubleshootingEnterprisePostRequest) GetFilterOk() (*StatsmonTroubleshootingFilter, bool)`
 
 GetFilterOk returns a tuple with the Filter field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetFilter
 
-`func (o *V1TroubleshootingEnterprisePostRequest) SetFilter(v V1BackboneHealthOverviewPostRequestFilter)`
+`func (o *V1TroubleshootingEnterprisePostRequest) SetFilter(v StatsmonTroubleshootingFilter)`
 
 SetFilter sets Filter field to given value.
 

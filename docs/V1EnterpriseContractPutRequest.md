@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ContractedCredits** | Pointer to **float32** |  | [optional] 
-**ExpirationDate** | Pointer to [**V1EnterpriseAllocationGet200ResponseConsumptionSummaryContractualSummaryExpirationDate**](V1EnterpriseAllocationGet200ResponseConsumptionSummaryContractualSummaryExpirationDate.md) |  | [optional] 
+**ContractedCredits** | Pointer to **float32** | Amount of credits billed for a contract term or monthly if no expiration date is provided | [optional] 
+**ExpirationDate** | Pointer to [**ManaV2TimePeriod**](ManaV2TimePeriod.md) |  | [optional] 
 
 ## Methods
 
@@ -53,20 +53,20 @@ HasContractedCredits returns a boolean if a field has been set.
 
 ### GetExpirationDate
 
-`func (o *V1EnterpriseContractPutRequest) GetExpirationDate() V1EnterpriseAllocationGet200ResponseConsumptionSummaryContractualSummaryExpirationDate`
+`func (o *V1EnterpriseContractPutRequest) GetExpirationDate() ManaV2TimePeriod`
 
 GetExpirationDate returns the ExpirationDate field if non-nil, zero value otherwise.
 
 ### GetExpirationDateOk
 
-`func (o *V1EnterpriseContractPutRequest) GetExpirationDateOk() (*V1EnterpriseAllocationGet200ResponseConsumptionSummaryContractualSummaryExpirationDate, bool)`
+`func (o *V1EnterpriseContractPutRequest) GetExpirationDateOk() (*ManaV2TimePeriod, bool)`
 
 GetExpirationDateOk returns a tuple with the ExpirationDate field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetExpirationDate
 
-`func (o *V1EnterpriseContractPutRequest) SetExpirationDate(v V1EnterpriseAllocationGet200ResponseConsumptionSummaryContractualSummaryExpirationDate)`
+`func (o *V1EnterpriseContractPutRequest) SetExpirationDate(v ManaV2TimePeriod)`
 
 SetExpirationDate sets ExpirationDate field to given value.
 

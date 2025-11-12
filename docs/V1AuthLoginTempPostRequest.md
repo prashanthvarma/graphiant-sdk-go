@@ -4,15 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Email** | Pointer to **string** |  | [optional] 
-**TempPassword** | Pointer to **string** |  | [optional] 
-**MatchId** | Pointer to **float32** |  | [optional] 
+**Email** | **string** |  | 
+**TempPassword** | **string** |  | 
+**MatchId** | **float32** |  | 
 
 ## Methods
 
 ### NewV1AuthLoginTempPostRequest
 
-`func NewV1AuthLoginTempPostRequest() *V1AuthLoginTempPostRequest`
+`func NewV1AuthLoginTempPostRequest(email string, tempPassword string, matchId float32, ) *V1AuthLoginTempPostRequest`
 
 NewV1AuthLoginTempPostRequest instantiates a new V1AuthLoginTempPostRequest object
 This constructor will assign default values to properties that have it defined,
@@ -46,11 +46,6 @@ and a boolean to check if the value has been set.
 
 SetEmail sets Email field to given value.
 
-### HasEmail
-
-`func (o *V1AuthLoginTempPostRequest) HasEmail() bool`
-
-HasEmail returns a boolean if a field has been set.
 
 ### GetTempPassword
 
@@ -71,11 +66,6 @@ and a boolean to check if the value has been set.
 
 SetTempPassword sets TempPassword field to given value.
 
-### HasTempPassword
-
-`func (o *V1AuthLoginTempPostRequest) HasTempPassword() bool`
-
-HasTempPassword returns a boolean if a field has been set.
 
 ### GetMatchId
 
@@ -96,11 +86,6 @@ and a boolean to check if the value has been set.
 
 SetMatchId sets MatchId field to given value.
 
-### HasMatchId
-
-`func (o *V1AuthLoginTempPostRequest) HasMatchId() bool`
-
-HasMatchId returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

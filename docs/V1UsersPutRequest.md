@@ -4,17 +4,17 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Email** | Pointer to **string** |  | [optional] 
-**FirstName** | Pointer to **string** |  | [optional] 
+**Email** | **string** |  (required) | 
+**FirstName** | **string** |  (required) | 
 **GroupId** | Pointer to **string** |  | [optional] 
-**LastName** | Pointer to **string** |  | [optional] 
+**LastName** | **string** |  (required) | 
 **TimeZone** | Pointer to **string** |  | [optional] 
 
 ## Methods
 
 ### NewV1UsersPutRequest
 
-`func NewV1UsersPutRequest() *V1UsersPutRequest`
+`func NewV1UsersPutRequest(email string, firstName string, lastName string, ) *V1UsersPutRequest`
 
 NewV1UsersPutRequest instantiates a new V1UsersPutRequest object
 This constructor will assign default values to properties that have it defined,
@@ -48,11 +48,6 @@ and a boolean to check if the value has been set.
 
 SetEmail sets Email field to given value.
 
-### HasEmail
-
-`func (o *V1UsersPutRequest) HasEmail() bool`
-
-HasEmail returns a boolean if a field has been set.
 
 ### GetFirstName
 
@@ -73,11 +68,6 @@ and a boolean to check if the value has been set.
 
 SetFirstName sets FirstName field to given value.
 
-### HasFirstName
-
-`func (o *V1UsersPutRequest) HasFirstName() bool`
-
-HasFirstName returns a boolean if a field has been set.
 
 ### GetGroupId
 
@@ -123,11 +113,6 @@ and a boolean to check if the value has been set.
 
 SetLastName sets LastName field to given value.
 
-### HasLastName
-
-`func (o *V1UsersPutRequest) HasLastName() bool`
-
-HasLastName returns a boolean if a field has been set.
 
 ### GetTimeZone
 

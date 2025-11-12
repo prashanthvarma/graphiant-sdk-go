@@ -4,14 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**AlertIdList** | Pointer to **[]string** |  | [optional] 
-**Reason** | Pointer to **string** |  | [optional] 
+**AlertIdList** | **[]string** |  | 
+**Reason** | Pointer to **string** | Optional triage message in acknowledgement | [optional] 
 
 ## Methods
 
 ### NewV2AckCreateupdatePostRequest
 
-`func NewV2AckCreateupdatePostRequest() *V2AckCreateupdatePostRequest`
+`func NewV2AckCreateupdatePostRequest(alertIdList []string, ) *V2AckCreateupdatePostRequest`
 
 NewV2AckCreateupdatePostRequest instantiates a new V2AckCreateupdatePostRequest object
 This constructor will assign default values to properties that have it defined,
@@ -45,11 +45,6 @@ and a boolean to check if the value has been set.
 
 SetAlertIdList sets AlertIdList field to given value.
 
-### HasAlertIdList
-
-`func (o *V2AckCreateupdatePostRequest) HasAlertIdList() bool`
-
-HasAlertIdList returns a boolean if a field has been set.
 
 ### GetReason
 

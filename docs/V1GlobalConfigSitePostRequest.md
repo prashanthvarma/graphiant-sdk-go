@@ -6,13 +6,13 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **GlobalPrefixSetOps** | Pointer to **map[string]string** |  | [optional] 
 **IpfixExporterOps** | Pointer to **map[string]string** |  | [optional] 
-**IpfixExporterOpsV2** | Pointer to [**map[string]V1GlobalConfigSitePostRequestIpfixExporterOpsV2Value**](V1GlobalConfigSitePostRequestIpfixExporterOpsV2Value.md) |  | [optional] 
+**IpfixExporterOpsV2** | Pointer to [**map[string]ManaV2GlobalObjectOperationConfig**](ManaV2GlobalObjectOperationConfig.md) |  | [optional] 
 **PrefixSetOps** | Pointer to **map[string]string** |  | [optional] 
 **RoutingPolicyOps** | Pointer to **map[string]string** |  | [optional] 
 **SiteId** | Pointer to **int64** |  | [optional] 
 **SnmpOps** | Pointer to **map[string]string** |  | [optional] 
 **SyslogServerOps** | Pointer to **map[string]string** |  | [optional] 
-**SyslogServerOpsV2** | Pointer to [**map[string]V1GlobalConfigSitePostRequestIpfixExporterOpsV2Value**](V1GlobalConfigSitePostRequestIpfixExporterOpsV2Value.md) |  | [optional] 
+**SyslogServerOpsV2** | Pointer to [**map[string]ManaV2GlobalObjectOperationConfig**](ManaV2GlobalObjectOperationConfig.md) |  | [optional] 
 **TrafficPolicyOps** | Pointer to **map[string]string** |  | [optional] 
 
 ## Methods
@@ -86,20 +86,20 @@ HasIpfixExporterOps returns a boolean if a field has been set.
 
 ### GetIpfixExporterOpsV2
 
-`func (o *V1GlobalConfigSitePostRequest) GetIpfixExporterOpsV2() map[string]V1GlobalConfigSitePostRequestIpfixExporterOpsV2Value`
+`func (o *V1GlobalConfigSitePostRequest) GetIpfixExporterOpsV2() map[string]ManaV2GlobalObjectOperationConfig`
 
 GetIpfixExporterOpsV2 returns the IpfixExporterOpsV2 field if non-nil, zero value otherwise.
 
 ### GetIpfixExporterOpsV2Ok
 
-`func (o *V1GlobalConfigSitePostRequest) GetIpfixExporterOpsV2Ok() (*map[string]V1GlobalConfigSitePostRequestIpfixExporterOpsV2Value, bool)`
+`func (o *V1GlobalConfigSitePostRequest) GetIpfixExporterOpsV2Ok() (*map[string]ManaV2GlobalObjectOperationConfig, bool)`
 
 GetIpfixExporterOpsV2Ok returns a tuple with the IpfixExporterOpsV2 field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetIpfixExporterOpsV2
 
-`func (o *V1GlobalConfigSitePostRequest) SetIpfixExporterOpsV2(v map[string]V1GlobalConfigSitePostRequestIpfixExporterOpsV2Value)`
+`func (o *V1GlobalConfigSitePostRequest) SetIpfixExporterOpsV2(v map[string]ManaV2GlobalObjectOperationConfig)`
 
 SetIpfixExporterOpsV2 sets IpfixExporterOpsV2 field to given value.
 
@@ -236,20 +236,20 @@ HasSyslogServerOps returns a boolean if a field has been set.
 
 ### GetSyslogServerOpsV2
 
-`func (o *V1GlobalConfigSitePostRequest) GetSyslogServerOpsV2() map[string]V1GlobalConfigSitePostRequestIpfixExporterOpsV2Value`
+`func (o *V1GlobalConfigSitePostRequest) GetSyslogServerOpsV2() map[string]ManaV2GlobalObjectOperationConfig`
 
 GetSyslogServerOpsV2 returns the SyslogServerOpsV2 field if non-nil, zero value otherwise.
 
 ### GetSyslogServerOpsV2Ok
 
-`func (o *V1GlobalConfigSitePostRequest) GetSyslogServerOpsV2Ok() (*map[string]V1GlobalConfigSitePostRequestIpfixExporterOpsV2Value, bool)`
+`func (o *V1GlobalConfigSitePostRequest) GetSyslogServerOpsV2Ok() (*map[string]ManaV2GlobalObjectOperationConfig, bool)`
 
 GetSyslogServerOpsV2Ok returns a tuple with the SyslogServerOpsV2 field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetSyslogServerOpsV2
 
-`func (o *V1GlobalConfigSitePostRequest) SetSyslogServerOpsV2(v map[string]V1GlobalConfigSitePostRequestIpfixExporterOpsV2Value)`
+`func (o *V1GlobalConfigSitePostRequest) SetSyslogServerOpsV2(v map[string]ManaV2GlobalObjectOperationConfig)`
 
 SetSyslogServerOpsV2 sets SyslogServerOpsV2 field to given value.
 

@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Filter** | Pointer to **string** |  | [optional] 
-**Target** | Pointer to [**V1ExtranetsPostRequestPolicyBranches**](V1ExtranetsPostRequestPolicyBranches.md) |  | [optional] 
+**Target** | Pointer to [**ManaV2PolicyTargetInput**](ManaV2PolicyTargetInput.md) |  | [optional] 
 
 ## Methods
 
@@ -53,20 +53,20 @@ HasFilter returns a boolean if a field has been set.
 
 ### GetTarget
 
-`func (o *V1ExtranetsSourceSegmentsPostRequest) GetTarget() V1ExtranetsPostRequestPolicyBranches`
+`func (o *V1ExtranetsSourceSegmentsPostRequest) GetTarget() ManaV2PolicyTargetInput`
 
 GetTarget returns the Target field if non-nil, zero value otherwise.
 
 ### GetTargetOk
 
-`func (o *V1ExtranetsSourceSegmentsPostRequest) GetTargetOk() (*V1ExtranetsPostRequestPolicyBranches, bool)`
+`func (o *V1ExtranetsSourceSegmentsPostRequest) GetTargetOk() (*ManaV2PolicyTargetInput, bool)`
 
 GetTargetOk returns a tuple with the Target field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetTarget
 
-`func (o *V1ExtranetsSourceSegmentsPostRequest) SetTarget(v V1ExtranetsPostRequestPolicyBranches)`
+`func (o *V1ExtranetsSourceSegmentsPostRequest) SetTarget(v ManaV2PolicyTargetInput)`
 
 SetTarget sets Target field to given value.
 

@@ -4,14 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**DeviceId** | Pointer to **int64** |  | [optional] 
-**VrfName** | Pointer to **[]string** |  | [optional] 
+**DeviceId** | **int64** | Valid configured device ID &gt; 0 (required) | 
+**VrfName** | **[]string** |  | 
 
 ## Methods
 
 ### NewV1DeviceRoutingVrfBgpRouteCountPostRequest
 
-`func NewV1DeviceRoutingVrfBgpRouteCountPostRequest() *V1DeviceRoutingVrfBgpRouteCountPostRequest`
+`func NewV1DeviceRoutingVrfBgpRouteCountPostRequest(deviceId int64, vrfName []string, ) *V1DeviceRoutingVrfBgpRouteCountPostRequest`
 
 NewV1DeviceRoutingVrfBgpRouteCountPostRequest instantiates a new V1DeviceRoutingVrfBgpRouteCountPostRequest object
 This constructor will assign default values to properties that have it defined,
@@ -45,11 +45,6 @@ and a boolean to check if the value has been set.
 
 SetDeviceId sets DeviceId field to given value.
 
-### HasDeviceId
-
-`func (o *V1DeviceRoutingVrfBgpRouteCountPostRequest) HasDeviceId() bool`
-
-HasDeviceId returns a boolean if a field has been set.
 
 ### GetVrfName
 
@@ -70,11 +65,6 @@ and a boolean to check if the value has been set.
 
 SetVrfName sets VrfName field to given value.
 
-### HasVrfName
-
-`func (o *V1DeviceRoutingVrfBgpRouteCountPostRequest) HasVrfName() bool`
-
-HasVrfName returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

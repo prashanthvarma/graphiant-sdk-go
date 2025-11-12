@@ -4,10 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Policy** | Pointer to [**[]V1ExtranetsB2bConsumerPostRequestPolicyInner**](V1ExtranetsB2bConsumerPostRequestPolicyInner.md) |  | [optional] 
+**Policy** | Pointer to [**[]ManaV2ExtranetConsumerLanSegmentPolicy**](ManaV2ExtranetConsumerLanSegmentPolicy.md) |  | [optional] 
 **ProviderEnterpriseId** | Pointer to **int64** |  | [optional] 
 **ServiceName** | Pointer to **string** |  | [optional] 
-**SiteInformation** | Pointer to [**[]V1ExtranetsB2bConsumerPostRequestSiteInformationInner**](V1ExtranetsB2bConsumerPostRequestSiteInformationInner.md) |  | [optional] 
+**SiteInformation** | Pointer to [**[]ManaV2B2bSiteInformation**](ManaV2B2bSiteInformation.md) |  | [optional] 
 
 ## Methods
 
@@ -30,20 +30,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetPolicy
 
-`func (o *V1ExtranetsB2bConsumerPostRequest) GetPolicy() []V1ExtranetsB2bConsumerPostRequestPolicyInner`
+`func (o *V1ExtranetsB2bConsumerPostRequest) GetPolicy() []ManaV2ExtranetConsumerLanSegmentPolicy`
 
 GetPolicy returns the Policy field if non-nil, zero value otherwise.
 
 ### GetPolicyOk
 
-`func (o *V1ExtranetsB2bConsumerPostRequest) GetPolicyOk() (*[]V1ExtranetsB2bConsumerPostRequestPolicyInner, bool)`
+`func (o *V1ExtranetsB2bConsumerPostRequest) GetPolicyOk() (*[]ManaV2ExtranetConsumerLanSegmentPolicy, bool)`
 
 GetPolicyOk returns a tuple with the Policy field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetPolicy
 
-`func (o *V1ExtranetsB2bConsumerPostRequest) SetPolicy(v []V1ExtranetsB2bConsumerPostRequestPolicyInner)`
+`func (o *V1ExtranetsB2bConsumerPostRequest) SetPolicy(v []ManaV2ExtranetConsumerLanSegmentPolicy)`
 
 SetPolicy sets Policy field to given value.
 
@@ -105,20 +105,20 @@ HasServiceName returns a boolean if a field has been set.
 
 ### GetSiteInformation
 
-`func (o *V1ExtranetsB2bConsumerPostRequest) GetSiteInformation() []V1ExtranetsB2bConsumerPostRequestSiteInformationInner`
+`func (o *V1ExtranetsB2bConsumerPostRequest) GetSiteInformation() []ManaV2B2bSiteInformation`
 
 GetSiteInformation returns the SiteInformation field if non-nil, zero value otherwise.
 
 ### GetSiteInformationOk
 
-`func (o *V1ExtranetsB2bConsumerPostRequest) GetSiteInformationOk() (*[]V1ExtranetsB2bConsumerPostRequestSiteInformationInner, bool)`
+`func (o *V1ExtranetsB2bConsumerPostRequest) GetSiteInformationOk() (*[]ManaV2B2bSiteInformation, bool)`
 
 GetSiteInformationOk returns a tuple with the SiteInformation field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetSiteInformation
 
-`func (o *V1ExtranetsB2bConsumerPostRequest) SetSiteInformation(v []V1ExtranetsB2bConsumerPostRequestSiteInformationInner)`
+`func (o *V1ExtranetsB2bConsumerPostRequest) SetSiteInformation(v []ManaV2B2bSiteInformation)`
 
 SetSiteInformation sets SiteInformation field to given value.
 

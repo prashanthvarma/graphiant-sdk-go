@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Policy** | Pointer to [**V1ExtranetsB2bPeeringProducerPostRequestPolicy**](V1ExtranetsB2bPeeringProducerPostRequestPolicy.md) |  | [optional] 
+**Policy** | Pointer to [**ManaV2B2bExtranetPeeringServiceProducerPolicy**](ManaV2B2bExtranetPeeringServiceProducerPolicy.md) |  | [optional] 
 **ServiceName** | Pointer to **string** |  | [optional] 
 **Type** | Pointer to **string** |  | [optional] 
 
@@ -29,20 +29,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetPolicy
 
-`func (o *V1ExtranetsB2bPeeringProducerPostRequest) GetPolicy() V1ExtranetsB2bPeeringProducerPostRequestPolicy`
+`func (o *V1ExtranetsB2bPeeringProducerPostRequest) GetPolicy() ManaV2B2bExtranetPeeringServiceProducerPolicy`
 
 GetPolicy returns the Policy field if non-nil, zero value otherwise.
 
 ### GetPolicyOk
 
-`func (o *V1ExtranetsB2bPeeringProducerPostRequest) GetPolicyOk() (*V1ExtranetsB2bPeeringProducerPostRequestPolicy, bool)`
+`func (o *V1ExtranetsB2bPeeringProducerPostRequest) GetPolicyOk() (*ManaV2B2bExtranetPeeringServiceProducerPolicy, bool)`
 
 GetPolicyOk returns a tuple with the Policy field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetPolicy
 
-`func (o *V1ExtranetsB2bPeeringProducerPostRequest) SetPolicy(v V1ExtranetsB2bPeeringProducerPostRequestPolicy)`
+`func (o *V1ExtranetsB2bPeeringProducerPostRequest) SetPolicy(v ManaV2B2bExtranetPeeringServiceProducerPolicy)`
 
 SetPolicy sets Policy field to given value.
 

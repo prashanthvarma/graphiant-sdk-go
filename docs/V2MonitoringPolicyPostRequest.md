@@ -5,8 +5,8 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **DeviceId** | Pointer to **int64** |  | [optional] 
-**Selectors** | Pointer to [**[]V2MonitoringPolicyPostRequestSelectorsInner**](V2MonitoringPolicyPostRequestSelectorsInner.md) |  | [optional] 
-**TimeWindow** | Pointer to [**V2NotificationlistPostRequestTimeWindow**](V2NotificationlistPostRequestTimeWindow.md) |  | [optional] 
+**Selectors** | Pointer to [**[]StatsmonV2PolicyStatsSelector**](StatsmonV2PolicyStatsSelector.md) |  | [optional] 
+**TimeWindow** | Pointer to [**StatsmonV2TimeWindow**](StatsmonV2TimeWindow.md) |  | [optional] 
 
 ## Methods
 
@@ -54,20 +54,20 @@ HasDeviceId returns a boolean if a field has been set.
 
 ### GetSelectors
 
-`func (o *V2MonitoringPolicyPostRequest) GetSelectors() []V2MonitoringPolicyPostRequestSelectorsInner`
+`func (o *V2MonitoringPolicyPostRequest) GetSelectors() []StatsmonV2PolicyStatsSelector`
 
 GetSelectors returns the Selectors field if non-nil, zero value otherwise.
 
 ### GetSelectorsOk
 
-`func (o *V2MonitoringPolicyPostRequest) GetSelectorsOk() (*[]V2MonitoringPolicyPostRequestSelectorsInner, bool)`
+`func (o *V2MonitoringPolicyPostRequest) GetSelectorsOk() (*[]StatsmonV2PolicyStatsSelector, bool)`
 
 GetSelectorsOk returns a tuple with the Selectors field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetSelectors
 
-`func (o *V2MonitoringPolicyPostRequest) SetSelectors(v []V2MonitoringPolicyPostRequestSelectorsInner)`
+`func (o *V2MonitoringPolicyPostRequest) SetSelectors(v []StatsmonV2PolicyStatsSelector)`
 
 SetSelectors sets Selectors field to given value.
 
@@ -79,20 +79,20 @@ HasSelectors returns a boolean if a field has been set.
 
 ### GetTimeWindow
 
-`func (o *V2MonitoringPolicyPostRequest) GetTimeWindow() V2NotificationlistPostRequestTimeWindow`
+`func (o *V2MonitoringPolicyPostRequest) GetTimeWindow() StatsmonV2TimeWindow`
 
 GetTimeWindow returns the TimeWindow field if non-nil, zero value otherwise.
 
 ### GetTimeWindowOk
 
-`func (o *V2MonitoringPolicyPostRequest) GetTimeWindowOk() (*V2NotificationlistPostRequestTimeWindow, bool)`
+`func (o *V2MonitoringPolicyPostRequest) GetTimeWindowOk() (*StatsmonV2TimeWindow, bool)`
 
 GetTimeWindowOk returns a tuple with the TimeWindow field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetTimeWindow
 
-`func (o *V2MonitoringPolicyPostRequest) SetTimeWindow(v V2NotificationlistPostRequestTimeWindow)`
+`func (o *V2MonitoringPolicyPostRequest) SetTimeWindow(v StatsmonV2TimeWindow)`
 
 SetTimeWindow sets TimeWindow field to given value.
 

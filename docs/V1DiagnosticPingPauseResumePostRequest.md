@@ -4,16 +4,16 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**DeviceId** | Pointer to **int64** |  | [optional] 
-**Params** | Pointer to [**V1DiagnosticPingPauseResumePostRequestParams**](V1DiagnosticPingPauseResumePostRequestParams.md) |  | [optional] 
-**Token** | Pointer to **string** |  | [optional] 
-**TransportType** | Pointer to **string** |  | [optional] 
+**DeviceId** | **int64** | Valid Provisioned device ID (required) | 
+**Params** | Pointer to [**DiagnosticToolsDiagnosticParams**](DiagnosticToolsDiagnosticParams.md) |  | [optional] 
+**Token** | Pointer to **string** | Identifier which was received in initial response | [optional] 
+**TransportType** | **string** | ICMP or TCP (required) | 
 
 ## Methods
 
 ### NewV1DiagnosticPingPauseResumePostRequest
 
-`func NewV1DiagnosticPingPauseResumePostRequest() *V1DiagnosticPingPauseResumePostRequest`
+`func NewV1DiagnosticPingPauseResumePostRequest(deviceId int64, transportType string, ) *V1DiagnosticPingPauseResumePostRequest`
 
 NewV1DiagnosticPingPauseResumePostRequest instantiates a new V1DiagnosticPingPauseResumePostRequest object
 This constructor will assign default values to properties that have it defined,
@@ -47,28 +47,23 @@ and a boolean to check if the value has been set.
 
 SetDeviceId sets DeviceId field to given value.
 
-### HasDeviceId
-
-`func (o *V1DiagnosticPingPauseResumePostRequest) HasDeviceId() bool`
-
-HasDeviceId returns a boolean if a field has been set.
 
 ### GetParams
 
-`func (o *V1DiagnosticPingPauseResumePostRequest) GetParams() V1DiagnosticPingPauseResumePostRequestParams`
+`func (o *V1DiagnosticPingPauseResumePostRequest) GetParams() DiagnosticToolsDiagnosticParams`
 
 GetParams returns the Params field if non-nil, zero value otherwise.
 
 ### GetParamsOk
 
-`func (o *V1DiagnosticPingPauseResumePostRequest) GetParamsOk() (*V1DiagnosticPingPauseResumePostRequestParams, bool)`
+`func (o *V1DiagnosticPingPauseResumePostRequest) GetParamsOk() (*DiagnosticToolsDiagnosticParams, bool)`
 
 GetParamsOk returns a tuple with the Params field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetParams
 
-`func (o *V1DiagnosticPingPauseResumePostRequest) SetParams(v V1DiagnosticPingPauseResumePostRequestParams)`
+`func (o *V1DiagnosticPingPauseResumePostRequest) SetParams(v DiagnosticToolsDiagnosticParams)`
 
 SetParams sets Params field to given value.
 
@@ -122,11 +117,6 @@ and a boolean to check if the value has been set.
 
 SetTransportType sets TransportType field to given value.
 
-### HasTransportType
-
-`func (o *V1DiagnosticPingPauseResumePostRequest) HasTransportType() bool`
-
-HasTransportType returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

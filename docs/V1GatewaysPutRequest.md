@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Details** | Pointer to [**V1GatewaysPutRequestDetails**](V1GatewaysPutRequestDetails.md) |  | [optional] 
+**Details** | Pointer to [**ManaV2GatewayDetails**](ManaV2GatewayDetails.md) |  | [optional] 
 **Id** | Pointer to **int64** |  | [optional] 
 
 ## Methods
@@ -28,20 +28,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetDetails
 
-`func (o *V1GatewaysPutRequest) GetDetails() V1GatewaysPutRequestDetails`
+`func (o *V1GatewaysPutRequest) GetDetails() ManaV2GatewayDetails`
 
 GetDetails returns the Details field if non-nil, zero value otherwise.
 
 ### GetDetailsOk
 
-`func (o *V1GatewaysPutRequest) GetDetailsOk() (*V1GatewaysPutRequestDetails, bool)`
+`func (o *V1GatewaysPutRequest) GetDetailsOk() (*ManaV2GatewayDetails, bool)`
 
 GetDetailsOk returns a tuple with the Details field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetDetails
 
-`func (o *V1GatewaysPutRequest) SetDetails(v V1GatewaysPutRequestDetails)`
+`func (o *V1GatewaysPutRequest) SetDetails(v ManaV2GatewayDetails)`
 
 SetDetails sets Details field to given value.
 

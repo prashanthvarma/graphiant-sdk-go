@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **ConversationId** | Pointer to **string** |  | [optional] 
-**TimeWindow** | Pointer to [**V2NotificationlistPostRequestTimeWindow**](V2NotificationlistPostRequestTimeWindow.md) |  | [optional] 
+**TimeWindow** | Pointer to [**AssistantTimeWindow**](AssistantTimeWindow.md) |  | [optional] 
 **UserId** | Pointer to **string** |  | [optional] 
 
 ## Methods
@@ -54,20 +54,20 @@ HasConversationId returns a boolean if a field has been set.
 
 ### GetTimeWindow
 
-`func (o *V2AssistantGetConversationDetailsPostRequest) GetTimeWindow() V2NotificationlistPostRequestTimeWindow`
+`func (o *V2AssistantGetConversationDetailsPostRequest) GetTimeWindow() AssistantTimeWindow`
 
 GetTimeWindow returns the TimeWindow field if non-nil, zero value otherwise.
 
 ### GetTimeWindowOk
 
-`func (o *V2AssistantGetConversationDetailsPostRequest) GetTimeWindowOk() (*V2NotificationlistPostRequestTimeWindow, bool)`
+`func (o *V2AssistantGetConversationDetailsPostRequest) GetTimeWindowOk() (*AssistantTimeWindow, bool)`
 
 GetTimeWindowOk returns a tuple with the TimeWindow field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetTimeWindow
 
-`func (o *V2AssistantGetConversationDetailsPostRequest) SetTimeWindow(v V2NotificationlistPostRequestTimeWindow)`
+`func (o *V2AssistantGetConversationDetailsPostRequest) SetTimeWindow(v AssistantTimeWindow)`
 
 SetTimeWindow sets TimeWindow field to given value.
 

@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**NumClients** | Pointer to **int32** |  | [optional] 
-**TimeWindow** | Pointer to [**V2NotificationlistPostRequestTimeWindow**](V2NotificationlistPostRequestTimeWindow.md) |  | [optional] 
+**NumClients** | Pointer to **int32** | The maximum number of client usage info to be returned (10 if left empty) | [optional] 
+**TimeWindow** | Pointer to [**IpfixTimeWindow**](IpfixTimeWindow.md) |  | [optional] 
 
 ## Methods
 
@@ -53,20 +53,20 @@ HasNumClients returns a boolean if a field has been set.
 
 ### GetTimeWindow
 
-`func (o *V1TalkersDeviceDeviceIdTopPostRequest) GetTimeWindow() V2NotificationlistPostRequestTimeWindow`
+`func (o *V1TalkersDeviceDeviceIdTopPostRequest) GetTimeWindow() IpfixTimeWindow`
 
 GetTimeWindow returns the TimeWindow field if non-nil, zero value otherwise.
 
 ### GetTimeWindowOk
 
-`func (o *V1TalkersDeviceDeviceIdTopPostRequest) GetTimeWindowOk() (*V2NotificationlistPostRequestTimeWindow, bool)`
+`func (o *V1TalkersDeviceDeviceIdTopPostRequest) GetTimeWindowOk() (*IpfixTimeWindow, bool)`
 
 GetTimeWindowOk returns a tuple with the TimeWindow field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetTimeWindow
 
-`func (o *V1TalkersDeviceDeviceIdTopPostRequest) SetTimeWindow(v V2NotificationlistPostRequestTimeWindow)`
+`func (o *V1TalkersDeviceDeviceIdTopPostRequest) SetTimeWindow(v IpfixTimeWindow)`
 
 SetTimeWindow sets TimeWindow field to given value.
 

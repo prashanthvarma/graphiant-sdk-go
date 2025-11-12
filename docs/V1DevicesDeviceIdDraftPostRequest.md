@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **BaseVersion** | Pointer to **int32** |  | [optional] 
 **Description** | Pointer to **string** |  | [optional] 
-**Draft** | Pointer to [**V1ExtranetsGet200ResponsePoliciesInnerBranchesExcludedDevicesInner**](V1ExtranetsGet200ResponsePoliciesInnerBranchesExcludedDevicesInner.md) |  | [optional] 
+**Draft** | Pointer to [**ManaV2Device**](ManaV2Device.md) |  | [optional] 
 
 ## Methods
 
@@ -79,20 +79,20 @@ HasDescription returns a boolean if a field has been set.
 
 ### GetDraft
 
-`func (o *V1DevicesDeviceIdDraftPostRequest) GetDraft() V1ExtranetsGet200ResponsePoliciesInnerBranchesExcludedDevicesInner`
+`func (o *V1DevicesDeviceIdDraftPostRequest) GetDraft() ManaV2Device`
 
 GetDraft returns the Draft field if non-nil, zero value otherwise.
 
 ### GetDraftOk
 
-`func (o *V1DevicesDeviceIdDraftPostRequest) GetDraftOk() (*V1ExtranetsGet200ResponsePoliciesInnerBranchesExcludedDevicesInner, bool)`
+`func (o *V1DevicesDeviceIdDraftPostRequest) GetDraftOk() (*ManaV2Device, bool)`
 
 GetDraftOk returns a tuple with the Draft field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetDraft
 
-`func (o *V1DevicesDeviceIdDraftPostRequest) SetDraft(v V1ExtranetsGet200ResponsePoliciesInnerBranchesExcludedDevicesInner)`
+`func (o *V1DevicesDeviceIdDraftPostRequest) SetDraft(v ManaV2Device)`
 
 SetDraft sets Draft field to given value.
 

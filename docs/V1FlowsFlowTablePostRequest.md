@@ -4,14 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**AppId** | Pointer to **int32** |  | [optional] 
+**AppId** | Pointer to **int32** | the app ID in the question from overall visuals view | [optional] 
 **AppName** | Pointer to **string** |  | [optional] 
-**CursorRef** | Pointer to [**V1AlarmHistoryGet200ResponseHistoryInnerTime**](V1AlarmHistoryGet200ResponseHistoryInnerTime.md) |  | [optional] 
+**CursorRef** | Pointer to [**GoogleProtobufTimestamp**](GoogleProtobufTimestamp.md) |  | [optional] 
 **DeviceId** | Pointer to **int64** |  | [optional] 
 **IsDia** | Pointer to **bool** |  | [optional] 
-**NumFlowRecords** | Pointer to **int32** |  | [optional] 
-**Selector** | Pointer to [**V1FlowsFlowTablePostRequestSelector**](V1FlowsFlowTablePostRequestSelector.md) |  | [optional] 
-**TimeWindow** | Pointer to [**V2NotificationlistPostRequestTimeWindow**](V2NotificationlistPostRequestTimeWindow.md) |  | [optional] 
+**NumFlowRecords** | Pointer to **int32** | Number of app flow records requested by UI. | [optional] 
+**Selector** | Pointer to [**IpfixAppFlowTableSelector**](IpfixAppFlowTableSelector.md) |  | [optional] 
+**TimeWindow** | Pointer to [**StatsmonTimeWindow**](StatsmonTimeWindow.md) |  | [optional] 
 
 ## Methods
 
@@ -84,20 +84,20 @@ HasAppName returns a boolean if a field has been set.
 
 ### GetCursorRef
 
-`func (o *V1FlowsFlowTablePostRequest) GetCursorRef() V1AlarmHistoryGet200ResponseHistoryInnerTime`
+`func (o *V1FlowsFlowTablePostRequest) GetCursorRef() GoogleProtobufTimestamp`
 
 GetCursorRef returns the CursorRef field if non-nil, zero value otherwise.
 
 ### GetCursorRefOk
 
-`func (o *V1FlowsFlowTablePostRequest) GetCursorRefOk() (*V1AlarmHistoryGet200ResponseHistoryInnerTime, bool)`
+`func (o *V1FlowsFlowTablePostRequest) GetCursorRefOk() (*GoogleProtobufTimestamp, bool)`
 
 GetCursorRefOk returns a tuple with the CursorRef field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetCursorRef
 
-`func (o *V1FlowsFlowTablePostRequest) SetCursorRef(v V1AlarmHistoryGet200ResponseHistoryInnerTime)`
+`func (o *V1FlowsFlowTablePostRequest) SetCursorRef(v GoogleProtobufTimestamp)`
 
 SetCursorRef sets CursorRef field to given value.
 
@@ -184,20 +184,20 @@ HasNumFlowRecords returns a boolean if a field has been set.
 
 ### GetSelector
 
-`func (o *V1FlowsFlowTablePostRequest) GetSelector() V1FlowsFlowTablePostRequestSelector`
+`func (o *V1FlowsFlowTablePostRequest) GetSelector() IpfixAppFlowTableSelector`
 
 GetSelector returns the Selector field if non-nil, zero value otherwise.
 
 ### GetSelectorOk
 
-`func (o *V1FlowsFlowTablePostRequest) GetSelectorOk() (*V1FlowsFlowTablePostRequestSelector, bool)`
+`func (o *V1FlowsFlowTablePostRequest) GetSelectorOk() (*IpfixAppFlowTableSelector, bool)`
 
 GetSelectorOk returns a tuple with the Selector field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetSelector
 
-`func (o *V1FlowsFlowTablePostRequest) SetSelector(v V1FlowsFlowTablePostRequestSelector)`
+`func (o *V1FlowsFlowTablePostRequest) SetSelector(v IpfixAppFlowTableSelector)`
 
 SetSelector sets Selector field to given value.
 
@@ -209,20 +209,20 @@ HasSelector returns a boolean if a field has been set.
 
 ### GetTimeWindow
 
-`func (o *V1FlowsFlowTablePostRequest) GetTimeWindow() V2NotificationlistPostRequestTimeWindow`
+`func (o *V1FlowsFlowTablePostRequest) GetTimeWindow() StatsmonTimeWindow`
 
 GetTimeWindow returns the TimeWindow field if non-nil, zero value otherwise.
 
 ### GetTimeWindowOk
 
-`func (o *V1FlowsFlowTablePostRequest) GetTimeWindowOk() (*V2NotificationlistPostRequestTimeWindow, bool)`
+`func (o *V1FlowsFlowTablePostRequest) GetTimeWindowOk() (*StatsmonTimeWindow, bool)`
 
 GetTimeWindowOk returns a tuple with the TimeWindow field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetTimeWindow
 
-`func (o *V1FlowsFlowTablePostRequest) SetTimeWindow(v V2NotificationlistPostRequestTimeWindow)`
+`func (o *V1FlowsFlowTablePostRequest) SetTimeWindow(v StatsmonTimeWindow)`
 
 SetTimeWindow sets TimeWindow field to given value.
 

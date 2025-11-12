@@ -4,10 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Hard** | Pointer to **bool** |  | [optional] 
-**LanSegment** | Pointer to **string** |  | [optional] 
-**LocalInterface** | Pointer to **string** |  | [optional] 
-**Neighbor** | Pointer to **string** |  | [optional] 
+**Hard** | Pointer to **bool** | BGP process restarts if set to true. if false, BGP route is only relearned | [optional] 
+**LanSegment** | Pointer to **string** | The segment over which this route is learned | [optional] 
+**LocalInterface** | Pointer to **string** | The local interface over which this route is learned | [optional] 
+**Neighbor** | Pointer to **string** | The neighbor to reset | [optional] 
 
 ## Methods
 

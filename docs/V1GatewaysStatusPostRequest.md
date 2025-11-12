@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**DeviceInfo** | Pointer to [**[]V1GatewaysStatusPostRequestDeviceInfoInner**](V1GatewaysStatusPostRequestDeviceInfoInner.md) |  | [optional] 
+**DeviceInfo** | Pointer to [**[]V1GatewaysStatusPostRequestDeviceInfo**](V1GatewaysStatusPostRequestDeviceInfo.md) |  | [optional] 
 **Id** | Pointer to **int64** |  | [optional] 
 **Status** | Pointer to **string** |  | [optional] 
 **SupportStatus** | Pointer to **string** |  | [optional] 
@@ -30,20 +30,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetDeviceInfo
 
-`func (o *V1GatewaysStatusPostRequest) GetDeviceInfo() []V1GatewaysStatusPostRequestDeviceInfoInner`
+`func (o *V1GatewaysStatusPostRequest) GetDeviceInfo() []V1GatewaysStatusPostRequestDeviceInfo`
 
 GetDeviceInfo returns the DeviceInfo field if non-nil, zero value otherwise.
 
 ### GetDeviceInfoOk
 
-`func (o *V1GatewaysStatusPostRequest) GetDeviceInfoOk() (*[]V1GatewaysStatusPostRequestDeviceInfoInner, bool)`
+`func (o *V1GatewaysStatusPostRequest) GetDeviceInfoOk() (*[]V1GatewaysStatusPostRequestDeviceInfo, bool)`
 
 GetDeviceInfoOk returns a tuple with the DeviceInfo field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetDeviceInfo
 
-`func (o *V1GatewaysStatusPostRequest) SetDeviceInfo(v []V1GatewaysStatusPostRequestDeviceInfoInner)`
+`func (o *V1GatewaysStatusPostRequest) SetDeviceInfo(v []V1GatewaysStatusPostRequestDeviceInfo)`
 
 SetDeviceInfo sets DeviceInfo field to given value.
 

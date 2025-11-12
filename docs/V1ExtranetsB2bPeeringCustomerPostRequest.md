@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Invite** | Pointer to [**V1ExtranetsB2bPeeringCustomerPostRequestInvite**](V1ExtranetsB2bPeeringCustomerPostRequestInvite.md) |  | [optional] 
+**Invite** | Pointer to [**ManaV2B2bExtranetPeeringServiceCustomerInvite**](ManaV2B2bExtranetPeeringServiceCustomerInvite.md) |  | [optional] 
 **Name** | Pointer to **string** |  | [optional] 
 **Type** | Pointer to **string** |  | [optional] 
 
@@ -29,20 +29,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetInvite
 
-`func (o *V1ExtranetsB2bPeeringCustomerPostRequest) GetInvite() V1ExtranetsB2bPeeringCustomerPostRequestInvite`
+`func (o *V1ExtranetsB2bPeeringCustomerPostRequest) GetInvite() ManaV2B2bExtranetPeeringServiceCustomerInvite`
 
 GetInvite returns the Invite field if non-nil, zero value otherwise.
 
 ### GetInviteOk
 
-`func (o *V1ExtranetsB2bPeeringCustomerPostRequest) GetInviteOk() (*V1ExtranetsB2bPeeringCustomerPostRequestInvite, bool)`
+`func (o *V1ExtranetsB2bPeeringCustomerPostRequest) GetInviteOk() (*ManaV2B2bExtranetPeeringServiceCustomerInvite, bool)`
 
 GetInviteOk returns a tuple with the Invite field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetInvite
 
-`func (o *V1ExtranetsB2bPeeringCustomerPostRequest) SetInvite(v V1ExtranetsB2bPeeringCustomerPostRequestInvite)`
+`func (o *V1ExtranetsB2bPeeringCustomerPostRequest) SetInvite(v ManaV2B2bExtranetPeeringServiceCustomerInvite)`
 
 SetInvite sets Invite field to given value.
 

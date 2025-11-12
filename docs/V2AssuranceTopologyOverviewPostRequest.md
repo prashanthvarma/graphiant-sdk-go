@@ -7,11 +7,11 @@ Name | Type | Description | Notes
 **AppName** | Pointer to **string** |  | [optional] 
 **AppServerKey** | Pointer to **string** |  | [optional] 
 **BucketId** | Pointer to **string** |  | [optional] 
-**Filter** | Pointer to [**V2AssuranceTopologyClientSessionsPostRequestFilter**](V2AssuranceTopologyClientSessionsPostRequestFilter.md) |  | [optional] 
+**Filter** | Pointer to [**V2AssuranceTopologyOverviewPostRequestTopologyFilter**](V2AssuranceTopologyOverviewPostRequestTopologyFilter.md) |  | [optional] 
 **FlexAlgoId** | Pointer to **int64** |  | [optional] 
-**SliderTimeWindow** | Pointer to [**V2NotificationlistPostRequestTimeWindow**](V2NotificationlistPostRequestTimeWindow.md) |  | [optional] 
-**TimeWindow** | Pointer to [**V2NotificationlistPostRequestTimeWindow**](V2NotificationlistPostRequestTimeWindow.md) |  | [optional] 
-**TopologyTs** | Pointer to [**V1AlarmHistoryGet200ResponseHistoryInnerTime**](V1AlarmHistoryGet200ResponseHistoryInnerTime.md) |  | [optional] 
+**SliderTimeWindow** | Pointer to [**AssuranceTimeWindow**](AssuranceTimeWindow.md) |  | [optional] 
+**TimeWindow** | Pointer to [**AssuranceTimeWindow**](AssuranceTimeWindow.md) |  | [optional] 
+**TopologyTs** | Pointer to [**GoogleProtobufTimestamp**](GoogleProtobufTimestamp.md) |  | [optional] 
 **TopologyType** | Pointer to **string** |  | [optional] 
 
 ## Methods
@@ -110,20 +110,20 @@ HasBucketId returns a boolean if a field has been set.
 
 ### GetFilter
 
-`func (o *V2AssuranceTopologyOverviewPostRequest) GetFilter() V2AssuranceTopologyClientSessionsPostRequestFilter`
+`func (o *V2AssuranceTopologyOverviewPostRequest) GetFilter() V2AssuranceTopologyOverviewPostRequestTopologyFilter`
 
 GetFilter returns the Filter field if non-nil, zero value otherwise.
 
 ### GetFilterOk
 
-`func (o *V2AssuranceTopologyOverviewPostRequest) GetFilterOk() (*V2AssuranceTopologyClientSessionsPostRequestFilter, bool)`
+`func (o *V2AssuranceTopologyOverviewPostRequest) GetFilterOk() (*V2AssuranceTopologyOverviewPostRequestTopologyFilter, bool)`
 
 GetFilterOk returns a tuple with the Filter field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetFilter
 
-`func (o *V2AssuranceTopologyOverviewPostRequest) SetFilter(v V2AssuranceTopologyClientSessionsPostRequestFilter)`
+`func (o *V2AssuranceTopologyOverviewPostRequest) SetFilter(v V2AssuranceTopologyOverviewPostRequestTopologyFilter)`
 
 SetFilter sets Filter field to given value.
 
@@ -160,20 +160,20 @@ HasFlexAlgoId returns a boolean if a field has been set.
 
 ### GetSliderTimeWindow
 
-`func (o *V2AssuranceTopologyOverviewPostRequest) GetSliderTimeWindow() V2NotificationlistPostRequestTimeWindow`
+`func (o *V2AssuranceTopologyOverviewPostRequest) GetSliderTimeWindow() AssuranceTimeWindow`
 
 GetSliderTimeWindow returns the SliderTimeWindow field if non-nil, zero value otherwise.
 
 ### GetSliderTimeWindowOk
 
-`func (o *V2AssuranceTopologyOverviewPostRequest) GetSliderTimeWindowOk() (*V2NotificationlistPostRequestTimeWindow, bool)`
+`func (o *V2AssuranceTopologyOverviewPostRequest) GetSliderTimeWindowOk() (*AssuranceTimeWindow, bool)`
 
 GetSliderTimeWindowOk returns a tuple with the SliderTimeWindow field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetSliderTimeWindow
 
-`func (o *V2AssuranceTopologyOverviewPostRequest) SetSliderTimeWindow(v V2NotificationlistPostRequestTimeWindow)`
+`func (o *V2AssuranceTopologyOverviewPostRequest) SetSliderTimeWindow(v AssuranceTimeWindow)`
 
 SetSliderTimeWindow sets SliderTimeWindow field to given value.
 
@@ -185,20 +185,20 @@ HasSliderTimeWindow returns a boolean if a field has been set.
 
 ### GetTimeWindow
 
-`func (o *V2AssuranceTopologyOverviewPostRequest) GetTimeWindow() V2NotificationlistPostRequestTimeWindow`
+`func (o *V2AssuranceTopologyOverviewPostRequest) GetTimeWindow() AssuranceTimeWindow`
 
 GetTimeWindow returns the TimeWindow field if non-nil, zero value otherwise.
 
 ### GetTimeWindowOk
 
-`func (o *V2AssuranceTopologyOverviewPostRequest) GetTimeWindowOk() (*V2NotificationlistPostRequestTimeWindow, bool)`
+`func (o *V2AssuranceTopologyOverviewPostRequest) GetTimeWindowOk() (*AssuranceTimeWindow, bool)`
 
 GetTimeWindowOk returns a tuple with the TimeWindow field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetTimeWindow
 
-`func (o *V2AssuranceTopologyOverviewPostRequest) SetTimeWindow(v V2NotificationlistPostRequestTimeWindow)`
+`func (o *V2AssuranceTopologyOverviewPostRequest) SetTimeWindow(v AssuranceTimeWindow)`
 
 SetTimeWindow sets TimeWindow field to given value.
 
@@ -210,20 +210,20 @@ HasTimeWindow returns a boolean if a field has been set.
 
 ### GetTopologyTs
 
-`func (o *V2AssuranceTopologyOverviewPostRequest) GetTopologyTs() V1AlarmHistoryGet200ResponseHistoryInnerTime`
+`func (o *V2AssuranceTopologyOverviewPostRequest) GetTopologyTs() GoogleProtobufTimestamp`
 
 GetTopologyTs returns the TopologyTs field if non-nil, zero value otherwise.
 
 ### GetTopologyTsOk
 
-`func (o *V2AssuranceTopologyOverviewPostRequest) GetTopologyTsOk() (*V1AlarmHistoryGet200ResponseHistoryInnerTime, bool)`
+`func (o *V2AssuranceTopologyOverviewPostRequest) GetTopologyTsOk() (*GoogleProtobufTimestamp, bool)`
 
 GetTopologyTsOk returns a tuple with the TopologyTs field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetTopologyTs
 
-`func (o *V2AssuranceTopologyOverviewPostRequest) SetTopologyTs(v V1AlarmHistoryGet200ResponseHistoryInnerTime)`
+`func (o *V2AssuranceTopologyOverviewPostRequest) SetTopologyTs(v GoogleProtobufTimestamp)`
 
 SetTopologyTs sets TopologyTs field to given value.
 

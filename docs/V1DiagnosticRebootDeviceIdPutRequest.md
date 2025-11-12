@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Reason** | Pointer to **string** |  | [optional] 
+**Reason** | **string** | Reason for reboot (required) | 
 
 ## Methods
 
 ### NewV1DiagnosticRebootDeviceIdPutRequest
 
-`func NewV1DiagnosticRebootDeviceIdPutRequest() *V1DiagnosticRebootDeviceIdPutRequest`
+`func NewV1DiagnosticRebootDeviceIdPutRequest(reason string, ) *V1DiagnosticRebootDeviceIdPutRequest`
 
 NewV1DiagnosticRebootDeviceIdPutRequest instantiates a new V1DiagnosticRebootDeviceIdPutRequest object
 This constructor will assign default values to properties that have it defined,
@@ -44,11 +44,6 @@ and a boolean to check if the value has been set.
 
 SetReason sets Reason field to given value.
 
-### HasReason
-
-`func (o *V1DiagnosticRebootDeviceIdPutRequest) HasReason() bool`
-
-HasReason returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
