@@ -5,12 +5,7 @@ All notable changes to the Graphiant SDK Go will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased]
-
-### Added
-- Support for API version 25.12.1
-
-## [25.12.1] - TBD
+## [25.12.1] - 2025-12-17
 
 ### Added
 - Updated to API specification version 25.12.1
@@ -139,7 +134,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 | Version | Release Date | Key Features |
 |---------|--------------|--------------|
-| 25.12.1 | TBD | API v25.12.1 support |
+| 25.12.1 | 2025-12-17 | API v25.12.1 support |
 | 25.11.1 | 2025-11-11 | Major API optimization, schema reuse |
 | 25.10.2 | 2025-10-15 | Hotfix release |
 | 25.10.1 | 2025-10-08 | API v25.10.1 support |
